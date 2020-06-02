@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SpectrumApplication
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,78 @@
   <h1 id="Pulumi_Cloudflare_SpectrumApplication" data-uid="Pulumi.Cloudflare.SpectrumApplication" class="text-break">Class SpectrumApplication
   </h1>
   <div class="markdown level0 summary"><p>Provides a Cloudflare Spectrum Application. You can extend the power of Cloudflare's DDoS, TLS, and IP Firewall to your other TCP-based services.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Define a spectrum application proxies ssh traffic
+    var sshProxy = new Cloudflare.SpectrumApplication(&amp;quot;sshProxy&amp;quot;, new Cloudflare.SpectrumApplicationArgs
+    {
+        ZoneId = @var.Cloudflare_zone_id,
+        Protocol = &amp;quot;tcp/22&amp;quot;,
+        TrafficType = &amp;quot;direct&amp;quot;,
+        Dns = new Cloudflare.Inputs.SpectrumApplicationDnsArgs
+        {
+            Type = &amp;quot;CNAME&amp;quot;,
+            Name = &amp;quot;ssh.example.com&amp;quot;,
+        },
+        OriginDirects = 
+        {
+            &amp;quot;tcp://109.151.40.129:22&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SpectrumApplication</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">SpectrumApplication</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Cloudflare.html">Pulumi.Cloudflare</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Cloudflare.dll</h6>
@@ -88,16 +154,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication__ctor_" data-uid="Pulumi.Cloudflare.SpectrumApplication.#ctor*"></a>
-  <h4 id="Pulumi_Cloudflare_SpectrumApplication__ctor_System_String_Pulumi_Cloudflare_SpectrumApplicationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Cloudflare.SpectrumApplication.#ctor(System.String,Pulumi.Cloudflare.SpectrumApplicationArgs,System.Nullable{CustomResourceOptions})">SpectrumApplication(String, SpectrumApplicationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Cloudflare_SpectrumApplication__ctor_System_String_Pulumi_Cloudflare_SpectrumApplicationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Cloudflare.SpectrumApplication.#ctor(System.String,Pulumi.Cloudflare.SpectrumApplicationArgs,Pulumi.CustomResourceOptions)">SpectrumApplication(String, SpectrumApplicationArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a SpectrumApplication resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpectrumApplication(string name, SpectrumApplicationArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SpectrumApplication(string name, SpectrumApplicationArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +188,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +198,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_ArgoSmartRouting_" data-uid="Pulumi.Cloudflare.SpectrumApplication.ArgoSmartRouting*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_ArgoSmartRouting" data-uid="Pulumi.Cloudflare.SpectrumApplication.ArgoSmartRouting">ArgoSmartRouting</h4>
@@ -153,13 +219,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_Dns_" data-uid="Pulumi.Cloudflare.SpectrumApplication.Dns*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_Dns" data-uid="Pulumi.Cloudflare.SpectrumApplication.Dns">Dns</h4>
@@ -180,13 +246,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.SpectrumApplicationDns.html">SpectrumApplicationDns</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.SpectrumApplicationDns.html">SpectrumApplicationDns</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_EdgeIpConnectivity_" data-uid="Pulumi.Cloudflare.SpectrumApplication.EdgeIpConnectivity*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_EdgeIpConnectivity" data-uid="Pulumi.Cloudflare.SpectrumApplication.EdgeIpConnectivity">EdgeIpConnectivity</h4>
@@ -195,7 +261,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EdgeIpConnectivity { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EdgeIpConnectivity { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +273,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_EdgeIps_" data-uid="Pulumi.Cloudflare.SpectrumApplication.EdgeIps*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_EdgeIps" data-uid="Pulumi.Cloudflare.SpectrumApplication.EdgeIps">EdgeIps</h4>
@@ -234,13 +300,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_IpFirewall_" data-uid="Pulumi.Cloudflare.SpectrumApplication.IpFirewall*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_IpFirewall" data-uid="Pulumi.Cloudflare.SpectrumApplication.IpFirewall">IpFirewall</h4>
@@ -261,13 +327,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_OriginDirects_" data-uid="Pulumi.Cloudflare.SpectrumApplication.OriginDirects*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_OriginDirects" data-uid="Pulumi.Cloudflare.SpectrumApplication.OriginDirects">OriginDirects</h4>
@@ -288,13 +354,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_OriginDns_" data-uid="Pulumi.Cloudflare.SpectrumApplication.OriginDns*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_OriginDns" data-uid="Pulumi.Cloudflare.SpectrumApplication.OriginDns">OriginDns</h4>
@@ -315,13 +381,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.SpectrumApplicationOriginDns.html">SpectrumApplicationOriginDns</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.SpectrumApplicationOriginDns.html">SpectrumApplicationOriginDns</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_OriginPort_" data-uid="Pulumi.Cloudflare.SpectrumApplication.OriginPort*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_OriginPort" data-uid="Pulumi.Cloudflare.SpectrumApplication.OriginPort">OriginPort</h4>
@@ -342,13 +408,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_Protocol_" data-uid="Pulumi.Cloudflare.SpectrumApplication.Protocol*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_Protocol" data-uid="Pulumi.Cloudflare.SpectrumApplication.Protocol">Protocol</h4>
@@ -369,13 +435,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_ProxyProtocol_" data-uid="Pulumi.Cloudflare.SpectrumApplication.ProxyProtocol*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_ProxyProtocol" data-uid="Pulumi.Cloudflare.SpectrumApplication.ProxyProtocol">ProxyProtocol</h4>
@@ -384,7 +450,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProxyProtocol { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProxyProtocol { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -396,13 +462,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_Tls_" data-uid="Pulumi.Cloudflare.SpectrumApplication.Tls*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_Tls" data-uid="Pulumi.Cloudflare.SpectrumApplication.Tls">Tls</h4>
@@ -411,7 +477,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Tls { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Tls { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -423,13 +489,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_TrafficType_" data-uid="Pulumi.Cloudflare.SpectrumApplication.TrafficType*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_TrafficType" data-uid="Pulumi.Cloudflare.SpectrumApplication.TrafficType">TrafficType</h4>
@@ -438,7 +504,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TrafficType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TrafficType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,13 +516,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_ZoneId_" data-uid="Pulumi.Cloudflare.SpectrumApplication.ZoneId*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplication_ZoneId" data-uid="Pulumi.Cloudflare.SpectrumApplication.ZoneId">ZoneId</h4>
@@ -477,7 +543,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -485,17 +551,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplication_Get_" data-uid="Pulumi.Cloudflare.SpectrumApplication.Get*"></a>
-  <h4 id="Pulumi_Cloudflare_SpectrumApplication_Get_System_String_Input_System_String__Pulumi_Cloudflare_SpectrumApplicationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Cloudflare.SpectrumApplication.Get(System.String,Input{System.String},Pulumi.Cloudflare.SpectrumApplicationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SpectrumApplicationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Cloudflare_SpectrumApplication_Get_System_String_Pulumi_Input_System_String__Pulumi_Cloudflare_SpectrumApplicationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Cloudflare.SpectrumApplication.Get(System.String,Pulumi.Input{System.String},Pulumi.Cloudflare.SpectrumApplicationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SpectrumApplicationState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing SpectrumApplication resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SpectrumApplication Get(string name, Input&lt;string&gt; id, SpectrumApplicationState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SpectrumApplication Get(string name, Input&lt;string&gt; id, SpectrumApplicationState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -514,7 +580,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -526,7 +592,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -555,7 +621,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L48" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

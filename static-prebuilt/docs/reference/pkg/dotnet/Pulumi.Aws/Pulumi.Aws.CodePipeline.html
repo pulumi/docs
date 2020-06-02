@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.CodePipeline
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,176 @@
 <blockquote>
 <p><strong>NOTE on <code>aws.codepipeline.Pipeline</code>:</strong> - the <code>GITHUB_TOKEN</code> environment variable must be set if the GitHub provider is specified.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var codepipelineBucket = new Aws.S3.Bucket(&amp;quot;codepipelineBucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+    });
+    var codepipelineRole = new Aws.Iam.Role(&amp;quot;codepipelineRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;codepipeline.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var codepipelinePolicy = new Aws.Iam.RolePolicy(&amp;quot;codepipelinePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = Output.Tuple(codepipelineBucket.Arn, codepipelineBucket.Arn).Apply(values =&gt;
+        {
+            var codepipelineBucketArn = values.Item1;
+            var codepipelineBucketArn1 = values.Item2;
+            return @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;:&amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;s3:GetObject&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;s3:GetObjectVersion&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;s3:GetBucketVersioning&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;s3:PutObject&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;{codepipelineBucketArn}&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;{codepipelineBucketArn1}/*&amp;quot;&amp;quot;
+  ]
+}},
+{{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;codebuild:BatchGetBuilds&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;codebuild:StartBuild&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}}
+]
+}}
+
+&amp;quot;;
+        }),
+        Role = codepipelineRole.Id,
+    });
+    var s3kmskey = Output.Create(Aws.Kms.GetAlias.InvokeAsync(new Aws.Kms.GetAliasArgs
+    {
+        Name = &amp;quot;alias/myKmsKey&amp;quot;,
+    }));
+    var codepipeline = new Aws.CodePipeline.Pipeline(&amp;quot;codepipeline&amp;quot;, new Aws.CodePipeline.PipelineArgs
+    {
+        ArtifactStore = new Aws.CodePipeline.Inputs.PipelineArtifactStoreArgs
+        {
+            EncryptionKey = new Aws.CodePipeline.Inputs.PipelineArtifactStoreEncryptionKeyArgs
+            {
+                Id = s3kmskey.Apply(s3kmskey =&gt; s3kmskey.Arn),
+                Type = &amp;quot;KMS&amp;quot;,
+            },
+            Location = codepipelineBucket.BucketName,
+            Type = &amp;quot;S3&amp;quot;,
+        },
+        RoleArn = codepipelineRole.Arn,
+        Stages = 
+        {
+            new Aws.CodePipeline.Inputs.PipelineStageArgs
+            {
+                Action = 
+                {
+
+                    {
+                        { &amp;quot;category&amp;quot;, &amp;quot;Source&amp;quot; },
+                        { &amp;quot;configuration&amp;quot;, 
+                        {
+                            { &amp;quot;Branch&amp;quot;, &amp;quot;master&amp;quot; },
+                            { &amp;quot;Owner&amp;quot;, &amp;quot;my-organization&amp;quot; },
+                            { &amp;quot;Repo&amp;quot;, &amp;quot;test&amp;quot; },
+                        } },
+                        { &amp;quot;name&amp;quot;, &amp;quot;Source&amp;quot; },
+                        { &amp;quot;outputArtifacts&amp;quot;, 
+                        {
+                            &amp;quot;source_output&amp;quot;,
+                        } },
+                        { &amp;quot;owner&amp;quot;, &amp;quot;ThirdParty&amp;quot; },
+                        { &amp;quot;provider&amp;quot;, &amp;quot;GitHub&amp;quot; },
+                        { &amp;quot;version&amp;quot;, &amp;quot;1&amp;quot; },
+                    },
+                },
+                Name = &amp;quot;Source&amp;quot;,
+            },
+            new Aws.CodePipeline.Inputs.PipelineStageArgs
+            {
+                Action = 
+                {
+
+                    {
+                        { &amp;quot;category&amp;quot;, &amp;quot;Build&amp;quot; },
+                        { &amp;quot;configuration&amp;quot;, 
+                        {
+                            { &amp;quot;ProjectName&amp;quot;, &amp;quot;test&amp;quot; },
+                        } },
+                        { &amp;quot;inputArtifacts&amp;quot;, 
+                        {
+                            &amp;quot;source_output&amp;quot;,
+                        } },
+                        { &amp;quot;name&amp;quot;, &amp;quot;Build&amp;quot; },
+                        { &amp;quot;outputArtifacts&amp;quot;, 
+                        {
+                            &amp;quot;build_output&amp;quot;,
+                        } },
+                        { &amp;quot;owner&amp;quot;, &amp;quot;AWS&amp;quot; },
+                        { &amp;quot;provider&amp;quot;, &amp;quot;CodeBuild&amp;quot; },
+                        { &amp;quot;version&amp;quot;, &amp;quot;1&amp;quot; },
+                    },
+                },
+                Name = &amp;quot;Build&amp;quot;,
+            },
+            new Aws.CodePipeline.Inputs.PipelineStageArgs
+            {
+                Action = 
+                {
+
+                    {
+                        { &amp;quot;category&amp;quot;, &amp;quot;Deploy&amp;quot; },
+                        { &amp;quot;configuration&amp;quot;, 
+                        {
+                            { &amp;quot;ActionMode&amp;quot;, &amp;quot;REPLACE_ON_FAILURE&amp;quot; },
+                            { &amp;quot;Capabilities&amp;quot;, &amp;quot;CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM&amp;quot; },
+                            { &amp;quot;OutputFileName&amp;quot;, &amp;quot;CreateStackOutput.json&amp;quot; },
+                            { &amp;quot;StackName&amp;quot;, &amp;quot;MyStack&amp;quot; },
+                            { &amp;quot;TemplatePath&amp;quot;, &amp;quot;build_output::sam-templated.yaml&amp;quot; },
+                        } },
+                        { &amp;quot;inputArtifacts&amp;quot;, 
+                        {
+                            &amp;quot;build_output&amp;quot;,
+                        } },
+                        { &amp;quot;name&amp;quot;, &amp;quot;Deploy&amp;quot; },
+                        { &amp;quot;owner&amp;quot;, &amp;quot;AWS&amp;quot; },
+                        { &amp;quot;provider&amp;quot;, &amp;quot;CloudFormation&amp;quot; },
+                        { &amp;quot;version&amp;quot;, &amp;quot;1&amp;quot; },
+                    },
+                },
+                Name = &amp;quot;Deploy&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CodePipeline.PipelineArgs.html">PipelineArgs</a></h4>
       <section></section>
@@ -88,6 +258,119 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.CodePipeline.Webhook.html">Webhook</a></h4>
       <section><p>Provides a CodePipeline Webhook.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var barPipeline = new Aws.CodePipeline.Pipeline(&amp;quot;barPipeline&amp;quot;, new Aws.CodePipeline.PipelineArgs
+    {
+        ArtifactStore = new Aws.CodePipeline.Inputs.PipelineArtifactStoreArgs
+        {
+            EncryptionKey = new Aws.CodePipeline.Inputs.PipelineArtifactStoreEncryptionKeyArgs
+            {
+                Id = data.Aws_kms_alias.S3kmskey.Arn,
+                Type = &amp;quot;KMS&amp;quot;,
+            },
+            Location = aws_s3_bucket.Bar.Bucket,
+            Type = &amp;quot;S3&amp;quot;,
+        },
+        RoleArn = aws_iam_role.Bar.Arn,
+        Stages = 
+        {
+            new Aws.CodePipeline.Inputs.PipelineStageArgs
+            {
+                Action = 
+                {
+
+                    {
+                        { &amp;quot;category&amp;quot;, &amp;quot;Source&amp;quot; },
+                        { &amp;quot;configuration&amp;quot;, 
+                        {
+                            { &amp;quot;Branch&amp;quot;, &amp;quot;master&amp;quot; },
+                            { &amp;quot;Owner&amp;quot;, &amp;quot;my-organization&amp;quot; },
+                            { &amp;quot;Repo&amp;quot;, &amp;quot;test&amp;quot; },
+                        } },
+                        { &amp;quot;name&amp;quot;, &amp;quot;Source&amp;quot; },
+                        { &amp;quot;outputArtifacts&amp;quot;, 
+                        {
+                            &amp;quot;test&amp;quot;,
+                        } },
+                        { &amp;quot;owner&amp;quot;, &amp;quot;ThirdParty&amp;quot; },
+                        { &amp;quot;provider&amp;quot;, &amp;quot;GitHub&amp;quot; },
+                        { &amp;quot;version&amp;quot;, &amp;quot;1&amp;quot; },
+                    },
+                },
+                Name = &amp;quot;Source&amp;quot;,
+            },
+            new Aws.CodePipeline.Inputs.PipelineStageArgs
+            {
+                Action = 
+                {
+
+                    {
+                        { &amp;quot;category&amp;quot;, &amp;quot;Build&amp;quot; },
+                        { &amp;quot;configuration&amp;quot;, 
+                        {
+                            { &amp;quot;ProjectName&amp;quot;, &amp;quot;test&amp;quot; },
+                        } },
+                        { &amp;quot;inputArtifacts&amp;quot;, 
+                        {
+                            &amp;quot;test&amp;quot;,
+                        } },
+                        { &amp;quot;name&amp;quot;, &amp;quot;Build&amp;quot; },
+                        { &amp;quot;owner&amp;quot;, &amp;quot;AWS&amp;quot; },
+                        { &amp;quot;provider&amp;quot;, &amp;quot;CodeBuild&amp;quot; },
+                        { &amp;quot;version&amp;quot;, &amp;quot;1&amp;quot; },
+                    },
+                },
+                Name = &amp;quot;Build&amp;quot;,
+            },
+        },
+    });
+    var webhookSecret = &amp;quot;super-secret&amp;quot;;
+    var barWebhook = new Aws.CodePipeline.Webhook(&amp;quot;barWebhook&amp;quot;, new Aws.CodePipeline.WebhookArgs
+    {
+        Authentication = &amp;quot;GITHUB_HMAC&amp;quot;,
+        AuthenticationConfiguration = new Aws.CodePipeline.Inputs.WebhookAuthenticationConfigurationArgs
+        {
+            SecretToken = webhookSecret,
+        },
+        Filters = 
+        {
+            new Aws.CodePipeline.Inputs.WebhookFilterArgs
+            {
+                JsonPath = &amp;quot;$$.ref&amp;quot;,
+                MatchEquals = &amp;quot;refs/heads/{Branch}&amp;quot;,
+            },
+        },
+        TargetAction = &amp;quot;Source&amp;quot;,
+        TargetPipeline = barPipeline.Name,
+    });
+    // Wire the CodePipeline webhook into a GitHub repository.
+    var barRepositoryWebhook = new Github.RepositoryWebhook(&amp;quot;barRepositoryWebhook&amp;quot;, new Github.RepositoryWebhookArgs
+    {
+        Configuration = new Github.Inputs.RepositoryWebhookConfigurationArgs
+        {
+            ContentType = &amp;quot;json&amp;quot;,
+            InsecureSsl = true,
+            Secret = webhookSecret,
+            Url = barWebhook.Url,
+        },
+        Events = 
+        {
+            &amp;quot;push&amp;quot;,
+        },
+        Repository = github_repository.Repo.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CodePipeline.WebhookArgs.html">WebhookArgs</a></h4>
       <section></section>

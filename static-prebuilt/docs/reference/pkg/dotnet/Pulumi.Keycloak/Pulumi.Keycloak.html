@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Keycloak
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,25 @@
       <h4><a class="xref" href="Pulumi.Keycloak.AttributeImporterIdentityProviderMapper.html">AttributeImporterIdentityProviderMapper</a></h4>
       <section><h2 id="-keycloakattributeimporteridentityprovidermapper"># keycloak..AttributeImporterIdentityProviderMapper</h2>
 <p>Allows to create and manage identity provider mappers within Keycloak.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testMapper = new Keycloak.AttributeImporterIdentityProviderMapper(&amp;quot;testMapper&amp;quot;, new Keycloak.AttributeImporterIdentityProviderMapperArgs
+    {
+        AttributeName = &amp;quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname&amp;quot;,
+        IdentityProviderAlias = &amp;quot;idp_alias&amp;quot;,
+        Realm = &amp;quot;my-realm&amp;quot;,
+        UserAttribute = &amp;quot;lastName&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -114,6 +133,35 @@
 <p>Allows for managing a realm's default groups.</p>
 <p>Note that you should not use <code>keycloak..DefaultGroups</code> with a group with memberships managed
 by <code>keycloak..GroupMemberships</code>.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var @group = new Keycloak.Group(&amp;quot;group&amp;quot;, new Keycloak.GroupArgs
+    {
+        RealmId = realm.Id,
+    });
+    var @default = new Keycloak.DefaultGroups(&amp;quot;default&amp;quot;, new Keycloak.DefaultGroupsArgs
+    {
+        GroupIds = 
+        {
+            @group.Id,
+        },
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -135,6 +183,42 @@ by <code>keycloak..GroupMemberships</code>.</p>
 </ul>
 <p>Due to the generic nature of this mapper, it is less user-friendly and more prone to configuration errors.
 Therefore, if possible, a specific mapper should be used.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var samlClient = new Keycloak.Saml.Client(&amp;quot;samlClient&amp;quot;, new Keycloak.Saml.ClientArgs
+    {
+        ClientId = &amp;quot;test-client&amp;quot;,
+        RealmId = realm.Id,
+    });
+    var samlHardcodeAttributeMapper = new Keycloak.GenericClientProtocolMapper(&amp;quot;samlHardcodeAttributeMapper&amp;quot;, new Keycloak.GenericClientProtocolMapperArgs
+    {
+        ClientId = samlClient.Id,
+        Config = 
+        {
+            { &amp;quot;attribute.name&amp;quot;, &amp;quot;name&amp;quot; },
+            { &amp;quot;attribute.nameformat&amp;quot;, &amp;quot;Basic&amp;quot; },
+            { &amp;quot;attribute.value&amp;quot;, &amp;quot;value&amp;quot; },
+            { &amp;quot;friendly.name&amp;quot;, &amp;quot;display name&amp;quot; },
+        },
+        Protocol = &amp;quot;saml&amp;quot;,
+        ProtocolMapper = &amp;quot;saml-hardcode-attribute-mapper&amp;quot;,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -190,6 +274,42 @@ to a claim.</p>
 <p>Attributes can also be defined on Groups.</p>
 <p>Groups can also be federated from external data sources, such as LDAP or Active Directory.
 This resource <strong>should not</strong> be used to manage groups that were created this way.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var parentGroup = new Keycloak.Group(&amp;quot;parentGroup&amp;quot;, new Keycloak.GroupArgs
+    {
+        RealmId = realm.Id,
+    });
+    var childGroup = new Keycloak.Group(&amp;quot;childGroup&amp;quot;, new Keycloak.GroupArgs
+    {
+        ParentId = parentGroup.Id,
+        RealmId = realm.Id,
+    });
+    var childGroupWithOptionalAttributes = new Keycloak.Group(&amp;quot;childGroupWithOptionalAttributes&amp;quot;, new Keycloak.GroupArgs
+    {
+        Attributes = 
+        {
+            { &amp;quot;key1&amp;quot;, &amp;quot;value1&amp;quot; },
+            { &amp;quot;key2&amp;quot;, &amp;quot;value2&amp;quot; },
+        },
+        ParentId = parentGroup.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -247,6 +367,39 @@ construction to achieve fine-grained programmatic control over provider settings
       <h4><a class="xref" href="Pulumi.Keycloak.RealmEvents.html">RealmEvents</a></h4>
       <section><h2 id="-keycloakrealmevents"># keycloak..RealmEvents</h2>
 <p>Allows for managing Realm Events settings within Keycloak.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Realm = &amp;quot;test&amp;quot;,
+    });
+    var realmEvents = new Keycloak.RealmEvents(&amp;quot;realmEvents&amp;quot;, new Keycloak.RealmEventsArgs
+    {
+        AdminEventsDetailsEnabled = true,
+        AdminEventsEnabled = true,
+        EnabledEventTypes = 
+        {
+            &amp;quot;LOGIN&amp;quot;,
+            &amp;quot;LOGOUT&amp;quot;,
+        },
+        EventsEnabled = true,
+        EventsExpiration = 3600,
+        EventsListeners = 
+        {
+            &amp;quot;jboss-logging&amp;quot;,
+        },
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -276,6 +429,116 @@ construction to achieve fine-grained programmatic control over provider settings
 <p>Allows for creating and managing roles within Keycloak.</p>
 <p>Roles allow you define privileges within Keycloak and map them to users
 and groups.</p>
+<h3 id="example-usage-realm-role">Example Usage (Realm role)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var realmRole = new Keycloak.Role(&amp;quot;realmRole&amp;quot;, new Keycloak.RoleArgs
+    {
+        Description = &amp;quot;My Realm Role&amp;quot;,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-client-role">Example Usage (Client role)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var client = new Keycloak.OpenId.Client(&amp;quot;client&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;BEARER-ONLY&amp;quot;,
+        ClientId = &amp;quot;client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+    });
+    var clientRole = new Keycloak.Role(&amp;quot;clientRole&amp;quot;, new Keycloak.RoleArgs
+    {
+        ClientId = keycloak_client.Client.Id,
+        Description = &amp;quot;My Client Role&amp;quot;,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-composite-role">Example Usage (Composite role)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var createRole = new Keycloak.Role(&amp;quot;createRole&amp;quot;, new Keycloak.RoleArgs
+    {
+        RealmId = realm.Id,
+    });
+    var readRole = new Keycloak.Role(&amp;quot;readRole&amp;quot;, new Keycloak.RoleArgs
+    {
+        RealmId = realm.Id,
+    });
+    var updateRole = new Keycloak.Role(&amp;quot;updateRole&amp;quot;, new Keycloak.RoleArgs
+    {
+        RealmId = realm.Id,
+    });
+    var deleteRole = new Keycloak.Role(&amp;quot;deleteRole&amp;quot;, new Keycloak.RoleArgs
+    {
+        RealmId = realm.Id,
+    });
+    var client = new Keycloak.OpenId.Client(&amp;quot;client&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;BEARER-ONLY&amp;quot;,
+        ClientId = &amp;quot;client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+    });
+    var clientRole = new Keycloak.Role(&amp;quot;clientRole&amp;quot;, new Keycloak.RoleArgs
+    {
+        ClientId = keycloak_client.Client.Id,
+        Description = &amp;quot;My Client Role&amp;quot;,
+        RealmId = realm.Id,
+    });
+    var adminRole = new Keycloak.Role(&amp;quot;adminRole&amp;quot;, new Keycloak.RoleArgs
+    {
+        CompositeRoles = 
+        {
+            &amp;quot;{keycloak_role.create_role.id}&amp;quot;,
+            &amp;quot;{keycloak_role.read_role.id}&amp;quot;,
+            &amp;quot;{keycloak_role.update_role.id}&amp;quot;,
+            &amp;quot;{keycloak_role.delete_role.id}&amp;quot;,
+            &amp;quot;{keycloak_role.client_role.id}&amp;quot;,
+        },
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -299,6 +562,46 @@ this list.</li>
 <p>This resource was created primarily to enable the acceptance tests for the <code>keycloak..Group</code> resource.
 Creating users within Keycloak is not recommended. Instead, users should be federated from external sources
 by configuring user federation providers or identity providers.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var user = new Keycloak.User(&amp;quot;user&amp;quot;, new Keycloak.UserArgs
+    {
+        Email = &amp;quot;bob@domain.com&amp;quot;,
+        Enabled = true,
+        FirstName = &amp;quot;Bob&amp;quot;,
+        LastName = &amp;quot;Bobson&amp;quot;,
+        RealmId = realm.Id,
+        Username = &amp;quot;bob&amp;quot;,
+    });
+    var userWithInitialPassword = new Keycloak.User(&amp;quot;userWithInitialPassword&amp;quot;, new Keycloak.UserArgs
+    {
+        Email = &amp;quot;alice@domain.com&amp;quot;,
+        Enabled = true,
+        FirstName = &amp;quot;Alice&amp;quot;,
+        InitialPassword = new Keycloak.Inputs.UserInitialPasswordArgs
+        {
+            Temporary = true,
+            Value = &amp;quot;some password&amp;quot;,
+        },
+        LastName = &amp;quot;Aliceberg&amp;quot;,
+        RealmId = realm.Id,
+        Username = &amp;quot;alice&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>

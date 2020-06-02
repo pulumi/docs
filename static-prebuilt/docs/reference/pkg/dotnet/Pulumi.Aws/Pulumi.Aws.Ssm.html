@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Ssm
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,42 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.Activation.html">Activation</a></h4>
       <section><p>Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testRole = new Aws.Iam.Role(&amp;quot;testRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;  {
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {&amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ssm.amazonaws.com&amp;quot;&amp;quot;},
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;
+}
+}
+
+&amp;quot;,
+    });
+    var testAttach = new Aws.Iam.RolePolicyAttachment(&amp;quot;testAttach&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore&amp;quot;,
+        Role = testRole.Name,
+    });
+    var foo = new Aws.Ssm.Activation(&amp;quot;foo&amp;quot;, new Aws.Ssm.ActivationArgs
+    {
+        Description = &amp;quot;Test&amp;quot;,
+        IamRole = testRole.Id,
+        RegistrationLimit = &amp;quot;5&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.ActivationArgs.html">ActivationArgs</a></h4>
       <section></section>
@@ -85,6 +121,32 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.Association.html">Association</a></h4>
       <section><p>Associates an SSM Document to an instance or EC2 tag.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ssm.Association(&amp;quot;example&amp;quot;, new Aws.Ssm.AssociationArgs
+    {
+        Targets = 
+        {
+            new Aws.Ssm.Inputs.AssociationTargetArgs
+            {
+                Key = &amp;quot;InstanceIds&amp;quot;,
+                Values = 
+                {
+                    aws_instance.Example.Id,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.AssociationArgs.html">AssociationArgs</a></h4>
       <section></section>
@@ -94,16 +156,44 @@
       <section><p>Provides an SSM Document resource</p>
 <blockquote>
 <p><strong>NOTE on updating SSM documents:</strong> Only documents with a schema version of 2.0
-or greater can update their content once created, see [SSM Schema Features][1]. To update a document with an older
+or greater can update their content once created, see <a href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#document-schemas-features">SSM Schema Features</a>. To update a document with an older
 schema version you must recreate the resource.</p>
 </blockquote>
-<h2 id="attachments_source">attachments_source</h2>
-<p>The <code>attachments_source</code> block supports the following:</p>
-<ul>
-<li><code>key</code> - (Required) The key describing the location of an attachment to a document. Valid key types include: <code>SourceUrl</code> and <code>S3FileUrl</code></li>
-<li><code>values</code> - (Required) The value describing the location of an attachment to a document</li>
-<li><code>name</code> - (Optional) The name of the document attachment file</li>
-</ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.Ssm.Document(&amp;quot;foo&amp;quot;, new Aws.Ssm.DocumentArgs
+    {
+        Content = @&amp;quot;  {
+&amp;quot;&amp;quot;schemaVersion&amp;quot;&amp;quot;: &amp;quot;&amp;quot;1.2&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;description&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Check ip configuration of a Linux instance.&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;parameters&amp;quot;&amp;quot;: {
+
+},
+&amp;quot;&amp;quot;runtimeConfig&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;aws:runShellScript&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;properties&amp;quot;&amp;quot;: [
+      {
+        &amp;quot;&amp;quot;id&amp;quot;&amp;quot;: &amp;quot;&amp;quot;0.aws:runShellScript&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;runCommand&amp;quot;&amp;quot;: [&amp;quot;&amp;quot;ifconfig&amp;quot;&amp;quot;]
+      }
+    ]
+  }
+}
+}
+
+&amp;quot;,
+        DocumentType = &amp;quot;Command&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h2 id="permissions">Permissions</h2>
 <p>The permissions attribute specifies how you want to share the document. If you share a document privately,
 you must specify the AWS user account IDs for those people who can use the document. If you share a document
@@ -138,6 +228,24 @@ publicly, you must specify All as the account ID.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.MaintenanceWindow.html">MaintenanceWindow</a></h4>
       <section><p>Provides an SSM Maintenance Window resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var production = new Aws.Ssm.MaintenanceWindow(&amp;quot;production&amp;quot;, new Aws.Ssm.MaintenanceWindowArgs
+    {
+        Cutoff = 1,
+        Duration = 3,
+        Schedule = &amp;quot;cron(0 16 ? * TUE *)&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.MaintenanceWindowArgs.html">MaintenanceWindowArgs</a></h4>
       <section></section>
@@ -145,6 +253,77 @@ publicly, you must specify All as the account ID.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.MaintenanceWindowTarget.html">MaintenanceWindowTarget</a></h4>
       <section><p>Provides an SSM Maintenance Window Target resource</p>
+<h2 id="instance-target-example-usage">Instance Target Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var window = new Aws.Ssm.MaintenanceWindow(&amp;quot;window&amp;quot;, new Aws.Ssm.MaintenanceWindowArgs
+    {
+        Cutoff = 1,
+        Duration = 3,
+        Schedule = &amp;quot;cron(0 16 ? * TUE *)&amp;quot;,
+    });
+    var target1 = new Aws.Ssm.MaintenanceWindowTarget(&amp;quot;target1&amp;quot;, new Aws.Ssm.MaintenanceWindowTargetArgs
+    {
+        Description = &amp;quot;This is a maintenance window target&amp;quot;,
+        ResourceType = &amp;quot;INSTANCE&amp;quot;,
+        Targets = 
+        {
+            new Aws.Ssm.Inputs.MaintenanceWindowTargetTargetArgs
+            {
+                Key = &amp;quot;tag:Name&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;acceptance_test&amp;quot;,
+                },
+            },
+        },
+        WindowId = window.Id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="resource-group-target-example-usage">Resource Group Target Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var window = new Aws.Ssm.MaintenanceWindow(&amp;quot;window&amp;quot;, new Aws.Ssm.MaintenanceWindowArgs
+    {
+        Cutoff = 1,
+        Duration = 3,
+        Schedule = &amp;quot;cron(0 16 ? * TUE *)&amp;quot;,
+    });
+    var target1 = new Aws.Ssm.MaintenanceWindowTarget(&amp;quot;target1&amp;quot;, new Aws.Ssm.MaintenanceWindowTargetArgs
+    {
+        Description = &amp;quot;This is a maintenance window target&amp;quot;,
+        ResourceType = &amp;quot;RESOURCE_GROUP&amp;quot;,
+        Targets = 
+        {
+            new Aws.Ssm.Inputs.MaintenanceWindowTargetTargetArgs
+            {
+                Key = &amp;quot;resource-groups:ResourceTypeFilters&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;AWS::EC2::INSTANCE&amp;quot;,
+                    &amp;quot;AWS::EC2::VPC&amp;quot;,
+                },
+            },
+        },
+        WindowId = window.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.MaintenanceWindowTargetArgs.html">MaintenanceWindowTargetArgs</a></h4>
       <section></section>
@@ -152,6 +331,162 @@ publicly, you must specify All as the account ID.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.MaintenanceWindowTask.html">MaintenanceWindowTask</a></h4>
       <section><p>Provides an SSM Maintenance Window Task resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="automation-tasks">Automation Tasks</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ssm.MaintenanceWindowTask(&amp;quot;example&amp;quot;, new Aws.Ssm.MaintenanceWindowTaskArgs
+    {
+        MaxConcurrency = 2,
+        MaxErrors = 1,
+        Priority = 1,
+        ServiceRoleArn = aws_iam_role.Example.Arn,
+        Targets = 
+        {
+            new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
+            {
+                Key = &amp;quot;InstanceIds&amp;quot;,
+                Values = 
+                {
+                    aws_instance.Example.Id,
+                },
+            },
+        },
+        TaskArn = &amp;quot;AWS-RestartEC2Instance&amp;quot;,
+        TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
+        {
+            AutomationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs
+            {
+                DocumentVersion = &amp;quot;$$LATEST&amp;quot;,
+                Parameter = 
+                {
+
+                    {
+                        { &amp;quot;name&amp;quot;, &amp;quot;InstanceId&amp;quot; },
+                        { &amp;quot;values&amp;quot;, 
+                        {
+                            aws_instance.Example.Id,
+                        } },
+                    },
+                },
+            },
+        },
+        TaskType = &amp;quot;AUTOMATION&amp;quot;,
+        WindowId = aws_ssm_maintenance_window.Example.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="run-command-tasks">Run Command Tasks</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ssm.MaintenanceWindowTask(&amp;quot;example&amp;quot;, new Aws.Ssm.MaintenanceWindowTaskArgs
+    {
+        MaxConcurrency = 2,
+        MaxErrors = 1,
+        Priority = 1,
+        ServiceRoleArn = aws_iam_role.Example.Arn,
+        Targets = 
+        {
+            new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
+            {
+                Key = &amp;quot;InstanceIds&amp;quot;,
+                Values = 
+                {
+                    aws_instance.Example.Id,
+                },
+            },
+        },
+        TaskArn = &amp;quot;AWS-RunShellScript&amp;quot;,
+        TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
+        {
+            RunCommandParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs
+            {
+                NotificationConfig = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs
+                {
+                    NotificationArn = aws_sns_topic.Example.Arn,
+                    NotificationEvents = 
+                    {
+                        &amp;quot;All&amp;quot;,
+                    },
+                    NotificationType = &amp;quot;Command&amp;quot;,
+                },
+                OutputS3Bucket = aws_s3_bucket.Example.Bucket,
+                OutputS3KeyPrefix = &amp;quot;output&amp;quot;,
+                Parameter = 
+                {
+
+                    {
+                        { &amp;quot;name&amp;quot;, &amp;quot;commands&amp;quot; },
+                        { &amp;quot;values&amp;quot;, 
+                        {
+                            &amp;quot;date&amp;quot;,
+                        } },
+                    },
+                },
+                ServiceRoleArn = aws_iam_role.Example.Arn,
+                TimeoutSeconds = 600,
+            },
+        },
+        TaskType = &amp;quot;RUN_COMMAND&amp;quot;,
+        WindowId = aws_ssm_maintenance_window.Example.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="step-function-tasks">Step Function Tasks</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ssm.MaintenanceWindowTask(&amp;quot;example&amp;quot;, new Aws.Ssm.MaintenanceWindowTaskArgs
+    {
+        MaxConcurrency = 2,
+        MaxErrors = 1,
+        Priority = 1,
+        ServiceRoleArn = aws_iam_role.Example.Arn,
+        Targets = 
+        {
+            new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
+            {
+                Key = &amp;quot;InstanceIds&amp;quot;,
+                Values = 
+                {
+                    aws_instance.Example.Id,
+                },
+            },
+        },
+        TaskArn = aws_sfn_activity.Example.Id,
+        TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
+        {
+            StepFunctionsParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs
+            {
+                Input = &amp;quot;{\&amp;quot;key1\&amp;quot;:\&amp;quot;value1\&amp;quot;}&amp;quot;,
+                Name = &amp;quot;example&amp;quot;,
+            },
+        },
+        TaskType = &amp;quot;STEP_FUNCTIONS&amp;quot;,
+        WindowId = aws_ssm_maintenance_window.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.MaintenanceWindowTaskArgs.html">MaintenanceWindowTaskArgs</a></h4>
       <section></section>
@@ -159,6 +494,23 @@ publicly, you must specify All as the account ID.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.Parameter.html">Parameter</a></h4>
       <section><p>Provides an SSM Parameter resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.Ssm.Parameter(&amp;quot;foo&amp;quot;, new Aws.Ssm.ParameterArgs
+    {
+        Type = &amp;quot;String&amp;quot;,
+        Value = &amp;quot;bar&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.ParameterArgs.html">ParameterArgs</a></h4>
       <section></section>
@@ -171,6 +523,25 @@ publicly, you must specify All as the account ID.</p>
 both marked as optional fields, but the Patch Baseline requires that at least one
 of them is specified.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var production = new Aws.Ssm.PatchBaseline(&amp;quot;production&amp;quot;, new Aws.Ssm.PatchBaselineArgs
+    {
+        ApprovedPatches = 
+        {
+            &amp;quot;KB123456&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.PatchBaselineArgs.html">PatchBaselineArgs</a></h4>
       <section></section>
@@ -178,6 +549,30 @@ of them is specified.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.PatchGroup.html">PatchGroup</a></h4>
       <section><p>Provides an SSM Patch Group resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var production = new Aws.Ssm.PatchBaseline(&amp;quot;production&amp;quot;, new Aws.Ssm.PatchBaselineArgs
+    {
+        ApprovedPatches = 
+        {
+            &amp;quot;KB123456&amp;quot;,
+        },
+    });
+    var patchgroup = new Aws.Ssm.PatchGroup(&amp;quot;patchgroup&amp;quot;, new Aws.Ssm.PatchGroupArgs
+    {
+        BaselineId = production.Id,
+        PatchGroup = &amp;quot;patch-group-name&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.PatchGroupArgs.html">PatchGroupArgs</a></h4>
       <section></section>
@@ -185,15 +580,64 @@ of them is specified.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.ResourceDataSync.html">ResourceDataSync</a></h4>
       <section><p>Provides a SSM resource data sync.</p>
-<h2 id="s3_destination">s3_destination</h2>
-<p><code>s3_destination</code> supports the following:</p>
-<ul>
-<li><code>bucket_name</code> - (Required) Name of S3 bucket where the aggregated data is stored.</li>
-<li><code>region</code> - (Required) Region with the bucket targeted by the Resource Data Sync.</li>
-<li><code>kms_key_arn</code> - (Optional) ARN of an encryption key for a destination in Amazon S3.</li>
-<li><code>prefix</code> - (Optional) Prefix for the bucket.</li>
-<li><code>sync_format</code> - (Optional) A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.</li>
-</ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var hogeBucket = new Aws.S3.Bucket(&amp;quot;hogeBucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Region = &amp;quot;us-east-1&amp;quot;,
+    });
+    var hogeBucketPolicy = new Aws.S3.BucketPolicy(&amp;quot;hogeBucketPolicy&amp;quot;, new Aws.S3.BucketPolicyArgs
+    {
+        Bucket = hogeBucket.BucketName,
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+    {
+        &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;SSMBucketPermissionsCheck&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+            &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ssm.amazonaws.com&amp;quot;&amp;quot;
+        },
+        &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;s3:GetBucketAcl&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:s3:::tf-test-bucket-1234&amp;quot;&amp;quot;
+    },
+    {
+        &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot; SSMBucketDelivery&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+            &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ssm.amazonaws.com&amp;quot;&amp;quot;
+        },
+        &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;s3:PutObject&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [&amp;quot;&amp;quot;arn:aws:s3:::tf-test-bucket-1234/*&amp;quot;&amp;quot;],
+        &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {
+            &amp;quot;&amp;quot;StringEquals&amp;quot;&amp;quot;: {
+                &amp;quot;&amp;quot;s3:x-amz-acl&amp;quot;&amp;quot;: &amp;quot;&amp;quot;bucket-owner-full-control&amp;quot;&amp;quot;
+            }
+        }
+    }
+]
+}
+
+&amp;quot;,
+    });
+    var foo = new Aws.Ssm.ResourceDataSync(&amp;quot;foo&amp;quot;, new Aws.Ssm.ResourceDataSyncArgs
+    {
+        S3Destination = new Aws.Ssm.Inputs.ResourceDataSyncS3DestinationArgs
+        {
+            BucketName = hogeBucket.BucketName,
+            Region = hogeBucket.Region,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ssm.ResourceDataSyncArgs.html">ResourceDataSyncArgs</a></h4>
       <section></section>

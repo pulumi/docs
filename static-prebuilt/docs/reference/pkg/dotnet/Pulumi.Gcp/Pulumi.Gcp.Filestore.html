@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Filestore
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,6 +86,39 @@
 <li><a href="https://cloud.google.com/filestore/docs/accessing-fileshares">Use with Kubernetes</a></li>
 <li><a href="https://cloud.google.com/filestore/docs/copying-data">Copying Data In/Out</a></li>
 </ul>
+<h2 id="example-usage---filestore-instance-basic">Example Usage - Filestore Instance Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new Gcp.Filestore.Instance(&amp;quot;instance&amp;quot;, new Gcp.Filestore.InstanceArgs
+    {
+        FileShares = new Gcp.Filestore.Inputs.InstanceFileSharesArgs
+        {
+            CapacityGb = 2660,
+            Name = &amp;quot;share1&amp;quot;,
+        },
+        Networks = 
+        {
+            new Gcp.Filestore.Inputs.InstanceNetworkArgs
+            {
+                Modes = 
+                {
+                    &amp;quot;MODE_IPV4&amp;quot;,
+                },
+                Network = &amp;quot;default&amp;quot;,
+            },
+        },
+        Tier = &amp;quot;PREMIUM&amp;quot;,
+        Zone = &amp;quot;us-central1-b&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Filestore.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetNetworkAcls
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,26 +78,121 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetNetworkAcls</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2_GetNetworkAcls_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetNetworkAcls : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetNetworkAcls</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetNetworkAcls.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/GetNetworkAcls.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_GetNetworkAcls_InvokeAsync_" data-uid="Pulumi.Aws.Ec2.GetNetworkAcls.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_Ec2_GetNetworkAcls_InvokeAsync_Pulumi_Aws_Ec2_GetNetworkAclsArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.Ec2.GetNetworkAcls.InvokeAsync(Pulumi.Aws.Ec2.GetNetworkAclsArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetNetworkAclsArgs, Nullable&lt;InvokeOptions&gt;)</h4>
-  <div class="markdown level1 summary"><p>{{% examples %}}
+  <h4 id="Pulumi_Aws_Ec2_GetNetworkAcls_InvokeAsync_Pulumi_Aws_Ec2_GetNetworkAclsArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.Ec2.GetNetworkAcls.InvokeAsync(Pulumi.Aws.Ec2.GetNetworkAclsArgs,Pulumi.InvokeOptions)">InvokeAsync(GetNetworkAclsArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<p>The following shows outputing all network ACL ids in a vpc.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleNetworkAcls = Output.Create(Aws.Ec2.GetNetworkAcls.InvokeAsync(new Aws.Ec2.GetNetworkAclsArgs
+    {
+        VpcId = @var.Vpc_id,
+    }));
+    this.Example = exampleNetworkAcls.Apply(exampleNetworkAcls =&gt; exampleNetworkAcls.Ids);
+}
+
+[Output(&amp;quot;example&amp;quot;)]
+public Output&amp;lt;string&gt; Example { get; set; }
+}
+</code></pre>
+<p>The following example retrieves a list of all network ACL ids in a VPC with a custom
+tag of <code>Tier</code> set to a value of &quot;Private&quot;.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = Output.Create(Aws.Ec2.GetNetworkAcls.InvokeAsync(new Aws.Ec2.GetNetworkAclsArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;Tier&amp;quot;, &amp;quot;Private&amp;quot; },
+        },
+        VpcId = @var.Vpc_id,
+    }));
+}
+
+}
+</code></pre>
+<p>The following example retrieves a network ACL id in a VPC which associated
+with specific subnet.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = Output.Create(Aws.Ec2.GetNetworkAcls.InvokeAsync(new Aws.Ec2.GetNetworkAclsArgs
+    {
+        Filters = 
+        {
+            new Aws.Ec2.Inputs.GetNetworkAclsFilterArgs
+            {
+                Name = &amp;quot;association.subnet-id&amp;quot;,
+                Values = 
+                {
+                    aws_subnet.Test.Id,
+                },
+            },
+        },
+        VpcId = @var.Vpc_id,
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetNetworkAclsResult&gt; InvokeAsync(GetNetworkAclsArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetNetworkAclsResult&gt; InvokeAsync(GetNetworkAclsArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -115,7 +210,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -131,7 +226,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.GetNetworkAclsResult.html">GetNetworkAclsResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.GetNetworkAclsResult.html">GetNetworkAclsResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -143,7 +238,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetNetworkAcls.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/GetNetworkAcls.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

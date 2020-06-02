@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.LogicApps
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,46 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.ActionCustom.html">ActionCustom</a></h4>
       <section><p>Manages a Custom Action within a Logic App Workflow</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var exampleWorkflow = new Azure.LogicApps.Workflow(&amp;quot;exampleWorkflow&amp;quot;, new Azure.LogicApps.WorkflowArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleActionCustom = new Azure.LogicApps.ActionCustom(&amp;quot;exampleActionCustom&amp;quot;, new Azure.LogicApps.ActionCustomArgs
+    {
+        LogicAppId = exampleWorkflow.Id,
+        Body = @&amp;quot;{
+&amp;quot;&amp;quot;description&amp;quot;&amp;quot;: &amp;quot;&amp;quot;A variable to configure the auto expiration age in days. Configured in negative number. Default is -30 (30 days old).&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;inputs&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;variables&amp;quot;&amp;quot;: [
+        {
+            &amp;quot;&amp;quot;name&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ExpirationAgeInDays&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Integer&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;value&amp;quot;&amp;quot;: -30
+        }
+    ]
+},
+&amp;quot;&amp;quot;runAfter&amp;quot;&amp;quot;: {},
+&amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;InitializeVariable&amp;quot;&amp;quot;
+}
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.ActionCustomArgs.html">ActionCustomArgs</a></h4>
       <section></section>
@@ -85,6 +125,33 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.ActionHttp.html">ActionHttp</a></h4>
       <section><p>Manages an HTTP Action within a Logic App Workflow</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var exampleWorkflow = new Azure.LogicApps.Workflow(&amp;quot;exampleWorkflow&amp;quot;, new Azure.LogicApps.WorkflowArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleActionHttp = new Azure.LogicApps.ActionHttp(&amp;quot;exampleActionHttp&amp;quot;, new Azure.LogicApps.ActionHttpArgs
+    {
+        LogicAppId = exampleWorkflow.Id,
+        Method = &amp;quot;GET&amp;quot;,
+        Uri = &amp;quot;http://example.com/some-webhook&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.ActionHttpArgs.html">ActionHttpArgs</a></h4>
       <section></section>
@@ -98,6 +165,39 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.TriggerCustom.html">TriggerCustom</a></h4>
       <section><p>Manages a Custom Trigger within a Logic App Workflow</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var exampleWorkflow = new Azure.LogicApps.Workflow(&amp;quot;exampleWorkflow&amp;quot;, new Azure.LogicApps.WorkflowArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleTriggerCustom = new Azure.LogicApps.TriggerCustom(&amp;quot;exampleTriggerCustom&amp;quot;, new Azure.LogicApps.TriggerCustomArgs
+    {
+        LogicAppId = exampleWorkflow.Id,
+        Body = @&amp;quot;{
+&amp;quot;&amp;quot;recurrence&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;frequency&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Day&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;interval&amp;quot;&amp;quot;: 1
+},
+&amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Recurrence&amp;quot;&amp;quot;
+}
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.TriggerCustomArgs.html">TriggerCustomArgs</a></h4>
       <section></section>
@@ -105,6 +205,40 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.TriggerHttpRequest.html">TriggerHttpRequest</a></h4>
       <section><p>Manages a HTTP Request Trigger within a Logic App Workflow</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var exampleWorkflow = new Azure.LogicApps.Workflow(&amp;quot;exampleWorkflow&amp;quot;, new Azure.LogicApps.WorkflowArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleTriggerHttpRequest = new Azure.LogicApps.TriggerHttpRequest(&amp;quot;exampleTriggerHttpRequest&amp;quot;, new Azure.LogicApps.TriggerHttpRequestArgs
+    {
+        LogicAppId = exampleWorkflow.Id,
+        Schema = @&amp;quot;{
+&amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;object&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;properties&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;hello&amp;quot;&amp;quot;: {
+        &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;string&amp;quot;&amp;quot;
+    }
+}
+}
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.TriggerHttpRequestArgs.html">TriggerHttpRequestArgs</a></h4>
       <section></section>
@@ -112,6 +246,33 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.TriggerRecurrence.html">TriggerRecurrence</a></h4>
       <section><p>Manages a Recurrence Trigger within a Logic App Workflow</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var exampleWorkflow = new Azure.LogicApps.Workflow(&amp;quot;exampleWorkflow&amp;quot;, new Azure.LogicApps.WorkflowArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleTriggerRecurrence = new Azure.LogicApps.TriggerRecurrence(&amp;quot;exampleTriggerRecurrence&amp;quot;, new Azure.LogicApps.TriggerRecurrenceArgs
+    {
+        LogicAppId = exampleWorkflow.Id,
+        Frequency = &amp;quot;Day&amp;quot;,
+        Interval = 1,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.TriggerRecurrenceArgs.html">TriggerRecurrenceArgs</a></h4>
       <section></section>
@@ -119,6 +280,27 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.Workflow.html">Workflow</a></h4>
       <section><p>Manages a Logic App Workflow.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var exampleWorkflow = new Azure.LogicApps.Workflow(&amp;quot;exampleWorkflow&amp;quot;, new Azure.LogicApps.WorkflowArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.LogicApps.WorkflowArgs.html">WorkflowArgs</a></h4>
       <section></section>

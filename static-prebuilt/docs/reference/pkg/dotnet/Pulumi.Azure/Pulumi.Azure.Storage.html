@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Storage
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,33 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.Storage.Account.html">Account</a></h4>
       <section><p>Manages an Azure Storage Account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;GRS&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;staging&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.AccountArgs.html">AccountArgs</a></h4>
       <section></section>
@@ -92,6 +119,70 @@
 <blockquote>
 <p><strong>NOTE:</strong> Deleting this resource updates the storage account back to the default values it had when the storage account was created.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleVirtualNetwork = new Azure.Network.VirtualNetwork(&amp;quot;exampleVirtualNetwork&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        AddressSpaces = 
+        {
+            &amp;quot;10.0.0.0/16&amp;quot;,
+        },
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleSubnet = new Azure.Network.Subnet(&amp;quot;exampleSubnet&amp;quot;, new Azure.Network.SubnetArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        VirtualNetworkName = exampleVirtualNetwork.Name,
+        AddressPrefix = &amp;quot;10.0.2.0/24&amp;quot;,
+        ServiceEndpoints = 
+        {
+            &amp;quot;Microsoft.Storage&amp;quot;,
+        },
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;GRS&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;staging&amp;quot; },
+        },
+    });
+    var test = new Azure.Storage.AccountNetworkRules(&amp;quot;test&amp;quot;, new Azure.Storage.AccountNetworkRulesArgs
+    {
+        ResourceGroupName = azurerm_resource_group.Test.Name,
+        StorageAccountName = azurerm_storage_account.Test.Name,
+        DefaultAction = &amp;quot;Allow&amp;quot;,
+        IpRules = 
+        {
+            &amp;quot;127.0.0.1&amp;quot;,
+        },
+        VirtualNetworkSubnetIds = 
+        {
+            azurerm_subnet.Test.Id,
+        },
+        Bypasses = 
+        {
+            &amp;quot;Metrics&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.AccountNetworkRulesArgs.html">AccountNetworkRulesArgs</a></h4>
       <section></section>
@@ -101,6 +192,41 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.Blob.html">Blob</a></h4>
       <section><p>Manages a Blob within a Storage Container.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var exampleContainer = new Azure.Storage.Container(&amp;quot;exampleContainer&amp;quot;, new Azure.Storage.ContainerArgs
+    {
+        StorageAccountName = exampleAccount.Name,
+        ContainerAccessType = &amp;quot;private&amp;quot;,
+    });
+    var exampleBlob = new Azure.Storage.Blob(&amp;quot;exampleBlob&amp;quot;, new Azure.Storage.BlobArgs
+    {
+        StorageAccountName = exampleAccount.Name,
+        StorageContainerName = exampleContainer.Name,
+        Type = &amp;quot;Block&amp;quot;,
+        Source = new FileAsset(&amp;quot;some-local-file.zip&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.BlobArgs.html">BlobArgs</a></h4>
       <section></section>
@@ -108,6 +234,38 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.Container.html">Container</a></h4>
       <section><p>Manages a Container within an Azure Storage Account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;staging&amp;quot; },
+        },
+    });
+    var exampleContainer = new Azure.Storage.Container(&amp;quot;exampleContainer&amp;quot;, new Azure.Storage.ContainerArgs
+    {
+        StorageAccountName = exampleAccount.Name,
+        ContainerAccessType = &amp;quot;private&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.ContainerArgs.html">ContainerArgs</a></h4>
       <section></section>
@@ -125,6 +283,39 @@
 <blockquote>
 <p><strong>NOTE:</strong> This Resource requires using Azure Active Directory to connect to Azure Storage, which in turn requires the <code>Storage</code> specific roles - which are not granted by default.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+        AccountKind = &amp;quot;StorageV2&amp;quot;,
+        IsHnsEnabled = &amp;quot;true&amp;quot;,
+    });
+    var exampleDataLakeGen2Filesystem = new Azure.Storage.DataLakeGen2Filesystem(&amp;quot;exampleDataLakeGen2Filesystem&amp;quot;, new Azure.Storage.DataLakeGen2FilesystemArgs
+    {
+        StorageAccountId = exampleAccount.Id,
+        Properties = 
+        {
+            { &amp;quot;hello&amp;quot;, &amp;quot;aGVsbG8=&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.DataLakeGen2FilesystemArgs.html">DataLakeGen2FilesystemArgs</a></h4>
       <section></section>
@@ -169,6 +360,33 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.Queue.html">Queue</a></h4>
       <section><p>Manages a Queue within an Azure Storage Account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var exampleQueue = new Azure.Storage.Queue(&amp;quot;exampleQueue&amp;quot;, new Azure.Storage.QueueArgs
+    {
+        StorageAccountName = exampleAccount.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.QueueArgs.html">QueueArgs</a></h4>
       <section></section>
@@ -184,6 +402,39 @@
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.ShareDirectory.html">ShareDirectory</a></h4>
       <section><p>Manages a Directory within an Azure Storage File Share.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var exampleShare = new Azure.Storage.Share(&amp;quot;exampleShare&amp;quot;, new Azure.Storage.ShareArgs
+    {
+        StorageAccountName = exampleAccount.Name,
+        Quota = 50,
+    });
+    var exampleShareDirectory = new Azure.Storage.ShareDirectory(&amp;quot;exampleShareDirectory&amp;quot;, new Azure.Storage.ShareDirectoryArgs
+    {
+        ShareName = exampleShare.Name,
+        StorageAccountName = exampleAccount.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.ShareDirectoryArgs.html">ShareDirectoryArgs</a></h4>
       <section></section>
@@ -193,6 +444,33 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.Table.html">Table</a></h4>
       <section><p>Manages a Table within an Azure Storage Account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var exampleTable = new Azure.Storage.Table(&amp;quot;exampleTable&amp;quot;, new Azure.Storage.TableArgs
+    {
+        StorageAccountName = exampleAccount.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.TableArgs.html">TableArgs</a></h4>
       <section></section>
@@ -206,8 +484,7 @@
       <h4><a class="xref" href="Pulumi.Azure.Storage.TableState.html">TableState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.ZipBlob.html">ZipBlob</a></h4>
-      <section><p>Deprecated: ZipBlob resource is deprecated in the 2.0 version of the provider. Use Blob resource instead.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.ZipBlobArgs.html">ZipBlobArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Storage.ZipBlobState.html">ZipBlobState</a></h4>

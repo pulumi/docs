@@ -1,0 +1,534 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class X509AuthenticationDatabaseUser
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class X509AuthenticationDatabaseUser
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser">
+  
+  <h1 id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser" class="text-break">Class X509AuthenticationDatabaseUser
+  </h1>
+  <div class="markdown level0 summary"><p><code>mongodbatlas..X509AuthenticationDatabaseUser</code> provides a X509 Authentication Database User resource. The mongodbatlas..X509AuthenticationDatabaseUser resource lets you manage MongoDB users who authenticate using X.509 certificates. You can manage these X.509 certificates or let Atlas do it for you.</p>
+<table>
+<thead>
+<tr>
+<th>Management</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atlas</td>
+<td>Atlas manages your Certificate Authority and can generate certificates for your MongoDB users. No additional X.509 configuration is required.</td>
+</tr>
+<tr>
+<td>Customer</td>
+<td>You must provide a Certificate Authority and generate certificates for your MongoDB users.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
+</blockquote>
+<h2 id="example-usages">Example Usages</h2>
+<h3 id="example-usage-generate-an-atlas-managed-x509-certificate-for-a-mongodb-user">Example Usage: Generate an Atlas-managed X.509 certificate for a MongoDB user</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Mongodbatlas = Pulumi.Mongodbatlas;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var user = new Mongodbatlas.DatabaseUser(&amp;quot;user&amp;quot;, new Mongodbatlas.DatabaseUserArgs
+    {
+        DatabaseName = &amp;quot;$$external&amp;quot;,
+        Labels = 
+        {
+            new Mongodbatlas.Inputs.DatabaseUserLabelArgs
+            {
+                Key = &amp;quot;My Key&amp;quot;,
+                Value = &amp;quot;My Value&amp;quot;,
+            },
+        },
+        ProjectId = &amp;quot;&amp;lt;PROJECT-ID&gt;&amp;quot;,
+        Roles = 
+        {
+            new Mongodbatlas.Inputs.DatabaseUserRoleArgs
+            {
+                DatabaseName = &amp;quot;admin&amp;quot;,
+                RoleName = &amp;quot;atlasAdmin&amp;quot;,
+            },
+        },
+        Username = &amp;quot;myUsername&amp;quot;,
+        X509Type = &amp;quot;MANAGED&amp;quot;,
+    });
+    var test = new Mongodbatlas.X509AuthenticationDatabaseUser(&amp;quot;test&amp;quot;, new Mongodbatlas.X509AuthenticationDatabaseUserArgs
+    {
+        MonthsUntilExpiration = 2,
+        ProjectId = user.ProjectId,
+        Username = user.Username,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-save-a-customer-managed-x509-configuration-for-an-atlas-project">Example Usage: Save a customer-managed X.509 configuration for an Atlas project</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Mongodbatlas = Pulumi.Mongodbatlas;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Mongodbatlas.X509AuthenticationDatabaseUser(&amp;quot;test&amp;quot;, new Mongodbatlas.X509AuthenticationDatabaseUserArgs
+    {
+        CustomerX509Cas = @&amp;quot;  -----BEGIN CERTIFICATE-----
+MIICmTCCAgICCQDZnHzklxsT9TANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC
+VVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xETAPBgNVBAoMCHRl
+c3QuY29tMQ0wCwYDVQQLDARUZXN0MREwDwYDVQQDDAh0ZXN0LmNvbTErMCkGCSqG
+SIb3DQEJARYcbWVsaXNzYS5wbHVua2V0dEBtb25nb2RiLmNvbTAeFw0yMDAyMDQy
+MDQ2MDFaFw0yMTAyMDMyMDQ2MDFaMIGQMQswCQYDVQQGEwJVUzEOMAwGA1UECAwF
+VGV4YXMxDzANBgNVBAcMBkF1c3RpbjERMA8GA1UECgwIdGVzdC5jb20xDTALBgNV
+BAsMBFRlc3QxETAPBgNVBAMMCHRlc3QuY29tMSswKQYJKoZIhvcNAQkBFhxtZWxp
+c3NhLnBsdW5rZXR0QG1vbmdvZGIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB
+iQKBgQCf1LRqr1zftzdYx2Aj9G76tb0noMPtj6faGLlPji1+m6Rn7RWD9L0ntWAr
+cURxvypa9jZ9MXFzDtLevvd3tHEmfrUT3ukNDX6+Jtc4kWm+Dh2A70Pd+deKZ2/O
+Fh8audEKAESGXnTbeJCeQa1XKlIkjqQHBNwES5h1b9vJtFoLJwIDAQABMA0GCSqG
+SIb3DQEBCwUAA4GBADMUncjEPV/MiZUcVNGmktP6BPmEqMXQWUDpdGW2+Tg2JtUA
+7MMILtepBkFzLO+GlpZxeAlXO0wxiNgEmCRONgh4+t2w3e7a8GFijYQ99FHrAC5A
+iul59bdl18gVqXia1Yeq/iK7Ohfy/Jwd7Hsm530elwkM/ZEkYDjBlZSXYdyz
+-----END CERTIFICATE-----&amp;quot;&amp;quot;
+
+&amp;quot;,
+        ProjectId = &amp;quot;&amp;lt;PROJECT-ID&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">X509AuthenticationDatabaseUser</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Mongodbatlas.html">Pulumi.Mongodbatlas</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Mongodbatlas.dll</h6>
+  <h5 id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class X509AuthenticationDatabaseUser : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/X509AuthenticationDatabaseUser.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser__ctor_" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.#ctor*"></a>
+  <h4 id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser__ctor_System_String_Pulumi_Mongodbatlas_X509AuthenticationDatabaseUserArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.#ctor(System.String,Pulumi.Mongodbatlas.X509AuthenticationDatabaseUserArgs,Pulumi.CustomResourceOptions)">X509AuthenticationDatabaseUser(String, X509AuthenticationDatabaseUserArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a X509AuthenticationDatabaseUser resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public X509AuthenticationDatabaseUser(string name, X509AuthenticationDatabaseUserArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUserArgs.html">X509AuthenticationDatabaseUserArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/X509AuthenticationDatabaseUser.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_Certificates_" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.Certificates*"></a>
+  <h4 id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_Certificates" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.Certificates">Certificates</h4>
+  <div class="markdown level1 summary"><p>Array of objects where each details one unexpired database user certificate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;X509AuthenticationDatabaseUserCertificate&gt;&gt; Certificates { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Mongodbatlas.Outputs.X509AuthenticationDatabaseUserCertificate.html">X509AuthenticationDatabaseUserCertificate</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/X509AuthenticationDatabaseUser.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_CurrentCertificate_" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.CurrentCertificate*"></a>
+  <h4 id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_CurrentCertificate" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.CurrentCertificate">CurrentCertificate</h4>
+  <div class="markdown level1 summary"><p>Contains the last X.509 certificate and private key created for a database user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CurrentCertificate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/X509AuthenticationDatabaseUser.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_CustomerX509Cas_" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.CustomerX509Cas*"></a>
+  <h4 id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_CustomerX509Cas" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.CustomerX509Cas">CustomerX509Cas</h4>
+  <div class="markdown level1 summary"><p>PEM string containing one or more customer CAs for database user authentication.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CustomerX509Cas { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/X509AuthenticationDatabaseUser.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_MonthsUntilExpiration_" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.MonthsUntilExpiration*"></a>
+  <h4 id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_MonthsUntilExpiration" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.MonthsUntilExpiration">MonthsUntilExpiration</h4>
+  <div class="markdown level1 summary"><p>A number of months that the created certificate is valid for before expiry, up to 24 months. By default is 3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MonthsUntilExpiration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/X509AuthenticationDatabaseUser.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_ProjectId_" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.ProjectId*"></a>
+  <h4 id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_ProjectId" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.ProjectId">ProjectId</h4>
+  <div class="markdown level1 summary"><p>Identifier for the Atlas project associated with the X.509 configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProjectId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/X509AuthenticationDatabaseUser.cs/#L138">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_Username_" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.Username*"></a>
+  <h4 id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_Username" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.Username">Username</h4>
+  <div class="markdown level1 summary"><p>Username of the database user to create a certificate for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Username { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/X509AuthenticationDatabaseUser.cs/#L179">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_Get_" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.Get*"></a>
+  <h4 id="Pulumi_Mongodbatlas_X509AuthenticationDatabaseUser_Get_System_String_Pulumi_Input_System_String__Pulumi_Mongodbatlas_X509AuthenticationDatabaseUserState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.Get(System.String,Pulumi.Input{System.String},Pulumi.Mongodbatlas.X509AuthenticationDatabaseUserState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, X509AuthenticationDatabaseUserState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing X509AuthenticationDatabaseUser resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static X509AuthenticationDatabaseUser Get(string name, Input&lt;string&gt; id, X509AuthenticationDatabaseUserState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUserState.html">X509AuthenticationDatabaseUserState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Mongodbatlas.X509AuthenticationDatabaseUser.html">X509AuthenticationDatabaseUser</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/X509AuthenticationDatabaseUser.cs/#L103" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

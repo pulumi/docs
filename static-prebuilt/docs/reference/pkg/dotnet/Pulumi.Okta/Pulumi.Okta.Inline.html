@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Okta.Inline
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,35 @@
       <h4><a class="xref" href="Pulumi.Okta.Inline.Hook.html">Hook</a></h4>
       <section><p>Creates an inline hook.</p>
 <p>This resource allows you to create and configure an inline hook.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Inline.Hook(&amp;quot;example&amp;quot;, new Okta.Inline.HookArgs
+    {
+        Auth = new Okta.Inline.Inputs.HookAuthArgs
+        {
+            Key = &amp;quot;Authorization&amp;quot;,
+            Type = &amp;quot;HEADER&amp;quot;,
+            Value = &amp;quot;secret&amp;quot;,
+        },
+        Channel = new Okta.Inline.Inputs.HookChannelArgs
+        {
+            Method = &amp;quot;POST&amp;quot;,
+            Uri = &amp;quot;https://example.com/test&amp;quot;,
+            Version = &amp;quot;1.0.0&amp;quot;,
+        },
+        Type = &amp;quot;com.okta.oauth2.tokens.transform&amp;quot;,
+        Version = &amp;quot;1.0.1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Inline.HookArgs.html">HookArgs</a></h4>
       <section></section>

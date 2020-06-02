@@ -1,0 +1,960 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Healthcheck
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Healthcheck
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Cloudflare.Healthcheck">
+  
+  <h1 id="Pulumi_Cloudflare_Healthcheck" data-uid="Pulumi.Cloudflare.Healthcheck" class="text-break">Class Healthcheck
+  </h1>
+  <div class="markdown level0 summary"><p>Standalone Health Checks provide a way to monitor origin servers without needing a Cloudflare Load Balancer.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="tcp-monitor">TCP Monitor</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tcpHealthCheck = new Cloudflare.Healthcheck(&amp;quot;tcpHealthCheck&amp;quot;, new Cloudflare.HealthcheckArgs
+    {
+        ZoneId = @var.Cloudflare_zone_id,
+        Name = &amp;quot;tcp-health-check&amp;quot;,
+        Description = &amp;quot;example tcp health check&amp;quot;,
+        Address = &amp;quot;example.com&amp;quot;,
+        Suspended = false,
+        CheckRegions = 
+        {
+            &amp;quot;WEU&amp;quot;,
+            &amp;quot;EEU&amp;quot;,
+        },
+        NotificationSuspended = false,
+        NotificationEmailAddresses = 
+        {
+            &amp;quot;hostmaster@example.com&amp;quot;,
+        },
+        Type = &amp;quot;TCP&amp;quot;,
+        Port = &amp;quot;22&amp;quot;,
+        Method = &amp;quot;connection_established&amp;quot;,
+        Timeout = 10,
+        Retries = 2,
+        Interval = 60,
+        ConsecutiveFails = 3,
+        ConsecutiveSuccesses = 2,
+    });
+}
+
+}
+</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Healthcheck</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Cloudflare.html">Pulumi.Cloudflare</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Cloudflare.dll</h6>
+  <h5 id="Pulumi_Cloudflare_Healthcheck_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Healthcheck : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L206">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck__ctor_" data-uid="Pulumi.Cloudflare.Healthcheck.#ctor*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck__ctor_System_String_Pulumi_Cloudflare_HealthcheckArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Cloudflare.Healthcheck.#ctor(System.String,Pulumi.Cloudflare.HealthcheckArgs,Pulumi.CustomResourceOptions)">Healthcheck(String, HealthcheckArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Healthcheck resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Healthcheck(string name, HealthcheckArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Cloudflare.HealthcheckArgs.html">HealthcheckArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Address_" data-uid="Pulumi.Cloudflare.Healthcheck.Address*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Address" data-uid="Pulumi.Cloudflare.Healthcheck.Address">Address</h4>
+  <div class="markdown level1 summary"><p>The hostname or IP address of the origin server to run health checks on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Address { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_AllowInsecure_" data-uid="Pulumi.Cloudflare.Healthcheck.AllowInsecure*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_AllowInsecure" data-uid="Pulumi.Cloudflare.Healthcheck.AllowInsecure">AllowInsecure</h4>
+  <div class="markdown level1 summary"><p>Do not validate the certificate when the health check uses HTTPS. Valid values: <code>true</code> or <code>false</code> (Default: <code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AllowInsecure { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_CheckRegions_" data-uid="Pulumi.Cloudflare.Healthcheck.CheckRegions*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_CheckRegions" data-uid="Pulumi.Cloudflare.Healthcheck.CheckRegions">CheckRegions</h4>
+  <div class="markdown level1 summary"><p>A list of regions from which to run health checks. If not set Cloudflare will pick a default region. Valid values: <code>WNAM</code>, <code>ENAM</code>, <code>WEU</code>, <code>EEU</code>, <code>NSAM</code>, <code>SSAM</code>, <code>OC</code>, <code>ME</code>, <code>NAF</code>, <code>SAF</code>, <code>IN</code>, <code>SEAS</code>, <code>NEAS</code>, <code>ALL_REGIONS</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; CheckRegions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_ConsecutiveFails_" data-uid="Pulumi.Cloudflare.Healthcheck.ConsecutiveFails*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_ConsecutiveFails" data-uid="Pulumi.Cloudflare.Healthcheck.ConsecutiveFails">ConsecutiveFails</h4>
+  <div class="markdown level1 summary"><p>The number of consecutive fails required from a health check before changing the health to unhealthy. (Default: <code>1</code>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ConsecutiveFails { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L87">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_ConsecutiveSuccesses_" data-uid="Pulumi.Cloudflare.Healthcheck.ConsecutiveSuccesses*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_ConsecutiveSuccesses" data-uid="Pulumi.Cloudflare.Healthcheck.ConsecutiveSuccesses">ConsecutiveSuccesses</h4>
+  <div class="markdown level1 summary"><p>The number of consecutive successes required from a health check before changing the health to healthy. (Default: <code>1</code>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ConsecutiveSuccesses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_CreatedOn_" data-uid="Pulumi.Cloudflare.Healthcheck.CreatedOn*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_CreatedOn" data-uid="Pulumi.Cloudflare.Healthcheck.CreatedOn">CreatedOn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CreatedOn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Description_" data-uid="Pulumi.Cloudflare.Healthcheck.Description*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Description" data-uid="Pulumi.Cloudflare.Healthcheck.Description">Description</h4>
+  <div class="markdown level1 summary"><p>A human-readable description of the health check.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_ExpectedBody_" data-uid="Pulumi.Cloudflare.Healthcheck.ExpectedBody*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_ExpectedBody" data-uid="Pulumi.Cloudflare.Healthcheck.ExpectedBody">ExpectedBody</h4>
+  <div class="markdown level1 summary"><p>A case-insensitive sub-string to look for in the response body. If this string is not found, the origin will be marked as unhealthy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ExpectedBody { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_ExpectedCodes_" data-uid="Pulumi.Cloudflare.Healthcheck.ExpectedCodes*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_ExpectedCodes" data-uid="Pulumi.Cloudflare.Healthcheck.ExpectedCodes">ExpectedCodes</h4>
+  <div class="markdown level1 summary"><p>The expected HTTP response codes (e.g. &quot;200&quot;) or code ranges (e.g. &quot;2xx&quot; for all codes starting with 2) of the health check. (Default: <code>[&amp;quot;200&amp;quot;]</code>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ExpectedCodes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_FollowRedirects_" data-uid="Pulumi.Cloudflare.Healthcheck.FollowRedirects*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_FollowRedirects" data-uid="Pulumi.Cloudflare.Healthcheck.FollowRedirects">FollowRedirects</h4>
+  <div class="markdown level1 summary"><p>Follow redirects if the origin returns a 3xx status code. Valid values: <code>true</code> or <code>false</code> (Default: <code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; FollowRedirects { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Headers_" data-uid="Pulumi.Cloudflare.Healthcheck.Headers*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Headers" data-uid="Pulumi.Cloudflare.Healthcheck.Headers">Headers</h4>
+  <div class="markdown level1 summary"><p>The header name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;HealthcheckHeader&gt;&gt; Headers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.HealthcheckHeader.html">HealthcheckHeader</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Interval_" data-uid="Pulumi.Cloudflare.Healthcheck.Interval*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Interval" data-uid="Pulumi.Cloudflare.Healthcheck.Interval">Interval</h4>
+  <div class="markdown level1 summary"><p>The interval between each health check. Shorter intervals may give quicker notifications if the origin status changes, but will increase load on the origin as we check from multiple locations. (Default: <code>60</code>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Interval { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Method_" data-uid="Pulumi.Cloudflare.Healthcheck.Method*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Method" data-uid="Pulumi.Cloudflare.Healthcheck.Method">Method</h4>
+  <div class="markdown level1 summary"><p>The TCP connection method to use for the health check. Valid values: <code>connection_established</code> (Default: <code>connection_established</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Method { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L135">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_ModifiedOn_" data-uid="Pulumi.Cloudflare.Healthcheck.ModifiedOn*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_ModifiedOn" data-uid="Pulumi.Cloudflare.Healthcheck.ModifiedOn">ModifiedOn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ModifiedOn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L141">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Name_" data-uid="Pulumi.Cloudflare.Healthcheck.Name*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Name" data-uid="Pulumi.Cloudflare.Healthcheck.Name">Name</h4>
+  <div class="markdown level1 summary"><p>A short name to identify the health check. Only alphanumeric characters, hyphens and underscores are allowed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L147">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_NotificationEmailAddresses_" data-uid="Pulumi.Cloudflare.Healthcheck.NotificationEmailAddresses*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_NotificationEmailAddresses" data-uid="Pulumi.Cloudflare.Healthcheck.NotificationEmailAddresses">NotificationEmailAddresses</h4>
+  <div class="markdown level1 summary"><p>A list of email addresses we want to send the notifications to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; NotificationEmailAddresses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L153">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_NotificationSuspended_" data-uid="Pulumi.Cloudflare.Healthcheck.NotificationSuspended*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_NotificationSuspended" data-uid="Pulumi.Cloudflare.Healthcheck.NotificationSuspended">NotificationSuspended</h4>
+  <div class="markdown level1 summary"><p>Whether the notifications are suspended or not. Useful for maintenance periods. Valid values: <code>true</code> or <code>false</code> (Default: <code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; NotificationSuspended { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L159">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Path_" data-uid="Pulumi.Cloudflare.Healthcheck.Path*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Path" data-uid="Pulumi.Cloudflare.Healthcheck.Path">Path</h4>
+  <div class="markdown level1 summary"><p>The endpoint path to health check against. (Default: <code>/</code>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Path { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L165">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Port_" data-uid="Pulumi.Cloudflare.Healthcheck.Port*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Port" data-uid="Pulumi.Cloudflare.Healthcheck.Port">Port</h4>
+  <div class="markdown level1 summary"><p>Port number to connect to for the health check.  Valid values are in the rage <code>0-65535</code> (Default: <code>80</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Port { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L171">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Retries_" data-uid="Pulumi.Cloudflare.Healthcheck.Retries*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Retries" data-uid="Pulumi.Cloudflare.Healthcheck.Retries">Retries</h4>
+  <div class="markdown level1 summary"><p>The number of retries to attempt in case of a timeout before marking the origin as unhealthy. Retries are attempted immediately. (Default: <code>2</code>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Retries { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L177">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Suspended_" data-uid="Pulumi.Cloudflare.Healthcheck.Suspended*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Suspended" data-uid="Pulumi.Cloudflare.Healthcheck.Suspended">Suspended</h4>
+  <div class="markdown level1 summary"><p>If suspended, no health checks are sent to the origin. Valid values: <code>true</code> or <code>false</code> (Default: <code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Suspended { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L183">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Timeout_" data-uid="Pulumi.Cloudflare.Healthcheck.Timeout*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Timeout" data-uid="Pulumi.Cloudflare.Healthcheck.Timeout">Timeout</h4>
+  <div class="markdown level1 summary"><p>The timeout (in seconds) before marking the health check as failed. (Default: <code>5</code>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Timeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L189">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Type_" data-uid="Pulumi.Cloudflare.Healthcheck.Type*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Type" data-uid="Pulumi.Cloudflare.Healthcheck.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The protocol to use for the health check. Valid values: <code>HTTP</code>, <code>HTTPS</code>, <code>TCP</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L195">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_ZoneId_" data-uid="Pulumi.Cloudflare.Healthcheck.ZoneId*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_ZoneId" data-uid="Pulumi.Cloudflare.Healthcheck.ZoneId">ZoneId</h4>
+  <div class="markdown level1 summary"><p>The DNS zone ID to which apply settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ZoneId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L236">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_Healthcheck_Get_" data-uid="Pulumi.Cloudflare.Healthcheck.Get*"></a>
+  <h4 id="Pulumi_Cloudflare_Healthcheck_Get_System_String_Pulumi_Input_System_String__Pulumi_Cloudflare_HealthcheckState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Cloudflare.Healthcheck.Get(System.String,Pulumi.Input{System.String},Pulumi.Cloudflare.HealthcheckState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, HealthcheckState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Healthcheck resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Healthcheck Get(string name, Input&lt;string&gt; id, HealthcheckState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Cloudflare.HealthcheckState.html">HealthcheckState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Cloudflare.Healthcheck.html">Healthcheck</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Healthcheck.cs/#L58" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

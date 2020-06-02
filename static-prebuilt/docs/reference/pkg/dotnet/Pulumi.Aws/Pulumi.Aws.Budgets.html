@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Budgets
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,45 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Budgets.Budget.html">Budget</a></h4>
       <section><p>Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ec2 = new Aws.Budgets.Budget(&amp;quot;ec2&amp;quot;, new Aws.Budgets.BudgetArgs
+    {
+        BudgetType = &amp;quot;COST&amp;quot;,
+        CostFilters = 
+        {
+            { &amp;quot;Service&amp;quot;, &amp;quot;Amazon Elastic Compute Cloud - Compute&amp;quot; },
+        },
+        LimitAmount = &amp;quot;1200&amp;quot;,
+        LimitUnit = &amp;quot;USD&amp;quot;,
+        Notifications = 
+        {
+            new Aws.Budgets.Inputs.BudgetNotificationArgs
+            {
+                ComparisonOperator = &amp;quot;GREATER_THAN&amp;quot;,
+                NotificationType = &amp;quot;FORECASTED&amp;quot;,
+                SubscriberEmailAddresses = 
+                {
+                    &amp;quot;test@example.com&amp;quot;,
+                },
+                Threshold = 100,
+                ThresholdType = &amp;quot;PERCENTAGE&amp;quot;,
+            },
+        },
+        TimePeriodEnd = &amp;quot;2087-06-15_00:00&amp;quot;,
+        TimePeriodStart = &amp;quot;2017-07-01_00:00&amp;quot;,
+        TimeUnit = &amp;quot;MONTHLY&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Budgets.BudgetArgs.html">BudgetArgs</a></h4>
       <section></section>

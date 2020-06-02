@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ComputeCluster
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,12 +71,110 @@
   
   <h1 id="Pulumi_VSphere_ComputeCluster" data-uid="Pulumi.VSphere.ComputeCluster" class="text-break">Class ComputeCluster
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><blockquote>
+<p><strong>A note on the naming of this resource:</strong> VMware refers to clusters of
+hosts in the UI and documentation as <em>clusters</em>, <em>HA clusters</em>, or <em>DRS
+clusters</em>. All of these refer to the same kind of resource (with the latter two
+referring to specific features of clustering). We use
+<code>vsphere..ComputeCluster</code> to differentiate host clusters from <em>datastore
+clusters</em>, which are clusters of datastores that can be used to distribute load
+and ensure fault tolerance via distribution of virtual machines. Datastore
+clusters can also be managed through the provider, via the
+<code>vsphere..DatastoreCluster</code> resource.</p>
+</blockquote>
+<p>The <code>vsphere..ComputeCluster</code> resource can be used to create and manage
+clusters of hosts allowing for resource control of compute resources, load
+balancing through DRS, and high availability through vSphere HA.</p>
+<p>For more information on vSphere clusters and DRS, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-8ACF3502-5314-469F-8CC9-4A9BD5925BC2.html">this
+page</a>. For more information on vSphere HA, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html">this
+page</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<h2 id="vsphere-version-requirements">vSphere Version Requirements</h2>
+<p>A large number of settings in the <code>vsphere..ComputeCluster</code> resource require a
+specific version of vSphere to function. Rather than include warnings at every
+setting or section, these settings are documented below.  Note that this list
+is for cluster-specific attributes only, and does not include the
+<code>tags</code> parameter, which requires vSphere 6.0 or higher across all
+resources that can be tagged.</p>
+<p>All settings are footnoted by an asterisk (<code>*</code>) in their specific section in
+the documentation, which takes you here.</p>
+<h3 id="settings-that-require-vsphere-version-60-or-higher">Settings that require vSphere version 6.0 or higher</h3>
+<p>These settings require vSphere 6.0 or higher:</p>
+<ul>
+<li><code>ha_datastore_apd_recovery_action</code></li>
+<li><code>ha_datastore_apd_response</code></li>
+<li><code>ha_datastore_apd_response_delay</code></li>
+<li><code>ha_datastore_pdl_response</code></li>
+<li><code>ha_vm_component_protection</code></li>
+</ul>
+<h3 id="settings-that-require-vsphere-version-65-or-higher">Settings that require vSphere version 6.5 or higher</h3>
+<p>These settings require vSphere 6.5 or higher:</p>
+<ul>
+<li><code>drs_enable_predictive_drs</code></li>
+<li><code>ha_admission_control_host_failure_tolerance</code>
+(When <code>ha_admission_control_policy</code> is set to
+<code>resourcePercentage</code> or <code>slotPolicy</code>. Permitted in all versions under
+<code>failoverHosts</code>)</li>
+<li><code>ha_admission_control_resource_percentage_auto_compute</code></li>
+<li><code>ha_vm_restart_timeout</code></li>
+<li><code>ha_vm_dependency_restart_condition</code></li>
+<li><code>ha_vm_restart_additional_delay</code></li>
+<li><code>proactive_ha_automation_level</code></li>
+<li><code>proactive_ha_enabled</code></li>
+<li><code>proactive_ha_moderate_remediation</code></li>
+<li><code>proactive_ha_provider_ids</code></li>
+<li><code>proactive_ha_severe_remediation</code></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ComputeCluster</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ComputeCluster</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -87,16 +185,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L464">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L547">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster__ctor_" data-uid="Pulumi.VSphere.ComputeCluster.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_ComputeCluster__ctor_System_String_Pulumi_VSphere_ComputeClusterArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.ComputeCluster.#ctor(System.String,Pulumi.VSphere.ComputeClusterArgs,System.Nullable{CustomResourceOptions})">ComputeCluster(String, ComputeClusterArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_ComputeCluster__ctor_System_String_Pulumi_VSphere_ComputeClusterArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.ComputeCluster.#ctor(System.String,Pulumi.VSphere.ComputeClusterArgs,Pulumi.CustomResourceOptions)">ComputeCluster(String, ComputeClusterArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ComputeCluster resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ComputeCluster(string name, ComputeClusterArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ComputeCluster(string name, ComputeClusterArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +219,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -131,19 +229,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_CustomAttributes_" data-uid="Pulumi.VSphere.ComputeCluster.CustomAttributes*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_CustomAttributes" data-uid="Pulumi.VSphere.ComputeCluster.CustomAttributes">CustomAttributes</h4>
   <div class="markdown level1 summary"><p>A map of custom attribute ids to attribute
-value strings to set for the datastore cluster. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.</p>
+value strings to set for the datastore cluster.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; CustomAttributes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; CustomAttributes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,17 +251,17 @@ for custom attributes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_DatacenterId_" data-uid="Pulumi.VSphere.ComputeCluster.DatacenterId*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_DatacenterId" data-uid="Pulumi.VSphere.ComputeCluster.DatacenterId">DatacenterId</h4>
-  <div class="markdown level1 summary"><p>The [managed object ID][docs-about-morefs] of
+  <div class="markdown level1 summary"><p>The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -183,13 +279,13 @@ the datacenter to create the cluster in. Forces a new resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_DpmAutomationLevel_" data-uid="Pulumi.VSphere.ComputeCluster.DpmAutomationLevel*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_DpmAutomationLevel" data-uid="Pulumi.VSphere.ComputeCluster.DpmAutomationLevel">DpmAutomationLevel</h4>
@@ -200,7 +296,7 @@ operations in this cluster. Can be one of <code>manual</code> or <code>automated
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DpmAutomationLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DpmAutomationLevel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -212,13 +308,13 @@ operations in this cluster. Can be one of <code>manual</code> or <code>automated
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_DpmEnabled_" data-uid="Pulumi.VSphere.ComputeCluster.DpmEnabled*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_DpmEnabled" data-uid="Pulumi.VSphere.ComputeCluster.DpmEnabled">DpmEnabled</h4>
@@ -241,13 +337,13 @@ Default: <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_DpmThreshold_" data-uid="Pulumi.VSphere.ComputeCluster.DpmThreshold*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_DpmThreshold" data-uid="Pulumi.VSphere.ComputeCluster.DpmThreshold">DpmThreshold</h4>
@@ -271,13 +367,13 @@ tolerate more of a surplus/deficit than a higher setting. Default: <code>3</code
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_DrsAdvancedOptions_" data-uid="Pulumi.VSphere.ComputeCluster.DrsAdvancedOptions*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_DrsAdvancedOptions" data-uid="Pulumi.VSphere.ComputeCluster.DrsAdvancedOptions">DrsAdvancedOptions</h4>
@@ -287,7 +383,7 @@ options for DRS and DPM.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; DrsAdvancedOptions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; DrsAdvancedOptions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -299,13 +395,13 @@ options for DRS and DPM.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_DrsAutomationLevel_" data-uid="Pulumi.VSphere.ComputeCluster.DrsAutomationLevel*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_DrsAutomationLevel" data-uid="Pulumi.VSphere.ComputeCluster.DrsAutomationLevel">DrsAutomationLevel</h4>
@@ -316,7 +412,7 @@ virtual machines in this cluster. Can be one of <code>manual</code>,
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DrsAutomationLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DrsAutomationLevel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,13 +424,13 @@ virtual machines in this cluster. Can be one of <code>manual</code>,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_DrsEnabled_" data-uid="Pulumi.VSphere.ComputeCluster.DrsEnabled*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_DrsEnabled" data-uid="Pulumi.VSphere.ComputeCluster.DrsEnabled">DrsEnabled</h4>
@@ -355,13 +451,13 @@ virtual machines in this cluster. Can be one of <code>manual</code>,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_DrsEnablePredictiveDrs_" data-uid="Pulumi.VSphere.ComputeCluster.DrsEnablePredictiveDrs*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_DrsEnablePredictiveDrs" data-uid="Pulumi.VSphere.ComputeCluster.DrsEnablePredictiveDrs">DrsEnablePredictiveDrs</h4>
@@ -384,13 +480,13 @@ recommendations. &lt;sup&gt;*&lt;/sup&gt;</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_DrsEnableVmOverrides_" data-uid="Pulumi.VSphere.ComputeCluster.DrsEnableVmOverrides*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_DrsEnableVmOverrides" data-uid="Pulumi.VSphere.ComputeCluster.DrsEnableVmOverrides">DrsEnableVmOverrides</h4>
@@ -412,13 +508,13 @@ set for virtual machines in the cluster. Default: <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_DrsMigrationThreshold_" data-uid="Pulumi.VSphere.ComputeCluster.DrsMigrationThreshold*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_DrsMigrationThreshold" data-uid="Pulumi.VSphere.ComputeCluster.DrsMigrationThreshold">DrsMigrationThreshold</h4>
@@ -442,22 +538,27 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_Folder_" data-uid="Pulumi.VSphere.ComputeCluster.Folder*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_Folder" data-uid="Pulumi.VSphere.ComputeCluster.Folder">Folder</h4>
-  <div class="markdown level1 summary"><p>The name of the folder to locate the cluster in.</p>
+  <div class="markdown level1 summary"><p>The relative path to a folder to put this cluster in.
+This is a path relative to the datacenter you are deploying the cluster to.
+Example: for the <code>dc1</code> datacenter, and a provided <code>folder</code> of <code>foo/bar</code>,
+The provider will place a cluster named <code>compute-cluster-test</code> in a
+host folder located at <code>/dc1/host/foo/bar</code>, with the final inventory path
+being <code>/dc1/host/foo/bar/datastore-cluster-test</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Folder { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Folder { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -469,18 +570,21 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_ForceEvacuateOnDestroy_" data-uid="Pulumi.VSphere.ComputeCluster.ForceEvacuateOnDestroy*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_ForceEvacuateOnDestroy" data-uid="Pulumi.VSphere.ComputeCluster.ForceEvacuateOnDestroy">ForceEvacuateOnDestroy</h4>
-  <div class="markdown level1 summary"><p>Force removal of all hosts in the cluster during destroy and make them standalone hosts. Use of this flag mainly exists
-for testing and is not recommended in normal use.</p>
+  <div class="markdown level1 summary"><p>When destroying the resource, setting this to
+<code>true</code> will auto-remove any hosts that are currently a member of the cluster,
+as if they were removed by taking their entry out of <code>host_system_ids</code> (see
+below). This is an advanced
+option and should only be used for testing. Default: <code>false</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -497,18 +601,18 @@ for testing and is not recommended in normal use.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlFailoverHostSystemIds_" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlFailoverHostSystemIds*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlFailoverHostSystemIds" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlFailoverHostSystemIds">HaAdmissionControlFailoverHostSystemIds</h4>
   <div class="markdown level1 summary"><p>Defines the
-[managed object IDs][docs-about-morefs] of hosts to use as dedicated failover
+managed object IDs of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
 block access to the host, and DRS will ignore the host when making
 recommendations.</p>
@@ -528,13 +632,13 @@ recommendations.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlHostFailureTolerance_" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlHostFailureTolerance*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlHostFailureTolerance" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlHostFailureTolerance">HaAdmissionControlHostFailureTolerance</h4>
@@ -559,13 +663,13 @@ the number of hosts in the cluster. Default: <code>1</code>.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L214">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlPerformanceTolerance_" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlPerformanceTolerance*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlPerformanceTolerance" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlPerformanceTolerance">HaAdmissionControlPerformanceTolerance</h4>
@@ -589,13 +693,13 @@ disables the setting. Default: <code>100</code> (disabled).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlPolicy_" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlPolicy*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlPolicy" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlPolicy">HaAdmissionControlPolicy</h4>
@@ -606,7 +710,7 @@ policy to use with vSphere HA. Can be one of <code>resourcePercentage</code>,
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaAdmissionControlPolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaAdmissionControlPolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -618,13 +722,13 @@ policy to use with vSphere HA. Can be one of <code>resourcePercentage</code>,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlResourcePercentageAutoCompute_" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlResourcePercentageAutoCompute*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlResourcePercentageAutoCompute" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlResourcePercentageAutoCompute">HaAdmissionControlResourcePercentageAutoCompute</h4>
@@ -650,13 +754,13 @@ user-defined values. Default: <code>true</code>.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlResourcePercentageCpu_" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlResourcePercentageCpu*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlResourcePercentageCpu" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlResourcePercentageCpu">HaAdmissionControlResourcePercentageCpu</h4>
@@ -679,13 +783,13 @@ failover. Default: <code>100</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L250">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlResourcePercentageMemory_" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlResourcePercentageMemory*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlResourcePercentageMemory" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlResourcePercentageMemory">HaAdmissionControlResourcePercentageMemory</h4>
@@ -708,13 +812,13 @@ failover. Default: <code>100</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L257">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlSlotPolicyExplicitCpu_" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlSlotPolicyExplicitCpu*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlSlotPolicyExplicitCpu" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlSlotPolicyExplicitCpu">HaAdmissionControlSlotPolicyExplicitCpu</h4>
@@ -736,13 +840,13 @@ user-defined CPU slot size, in MHz. Default: <code>32</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L264">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlSlotPolicyExplicitMemory_" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlSlotPolicyExplicitMemory*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlSlotPolicyExplicitMemory" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlSlotPolicyExplicitMemory">HaAdmissionControlSlotPolicyExplicitMemory</h4>
@@ -764,13 +868,13 @@ user-defined memory slot size, in MB. Default: <code>100</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L273">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlSlotPolicyUseExplicitSize_" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlSlotPolicyUseExplicitSize*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaAdmissionControlSlotPolicyUseExplicitSize" data-uid="Pulumi.VSphere.ComputeCluster.HaAdmissionControlSlotPolicyUseExplicitSize">HaAdmissionControlSlotPolicyUseExplicitSize</h4>
@@ -794,13 +898,13 @@ average based on all powered-on virtual machines currently in the cluster.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L205">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L280">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaAdvancedOptions_" data-uid="Pulumi.VSphere.ComputeCluster.HaAdvancedOptions*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaAdvancedOptions" data-uid="Pulumi.VSphere.ComputeCluster.HaAdvancedOptions">HaAdvancedOptions</h4>
@@ -810,7 +914,7 @@ options for vSphere HA.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; HaAdvancedOptions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; HaAdvancedOptions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -822,13 +926,13 @@ options for vSphere HA.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L214">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L289">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaDatastoreApdRecoveryAction_" data-uid="Pulumi.VSphere.ComputeCluster.HaDatastoreApdRecoveryAction*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaDatastoreApdRecoveryAction" data-uid="Pulumi.VSphere.ComputeCluster.HaDatastoreApdRecoveryAction">HaDatastoreApdRecoveryAction</h4>
@@ -840,7 +944,7 @@ middle of an APD event. Can be one of <code>none</code> or <code>reset</code>. D
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaDatastoreApdRecoveryAction { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaDatastoreApdRecoveryAction { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -852,13 +956,13 @@ middle of an APD event. Can be one of <code>none</code> or <code>reset</code>. D
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L224">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L299">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaDatastoreApdResponse_" data-uid="Pulumi.VSphere.ComputeCluster.HaDatastoreApdResponse*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaDatastoreApdResponse" data-uid="Pulumi.VSphere.ComputeCluster.HaDatastoreApdResponse">HaDatastoreApdResponse</h4>
@@ -871,7 +975,7 @@ relevant datastore. Can be one of <code>disabled</code>, <code>warning</code>,
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaDatastoreApdResponse { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaDatastoreApdResponse { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -883,13 +987,13 @@ relevant datastore. Can be one of <code>disabled</code>, <code>warning</code>,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L233">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L308">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaDatastoreApdResponseDelay_" data-uid="Pulumi.VSphere.ComputeCluster.HaDatastoreApdResponseDelay*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaDatastoreApdResponseDelay" data-uid="Pulumi.VSphere.ComputeCluster.HaDatastoreApdResponseDelay">HaDatastoreApdResponseDelay</h4>
@@ -913,13 +1017,13 @@ minutes. &lt;sup&gt;*&lt;/sup&gt;</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L243">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L318">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaDatastorePdlResponse_" data-uid="Pulumi.VSphere.ComputeCluster.HaDatastorePdlResponse*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaDatastorePdlResponse" data-uid="Pulumi.VSphere.ComputeCluster.HaDatastorePdlResponse">HaDatastorePdlResponse</h4>
@@ -932,7 +1036,7 @@ relevant datastore. Can be one of <code>disabled</code>, <code>warning</code>, o
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaDatastorePdlResponse { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaDatastorePdlResponse { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -944,13 +1048,13 @@ relevant datastore. Can be one of <code>disabled</code>, <code>warning</code>, o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L250">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L325">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaEnabled_" data-uid="Pulumi.VSphere.ComputeCluster.HaEnabled*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaEnabled" data-uid="Pulumi.VSphere.ComputeCluster.HaEnabled">HaEnabled</h4>
@@ -972,13 +1076,13 @@ relevant datastore. Can be one of <code>disabled</code>, <code>warning</code>, o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L259">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L334">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaHeartbeatDatastoreIds_" data-uid="Pulumi.VSphere.ComputeCluster.HaHeartbeatDatastoreIds*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaHeartbeatDatastoreIds" data-uid="Pulumi.VSphere.ComputeCluster.HaHeartbeatDatastoreIds">HaHeartbeatDatastoreIds</h4>
@@ -1002,13 +1106,13 @@ to either <code>userSelectedDs</code> or <code>allFeasibleDsWithUserPreference</
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L268">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L343">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaHeartbeatDatastorePolicy_" data-uid="Pulumi.VSphere.ComputeCluster.HaHeartbeatDatastorePolicy*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaHeartbeatDatastorePolicy" data-uid="Pulumi.VSphere.ComputeCluster.HaHeartbeatDatastorePolicy">HaHeartbeatDatastorePolicy</h4>
@@ -1020,7 +1124,7 @@ heartbeat datastores. Can be one of <code>allFeasibleDs</code>, <code>userSelect
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaHeartbeatDatastorePolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaHeartbeatDatastorePolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1032,13 +1136,13 @@ heartbeat datastores. Can be one of <code>allFeasibleDs</code>, <code>userSelect
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L277">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L352">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaHostIsolationResponse_" data-uid="Pulumi.VSphere.ComputeCluster.HaHostIsolationResponse*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaHostIsolationResponse" data-uid="Pulumi.VSphere.ComputeCluster.HaHostIsolationResponse">HaHostIsolationResponse</h4>
@@ -1050,7 +1154,7 @@ the cluster. Can be one of <code>none</code>, <code>powerOff</code>, or <code>sh
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaHostIsolationResponse { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaHostIsolationResponse { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1062,13 +1166,13 @@ the cluster. Can be one of <code>none</code>, <code>powerOff</code>, or <code>sh
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L285">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L360">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaHostMonitoring_" data-uid="Pulumi.VSphere.ComputeCluster.HaHostMonitoring*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaHostMonitoring" data-uid="Pulumi.VSphere.ComputeCluster.HaHostMonitoring">HaHostMonitoring</h4>
@@ -1079,7 +1183,7 @@ or <code>disabled</code>. Default: <code>enabled</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaHostMonitoring { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaHostMonitoring { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1091,13 +1195,13 @@ or <code>disabled</code>. Default: <code>enabled</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L294">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L369">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaVmComponentProtection_" data-uid="Pulumi.VSphere.ComputeCluster.HaVmComponentProtection*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaVmComponentProtection" data-uid="Pulumi.VSphere.ComputeCluster.HaVmComponentProtection">HaVmComponentProtection</h4>
@@ -1109,7 +1213,7 @@ protection for virtual machines in this cluster. Can be one of <code>enabled</co
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaVmComponentProtection { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaVmComponentProtection { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1121,13 +1225,13 @@ protection for virtual machines in this cluster. Can be one of <code>enabled</co
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L306">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L381">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaVmDependencyRestartCondition_" data-uid="Pulumi.VSphere.ComputeCluster.HaVmDependencyRestartCondition*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaVmDependencyRestartCondition" data-uid="Pulumi.VSphere.ComputeCluster.HaVmDependencyRestartCondition">HaVmDependencyRestartCondition</h4>
@@ -1142,7 +1246,7 @@ is considered ready immediately after a host is found to start it on.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaVmDependencyRestartCondition { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaVmDependencyRestartCondition { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1154,13 +1258,13 @@ is considered ready immediately after a host is found to start it on.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L314">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L389">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaVmFailureInterval_" data-uid="Pulumi.VSphere.ComputeCluster.HaVmFailureInterval*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaVmFailureInterval" data-uid="Pulumi.VSphere.ComputeCluster.HaVmFailureInterval">HaVmFailureInterval</h4>
@@ -1183,13 +1287,13 @@ marked as failed. The value is in seconds. Default: <code>30</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L325">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L400">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaVmMaximumFailureWindow_" data-uid="Pulumi.VSphere.ComputeCluster.HaVmMaximumFailureWindow*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaVmMaximumFailureWindow" data-uid="Pulumi.VSphere.ComputeCluster.HaVmMaximumFailureWindow">HaVmMaximumFailureWindow</h4>
@@ -1215,13 +1319,13 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L332">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L407">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaVmMaximumResets_" data-uid="Pulumi.VSphere.ComputeCluster.HaVmMaximumResets*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaVmMaximumResets" data-uid="Pulumi.VSphere.ComputeCluster.HaVmMaximumResets">HaVmMaximumResets</h4>
@@ -1243,13 +1347,13 @@ perform to a virtual machine when responding to a failure event. Default: <code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L340">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L415">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaVmMinimumUptime_" data-uid="Pulumi.VSphere.ComputeCluster.HaVmMinimumUptime*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaVmMinimumUptime" data-uid="Pulumi.VSphere.ComputeCluster.HaVmMinimumUptime">HaVmMinimumUptime</h4>
@@ -1272,13 +1376,13 @@ powering on a virtual machine before monitoring for heartbeats. Default:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L348">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L423">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaVmMonitoring_" data-uid="Pulumi.VSphere.ComputeCluster.HaVmMonitoring*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaVmMonitoring" data-uid="Pulumi.VSphere.ComputeCluster.HaVmMonitoring">HaVmMonitoring</h4>
@@ -1289,7 +1393,7 @@ when HA is enabled in the cluster. Can be one of <code>vmMonitoringDisabled</cod
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaVmMonitoring { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaVmMonitoring { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1301,13 +1405,13 @@ when HA is enabled in the cluster. Can be one of <code>vmMonitoringDisabled</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L356">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L431">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaVmRestartAdditionalDelay_" data-uid="Pulumi.VSphere.ComputeCluster.HaVmRestartAdditionalDelay*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaVmRestartAdditionalDelay" data-uid="Pulumi.VSphere.ComputeCluster.HaVmRestartAdditionalDelay">HaVmRestartAdditionalDelay</h4>
@@ -1330,13 +1434,13 @@ Default: <code>0</code> (no delay). &lt;sup&gt;*&lt;/sup&gt;</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L364">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L439">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaVmRestartPriority_" data-uid="Pulumi.VSphere.ComputeCluster.HaVmRestartPriority*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaVmRestartPriority" data-uid="Pulumi.VSphere.ComputeCluster.HaVmRestartPriority">HaVmRestartPriority</h4>
@@ -1347,7 +1451,7 @@ of <code>lowest</code>, <code>low</code>, <code>medium</code>, <code>high</code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaVmRestartPriority { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaVmRestartPriority { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1359,13 +1463,13 @@ of <code>lowest</code>, <code>low</code>, <code>medium</code>, <code>high</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L373">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L448">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HaVmRestartTimeout_" data-uid="Pulumi.VSphere.ComputeCluster.HaVmRestartTimeout*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HaVmRestartTimeout" data-uid="Pulumi.VSphere.ComputeCluster.HaVmRestartTimeout">HaVmRestartTimeout</h4>
@@ -1389,13 +1493,13 @@ before proceeding with the next priority. Default: <code>600</code> (10 minutes)
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L381">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L456">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HostClusterExitTimeout_" data-uid="Pulumi.VSphere.ComputeCluster.HostClusterExitTimeout*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HostClusterExitTimeout" data-uid="Pulumi.VSphere.ComputeCluster.HostClusterExitTimeout">HostClusterExitTimeout</h4>
@@ -1418,18 +1522,62 @@ seconds. Default: <code>3600</code> (1 hour).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L388">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L465">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_ComputeCluster_HostManaged_" data-uid="Pulumi.VSphere.ComputeCluster.HostManaged*"></a>
+  <h4 id="Pulumi_VSphere_ComputeCluster_HostManaged" data-uid="Pulumi.VSphere.ComputeCluster.HostManaged">HostManaged</h4>
+  <div class="markdown level1 summary"><p>Can be set to <code>true</code> if compute cluster
+membership will be managed through the <code>host</code> resource rather than the
+<code>compute_cluster</code> resource. Conflicts with: <code>host_system_ids</code>.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>v1.18.3</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; HostManaged { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L472">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_HostSystemIds_" data-uid="Pulumi.VSphere.ComputeCluster.HostSystemIds*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_HostSystemIds" data-uid="Pulumi.VSphere.ComputeCluster.HostSystemIds">HostSystemIds</h4>
   <div class="markdown level1 summary"><p>The [managed object IDs][docs-about-morefs] of
-the hosts to put in the cluster.</p>
+the hosts to put in the cluster. Conflicts with: <code>host_managed</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1446,13 +1594,13 @@ the hosts to put in the cluster.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L394">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L478">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_Name_" data-uid="Pulumi.VSphere.ComputeCluster.Name*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_Name" data-uid="Pulumi.VSphere.ComputeCluster.Name">Name</h4>
@@ -1473,13 +1621,13 @@ the hosts to put in the cluster.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L403">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L487">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_ProactiveHaAutomationLevel_" data-uid="Pulumi.VSphere.ComputeCluster.ProactiveHaAutomationLevel*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_ProactiveHaAutomationLevel" data-uid="Pulumi.VSphere.ComputeCluster.ProactiveHaAutomationLevel">ProactiveHaAutomationLevel</h4>
@@ -1491,7 +1639,7 @@ made by proactive HA are to be handled. Can be one of <code>Automated</code> or
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProactiveHaAutomationLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProactiveHaAutomationLevel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1503,13 +1651,13 @@ made by proactive HA are to be handled. Can be one of <code>Automated</code> or
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L410">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L494">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_ProactiveHaEnabled_" data-uid="Pulumi.VSphere.ComputeCluster.ProactiveHaEnabled*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_ProactiveHaEnabled" data-uid="Pulumi.VSphere.ComputeCluster.ProactiveHaEnabled">ProactiveHaEnabled</h4>
@@ -1531,13 +1679,13 @@ made by proactive HA are to be handled. Can be one of <code>Automated</code> or
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L421">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L505">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_ProactiveHaModerateRemediation_" data-uid="Pulumi.VSphere.ComputeCluster.ProactiveHaModerateRemediation*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_ProactiveHaModerateRemediation" data-uid="Pulumi.VSphere.ComputeCluster.ProactiveHaModerateRemediation">ProactiveHaModerateRemediation</h4>
@@ -1551,7 +1699,7 @@ to <code>QuarantineMode</code>. Default: <code>QuarantineMode</code>.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProactiveHaModerateRemediation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProactiveHaModerateRemediation { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1563,13 +1711,13 @@ to <code>QuarantineMode</code>. Default: <code>QuarantineMode</code>.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L429">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L513">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_ProactiveHaProviderIds_" data-uid="Pulumi.VSphere.ComputeCluster.ProactiveHaProviderIds*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_ProactiveHaProviderIds" data-uid="Pulumi.VSphere.ComputeCluster.ProactiveHaProviderIds">ProactiveHaProviderIds</h4>
@@ -1592,13 +1740,13 @@ providers configured for this cluster.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L440">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L524">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_ProactiveHaSevereRemediation_" data-uid="Pulumi.VSphere.ComputeCluster.ProactiveHaSevereRemediation*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_ProactiveHaSevereRemediation" data-uid="Pulumi.VSphere.ComputeCluster.ProactiveHaSevereRemediation">ProactiveHaSevereRemediation</h4>
@@ -1612,7 +1760,7 @@ set to <code>MaintenanceMode</code>. Default: <code>QuarantineMode</code>.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProactiveHaSevereRemediation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProactiveHaSevereRemediation { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1624,13 +1772,13 @@ set to <code>MaintenanceMode</code>. Default: <code>QuarantineMode</code>.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L446">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L530">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_ResourcePoolId_" data-uid="Pulumi.VSphere.ComputeCluster.ResourcePoolId*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_ResourcePoolId" data-uid="Pulumi.VSphere.ComputeCluster.ResourcePoolId">ResourcePoolId</h4>
@@ -1651,18 +1799,17 @@ set to <code>MaintenanceMode</code>. Default: <code>QuarantineMode</code>.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L453">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L536">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_Tags_" data-uid="Pulumi.VSphere.ComputeCluster.Tags*"></a>
   <h4 id="Pulumi_VSphere_ComputeCluster_Tags" data-uid="Pulumi.VSphere.ComputeCluster.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.</p>
+  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1679,7 +1826,7 @@ set to <code>MaintenanceMode</code>. Default: <code>QuarantineMode</code>.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1687,17 +1834,17 @@ set to <code>MaintenanceMode</code>. Default: <code>QuarantineMode</code>.
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L494">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L577">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeCluster_Get_" data-uid="Pulumi.VSphere.ComputeCluster.Get*"></a>
-  <h4 id="Pulumi_VSphere_ComputeCluster_Get_System_String_Input_System_String__Pulumi_VSphere_ComputeClusterState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.ComputeCluster.Get(System.String,Input{System.String},Pulumi.VSphere.ComputeClusterState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ComputeClusterState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_ComputeCluster_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_ComputeClusterState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.ComputeCluster.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.ComputeClusterState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ComputeClusterState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ComputeCluster resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ComputeCluster Get(string name, Input&lt;string&gt; id, ComputeClusterState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ComputeCluster Get(string name, Input&lt;string&gt; id, ComputeClusterState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1716,7 +1863,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1728,7 +1875,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1757,7 +1904,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeCluster.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeCluster.cs/#L81" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

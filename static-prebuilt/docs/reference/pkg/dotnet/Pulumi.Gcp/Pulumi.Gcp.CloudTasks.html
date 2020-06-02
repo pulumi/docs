@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.CloudTasks
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,22 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Gcp.CloudTasks.Queue.html">Queue</a></h4>
       <section><p>A named resource to which messages are sent by publishers.</p>
+<h2 id="example-usage---queue-basic">Example Usage - Queue Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.CloudTasks.Queue(&amp;quot;default&amp;quot;, new Gcp.CloudTasks.QueueArgs
+    {
+        Location = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudTasks.QueueArgs.html">QueueArgs</a></h4>
       <section></section>

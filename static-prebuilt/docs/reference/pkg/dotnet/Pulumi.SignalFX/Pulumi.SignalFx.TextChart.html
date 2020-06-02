@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TextChart
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,84 @@
   <h1 id="Pulumi_SignalFx_TextChart" data-uid="Pulumi.SignalFx.TextChart" class="text-break">Class TextChart
   </h1>
   <div class="markdown level0 summary"><p>This special type of chart doesn’t display any metric data. Rather, it lets you place a text note on the dashboard.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var mynote0 = new SignalFx.TextChart(&amp;quot;mynote0&amp;quot;, new SignalFx.TextChartArgs
+    {
+        Description = &amp;quot;Lorem ipsum dolor sit amet, laudem tibique iracundia at mea. Nam posse dolores ex, nec cu adhuc putent honestatis&amp;quot;,
+        Markdown = @&amp;quot;    1. First ordered list item
+2. Another item
+  * Unordered sub-list.
+1. Actual numbers don&amp;apos;t matter, just that it&amp;apos;s a number
+  1. Ordered sub-list
+4. And another item.
+
+   You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&amp;apos;ll use three here to also align the raw Markdown).
+
+   To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+   Note that this line is separate, but within the same paragraph.⋅⋅
+   (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TextChart</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">TextChart</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.SignalFx.html">Pulumi.SignalFx</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.SignalFx.dll</h6>
@@ -88,16 +160,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/TextChart.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/TextChart.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_TextChart__ctor_" data-uid="Pulumi.SignalFx.TextChart.#ctor*"></a>
-  <h4 id="Pulumi_SignalFx_TextChart__ctor_System_String_Pulumi_SignalFx_TextChartArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.TextChart.#ctor(System.String,Pulumi.SignalFx.TextChartArgs,System.Nullable{CustomResourceOptions})">TextChart(String, TextChartArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_SignalFx_TextChart__ctor_System_String_Pulumi_SignalFx_TextChartArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.SignalFx.TextChart.#ctor(System.String,Pulumi.SignalFx.TextChartArgs,Pulumi.CustomResourceOptions)">TextChart(String, TextChartArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a TextChart resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TextChart(string name, TextChartArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public TextChart(string name, TextChartArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +194,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +204,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/TextChart.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/TextChart.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_TextChart_Description_" data-uid="Pulumi.SignalFx.TextChart.Description*"></a>
   <h4 id="Pulumi_SignalFx_TextChart_Description" data-uid="Pulumi.SignalFx.TextChart.Description">Description</h4>
@@ -141,7 +213,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +225,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/TextChart.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/TextChart.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_TextChart_Markdown_" data-uid="Pulumi.SignalFx.TextChart.Markdown*"></a>
   <h4 id="Pulumi_SignalFx_TextChart_Markdown" data-uid="Pulumi.SignalFx.TextChart.Markdown">Markdown</h4>
@@ -180,13 +252,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/TextChart.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/TextChart.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_TextChart_Name_" data-uid="Pulumi.SignalFx.TextChart.Name*"></a>
   <h4 id="Pulumi_SignalFx_TextChart_Name" data-uid="Pulumi.SignalFx.TextChart.Name">Name</h4>
@@ -207,13 +279,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/TextChart.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/TextChart.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_TextChart_Url_" data-uid="Pulumi.SignalFx.TextChart.Url*"></a>
   <h4 id="Pulumi_SignalFx_TextChart_Url" data-uid="Pulumi.SignalFx.TextChart.Url">Url</h4>
@@ -234,7 +306,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -242,17 +314,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/TextChart.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/TextChart.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_TextChart_Get_" data-uid="Pulumi.SignalFx.TextChart.Get*"></a>
-  <h4 id="Pulumi_SignalFx_TextChart_Get_System_String_Input_System_String__Pulumi_SignalFx_TextChartState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.TextChart.Get(System.String,Input{System.String},Pulumi.SignalFx.TextChartState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TextChartState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_SignalFx_TextChart_Get_System_String_Pulumi_Input_System_String__Pulumi_SignalFx_TextChartState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.SignalFx.TextChart.Get(System.String,Pulumi.Input{System.String},Pulumi.SignalFx.TextChartState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TextChartState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing TextChart resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TextChart Get(string name, Input&lt;string&gt; id, TextChartState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static TextChart Get(string name, Input&lt;string&gt; id, TextChartState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -271,7 +343,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -283,7 +355,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -312,7 +384,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/TextChart.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/TextChart.cs/#L54" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

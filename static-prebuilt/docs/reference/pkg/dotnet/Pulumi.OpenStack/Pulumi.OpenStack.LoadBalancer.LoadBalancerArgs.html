@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LoadBalancerArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">LoadBalancerArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">LoadBalancerArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.LoadBalancer.html">Pulumi.OpenStack.LoadBalancer</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L246">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs__ctor_" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs__ctor" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.#ctor">LoadBalancerArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_AdminStateUp_" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.AdminStateUp*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_AdminStateUp" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.AdminStateUp">AdminStateUp</h4>
@@ -110,7 +139,7 @@ A valid value is true (UP) or false (DOWN).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AdminStateUp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AdminStateUp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,13 +151,13 @@ A valid value is true (UP) or false (DOWN).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_Description_" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.Description*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_Description" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.Description">Description</h4>
@@ -137,7 +166,7 @@ A valid value is true (UP) or false (DOWN).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,13 +178,13 @@ A valid value is true (UP) or false (DOWN).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_FlavorId_" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.FlavorId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_FlavorId" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.FlavorId">FlavorId</h4>
@@ -165,7 +194,7 @@ loadbalancer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FlavorId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FlavorId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +206,13 @@ loadbalancer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_LoadbalancerProvider_" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.LoadbalancerProvider*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_LoadbalancerProvider" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.LoadbalancerProvider">LoadbalancerProvider</h4>
@@ -193,7 +222,7 @@ creates a new loadbalancer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LoadbalancerProvider { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LoadbalancerProvider { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,13 +234,13 @@ creates a new loadbalancer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_Name_" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.Name*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_Name" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.Name">Name</h4>
@@ -221,7 +250,7 @@ to be unique.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,13 +262,13 @@ to be unique.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_Region_" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.Region*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_Region" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.Region">Region</h4>
@@ -251,7 +280,7 @@ LB member.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +292,13 @@ LB member.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L195">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_SecurityGroupIds_" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.SecurityGroupIds*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_SecurityGroupIds" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.SecurityGroupIds">SecurityGroupIds</h4>
@@ -292,13 +321,13 @@ opposed to how they are configured with the Compute Instance).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L206">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L227">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_TenantId_" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.TenantId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_TenantId" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.TenantId">TenantId</h4>
@@ -309,7 +338,7 @@ other than their own.  Changing this creates a new loadbalancer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TenantId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TenantId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -321,13 +350,13 @@ other than their own.  Changing this creates a new loadbalancer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L213">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_VipAddress_" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.VipAddress*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_VipAddress" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.VipAddress">VipAddress</h4>
@@ -337,7 +366,7 @@ Changing this creates a new loadbalancer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VipAddress { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VipAddress { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -349,13 +378,13 @@ Changing this creates a new loadbalancer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L222">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_VipSubnetId_" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.VipSubnetId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_LoadBalancerArgs_VipSubnetId" data-uid="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.VipSubnetId">VipSubnetId</h4>
@@ -379,7 +408,7 @@ are shared).  Changing this creates a new loadbalancer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -391,7 +420,7 @@ are shared).  Changing this creates a new loadbalancer.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L142" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/LoadBalancer.cs/#L163" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

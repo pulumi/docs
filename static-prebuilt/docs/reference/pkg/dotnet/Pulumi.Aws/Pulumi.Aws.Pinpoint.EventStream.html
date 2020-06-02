@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EventStream
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,112 @@
   <h1 id="Pulumi_Aws_Pinpoint_EventStream" data-uid="Pulumi.Aws.Pinpoint.EventStream" class="text-break">Class EventStream
   </h1>
   <div class="markdown level0 summary"><p>Provides a Pinpoint Event Stream resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.Pinpoint.App(&amp;quot;app&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var testStream = new Aws.Kinesis.Stream(&amp;quot;testStream&amp;quot;, new Aws.Kinesis.StreamArgs
+    {
+        ShardCount = 1,
+    });
+    var testRole = new Aws.Iam.Role(&amp;quot;testRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;pinpoint.us-east-1.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var stream = new Aws.Pinpoint.EventStream(&amp;quot;stream&amp;quot;, new Aws.Pinpoint.EventStreamArgs
+    {
+        ApplicationId = app.ApplicationId,
+        DestinationStreamArn = testStream.Arn,
+        RoleArn = testRole.Arn,
+    });
+    var testRolePolicy = new Aws.Iam.RolePolicy(&amp;quot;testRolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+  &amp;quot;&amp;quot;kinesis:PutRecords&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;kinesis:DescribeStream&amp;quot;&amp;quot;
+],
+&amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+  &amp;quot;&amp;quot;arn:aws:kinesis:us-east-1:*:*/*&amp;quot;&amp;quot;
+]
+}
+}
+
+&amp;quot;,
+        Role = testRole.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">EventStream</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">EventStream</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Pinpoint.html">Pulumi.Aws.Pinpoint</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +188,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Pinpoint/EventStream.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Pinpoint/EventStream.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Aws_Pinpoint_EventStream__ctor_" data-uid="Pulumi.Aws.Pinpoint.EventStream.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Pinpoint_EventStream__ctor_System_String_Pulumi_Aws_Pinpoint_EventStreamArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Pinpoint.EventStream.#ctor(System.String,Pulumi.Aws.Pinpoint.EventStreamArgs,System.Nullable{CustomResourceOptions})">EventStream(String, EventStreamArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Pinpoint_EventStream__ctor_System_String_Pulumi_Aws_Pinpoint_EventStreamArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Pinpoint.EventStream.#ctor(System.String,Pulumi.Aws.Pinpoint.EventStreamArgs,Pulumi.CustomResourceOptions)">EventStream(String, EventStreamArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a EventStream resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EventStream(string name, EventStreamArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public EventStream(string name, EventStreamArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +222,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +232,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Pinpoint/EventStream.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Pinpoint/EventStream.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Aws_Pinpoint_EventStream_ApplicationId_" data-uid="Pulumi.Aws.Pinpoint.EventStream.ApplicationId*"></a>
   <h4 id="Pulumi_Aws_Pinpoint_EventStream_ApplicationId" data-uid="Pulumi.Aws.Pinpoint.EventStream.ApplicationId">ApplicationId</h4>
@@ -153,13 +253,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Pinpoint/EventStream.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Pinpoint/EventStream.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Aws_Pinpoint_EventStream_DestinationStreamArn_" data-uid="Pulumi.Aws.Pinpoint.EventStream.DestinationStreamArn*"></a>
   <h4 id="Pulumi_Aws_Pinpoint_EventStream_DestinationStreamArn" data-uid="Pulumi.Aws.Pinpoint.EventStream.DestinationStreamArn">DestinationStreamArn</h4>
@@ -180,13 +280,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Pinpoint/EventStream.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Pinpoint/EventStream.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Aws_Pinpoint_EventStream_RoleArn_" data-uid="Pulumi.Aws.Pinpoint.EventStream.RoleArn*"></a>
   <h4 id="Pulumi_Aws_Pinpoint_EventStream_RoleArn" data-uid="Pulumi.Aws.Pinpoint.EventStream.RoleArn">RoleArn</h4>
@@ -207,7 +307,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -215,17 +315,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Pinpoint/EventStream.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Pinpoint/EventStream.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Aws_Pinpoint_EventStream_Get_" data-uid="Pulumi.Aws.Pinpoint.EventStream.Get*"></a>
-  <h4 id="Pulumi_Aws_Pinpoint_EventStream_Get_System_String_Input_System_String__Pulumi_Aws_Pinpoint_EventStreamState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Pinpoint.EventStream.Get(System.String,Input{System.String},Pulumi.Aws.Pinpoint.EventStreamState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, EventStreamState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Pinpoint_EventStream_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Pinpoint_EventStreamState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Pinpoint.EventStream.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Pinpoint.EventStreamState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, EventStreamState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing EventStream resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static EventStream Get(string name, Input&lt;string&gt; id, EventStreamState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static EventStream Get(string name, Input&lt;string&gt; id, EventStreamState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,7 +344,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -256,7 +356,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -285,7 +385,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Pinpoint/EventStream.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Pinpoint/EventStream.cs/#L82" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

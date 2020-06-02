@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MetricAlarmMetricQuery
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">MetricAlarmMetricQuery</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.html">Pulumi.Aws.CloudWatch.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_CloudWatch_Outputs_MetricAlarmMetricQuery_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class MetricAlarmMetricQuery : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class MetricAlarmMetricQuery</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudWatch_Outputs_MetricAlarmMetricQuery_Expression" data-uid="Pulumi.Aws.CloudWatch.Outputs.MetricAlarmMetricQuery.Expression">Expression</h4>
   <div class="markdown level1 summary"><p>The math expression to be performed on the returned data, if this object is performing a math expression. This expression can use the id of the other metrics to refer to those metrics, and can also use the id of other expressions to use the result of those expressions. For more information about metric math expressions, see Metric Math Syntax and Functions in the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax">Amazon CloudWatch User Guide</a>.</p>
@@ -95,7 +119,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Expression</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Expression</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -107,13 +131,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudWatch_Outputs_MetricAlarmMetricQuery_Id" data-uid="Pulumi.Aws.CloudWatch.Outputs.MetricAlarmMetricQuery.Id">Id</h4>
   <div class="markdown level1 summary"><p>A short name used to tie this object to the results in the response. If you are performing math expressions on this set of data, this name represents that data and can serve as a variable in the mathematical expression. The valid characters are letters, numbers, and underscore. The first character must be a lowercase letter.</p>
@@ -139,7 +163,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudWatch_Outputs_MetricAlarmMetricQuery_Label" data-uid="Pulumi.Aws.CloudWatch.Outputs.MetricAlarmMetricQuery.Label">Label</h4>
   <div class="markdown level1 summary"><p>A human-readable label for this metric or expression. This is especially useful if this is an expression, so that you know what the value represents.</p>
@@ -147,7 +171,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Label</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Label</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudWatch_Outputs_MetricAlarmMetricQuery_Metric" data-uid="Pulumi.Aws.CloudWatch.Outputs.MetricAlarmMetricQuery.Metric">Metric</h4>
   <div class="markdown level1 summary"><p>The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.</p>
@@ -191,7 +215,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudWatch_Outputs_MetricAlarmMetricQuery_ReturnData" data-uid="Pulumi.Aws.CloudWatch.Outputs.MetricAlarmMetricQuery.ReturnData">ReturnData</h4>
   <div class="markdown level1 summary"><p>Specify exactly one <code>metric_query</code> to be <code>true</code> to use that <code>metric_query</code> result as the alarm.</p>
@@ -223,7 +247,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/Outputs/MetricAlarmMetricQuery.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

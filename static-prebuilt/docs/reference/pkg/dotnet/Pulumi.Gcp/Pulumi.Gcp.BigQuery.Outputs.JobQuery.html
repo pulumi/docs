@@ -1,0 +1,613 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class JobQuery
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class JobQuery
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery">
+  
+  <h1 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery" class="text-break">Class JobQuery
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">JobQuery</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.html">Pulumi.Gcp.BigQuery.Outputs</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
+  <h5 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class JobQuery</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L21">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_AllowLargeResults" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.AllowLargeResults">AllowLargeResults</h4>
+  <div class="markdown level1 summary"><p>If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
+Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
+However, you must still set destinationTable when result size exceeds the allowed maximum response size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool? AllowLargeResults</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L28">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_CreateDisposition" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.CreateDisposition">CreateDisposition</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the job is allowed to create new tables. The following values are supported:
+CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
+Creation, truncation and append actions occur as one atomic update upon job completion</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string CreateDisposition</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L32">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_DefaultDataset" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.DefaultDataset">DefaultDataset</h4>
+  <div class="markdown level1 summary"><p>Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly JobQueryDefaultDataset DefaultDataset</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.JobQueryDefaultDataset.html">JobQueryDefaultDataset</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L36">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_DestinationEncryptionConfiguration" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.DestinationEncryptionConfiguration">DestinationEncryptionConfiguration</h4>
+  <div class="markdown level1 summary"><p>Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly JobQueryDestinationEncryptionConfiguration DestinationEncryptionConfiguration</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.JobQueryDestinationEncryptionConfiguration.html">JobQueryDestinationEncryptionConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L40">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_DestinationTable" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.DestinationTable">DestinationTable</h4>
+  <div class="markdown level1 summary"><p>The destination table.  Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly JobQueryDestinationTable DestinationTable</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.JobQueryDestinationTable.html">JobQueryDestinationTable</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L45">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_FlattenResults" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.FlattenResults">FlattenResults</h4>
+  <div class="markdown level1 summary"><p>If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
+allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool? FlattenResults</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L50">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_MaximumBillingTier" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.MaximumBillingTier">MaximumBillingTier</h4>
+  <div class="markdown level1 summary"><p>Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
+If unspecified, this will be set to your project default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int? MaximumBillingTier</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L55">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_MaximumBytesBilled" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.MaximumBytesBilled">MaximumBytesBilled</h4>
+  <div class="markdown level1 summary"><p>Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
+If unspecified, this will be set to your project default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string MaximumBytesBilled</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L59">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_ParameterMode" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.ParameterMode">ParameterMode</h4>
+  <div class="markdown level1 summary"><p>Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string ParameterMode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L63">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_Priority" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.Priority">Priority</h4>
+  <div class="markdown level1 summary"><p>Specifies a priority for the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Priority</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L67">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_Query" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.Query">Query</h4>
+  <div class="markdown level1 summary"><p>Configures a query job.  Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Query</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L76">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_SchemaUpdateOptions" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.SchemaUpdateOptions">SchemaUpdateOptions</h4>
+  <div class="markdown level1 summary"><p>Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;string&gt; SchemaUpdateOptions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L80">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_ScriptOptions" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.ScriptOptions">ScriptOptions</h4>
+  <div class="markdown level1 summary"><p>Options controlling the execution of scripts.  Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly JobQueryScriptOptions ScriptOptions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.JobQueryScriptOptions.html">JobQueryScriptOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L85">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_UseLegacySql" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.UseLegacySql">UseLegacySql</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true.
+If set to false, the query will use BigQuery's standard SQL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool? UseLegacySql</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L91">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_UseQueryCache" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.UseQueryCache">UseQueryCache</h4>
+  <div class="markdown level1 summary"><p>Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
+tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
+The default value is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool? UseQueryCache</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L95">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_UserDefinedFunctionResources" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.UserDefinedFunctionResources">UserDefinedFunctionResources</h4>
+  <div class="markdown level1 summary"><p>Describes user-defined function resources used in the query.  Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;JobQueryUserDefinedFunctionResource&gt; UserDefinedFunctionResources</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.JobQueryUserDefinedFunctionResource.html">JobQueryUserDefinedFunctionResource</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L104">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_BigQuery_Outputs_JobQuery_WriteDisposition" data-uid="Pulumi.Gcp.BigQuery.Outputs.JobQuery.WriteDisposition">WriteDisposition</h4>
+  <div class="markdown level1 summary"><p>Specifies the action that occurs if the destination table already exists. The following values are supported:
+WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
+Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Creation, truncation and append actions occur as one atomic update upon job completion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string WriteDisposition</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Outputs/JobQuery.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

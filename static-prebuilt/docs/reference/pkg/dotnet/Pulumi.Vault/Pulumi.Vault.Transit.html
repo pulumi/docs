@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.Transit
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,30 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Vault.Transit.SecretBackendKey.html">SecretBackendKey</a></h4>
       <section><p>Creates an Encryption Keyring on a Transit Secret Backend for Vault.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var transit = new Vault.Mount(&amp;quot;transit&amp;quot;, new Vault.MountArgs
+    {
+        DefaultLeaseTtlSeconds = 3600,
+        Description = &amp;quot;Example description&amp;quot;,
+        MaxLeaseTtlSeconds = 86400,
+        Path = &amp;quot;transit&amp;quot;,
+        Type = &amp;quot;transit&amp;quot;,
+    });
+    var key = new Vault.Transit.SecretBackendKey(&amp;quot;key&amp;quot;, new Vault.Transit.SecretBackendKeyArgs
+    {
+        Backend = transit.Path,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Transit.SecretBackendKeyArgs.html">SecretBackendKeyArgs</a></h4>
       <section></section>

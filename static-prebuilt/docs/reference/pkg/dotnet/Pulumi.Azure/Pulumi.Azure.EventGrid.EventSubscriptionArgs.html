@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EventSubscriptionArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">EventSubscriptionArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">EventSubscriptionArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.EventGrid.html">Pulumi.Azure.EventGrid</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L231">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L295">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs__ctor_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs__ctor" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.#ctor">EventSubscriptionArgs()</h4>
@@ -100,16 +129,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L144">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_EventDeliverySchema_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.EventDeliverySchema*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_EventDeliverySchema" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.EventDeliverySchema">EventDeliverySchema</h4>
-  <div class="markdown level1 summary"><p>Specifies the event delivery schema for the event subscription. Possible values include: <code>EventGridSchema</code>, <code>CloudEventV01Schema</code>, <code>CustomInputSchema</code>.</p>
+  <div class="markdown level1 summary"><p>Specifies the event delivery schema for the event subscription. Possible values include: <code>EventGridSchema</code>, <code>CloudEventSchemaV1_0</code>, <code>CustomInputSchema</code>. Defaults to <code>EventGridSchema</code>. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EventDeliverySchema { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EventDeliverySchema { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,13 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L184">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_EventhubEndpoint_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.EventhubEndpoint*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_EventhubEndpoint" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.EventhubEndpoint">EventhubEndpoint</h4>
@@ -136,7 +165,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionEventhubEndpointArgs&gt;? EventhubEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionEventhubEndpointArgs&gt; EventhubEndpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +177,67 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionEventhubEndpointArgs.html">EventSubscriptionEventhubEndpointArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionEventhubEndpointArgs.html">EventSubscriptionEventhubEndpointArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L190">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_EventhubEndpointId_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.EventhubEndpointId*"></a>
+  <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_EventhubEndpointId" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.EventhubEndpointId">EventhubEndpointId</h4>
+  <div class="markdown level1 summary"><p>Specifies the id where the Event Hub is located.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EventhubEndpointId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L196">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_ExpirationTimeUtc_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.ExpirationTimeUtc*"></a>
+  <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_ExpirationTimeUtc" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.ExpirationTimeUtc">ExpirationTimeUtc</h4>
+  <div class="markdown level1 summary"><p>Specifies the expiration time of the event subscription (Datetime Format <code>RFC 3339</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ExpirationTimeUtc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_HybridConnectionEndpoint_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.HybridConnectionEndpoint*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_HybridConnectionEndpoint" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.HybridConnectionEndpoint">HybridConnectionEndpoint</h4>
@@ -163,7 +246,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionHybridConnectionEndpointArgs&gt;? HybridConnectionEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionHybridConnectionEndpointArgs&gt; HybridConnectionEndpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +258,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionHybridConnectionEndpointArgs.html">EventSubscriptionHybridConnectionEndpointArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionHybridConnectionEndpointArgs.html">EventSubscriptionHybridConnectionEndpointArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L208">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_HybridConnectionEndpointId_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.HybridConnectionEndpointId*"></a>
+  <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_HybridConnectionEndpointId" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.HybridConnectionEndpointId">HybridConnectionEndpointId</h4>
+  <div class="markdown level1 summary"><p>Specifies the id where the Hybrid Connection is located.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HybridConnectionEndpointId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L217">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_IncludedEventTypes_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.IncludedEventTypes*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_IncludedEventTypes" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.IncludedEventTypes">IncludedEventTypes</h4>
@@ -202,13 +312,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L229">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_Labels_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.Labels*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_Labels" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.Labels">Labels</h4>
@@ -229,13 +339,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L186">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L238">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_Name_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.Name*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_Name" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.Name">Name</h4>
@@ -244,7 +354,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,13 +366,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L192">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L244">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_RetryPolicy_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.RetryPolicy*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_RetryPolicy" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.RetryPolicy">RetryPolicy</h4>
@@ -271,7 +381,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionRetryPolicyArgs&gt;? RetryPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionRetryPolicyArgs&gt; RetryPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,13 +393,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionRetryPolicyArgs.html">EventSubscriptionRetryPolicyArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionRetryPolicyArgs.html">EventSubscriptionRetryPolicyArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L250">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_Scope_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.Scope*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_Scope" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.Scope">Scope</h4>
@@ -310,13 +420,67 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L256">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_ServiceBusQueueEndpointId_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.ServiceBusQueueEndpointId*"></a>
+  <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_ServiceBusQueueEndpointId" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.ServiceBusQueueEndpointId">ServiceBusQueueEndpointId</h4>
+  <div class="markdown level1 summary"><p>Specifies the id where the Service Bus Queue is located.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServiceBusQueueEndpointId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L262">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_ServiceBusTopicEndpointId_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.ServiceBusTopicEndpointId*"></a>
+  <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_ServiceBusTopicEndpointId" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.ServiceBusTopicEndpointId">ServiceBusTopicEndpointId</h4>
+  <div class="markdown level1 summary"><p>Specifies the id where the Service Bus Topic is located.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServiceBusTopicEndpointId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L268">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_StorageBlobDeadLetterDestination_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.StorageBlobDeadLetterDestination*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_StorageBlobDeadLetterDestination" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.StorageBlobDeadLetterDestination">StorageBlobDeadLetterDestination</h4>
@@ -325,7 +489,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionStorageBlobDeadLetterDestinationArgs&gt;? StorageBlobDeadLetterDestination { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionStorageBlobDeadLetterDestinationArgs&gt; StorageBlobDeadLetterDestination { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,13 +501,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionStorageBlobDeadLetterDestinationArgs.html">EventSubscriptionStorageBlobDeadLetterDestinationArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionStorageBlobDeadLetterDestinationArgs.html">EventSubscriptionStorageBlobDeadLetterDestinationArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L210">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L274">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_StorageQueueEndpoint_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.StorageQueueEndpoint*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_StorageQueueEndpoint" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.StorageQueueEndpoint">StorageQueueEndpoint</h4>
@@ -352,7 +516,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionStorageQueueEndpointArgs&gt;? StorageQueueEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionStorageQueueEndpointArgs&gt; StorageQueueEndpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -364,13 +528,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionStorageQueueEndpointArgs.html">EventSubscriptionStorageQueueEndpointArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionStorageQueueEndpointArgs.html">EventSubscriptionStorageQueueEndpointArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L216">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L280">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_SubjectFilter_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.SubjectFilter*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_SubjectFilter" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.SubjectFilter">SubjectFilter</h4>
@@ -379,7 +543,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionSubjectFilterArgs&gt;? SubjectFilter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionSubjectFilterArgs&gt; SubjectFilter { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -391,22 +555,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionSubjectFilterArgs.html">EventSubscriptionSubjectFilterArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionSubjectFilterArgs.html">EventSubscriptionSubjectFilterArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L222">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_TopicName_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.TopicName*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_TopicName" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.TopicName">TopicName</h4>
-  <div class="markdown level1 summary"><p>Specifies the name of the topic to associate with the event subscription.</p>
+  <div class="markdown level1 summary"><p>(Optional) Specifies the name of the topic to associate with the event subscription.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TopicName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TopicName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -418,13 +582,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L292">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_WebhookEndpoint_" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.WebhookEndpoint*"></a>
   <h4 id="Pulumi_Azure_EventGrid_EventSubscriptionArgs_WebhookEndpoint" data-uid="Pulumi.Azure.EventGrid.EventSubscriptionArgs.WebhookEndpoint">WebhookEndpoint</h4>
@@ -433,7 +597,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionWebhookEndpointArgs&gt;? WebhookEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventSubscriptionWebhookEndpointArgs&gt; WebhookEndpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -445,7 +609,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionWebhookEndpointArgs.html">EventSubscriptionWebhookEndpointArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Inputs.EventSubscriptionWebhookEndpointArgs.html">EventSubscriptionWebhookEndpointArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -457,7 +621,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/EventSubscription.cs/#L139" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/EventSubscription.cs/#L173" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.AppRole
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,25 +77,127 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Vault.AppRole.AuthBackendLogin.html">AuthBackendLogin</a></h4>
-      <section><p>Logs into Vault using the AppRole auth backend. See the <a href="https://www.vaultproject.io/docs/auth/approle.html">Vault
+      <section><p>Logs into Vault using the AppRole auth backend. See the <a href="https://www.vaultproject.io/docs/auth/approle">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var approle = new Vault.AuthBackend(&amp;quot;approle&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Type = &amp;quot;approle&amp;quot;,
+    });
+    var example = new Vault.AppRole.AuthBackendRole(&amp;quot;example&amp;quot;, new Vault.AppRole.AuthBackendRoleArgs
+    {
+        Backend = approle.Path,
+        Policies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;dev&amp;quot;,
+            &amp;quot;prod&amp;quot;,
+        },
+        RoleName = &amp;quot;test-role&amp;quot;,
+    });
+    var id = new Vault.AppRole.AuthBackendRoleSecretID(&amp;quot;id&amp;quot;, new Vault.AppRole.AuthBackendRoleSecretIDArgs
+    {
+        Backend = approle.Path,
+        RoleName = example.RoleName,
+    });
+    var login = new Vault.AppRole.AuthBackendLogin(&amp;quot;login&amp;quot;, new Vault.AppRole.AuthBackendLoginArgs
+    {
+        Backend = approle.Path,
+        RoleId = example.RoleId,
+        SecretId = id.SecretId,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.AppRole.AuthBackendLoginArgs.html">AuthBackendLoginArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.AppRole.AuthBackendLoginState.html">AuthBackendLoginState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.AppRole.AuthBackendRole.html">AuthBackendRole</a></h4>
-      <section><p>Manages an AppRole auth backend role in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/approle.html">Vault
+      <section><p>Manages an AppRole auth backend role in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/approle">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var approle = new Vault.AuthBackend(&amp;quot;approle&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Type = &amp;quot;approle&amp;quot;,
+    });
+    var example = new Vault.AppRole.AuthBackendRole(&amp;quot;example&amp;quot;, new Vault.AppRole.AuthBackendRoleArgs
+    {
+        Backend = approle.Path,
+        RoleName = &amp;quot;test-role&amp;quot;,
+        TokenPolicies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;dev&amp;quot;,
+            &amp;quot;prod&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.AppRole.AuthBackendRoleArgs.html">AuthBackendRoleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.AppRole.AuthBackendRoleSecretID.html">AuthBackendRoleSecretID</a></h4>
-      <section><p>Manages an AppRole auth backend SecretID in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/approle.html">Vault
+      <section><p>Manages an AppRole auth backend SecretID in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/approle">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var approle = new Vault.AuthBackend(&amp;quot;approle&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Type = &amp;quot;approle&amp;quot;,
+    });
+    var example = new Vault.AppRole.AuthBackendRole(&amp;quot;example&amp;quot;, new Vault.AppRole.AuthBackendRoleArgs
+    {
+        Backend = approle.Path,
+        Policies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;dev&amp;quot;,
+            &amp;quot;prod&amp;quot;,
+        },
+        RoleName = &amp;quot;test-role&amp;quot;,
+    });
+    var id = new Vault.AppRole.AuthBackendRoleSecretID(&amp;quot;id&amp;quot;, new Vault.AppRole.AuthBackendRoleSecretIDArgs
+    {
+        Backend = approle.Path,
+        Metadata = @&amp;quot;{
+&amp;quot;&amp;quot;hello&amp;quot;&amp;quot;: &amp;quot;&amp;quot;world&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+        RoleName = example.RoleName,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.AppRole.AuthBackendRoleSecretIDArgs.html">AuthBackendRoleSecretIDArgs</a></h4>
       <section></section>

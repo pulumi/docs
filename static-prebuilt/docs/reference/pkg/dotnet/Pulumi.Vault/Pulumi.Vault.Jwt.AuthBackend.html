@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AuthBackend
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,14 +71,50 @@
   
   <h1 id="Pulumi_Vault_Jwt_AuthBackend" data-uid="Pulumi.Vault.Jwt.AuthBackend" class="text-break">Class AuthBackend
   </h1>
-  <div class="markdown level0 summary"><p>Provides a resource for managing an
-<a href="https://www.vaultproject.io/docs/auth/jwt.html">JWT auth backend within Vault</a>.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AuthBackend</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AuthBackend</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Vault.Jwt.html">Pulumi.Vault.Jwt</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Vault.dll</h6>
@@ -89,16 +125,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend__ctor_" data-uid="Pulumi.Vault.Jwt.AuthBackend.#ctor*"></a>
-  <h4 id="Pulumi_Vault_Jwt_AuthBackend__ctor_System_String_Pulumi_Vault_Jwt_AuthBackendArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.Jwt.AuthBackend.#ctor(System.String,Pulumi.Vault.Jwt.AuthBackendArgs,System.Nullable{CustomResourceOptions})">AuthBackend(String, AuthBackendArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_Jwt_AuthBackend__ctor_System_String_Pulumi_Vault_Jwt_AuthBackendArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.Jwt.AuthBackend.#ctor(System.String,Pulumi.Vault.Jwt.AuthBackendArgs,Pulumi.CustomResourceOptions)">AuthBackend(String, AuthBackendArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a AuthBackend resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AuthBackend(string name, AuthBackendArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AuthBackend(string name, AuthBackendArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +159,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +169,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_Accessor_" data-uid="Pulumi.Vault.Jwt.AuthBackend.Accessor*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_Accessor" data-uid="Pulumi.Vault.Jwt.AuthBackend.Accessor">Accessor</h4>
@@ -154,13 +190,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_BoundIssuer_" data-uid="Pulumi.Vault.Jwt.AuthBackend.BoundIssuer*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_BoundIssuer" data-uid="Pulumi.Vault.Jwt.AuthBackend.BoundIssuer">BoundIssuer</h4>
@@ -169,7 +205,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BoundIssuer { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; BoundIssuer { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,13 +217,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_DefaultRole_" data-uid="Pulumi.Vault.Jwt.AuthBackend.DefaultRole*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_DefaultRole" data-uid="Pulumi.Vault.Jwt.AuthBackend.DefaultRole">DefaultRole</h4>
@@ -196,7 +232,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultRole { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultRole { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +244,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_Description_" data-uid="Pulumi.Vault.Jwt.AuthBackend.Description*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_Description" data-uid="Pulumi.Vault.Jwt.AuthBackend.Description">Description</h4>
@@ -223,7 +259,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +271,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_JwksCaPem_" data-uid="Pulumi.Vault.Jwt.AuthBackend.JwksCaPem*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_JwksCaPem" data-uid="Pulumi.Vault.Jwt.AuthBackend.JwksCaPem">JwksCaPem</h4>
@@ -250,7 +286,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; JwksCaPem { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; JwksCaPem { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +298,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_JwksUrl_" data-uid="Pulumi.Vault.Jwt.AuthBackend.JwksUrl*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_JwksUrl" data-uid="Pulumi.Vault.Jwt.AuthBackend.JwksUrl">JwksUrl</h4>
@@ -277,7 +313,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; JwksUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; JwksUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,13 +325,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_JwtSupportedAlgs_" data-uid="Pulumi.Vault.Jwt.AuthBackend.JwtSupportedAlgs*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_JwtSupportedAlgs" data-uid="Pulumi.Vault.Jwt.AuthBackend.JwtSupportedAlgs">JwtSupportedAlgs</h4>
@@ -316,13 +352,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_JwtValidationPubkeys_" data-uid="Pulumi.Vault.Jwt.AuthBackend.JwtValidationPubkeys*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_JwtValidationPubkeys" data-uid="Pulumi.Vault.Jwt.AuthBackend.JwtValidationPubkeys">JwtValidationPubkeys</h4>
@@ -343,13 +379,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_OidcClientId_" data-uid="Pulumi.Vault.Jwt.AuthBackend.OidcClientId*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_OidcClientId" data-uid="Pulumi.Vault.Jwt.AuthBackend.OidcClientId">OidcClientId</h4>
@@ -358,7 +394,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OidcClientId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OidcClientId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -370,13 +406,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_OidcClientSecret_" data-uid="Pulumi.Vault.Jwt.AuthBackend.OidcClientSecret*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_OidcClientSecret" data-uid="Pulumi.Vault.Jwt.AuthBackend.OidcClientSecret">OidcClientSecret</h4>
@@ -385,7 +421,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OidcClientSecret { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OidcClientSecret { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -397,13 +433,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_OidcDiscoveryCaPem_" data-uid="Pulumi.Vault.Jwt.AuthBackend.OidcDiscoveryCaPem*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_OidcDiscoveryCaPem" data-uid="Pulumi.Vault.Jwt.AuthBackend.OidcDiscoveryCaPem">OidcDiscoveryCaPem</h4>
@@ -412,7 +448,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OidcDiscoveryCaPem { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OidcDiscoveryCaPem { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,13 +460,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_OidcDiscoveryUrl_" data-uid="Pulumi.Vault.Jwt.AuthBackend.OidcDiscoveryUrl*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_OidcDiscoveryUrl" data-uid="Pulumi.Vault.Jwt.AuthBackend.OidcDiscoveryUrl">OidcDiscoveryUrl</h4>
@@ -439,7 +475,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OidcDiscoveryUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OidcDiscoveryUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -451,13 +487,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_Path_" data-uid="Pulumi.Vault.Jwt.AuthBackend.Path*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_Path" data-uid="Pulumi.Vault.Jwt.AuthBackend.Path">Path</h4>
@@ -466,7 +502,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Path { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Path { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -478,13 +514,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_Tune_" data-uid="Pulumi.Vault.Jwt.AuthBackend.Tune*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_Tune" data-uid="Pulumi.Vault.Jwt.AuthBackend.Tune">Tune</h4>
@@ -504,13 +540,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Vault.Jwt.Outputs.AuthBackendTune.html">AuthBackendTune</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Vault.Jwt.Outputs.AuthBackendTune.html">AuthBackendTune</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_Type_" data-uid="Pulumi.Vault.Jwt.AuthBackend.Type*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackend_Type" data-uid="Pulumi.Vault.Jwt.AuthBackend.Type">Type</h4>
@@ -519,7 +555,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -531,7 +567,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -539,17 +575,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackend_Get_" data-uid="Pulumi.Vault.Jwt.AuthBackend.Get*"></a>
-  <h4 id="Pulumi_Vault_Jwt_AuthBackend_Get_System_String_Input_System_String__Pulumi_Vault_Jwt_AuthBackendState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.Jwt.AuthBackend.Get(System.String,Input{System.String},Pulumi.Vault.Jwt.AuthBackendState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AuthBackendState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_Jwt_AuthBackend_Get_System_String_Pulumi_Input_System_String__Pulumi_Vault_Jwt_AuthBackendState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.Jwt.AuthBackend.Get(System.String,Pulumi.Input{System.String},Pulumi.Vault.Jwt.AuthBackendState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AuthBackendState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing AuthBackend resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AuthBackend Get(string name, Input&lt;string&gt; id, AuthBackendState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AuthBackend Get(string name, Input&lt;string&gt; id, AuthBackendState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -568,7 +604,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -580,7 +616,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -609,7 +645,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackend.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackend.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

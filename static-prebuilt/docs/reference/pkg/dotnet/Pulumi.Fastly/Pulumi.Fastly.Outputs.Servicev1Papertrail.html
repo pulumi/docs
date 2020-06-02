@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Servicev1Papertrail
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Servicev1Papertrail</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Fastly.Outputs.html">Pulumi.Fastly.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Fastly.dll</h6>
   <h5 id="Pulumi_Fastly_Outputs_Servicev1Papertrail_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Servicev1Papertrail : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Servicev1Papertrail</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/d0297b9ec6b4a115f1ad580f03348ab5ade3ef17/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Fastly_Outputs_Servicev1Papertrail_Address" data-uid="Pulumi.Fastly.Outputs.Servicev1Papertrail.Address">Address</h4>
   <div class="markdown level1 summary"><p>A hostname or IPv4 address of the Syslog endpoint.</p>
@@ -113,15 +137,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/d0297b9ec6b4a115f1ad580f03348ab5ade3ef17/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Fastly_Outputs_Servicev1Papertrail_Format" data-uid="Pulumi.Fastly.Outputs.Servicev1Papertrail.Format">Format</h4>
-  <div class="markdown level1 summary"><p>Apache-style string or VCL variables to use for log formatting. Default <code>%h %l %u %t \&amp;quot;%r\&amp;quot; %&gt;s %b</code>.</p>
+  <div class="markdown level1 summary"><p>Apache-style string or VCL variables to use for log formatting.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Format</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Format</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/d0297b9ec6b4a115f1ad580f03348ab5ade3ef17/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Fastly_Outputs_Servicev1Papertrail_Name" data-uid="Pulumi.Fastly.Outputs.Servicev1Papertrail.Name">Name</h4>
   <div class="markdown level1 summary"><p>A unique name to identify this dictionary.</p>
@@ -165,15 +189,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/d0297b9ec6b4a115f1ad580f03348ab5ade3ef17/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Fastly_Outputs_Servicev1Papertrail_Placement" data-uid="Pulumi.Fastly.Outputs.Servicev1Papertrail.Placement">Placement</h4>
-  <div class="markdown level1 summary"><p>Where in the generated VCL the logging call should be placed, overriding any <code>format_version</code> default. Can be either <code>none</code> or <code>waf_debug</code>.</p>
+  <div class="markdown level1 summary"><p>Where in the generated VCL the logging call should be placed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Placement</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Placement</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,13 +209,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/d0297b9ec6b4a115f1ad580f03348ab5ade3ef17/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Fastly_Outputs_Servicev1Papertrail_Port" data-uid="Pulumi.Fastly.Outputs.Servicev1Papertrail.Port">Port</h4>
   <div class="markdown level1 summary"><p>The port number configured in Logentries to send logs to. Defaults to <code>20000</code>.</p>
@@ -217,7 +241,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/d0297b9ec6b4a115f1ad580f03348ab5ade3ef17/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Fastly_Outputs_Servicev1Papertrail_ResponseCondition" data-uid="Pulumi.Fastly.Outputs.Servicev1Papertrail.ResponseCondition">ResponseCondition</h4>
   <div class="markdown level1 summary"><p>The name of the <code>condition</code> to apply. If empty, always execute.</p>
@@ -225,7 +249,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ResponseCondition</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ResponseCondition</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,7 +261,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -249,7 +273,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-fastly/blob/d0297b9ec6b4a115f1ad580f03348ab5ade3ef17/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Outputs/Servicev1Papertrail.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

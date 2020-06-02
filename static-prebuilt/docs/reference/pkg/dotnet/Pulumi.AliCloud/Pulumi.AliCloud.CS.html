@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.CS
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -88,6 +88,30 @@ Each application can contain one or more services.</p>
 <blockquote>
 <p><strong>NOTE:</strong> At present, this resource only support swarm cluster.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new AliCloud.CS.Application(&amp;quot;app&amp;quot;, new AliCloud.CS.ApplicationArgs
+    {
+        ClusterName = &amp;quot;my-first-swarm&amp;quot;,
+        Environment = 
+        {
+            { &amp;quot;EXTERNAL_URL&amp;quot;, &amp;quot;123.123.123.123:8080&amp;quot; },
+        },
+        LatestImage = true,
+        Template = File.ReadAllText(&amp;quot;wordpress.yml&amp;quot;),
+        Version = &amp;quot;1.2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.CS.ApplicationArgs.html">ApplicationArgs</a></h4>
       <section></section>
@@ -135,6 +159,34 @@ Each application can contain one or more services.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.65.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.CS.KubernetesAutoscaler(&amp;quot;default&amp;quot;, new AliCloud.CS.KubernetesAutoscalerArgs
+    {
+        ClusterId = @var.Cluster_id,
+        CoolDownDuration = @var.Cool_down_duration,
+        DeferScaleInDuration = @var.Defer_scale_in_duration,
+        Nodepools = 
+        {
+            new AliCloud.CS.Inputs.KubernetesAutoscalerNodepoolArgs
+            {
+                Id = &amp;quot;scaling_group_id&amp;quot;,
+                Labels = &amp;quot;a=b&amp;quot;,
+                Taints = &amp;quot;c=d:NoSchedule&amp;quot;,
+            },
+        },
+        Utilization = @var.Utilization,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.CS.KubernetesAutoscalerArgs.html">KubernetesAutoscalerArgs</a></h4>
       <section></section>
@@ -162,6 +214,29 @@ Each application can contain one or more services.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Swarm cluster only supports VPC network and you can specify a VPC network by filed <code>vswitch_id</code>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myCluster = new AliCloud.CS.Swarm(&amp;quot;myCluster&amp;quot;, new AliCloud.CS.SwarmArgs
+    {
+        CidrBlock = &amp;quot;172.18.0.0/24&amp;quot;,
+        DiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        DiskSize = 20,
+        ImageId = @var.Image_id,
+        InstanceType = &amp;quot;ecs.n4.small&amp;quot;,
+        NodeNumber = 2,
+        Password = &amp;quot;Yourpassword1234&amp;quot;,
+        VswitchId = @var.Vswitch_id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.CS.SwarmArgs.html">SwarmArgs</a></h4>
       <section></section>

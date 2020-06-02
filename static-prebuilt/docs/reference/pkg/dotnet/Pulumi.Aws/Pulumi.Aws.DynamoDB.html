@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.DynamoDB
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,6 +90,72 @@
 <blockquote>
 <p>Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html">AWS DynamoDB Global Table Requirements</a> for more information.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var us_east_1 = new Aws.Provider(&amp;quot;us-east-1&amp;quot;, new Aws.ProviderArgs
+    {
+        Region = &amp;quot;us-east-1&amp;quot;,
+    });
+    var us_west_2 = new Aws.Provider(&amp;quot;us-west-2&amp;quot;, new Aws.ProviderArgs
+    {
+        Region = &amp;quot;us-west-2&amp;quot;,
+    });
+    var us_east_1Table = new Aws.DynamoDB.Table(&amp;quot;us-east-1Table&amp;quot;, new Aws.DynamoDB.TableArgs
+    {
+        Attributes = 
+        {
+            new Aws.DynamoDB.Inputs.TableAttributeArgs
+            {
+                Name = &amp;quot;myAttribute&amp;quot;,
+                Type = &amp;quot;S&amp;quot;,
+            },
+        },
+        HashKey = &amp;quot;myAttribute&amp;quot;,
+        ReadCapacity = 1,
+        StreamEnabled = true,
+        StreamViewType = &amp;quot;NEW_AND_OLD_IMAGES&amp;quot;,
+        WriteCapacity = 1,
+    });
+    var us_west_2Table = new Aws.DynamoDB.Table(&amp;quot;us-west-2Table&amp;quot;, new Aws.DynamoDB.TableArgs
+    {
+        Attributes = 
+        {
+            new Aws.DynamoDB.Inputs.TableAttributeArgs
+            {
+                Name = &amp;quot;myAttribute&amp;quot;,
+                Type = &amp;quot;S&amp;quot;,
+            },
+        },
+        HashKey = &amp;quot;myAttribute&amp;quot;,
+        ReadCapacity = 1,
+        StreamEnabled = true,
+        StreamViewType = &amp;quot;NEW_AND_OLD_IMAGES&amp;quot;,
+        WriteCapacity = 1,
+    });
+    var myTable = new Aws.DynamoDB.GlobalTable(&amp;quot;myTable&amp;quot;, new Aws.DynamoDB.GlobalTableArgs
+    {
+        Replicas = 
+        {
+            new Aws.DynamoDB.Inputs.GlobalTableReplicaArgs
+            {
+                RegionName = &amp;quot;us-east-1&amp;quot;,
+            },
+            new Aws.DynamoDB.Inputs.GlobalTableReplicaArgs
+            {
+                RegionName = &amp;quot;us-west-2&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DynamoDB.GlobalTableArgs.html">GlobalTableArgs</a></h4>
       <section></section>
@@ -100,6 +166,108 @@
 <blockquote>
 <p><strong>Note:</strong> It is recommended to use <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges"><code>ignoreChanges</code></a> for <code>read_capacity</code> and/or <code>write_capacity</code> if there's <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html">autoscaling policy</a> attached to the table.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var basic_dynamodb_table = new Aws.DynamoDB.Table(&amp;quot;basic-dynamodb-table&amp;quot;, new Aws.DynamoDB.TableArgs
+    {
+        Attributes = 
+        {
+            new Aws.DynamoDB.Inputs.TableAttributeArgs
+            {
+                Name = &amp;quot;UserId&amp;quot;,
+                Type = &amp;quot;S&amp;quot;,
+            },
+            new Aws.DynamoDB.Inputs.TableAttributeArgs
+            {
+                Name = &amp;quot;GameTitle&amp;quot;,
+                Type = &amp;quot;S&amp;quot;,
+            },
+            new Aws.DynamoDB.Inputs.TableAttributeArgs
+            {
+                Name = &amp;quot;TopScore&amp;quot;,
+                Type = &amp;quot;N&amp;quot;,
+            },
+        },
+        BillingMode = &amp;quot;PROVISIONED&amp;quot;,
+        GlobalSecondaryIndexes = 
+        {
+            new Aws.DynamoDB.Inputs.TableGlobalSecondaryIndexArgs
+            {
+                HashKey = &amp;quot;GameTitle&amp;quot;,
+                Name = &amp;quot;GameTitleIndex&amp;quot;,
+                NonKeyAttributes = 
+                {
+                    &amp;quot;UserId&amp;quot;,
+                },
+                ProjectionType = &amp;quot;INCLUDE&amp;quot;,
+                RangeKey = &amp;quot;TopScore&amp;quot;,
+                ReadCapacity = 10,
+                WriteCapacity = 10,
+            },
+        },
+        HashKey = &amp;quot;UserId&amp;quot;,
+        RangeKey = &amp;quot;GameTitle&amp;quot;,
+        ReadCapacity = 20,
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;production&amp;quot; },
+            { &amp;quot;Name&amp;quot;, &amp;quot;dynamodb-table-1&amp;quot; },
+        },
+        Ttl = new Aws.DynamoDB.Inputs.TableTtlArgs
+        {
+            AttributeName = &amp;quot;TimeToExist&amp;quot;,
+            Enabled = false,
+        },
+        WriteCapacity = 20,
+    });
+}
+
+}
+</code></pre>
+<h3 id="global-tables">Global Tables</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.DynamoDB.Table(&amp;quot;example&amp;quot;, new Aws.DynamoDB.TableArgs
+    {
+        Attributes = 
+        {
+            new Aws.DynamoDB.Inputs.TableAttributeArgs
+            {
+                Name = &amp;quot;TestTableHashKey&amp;quot;,
+                Type = &amp;quot;S&amp;quot;,
+            },
+        },
+        BillingMode = &amp;quot;PAY_PER_REQUEST&amp;quot;,
+        HashKey = &amp;quot;TestTableHashKey&amp;quot;,
+        Replicas = 
+        {
+            new Aws.DynamoDB.Inputs.TableReplicaArgs
+            {
+                RegionName = &amp;quot;us-east-2&amp;quot;,
+            },
+            new Aws.DynamoDB.Inputs.TableReplicaArgs
+            {
+                RegionName = &amp;quot;us-west-2&amp;quot;,
+            },
+        },
+        StreamEnabled = true,
+        StreamViewType = &amp;quot;NEW_AND_OLD_IMAGES&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DynamoDB.TableArgs.html">TableArgs</a></h4>
       <section></section>
@@ -109,6 +277,46 @@
 <p><strong>Note:</strong> This resource is not meant to be used for managing large amounts of data in your table, it is not designed to scale.
 You should perform <strong>regular backups</strong> of all data in the table, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html">AWS docs for more</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleTable = new Aws.DynamoDB.Table(&amp;quot;exampleTable&amp;quot;, new Aws.DynamoDB.TableArgs
+    {
+        Attributes = 
+        {
+            new Aws.DynamoDB.Inputs.TableAttributeArgs
+            {
+                Name = &amp;quot;exampleHashKey&amp;quot;,
+                Type = &amp;quot;S&amp;quot;,
+            },
+        },
+        HashKey = &amp;quot;exampleHashKey&amp;quot;,
+        ReadCapacity = 10,
+        WriteCapacity = 10,
+    });
+    var exampleTableItem = new Aws.DynamoDB.TableItem(&amp;quot;exampleTableItem&amp;quot;, new Aws.DynamoDB.TableItemArgs
+    {
+        HashKey = exampleTable.HashKey,
+        Item = @&amp;quot;{
+&amp;quot;&amp;quot;exampleHashKey&amp;quot;&amp;quot;: {&amp;quot;&amp;quot;S&amp;quot;&amp;quot;: &amp;quot;&amp;quot;something&amp;quot;&amp;quot;},
+&amp;quot;&amp;quot;one&amp;quot;&amp;quot;: {&amp;quot;&amp;quot;N&amp;quot;&amp;quot;: &amp;quot;&amp;quot;11111&amp;quot;&amp;quot;},
+&amp;quot;&amp;quot;two&amp;quot;&amp;quot;: {&amp;quot;&amp;quot;N&amp;quot;&amp;quot;: &amp;quot;&amp;quot;22222&amp;quot;&amp;quot;},
+&amp;quot;&amp;quot;three&amp;quot;&amp;quot;: {&amp;quot;&amp;quot;N&amp;quot;&amp;quot;: &amp;quot;&amp;quot;33333&amp;quot;&amp;quot;},
+&amp;quot;&amp;quot;four&amp;quot;&amp;quot;: {&amp;quot;&amp;quot;N&amp;quot;&amp;quot;: &amp;quot;&amp;quot;44444&amp;quot;&amp;quot;}
+}
+
+&amp;quot;,
+        TableName = exampleTable.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DynamoDB.TableItemArgs.html">TableItemArgs</a></h4>
       <section></section>

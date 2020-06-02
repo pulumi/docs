@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.LicenseManager
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -91,6 +91,33 @@
 <blockquote>
 <p><strong>Note:</strong> Removing the <code>license_count</code> attribute is not supported by the License Manager API - recreate the resource instead.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.LicenseManager.LicenseConfiguration(&amp;quot;example&amp;quot;, new Aws.LicenseManager.LicenseConfigurationArgs
+    {
+        Description = &amp;quot;Example&amp;quot;,
+        LicenseCount = 10,
+        LicenseCountHardLimit = true,
+        LicenseCountingType = &amp;quot;Socket&amp;quot;,
+        LicenseRules = 
+        {
+            &amp;quot;#minimumSockets=2&amp;quot;,
+        },
+        Tags = 
+        {
+            { &amp;quot;foo&amp;quot;, &amp;quot;barr&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="rules">Rules</h2>
 <p>License rules should be in the format of <code>#RuleType=RuleValue</code>. Supported rule types:</p>
 <ul>

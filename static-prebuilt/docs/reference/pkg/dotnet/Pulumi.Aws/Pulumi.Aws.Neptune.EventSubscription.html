@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EventSubscription
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,7 +71,67 @@
   
   <h1 id="Pulumi_Aws_Neptune_EventSubscription" data-uid="Pulumi.Aws.Neptune.EventSubscription" class="text-break">Class EventSubscription
   </h1>
-  <div class="markdown level0 summary"><h2 id="attributes">Attributes</h2>
+  <div class="markdown level0 summary"><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultCluster = new Aws.Neptune.Cluster(&amp;quot;defaultCluster&amp;quot;, new Aws.Neptune.ClusterArgs
+    {
+        ApplyImmediately = &amp;quot;true&amp;quot;,
+        BackupRetentionPeriod = 5,
+        ClusterIdentifier = &amp;quot;neptune-cluster-demo&amp;quot;,
+        Engine = &amp;quot;neptune&amp;quot;,
+        IamDatabaseAuthenticationEnabled = &amp;quot;true&amp;quot;,
+        PreferredBackupWindow = &amp;quot;07:00-09:00&amp;quot;,
+        SkipFinalSnapshot = true,
+    });
+    var example = new Aws.Neptune.ClusterInstance(&amp;quot;example&amp;quot;, new Aws.Neptune.ClusterInstanceArgs
+    {
+        ApplyImmediately = &amp;quot;true&amp;quot;,
+        ClusterIdentifier = defaultCluster.Id,
+        Engine = &amp;quot;neptune&amp;quot;,
+        InstanceClass = &amp;quot;db.r4.large&amp;quot;,
+    });
+    var defaultTopic = new Aws.Sns.Topic(&amp;quot;defaultTopic&amp;quot;, new Aws.Sns.TopicArgs
+    {
+    });
+    var defaultEventSubscription = new Aws.Neptune.EventSubscription(&amp;quot;defaultEventSubscription&amp;quot;, new Aws.Neptune.EventSubscriptionArgs
+    {
+        EventCategories = 
+        {
+            &amp;quot;maintenance&amp;quot;,
+            &amp;quot;availability&amp;quot;,
+            &amp;quot;creation&amp;quot;,
+            &amp;quot;backup&amp;quot;,
+            &amp;quot;restoration&amp;quot;,
+            &amp;quot;recovery&amp;quot;,
+            &amp;quot;deletion&amp;quot;,
+            &amp;quot;failover&amp;quot;,
+            &amp;quot;failure&amp;quot;,
+            &amp;quot;notification&amp;quot;,
+            &amp;quot;configuration change&amp;quot;,
+            &amp;quot;read replica&amp;quot;,
+        },
+        SnsTopicArn = defaultTopic.Arn,
+        SourceIds = 
+        {
+            example.Id,
+        },
+        SourceType = &amp;quot;db-instance&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;env&amp;quot;, &amp;quot;test&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
 <p>The following additional atttributes are provided:</p>
 <ul>
 <li><code>id</code> - The name of the Neptune event notification subscription.</li>
@@ -83,7 +143,45 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">EventSubscription</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">EventSubscription</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Neptune.html">Pulumi.Aws.Neptune</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -94,16 +192,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription__ctor_" data-uid="Pulumi.Aws.Neptune.EventSubscription.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Neptune_EventSubscription__ctor_System_String_Pulumi_Aws_Neptune_EventSubscriptionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Neptune.EventSubscription.#ctor(System.String,Pulumi.Aws.Neptune.EventSubscriptionArgs,System.Nullable{CustomResourceOptions})">EventSubscription(String, EventSubscriptionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Neptune_EventSubscription__ctor_System_String_Pulumi_Aws_Neptune_EventSubscriptionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Neptune.EventSubscription.#ctor(System.String,Pulumi.Aws.Neptune.EventSubscriptionArgs,Pulumi.CustomResourceOptions)">EventSubscription(String, EventSubscriptionArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a EventSubscription resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EventSubscription(string name, EventSubscriptionArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public EventSubscription(string name, EventSubscriptionArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,7 +226,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -138,7 +236,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription_Arn_" data-uid="Pulumi.Aws.Neptune.EventSubscription.Arn*"></a>
   <h4 id="Pulumi_Aws_Neptune_EventSubscription_Arn" data-uid="Pulumi.Aws.Neptune.EventSubscription.Arn">Arn</h4>
@@ -158,13 +256,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription_CustomerAwsId_" data-uid="Pulumi.Aws.Neptune.EventSubscription.CustomerAwsId*"></a>
   <h4 id="Pulumi_Aws_Neptune_EventSubscription_CustomerAwsId" data-uid="Pulumi.Aws.Neptune.EventSubscription.CustomerAwsId">CustomerAwsId</h4>
@@ -184,13 +282,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription_Enabled_" data-uid="Pulumi.Aws.Neptune.EventSubscription.Enabled*"></a>
   <h4 id="Pulumi_Aws_Neptune_EventSubscription_Enabled" data-uid="Pulumi.Aws.Neptune.EventSubscription.Enabled">Enabled</h4>
@@ -211,13 +309,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription_EventCategories_" data-uid="Pulumi.Aws.Neptune.EventSubscription.EventCategories*"></a>
   <h4 id="Pulumi_Aws_Neptune_EventSubscription_EventCategories" data-uid="Pulumi.Aws.Neptune.EventSubscription.EventCategories">EventCategories</h4>
@@ -238,13 +336,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription_Name_" data-uid="Pulumi.Aws.Neptune.EventSubscription.Name*"></a>
   <h4 id="Pulumi_Aws_Neptune_EventSubscription_Name" data-uid="Pulumi.Aws.Neptune.EventSubscription.Name">Name</h4>
@@ -265,13 +363,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription_NamePrefix_" data-uid="Pulumi.Aws.Neptune.EventSubscription.NamePrefix*"></a>
   <h4 id="Pulumi_Aws_Neptune_EventSubscription_NamePrefix" data-uid="Pulumi.Aws.Neptune.EventSubscription.NamePrefix">NamePrefix</h4>
@@ -292,13 +390,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription_SnsTopicArn_" data-uid="Pulumi.Aws.Neptune.EventSubscription.SnsTopicArn*"></a>
   <h4 id="Pulumi_Aws_Neptune_EventSubscription_SnsTopicArn" data-uid="Pulumi.Aws.Neptune.EventSubscription.SnsTopicArn">SnsTopicArn</h4>
@@ -319,13 +417,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription_SourceIds_" data-uid="Pulumi.Aws.Neptune.EventSubscription.SourceIds*"></a>
   <h4 id="Pulumi_Aws_Neptune_EventSubscription_SourceIds" data-uid="Pulumi.Aws.Neptune.EventSubscription.SourceIds">SourceIds</h4>
@@ -346,13 +444,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription_SourceType_" data-uid="Pulumi.Aws.Neptune.EventSubscription.SourceType*"></a>
   <h4 id="Pulumi_Aws_Neptune_EventSubscription_SourceType" data-uid="Pulumi.Aws.Neptune.EventSubscription.SourceType">SourceType</h4>
@@ -361,7 +459,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -373,22 +471,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription_Tags_" data-uid="Pulumi.Aws.Neptune.EventSubscription.Tags*"></a>
   <h4 id="Pulumi_Aws_Neptune_EventSubscription_Tags" data-uid="Pulumi.Aws.Neptune.EventSubscription.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -400,7 +498,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -408,17 +506,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_EventSubscription_Get_" data-uid="Pulumi.Aws.Neptune.EventSubscription.Get*"></a>
-  <h4 id="Pulumi_Aws_Neptune_EventSubscription_Get_System_String_Input_System_String__Pulumi_Aws_Neptune_EventSubscriptionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Neptune.EventSubscription.Get(System.String,Input{System.String},Pulumi.Aws.Neptune.EventSubscriptionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, EventSubscriptionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Neptune_EventSubscription_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Neptune_EventSubscriptionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Neptune.EventSubscription.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Neptune.EventSubscriptionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, EventSubscriptionState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing EventSubscription resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static EventSubscription Get(string name, Input&lt;string&gt; id, EventSubscriptionState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static EventSubscription Get(string name, Input&lt;string&gt; id, EventSubscriptionState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -437,7 +535,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -449,7 +547,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -478,7 +576,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/EventSubscription.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Neptune/EventSubscription.cs/#L86" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

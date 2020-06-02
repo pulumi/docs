@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Redis
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,54 @@
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/memorystore/docs/redis/">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---redis-instance-basic">Example Usage - Redis Instance Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cache = new Gcp.Redis.Instance(&amp;quot;cache&amp;quot;, new Gcp.Redis.InstanceArgs
+    {
+        MemorySizeGb = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---redis-instance-full">Example Usage - Redis Instance Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var redis_network = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
+    {
+        Name = &amp;quot;redis-test-network&amp;quot;,
+    }));
+    var cache = new Gcp.Redis.Instance(&amp;quot;cache&amp;quot;, new Gcp.Redis.InstanceArgs
+    {
+        Tier = &amp;quot;STANDARD_HA&amp;quot;,
+        MemorySizeGb = 1,
+        LocationId = &amp;quot;us-central1-a&amp;quot;,
+        AlternativeLocationId = &amp;quot;us-central1-f&amp;quot;,
+        AuthorizedNetwork = redis_network.Apply(redis_network =&gt; redis_network.Id),
+        RedisVersion = &amp;quot;REDIS_3_2&amp;quot;,
+        DisplayName = &amp;quot;Test Instance&amp;quot;,
+        ReservedIpRange = &amp;quot;192.168.0.0/29&amp;quot;,
+        Labels = 
+        {
+            { &amp;quot;my_key&amp;quot;, &amp;quot;my_val&amp;quot; },
+            { &amp;quot;other_key&amp;quot;, &amp;quot;other_val&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Redis.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>

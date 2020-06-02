@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.CodeBuild
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,230 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.CodeBuild.Project.html">Project</a></h4>
       <section><p>Provides a CodeBuild Project resource. See also the <a href="https://www.terraform.io/docs/providers/aws/r/codebuild_webhook.html"><code>aws.codebuild.Webhook</code> resource</a>, which manages the webhook to the source (e.g. the &quot;rebuild every time a code change is pushed&quot; option in the CodeBuild web console).</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleBucket = new Aws.S3.Bucket(&amp;quot;exampleBucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+    });
+    var exampleRole = new Aws.Iam.Role(&amp;quot;exampleRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;codebuild.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var exampleRolePolicy = new Aws.Iam.RolePolicy(&amp;quot;exampleRolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = Output.Tuple(exampleBucket.Arn, exampleBucket.Arn).Apply(values =&gt;
+        {
+            var exampleBucketArn = values.Item1;
+            var exampleBucketArn1 = values.Item2;
+            return @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;logs:CreateLogGroup&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;logs:CreateLogStream&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;logs:PutLogEvents&amp;quot;&amp;quot;
+  ]
+}},
+{{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;ec2:CreateNetworkInterface&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;ec2:DescribeDhcpOptions&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;ec2:DescribeNetworkInterfaces&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;ec2:DeleteNetworkInterface&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;ec2:DescribeSubnets&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;ec2:DescribeSecurityGroups&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;ec2:DescribeVpcs&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}},
+{{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;ec2:CreateNetworkInterfacePermission&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;arn:aws:ec2:us-east-1:123456789012:network-interface/*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {{
+    &amp;quot;&amp;quot;StringEquals&amp;quot;&amp;quot;: {{
+      &amp;quot;&amp;quot;ec2:Subnet&amp;quot;&amp;quot;: [
+        &amp;quot;&amp;quot;{aws_subnet.Example1.Arn}&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;{aws_subnet.Example2.Arn}&amp;quot;&amp;quot;
+      ],
+      &amp;quot;&amp;quot;ec2:AuthorizedService&amp;quot;&amp;quot;: &amp;quot;&amp;quot;codebuild.amazonaws.com&amp;quot;&amp;quot;
+    }}
+  }}
+}},
+{{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;s3:*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;{exampleBucketArn}&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;{exampleBucketArn1}/*&amp;quot;&amp;quot;
+  ]
+}}
+]
+}}
+
+&amp;quot;;
+        }),
+        Role = exampleRole.Name,
+    });
+    var exampleProject = new Aws.CodeBuild.Project(&amp;quot;exampleProject&amp;quot;, new Aws.CodeBuild.ProjectArgs
+    {
+        Artifacts = new Aws.CodeBuild.Inputs.ProjectArtifactsArgs
+        {
+            Type = &amp;quot;NO_ARTIFACTS&amp;quot;,
+        },
+        BuildTimeout = &amp;quot;5&amp;quot;,
+        Cache = new Aws.CodeBuild.Inputs.ProjectCacheArgs
+        {
+            Location = exampleBucket.BucketName,
+            Type = &amp;quot;S3&amp;quot;,
+        },
+        Description = &amp;quot;test_codebuild_project&amp;quot;,
+        Environment = new Aws.CodeBuild.Inputs.ProjectEnvironmentArgs
+        {
+            ComputeType = &amp;quot;BUILD_GENERAL1_SMALL&amp;quot;,
+            EnvironmentVariable = 
+            {
+
+                {
+                    { &amp;quot;name&amp;quot;, &amp;quot;SOME_KEY1&amp;quot; },
+                    { &amp;quot;value&amp;quot;, &amp;quot;SOME_VALUE1&amp;quot; },
+                },
+
+                {
+                    { &amp;quot;name&amp;quot;, &amp;quot;SOME_KEY2&amp;quot; },
+                    { &amp;quot;type&amp;quot;, &amp;quot;PARAMETER_STORE&amp;quot; },
+                    { &amp;quot;value&amp;quot;, &amp;quot;SOME_VALUE2&amp;quot; },
+                },
+            },
+            Image = &amp;quot;aws/codebuild/standard:1.0&amp;quot;,
+            ImagePullCredentialsType = &amp;quot;CODEBUILD&amp;quot;,
+            Type = &amp;quot;LINUX_CONTAINER&amp;quot;,
+        },
+        LogsConfig = new Aws.CodeBuild.Inputs.ProjectLogsConfigArgs
+        {
+            CloudwatchLogs = new Aws.CodeBuild.Inputs.ProjectLogsConfigCloudwatchLogsArgs
+            {
+                GroupName = &amp;quot;log-group&amp;quot;,
+                StreamName = &amp;quot;log-stream&amp;quot;,
+            },
+            S3Logs = new Aws.CodeBuild.Inputs.ProjectLogsConfigS3LogsArgs
+            {
+                Location = exampleBucket.Id.Apply(id =&gt; $&amp;quot;{id}/build-log&amp;quot;),
+                Status = &amp;quot;ENABLED&amp;quot;,
+            },
+        },
+        ServiceRole = exampleRole.Arn,
+        Source = new Aws.CodeBuild.Inputs.ProjectSourceArgs
+        {
+            GitCloneDepth = 1,
+            GitSubmodulesConfig = new Aws.CodeBuild.Inputs.ProjectSourceGitSubmodulesConfigArgs
+            {
+                FetchSubmodules = true,
+            },
+            Location = &amp;quot;https://github.com/mitchellh/packer.git&amp;quot;,
+            Type = &amp;quot;GITHUB&amp;quot;,
+        },
+        SourceVersion = &amp;quot;master&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;Test&amp;quot; },
+        },
+        VpcConfig = new Aws.CodeBuild.Inputs.ProjectVpcConfigArgs
+        {
+            SecurityGroupIds = 
+            {
+                aws_security_group.Example1.Id,
+                aws_security_group.Example2.Id,
+            },
+            Subnets = 
+            {
+                aws_subnet.Example1.Id,
+                aws_subnet.Example2.Id,
+            },
+            VpcId = aws_vpc.Example.Id,
+        },
+    });
+    var project_with_cache = new Aws.CodeBuild.Project(&amp;quot;project-with-cache&amp;quot;, new Aws.CodeBuild.ProjectArgs
+    {
+        Artifacts = new Aws.CodeBuild.Inputs.ProjectArtifactsArgs
+        {
+            Type = &amp;quot;NO_ARTIFACTS&amp;quot;,
+        },
+        BuildTimeout = &amp;quot;5&amp;quot;,
+        Cache = new Aws.CodeBuild.Inputs.ProjectCacheArgs
+        {
+            Modes = 
+            {
+                &amp;quot;LOCAL_DOCKER_LAYER_CACHE&amp;quot;,
+                &amp;quot;LOCAL_SOURCE_CACHE&amp;quot;,
+            },
+            Type = &amp;quot;LOCAL&amp;quot;,
+        },
+        Description = &amp;quot;test_codebuild_project_cache&amp;quot;,
+        Environment = new Aws.CodeBuild.Inputs.ProjectEnvironmentArgs
+        {
+            ComputeType = &amp;quot;BUILD_GENERAL1_SMALL&amp;quot;,
+            EnvironmentVariable = 
+            {
+
+                {
+                    { &amp;quot;name&amp;quot;, &amp;quot;SOME_KEY1&amp;quot; },
+                    { &amp;quot;value&amp;quot;, &amp;quot;SOME_VALUE1&amp;quot; },
+                },
+            },
+            Image = &amp;quot;aws/codebuild/standard:1.0&amp;quot;,
+            ImagePullCredentialsType = &amp;quot;CODEBUILD&amp;quot;,
+            Type = &amp;quot;LINUX_CONTAINER&amp;quot;,
+        },
+        QueuedTimeout = &amp;quot;5&amp;quot;,
+        ServiceRole = exampleRole.Arn,
+        Source = new Aws.CodeBuild.Inputs.ProjectSourceArgs
+        {
+            GitCloneDepth = 1,
+            Location = &amp;quot;https://github.com/mitchellh/packer.git&amp;quot;,
+            Type = &amp;quot;GITHUB&amp;quot;,
+        },
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;Test&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CodeBuild.ProjectArgs.html">ProjectArgs</a></h4>
       <section></section>
@@ -85,6 +309,43 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.CodeBuild.SourceCredential.html">SourceCredential</a></h4>
       <section><p>Provides a CodeBuild Source Credentials Resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.CodeBuild.SourceCredential(&amp;quot;example&amp;quot;, new Aws.CodeBuild.SourceCredentialArgs
+    {
+        AuthType = &amp;quot;PERSONAL_ACCESS_TOKEN&amp;quot;,
+        ServerType = &amp;quot;GITHUB&amp;quot;,
+        Token = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="bitbucket-server-usage">Bitbucket Server Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.CodeBuild.SourceCredential(&amp;quot;example&amp;quot;, new Aws.CodeBuild.SourceCredentialArgs
+    {
+        AuthType = &amp;quot;BASIC_AUTH&amp;quot;,
+        ServerType = &amp;quot;BITBUCKET&amp;quot;,
+        Token = &amp;quot;example&amp;quot;,
+        UserName = &amp;quot;test-user&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CodeBuild.SourceCredentialArgs.html">SourceCredentialArgs</a></h4>
       <section></section>
@@ -92,6 +353,75 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.CodeBuild.Webhook.html">Webhook</a></h4>
       <section><p>Manages a CodeBuild webhook, which is an endpoint accepted by the CodeBuild service to trigger builds from source code repositories. Depending on the source type of the CodeBuild project, the CodeBuild service may also automatically create and delete the actual repository webhook as well.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="bitbucket-and-github">Bitbucket and GitHub</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.CodeBuild.Webhook(&amp;quot;example&amp;quot;, new Aws.CodeBuild.WebhookArgs
+    {
+        FilterGroups = 
+        {
+            new Aws.CodeBuild.Inputs.WebhookFilterGroupArgs
+            {
+                Filter = 
+                {
+
+                    {
+                        { &amp;quot;pattern&amp;quot;, &amp;quot;PUSH&amp;quot; },
+                        { &amp;quot;type&amp;quot;, &amp;quot;EVENT&amp;quot; },
+                    },
+
+                    {
+                        { &amp;quot;pattern&amp;quot;, &amp;quot;master&amp;quot; },
+                        { &amp;quot;type&amp;quot;, &amp;quot;HEAD_REF&amp;quot; },
+                    },
+                },
+            },
+        },
+        ProjectName = aws_codebuild_project.Example.Name,
+    });
+}
+
+}
+</code></pre>
+<h3 id="github-enterprise">GitHub Enterprise</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleWebhook = new Aws.CodeBuild.Webhook(&amp;quot;exampleWebhook&amp;quot;, new Aws.CodeBuild.WebhookArgs
+    {
+        ProjectName = aws_codebuild_project.Example.Name,
+    });
+    var exampleRepositoryWebhook = new Github.RepositoryWebhook(&amp;quot;exampleRepositoryWebhook&amp;quot;, new Github.RepositoryWebhookArgs
+    {
+        Active = true,
+        Configuration = new Github.Inputs.RepositoryWebhookConfigurationArgs
+        {
+            ContentType = &amp;quot;json&amp;quot;,
+            InsecureSsl = false,
+            Secret = exampleWebhook.Secret,
+            Url = exampleWebhook.PayloadUrl,
+        },
+        Events = 
+        {
+            &amp;quot;push&amp;quot;,
+        },
+        Repository = github_repository.Example.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CodeBuild.WebhookArgs.html">WebhookArgs</a></h4>
       <section></section>

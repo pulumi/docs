@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ServerState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ServerState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">ServerState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.PostgreSql.html">Pulumi.Azure.PostgreSql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L274">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L509">View Source</a>
   </span>
   <a id="Pulumi_Azure_PostgreSql_ServerState__ctor_" data-uid="Pulumi.Azure.PostgreSql.ServerState.#ctor*"></a>
   <h4 id="Pulumi_Azure_PostgreSql_ServerState__ctor" data-uid="Pulumi.Azure.PostgreSql.ServerState.#ctor">ServerState()</h4>
@@ -100,16 +129,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L205">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L374">View Source</a>
   </span>
   <a id="Pulumi_Azure_PostgreSql_ServerState_AdministratorLogin_" data-uid="Pulumi.Azure.PostgreSql.ServerState.AdministratorLogin*"></a>
   <h4 id="Pulumi_Azure_PostgreSql_ServerState_AdministratorLogin" data-uid="Pulumi.Azure.PostgreSql.ServerState.AdministratorLogin">AdministratorLogin</h4>
-  <div class="markdown level1 summary"><p>The Administrator Login for the PostgreSQL Server. Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>The Administrator Login for the PostgreSQL Server. Required when <code>create_mode</code> is <code>Default</code>. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AdministratorLogin { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AdministratorLogin { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,22 +150,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L211">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L380">View Source</a>
   </span>
   <a id="Pulumi_Azure_PostgreSql_ServerState_AdministratorLoginPassword_" data-uid="Pulumi.Azure.PostgreSql.ServerState.AdministratorLoginPassword*"></a>
   <h4 id="Pulumi_Azure_PostgreSql_ServerState_AdministratorLoginPassword" data-uid="Pulumi.Azure.PostgreSql.ServerState.AdministratorLoginPassword">AdministratorLoginPassword</h4>
-  <div class="markdown level1 summary"><p>The Password associated with the <code>administrator_login</code> for the PostgreSQL Server.</p>
+  <div class="markdown level1 summary"><p>The Password associated with the <code>administrator_login</code> for the PostgreSQL Server. Required when <code>create_mode</code> is <code>Default</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AdministratorLoginPassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AdministratorLoginPassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +177,121 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L386">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_AutoGrowEnabled_" data-uid="Pulumi.Azure.PostgreSql.ServerState.AutoGrowEnabled*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_AutoGrowEnabled" data-uid="Pulumi.Azure.PostgreSql.ServerState.AutoGrowEnabled">AutoGrowEnabled</h4>
+  <div class="markdown level1 summary"><p>Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoGrowEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L392">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_BackupRetentionDays_" data-uid="Pulumi.Azure.PostgreSql.ServerState.BackupRetentionDays*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_BackupRetentionDays" data-uid="Pulumi.Azure.PostgreSql.ServerState.BackupRetentionDays">BackupRetentionDays</h4>
+  <div class="markdown level1 summary"><p>Backup retention days for the server, supported values are between <code>7</code> and <code>35</code> days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; BackupRetentionDays { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L398">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_CreateMode_" data-uid="Pulumi.Azure.PostgreSql.ServerState.CreateMode*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_CreateMode" data-uid="Pulumi.Azure.PostgreSql.ServerState.CreateMode">CreateMode</h4>
+  <div class="markdown level1 summary"><p>The creation mode. Can be used to restore or replicate existing servers. Possible values are <code>Default</code>, <code>Replica</code>, <code>GeoRestore</code>, and <code>PointInTimeRestore</code>. Defaults to <code>Default.</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CreateMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L404">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_CreationSourceServerId_" data-uid="Pulumi.Azure.PostgreSql.ServerState.CreationSourceServerId*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_CreationSourceServerId" data-uid="Pulumi.Azure.PostgreSql.ServerState.CreationSourceServerId">CreationSourceServerId</h4>
+  <div class="markdown level1 summary"><p>For creation modes other then default the source server ID to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CreationSourceServerId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L410">View Source</a>
   </span>
   <a id="Pulumi_Azure_PostgreSql_ServerState_Fqdn_" data-uid="Pulumi.Azure.PostgreSql.ServerState.Fqdn*"></a>
   <h4 id="Pulumi_Azure_PostgreSql_ServerState_Fqdn" data-uid="Pulumi.Azure.PostgreSql.ServerState.Fqdn">Fqdn</h4>
@@ -163,7 +300,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Fqdn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Fqdn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +312,67 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L416">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_GeoRedundantBackupEnabled_" data-uid="Pulumi.Azure.PostgreSql.ServerState.GeoRedundantBackupEnabled*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_GeoRedundantBackupEnabled" data-uid="Pulumi.Azure.PostgreSql.ServerState.GeoRedundantBackupEnabled">GeoRedundantBackupEnabled</h4>
+  <div class="markdown level1 summary"><p>Turn Geo-redundant server backups on/off. This allows you to choose between locally redundant or geo-redundant backup storage in the General Purpose and Memory Optimized tiers. When the backups are stored in geo-redundant backup storage, they are not only stored within the region in which your server is hosted, but are also replicated to a paired data center. This provides better protection and ability to restore your server in a different region in the event of a disaster. This is not support for the Basic tier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; GeoRedundantBackupEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L422">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_InfrastructureEncryptionEnabled_" data-uid="Pulumi.Azure.PostgreSql.ServerState.InfrastructureEncryptionEnabled*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_InfrastructureEncryptionEnabled" data-uid="Pulumi.Azure.PostgreSql.ServerState.InfrastructureEncryptionEnabled">InfrastructureEncryptionEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether or not infrastructure is encrypted for this server. Defaults to <code>false</code>. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; InfrastructureEncryptionEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L428">View Source</a>
   </span>
   <a id="Pulumi_Azure_PostgreSql_ServerState_Location_" data-uid="Pulumi.Azure.PostgreSql.ServerState.Location*"></a>
   <h4 id="Pulumi_Azure_PostgreSql_ServerState_Location" data-uid="Pulumi.Azure.PostgreSql.ServerState.Location">Location</h4>
@@ -190,7 +381,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,13 +393,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L229">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L434">View Source</a>
   </span>
   <a id="Pulumi_Azure_PostgreSql_ServerState_Name_" data-uid="Pulumi.Azure.PostgreSql.ServerState.Name*"></a>
   <h4 id="Pulumi_Azure_PostgreSql_ServerState_Name" data-uid="Pulumi.Azure.PostgreSql.ServerState.Name">Name</h4>
@@ -217,7 +408,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,13 +420,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L235">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L440">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_PublicNetworkAccessEnabled_" data-uid="Pulumi.Azure.PostgreSql.ServerState.PublicNetworkAccessEnabled*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_PublicNetworkAccessEnabled" data-uid="Pulumi.Azure.PostgreSql.ServerState.PublicNetworkAccessEnabled">PublicNetworkAccessEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether or not public network access is allowed for this server. Defaults to <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; PublicNetworkAccessEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L446">View Source</a>
   </span>
   <a id="Pulumi_Azure_PostgreSql_ServerState_ResourceGroupName_" data-uid="Pulumi.Azure.PostgreSql.ServerState.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_PostgreSql_ServerState_ResourceGroupName" data-uid="Pulumi.Azure.PostgreSql.ServerState.ResourceGroupName">ResourceGroupName</h4>
@@ -244,7 +462,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ResourceGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourceGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,13 +474,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L241">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L452">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_RestorePointInTime_" data-uid="Pulumi.Azure.PostgreSql.ServerState.RestorePointInTime*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_RestorePointInTime" data-uid="Pulumi.Azure.PostgreSql.ServerState.RestorePointInTime">RestorePointInTime</h4>
+  <div class="markdown level1 summary"><p>When <code>create_mode</code> is <code>PointInTimeRestore</code> the point in time to restore from <code>creation_source_server_id</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RestorePointInTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L458">View Source</a>
   </span>
   <a id="Pulumi_Azure_PostgreSql_ServerState_SkuName_" data-uid="Pulumi.Azure.PostgreSql.ServerState.SkuName*"></a>
   <h4 id="Pulumi_Azure_PostgreSql_ServerState_SkuName" data-uid="Pulumi.Azure.PostgreSql.ServerState.SkuName">SkuName</h4>
@@ -271,7 +516,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SkuName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SkuName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,22 +528,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L461">View Source</a>
   </span>
   <a id="Pulumi_Azure_PostgreSql_ServerState_SslEnforcement_" data-uid="Pulumi.Azure.PostgreSql.ServerState.SslEnforcement*"></a>
   <h4 id="Pulumi_Azure_PostgreSql_ServerState_SslEnforcement" data-uid="Pulumi.Azure.PostgreSql.ServerState.SslEnforcement">SslEnforcement</h4>
-  <div class="markdown level1 summary"><p>Specifies if SSL should be enforced on connections. Possible values are <code>Enabled</code> and <code>Disabled</code>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SslEnforcement { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SslEnforcement { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,22 +554,102 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L253">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L467">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_SslEnforcementEnabled_" data-uid="Pulumi.Azure.PostgreSql.ServerState.SslEnforcementEnabled*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_SslEnforcementEnabled" data-uid="Pulumi.Azure.PostgreSql.ServerState.SslEnforcementEnabled">SslEnforcementEnabled</h4>
+  <div class="markdown level1 summary"><p>Specifies if SSL should be enforced on connections. Possible values are <code>true</code> and <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SslEnforcementEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L473">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_SslMinimalTlsVersionEnforced_" data-uid="Pulumi.Azure.PostgreSql.ServerState.SslMinimalTlsVersionEnforced*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_SslMinimalTlsVersionEnforced" data-uid="Pulumi.Azure.PostgreSql.ServerState.SslMinimalTlsVersionEnforced">SslMinimalTlsVersionEnforced</h4>
+  <div class="markdown level1 summary"><p>The mimimun TLS version to support on the sever. Possible values are <code>TLSEnforcementDisabled</code>, <code>TLS1_0</code>, <code>TLS1_1</code>, and <code>TLS1_2</code>. Defaults to <code>TLSEnforcementDisabled</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SslMinimalTlsVersionEnforced { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L479">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_StorageMb_" data-uid="Pulumi.Azure.PostgreSql.ServerState.StorageMb*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_StorageMb" data-uid="Pulumi.Azure.PostgreSql.ServerState.StorageMb">StorageMb</h4>
+  <div class="markdown level1 summary"><p>Max storage allowed for a server. Possible values are between <code>5120</code> MB(5GB) and <code>1048576</code> MB(1TB) for the Basic SKU and between <code>5120</code> MB(5GB) and <code>4194304</code> MB(4TB) for General Purpose/Memory Optimized SKUs. For more information see the <a href="https://docs.microsoft.com/en-us/rest/api/postgresql/servers/create#StorageProfile">product documentation</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; StorageMb { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L482">View Source</a>
   </span>
   <a id="Pulumi_Azure_PostgreSql_ServerState_StorageProfile_" data-uid="Pulumi.Azure.PostgreSql.ServerState.StorageProfile*"></a>
   <h4 id="Pulumi_Azure_PostgreSql_ServerState_StorageProfile" data-uid="Pulumi.Azure.PostgreSql.ServerState.StorageProfile">StorageProfile</h4>
-  <div class="markdown level1 summary"><p>A <code>storage_profile</code> block as defined below.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ServerStorageProfileGetArgs&gt;? StorageProfile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ServerStorageProfileGetArgs&gt; StorageProfile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,13 +661,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.PostgreSql.Inputs.ServerStorageProfileGetArgs.html">ServerStorageProfileGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.PostgreSql.Inputs.ServerStorageProfileGetArgs.html">ServerStorageProfileGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L262">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L491">View Source</a>
   </span>
   <a id="Pulumi_Azure_PostgreSql_ServerState_Tags_" data-uid="Pulumi.Azure.PostgreSql.ServerState.Tags*"></a>
   <h4 id="Pulumi_Azure_PostgreSql_ServerState_Tags" data-uid="Pulumi.Azure.PostgreSql.ServerState.Tags">Tags</h4>
@@ -364,22 +688,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L271">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L500">View Source</a>
   </span>
-  <a id="Pulumi_Azure_PostgreSql_ServerState_Version_" data-uid="Pulumi.Azure.PostgreSql.ServerState.Version*"></a>
-  <h4 id="Pulumi_Azure_PostgreSql_ServerState_Version" data-uid="Pulumi.Azure.PostgreSql.ServerState.Version">Version</h4>
-  <div class="markdown level1 summary"><p>Specifies the version of PostgreSQL to use. Valid values are <code>9.5</code>, <code>9.6</code>, <code>10</code>, <code>10.0</code>, and <code>11</code>. Changing this forces a new resource to be created.</p>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_ThreatDetectionPolicy_" data-uid="Pulumi.Azure.PostgreSql.ServerState.ThreatDetectionPolicy*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_ThreatDetectionPolicy" data-uid="Pulumi.Azure.PostgreSql.ServerState.ThreatDetectionPolicy">ThreatDetectionPolicy</h4>
+  <div class="markdown level1 summary"><p>Threat detection policy configuration, known in the API as Server Security Alerts Policy. The <code>threat_detection_policy</code> block supports fields documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Version { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ServerThreatDetectionPolicyGetArgs&gt; ThreatDetectionPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -391,7 +715,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.PostgreSql.Inputs.ServerThreatDetectionPolicyGetArgs.html">ServerThreatDetectionPolicyGetArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L506">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_PostgreSql_ServerState_Version_" data-uid="Pulumi.Azure.PostgreSql.ServerState.Version*"></a>
+  <h4 id="Pulumi_Azure_PostgreSql_ServerState_Version" data-uid="Pulumi.Azure.PostgreSql.ServerState.Version">Version</h4>
+  <div class="markdown level1 summary"><p>Specifies the version of PostgreSQL to use. Valid values are <code>9.5</code>, <code>9.6</code>, <code>10</code>, <code>10.0</code>, and <code>11</code>. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Version { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -403,7 +754,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PostgreSql/Server.cs/#L200" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/PostgreSql/Server.cs/#L369" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

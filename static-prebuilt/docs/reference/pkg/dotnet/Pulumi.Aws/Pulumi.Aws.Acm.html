@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Acm
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -88,13 +88,72 @@ Use a <code>aws.acm.CertificateValidation</code> resource for this.</p>
 deploy the required validation records and wait for validation to complete.</p>
 <p>Domain validation through E-Mail is also supported but should be avoided as it requires a manual step outside
 of this provider.</p>
-<p>It's recommended to specify <code>create_before_destroy = true</code> in a [lifecycle][1] block to replace a certificate
+<p>It's recommended to specify <code>create_before_destroy = true</code> in a <a href="https://www.terraform.io/docs/configuration/resources.html#lifecycle">lifecycle</a> block to replace a certificate
 which is currently in use (eg, by <code>aws.lb.Listener</code>).</p>
-<h2 id="options-configuration-block">options Configuration Block</h2>
-<p>Supported nested arguments for the <code>options</code> configuration block:</p>
-<ul>
-<li><code>certificate_transparency_logging_preference</code> - (Optional) Specifies whether certificate details should be added to a certificate transparency log. Valid values are <code>ENABLED</code> or <code>DISABLED</code>. See <a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency">https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency</a> for more details.</li>
-</ul>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="certificate-creation">Certificate creation</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cert = new Aws.Acm.Certificate(&amp;quot;cert&amp;quot;, new Aws.Acm.CertificateArgs
+    {
+        DomainName = &amp;quot;example.com&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;test&amp;quot; },
+        },
+        ValidationMethod = &amp;quot;DNS&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="importing-an-existing-certificate">Importing an existing certificate</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+using Tls = Pulumi.Tls;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var examplePrivateKey = new Tls.PrivateKey(&amp;quot;examplePrivateKey&amp;quot;, new Tls.PrivateKeyArgs
+    {
+        Algorithm = &amp;quot;RSA&amp;quot;,
+    });
+    var exampleSelfSignedCert = new Tls.SelfSignedCert(&amp;quot;exampleSelfSignedCert&amp;quot;, new Tls.SelfSignedCertArgs
+    {
+        AllowedUses = 
+        {
+            &amp;quot;key_encipherment&amp;quot;,
+            &amp;quot;digital_signature&amp;quot;,
+            &amp;quot;server_auth&amp;quot;,
+        },
+        KeyAlgorithm = &amp;quot;RSA&amp;quot;,
+        PrivateKeyPem = examplePrivateKey.PrivateKeyPem,
+        Subjects = 
+        {
+            new Tls.Inputs.SelfSignedCertSubjectArgs
+            {
+                CommonName = &amp;quot;example.com&amp;quot;,
+                Organization = &amp;quot;ACME Examples, Inc&amp;quot;,
+            },
+        },
+        ValidityPeriodHours = 12,
+    });
+    var cert = new Aws.Acm.Certificate(&amp;quot;cert&amp;quot;, new Aws.Acm.CertificateArgs
+    {
+        CertificateBody = exampleSelfSignedCert.CertPem,
+        PrivateKey = examplePrivateKey.PrivateKeyPem,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Acm.CertificateArgs.html">CertificateArgs</a></h4>
       <section></section>
@@ -109,6 +168,152 @@ deploy the required validation records and wait for validation to complete.</p>
 <blockquote>
 <p><strong>WARNING:</strong> This resource implements a part of the validation workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="dns-validation-with-route-53">DNS Validation with Route 53</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var certCertificate = new Aws.Acm.Certificate(&amp;quot;certCertificate&amp;quot;, new Aws.Acm.CertificateArgs
+    {
+        DomainName = &amp;quot;example.com&amp;quot;,
+        ValidationMethod = &amp;quot;DNS&amp;quot;,
+    });
+    var zone = Output.Create(Aws.Route53.GetZone.InvokeAsync(new Aws.Route53.GetZoneArgs
+    {
+        Name = &amp;quot;example.com.&amp;quot;,
+        PrivateZone = false,
+    }));
+    var certValidation = new Aws.Route53.Record(&amp;quot;certValidation&amp;quot;, new Aws.Route53.RecordArgs
+    {
+        Name = certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[0].ResourceRecordName),
+        Records = 
+        {
+            certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[0].ResourceRecordValue),
+        },
+        Ttl = 60,
+        Type = certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[0].ResourceRecordType),
+        ZoneId = zone.Apply(zone =&gt; zone.ZoneId),
+    });
+    var certCertificateValidation = new Aws.Acm.CertificateValidation(&amp;quot;certCertificateValidation&amp;quot;, new Aws.Acm.CertificateValidationArgs
+    {
+        CertificateArn = certCertificate.Arn,
+        ValidationRecordFqdns = 
+        {
+            certValidation.Fqdn,
+        },
+    });
+    var frontEnd = new Aws.LB.Listener(&amp;quot;frontEnd&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        CertificateArn = certCertificateValidation.CertificateArn,
+    });
+}
+
+}
+</code></pre>
+<h3 id="alternative-domains-dns-validation-with-route-53">Alternative Domains DNS Validation with Route 53</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var certCertificate = new Aws.Acm.Certificate(&amp;quot;certCertificate&amp;quot;, new Aws.Acm.CertificateArgs
+    {
+        DomainName = &amp;quot;example.com&amp;quot;,
+        SubjectAlternativeNames = 
+        {
+            &amp;quot;www.example.com&amp;quot;,
+            &amp;quot;example.org&amp;quot;,
+        },
+        ValidationMethod = &amp;quot;DNS&amp;quot;,
+    });
+    var zone = Output.Create(Aws.Route53.GetZone.InvokeAsync(new Aws.Route53.GetZoneArgs
+    {
+        Name = &amp;quot;example.com.&amp;quot;,
+        PrivateZone = false,
+    }));
+    var zoneAlt = Output.Create(Aws.Route53.GetZone.InvokeAsync(new Aws.Route53.GetZoneArgs
+    {
+        Name = &amp;quot;example.org.&amp;quot;,
+        PrivateZone = false,
+    }));
+    var certValidation = new Aws.Route53.Record(&amp;quot;certValidation&amp;quot;, new Aws.Route53.RecordArgs
+    {
+        Name = certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[0].ResourceRecordName),
+        Records = 
+        {
+            certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[0].ResourceRecordValue),
+        },
+        Ttl = 60,
+        Type = certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[0].ResourceRecordType),
+        ZoneId = zone.Apply(zone =&gt; zone.ZoneId),
+    });
+    var certValidationAlt1 = new Aws.Route53.Record(&amp;quot;certValidationAlt1&amp;quot;, new Aws.Route53.RecordArgs
+    {
+        Name = certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[1].ResourceRecordName),
+        Records = 
+        {
+            certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[1].ResourceRecordValue),
+        },
+        Ttl = 60,
+        Type = certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[1].ResourceRecordType),
+        ZoneId = zone.Apply(zone =&gt; zone.ZoneId),
+    });
+    var certValidationAlt2 = new Aws.Route53.Record(&amp;quot;certValidationAlt2&amp;quot;, new Aws.Route53.RecordArgs
+    {
+        Name = certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[2].ResourceRecordName),
+        Records = 
+        {
+            certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[2].ResourceRecordValue),
+        },
+        Ttl = 60,
+        Type = certCertificate.DomainValidationOptions.Apply(domainValidationOptions =&gt; domainValidationOptions[2].ResourceRecordType),
+        ZoneId = zoneAlt.Apply(zoneAlt =&gt; zoneAlt.ZoneId),
+    });
+    var certCertificateValidation = new Aws.Acm.CertificateValidation(&amp;quot;certCertificateValidation&amp;quot;, new Aws.Acm.CertificateValidationArgs
+    {
+        CertificateArn = certCertificate.Arn,
+        ValidationRecordFqdns = 
+        {
+            certValidation.Fqdn,
+            certValidationAlt1.Fqdn,
+            certValidationAlt2.Fqdn,
+        },
+    });
+    var frontEnd = new Aws.LB.Listener(&amp;quot;frontEnd&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        CertificateArn = certCertificateValidation.CertificateArn,
+    });
+}
+
+}
+</code></pre>
+<h3 id="email-validation">Email Validation</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var certCertificate = new Aws.Acm.Certificate(&amp;quot;certCertificate&amp;quot;, new Aws.Acm.CertificateArgs
+    {
+        DomainName = &amp;quot;example.com&amp;quot;,
+        ValidationMethod = &amp;quot;EMAIL&amp;quot;,
+    });
+    var certCertificateValidation = new Aws.Acm.CertificateValidation(&amp;quot;certCertificateValidation&amp;quot;, new Aws.Acm.CertificateValidationArgs
+    {
+        CertificateArn = certCertificate.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Acm.CertificateValidationArgs.html">CertificateValidationArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Client
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,6 +76,34 @@
 <p>Clients are entities that can use Keycloak for user authentication. Typically,
 clients are applications that redirect users to Keycloak for authentication
 in order to take advantage of Keycloak's user sessions for SSO.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var samlClient = new Keycloak.Saml.Client(&amp;quot;samlClient&amp;quot;, new Keycloak.Saml.ClientArgs
+    {
+        ClientId = &amp;quot;test-saml-client&amp;quot;,
+        IncludeAuthnStatement = true,
+        RealmId = realm.Id,
+        SignAssertions = true,
+        SignDocuments = false,
+        SigningCertificate = File.ReadAllText(&amp;quot;saml-cert.pem&amp;quot;),
+        SigningPrivateKey = File.ReadAllText(&amp;quot;saml-key.pem&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -110,7 +138,45 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Client</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Client</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.Saml.html">Pulumi.Keycloak.Saml</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
@@ -121,16 +187,16 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client__ctor_" data-uid="Pulumi.Keycloak.Saml.Client.#ctor*"></a>
-  <h4 id="Pulumi_Keycloak_Saml_Client__ctor_System_String_Pulumi_Keycloak_Saml_ClientArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Saml.Client.#ctor(System.String,Pulumi.Keycloak.Saml.ClientArgs,System.Nullable{CustomResourceOptions})">Client(String, ClientArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_Saml_Client__ctor_System_String_Pulumi_Keycloak_Saml_ClientArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.Saml.Client.#ctor(System.String,Pulumi.Keycloak.Saml.ClientArgs,Pulumi.CustomResourceOptions)">Client(String, ClientArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Client resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Client(string name, ClientArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Client(string name, ClientArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,7 +221,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -165,7 +231,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_AssertionConsumerPostUrl_" data-uid="Pulumi.Keycloak.Saml.Client.AssertionConsumerPostUrl*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_AssertionConsumerPostUrl" data-uid="Pulumi.Keycloak.Saml.Client.AssertionConsumerPostUrl">AssertionConsumerPostUrl</h4>
@@ -173,7 +239,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AssertionConsumerPostUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AssertionConsumerPostUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,13 +251,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_AssertionConsumerRedirectUrl_" data-uid="Pulumi.Keycloak.Saml.Client.AssertionConsumerRedirectUrl*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_AssertionConsumerRedirectUrl" data-uid="Pulumi.Keycloak.Saml.Client.AssertionConsumerRedirectUrl">AssertionConsumerRedirectUrl</h4>
@@ -199,7 +265,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AssertionConsumerRedirectUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AssertionConsumerRedirectUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,13 +277,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_BaseUrl_" data-uid="Pulumi.Keycloak.Saml.Client.BaseUrl*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_BaseUrl" data-uid="Pulumi.Keycloak.Saml.Client.BaseUrl">BaseUrl</h4>
@@ -225,7 +291,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BaseUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; BaseUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +303,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_ClientId_" data-uid="Pulumi.Keycloak.Saml.Client.ClientId*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_ClientId" data-uid="Pulumi.Keycloak.Saml.Client.ClientId">ClientId</h4>
@@ -263,13 +329,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_ClientSignatureRequired_" data-uid="Pulumi.Keycloak.Saml.Client.ClientSignatureRequired*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_ClientSignatureRequired" data-uid="Pulumi.Keycloak.Saml.Client.ClientSignatureRequired">ClientSignatureRequired</h4>
@@ -289,13 +355,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_Description_" data-uid="Pulumi.Keycloak.Saml.Client.Description*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_Description" data-uid="Pulumi.Keycloak.Saml.Client.Description">Description</h4>
@@ -303,7 +369,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,13 +381,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_Enabled_" data-uid="Pulumi.Keycloak.Saml.Client.Enabled*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_Enabled" data-uid="Pulumi.Keycloak.Saml.Client.Enabled">Enabled</h4>
@@ -341,13 +407,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_ForceNameIdFormat_" data-uid="Pulumi.Keycloak.Saml.Client.ForceNameIdFormat*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_ForceNameIdFormat" data-uid="Pulumi.Keycloak.Saml.Client.ForceNameIdFormat">ForceNameIdFormat</h4>
@@ -367,13 +433,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_ForcePostBinding_" data-uid="Pulumi.Keycloak.Saml.Client.ForcePostBinding*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_ForcePostBinding" data-uid="Pulumi.Keycloak.Saml.Client.ForcePostBinding">ForcePostBinding</h4>
@@ -393,13 +459,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_FrontChannelLogout_" data-uid="Pulumi.Keycloak.Saml.Client.FrontChannelLogout*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_FrontChannelLogout" data-uid="Pulumi.Keycloak.Saml.Client.FrontChannelLogout">FrontChannelLogout</h4>
@@ -419,13 +485,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_FullScopeAllowed_" data-uid="Pulumi.Keycloak.Saml.Client.FullScopeAllowed*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_FullScopeAllowed" data-uid="Pulumi.Keycloak.Saml.Client.FullScopeAllowed">FullScopeAllowed</h4>
@@ -445,13 +511,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_IdpInitiatedSsoRelayState_" data-uid="Pulumi.Keycloak.Saml.Client.IdpInitiatedSsoRelayState*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_IdpInitiatedSsoRelayState" data-uid="Pulumi.Keycloak.Saml.Client.IdpInitiatedSsoRelayState">IdpInitiatedSsoRelayState</h4>
@@ -459,7 +525,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IdpInitiatedSsoRelayState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IdpInitiatedSsoRelayState { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -471,13 +537,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_IdpInitiatedSsoUrlName_" data-uid="Pulumi.Keycloak.Saml.Client.IdpInitiatedSsoUrlName*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_IdpInitiatedSsoUrlName" data-uid="Pulumi.Keycloak.Saml.Client.IdpInitiatedSsoUrlName">IdpInitiatedSsoUrlName</h4>
@@ -485,7 +551,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IdpInitiatedSsoUrlName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IdpInitiatedSsoUrlName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -497,13 +563,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_IncludeAuthnStatement_" data-uid="Pulumi.Keycloak.Saml.Client.IncludeAuthnStatement*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_IncludeAuthnStatement" data-uid="Pulumi.Keycloak.Saml.Client.IncludeAuthnStatement">IncludeAuthnStatement</h4>
@@ -523,13 +589,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_LogoutServicePostBindingUrl_" data-uid="Pulumi.Keycloak.Saml.Client.LogoutServicePostBindingUrl*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_LogoutServicePostBindingUrl" data-uid="Pulumi.Keycloak.Saml.Client.LogoutServicePostBindingUrl">LogoutServicePostBindingUrl</h4>
@@ -537,7 +603,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LogoutServicePostBindingUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LogoutServicePostBindingUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -549,13 +615,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_LogoutServiceRedirectBindingUrl_" data-uid="Pulumi.Keycloak.Saml.Client.LogoutServiceRedirectBindingUrl*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_LogoutServiceRedirectBindingUrl" data-uid="Pulumi.Keycloak.Saml.Client.LogoutServiceRedirectBindingUrl">LogoutServiceRedirectBindingUrl</h4>
@@ -563,7 +629,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LogoutServiceRedirectBindingUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LogoutServiceRedirectBindingUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -575,13 +641,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_MasterSamlProcessingUrl_" data-uid="Pulumi.Keycloak.Saml.Client.MasterSamlProcessingUrl*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_MasterSamlProcessingUrl" data-uid="Pulumi.Keycloak.Saml.Client.MasterSamlProcessingUrl">MasterSamlProcessingUrl</h4>
@@ -589,7 +655,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MasterSamlProcessingUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MasterSamlProcessingUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -601,13 +667,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_Name_" data-uid="Pulumi.Keycloak.Saml.Client.Name*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_Name" data-uid="Pulumi.Keycloak.Saml.Client.Name">Name</h4>
@@ -627,13 +693,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_NameIdFormat_" data-uid="Pulumi.Keycloak.Saml.Client.NameIdFormat*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_NameIdFormat" data-uid="Pulumi.Keycloak.Saml.Client.NameIdFormat">NameIdFormat</h4>
@@ -653,13 +719,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_RealmId_" data-uid="Pulumi.Keycloak.Saml.Client.RealmId*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_RealmId" data-uid="Pulumi.Keycloak.Saml.Client.RealmId">RealmId</h4>
@@ -679,13 +745,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_RootUrl_" data-uid="Pulumi.Keycloak.Saml.Client.RootUrl*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_RootUrl" data-uid="Pulumi.Keycloak.Saml.Client.RootUrl">RootUrl</h4>
@@ -693,7 +759,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RootUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RootUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -705,13 +771,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_SignAssertions_" data-uid="Pulumi.Keycloak.Saml.Client.SignAssertions*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_SignAssertions" data-uid="Pulumi.Keycloak.Saml.Client.SignAssertions">SignAssertions</h4>
@@ -731,13 +797,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_SignDocuments_" data-uid="Pulumi.Keycloak.Saml.Client.SignDocuments*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_SignDocuments" data-uid="Pulumi.Keycloak.Saml.Client.SignDocuments">SignDocuments</h4>
@@ -757,13 +823,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_SigningCertificate_" data-uid="Pulumi.Keycloak.Saml.Client.SigningCertificate*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_SigningCertificate" data-uid="Pulumi.Keycloak.Saml.Client.SigningCertificate">SigningCertificate</h4>
@@ -771,7 +837,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SigningCertificate { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SigningCertificate { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -783,13 +849,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_SigningPrivateKey_" data-uid="Pulumi.Keycloak.Saml.Client.SigningPrivateKey*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_SigningPrivateKey" data-uid="Pulumi.Keycloak.Saml.Client.SigningPrivateKey">SigningPrivateKey</h4>
@@ -797,7 +863,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SigningPrivateKey { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SigningPrivateKey { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -809,13 +875,13 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_ValidRedirectUris_" data-uid="Pulumi.Keycloak.Saml.Client.ValidRedirectUris*"></a>
   <h4 id="Pulumi_Keycloak_Saml_Client_ValidRedirectUris" data-uid="Pulumi.Keycloak.Saml.Client.ValidRedirectUris">ValidRedirectUris</h4>
@@ -835,7 +901,7 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -843,17 +909,17 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Saml_Client_Get_" data-uid="Pulumi.Keycloak.Saml.Client.Get*"></a>
-  <h4 id="Pulumi_Keycloak_Saml_Client_Get_System_String_Input_System_String__Pulumi_Keycloak_Saml_ClientState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Saml.Client.Get(System.String,Input{System.String},Pulumi.Keycloak.Saml.ClientState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClientState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_Saml_Client_Get_System_String_Pulumi_Input_System_String__Pulumi_Keycloak_Saml_ClientState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.Saml.Client.Get(System.String,Pulumi.Input{System.String},Pulumi.Keycloak.Saml.ClientState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClientState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Client resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Client Get(string name, Input&lt;string&gt; id, ClientState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Client Get(string name, Input&lt;string&gt; id, ClientState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -872,7 +938,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -884,7 +950,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -913,7 +979,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Saml/Client.cs/#L51" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Saml/Client.cs/#L82" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

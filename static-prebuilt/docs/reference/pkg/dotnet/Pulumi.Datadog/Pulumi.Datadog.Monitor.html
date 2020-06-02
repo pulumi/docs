@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Monitor
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,13 +71,50 @@
   
   <h1 id="Pulumi_Datadog_Monitor" data-uid="Pulumi.Datadog.Monitor" class="text-break">Class Monitor
   </h1>
-  <div class="markdown level0 summary"><p>Provides a Datadog monitor resource. This can be used to create and manage Datadog monitors.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Monitor</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Monitor</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Datadog.html">Pulumi.Datadog</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Datadog.dll</h6>
@@ -88,16 +125,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor__ctor_" data-uid="Pulumi.Datadog.Monitor.#ctor*"></a>
-  <h4 id="Pulumi_Datadog_Monitor__ctor_System_String_Pulumi_Datadog_MonitorArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.Monitor.#ctor(System.String,Pulumi.Datadog.MonitorArgs,System.Nullable{CustomResourceOptions})">Monitor(String, MonitorArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Datadog_Monitor__ctor_System_String_Pulumi_Datadog_MonitorArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Datadog.Monitor.#ctor(System.String,Pulumi.Datadog.MonitorArgs,Pulumi.CustomResourceOptions)">Monitor(String, MonitorArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Monitor resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Monitor(string name, MonitorArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Monitor(string name, MonitorArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +159,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +169,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_EnableLogsSample_" data-uid="Pulumi.Datadog.Monitor.EnableLogsSample*"></a>
   <h4 id="Pulumi_Datadog_Monitor_EnableLogsSample" data-uid="Pulumi.Datadog.Monitor.EnableLogsSample">EnableLogsSample</h4>
@@ -154,13 +191,13 @@ triggering tags into the title. Defaults to true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_EscalationMessage_" data-uid="Pulumi.Datadog.Monitor.EscalationMessage*"></a>
   <h4 id="Pulumi_Datadog_Monitor_EscalationMessage" data-uid="Pulumi.Datadog.Monitor.EscalationMessage">EscalationMessage</h4>
@@ -170,7 +207,7 @@ notification allowed elsewhere.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EscalationMessage { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EscalationMessage { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,17 +219,21 @@ notification allowed elsewhere.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_EvaluationDelay_" data-uid="Pulumi.Datadog.Monitor.EvaluationDelay*"></a>
   <h4 id="Pulumi_Datadog_Monitor_EvaluationDelay" data-uid="Pulumi.Datadog.Monitor.EvaluationDelay">EvaluationDelay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Time (in seconds) to delay evaluation, as a non-negative integer.
+For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
+the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
+metrics to ensure the monitor will always have data during evaluation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -208,13 +249,13 @@ notification allowed elsewhere.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_IncludeTags_" data-uid="Pulumi.Datadog.Monitor.IncludeTags*"></a>
   <h4 id="Pulumi_Datadog_Monitor_IncludeTags" data-uid="Pulumi.Datadog.Monitor.IncludeTags">IncludeTags</h4>
@@ -235,13 +276,13 @@ notification allowed elsewhere.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_Locked_" data-uid="Pulumi.Datadog.Monitor.Locked*"></a>
   <h4 id="Pulumi_Datadog_Monitor_Locked" data-uid="Pulumi.Datadog.Monitor.Locked">Locked</h4>
@@ -262,13 +303,13 @@ notification allowed elsewhere.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_Message_" data-uid="Pulumi.Datadog.Monitor.Message*"></a>
   <h4 id="Pulumi_Datadog_Monitor_Message" data-uid="Pulumi.Datadog.Monitor.Message">Message</h4>
@@ -290,13 +331,13 @@ Email notifications can be sent to specific users by using the same '@username&a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_Name_" data-uid="Pulumi.Datadog.Monitor.Name*"></a>
   <h4 id="Pulumi_Datadog_Monitor_Name" data-uid="Pulumi.Datadog.Monitor.Name">Name</h4>
@@ -317,25 +358,19 @@ Email notifications can be sent to specific users by using the same '@username&a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_NewHostDelay_" data-uid="Pulumi.Datadog.Monitor.NewHostDelay*"></a>
   <h4 id="Pulumi_Datadog_Monitor_NewHostDelay" data-uid="Pulumi.Datadog.Monitor.NewHostDelay">NewHostDelay</h4>
   <div class="markdown level1 summary"><p>Time (in seconds) to allow a host to boot and
 applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to 300.</p>
-<ul>
-<li><code>evaluation_delay</code> (Optional, only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.</li>
-</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -352,13 +387,13 @@ metrics to ensure the monitor will always have data during evaluation.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_NoDataTimeframe_" data-uid="Pulumi.Datadog.Monitor.NoDataTimeframe*"></a>
   <h4 id="Pulumi_Datadog_Monitor_NoDataTimeframe" data-uid="Pulumi.Datadog.Monitor.NoDataTimeframe">NoDataTimeframe</h4>
@@ -381,13 +416,13 @@ metric alerts, 2 minutes for service checks. Defaults to 10 minutes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_NotifyAudit_" data-uid="Pulumi.Datadog.Monitor.NotifyAudit*"></a>
   <h4 id="Pulumi_Datadog_Monitor_NotifyAudit" data-uid="Pulumi.Datadog.Monitor.NotifyAudit">NotifyAudit</h4>
@@ -409,13 +444,13 @@ Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_NotifyNoData_" data-uid="Pulumi.Datadog.Monitor.NotifyNoData*"></a>
   <h4 id="Pulumi_Datadog_Monitor_NotifyNoData" data-uid="Pulumi.Datadog.Monitor.NotifyNoData">NotifyNoData</h4>
@@ -437,13 +472,13 @@ to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_Query_" data-uid="Pulumi.Datadog.Monitor.Query*"></a>
   <h4 id="Pulumi_Datadog_Monitor_Query" data-uid="Pulumi.Datadog.Monitor.Query">Query</h4>
@@ -463,13 +498,13 @@ to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_RenotifyInterval_" data-uid="Pulumi.Datadog.Monitor.RenotifyInterval*"></a>
   <h4 id="Pulumi_Datadog_Monitor_RenotifyInterval" data-uid="Pulumi.Datadog.Monitor.RenotifyInterval">RenotifyInterval</h4>
@@ -491,13 +526,13 @@ on the current status. It will only re-notify if it's not resolved.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_RequireFullWindow_" data-uid="Pulumi.Datadog.Monitor.RequireFullWindow*"></a>
   <h4 id="Pulumi_Datadog_Monitor_RequireFullWindow" data-uid="Pulumi.Datadog.Monitor.RequireFullWindow">RequireFullWindow</h4>
@@ -520,13 +555,13 @@ Default: True for &quot;on average&quot;, &quot;at all times&quot; and &quot;in 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_Silenced_" data-uid="Pulumi.Datadog.Monitor.Silenced*"></a>
   <h4 id="Pulumi_Datadog_Monitor_Silenced" data-uid="Pulumi.Datadog.Monitor.Silenced">Silenced</h4>
@@ -534,7 +569,7 @@ Default: True for &quot;on average&quot;, &quot;at all times&quot; and &quot;in 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Silenced { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Silenced { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -546,13 +581,13 @@ Default: True for &quot;on average&quot;, &quot;at all times&quot; and &quot;in 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_Tags_" data-uid="Pulumi.Datadog.Monitor.Tags*"></a>
   <h4 id="Pulumi_Datadog_Monitor_Tags" data-uid="Pulumi.Datadog.Monitor.Tags">Tags</h4>
@@ -573,13 +608,13 @@ Default: True for &quot;on average&quot;, &quot;at all times&quot; and &quot;in 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_Thresholds_" data-uid="Pulumi.Datadog.Monitor.Thresholds*"></a>
   <h4 id="Pulumi_Datadog_Monitor_Thresholds" data-uid="Pulumi.Datadog.Monitor.Thresholds">Thresholds</h4>
@@ -625,20 +660,17 @@ unknown  = 1
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.MonitorThresholds.html">MonitorThresholds</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.MonitorThresholds.html">MonitorThresholds</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_ThresholdWindows_" data-uid="Pulumi.Datadog.Monitor.ThresholdWindows*"></a>
   <h4 id="Pulumi_Datadog_Monitor_ThresholdWindows" data-uid="Pulumi.Datadog.Monitor.ThresholdWindows">ThresholdWindows</h4>
   <div class="markdown level1 summary"><p>A mapping containing <code>recovery_window</code> and <code>trigger_window</code> values, e.g. <code>last_15m</code>. Can only be used for, and are required for, anomaly monitors.</p>
-<ul>
-<li><code>recovery_window</code> describes how long an anomalous metric must be normal before the alert recovers.</li>
-</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -655,13 +687,13 @@ unknown  = 1
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.MonitorThresholdWindows.html">MonitorThresholdWindows</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.MonitorThresholdWindows.html">MonitorThresholdWindows</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_TimeoutH_" data-uid="Pulumi.Datadog.Monitor.TimeoutH*"></a>
   <h4 id="Pulumi_Datadog_Monitor_TimeoutH" data-uid="Pulumi.Datadog.Monitor.TimeoutH">TimeoutH</h4>
@@ -683,13 +715,13 @@ from a triggered state. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L173">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_Type_" data-uid="Pulumi.Datadog.Monitor.Type*"></a>
   <h4 id="Pulumi_Datadog_Monitor_Type" data-uid="Pulumi.Datadog.Monitor.Type">Type</h4>
@@ -718,7 +750,7 @@ from a triggered state. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -726,17 +758,17 @@ from a triggered state. Defaults to false.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L214">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Monitor_Get_" data-uid="Pulumi.Datadog.Monitor.Get*"></a>
-  <h4 id="Pulumi_Datadog_Monitor_Get_System_String_Input_System_String__Pulumi_Datadog_MonitorState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.Monitor.Get(System.String,Input{System.String},Pulumi.Datadog.MonitorState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, MonitorState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Datadog_Monitor_Get_System_String_Pulumi_Input_System_String__Pulumi_Datadog_MonitorState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Datadog.Monitor.Get(System.String,Pulumi.Input{System.String},Pulumi.Datadog.MonitorState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, MonitorState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Monitor resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Monitor Get(string name, Input&lt;string&gt; id, MonitorState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Monitor Get(string name, Input&lt;string&gt; id, MonitorState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -755,7 +787,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -767,7 +799,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -796,7 +828,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Monitor.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Monitor.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

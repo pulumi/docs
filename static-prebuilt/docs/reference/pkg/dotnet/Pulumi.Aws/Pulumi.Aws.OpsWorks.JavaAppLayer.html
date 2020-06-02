@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class JavaAppLayer
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,66 @@
   <h1 id="Pulumi_Aws_OpsWorks_JavaAppLayer" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer" class="text-break">Class JavaAppLayer
   </h1>
   <div class="markdown level0 summary"><p>Provides an OpsWorks Java application layer resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.OpsWorks.JavaAppLayer(&amp;quot;app&amp;quot;, new Aws.OpsWorks.JavaAppLayerArgs
+    {
+        StackId = aws_opsworks_stack.Main.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">JavaAppLayer</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">JavaAppLayer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.OpsWorks.html">Pulumi.Aws.OpsWorks</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +142,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer__ctor_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.#ctor*"></a>
-  <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer__ctor_System_String_Pulumi_Aws_OpsWorks_JavaAppLayerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.#ctor(System.String,Pulumi.Aws.OpsWorks.JavaAppLayerArgs,System.Nullable{CustomResourceOptions})">JavaAppLayer(String, JavaAppLayerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer__ctor_System_String_Pulumi_Aws_OpsWorks_JavaAppLayerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.#ctor(System.String,Pulumi.Aws.OpsWorks.JavaAppLayerArgs,Pulumi.CustomResourceOptions)">JavaAppLayer(String, JavaAppLayerArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a JavaAppLayer resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public JavaAppLayer(string name, JavaAppLayerArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public JavaAppLayer(string name, JavaAppLayerArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +176,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +186,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_AppServer_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.AppServer*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_AppServer" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.AppServer">AppServer</h4>
@@ -141,7 +195,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AppServer { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AppServer { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +207,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_AppServerVersion_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.AppServerVersion*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_AppServerVersion" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.AppServerVersion">AppServerVersion</h4>
@@ -168,7 +222,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AppServerVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AppServerVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +234,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_Arn_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.Arn*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_Arn" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.Arn">Arn</h4>
@@ -207,13 +261,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_AutoAssignElasticIps_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.AutoAssignElasticIps*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_AutoAssignElasticIps" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.AutoAssignElasticIps">AutoAssignElasticIps</h4>
@@ -234,13 +288,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_AutoAssignPublicIps_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.AutoAssignPublicIps*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_AutoAssignPublicIps" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.AutoAssignPublicIps">AutoAssignPublicIps</h4>
@@ -261,13 +315,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_AutoHealing_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.AutoHealing*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_AutoHealing" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.AutoHealing">AutoHealing</h4>
@@ -288,13 +342,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomConfigureRecipes_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomConfigureRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomConfigureRecipes" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomConfigureRecipes">CustomConfigureRecipes</h4>
@@ -314,13 +368,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomDeployRecipes_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomDeployRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomDeployRecipes" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomDeployRecipes">CustomDeployRecipes</h4>
@@ -340,13 +394,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomInstanceProfileArn_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomInstanceProfileArn*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomInstanceProfileArn" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomInstanceProfileArn">CustomInstanceProfileArn</h4>
@@ -355,7 +409,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CustomInstanceProfileArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CustomInstanceProfileArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,13 +421,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomJson_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomJson*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomJson" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomJson">CustomJson</h4>
@@ -382,7 +436,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CustomJson { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CustomJson { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -394,13 +448,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomSecurityGroupIds_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomSecurityGroupIds" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomSecurityGroupIds">CustomSecurityGroupIds</h4>
@@ -421,13 +475,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomSetupRecipes_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomSetupRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomSetupRecipes" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomSetupRecipes">CustomSetupRecipes</h4>
@@ -447,13 +501,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomShutdownRecipes_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomShutdownRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomShutdownRecipes" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomShutdownRecipes">CustomShutdownRecipes</h4>
@@ -473,13 +527,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomUndeployRecipes_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomUndeployRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_CustomUndeployRecipes" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.CustomUndeployRecipes">CustomUndeployRecipes</h4>
@@ -499,13 +553,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_DrainElbOnShutdown_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.DrainElbOnShutdown*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_DrainElbOnShutdown" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.DrainElbOnShutdown">DrainElbOnShutdown</h4>
@@ -526,13 +580,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_EbsVolumes_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.EbsVolumes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_EbsVolumes" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.EbsVolumes">EbsVolumes</h4>
@@ -553,13 +607,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Outputs.JavaAppLayerEbsVolume.html">JavaAppLayerEbsVolume</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Outputs.JavaAppLayerEbsVolume.html">JavaAppLayerEbsVolume</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_ElasticLoadBalancer_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.ElasticLoadBalancer*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_ElasticLoadBalancer" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.ElasticLoadBalancer">ElasticLoadBalancer</h4>
@@ -568,7 +622,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ElasticLoadBalancer { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ElasticLoadBalancer { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -580,13 +634,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_InstallUpdatesOnBoot_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.InstallUpdatesOnBoot*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_InstallUpdatesOnBoot" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.InstallUpdatesOnBoot">InstallUpdatesOnBoot</h4>
@@ -607,13 +661,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_InstanceShutdownTimeout_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.InstanceShutdownTimeout*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_InstanceShutdownTimeout" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.InstanceShutdownTimeout">InstanceShutdownTimeout</h4>
@@ -634,13 +688,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_JvmOptions_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.JvmOptions*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_JvmOptions" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.JvmOptions">JvmOptions</h4>
@@ -649,7 +703,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; JvmOptions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; JvmOptions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -661,13 +715,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_JvmType_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.JvmType*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_JvmType" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.JvmType">JvmType</h4>
@@ -676,7 +730,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; JvmType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; JvmType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -688,13 +742,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_JvmVersion_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.JvmVersion*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_JvmVersion" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.JvmVersion">JvmVersion</h4>
@@ -703,7 +757,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; JvmVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; JvmVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -715,13 +769,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_Name_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.Name*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_Name" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.Name">Name</h4>
@@ -742,13 +796,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_StackId_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.StackId*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_StackId" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.StackId">StackId</h4>
@@ -769,13 +823,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_SystemPackages_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.SystemPackages*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_SystemPackages" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.SystemPackages">SystemPackages</h4>
@@ -796,22 +850,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_Tags_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.Tags*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_Tags" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -823,13 +877,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_UseEbsOptimizedInstances_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.UseEbsOptimizedInstances*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_UseEbsOptimizedInstances" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.UseEbsOptimizedInstances">UseEbsOptimizedInstances</h4>
@@ -850,7 +904,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -858,17 +912,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L202">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L223">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_JavaAppLayer_Get_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.Get*"></a>
-  <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_Get_System_String_Input_System_String__Pulumi_Aws_OpsWorks_JavaAppLayerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.Get(System.String,Input{System.String},Pulumi.Aws.OpsWorks.JavaAppLayerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, JavaAppLayerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_OpsWorks_JavaAppLayer_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_OpsWorks_JavaAppLayerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.OpsWorks.JavaAppLayer.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.OpsWorks.JavaAppLayerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, JavaAppLayerState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing JavaAppLayer resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static JavaAppLayer Get(string name, Input&lt;string&gt; id, JavaAppLayerState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static JavaAppLayer Get(string name, Input&lt;string&gt; id, JavaAppLayerState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -887,7 +941,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -899,7 +953,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -928,7 +982,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/JavaAppLayer.cs/#L36" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

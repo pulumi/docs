@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.ManagementGroups
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ManagementGroups.ManagementGroup.html">ManagementGroup</a></h4>
       <section><p>Manages a Management Group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+    var exampleParent = new Azure.Management.Group(&amp;quot;exampleParent&amp;quot;, new Azure.Management.GroupArgs
+    {
+        DisplayName = &amp;quot;ParentGroup&amp;quot;,
+        SubscriptionIds = 
+        {
+            current.Apply(current =&gt; current.SubscriptionId),
+        },
+    });
+    var exampleChild = new Azure.Management.Group(&amp;quot;exampleChild&amp;quot;, new Azure.Management.GroupArgs
+    {
+        DisplayName = &amp;quot;ChildGroup&amp;quot;,
+        ParentManagementGroupId = exampleParent.Id,
+        SubscriptionIds = 
+        {
+            current.Apply(current =&gt; current.SubscriptionId),
+        },
+    });
+    // other subscription IDs can go here
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ManagementGroups.ManagementGroupArgs.html">ManagementGroupArgs</a></h4>
       <section></section>

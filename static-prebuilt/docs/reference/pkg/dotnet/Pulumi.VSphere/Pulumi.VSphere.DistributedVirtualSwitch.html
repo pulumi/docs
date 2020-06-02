@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DistributedVirtualSwitch
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,7 +77,7 @@ Distributed Virtual Switches.</p>
 vSphere Distributed Virtual Switch (DVS) provides centralized management and
 monitoring of the networking configuration of all the hosts that are associated
 with the switch. In addition to adding port groups (see the
-<a href="/docs/providers/vsphere/r/distributed_port_group.html"><code>vsphere..DistributedPortGroup</code></a> resource) that can
+<code>vsphere..DistributedPortGroup</code> resource) that can
 be used as networks for virtual machines, a DVS can be configured to perform
 advanced high availability, traffic shaping, network monitoring, and more.</p>
 <p>For an overview on vSphere networking concepts, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this
@@ -87,12 +87,80 @@ page</a>.</p>
 <p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="uplink-name-and-count-control">Uplink name and count control</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dvs = new VSphere.DistributedVirtualSwitch(&amp;quot;dvs&amp;quot;, new VSphere.DistributedVirtualSwitchArgs
+    {
+        ActiveUplinks = 
+        {
+            &amp;quot;tfup1&amp;quot;,
+        },
+        DatacenterId = data.Vsphere_datacenter.Dc.Id,
+        StandbyUplinks = 
+        {
+            &amp;quot;tfup2&amp;quot;,
+        },
+        Uplinks = 
+        {
+            &amp;quot;tfup1&amp;quot;,
+            &amp;quot;tfup2&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DistributedVirtualSwitch</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">DistributedVirtualSwitch</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -103,16 +171,16 @@ connections.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L651">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L681">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch__ctor_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_DistributedVirtualSwitch__ctor_System_String_Pulumi_VSphere_DistributedVirtualSwitchArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.#ctor(System.String,Pulumi.VSphere.DistributedVirtualSwitchArgs,System.Nullable{CustomResourceOptions})">DistributedVirtualSwitch(String, DistributedVirtualSwitchArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_DistributedVirtualSwitch__ctor_System_String_Pulumi_VSphere_DistributedVirtualSwitchArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.#ctor(System.String,Pulumi.VSphere.DistributedVirtualSwitchArgs,Pulumi.CustomResourceOptions)">DistributedVirtualSwitch(String, DistributedVirtualSwitchArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a DistributedVirtualSwitch resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DistributedVirtualSwitch(string name, DistributedVirtualSwitchArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public DistributedVirtualSwitch(string name, DistributedVirtualSwitchArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,7 +205,7 @@ connections.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -147,7 +215,7 @@ connections.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_ActiveUplinks_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ActiveUplinks*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_ActiveUplinks" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ActiveUplinks">ActiveUplinks</h4>
@@ -171,13 +239,13 @@ here for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_AllowForgedTransmits_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.AllowForgedTransmits*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_AllowForgedTransmits" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.AllowForgedTransmits">AllowForgedTransmits</h4>
@@ -200,13 +268,13 @@ address than that of its own.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_AllowMacChanges_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.AllowMacChanges*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_AllowMacChanges" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.AllowMacChanges">AllowMacChanges</h4>
@@ -228,13 +296,13 @@ Control (MAC) address can be changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_AllowPromiscuous_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.AllowPromiscuous*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_AllowPromiscuous" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.AllowPromiscuous">AllowPromiscuous</h4>
@@ -256,13 +324,13 @@ flag indicates whether or not all traffic is seen on a given port.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_BlockAllPorts_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.BlockAllPorts*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_BlockAllPorts" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.BlockAllPorts">BlockAllPorts</h4>
@@ -285,13 +353,13 @@ virtual devices.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_CheckBeacon_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.CheckBeacon*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_CheckBeacon" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.CheckBeacon">CheckBeacon</h4>
@@ -313,13 +381,13 @@ to detect NIC failure.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_ConfigVersion_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ConfigVersion*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_ConfigVersion" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ConfigVersion">ConfigVersion</h4>
@@ -340,13 +408,13 @@ to detect NIC failure.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_ContactDetail_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ContactDetail*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_ContactDetail" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ContactDetail">ContactDetail</h4>
@@ -356,7 +424,7 @@ who is responsible for the DVS.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContactDetail { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContactDetail { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -368,13 +436,13 @@ who is responsible for the DVS.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_ContactName_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ContactName*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_ContactName" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ContactName">ContactName</h4>
@@ -384,7 +452,7 @@ DVS.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContactName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContactName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -396,25 +464,23 @@ DVS.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_CustomAttributes_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.CustomAttributes*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_CustomAttributes" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.CustomAttributes">CustomAttributes</h4>
   <div class="markdown level1 summary"><p>Map of custom attribute ids to attribute
-value strings to set for virtual switch. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.</p>
+value strings to set for virtual switch.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; CustomAttributes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; CustomAttributes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -426,13 +492,13 @@ for custom attributes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_DatacenterId_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.DatacenterId*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_DatacenterId" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.DatacenterId">DatacenterId</h4>
@@ -454,13 +520,13 @@ virtual switch will be created. Forces a new resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_Description_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Description*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_Description" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Description">Description</h4>
@@ -469,7 +535,7 @@ virtual switch will be created. Forces a new resource if changed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -481,13 +547,13 @@ virtual switch will be created. Forces a new resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_DirectpathGen2Allowed_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.DirectpathGen2Allowed*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_DirectpathGen2Allowed" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.DirectpathGen2Allowed">DirectpathGen2Allowed</h4>
@@ -509,13 +575,13 @@ for which this policy applies to.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_EgressShapingAverageBandwidth_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.EgressShapingAverageBandwidth*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_EgressShapingAverageBandwidth" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.EgressShapingAverageBandwidth">EgressShapingAverageBandwidth</h4>
@@ -537,13 +603,13 @@ per second if egress traffic shaping is enabled on the port.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_EgressShapingBurstSize_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.EgressShapingBurstSize*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_EgressShapingBurstSize" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.EgressShapingBurstSize">EgressShapingBurstSize</h4>
@@ -565,13 +631,13 @@ bytes if egress traffic shaping is enabled on the port.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_EgressShapingEnabled_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.EgressShapingEnabled*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_EgressShapingEnabled" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.EgressShapingEnabled">EgressShapingEnabled</h4>
@@ -593,13 +659,13 @@ on the port for egress traffic.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_EgressShapingPeakBandwidth_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.EgressShapingPeakBandwidth*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_EgressShapingPeakBandwidth" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.EgressShapingPeakBandwidth">EgressShapingPeakBandwidth</h4>
@@ -621,13 +687,13 @@ in bits per second if egress traffic shaping is enabled on the port.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_Failback_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Failback*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_Failback" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Failback">Failback</h4>
@@ -649,13 +715,13 @@ uplinks higher in precedence when they come back up.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L201">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_FaulttoleranceMaximumMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.FaulttoleranceMaximumMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_FaulttoleranceMaximumMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.FaulttoleranceMaximumMbit">FaulttoleranceMaximumMbit</h4>
@@ -676,13 +742,13 @@ uplinks higher in precedence when they come back up.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_FaulttoleranceReservationMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.FaulttoleranceReservationMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_FaulttoleranceReservationMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.FaulttoleranceReservationMbit">FaulttoleranceReservationMbit</h4>
@@ -703,13 +769,13 @@ uplinks higher in precedence when they come back up.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_FaulttoleranceShareCount_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.FaulttoleranceShareCount*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_FaulttoleranceShareCount" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.FaulttoleranceShareCount">FaulttoleranceShareCount</h4>
@@ -730,13 +796,13 @@ uplinks higher in precedence when they come back up.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L188">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L219">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_FaulttoleranceShareLevel_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.FaulttoleranceShareLevel*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_FaulttoleranceShareLevel" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.FaulttoleranceShareLevel">FaulttoleranceShareLevel</h4>
@@ -757,13 +823,13 @@ uplinks higher in precedence when they come back up.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L195">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L226">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_Folder_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Folder*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_Folder" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Folder">Folder</h4>
@@ -773,7 +839,7 @@ if changed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Folder { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Folder { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -785,13 +851,13 @@ if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L201">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_HbrMaximumMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.HbrMaximumMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_HbrMaximumMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.HbrMaximumMbit">HbrMaximumMbit</h4>
@@ -812,13 +878,13 @@ if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L238">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_HbrReservationMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.HbrReservationMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_HbrReservationMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.HbrReservationMbit">HbrReservationMbit</h4>
@@ -839,13 +905,13 @@ if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L213">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L244">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_HbrShareCount_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.HbrShareCount*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_HbrShareCount" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.HbrShareCount">HbrShareCount</h4>
@@ -866,13 +932,13 @@ if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L250">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_HbrShareLevel_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.HbrShareLevel*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_HbrShareLevel" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.HbrShareLevel">HbrShareLevel</h4>
@@ -893,13 +959,13 @@ if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L226">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L257">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_Hosts_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Hosts*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_Hosts" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Hosts">Hosts</h4>
@@ -921,13 +987,13 @@ options are:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.DistributedVirtualSwitchHost.html">DistributedVirtualSwitchHost</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.DistributedVirtualSwitchHost.html">DistributedVirtualSwitchHost</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L233">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L264">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_IngressShapingAverageBandwidth_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IngressShapingAverageBandwidth*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_IngressShapingAverageBandwidth" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IngressShapingAverageBandwidth">IngressShapingAverageBandwidth</h4>
@@ -949,13 +1015,13 @@ bits per second if ingress traffic shaping is enabled on the port.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L240">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_IngressShapingBurstSize_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IngressShapingBurstSize*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_IngressShapingBurstSize" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IngressShapingBurstSize">IngressShapingBurstSize</h4>
@@ -977,13 +1043,13 @@ bytes if ingress traffic shaping is enabled on the port.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L278">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_IngressShapingEnabled_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IngressShapingEnabled*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_IngressShapingEnabled" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IngressShapingEnabled">IngressShapingEnabled</h4>
@@ -1005,13 +1071,13 @@ enabled on the port for ingress traffic.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L254">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L285">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_IngressShapingPeakBandwidth_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IngressShapingPeakBandwidth*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_IngressShapingPeakBandwidth" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IngressShapingPeakBandwidth">IngressShapingPeakBandwidth</h4>
@@ -1033,13 +1099,13 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L262">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L293">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_Ipv4Address_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Ipv4Address*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_Ipv4Address" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Ipv4Address">Ipv4Address</h4>
@@ -1050,7 +1116,7 @@ below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Ipv4Address { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Ipv4Address { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1062,13 +1128,13 @@ below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L268">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L299">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_IscsiMaximumMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IscsiMaximumMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_IscsiMaximumMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IscsiMaximumMbit">IscsiMaximumMbit</h4>
@@ -1089,13 +1155,13 @@ below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L274">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L305">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_IscsiReservationMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IscsiReservationMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_IscsiReservationMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IscsiReservationMbit">IscsiReservationMbit</h4>
@@ -1116,13 +1182,13 @@ below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L280">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L311">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_IscsiShareCount_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IscsiShareCount*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_IscsiShareCount" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IscsiShareCount">IscsiShareCount</h4>
@@ -1143,13 +1209,13 @@ below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L286">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L317">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_IscsiShareLevel_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IscsiShareLevel*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_IscsiShareLevel" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.IscsiShareLevel">IscsiShareLevel</h4>
@@ -1170,13 +1236,13 @@ below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L294">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L325">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_LacpApiVersion_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.LacpApiVersion*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_LacpApiVersion" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.LacpApiVersion">LacpApiVersion</h4>
@@ -1199,13 +1265,13 @@ version to use with the switch. Possible values are <code>singleLag</code> and
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L301">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L332">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_LacpEnabled_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.LacpEnabled*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_LacpEnabled" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.LacpEnabled">LacpEnabled</h4>
@@ -1227,13 +1293,13 @@ applies to.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L307">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L338">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_LacpMode_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.LacpMode*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_LacpMode" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.LacpMode">LacpMode</h4>
@@ -1254,13 +1320,13 @@ applies to.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L314">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L345">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_LinkDiscoveryOperation_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.LinkDiscoveryOperation*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_LinkDiscoveryOperation" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.LinkDiscoveryOperation">LinkDiscoveryOperation</h4>
@@ -1270,7 +1336,7 @@ for link discovery traffic.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LinkDiscoveryOperation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LinkDiscoveryOperation { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1282,13 +1348,13 @@ for link discovery traffic.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L321">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L352">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_LinkDiscoveryProtocol_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.LinkDiscoveryProtocol*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_LinkDiscoveryProtocol" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.LinkDiscoveryProtocol">LinkDiscoveryProtocol</h4>
@@ -1298,7 +1364,7 @@ types are <code>cdp</code> and <code>lldp</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LinkDiscoveryProtocol { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LinkDiscoveryProtocol { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1310,13 +1376,13 @@ types are <code>cdp</code> and <code>lldp</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L327">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L358">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_ManagementMaximumMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ManagementMaximumMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_ManagementMaximumMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ManagementMaximumMbit">ManagementMaximumMbit</h4>
@@ -1337,13 +1403,13 @@ types are <code>cdp</code> and <code>lldp</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L333">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L364">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_ManagementReservationMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ManagementReservationMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_ManagementReservationMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ManagementReservationMbit">ManagementReservationMbit</h4>
@@ -1364,13 +1430,13 @@ types are <code>cdp</code> and <code>lldp</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L339">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L370">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_ManagementShareCount_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ManagementShareCount*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_ManagementShareCount" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ManagementShareCount">ManagementShareCount</h4>
@@ -1391,13 +1457,13 @@ types are <code>cdp</code> and <code>lldp</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L345">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L376">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_ManagementShareLevel_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ManagementShareLevel*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_ManagementShareLevel" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.ManagementShareLevel">ManagementShareLevel</h4>
@@ -1418,13 +1484,13 @@ types are <code>cdp</code> and <code>lldp</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L352">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L383">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_MaxMtu_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.MaxMtu*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_MaxMtu" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.MaxMtu">MaxMtu</h4>
@@ -1446,13 +1512,13 @@ switch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L359">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L390">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_MulticastFilteringMode_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.MulticastFilteringMode*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_MulticastFilteringMode" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.MulticastFilteringMode">MulticastFilteringMode</h4>
@@ -1474,13 +1540,13 @@ with the switch. Can be one of <code>legacyFiltering</code> or <code>snooping</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L365">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L396">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_Name_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Name*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_Name" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Name">Name</h4>
@@ -1501,13 +1567,13 @@ with the switch. Can be one of <code>legacyFiltering</code> or <code>snooping</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L373">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L404">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowActiveFlowTimeout_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowActiveFlowTimeout*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowActiveFlowTimeout" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowActiveFlowTimeout">NetflowActiveFlowTimeout</h4>
@@ -1530,13 +1596,13 @@ active flows are forced to be exported to the collector. Allowed range is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L381">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L412">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowCollectorIpAddress_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowCollectorIpAddress*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowCollectorIpAddress" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowCollectorIpAddress">NetflowCollectorIpAddress</h4>
@@ -1547,7 +1613,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NetflowCollectorIpAddress { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NetflowCollectorIpAddress { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1559,13 +1625,13 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L388">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L419">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowCollectorPort_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowCollectorPort*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowCollectorPort" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowCollectorPort">NetflowCollectorPort</h4>
@@ -1587,13 +1653,13 @@ must be set before Netflow can be enabled.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L395">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L426">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowEnabled_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowEnabled*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowEnabled" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowEnabled">NetflowEnabled</h4>
@@ -1615,13 +1681,13 @@ applies to.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L403">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L434">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowIdleFlowTimeout_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowIdleFlowTimeout*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowIdleFlowTimeout" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowIdleFlowTimeout">NetflowIdleFlowTimeout</h4>
@@ -1644,13 +1710,13 @@ to <code>600</code>. Default: <code>15</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L411">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L442">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowInternalFlowsOnly_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowInternalFlowsOnly*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowInternalFlowsOnly" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowInternalFlowsOnly">NetflowInternalFlowsOnly</h4>
@@ -1673,13 +1739,13 @@ Default: <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L418">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L449">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowObservationDomainId_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowObservationDomainId*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowObservationDomainId" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowObservationDomainId">NetflowObservationDomainId</h4>
@@ -1701,13 +1767,13 @@ the Netflow collector.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L427">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L458">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowSamplingRate_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowSamplingRate*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NetflowSamplingRate" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetflowSamplingRate">NetflowSamplingRate</h4>
@@ -1731,13 +1797,13 @@ indicates an analysis rate of 0.001%.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L434">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L465">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NetworkResourceControlEnabled_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetworkResourceControlEnabled*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NetworkResourceControlEnabled" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetworkResourceControlEnabled">NetworkResourceControlEnabled</h4>
@@ -1759,13 +1825,13 @@ network I/O control. Default: <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L441">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L472">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NetworkResourceControlVersion_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetworkResourceControlVersion*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NetworkResourceControlVersion" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NetworkResourceControlVersion">NetworkResourceControlVersion</h4>
@@ -1787,13 +1853,13 @@ control to use. Can be one of <code>version2</code> or <code>version3</code>. De
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L447">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L478">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NfsMaximumMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NfsMaximumMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NfsMaximumMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NfsMaximumMbit">NfsMaximumMbit</h4>
@@ -1814,13 +1880,13 @@ control to use. Can be one of <code>version2</code> or <code>version3</code>. De
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L453">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L484">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NfsReservationMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NfsReservationMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NfsReservationMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NfsReservationMbit">NfsReservationMbit</h4>
@@ -1841,13 +1907,13 @@ control to use. Can be one of <code>version2</code> or <code>version3</code>. De
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L459">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L490">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NfsShareCount_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NfsShareCount*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NfsShareCount" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NfsShareCount">NfsShareCount</h4>
@@ -1868,13 +1934,13 @@ control to use. Can be one of <code>version2</code> or <code>version3</code>. De
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L465">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L496">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NfsShareLevel_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NfsShareLevel*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NfsShareLevel" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NfsShareLevel">NfsShareLevel</h4>
@@ -1895,13 +1961,13 @@ control to use. Can be one of <code>version2</code> or <code>version3</code>. De
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L472">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L503">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_NotifySwitches_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NotifySwitches*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_NotifySwitches" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.NotifySwitches">NotifySwitches</h4>
@@ -1923,13 +1989,13 @@ broadcast network of an uplink failover, triggering cache updates.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L479">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L510">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_PortPrivateSecondaryVlanId_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.PortPrivateSecondaryVlanId*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_PortPrivateSecondaryVlanId" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.PortPrivateSecondaryVlanId">PortPrivateSecondaryVlanId</h4>
@@ -1951,13 +2017,13 @@ ID when using private VLANs.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L488">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L519">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_StandbyUplinks_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.StandbyUplinks*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_StandbyUplinks" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.StandbyUplinks">StandbyUplinks</h4>
@@ -1981,18 +2047,17 @@ here for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L495">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L525">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_Tags_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Tags*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_Tags" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.</p>
+  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2009,13 +2074,13 @@ here for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L503">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L533">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_TeamingPolicy_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.TeamingPolicy*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_TeamingPolicy" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.TeamingPolicy">TeamingPolicy</h4>
@@ -2038,13 +2103,13 @@ here for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L510">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L540">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_TxUplink_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.TxUplink*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_TxUplink" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.TxUplink">TxUplink</h4>
@@ -2066,13 +2131,13 @@ this policy applies to its DVS uplinks.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L520">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L550">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_Uplinks_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Uplinks*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_Uplinks" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Uplinks">Uplinks</h4>
@@ -2097,13 +2162,13 @@ use this option.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L526">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L556">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VdpMaximumMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VdpMaximumMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VdpMaximumMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VdpMaximumMbit">VdpMaximumMbit</h4>
@@ -2124,13 +2189,13 @@ use this option.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L532">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L562">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VdpReservationMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VdpReservationMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VdpReservationMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VdpReservationMbit">VdpReservationMbit</h4>
@@ -2151,13 +2216,13 @@ use this option.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L538">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L568">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VdpShareCount_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VdpShareCount*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VdpShareCount" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VdpShareCount">VdpShareCount</h4>
@@ -2178,13 +2243,13 @@ use this option.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L544">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L574">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VdpShareLevel_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VdpShareLevel*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VdpShareLevel" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VdpShareLevel">VdpShareLevel</h4>
@@ -2205,13 +2270,13 @@ use this option.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L553">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L583">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_Version_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Version*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_Version" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Version">Version</h4>
@@ -2237,13 +2302,13 @@ downgraded.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L559">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L589">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VirtualmachineMaximumMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VirtualmachineMaximumMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VirtualmachineMaximumMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VirtualmachineMaximumMbit">VirtualmachineMaximumMbit</h4>
@@ -2264,13 +2329,13 @@ downgraded.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L565">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L595">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VirtualmachineReservationMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VirtualmachineReservationMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VirtualmachineReservationMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VirtualmachineReservationMbit">VirtualmachineReservationMbit</h4>
@@ -2291,13 +2356,13 @@ downgraded.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L571">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L601">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VirtualmachineShareCount_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VirtualmachineShareCount*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VirtualmachineShareCount" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VirtualmachineShareCount">VirtualmachineShareCount</h4>
@@ -2318,13 +2383,13 @@ downgraded.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L577">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L607">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VirtualmachineShareLevel_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VirtualmachineShareLevel*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VirtualmachineShareLevel" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VirtualmachineShareLevel">VirtualmachineShareLevel</h4>
@@ -2345,13 +2410,13 @@ downgraded.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L583">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L613">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VlanId_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VlanId*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VlanId" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VlanId">VlanId</h4>
@@ -2372,13 +2437,13 @@ downgraded.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L592">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L622">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VlanRanges_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VlanRanges*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VlanRanges" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VlanRanges">VlanRanges</h4>
@@ -2402,13 +2467,13 @@ below:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.DistributedVirtualSwitchVlanRange.html">DistributedVirtualSwitchVlanRange</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.DistributedVirtualSwitchVlanRange.html">DistributedVirtualSwitchVlanRange</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L598">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L628">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VmotionMaximumMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VmotionMaximumMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VmotionMaximumMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VmotionMaximumMbit">VmotionMaximumMbit</h4>
@@ -2429,13 +2494,13 @@ below:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L604">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L634">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VmotionReservationMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VmotionReservationMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VmotionReservationMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VmotionReservationMbit">VmotionReservationMbit</h4>
@@ -2456,13 +2521,13 @@ below:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L610">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L640">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VmotionShareCount_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VmotionShareCount*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VmotionShareCount" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VmotionShareCount">VmotionShareCount</h4>
@@ -2483,13 +2548,13 @@ below:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L616">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L646">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VmotionShareLevel_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VmotionShareLevel*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VmotionShareLevel" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VmotionShareLevel">VmotionShareLevel</h4>
@@ -2510,13 +2575,13 @@ below:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L622">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L652">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VsanMaximumMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VsanMaximumMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VsanMaximumMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VsanMaximumMbit">VsanMaximumMbit</h4>
@@ -2537,13 +2602,13 @@ below:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L628">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L658">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VsanReservationMbit_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VsanReservationMbit*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VsanReservationMbit" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VsanReservationMbit">VsanReservationMbit</h4>
@@ -2564,13 +2629,13 @@ below:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L634">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L664">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VsanShareCount_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VsanShareCount*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VsanShareCount" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VsanShareCount">VsanShareCount</h4>
@@ -2591,13 +2656,13 @@ below:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L640">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L670">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_VsanShareLevel_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VsanShareLevel*"></a>
   <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_VsanShareLevel" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.VsanShareLevel">VsanShareLevel</h4>
@@ -2618,7 +2683,7 @@ below:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2626,17 +2691,17 @@ below:</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L681">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L711">View Source</a>
   </span>
   <a id="Pulumi_VSphere_DistributedVirtualSwitch_Get_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Get*"></a>
-  <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_Get_System_String_Input_System_String__Pulumi_VSphere_DistributedVirtualSwitchState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Get(System.String,Input{System.String},Pulumi.VSphere.DistributedVirtualSwitchState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DistributedVirtualSwitchState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_DistributedVirtualSwitch_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_DistributedVirtualSwitchState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.DistributedVirtualSwitch.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.DistributedVirtualSwitchState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DistributedVirtualSwitchState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing DistributedVirtualSwitch resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DistributedVirtualSwitch Get(string name, Input&lt;string&gt; id, DistributedVirtualSwitchState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static DistributedVirtualSwitch Get(string name, Input&lt;string&gt; id, DistributedVirtualSwitchState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2655,7 +2720,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -2667,7 +2732,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -2696,7 +2761,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/DistributedVirtualSwitch.cs/#L35" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/DistributedVirtualSwitch.cs/#L68" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

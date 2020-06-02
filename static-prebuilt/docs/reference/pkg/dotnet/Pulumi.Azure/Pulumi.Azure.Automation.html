@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Automation
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,32 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.Automation.Account.html">Account</a></h4>
       <section><p>Manages a Automation Account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAccount = new Azure.Automation.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Automation.AccountArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        SkuName = &amp;quot;Basic&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;development&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Automation.AccountArgs.html">AccountArgs</a></h4>
       <section></section>
@@ -164,6 +190,30 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Automation.JobSchedule.html">JobSchedule</a></h4>
       <section><p>Links an Automation Runbook and Schedule.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Automation.JobSchedule(&amp;quot;example&amp;quot;, new Azure.Automation.JobScheduleArgs
+    {
+        AutomationAccountName = &amp;quot;tf-automation-account&amp;quot;,
+        Parameters = 
+        {
+            { &amp;quot;resourcegroup&amp;quot;, &amp;quot;tf-rgr-vm&amp;quot; },
+            { &amp;quot;vmname&amp;quot;, &amp;quot;TF-VM-01&amp;quot; },
+        },
+        ResourceGroupName = &amp;quot;tf-rgr-automation&amp;quot;,
+        RunbookName = &amp;quot;Get-VirtualMachine&amp;quot;,
+        ScheduleName = &amp;quot;hour&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Automation.JobScheduleArgs.html">JobScheduleArgs</a></h4>
       <section></section>

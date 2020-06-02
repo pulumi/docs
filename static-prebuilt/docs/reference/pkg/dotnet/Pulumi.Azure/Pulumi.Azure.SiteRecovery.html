@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.SiteRecovery
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,38 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.SiteRecovery.Fabric.html">Fabric</a></h4>
       <section><p>Manages a Azure Site Recovery Replication Fabric within a Recovery Services vault. Only Azure fabrics are supported at this time. Replication Fabrics serve as a container within an Azure region for other Site Recovery resources such as protection containers, protected items, network mappings.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primary = new Azure.Core.ResourceGroup(&amp;quot;primary&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var secondary = new Azure.Core.ResourceGroup(&amp;quot;secondary&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var vault = new Azure.RecoveryServices.Vault(&amp;quot;vault&amp;quot;, new Azure.RecoveryServices.VaultArgs
+    {
+        Location = secondary.Location,
+        ResourceGroupName = secondary.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+    });
+    var fabric = new Azure.SiteRecovery.Fabric(&amp;quot;fabric&amp;quot;, new Azure.SiteRecovery.FabricArgs
+    {
+        ResourceGroupName = secondary.Name,
+        RecoveryVaultName = vault.Name,
+        Location = primary.Location,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.SiteRecovery.FabricArgs.html">FabricArgs</a></h4>
       <section></section>
@@ -85,6 +117,72 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.SiteRecovery.NetworkMapping.html">NetworkMapping</a></h4>
       <section><p>Manages a site recovery network mapping on Azure. A network mapping decides how to translate connected netwroks when a VM is migrated from one region to another.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primaryResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;primaryResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var secondaryResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;secondaryResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var vault = new Azure.RecoveryServices.Vault(&amp;quot;vault&amp;quot;, new Azure.RecoveryServices.VaultArgs
+    {
+        Location = secondaryResourceGroup.Location,
+        ResourceGroupName = secondaryResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+    });
+    var primaryFabric = new Azure.SiteRecovery.Fabric(&amp;quot;primaryFabric&amp;quot;, new Azure.SiteRecovery.FabricArgs
+    {
+        ResourceGroupName = secondaryResourceGroup.Name,
+        RecoveryVaultName = vault.Name,
+        Location = primaryResourceGroup.Location,
+    });
+    var secondaryFabric = new Azure.SiteRecovery.Fabric(&amp;quot;secondaryFabric&amp;quot;, new Azure.SiteRecovery.FabricArgs
+    {
+        ResourceGroupName = secondaryResourceGroup.Name,
+        RecoveryVaultName = vault.Name,
+        Location = secondaryResourceGroup.Location,
+    });
+    // Avoids issues with crearing fabrics simultainusly
+    var primaryVirtualNetwork = new Azure.Network.VirtualNetwork(&amp;quot;primaryVirtualNetwork&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        ResourceGroupName = primaryResourceGroup.Name,
+        AddressSpaces = 
+        {
+            &amp;quot;192.168.1.0/24&amp;quot;,
+        },
+        Location = primaryResourceGroup.Location,
+    });
+    var secondaryVirtualNetwork = new Azure.Network.VirtualNetwork(&amp;quot;secondaryVirtualNetwork&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        ResourceGroupName = secondaryResourceGroup.Name,
+        AddressSpaces = 
+        {
+            &amp;quot;192.168.2.0/24&amp;quot;,
+        },
+        Location = secondaryResourceGroup.Location,
+    });
+    var recovery_mapping = new Azure.SiteRecovery.NetworkMapping(&amp;quot;recovery-mapping&amp;quot;, new Azure.SiteRecovery.NetworkMappingArgs
+    {
+        ResourceGroupName = secondaryResourceGroup.Name,
+        RecoveryVaultName = vault.Name,
+        SourceRecoveryFabricName = &amp;quot;primary-fabric&amp;quot;,
+        TargetRecoveryFabricName = &amp;quot;secondary-fabric&amp;quot;,
+        SourceNetworkId = primaryVirtualNetwork.Id,
+        TargetNetworkId = secondaryVirtualNetwork.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.SiteRecovery.NetworkMappingArgs.html">NetworkMappingArgs</a></h4>
       <section></section>
@@ -92,11 +190,115 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.SiteRecovery.ProtectionContainer.html">ProtectionContainer</a></h4>
       <section><p>Manages a Azure Site Recovery protection container. Protection containers serve as containers for replicated VMs and belong to a single region / recovery fabric. Protection containers can contain more than one replicated VM. To replicate a VM, a container must exist in both the source and target Azure regions.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primary = new Azure.Core.ResourceGroup(&amp;quot;primary&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var secondary = new Azure.Core.ResourceGroup(&amp;quot;secondary&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var vault = new Azure.RecoveryServices.Vault(&amp;quot;vault&amp;quot;, new Azure.RecoveryServices.VaultArgs
+    {
+        Location = secondary.Location,
+        ResourceGroupName = secondary.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+    });
+    var fabric = new Azure.SiteRecovery.Fabric(&amp;quot;fabric&amp;quot;, new Azure.SiteRecovery.FabricArgs
+    {
+        ResourceGroupName = secondary.Name,
+        RecoveryVaultName = vault.Name,
+        Location = primary.Location,
+    });
+    var protection_container = new Azure.SiteRecovery.ProtectionContainer(&amp;quot;protection-container&amp;quot;, new Azure.SiteRecovery.ProtectionContainerArgs
+    {
+        ResourceGroupName = secondary.Name,
+        RecoveryVaultName = vault.Name,
+        RecoveryFabricName = fabric.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.SiteRecovery.ProtectionContainerArgs.html">ProtectionContainerArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.SiteRecovery.ProtectionContainerMapping.html">ProtectionContainerMapping</a></h4>
       <section><p>Manages a Azure recovery vault protection container mapping. A protection container mapping decides how to translate the protection container when a VM is migrated from one region to another.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primaryResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;primaryResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var secondaryResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;secondaryResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var vault = new Azure.RecoveryServices.Vault(&amp;quot;vault&amp;quot;, new Azure.RecoveryServices.VaultArgs
+    {
+        Location = secondaryResourceGroup.Location,
+        ResourceGroupName = secondaryResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+    });
+    var primaryFabric = new Azure.SiteRecovery.Fabric(&amp;quot;primaryFabric&amp;quot;, new Azure.SiteRecovery.FabricArgs
+    {
+        ResourceGroupName = secondaryResourceGroup.Name,
+        RecoveryVaultName = vault.Name,
+        Location = primaryResourceGroup.Location,
+    });
+    var secondaryFabric = new Azure.SiteRecovery.Fabric(&amp;quot;secondaryFabric&amp;quot;, new Azure.SiteRecovery.FabricArgs
+    {
+        ResourceGroupName = secondaryResourceGroup.Name,
+        RecoveryVaultName = vault.Name,
+        Location = secondaryResourceGroup.Location,
+    });
+    var primaryProtectionContainer = new Azure.SiteRecovery.ProtectionContainer(&amp;quot;primaryProtectionContainer&amp;quot;, new Azure.SiteRecovery.ProtectionContainerArgs
+    {
+        ResourceGroupName = secondaryResourceGroup.Name,
+        RecoveryVaultName = vault.Name,
+        RecoveryFabricName = primaryFabric.Name,
+    });
+    var secondaryProtectionContainer = new Azure.SiteRecovery.ProtectionContainer(&amp;quot;secondaryProtectionContainer&amp;quot;, new Azure.SiteRecovery.ProtectionContainerArgs
+    {
+        ResourceGroupName = secondaryResourceGroup.Name,
+        RecoveryVaultName = vault.Name,
+        RecoveryFabricName = secondaryFabric.Name,
+    });
+    var policy = new Azure.SiteRecovery.ReplicationPolicy(&amp;quot;policy&amp;quot;, new Azure.SiteRecovery.ReplicationPolicyArgs
+    {
+        ResourceGroupName = secondaryResourceGroup.Name,
+        RecoveryVaultName = vault.Name,
+        RecoveryPointRetentionInMinutes = 24 * 60,
+        ApplicationConsistentSnapshotFrequencyInMinutes = 4 * 60,
+    });
+    var container_mapping = new Azure.SiteRecovery.ProtectionContainerMapping(&amp;quot;container-mapping&amp;quot;, new Azure.SiteRecovery.ProtectionContainerMappingArgs
+    {
+        ResourceGroupName = secondaryResourceGroup.Name,
+        RecoveryVaultName = vault.Name,
+        RecoveryFabricName = primaryFabric.Name,
+        RecoverySourceProtectionContainerName = primaryProtectionContainer.Name,
+        RecoveryTargetProtectionContainerId = secondaryProtectionContainer.Id,
+        RecoveryReplicationPolicyId = policy.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.SiteRecovery.ProtectionContainerMappingArgs.html">ProtectionContainerMappingArgs</a></h4>
       <section></section>
@@ -113,6 +315,35 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.SiteRecovery.ReplicationPolicy.html">ReplicationPolicy</a></h4>
       <section><p>Manages a Azure Site Recovery replication policy within a recovery vault. Replication policies define the frequency at which recovery points are created and how long they are stored.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var secondary = new Azure.Core.ResourceGroup(&amp;quot;secondary&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var vault = new Azure.RecoveryServices.Vault(&amp;quot;vault&amp;quot;, new Azure.RecoveryServices.VaultArgs
+    {
+        Location = secondary.Location,
+        ResourceGroupName = secondary.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+    });
+    var policy = new Azure.SiteRecovery.ReplicationPolicy(&amp;quot;policy&amp;quot;, new Azure.SiteRecovery.ReplicationPolicyArgs
+    {
+        ResourceGroupName = secondary.Name,
+        RecoveryVaultName = vault.Name,
+        RecoveryPointRetentionInMinutes = 24 * 60,
+        ApplicationConsistentSnapshotFrequencyInMinutes = 4 * 60,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.SiteRecovery.ReplicationPolicyArgs.html">ReplicationPolicyArgs</a></h4>
       <section></section>

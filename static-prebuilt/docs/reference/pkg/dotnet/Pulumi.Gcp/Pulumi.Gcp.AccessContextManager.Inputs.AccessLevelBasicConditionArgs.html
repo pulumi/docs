@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AccessLevelBasicConditionArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AccessLevelBasicConditionArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">AccessLevelBasicConditionArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.AccessContextManager.Inputs.html">Pulumi.Gcp.AccessContextManager.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs__ctor_" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs__ctor" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.#ctor">AccessLevelBasicConditionArgs()</h4>
@@ -100,15 +129,18 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_DevicePolicy_" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.DevicePolicy*"></a>
   <h4 id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_DevicePolicy" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.DevicePolicy">DevicePolicy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Device specific restrictions, all restrictions must hold for
+the Condition to be true. If not specified, all devices are
+allowed.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;AccessLevelBasicConditionDevicePolicyArgs&gt;? DevicePolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;AccessLevelBasicConditionDevicePolicyArgs&gt; DevicePolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,17 +152,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs.html">AccessLevelBasicConditionDevicePolicyArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs.html">AccessLevelBasicConditionDevicePolicyArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_IpSubnetworks_" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.IpSubnetworks*"></a>
   <h4 id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_IpSubnetworks" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.IpSubnetworks">IpSubnetworks</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of CIDR block IP subnetwork specification. May be IPv4
+or IPv6.
+Note that for a CIDR IP address block, the specified IP address
+portion must be properly truncated (i.e. all the host bits must
+be zero) or the input is considered malformed. For example,
+&quot;192.0.2.0/24&quot; is accepted but &quot;192.0.2.1/24&quot; is not. Similarly,
+for IPv6, &quot;2001:db8::/32&quot; is accepted whereas &quot;2001:db8::1/32&quot;
+is not. The originating IP of a request must be in one of the
+listed subnets in order for this Condition to be true.
+If empty, all IP addresses are allowed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -146,17 +188,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_Members_" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.Members*"></a>
   <h4 id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_Members" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.Members">Members</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An allowed list of members (users, service accounts).
+Using groups is not supported yet.
+The signed-in user originating the request must be a part of one
+of the provided members. If not specified, a request may come
+from any user (logged in/not logged in, not present in any
+groups, etc.).
+Formats: <code>user:{emailid}</code>, <code>serviceAccount:{emailid}</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -172,21 +221,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_Negate_" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.Negate*"></a>
   <h4 id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_Negate" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.Negate">Negate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether to negate the Condition. If true, the Condition becomes
+a NAND over its non-empty fields, each field must be false for
+the Condition overall to be satisfied. Defaults to false.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Negate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Negate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,17 +250,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_Regions_" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.Regions*"></a>
   <h4 id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_Regions" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.Regions">Regions</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The request must originate from one of the provided
+countries/regions.
+Format: A valid ISO 3166-1 alpha-2 code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -224,17 +279,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_RequiredAccessLevels_" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.RequiredAccessLevels*"></a>
   <h4 id="Pulumi_Gcp_AccessContextManager_Inputs_AccessLevelBasicConditionArgs_RequiredAccessLevels" data-uid="Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.RequiredAccessLevels">RequiredAccessLevels</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of other access levels defined in the same Policy,
+referenced by resource name. Referencing an AccessLevel which
+does not exist is an error. All access levels listed must be
+granted for the Condition to be true.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -250,7 +310,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -262,7 +322,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AccessContextManager/Inputs/AccessLevelBasicConditionArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

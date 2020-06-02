@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Topic
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,75 @@
 <blockquote>
 <p><strong>Note:</strong> at this time EventGrid Topic's are only available in a limited number of regions.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+    });
+    var exampleTopic = new Azure.EventGrid.Topic(&amp;quot;exampleTopic&amp;quot;, new Azure.EventGrid.TopicArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Topic</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Topic</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.EventGrid.html">Pulumi.Azure.EventGrid</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -91,16 +154,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/Topic.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_Topic__ctor_" data-uid="Pulumi.Azure.EventGrid.Topic.#ctor*"></a>
-  <h4 id="Pulumi_Azure_EventGrid_Topic__ctor_System_String_Pulumi_Azure_EventGrid_TopicArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.EventGrid.Topic.#ctor(System.String,Pulumi.Azure.EventGrid.TopicArgs,System.Nullable{CustomResourceOptions})">Topic(String, TopicArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_EventGrid_Topic__ctor_System_String_Pulumi_Azure_EventGrid_TopicArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.EventGrid.Topic.#ctor(System.String,Pulumi.Azure.EventGrid.TopicArgs,Pulumi.CustomResourceOptions)">Topic(String, TopicArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Topic resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topic(string name, TopicArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Topic(string name, TopicArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +188,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +198,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/Topic.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_Topic_Endpoint_" data-uid="Pulumi.Azure.EventGrid.Topic.Endpoint*"></a>
   <h4 id="Pulumi_Azure_EventGrid_Topic_Endpoint" data-uid="Pulumi.Azure.EventGrid.Topic.Endpoint">Endpoint</h4>
@@ -156,13 +219,94 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/Topic.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L58">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_EventGrid_Topic_InputMappingDefaultValues_" data-uid="Pulumi.Azure.EventGrid.Topic.InputMappingDefaultValues*"></a>
+  <h4 id="Pulumi_Azure_EventGrid_Topic_InputMappingDefaultValues" data-uid="Pulumi.Azure.EventGrid.Topic.InputMappingDefaultValues">InputMappingDefaultValues</h4>
+  <div class="markdown level1 summary"><p>A <code>input_mapping_default_values</code> block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;TopicInputMappingDefaultValues&gt; InputMappingDefaultValues { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Outputs.TopicInputMappingDefaultValues.html">TopicInputMappingDefaultValues</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_EventGrid_Topic_InputMappingFields_" data-uid="Pulumi.Azure.EventGrid.Topic.InputMappingFields*"></a>
+  <h4 id="Pulumi_Azure_EventGrid_Topic_InputMappingFields" data-uid="Pulumi.Azure.EventGrid.Topic.InputMappingFields">InputMappingFields</h4>
+  <div class="markdown level1 summary"><p>A <code>input_mapping_fields</code> block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;TopicInputMappingFields&gt; InputMappingFields { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.EventGrid.Outputs.TopicInputMappingFields.html">TopicInputMappingFields</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_EventGrid_Topic_InputSchema_" data-uid="Pulumi.Azure.EventGrid.Topic.InputSchema*"></a>
+  <h4 id="Pulumi_Azure_EventGrid_Topic_InputSchema" data-uid="Pulumi.Azure.EventGrid.Topic.InputSchema">InputSchema</h4>
+  <div class="markdown level1 summary"><p>Specifies the schema in which incoming events will be published to this domain. Allowed values are <code>CloudEventSchemaV1_0</code>, <code>CustomEventSchema</code>, or <code>EventGridSchema</code>. Defaults to <code>EventGridSchema</code>. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InputSchema { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_Topic_Location_" data-uid="Pulumi.Azure.EventGrid.Topic.Location*"></a>
   <h4 id="Pulumi_Azure_EventGrid_Topic_Location" data-uid="Pulumi.Azure.EventGrid.Topic.Location">Location</h4>
@@ -183,13 +327,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/Topic.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_Topic_Name_" data-uid="Pulumi.Azure.EventGrid.Topic.Name*"></a>
   <h4 id="Pulumi_Azure_EventGrid_Topic_Name" data-uid="Pulumi.Azure.EventGrid.Topic.Name">Name</h4>
@@ -210,13 +354,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/Topic.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_Topic_PrimaryAccessKey_" data-uid="Pulumi.Azure.EventGrid.Topic.PrimaryAccessKey*"></a>
   <h4 id="Pulumi_Azure_EventGrid_Topic_PrimaryAccessKey" data-uid="Pulumi.Azure.EventGrid.Topic.PrimaryAccessKey">PrimaryAccessKey</h4>
@@ -237,13 +381,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/Topic.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_Topic_ResourceGroupName_" data-uid="Pulumi.Azure.EventGrid.Topic.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_EventGrid_Topic_ResourceGroupName" data-uid="Pulumi.Azure.EventGrid.Topic.ResourceGroupName">ResourceGroupName</h4>
@@ -264,13 +408,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/Topic.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_Topic_SecondaryAccessKey_" data-uid="Pulumi.Azure.EventGrid.Topic.SecondaryAccessKey*"></a>
   <h4 id="Pulumi_Azure_EventGrid_Topic_SecondaryAccessKey" data-uid="Pulumi.Azure.EventGrid.Topic.SecondaryAccessKey">SecondaryAccessKey</h4>
@@ -291,22 +435,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/Topic.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_Topic_Tags_" data-uid="Pulumi.Azure.EventGrid.Topic.Tags*"></a>
   <h4 id="Pulumi_Azure_EventGrid_Topic_Tags" data-uid="Pulumi.Azure.EventGrid.Topic.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><h2 id="a-mapping-of-tags-to-assign-to-the-resource">A mapping of tags to assign to the resource.</h2>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,7 +462,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -326,17 +470,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/Topic.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventGrid_Topic_Get_" data-uid="Pulumi.Azure.EventGrid.Topic.Get*"></a>
-  <h4 id="Pulumi_Azure_EventGrid_Topic_Get_System_String_Input_System_String__Pulumi_Azure_EventGrid_TopicState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.EventGrid.Topic.Get(System.String,Input{System.String},Pulumi.Azure.EventGrid.TopicState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TopicState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_EventGrid_Topic_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_EventGrid_TopicState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.EventGrid.Topic.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.EventGrid.TopicState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TopicState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Topic resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Topic Get(string name, Input&lt;string&gt; id, TopicState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Topic Get(string name, Input&lt;string&gt; id, TopicState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,7 +499,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -367,7 +511,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -396,7 +540,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventGrid/Topic.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventGrid/Topic.cs/#L47" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

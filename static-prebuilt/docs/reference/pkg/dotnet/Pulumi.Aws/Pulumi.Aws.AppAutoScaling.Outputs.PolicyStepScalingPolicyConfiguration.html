@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PolicyStepScalingPolicyConfiguration
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,23 +78,48 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PolicyStepScalingPolicyConfiguration</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.AppAutoScaling.Outputs.html">Pulumi.Aws.AppAutoScaling.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_AppAutoScaling_Outputs_PolicyStepScalingPolicyConfiguration_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class PolicyStepScalingPolicyConfiguration : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PolicyStepScalingPolicyConfiguration</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppAutoScaling_Outputs_PolicyStepScalingPolicyConfiguration_AdjustmentType" data-uid="Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfiguration.AdjustmentType">AdjustmentType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and <code>PercentChangeInCapacity</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? AdjustmentType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string AdjustmentType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -106,16 +131,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppAutoScaling_Outputs_PolicyStepScalingPolicyConfiguration_Cooldown" data-uid="Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfiguration.Cooldown">Cooldown</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -137,14 +163,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppAutoScaling_Outputs_PolicyStepScalingPolicyConfiguration_MetricAggregationType" data-uid="Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfiguration.MetricAggregationType">MetricAggregationType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The aggregation type for the policy's metrics. Valid values are &quot;Minimum&quot;, &quot;Maximum&quot;, and &quot;Average&quot;. Without a value, AWS will treat the aggregation type as &quot;Average&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? MetricAggregationType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string MetricAggregationType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,16 +183,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppAutoScaling_Outputs_PolicyStepScalingPolicyConfiguration_MinAdjustmentMagnitude" data-uid="Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfiguration.MinAdjustmentMagnitude">MinAdjustmentMagnitude</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimum number to adjust your scalable dimension as a result of a scaling activity. If the adjustment type is PercentChangeInCapacity, the scaling policy changes the scalable dimension of the scalable target by this amount.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -187,10 +215,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppAutoScaling_Outputs_PolicyStepScalingPolicyConfiguration_StepAdjustments" data-uid="Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfiguration.StepAdjustments">StepAdjustments</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A set of adjustments that manage scaling. These have the following structure:</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -206,7 +235,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfigurationStepAdjustment.html">PolicyStepScalingPolicyConfigurationStepAdjustment</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfigurationStepAdjustment.html">PolicyStepScalingPolicyConfigurationStepAdjustment</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -218,7 +247,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Outputs/PolicyStepScalingPolicyConfiguration.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

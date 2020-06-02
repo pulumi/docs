@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Tag
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,12 +79,77 @@ objects more sortable and searchable.</p>
 <p><strong>NOTE:</strong> Tagging support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var category = new VSphere.TagCategory(&amp;quot;category&amp;quot;, new VSphere.TagCategoryArgs
+    {
+        AssociableTypes = 
+        {
+            &amp;quot;VirtualMachine&amp;quot;,
+            &amp;quot;Datastore&amp;quot;,
+        },
+        Cardinality = &amp;quot;SINGLE&amp;quot;,
+        Description = &amp;quot;Managed by Pulumi&amp;quot;,
+    });
+    var tag = new VSphere.Tag(&amp;quot;tag&amp;quot;, new VSphere.TagArgs
+    {
+        CategoryId = category.Id,
+        Description = &amp;quot;Managed by Pulumi&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Tag</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Tag</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -95,16 +160,16 @@ requires vCenter 6.0 or higher.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Tag.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Tag.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Tag__ctor_" data-uid="Pulumi.VSphere.Tag.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_Tag__ctor_System_String_Pulumi_VSphere_TagArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.Tag.#ctor(System.String,Pulumi.VSphere.TagArgs,System.Nullable{CustomResourceOptions})">Tag(String, TagArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_Tag__ctor_System_String_Pulumi_VSphere_TagArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.Tag.#ctor(System.String,Pulumi.VSphere.TagArgs,Pulumi.CustomResourceOptions)">Tag(String, TagArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Tag resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Tag(string name, TagArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Tag(string name, TagArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,7 +194,7 @@ requires vCenter 6.0 or higher.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -139,7 +204,7 @@ requires vCenter 6.0 or higher.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Tag.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Tag.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Tag_CategoryId_" data-uid="Pulumi.VSphere.Tag.CategoryId*"></a>
   <h4 id="Pulumi_VSphere_Tag_CategoryId" data-uid="Pulumi.VSphere.Tag.CategoryId">CategoryId</h4>
@@ -161,13 +226,13 @@ which this tag will be created. Forces a new resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Tag.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Tag.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Tag_Description_" data-uid="Pulumi.VSphere.Tag.Description*"></a>
   <h4 id="Pulumi_VSphere_Tag_Description" data-uid="Pulumi.VSphere.Tag.Description">Description</h4>
@@ -176,7 +241,7 @@ which this tag will be created. Forces a new resource if changed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -188,13 +253,13 @@ which this tag will be created. Forces a new resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Tag.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Tag.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Tag_Name_" data-uid="Pulumi.VSphere.Tag.Name*"></a>
   <h4 id="Pulumi_VSphere_Tag_Name" data-uid="Pulumi.VSphere.Tag.Name">Name</h4>
@@ -216,7 +281,7 @@ within its category.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -224,17 +289,17 @@ within its category.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Tag.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Tag.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Tag_Get_" data-uid="Pulumi.VSphere.Tag.Get*"></a>
-  <h4 id="Pulumi_VSphere_Tag_Get_System_String_Input_System_String__Pulumi_VSphere_TagState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.Tag.Get(System.String,Input{System.String},Pulumi.VSphere.TagState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TagState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_Tag_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_TagState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.Tag.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.TagState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TagState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Tag resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Tag Get(string name, Input&lt;string&gt; id, TagState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Tag Get(string name, Input&lt;string&gt; id, TagState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,7 +318,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -265,7 +330,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -294,7 +359,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Tag.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Tag.cs/#L56" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

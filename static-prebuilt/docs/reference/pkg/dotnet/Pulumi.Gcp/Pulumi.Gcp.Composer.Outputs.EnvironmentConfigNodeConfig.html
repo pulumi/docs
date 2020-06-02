@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EnvironmentConfigNodeConfig
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,19 +78,45 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">EnvironmentConfigNodeConfig</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Composer.Outputs.html">Pulumi.Gcp.Composer.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class EnvironmentConfigNodeConfig : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class EnvironmentConfigNodeConfig</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L20">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfig_DiskSizeGb" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfig.DiskSizeGb">DiskSizeGb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The disk size in GB used for node VMs. Minimum size is 20GB.
+If unspecified, defaults to 100GB. Cannot be updated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -112,10 +138,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L26">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfig_IpAllocationPolicy" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfig.IpAllocationPolicy">IpAllocationPolicy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Configuration for controlling how IPs are allocated in the GKE cluster.
+Structure is documented below.
+Cannot be updated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -137,14 +166,18 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L33">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfig_MachineType" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfig.MachineType">MachineType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Compute Engine machine type used for cluster instances,
+specified as a name or relative resource name. For example:
+&quot;projects/{project}/zones/{zone}/machineTypes/{machineType}&quot;. Must belong to the enclosing environment's project and
+region/zone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? MachineType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string MachineType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,20 +189,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfig_Network" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfig.Network">Network</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Compute Engine network to be used for machine
+communications, specified as a self-link, relative resource name
+(e.g. &quot;projects/{project}/global/networks/{network}&quot;), by name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Network</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Network</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,16 +217,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L45">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfig_OauthScopes" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfig.OauthScopes">OauthScopes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The set of Google API scopes to be made available on all node
+VMs. Cannot be updated. If empty, defaults to
+<code>[&amp;quot;https://www.googleapis.com/auth/cloud-platform&amp;quot;]</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -206,20 +245,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfig_ServiceAccount" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfig.ServiceAccount">ServiceAccount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Google Cloud Platform Service Account to be used by the
+node VMs. If a service account is not specified, the &quot;default&quot;
+Compute Engine service account is used. Cannot be updated. If given,
+note that the service account must have <code>roles/composer.worker</code>
+for any GCP resources created under the Cloud Composer Environment.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ServiceAccount</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ServiceAccount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,20 +275,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L60">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfig_Subnetwork" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfig.Subnetwork">Subnetwork</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Compute Engine subnetwork to be used for machine
+communications, , specified as a self-link, relative resource name (e.g.
+&quot;projects/{project}/regions/{region}/subnetworks/{subnetwork}&quot;), or by name. If subnetwork is provided,
+network must also be provided and the subnetwork must belong to the enclosing environment's project and region.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Subnetwork</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Subnetwork</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,16 +304,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfig_Tags" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfig.Tags">Tags</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The list of instance tags applied to all node VMs. Tags are
+used to identify valid sources or targets for network
+firewalls. Each tag within the list must comply with RFC1035.
+Cannot be updated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -281,16 +333,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L74">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfig_Zone" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfig.Zone">Zone</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Compute Engine zone in which to deploy the VMs running the
+Apache Airflow software, specified as the zone name or
+relative resource name (e.g. &quot;projects/{project}/zones/{zone}&quot;). Must belong to the enclosing environment's project
+and region.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -318,7 +374,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

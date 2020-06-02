@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PoolNetworkConfigurationEndpointConfiguration
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PoolNetworkConfigurationEndpointConfiguration</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Batch.Outputs.html">Pulumi.Azure.Batch.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Batch_Outputs_PoolNetworkConfigurationEndpointConfiguration_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class PoolNetworkConfigurationEndpointConfiguration : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PoolNetworkConfigurationEndpointConfiguration</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolNetworkConfigurationEndpointConfiguration_BackendPort" data-uid="Pulumi.Azure.Batch.Outputs.PoolNetworkConfigurationEndpointConfiguration.BackendPort">BackendPort</h4>
   <div class="markdown level1 summary"><p>The port number on the compute node. Acceptable values are between <code>1</code> and <code>65535</code> except for <code>29876</code>, <code>29877</code> as these are reserved. Changing this forces a new resource to be created.</p>
@@ -113,7 +137,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolNetworkConfigurationEndpointConfiguration_FrontendPortRange" data-uid="Pulumi.Azure.Batch.Outputs.PoolNetworkConfigurationEndpointConfiguration.FrontendPortRange">FrontendPortRange</h4>
   <div class="markdown level1 summary"><p>The range of external ports that will be used to provide inbound access to the backendPort on individual compute nodes in the format of <code>1000-1100</code>. Acceptable values range between <code>1</code> and <code>65534</code> except ports from <code>50000</code> to <code>55000</code> which are reserved by the Batch service. All ranges within a pool must be distinct and cannot overlap. Values must be a range of at least <code>100</code> nodes. Changing this forces a new resource to be created.</p>
@@ -139,7 +163,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolNetworkConfigurationEndpointConfiguration_Name" data-uid="Pulumi.Azure.Batch.Outputs.PoolNetworkConfigurationEndpointConfiguration.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of the endpoint. The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters. Changing this forces a new resource to be created.</p>
@@ -165,7 +189,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolNetworkConfigurationEndpointConfiguration_NetworkSecurityGroupRules" data-uid="Pulumi.Azure.Batch.Outputs.PoolNetworkConfigurationEndpointConfiguration.NetworkSecurityGroupRules">NetworkSecurityGroupRules</h4>
   <div class="markdown level1 summary"><p>A list of network security group rules that will be applied to the endpoint. The maximum number of rules that can be specified across all the endpoints on a Batch pool is <code>25</code>. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. Set as documented in the network_security_group_rules block below. Changing this forces a new resource to be created.</p>
@@ -185,13 +209,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.PoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRule.html">PoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRule</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.PoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRule.html">PoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRule</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolNetworkConfigurationEndpointConfiguration_Protocol" data-uid="Pulumi.Azure.Batch.Outputs.PoolNetworkConfigurationEndpointConfiguration.Protocol">Protocol</h4>
   <div class="markdown level1 summary"><p>The protocol of the endpoint. Acceptable values are <code>TCP</code> and <code>UDP</code>. Changing this forces a new resource to be created.</p>
@@ -223,7 +247,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolNetworkConfigurationEndpointConfiguration.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

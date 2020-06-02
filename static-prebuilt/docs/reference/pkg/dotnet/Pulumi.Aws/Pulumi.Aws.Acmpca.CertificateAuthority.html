@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CertificateAuthority
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,155 @@
 <blockquote>
 <p><strong>NOTE:</strong> Creating this resource will leave the certificate authority in a <code>PENDING_CERTIFICATE</code> status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the <code>certificate_signing_request</code> attribute and import the signed certificate using the AWS SDK, CLI or Console. This provider can support another resource to manage that workflow automatically in the future.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Acmpca.CertificateAuthority(&amp;quot;example&amp;quot;, new Aws.Acmpca.CertificateAuthorityArgs
+    {
+        CertificateAuthorityConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs
+        {
+            KeyAlgorithm = &amp;quot;RSA_4096&amp;quot;,
+            SigningAlgorithm = &amp;quot;SHA512WITHRSA&amp;quot;,
+            Subject = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs
+            {
+                CommonName = &amp;quot;example.com&amp;quot;,
+            },
+        },
+        PermanentDeletionTimeInDays = 7,
+    });
+}
+
+}
+</code></pre>
+<h3 id="enable-certificate-revocation-list">Enable Certificate Revocation List</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleBucket = new Aws.S3.Bucket(&amp;quot;exampleBucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var acmpcaBucketAccess = Output.Tuple(exampleBucket.Arn, exampleBucket.Arn).Apply(values =&gt;
+    {
+        var exampleBucketArn = values.Item1;
+        var exampleBucketArn1 = values.Item2;
+        return Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        &amp;quot;s3:GetBucketAcl&amp;quot;,
+                        &amp;quot;s3:GetBucketLocation&amp;quot;,
+                        &amp;quot;s3:PutObject&amp;quot;,
+                        &amp;quot;s3:PutObjectAcl&amp;quot;,
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Identifiers = 
+                            {
+                                &amp;quot;acm-pca.amazonaws.com&amp;quot;,
+                            },
+                            Type = &amp;quot;Service&amp;quot;,
+                        },
+                    },
+                    Resources = 
+                    {
+                        exampleBucketArn,
+                        $&amp;quot;{exampleBucketArn1}/*&amp;quot;,
+                    },
+                },
+            },
+        });
+    });
+    var exampleBucketPolicy = new Aws.S3.BucketPolicy(&amp;quot;exampleBucketPolicy&amp;quot;, new Aws.S3.BucketPolicyArgs
+    {
+        Bucket = exampleBucket.Id,
+        Policy = acmpcaBucketAccess.Apply(acmpcaBucketAccess =&gt; acmpcaBucketAccess.Json),
+    });
+    var exampleCertificateAuthority = new Aws.Acmpca.CertificateAuthority(&amp;quot;exampleCertificateAuthority&amp;quot;, new Aws.Acmpca.CertificateAuthorityArgs
+    {
+        CertificateAuthorityConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs
+        {
+            KeyAlgorithm = &amp;quot;RSA_4096&amp;quot;,
+            SigningAlgorithm = &amp;quot;SHA512WITHRSA&amp;quot;,
+            Subject = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs
+            {
+                CommonName = &amp;quot;example.com&amp;quot;,
+            },
+        },
+        RevocationConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityRevocationConfigurationArgs
+        {
+            CrlConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityRevocationConfigurationCrlConfigurationArgs
+            {
+                CustomCname = &amp;quot;crl.example.com&amp;quot;,
+                Enabled = true,
+                ExpirationInDays = 7,
+                S3BucketName = exampleBucket.Id,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CertificateAuthority</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">CertificateAuthority</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Acmpca.html">Pulumi.Aws.Acmpca</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -91,16 +234,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L223">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority__ctor_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority__ctor_System_String_Pulumi_Aws_Acmpca_CertificateAuthorityArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.#ctor(System.String,Pulumi.Aws.Acmpca.CertificateAuthorityArgs,System.Nullable{CustomResourceOptions})">CertificateAuthority(String, CertificateAuthorityArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority__ctor_System_String_Pulumi_Aws_Acmpca_CertificateAuthorityArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.#ctor(System.String,Pulumi.Aws.Acmpca.CertificateAuthorityArgs,Pulumi.CustomResourceOptions)">CertificateAuthority(String, CertificateAuthorityArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a CertificateAuthority resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CertificateAuthority(string name, CertificateAuthorityArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public CertificateAuthority(string name, CertificateAuthorityArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +268,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +278,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Arn_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Arn*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Arn" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Arn">Arn</h4>
@@ -156,13 +299,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Certificate_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Certificate*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Certificate" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Certificate">Certificate</h4>
@@ -183,13 +326,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateAuthorityConfiguration_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateAuthorityConfiguration*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateAuthorityConfiguration" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateAuthorityConfiguration">CertificateAuthorityConfiguration</h4>
@@ -210,13 +353,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Acmpca.Outputs.CertificateAuthorityCertificateAuthorityConfiguration.html">CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Acmpca.Outputs.CertificateAuthorityCertificateAuthorityConfiguration.html">CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateChain_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateChain*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateChain" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateChain">CertificateChain</h4>
@@ -237,13 +380,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateSigningRequest_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateSigningRequest*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateSigningRequest" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateSigningRequest">CertificateSigningRequest</h4>
@@ -264,13 +407,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Enabled_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Enabled*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Enabled" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Enabled">Enabled</h4>
@@ -291,13 +434,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_NotAfter_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.NotAfter*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_NotAfter" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.NotAfter">NotAfter</h4>
@@ -318,13 +461,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_NotBefore_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.NotBefore*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_NotBefore" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.NotBefore">NotBefore</h4>
@@ -345,13 +488,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_PermanentDeletionTimeInDays_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.PermanentDeletionTimeInDays*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_PermanentDeletionTimeInDays" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.PermanentDeletionTimeInDays">PermanentDeletionTimeInDays</h4>
@@ -372,13 +515,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_RevocationConfiguration_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.RevocationConfiguration*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_RevocationConfiguration" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.RevocationConfiguration">RevocationConfiguration</h4>
@@ -399,13 +542,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Acmpca.Outputs.CertificateAuthorityRevocationConfiguration.html">CertificateAuthorityRevocationConfiguration</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Acmpca.Outputs.CertificateAuthorityRevocationConfiguration.html">CertificateAuthorityRevocationConfiguration</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Serial_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Serial*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Serial" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Serial">Serial</h4>
@@ -426,13 +569,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Status_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Status*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Status" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Status">Status</h4>
@@ -453,13 +596,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Tags_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Tags*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Tags" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Tags">Tags</h4>
@@ -468,7 +611,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -480,13 +623,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Type_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Type*"></a>
   <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Type" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Type">Type</h4>
@@ -495,7 +638,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -507,7 +650,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -515,17 +658,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L253">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Get_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Get*"></a>
-  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Get_System_String_Input_System_String__Pulumi_Aws_Acmpca_CertificateAuthorityState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Get(System.String,Input{System.String},Pulumi.Aws.Acmpca.CertificateAuthorityState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, CertificateAuthorityState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Acmpca_CertificateAuthorityState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Acmpca.CertificateAuthorityState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, CertificateAuthorityState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing CertificateAuthority resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CertificateAuthority Get(string name, Input&lt;string&gt; id, CertificateAuthorityState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CertificateAuthority Get(string name, Input&lt;string&gt; id, CertificateAuthorityState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -544,7 +687,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -556,7 +699,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -585,7 +728,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L129" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

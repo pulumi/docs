@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Container
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,12 +79,59 @@
       <h4><a class="xref" href="Pulumi.Gcp.Container.Cluster.html">Cluster</a></h4>
       <section><p>Manages a Google Kubernetes Engine (GKE) cluster. For more information see
 <a href="https://cloud.google.com/container-engine/docs/clusters">the official documentation</a>
-and <a href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters">the API reference</a>.</p>
+and <a href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters">the API reference</a>.</p>
 <blockquote>
 <p><strong>Note:</strong> All arguments and attributes, including basic auth username and
 passwords as well as certificate outputs will be stored in the raw state as
-plaintext. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+plaintext. <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
 </blockquote>
+<h2 id="example-usage---with-the-default-node-pool">Example Usage - with the default node pool</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primary = new Gcp.Container.Cluster(&amp;quot;primary&amp;quot;, new Gcp.Container.ClusterArgs
+    {
+        InitialNodeCount = 3,
+        Location = &amp;quot;us-central1-a&amp;quot;,
+        MasterAuth = new Gcp.Container.Inputs.ClusterMasterAuthArgs
+        {
+            ClientCertificateConfig = new Gcp.Container.Inputs.ClusterMasterAuthClientCertificateConfigArgs
+            {
+                IssueClientCertificate = false,
+            },
+            Password = &amp;quot;&amp;quot;,
+            Username = &amp;quot;&amp;quot;,
+        },
+        NodeConfig = new Gcp.Container.Inputs.ClusterNodeConfigArgs
+        {
+            Labels = 
+            {
+                { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+            },
+            Metadata = 
+            {
+                { &amp;quot;disable-legacy-endpoints&amp;quot;, &amp;quot;true&amp;quot; },
+            },
+            OauthScopes = 
+            {
+                &amp;quot;https://www.googleapis.com/auth/logging.write&amp;quot;,
+                &amp;quot;https://www.googleapis.com/auth/monitoring&amp;quot;,
+            },
+            Tags = 
+            {
+                &amp;quot;foo&amp;quot;,
+                &amp;quot;bar&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Container.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
@@ -117,7 +164,7 @@ plaintext. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Rea
       <h4><a class="xref" href="Pulumi.Gcp.Container.NodePool.html">NodePool</a></h4>
       <section><p>Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
 the cluster control plane. For more information see <a href="https://cloud.google.com/container-engine/docs/node-pools">the official documentation</a>
-and <a href="https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.nodePools">the API reference</a>.</p>
+and <a href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools">the API reference</a>.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Container.NodePoolArgs.html">NodePoolArgs</a></h4>
       <section></section>
@@ -126,6 +173,23 @@ and <a href="https://cloud.google.com/container-engine/reference/rest/v1/project
       <h4><a class="xref" href="Pulumi.Gcp.Container.Registry.html">Registry</a></h4>
       <section><p>Ensures that the Google Cloud Storage bucket that backs Google Container Registry exists. Creating this resource will create the backing bucket if it does not exist, or do nothing if the bucket already exists. Destroying this resource does <em>NOT</em> destroy the backing bucket. For more information see <a href="https://cloud.google.com/container-registry/docs/overview">the official documentation</a></p>
 <p>This resource can be used to ensure that the GCS bucket exists prior to assigning permissions. For more information see the <a href="https://cloud.google.com/container-registry/docs/access-control">access control page</a> for GCR.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var registry = new Gcp.Container.Registry(&amp;quot;registry&amp;quot;, new Gcp.Container.RegistryArgs
+    {
+        Location = &amp;quot;EU&amp;quot;,
+        Project = &amp;quot;my-project&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Container.RegistryArgs.html">RegistryArgs</a></h4>
       <section></section>

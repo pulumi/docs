@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetProduct
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,28 +78,136 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetProduct</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Pricing.html">Pulumi.Aws.Pricing</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Pricing_GetProduct_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetProduct : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetProduct</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Pricing/GetProduct.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Pricing/GetProduct.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Aws_Pricing_GetProduct_InvokeAsync_" data-uid="Pulumi.Aws.Pricing.GetProduct.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_Pricing_GetProduct_InvokeAsync_Pulumi_Aws_Pricing_GetProductArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.Pricing.GetProduct.InvokeAsync(Pulumi.Aws.Pricing.GetProductArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetProductArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Pricing_GetProduct_InvokeAsync_Pulumi_Aws_Pricing_GetProductArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.Pricing.GetProduct.InvokeAsync(Pulumi.Aws.Pricing.GetProductArgs,Pulumi.InvokeOptions)">InvokeAsync(GetProductArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Use this data source to get the pricing information of all products in AWS.
 This data source is only available in a us-east-1 or ap-south-1 provider.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = Output.Create(Aws.Pricing.GetProduct.InvokeAsync(new Aws.Pricing.GetProductArgs
+    {
+        Filters = 
+        {
+            new Aws.Pricing.Inputs.GetProductFilterArgs
+            {
+                Field = &amp;quot;instanceType&amp;quot;,
+                Value = &amp;quot;c5.xlarge&amp;quot;,
+            },
+            new Aws.Pricing.Inputs.GetProductFilterArgs
+            {
+                Field = &amp;quot;operatingSystem&amp;quot;,
+                Value = &amp;quot;Linux&amp;quot;,
+            },
+            new Aws.Pricing.Inputs.GetProductFilterArgs
+            {
+                Field = &amp;quot;location&amp;quot;,
+                Value = &amp;quot;US East (N. Virginia)&amp;quot;,
+            },
+            new Aws.Pricing.Inputs.GetProductFilterArgs
+            {
+                Field = &amp;quot;preInstalledSw&amp;quot;,
+                Value = &amp;quot;NA&amp;quot;,
+            },
+            new Aws.Pricing.Inputs.GetProductFilterArgs
+            {
+                Field = &amp;quot;licenseModel&amp;quot;,
+                Value = &amp;quot;No License required&amp;quot;,
+            },
+            new Aws.Pricing.Inputs.GetProductFilterArgs
+            {
+                Field = &amp;quot;tenancy&amp;quot;,
+                Value = &amp;quot;Shared&amp;quot;,
+            },
+            new Aws.Pricing.Inputs.GetProductFilterArgs
+            {
+                Field = &amp;quot;capacitystatus&amp;quot;,
+                Value = &amp;quot;Used&amp;quot;,
+            },
+        },
+        ServiceCode = &amp;quot;AmazonEC2&amp;quot;,
+    }));
+}
+
+}
+</code></pre>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = Output.Create(Aws.Pricing.GetProduct.InvokeAsync(new Aws.Pricing.GetProductArgs
+    {
+        Filters = 
+        {
+            new Aws.Pricing.Inputs.GetProductFilterArgs
+            {
+                Field = &amp;quot;instanceType&amp;quot;,
+                Value = &amp;quot;ds1.xlarge&amp;quot;,
+            },
+            new Aws.Pricing.Inputs.GetProductFilterArgs
+            {
+                Field = &amp;quot;location&amp;quot;,
+                Value = &amp;quot;US East (N. Virginia)&amp;quot;,
+            },
+        },
+        ServiceCode = &amp;quot;AmazonRedshift&amp;quot;,
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetProductResult&gt; InvokeAsync(GetProductArgs args, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetProductResult&gt; InvokeAsync(GetProductArgs args, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,7 +225,7 @@ This data source is only available in a us-east-1 or ap-south-1 provider.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -133,7 +241,7 @@ This data source is only available in a us-east-1 or ap-south-1 provider.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.Pricing.GetProductResult.html">GetProductResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.Pricing.GetProductResult.html">GetProductResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -145,7 +253,7 @@ This data source is only available in a us-east-1 or ap-south-1 provider.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Pricing/GetProduct.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Pricing/GetProduct.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

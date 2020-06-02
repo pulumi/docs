@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class OrganizationSink
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,12 +76,76 @@
 <a href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
 granted to the credentials used with this provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var log_bucket = new Gcp.Storage.Bucket(&amp;quot;log-bucket&amp;quot;, new Gcp.Storage.BucketArgs
+    {
+    });
+    var my_sink = new Gcp.Logging.OrganizationSink(&amp;quot;my-sink&amp;quot;, new Gcp.Logging.OrganizationSinkArgs
+    {
+        OrgId = &amp;quot;123456789&amp;quot;,
+        Destination = log_bucket.Name.Apply(name =&gt; $&amp;quot;storage.googleapis.com/{name}&amp;quot;),
+        Filter = &amp;quot;resource.type = gce_instance AND severity &gt;= WARN&amp;quot;,
+    });
+    var log_writer = new Gcp.Projects.IAMMember(&amp;quot;log-writer&amp;quot;, new Gcp.Projects.IAMMemberArgs
+    {
+        Role = &amp;quot;roles/storage.objectCreator&amp;quot;,
+        Member = my_sink.WriterIdentity,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">OrganizationSink</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">OrganizationSink</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Logging.html">Pulumi.Gcp.Logging</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -92,16 +156,16 @@ granted to the credentials used with this provider.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationSink.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSink__ctor_" data-uid="Pulumi.Gcp.Logging.OrganizationSink.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Logging_OrganizationSink__ctor_System_String_Pulumi_Gcp_Logging_OrganizationSinkArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Logging.OrganizationSink.#ctor(System.String,Pulumi.Gcp.Logging.OrganizationSinkArgs,System.Nullable{CustomResourceOptions})">OrganizationSink(String, OrganizationSinkArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Logging_OrganizationSink__ctor_System_String_Pulumi_Gcp_Logging_OrganizationSinkArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Logging.OrganizationSink.#ctor(System.String,Pulumi.Gcp.Logging.OrganizationSinkArgs,Pulumi.CustomResourceOptions)">OrganizationSink(String, OrganizationSinkArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a OrganizationSink resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OrganizationSink(string name, OrganizationSinkArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public OrganizationSink(string name, OrganizationSinkArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,7 +190,7 @@ granted to the credentials used with this provider.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -136,7 +200,7 @@ granted to the credentials used with this provider.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationSink.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSink_BigqueryOptions_" data-uid="Pulumi.Gcp.Logging.OrganizationSink.BigqueryOptions*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSink_BigqueryOptions" data-uid="Pulumi.Gcp.Logging.OrganizationSink.BigqueryOptions">BigqueryOptions</h4>
@@ -157,19 +221,18 @@ granted to the credentials used with this provider.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Logging.Outputs.OrganizationSinkBigqueryOptions.html">OrganizationSinkBigqueryOptions</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Logging.Outputs.OrganizationSinkBigqueryOptions.html">OrganizationSinkBigqueryOptions</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationSink.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSink_Destination_" data-uid="Pulumi.Gcp.Logging.OrganizationSink.Destination*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSink_Destination" data-uid="Pulumi.Gcp.Logging.OrganizationSink.Destination">Destination</h4>
   <div class="markdown level1 summary"><p>The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p>
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -186,13 +249,13 @@ The writer associated with the sink must have access to write to the above resou
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationSink.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSink_Filter_" data-uid="Pulumi.Gcp.Logging.OrganizationSink.Filter*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSink_Filter" data-uid="Pulumi.Gcp.Logging.OrganizationSink.Filter">Filter</h4>
@@ -203,7 +266,7 @@ write a filter.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Filter { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Filter { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -215,13 +278,13 @@ write a filter.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationSink.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSink_IncludeChildren_" data-uid="Pulumi.Gcp.Logging.OrganizationSink.IncludeChildren*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSink_IncludeChildren" data-uid="Pulumi.Gcp.Logging.OrganizationSink.IncludeChildren">IncludeChildren</h4>
@@ -243,13 +306,13 @@ associated with child projects are also exported; otherwise only logs relating t
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationSink.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSink_Name_" data-uid="Pulumi.Gcp.Logging.OrganizationSink.Name*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSink_Name" data-uid="Pulumi.Gcp.Logging.OrganizationSink.Name">Name</h4>
@@ -270,13 +333,13 @@ associated with child projects are also exported; otherwise only logs relating t
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationSink.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSink_OrgId_" data-uid="Pulumi.Gcp.Logging.OrganizationSink.OrgId*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSink_OrgId" data-uid="Pulumi.Gcp.Logging.OrganizationSink.OrgId">OrgId</h4>
@@ -297,13 +360,13 @@ associated with child projects are also exported; otherwise only logs relating t
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationSink.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSink_WriterIdentity_" data-uid="Pulumi.Gcp.Logging.OrganizationSink.WriterIdentity*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSink_WriterIdentity" data-uid="Pulumi.Gcp.Logging.OrganizationSink.WriterIdentity">WriterIdentity</h4>
@@ -325,7 +388,7 @@ configured <code>destination</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -333,17 +396,17 @@ configured <code>destination</code>.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationSink.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSink_Get_" data-uid="Pulumi.Gcp.Logging.OrganizationSink.Get*"></a>
-  <h4 id="Pulumi_Gcp_Logging_OrganizationSink_Get_System_String_Input_System_String__Pulumi_Gcp_Logging_OrganizationSinkState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Logging.OrganizationSink.Get(System.String,Input{System.String},Pulumi.Gcp.Logging.OrganizationSinkState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, OrganizationSinkState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Logging_OrganizationSink_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Logging_OrganizationSinkState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Logging.OrganizationSink.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Logging.OrganizationSinkState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, OrganizationSinkState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing OrganizationSink resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OrganizationSink Get(string name, Input&lt;string&gt; id, OrganizationSinkState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static OrganizationSink Get(string name, Input&lt;string&gt; id, OrganizationSinkState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -362,7 +425,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -374,7 +437,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -403,7 +466,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationSink.cs/#L51" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

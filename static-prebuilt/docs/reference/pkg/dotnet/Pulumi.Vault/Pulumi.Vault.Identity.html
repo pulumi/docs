@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.Identity
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -88,6 +88,68 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.EntityPolicies.html">EntityPolicies</a></h4>
       <section><p>Manages policies for an Identity Entity for Vault. The <a href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="exclusive-policies">Exclusive Policies</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var entity = new Vault.Identity.Entity(&amp;quot;entity&amp;quot;, new Vault.Identity.EntityArgs
+    {
+        ExternalPolicies = true,
+    });
+    var policies = new Vault.Identity.EntityPolicies(&amp;quot;policies&amp;quot;, new Vault.Identity.EntityPoliciesArgs
+    {
+        Policies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;test&amp;quot;,
+        },
+        Exclusive = true,
+        EntityId = entity.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="non-exclusive-policies">Non-exclusive Policies</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var entity = new Vault.Identity.Entity(&amp;quot;entity&amp;quot;, new Vault.Identity.EntityArgs
+    {
+        ExternalPolicies = true,
+    });
+    var @default = new Vault.Identity.EntityPolicies(&amp;quot;default&amp;quot;, new Vault.Identity.EntityPoliciesArgs
+    {
+        Policies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;test&amp;quot;,
+        },
+        Exclusive = false,
+        EntityId = entity.Id,
+    });
+    var others = new Vault.Identity.EntityPolicies(&amp;quot;others&amp;quot;, new Vault.Identity.EntityPoliciesArgs
+    {
+        Policies = 
+        {
+            &amp;quot;others&amp;quot;,
+        },
+        Exclusive = false,
+        EntityId = entity.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.EntityPoliciesArgs.html">EntityPoliciesArgs</a></h4>
       <section></section>
@@ -110,10 +172,91 @@
       <h4><a class="xref" href="Pulumi.Vault.Identity.Group.html">Group</a></h4>
       <section><p>Creates an Identity Group for Vault. The <a href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <p>A group can contain multiple entities as its members. A group can also have subgroups. Policies set on the group is granted to all members of the group. During request time, when the token's entity ID is being evaluated for the policies that it has access to; along with the policies on the entity itself, policies that are inherited due to group memberships are also granted.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="internal-group">Internal Group</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @internal = new Vault.Identity.Group(&amp;quot;internal&amp;quot;, new Vault.Identity.GroupArgs
+    {
+        Metadata = 
+        {
+            { &amp;quot;version&amp;quot;, &amp;quot;2&amp;quot; },
+        },
+        Policies = 
+        {
+            &amp;quot;dev&amp;quot;,
+            &amp;quot;test&amp;quot;,
+        },
+        Type = &amp;quot;internal&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="external-group">External Group</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @group = new Vault.Identity.Group(&amp;quot;group&amp;quot;, new Vault.Identity.GroupArgs
+    {
+        Metadata = 
+        {
+            { &amp;quot;version&amp;quot;, &amp;quot;1&amp;quot; },
+        },
+        Policies = 
+        {
+            &amp;quot;test&amp;quot;,
+        },
+        Type = &amp;quot;external&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GroupAlias.html">GroupAlias</a></h4>
       <section><p>Creates an Identity Group Alias for Vault. The <a href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <p>Group aliases allows entity membership in external groups to be managed semi-automatically. External group serves as a mapping to a group that is outside of the identity store. External groups can have one (and only one) alias. This alias should map to a notion of group that is outside of the identity store. For example, groups in LDAP, and teams in GitHub. A username in LDAP, belonging to a group in LDAP, can get its entity ID added as a member of a group in Vault automatically during logins and token renewals. This works only if the group in Vault is an external group and has an alias that maps to the group in LDAP. If the user is removed from the group in LDAP, that change gets reflected in Vault only upon the subsequent login or renewal operation.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @group = new Vault.Identity.Group(&amp;quot;group&amp;quot;, new Vault.Identity.GroupArgs
+    {
+        Policies = 
+        {
+            &amp;quot;test&amp;quot;,
+        },
+        Type = &amp;quot;external&amp;quot;,
+    });
+    var github = new Vault.AuthBackend(&amp;quot;github&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Path = &amp;quot;github&amp;quot;,
+        Type = &amp;quot;github&amp;quot;,
+    });
+    var group_alias = new Vault.Identity.GroupAlias(&amp;quot;group-alias&amp;quot;, new Vault.Identity.GroupAliasArgs
+    {
+        CanonicalId = @group.Id,
+        MountAccessor = github.Accessor,
+        Name = &amp;quot;Github_Team_Slug&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GroupAliasArgs.html">GroupAliasArgs</a></h4>
       <section></section>
@@ -123,6 +266,78 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GroupPolicies.html">GroupPolicies</a></h4>
       <section><p>Manages policies for an Identity Group for Vault. The <a href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="exclusive-policies">Exclusive Policies</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @internal = new Vault.Identity.Group(&amp;quot;internal&amp;quot;, new Vault.Identity.GroupArgs
+    {
+        Type = &amp;quot;internal&amp;quot;,
+        ExternalPolicies = true,
+        Metadata = 
+        {
+            { &amp;quot;version&amp;quot;, &amp;quot;2&amp;quot; },
+        },
+    });
+    var policies = new Vault.Identity.GroupPolicies(&amp;quot;policies&amp;quot;, new Vault.Identity.GroupPoliciesArgs
+    {
+        Policies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;test&amp;quot;,
+        },
+        Exclusive = true,
+        GroupId = @internal.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="non-exclusive-policies">Non-exclusive Policies</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @internal = new Vault.Identity.Group(&amp;quot;internal&amp;quot;, new Vault.Identity.GroupArgs
+    {
+        Type = &amp;quot;internal&amp;quot;,
+        ExternalPolicies = true,
+        Metadata = 
+        {
+            { &amp;quot;version&amp;quot;, &amp;quot;2&amp;quot; },
+        },
+    });
+    var @default = new Vault.Identity.GroupPolicies(&amp;quot;default&amp;quot;, new Vault.Identity.GroupPoliciesArgs
+    {
+        Policies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;test&amp;quot;,
+        },
+        Exclusive = false,
+        GroupId = @internal.Id,
+    });
+    var others = new Vault.Identity.GroupPolicies(&amp;quot;others&amp;quot;, new Vault.Identity.GroupPoliciesArgs
+    {
+        Policies = 
+        {
+            &amp;quot;others&amp;quot;,
+        },
+        Exclusive = false,
+        GroupId = @internal.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GroupPoliciesArgs.html">GroupPoliciesArgs</a></h4>
       <section></section>
@@ -137,6 +352,22 @@ the clients who are recognized by Vault.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Each Vault server may only have one Identity Tokens Backend configuration. Multiple configurations of the resource against the same Vault server will cause a perpetual difference.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var server = new Vault.Identity.Oidc(&amp;quot;server&amp;quot;, new Vault.Identity.OidcArgs
+    {
+        Issuer = &amp;quot;https://www.acme.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.OidcArgs.html">OidcArgs</a></h4>
       <section></section>

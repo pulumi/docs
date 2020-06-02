@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NodeDriver
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,77 @@
   <h1 id="Pulumi_Rancher2_NodeDriver" data-uid="Pulumi.Rancher2.NodeDriver" class="text-break">Class NodeDriver
   </h1>
   <div class="markdown level0 summary"><p>Provides a Rancher v2 Node Driver resource. This can be used to create Node Driver for Rancher v2 RKE clusters and retrieve their information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Node Driver
+    var foo = new Rancher2.NodeDriver(&amp;quot;foo&amp;quot;, new Rancher2.NodeDriverArgs
+    {
+        Active = true,
+        Builtin = false,
+        Checksum = &amp;quot;0x0&amp;quot;,
+        Description = &amp;quot;Foo description&amp;quot;,
+        ExternalId = &amp;quot;foo_external&amp;quot;,
+        UiUrl = &amp;quot;local://ui&amp;quot;,
+        Url = &amp;quot;local://&amp;quot;,
+        WhitelistDomains = 
+        {
+            &amp;quot;*.foo.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">NodeDriver</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">NodeDriver</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
@@ -88,16 +153,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver__ctor_" data-uid="Pulumi.Rancher2.NodeDriver.#ctor*"></a>
-  <h4 id="Pulumi_Rancher2_NodeDriver__ctor_System_String_Pulumi_Rancher2_NodeDriverArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.NodeDriver.#ctor(System.String,Pulumi.Rancher2.NodeDriverArgs,System.Nullable{CustomResourceOptions})">NodeDriver(String, NodeDriverArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Rancher2_NodeDriver__ctor_System_String_Pulumi_Rancher2_NodeDriverArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Rancher2.NodeDriver.#ctor(System.String,Pulumi.Rancher2.NodeDriverArgs,Pulumi.CustomResourceOptions)">NodeDriver(String, NodeDriverArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a NodeDriver resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NodeDriver(string name, NodeDriverArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public NodeDriver(string name, NodeDriverArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +187,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +197,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_Active_" data-uid="Pulumi.Rancher2.NodeDriver.Active*"></a>
   <h4 id="Pulumi_Rancher2_NodeDriver_Active" data-uid="Pulumi.Rancher2.NodeDriver.Active">Active</h4>
@@ -153,13 +218,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_Annotations_" data-uid="Pulumi.Rancher2.NodeDriver.Annotations*"></a>
   <h4 id="Pulumi_Rancher2_NodeDriver_Annotations" data-uid="Pulumi.Rancher2.NodeDriver.Annotations">Annotations</h4>
@@ -180,13 +245,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_Builtin_" data-uid="Pulumi.Rancher2.NodeDriver.Builtin*"></a>
   <h4 id="Pulumi_Rancher2_NodeDriver_Builtin" data-uid="Pulumi.Rancher2.NodeDriver.Builtin">Builtin</h4>
@@ -207,13 +272,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_Checksum_" data-uid="Pulumi.Rancher2.NodeDriver.Checksum*"></a>
   <h4 id="Pulumi_Rancher2_NodeDriver_Checksum" data-uid="Pulumi.Rancher2.NodeDriver.Checksum">Checksum</h4>
@@ -222,7 +287,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Checksum { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Checksum { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +299,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_Description_" data-uid="Pulumi.Rancher2.NodeDriver.Description*"></a>
   <h4 id="Pulumi_Rancher2_NodeDriver_Description" data-uid="Pulumi.Rancher2.NodeDriver.Description">Description</h4>
@@ -249,7 +314,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +326,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_ExternalId_" data-uid="Pulumi.Rancher2.NodeDriver.ExternalId*"></a>
   <h4 id="Pulumi_Rancher2_NodeDriver_ExternalId" data-uid="Pulumi.Rancher2.NodeDriver.ExternalId">ExternalId</h4>
@@ -276,7 +341,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ExternalId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ExternalId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -288,13 +353,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_Labels_" data-uid="Pulumi.Rancher2.NodeDriver.Labels*"></a>
   <h4 id="Pulumi_Rancher2_NodeDriver_Labels" data-uid="Pulumi.Rancher2.NodeDriver.Labels">Labels</h4>
@@ -315,13 +380,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_Name_" data-uid="Pulumi.Rancher2.NodeDriver.Name*"></a>
   <h4 id="Pulumi_Rancher2_NodeDriver_Name" data-uid="Pulumi.Rancher2.NodeDriver.Name">Name</h4>
@@ -342,13 +407,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_UiUrl_" data-uid="Pulumi.Rancher2.NodeDriver.UiUrl*"></a>
   <h4 id="Pulumi_Rancher2_NodeDriver_UiUrl" data-uid="Pulumi.Rancher2.NodeDriver.UiUrl">UiUrl</h4>
@@ -357,7 +422,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UiUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UiUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,13 +434,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_Url_" data-uid="Pulumi.Rancher2.NodeDriver.Url*"></a>
   <h4 id="Pulumi_Rancher2_NodeDriver_Url" data-uid="Pulumi.Rancher2.NodeDriver.Url">Url</h4>
@@ -396,13 +461,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_WhitelistDomains_" data-uid="Pulumi.Rancher2.NodeDriver.WhitelistDomains*"></a>
   <h4 id="Pulumi_Rancher2_NodeDriver_WhitelistDomains" data-uid="Pulumi.Rancher2.NodeDriver.WhitelistDomains">WhitelistDomains</h4>
@@ -423,7 +488,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -431,17 +496,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeDriver_Get_" data-uid="Pulumi.Rancher2.NodeDriver.Get*"></a>
-  <h4 id="Pulumi_Rancher2_NodeDriver_Get_System_String_Input_System_String__Pulumi_Rancher2_NodeDriverState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.NodeDriver.Get(System.String,Input{System.String},Pulumi.Rancher2.NodeDriverState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NodeDriverState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Rancher2_NodeDriver_Get_System_String_Pulumi_Input_System_String__Pulumi_Rancher2_NodeDriverState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Rancher2.NodeDriver.Get(System.String,Pulumi.Input{System.String},Pulumi.Rancher2.NodeDriverState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NodeDriverState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing NodeDriver resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NodeDriver Get(string name, Input&lt;string&gt; id, NodeDriverState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NodeDriver Get(string name, Input&lt;string&gt; id, NodeDriverState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,7 +525,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -472,7 +537,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -501,7 +566,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeDriver.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeDriver.cs/#L47" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

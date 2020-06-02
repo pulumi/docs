@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FirewallRule
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -74,12 +74,75 @@
   <div class="markdown level0 summary"><p>Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
 A filter expression permits selecting traffic by multiple criteria allowing greater freedom in rule creation.</p>
 <p>Filter expressions needs to be created first before using Firewall Rule. See Filter.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var wordpressFilter = new Cloudflare.Filter(&amp;quot;wordpressFilter&amp;quot;, new Cloudflare.FilterArgs
+    {
+        ZoneId = &amp;quot;d41d8cd98f00b204e9800998ecf8427e&amp;quot;,
+        Description = &amp;quot;Wordpress break-in attempts that are outside of the office&amp;quot;,
+        Expression = &amp;quot;(http.request.uri.path ~ \&amp;quot;.*wp-login.php\&amp;quot; or http.request.uri.path ~ \&amp;quot;.*xmlrpc.php\&amp;quot;) and ip.src ne 192.0.2.1&amp;quot;,
+    });
+    var wordpressFirewallRule = new Cloudflare.FirewallRule(&amp;quot;wordpressFirewallRule&amp;quot;, new Cloudflare.FirewallRuleArgs
+    {
+        ZoneId = &amp;quot;d41d8cd98f00b204e9800998ecf8427e&amp;quot;,
+        Description = &amp;quot;Block wordpress break-in attempts&amp;quot;,
+        FilterId = wordpressFilter.Id,
+        Action = &amp;quot;block&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">FirewallRule</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">FirewallRule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Cloudflare.html">Pulumi.Cloudflare</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Cloudflare.dll</h6>
@@ -90,16 +153,16 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/FirewallRule.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/FirewallRule.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_FirewallRule__ctor_" data-uid="Pulumi.Cloudflare.FirewallRule.#ctor*"></a>
-  <h4 id="Pulumi_Cloudflare_FirewallRule__ctor_System_String_Pulumi_Cloudflare_FirewallRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Cloudflare.FirewallRule.#ctor(System.String,Pulumi.Cloudflare.FirewallRuleArgs,System.Nullable{CustomResourceOptions})">FirewallRule(String, FirewallRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Cloudflare_FirewallRule__ctor_System_String_Pulumi_Cloudflare_FirewallRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Cloudflare.FirewallRule.#ctor(System.String,Pulumi.Cloudflare.FirewallRuleArgs,Pulumi.CustomResourceOptions)">FirewallRule(String, FirewallRuleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a FirewallRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FirewallRule(string name, FirewallRuleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public FirewallRule(string name, FirewallRuleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +187,7 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -134,7 +197,7 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/FirewallRule.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/FirewallRule.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_FirewallRule_Action_" data-uid="Pulumi.Cloudflare.FirewallRule.Action*"></a>
   <h4 id="Pulumi_Cloudflare_FirewallRule_Action" data-uid="Pulumi.Cloudflare.FirewallRule.Action">Action</h4>
@@ -155,13 +218,13 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/FirewallRule.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/FirewallRule.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_FirewallRule_Description_" data-uid="Pulumi.Cloudflare.FirewallRule.Description*"></a>
   <h4 id="Pulumi_Cloudflare_FirewallRule_Description" data-uid="Pulumi.Cloudflare.FirewallRule.Description">Description</h4>
@@ -170,7 +233,7 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,13 +245,13 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/FirewallRule.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/FirewallRule.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_FirewallRule_FilterId_" data-uid="Pulumi.Cloudflare.FirewallRule.FilterId*"></a>
   <h4 id="Pulumi_Cloudflare_FirewallRule_FilterId" data-uid="Pulumi.Cloudflare.FirewallRule.FilterId">FilterId</h4>
@@ -208,13 +271,13 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/FirewallRule.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/FirewallRule.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_FirewallRule_Paused_" data-uid="Pulumi.Cloudflare.FirewallRule.Paused*"></a>
   <h4 id="Pulumi_Cloudflare_FirewallRule_Paused" data-uid="Pulumi.Cloudflare.FirewallRule.Paused">Paused</h4>
@@ -235,13 +298,13 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/FirewallRule.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/FirewallRule.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_FirewallRule_Priority_" data-uid="Pulumi.Cloudflare.FirewallRule.Priority*"></a>
   <h4 id="Pulumi_Cloudflare_FirewallRule_Priority" data-uid="Pulumi.Cloudflare.FirewallRule.Priority">Priority</h4>
@@ -262,13 +325,13 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/FirewallRule.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/FirewallRule.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_FirewallRule_Products_" data-uid="Pulumi.Cloudflare.FirewallRule.Products*"></a>
   <h4 id="Pulumi_Cloudflare_FirewallRule_Products" data-uid="Pulumi.Cloudflare.FirewallRule.Products">Products</h4>
@@ -289,13 +352,13 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/FirewallRule.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/FirewallRule.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_FirewallRule_ZoneId_" data-uid="Pulumi.Cloudflare.FirewallRule.ZoneId*"></a>
   <h4 id="Pulumi_Cloudflare_FirewallRule_ZoneId" data-uid="Pulumi.Cloudflare.FirewallRule.ZoneId">ZoneId</h4>
@@ -316,7 +379,7 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -324,17 +387,17 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/FirewallRule.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/FirewallRule.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_FirewallRule_Get_" data-uid="Pulumi.Cloudflare.FirewallRule.Get*"></a>
-  <h4 id="Pulumi_Cloudflare_FirewallRule_Get_System_String_Input_System_String__Pulumi_Cloudflare_FirewallRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Cloudflare.FirewallRule.Get(System.String,Input{System.String},Pulumi.Cloudflare.FirewallRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FirewallRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Cloudflare_FirewallRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Cloudflare_FirewallRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Cloudflare.FirewallRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Cloudflare.FirewallRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, FirewallRuleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing FirewallRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static FirewallRule Get(string name, Input&lt;string&gt; id, FirewallRuleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static FirewallRule Get(string name, Input&lt;string&gt; id, FirewallRuleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -353,7 +416,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -365,7 +428,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -394,7 +457,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/FirewallRule.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/FirewallRule.cs/#L48" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

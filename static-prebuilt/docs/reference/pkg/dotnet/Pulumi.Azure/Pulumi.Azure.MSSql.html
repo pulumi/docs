@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.MSSql
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -94,7 +94,7 @@
       <h4><a class="xref" href="Pulumi.Azure.MSSql.DatabaseVulnerabilityAssessmentRuleBaselineState.html">DatabaseVulnerabilityAssessmentRuleBaselineState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.MSSql.ElasticPool.html">ElasticPool</a></h4>
-      <section><p>Allows you to manage an Azure SQL Elastic Pool via the <code>2017-10-01-preview</code> API which allows for <code>vCore</code> and <code>DTU</code> based configurations.</p>
+      <section><p>Allows you to manage an Azure SQL Elastic Pool via the <code>v3.0</code> API which allows for <code>vCore</code> and <code>DTU</code> based configurations.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.MSSql.ElasticPoolArgs.html">ElasticPoolArgs</a></h4>
       <section></section>
@@ -112,15 +112,71 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.MSSql.GetElasticPoolResult.html">GetElasticPoolResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.MSSql.Server.html">Server</a></h4>
+      <section><p>Manages a Microsoft SQL Azure Database Server.</p>
+<blockquote>
+<p><strong>Note:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text.
+<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.MSSql.ServerArgs.html">ServerArgs</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Azure.MSSql.ServerSecurityAlertPolicy.html">ServerSecurityAlertPolicy</a></h4>
       <section><p>Manages a Security Alert Policy for a MSSQL Server.</p>
 <blockquote>
 <p><strong>NOTE</strong> Security Alert Policy is currently only available for MS SQL databases.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleSqlServer = new Azure.Sql.SqlServer(&amp;quot;exampleSqlServer&amp;quot;, new Azure.Sql.SqlServerArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Version = &amp;quot;12.0&amp;quot;,
+        AdministratorLogin = &amp;quot;4dm1n157r470r&amp;quot;,
+        AdministratorLoginPassword = &amp;quot;4-v3ry-53cr37-p455w0rd&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;GRS&amp;quot;,
+    });
+    var exampleServerSecurityAlertPolicy = new Azure.MSSql.ServerSecurityAlertPolicy(&amp;quot;exampleServerSecurityAlertPolicy&amp;quot;, new Azure.MSSql.ServerSecurityAlertPolicyArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ServerName = exampleSqlServer.Name,
+        State = &amp;quot;Enabled&amp;quot;,
+        StorageEndpoint = exampleAccount.PrimaryBlobEndpoint,
+        StorageAccountAccessKey = exampleAccount.PrimaryAccessKey,
+        DisabledAlerts = 
+        {
+            &amp;quot;Sql_Injection&amp;quot;,
+            &amp;quot;Data_Exfiltration&amp;quot;,
+        },
+        RetentionDays = 20,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.MSSql.ServerSecurityAlertPolicyArgs.html">ServerSecurityAlertPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.MSSql.ServerSecurityAlertPolicyState.html">ServerSecurityAlertPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.MSSql.ServerState.html">ServerState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.MSSql.ServerVulnerabilityAssessment.html">ServerVulnerabilityAssessment</a></h4>
       <section><p>Manages the Vulnerability Assessment for a MS SQL Server.</p>

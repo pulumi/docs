@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.DigitalOcean
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,19 +78,74 @@
   </h3>
       <h4><a class="xref" href="Pulumi.DigitalOcean.Cdn.html">Cdn</a></h4>
       <section><p>Provides a DigitalOcean CDN Endpoint resource for use with Spaces.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-example">Basic Example</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Spaces Bucket
+    var mybucket = new DigitalOcean.SpacesBucket(&amp;quot;mybucket&amp;quot;, new DigitalOcean.SpacesBucketArgs
+    {
+        Region = &amp;quot;sfo2&amp;quot;,
+        Acl = &amp;quot;public-read&amp;quot;,
+    });
+    // Add a CDN endpoint to the Spaces Bucket
+    var mycdn = new DigitalOcean.Cdn(&amp;quot;mycdn&amp;quot;, new DigitalOcean.CdnArgs
+    {
+        Origin = mybucket.BucketDomainName,
+    });
+    this.Fqdn = mycdn.Endpoint;
+}
+
+[Output(&amp;quot;fqdn&amp;quot;)]
+public Output&amp;lt;string&gt; Fqdn { get; set; }
+}
+</code></pre>
+<h3 id="custom-sub-domain-example">Custom Sub-Domain Example</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Spaces Bucket
+    var mybucket = new DigitalOcean.SpacesBucket(&amp;quot;mybucket&amp;quot;, new DigitalOcean.SpacesBucketArgs
+    {
+        Region = &amp;quot;sfo2&amp;quot;,
+        Acl = &amp;quot;public-read&amp;quot;,
+    });
+    // Create a DigitalOcean managed Let&amp;apos;s Encrypt Certificate
+    var cert = new DigitalOcean.Certificate(&amp;quot;cert&amp;quot;, new DigitalOcean.CertificateArgs
+    {
+        Type = &amp;quot;lets_encrypt&amp;quot;,
+        Domains = 
+        {
+            &amp;quot;static.example.com&amp;quot;,
+        },
+    });
+    // Add a CDN endpoint with a custom sub-domain to the Spaces Bucket
+    var mycdn = new DigitalOcean.Cdn(&amp;quot;mycdn&amp;quot;, new DigitalOcean.CdnArgs
+    {
+        Origin = mybucket.BucketDomainName,
+        CustomDomain = &amp;quot;static.example.com&amp;quot;,
+        CertificateId = cert.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.CdnArgs.html">CdnArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.CdnState.html">CdnState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.Certificate.html">Certificate</a></h4>
-      <section><p>Provides a DigitalOcean Certificate resource that allows you to manage
-certificates for configuring TLS termination in Load Balancers.
-Certificates created with this resource can be referenced in your
-Load Balancer configuration via their ID. The certificate can either
-be a custom one provided by you or automatically generated one with
-Let's Encrypt.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.CertificateArgs.html">CertificateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.CertificateState.html">CertificateState</a></h4>
@@ -99,6 +154,67 @@ Let's Encrypt.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DatabaseCluster.html">DatabaseCluster</a></h4>
       <section><p>Provides a DigitalOcean database cluster resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-new-postgresql-database-cluster">Create a new PostgreSQL database cluster</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var postgres_example = new DigitalOcean.DatabaseCluster(&amp;quot;postgres-example&amp;quot;, new DigitalOcean.DatabaseClusterArgs
+    {
+        Engine = &amp;quot;pg&amp;quot;,
+        NodeCount = 1,
+        Region = &amp;quot;nyc1&amp;quot;,
+        Size = &amp;quot;db-s-1vcpu-1gb&amp;quot;,
+        Version = &amp;quot;11&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="create-a-new-mysql-database-cluster">Create a new MySQL database cluster</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var mysql_example = new DigitalOcean.DatabaseCluster(&amp;quot;mysql-example&amp;quot;, new DigitalOcean.DatabaseClusterArgs
+    {
+        Engine = &amp;quot;mysql&amp;quot;,
+        NodeCount = 1,
+        Region = &amp;quot;nyc1&amp;quot;,
+        Size = &amp;quot;db-s-1vcpu-1gb&amp;quot;,
+        Version = &amp;quot;8&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="create-a-new-redis-database-cluster">Create a new Redis database cluster</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var redis_example = new DigitalOcean.DatabaseCluster(&amp;quot;redis-example&amp;quot;, new DigitalOcean.DatabaseClusterArgs
+    {
+        Engine = &amp;quot;redis&amp;quot;,
+        NodeCount = 1,
+        Region = &amp;quot;nyc1&amp;quot;,
+        Size = &amp;quot;db-s-1vcpu-1gb&amp;quot;,
+        Version = &amp;quot;5&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DatabaseClusterArgs.html">DatabaseClusterArgs</a></h4>
       <section></section>
@@ -106,6 +222,35 @@ Let's Encrypt.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DatabaseConnectionPool.html">DatabaseConnectionPool</a></h4>
       <section><p>Provides a DigitalOcean database connection pool resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-new-postgresql-database-connection-pool">Create a new PostgreSQL database connection pool</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var postgres_example = new DigitalOcean.DatabaseCluster(&amp;quot;postgres-example&amp;quot;, new DigitalOcean.DatabaseClusterArgs
+    {
+        Engine = &amp;quot;pg&amp;quot;,
+        Version = &amp;quot;11&amp;quot;,
+        Size = &amp;quot;db-s-1vcpu-1gb&amp;quot;,
+        Region = &amp;quot;nyc1&amp;quot;,
+        NodeCount = 1,
+    });
+    var pool_01 = new DigitalOcean.DatabaseConnectionPool(&amp;quot;pool-01&amp;quot;, new DigitalOcean.DatabaseConnectionPoolArgs
+    {
+        ClusterId = postgres_example.Id,
+        Mode = &amp;quot;transaction&amp;quot;,
+        Size = 20,
+        DbName = &amp;quot;defaultdb&amp;quot;,
+        User = &amp;quot;doadmin&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DatabaseConnectionPoolArgs.html">DatabaseConnectionPoolArgs</a></h4>
       <section></section>
@@ -113,6 +258,31 @@ Let's Encrypt.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DatabaseDb.html">DatabaseDb</a></h4>
       <section><p>Provides a DigitalOcean database resource. When creating a new database cluster, a default database with name <code>defaultdb</code> will be created. Then, this resource can be used to provide additional database inside the cluster.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-new-postgresql-database">Create a new PostgreSQL database</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var postgres_example = new DigitalOcean.DatabaseCluster(&amp;quot;postgres-example&amp;quot;, new DigitalOcean.DatabaseClusterArgs
+    {
+        Engine = &amp;quot;pg&amp;quot;,
+        Version = &amp;quot;11&amp;quot;,
+        Size = &amp;quot;db-s-1vcpu-1gb&amp;quot;,
+        Region = &amp;quot;nyc1&amp;quot;,
+        NodeCount = 1,
+    });
+    var database_example = new DigitalOcean.DatabaseDb(&amp;quot;database-example&amp;quot;, new DigitalOcean.DatabaseDbArgs
+    {
+        ClusterId = postgres_example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DatabaseDbArgs.html">DatabaseDbArgs</a></h4>
       <section></section>
@@ -129,6 +299,33 @@ specific Droplets, Kubernetes clusters, or IP addresses.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DatabaseReplica.html">DatabaseReplica</a></h4>
       <section><p>Provides a DigitalOcean database replica resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-new-postgresql-database-replica">Create a new PostgreSQL database replica</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var postgres_example = new DigitalOcean.DatabaseCluster(&amp;quot;postgres-example&amp;quot;, new DigitalOcean.DatabaseClusterArgs
+    {
+        Engine = &amp;quot;pg&amp;quot;,
+        Version = &amp;quot;11&amp;quot;,
+        Size = &amp;quot;db-s-1vcpu-1gb&amp;quot;,
+        Region = &amp;quot;nyc1&amp;quot;,
+        NodeCount = 1,
+    });
+    var read_replica = new DigitalOcean.DatabaseReplica(&amp;quot;read-replica&amp;quot;, new DigitalOcean.DatabaseReplicaArgs
+    {
+        ClusterId = postgres_example.Id,
+        Size = &amp;quot;db-s-1vcpu-1gb&amp;quot;,
+        Region = &amp;quot;nyc1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DatabaseReplicaArgs.html">DatabaseReplicaArgs</a></h4>
       <section></section>
@@ -139,6 +336,31 @@ specific Droplets, Kubernetes clusters, or IP addresses.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Any new users created will always have <code>normal</code> role, only the default user that comes with database cluster creation has <code>primary</code> role. Additional permissions must be managed manually.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-new-postgresql-database-user">Create a new PostgreSQL database user</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var postgres_example = new DigitalOcean.DatabaseCluster(&amp;quot;postgres-example&amp;quot;, new DigitalOcean.DatabaseClusterArgs
+    {
+        Engine = &amp;quot;pg&amp;quot;,
+        Version = &amp;quot;11&amp;quot;,
+        Size = &amp;quot;db-s-1vcpu-1gb&amp;quot;,
+        Region = &amp;quot;nyc1&amp;quot;,
+        NodeCount = 1,
+    });
+    var user_example = new DigitalOcean.DatabaseUser(&amp;quot;user-example&amp;quot;, new DigitalOcean.DatabaseUserArgs
+    {
+        ClusterId = postgres_example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DatabaseUserArgs.html">DatabaseUserArgs</a></h4>
       <section></section>
@@ -146,6 +368,43 @@ specific Droplets, Kubernetes clusters, or IP addresses.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DnsRecord.html">DnsRecord</a></h4>
       <section><p>Provides a DigitalOcean DNS record resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new DigitalOcean.Domain(&amp;quot;default&amp;quot;, new DigitalOcean.DomainArgs
+    {
+        Name = &amp;quot;example.com&amp;quot;,
+    });
+    // Add an A record to the domain for www.example.com.
+    var www = new DigitalOcean.DnsRecord(&amp;quot;www&amp;quot;, new DigitalOcean.DnsRecordArgs
+    {
+        Domain = @default.Name,
+        Type = &amp;quot;A&amp;quot;,
+        Value = &amp;quot;192.168.0.11&amp;quot;,
+    });
+    // Add a MX record for the example.com domain itself.
+    var mx = new DigitalOcean.DnsRecord(&amp;quot;mx&amp;quot;, new DigitalOcean.DnsRecordArgs
+    {
+        Domain = @default.Name,
+        Type = &amp;quot;MX&amp;quot;,
+        Priority = 10,
+        Value = &amp;quot;mail.example.com.&amp;quot;,
+    });
+    this.WwwFqdn = www.Fqdn;
+    this.MxFqdn = mx.Fqdn;
+}
+
+[Output(&amp;quot;wwwFqdn&amp;quot;)]
+public Output&amp;lt;string&gt; WwwFqdn { get; set; }
+[Output(&amp;quot;mxFqdn&amp;quot;)]
+public Output&amp;lt;string&gt; MxFqdn { get; set; }
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DnsRecordArgs.html">DnsRecordArgs</a></h4>
       <section></section>
@@ -153,6 +412,24 @@ specific Droplets, Kubernetes clusters, or IP addresses.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.Domain.html">Domain</a></h4>
       <section><p>Provides a DigitalOcean domain resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new domain
+    var @default = new DigitalOcean.Domain(&amp;quot;default&amp;quot;, new DigitalOcean.DomainArgs
+    {
+        Name = &amp;quot;example.com&amp;quot;,
+        IpAddress = digitalocean_droplet.Foo.Ipv4_address,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DomainArgs.html">DomainArgs</a></h4>
       <section></section>
@@ -162,11 +439,52 @@ specific Droplets, Kubernetes clusters, or IP addresses.</p>
       <section><p>Provides a DigitalOcean Droplet resource. This can be used to create,
 modify, and delete Droplets. Droplets also support
 <a href="https://www.terraform.io/docs/provisioners/index.html">provisioning</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Web Droplet in the nyc2 region
+    var web = new DigitalOcean.Droplet(&amp;quot;web&amp;quot;, new DigitalOcean.DropletArgs
+    {
+        Image = &amp;quot;ubuntu-18-04-x64&amp;quot;,
+        Region = &amp;quot;nyc2&amp;quot;,
+        Size = &amp;quot;s-1vcpu-1gb&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DropletArgs.html">DropletArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DropletSnapshot.html">DropletSnapshot</a></h4>
       <section><p>Provides a resource which can be used to create a snapshot from an existing DigitalOcean Droplet.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var web = new DigitalOcean.Droplet(&amp;quot;web&amp;quot;, new DigitalOcean.DropletArgs
+    {
+        Size = &amp;quot;s-1vcpu-1gb&amp;quot;,
+        Image = &amp;quot;centos-7-x64&amp;quot;,
+        Region = &amp;quot;nyc3&amp;quot;,
+    });
+    var web_snapshot = new DigitalOcean.DropletSnapshot(&amp;quot;web-snapshot&amp;quot;, new DigitalOcean.DropletSnapshotArgs
+    {
+        DropletId = web.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.DropletSnapshotArgs.html">DropletSnapshotArgs</a></h4>
       <section></section>
@@ -187,6 +505,31 @@ modify, and delete Firewalls.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Floating IPs can be assigned to a Droplet either directly on the <code>digitalocean..FloatingIp</code> resource by setting a <code>droplet_id</code> or using the <code>digitalocean..FloatingIpAssignment</code> resource, but the two cannot be used together.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobarDroplet = new DigitalOcean.Droplet(&amp;quot;foobarDroplet&amp;quot;, new DigitalOcean.DropletArgs
+    {
+        Size = &amp;quot;s-1vcpu-1gb&amp;quot;,
+        Image = &amp;quot;ubuntu-18-04-x64&amp;quot;,
+        Region = &amp;quot;sgp1&amp;quot;,
+        Ipv6 = true,
+        PrivateNetworking = true,
+    });
+    var foobarFloatingIp = new DigitalOcean.FloatingIp(&amp;quot;foobarFloatingIp&amp;quot;, new DigitalOcean.FloatingIpArgs
+    {
+        DropletId = foobarDroplet.Id,
+        Region = foobarDroplet.Region,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.FloatingIpArgs.html">FloatingIpArgs</a></h4>
       <section></section>
@@ -194,6 +537,35 @@ modify, and delete Firewalls.</p>
       <section><p>Provides a resource for assigning an existing DigitalOcean Floating IP to a Droplet. This
 makes it easy to provision floating IP addresses that are not tied to the lifecycle of your
 Droplet.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobarFloatingIp = new DigitalOcean.FloatingIp(&amp;quot;foobarFloatingIp&amp;quot;, new DigitalOcean.FloatingIpArgs
+    {
+        Region = &amp;quot;sgp1&amp;quot;,
+    });
+    var foobarDroplet = new DigitalOcean.Droplet(&amp;quot;foobarDroplet&amp;quot;, new DigitalOcean.DropletArgs
+    {
+        Size = &amp;quot;s-1vcpu-1gb&amp;quot;,
+        Image = &amp;quot;ubuntu-18-04-x64&amp;quot;,
+        Region = &amp;quot;sgp1&amp;quot;,
+        Ipv6 = true,
+        PrivateNetworking = true,
+    });
+    var foobarFloatingIpAssignment = new DigitalOcean.FloatingIpAssignment(&amp;quot;foobarFloatingIpAssignment&amp;quot;, new DigitalOcean.FloatingIpAssignmentArgs
+    {
+        IpAddress = foobarFloatingIp.IpAddress,
+        DropletId = foobarDroplet.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.FloatingIpAssignmentArgs.html">FloatingIpAssignmentArgs</a></h4>
       <section></section>
@@ -229,11 +601,17 @@ Droplet.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.GetDropletResult.html">GetDropletResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetDroplets.html">GetDroplets</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetDropletsArgs.html">GetDropletsArgs</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.GetDropletSnapshot.html">GetDropletSnapshot</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.GetDropletSnapshotArgs.html">GetDropletSnapshotArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.GetDropletSnapshotResult.html">GetDropletSnapshotResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetDropletsResult.html">GetDropletsResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.GetFloatingIp.html">GetFloatingIp</a></h4>
       <section></section>
@@ -307,6 +685,30 @@ Droplet.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.GetSizesResult.html">GetSizesResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBucket.html">GetSpacesBucket</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBucketArgs.html">GetSpacesBucketArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBucketObject.html">GetSpacesBucketObject</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBucketObjectArgs.html">GetSpacesBucketObjectArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBucketObjectResult.html">GetSpacesBucketObjectResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBucketObjects.html">GetSpacesBucketObjects</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBucketObjectsArgs.html">GetSpacesBucketObjectsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBucketObjectsResult.html">GetSpacesBucketObjectsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBucketResult.html">GetSpacesBucketResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBuckets.html">GetSpacesBuckets</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBucketsArgs.html">GetSpacesBucketsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.DigitalOcean.GetSpacesBucketsResult.html">GetSpacesBucketsResult</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.GetSshKey.html">GetSshKey</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.GetSshKeyArgs.html">GetSshKeyArgs</a></h4>
@@ -339,6 +741,55 @@ Droplet.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.KubernetesCluster.html">KubernetesCluster</a></h4>
       <section><p>Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the <a href="https://www.digitalocean.com/docs/kubernetes/">official documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-example">Basic Example</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new DigitalOcean.KubernetesCluster(&amp;quot;foo&amp;quot;, new DigitalOcean.KubernetesClusterArgs
+    {
+        NodePool = new DigitalOcean.Inputs.KubernetesClusterNodePoolArgs
+        {
+            Name = &amp;quot;worker-pool&amp;quot;,
+            NodeCount = 3,
+            Size = &amp;quot;s-2vcpu-2gb&amp;quot;,
+        },
+        Region = &amp;quot;nyc1&amp;quot;,
+        Version = &amp;quot;1.15.5-do.1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="autoscaling-example">Autoscaling Example</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new DigitalOcean.KubernetesCluster(&amp;quot;foo&amp;quot;, new DigitalOcean.KubernetesClusterArgs
+    {
+        NodePool = new DigitalOcean.Inputs.KubernetesClusterNodePoolArgs
+        {
+            AutoScale = true,
+            MaxNodes = 5,
+            MinNodes = 1,
+            Name = &amp;quot;autoscale-worker-pool&amp;quot;,
+            Size = &amp;quot;s-2vcpu-2gb&amp;quot;,
+        },
+        Region = &amp;quot;nyc1&amp;quot;,
+        Version = &amp;quot;1.15.5-do.1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.KubernetesClusterArgs.html">KubernetesClusterArgs</a></h4>
       <section></section>
@@ -346,6 +797,27 @@ Droplet.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.KubernetesNodePool.html">KubernetesNodePool</a></h4>
       <section><p>Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the <code>digitalocean..KubernetesCluster</code> resource, this resource can be used to add additional ones to a cluster.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="autoscaling-example">Autoscaling Example</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var autoscale_pool_01 = new DigitalOcean.KubernetesNodePool(&amp;quot;autoscale-pool-01&amp;quot;, new DigitalOcean.KubernetesNodePoolArgs
+    {
+        ClusterId = digitalocean_kubernetes_cluster.Foo.Id,
+        Size = &amp;quot;s-1vcpu-2gb&amp;quot;,
+        AutoScale = true,
+        MinNodes = 0,
+        MaxNodes = 5,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.KubernetesNodePoolArgs.html">KubernetesNodePoolArgs</a></h4>
       <section></section>
@@ -385,7 +857,92 @@ similar to Amazon's Access ID and Secret Key.</p>
 the provider's <code>spaces_access_id</code> and <code>spaces_secret_key</code> arguments to the
 access ID and secret you generate via the DigitalOcean control panel. For
 example:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var static_assets = new DigitalOcean.SpacesBucket(&amp;quot;static-assets&amp;quot;, new DigitalOcean.SpacesBucketArgs
+    {
+    });
+    // ...
+}
+
+}
+</code></pre>
 <p>For more information, See <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-spaces">An Introduction to DigitalOcean Spaces</a></p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-new-bucket">Create a New Bucket</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new DigitalOcean.SpacesBucket(&amp;quot;foobar&amp;quot;, new DigitalOcean.SpacesBucketArgs
+    {
+        Region = &amp;quot;nyc3&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="create-a-new-bucket-with-cors-rules">Create a New Bucket With CORS Rules</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new DigitalOcean.SpacesBucket(&amp;quot;foobar&amp;quot;, new DigitalOcean.SpacesBucketArgs
+    {
+        CorsRules = 
+        {
+            new DigitalOcean.Inputs.SpacesBucketCorsRuleArgs
+            {
+                AllowedHeaders = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+                AllowedMethods = 
+                {
+                    &amp;quot;GET&amp;quot;,
+                },
+                AllowedOrigins = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+                MaxAgeSeconds = 3000,
+            },
+            new DigitalOcean.Inputs.SpacesBucketCorsRuleArgs
+            {
+                AllowedHeaders = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+                AllowedMethods = 
+                {
+                    &amp;quot;PUT&amp;quot;,
+                    &amp;quot;POST&amp;quot;,
+                    &amp;quot;DELETE&amp;quot;,
+                },
+                AllowedOrigins = 
+                {
+                    &amp;quot;https://www.example.com&amp;quot;,
+                },
+                MaxAgeSeconds = 3000,
+            },
+        },
+        Region = &amp;quot;nyc3&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.SpacesBucketArgs.html">SpacesBucketArgs</a></h4>
       <section></section>
@@ -398,11 +955,7 @@ example:</p>
       <h4><a class="xref" href="Pulumi.DigitalOcean.SpacesBucketState.html">SpacesBucketState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.SshKey.html">SshKey</a></h4>
-      <section><p>Provides a DigitalOcean SSH key resource to allow you to manage SSH
-keys for Droplet access. Keys created with this resource
-can be referenced in your Droplet configuration via their ID or
-fingerprint.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.SshKeyArgs.html">SshKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.SshKeyState.html">SshKeyState</a></h4>
@@ -412,6 +965,33 @@ fingerprint.</p>
 Droplet resource in order to better organize or facilitate the lookups and
 actions on it. Tags created with this resource can be referenced in your Droplet
 configuration via their ID or name.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new tag
+    var foobar = new DigitalOcean.Tag(&amp;quot;foobar&amp;quot;, new DigitalOcean.TagArgs
+    {
+    });
+    // Create a new Droplet in nyc3 with the foobar tag
+    var web = new DigitalOcean.Droplet(&amp;quot;web&amp;quot;, new DigitalOcean.DropletArgs
+    {
+        Image = &amp;quot;ubuntu-18-04-x64&amp;quot;,
+        Region = &amp;quot;nyc3&amp;quot;,
+        Size = &amp;quot;s-1vcpu-1gb&amp;quot;,
+        Tags = 
+        {
+            foobar.Id,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.TagArgs.html">TagArgs</a></h4>
       <section></section>
@@ -419,6 +999,36 @@ configuration via their ID or name.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.Volume.html">Volume</a></h4>
       <section><p>Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobarVolume = new DigitalOcean.Volume(&amp;quot;foobarVolume&amp;quot;, new DigitalOcean.VolumeArgs
+    {
+        Region = &amp;quot;nyc1&amp;quot;,
+        Size = 100,
+        InitialFilesystemType = &amp;quot;ext4&amp;quot;,
+        Description = &amp;quot;an example volume&amp;quot;,
+    });
+    var foobarDroplet = new DigitalOcean.Droplet(&amp;quot;foobarDroplet&amp;quot;, new DigitalOcean.DropletArgs
+    {
+        Size = &amp;quot;s-1vcpu-1gb&amp;quot;,
+        Image = &amp;quot;ubuntu-18-04-x64&amp;quot;,
+        Region = &amp;quot;nyc1&amp;quot;,
+    });
+    var foobarVolumeAttachment = new DigitalOcean.VolumeAttachment(&amp;quot;foobarVolumeAttachment&amp;quot;, new DigitalOcean.VolumeAttachmentArgs
+    {
+        DropletId = foobarDroplet.Id,
+        VolumeId = foobarVolume.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.VolumeArgs.html">VolumeArgs</a></h4>
       <section></section>
@@ -427,6 +1037,36 @@ configuration via their ID or name.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Volumes can be attached either directly on the <code>digitalocean..Droplet</code> resource, or using the <code>digitalocean..VolumeAttachment</code> resource - but the two cannot be used together. If both are used against the same Droplet, the volume attachments will constantly drift.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobarVolume = new DigitalOcean.Volume(&amp;quot;foobarVolume&amp;quot;, new DigitalOcean.VolumeArgs
+    {
+        Region = &amp;quot;nyc1&amp;quot;,
+        Size = 100,
+        InitialFilesystemType = &amp;quot;ext4&amp;quot;,
+        Description = &amp;quot;an example volume&amp;quot;,
+    });
+    var foobarDroplet = new DigitalOcean.Droplet(&amp;quot;foobarDroplet&amp;quot;, new DigitalOcean.DropletArgs
+    {
+        Size = &amp;quot;s-1vcpu-1gb&amp;quot;,
+        Image = &amp;quot;ubuntu-18-04-x64&amp;quot;,
+        Region = &amp;quot;nyc1&amp;quot;,
+    });
+    var foobarVolumeAttachment = new DigitalOcean.VolumeAttachment(&amp;quot;foobarVolumeAttachment&amp;quot;, new DigitalOcean.VolumeAttachmentArgs
+    {
+        DropletId = foobarDroplet.Id,
+        VolumeId = foobarVolume.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.VolumeAttachmentArgs.html">VolumeAttachmentArgs</a></h4>
       <section></section>
@@ -434,6 +1074,28 @@ configuration via their ID or name.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.VolumeSnapshot.html">VolumeSnapshot</a></h4>
       <section><p>Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot from an existing volume.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobarVolume = new DigitalOcean.Volume(&amp;quot;foobarVolume&amp;quot;, new DigitalOcean.VolumeArgs
+    {
+        Region = &amp;quot;nyc1&amp;quot;,
+        Size = 100,
+        Description = &amp;quot;an example volume&amp;quot;,
+    });
+    var foobarVolumeSnapshot = new DigitalOcean.VolumeSnapshot(&amp;quot;foobarVolumeSnapshot&amp;quot;, new DigitalOcean.VolumeSnapshotArgs
+    {
+        VolumeId = foobarVolume.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.VolumeSnapshotArgs.html">VolumeSnapshotArgs</a></h4>
       <section></section>
@@ -445,6 +1107,46 @@ configuration via their ID or name.</p>
       <section><p>Provides a <a href="https://developers.digitalocean.com/documentation/v2/#vpcs">DigitalOcean VPC</a> resource.</p>
 <p>VPCs are virtual networks containing resources that can communicate with each
 other in full isolation, using private IP addresses.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new DigitalOcean.Vpc(&amp;quot;example&amp;quot;, new DigitalOcean.VpcArgs
+    {
+        IpRange = &amp;quot;10.10.10.0/24&amp;quot;,
+        Region = &amp;quot;nyc3&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="resource-assignment">Resource Assignment</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleVpc = new DigitalOcean.Vpc(&amp;quot;exampleVpc&amp;quot;, new DigitalOcean.VpcArgs
+    {
+        Region = &amp;quot;nyc3&amp;quot;,
+    });
+    var exampleDroplet = new DigitalOcean.Droplet(&amp;quot;exampleDroplet&amp;quot;, new DigitalOcean.DropletArgs
+    {
+        Size = &amp;quot;s-1vcpu-1gb&amp;quot;,
+        Image = &amp;quot;ubuntu-18-04-x64&amp;quot;,
+        Region = &amp;quot;nyc3&amp;quot;,
+        VpcUuid = exampleVpc.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.DigitalOcean.VpcArgs.html">VpcArgs</a></h4>
       <section></section>

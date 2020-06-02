@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CertificateOrder
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,73 @@
   <h1 id="Pulumi_Azure_AppService_CertificateOrder" data-uid="Pulumi.Azure.AppService.CertificateOrder" class="text-break">Class CertificateOrder
   </h1>
   <div class="markdown level0 summary"><p>Manages an App Service Certificate Order.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleCertificateOrder = new Azure.AppService.CertificateOrder(&amp;quot;exampleCertificateOrder&amp;quot;, new Azure.AppService.CertificateOrderArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = &amp;quot;global&amp;quot;,
+        DistinguishedName = &amp;quot;CN=example.com&amp;quot;,
+        ProductType = &amp;quot;Standard&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CertificateOrder</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">CertificateOrder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.AppService.html">Pulumi.Azure.AppService</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -88,16 +149,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder__ctor_" data-uid="Pulumi.Azure.AppService.CertificateOrder.#ctor*"></a>
-  <h4 id="Pulumi_Azure_AppService_CertificateOrder__ctor_System_String_Pulumi_Azure_AppService_CertificateOrderArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.AppService.CertificateOrder.#ctor(System.String,Pulumi.Azure.AppService.CertificateOrderArgs,System.Nullable{CustomResourceOptions})">CertificateOrder(String, CertificateOrderArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_AppService_CertificateOrder__ctor_System_String_Pulumi_Azure_AppService_CertificateOrderArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.AppService.CertificateOrder.#ctor(System.String,Pulumi.Azure.AppService.CertificateOrderArgs,Pulumi.CustomResourceOptions)">CertificateOrder(String, CertificateOrderArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a CertificateOrder resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CertificateOrder(string name, CertificateOrderArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public CertificateOrder(string name, CertificateOrderArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +183,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +193,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_AppServiceCertificateNotRenewableReasons_" data-uid="Pulumi.Azure.AppService.CertificateOrder.AppServiceCertificateNotRenewableReasons*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_AppServiceCertificateNotRenewableReasons" data-uid="Pulumi.Azure.AppService.CertificateOrder.AppServiceCertificateNotRenewableReasons">AppServiceCertificateNotRenewableReasons</h4>
@@ -153,13 +214,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_AutoRenew_" data-uid="Pulumi.Azure.AppService.CertificateOrder.AutoRenew*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_AutoRenew" data-uid="Pulumi.Azure.AppService.CertificateOrder.AutoRenew">AutoRenew</h4>
@@ -180,13 +241,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_Certificates_" data-uid="Pulumi.Azure.AppService.CertificateOrder.Certificates*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_Certificates" data-uid="Pulumi.Azure.AppService.CertificateOrder.Certificates">Certificates</h4>
@@ -207,13 +268,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.CertificateOrderCertificate.html">CertificateOrderCertificate</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.CertificateOrderCertificate.html">CertificateOrderCertificate</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_Csr_" data-uid="Pulumi.Azure.AppService.CertificateOrder.Csr*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_Csr" data-uid="Pulumi.Azure.AppService.CertificateOrder.Csr">Csr</h4>
@@ -234,13 +295,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_DistinguishedName_" data-uid="Pulumi.Azure.AppService.CertificateOrder.DistinguishedName*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_DistinguishedName" data-uid="Pulumi.Azure.AppService.CertificateOrder.DistinguishedName">DistinguishedName</h4>
@@ -261,13 +322,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_DomainVerificationToken_" data-uid="Pulumi.Azure.AppService.CertificateOrder.DomainVerificationToken*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_DomainVerificationToken" data-uid="Pulumi.Azure.AppService.CertificateOrder.DomainVerificationToken">DomainVerificationToken</h4>
@@ -288,13 +349,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_ExpirationTime_" data-uid="Pulumi.Azure.AppService.CertificateOrder.ExpirationTime*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_ExpirationTime" data-uid="Pulumi.Azure.AppService.CertificateOrder.ExpirationTime">ExpirationTime</h4>
@@ -315,13 +376,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_IntermediateThumbprint_" data-uid="Pulumi.Azure.AppService.CertificateOrder.IntermediateThumbprint*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_IntermediateThumbprint" data-uid="Pulumi.Azure.AppService.CertificateOrder.IntermediateThumbprint">IntermediateThumbprint</h4>
@@ -342,13 +403,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_IsPrivateKeyExternal_" data-uid="Pulumi.Azure.AppService.CertificateOrder.IsPrivateKeyExternal*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_IsPrivateKeyExternal" data-uid="Pulumi.Azure.AppService.CertificateOrder.IsPrivateKeyExternal">IsPrivateKeyExternal</h4>
@@ -369,13 +430,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_KeySize_" data-uid="Pulumi.Azure.AppService.CertificateOrder.KeySize*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_KeySize" data-uid="Pulumi.Azure.AppService.CertificateOrder.KeySize">KeySize</h4>
@@ -396,13 +457,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_Location_" data-uid="Pulumi.Azure.AppService.CertificateOrder.Location*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_Location" data-uid="Pulumi.Azure.AppService.CertificateOrder.Location">Location</h4>
@@ -423,13 +484,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_Name_" data-uid="Pulumi.Azure.AppService.CertificateOrder.Name*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_Name" data-uid="Pulumi.Azure.AppService.CertificateOrder.Name">Name</h4>
@@ -450,13 +511,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_ProductType_" data-uid="Pulumi.Azure.AppService.CertificateOrder.ProductType*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_ProductType" data-uid="Pulumi.Azure.AppService.CertificateOrder.ProductType">ProductType</h4>
@@ -465,7 +526,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProductType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProductType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -477,13 +538,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_ResourceGroupName_" data-uid="Pulumi.Azure.AppService.CertificateOrder.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_ResourceGroupName" data-uid="Pulumi.Azure.AppService.CertificateOrder.ResourceGroupName">ResourceGroupName</h4>
@@ -504,13 +565,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_RootThumbprint_" data-uid="Pulumi.Azure.AppService.CertificateOrder.RootThumbprint*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_RootThumbprint" data-uid="Pulumi.Azure.AppService.CertificateOrder.RootThumbprint">RootThumbprint</h4>
@@ -531,13 +592,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_SignedCertificateThumbprint_" data-uid="Pulumi.Azure.AppService.CertificateOrder.SignedCertificateThumbprint*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_SignedCertificateThumbprint" data-uid="Pulumi.Azure.AppService.CertificateOrder.SignedCertificateThumbprint">SignedCertificateThumbprint</h4>
@@ -558,13 +619,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_Status_" data-uid="Pulumi.Azure.AppService.CertificateOrder.Status*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_Status" data-uid="Pulumi.Azure.AppService.CertificateOrder.Status">Status</h4>
@@ -585,13 +646,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_Tags_" data-uid="Pulumi.Azure.AppService.CertificateOrder.Tags*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_Tags" data-uid="Pulumi.Azure.AppService.CertificateOrder.Tags">Tags</h4>
@@ -600,7 +661,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -612,13 +673,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_ValidityInYears_" data-uid="Pulumi.Azure.AppService.CertificateOrder.ValidityInYears*"></a>
   <h4 id="Pulumi_Azure_AppService_CertificateOrder_ValidityInYears" data-uid="Pulumi.Azure.AppService.CertificateOrder.ValidityInYears">ValidityInYears</h4>
@@ -639,7 +700,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -647,17 +708,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L197">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_CertificateOrder_Get_" data-uid="Pulumi.Azure.AppService.CertificateOrder.Get*"></a>
-  <h4 id="Pulumi_Azure_AppService_CertificateOrder_Get_System_String_Input_System_String__Pulumi_Azure_AppService_CertificateOrderState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.AppService.CertificateOrder.Get(System.String,Input{System.String},Pulumi.Azure.AppService.CertificateOrderState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, CertificateOrderState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_AppService_CertificateOrder_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_AppService_CertificateOrderState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.AppService.CertificateOrder.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.AppService.CertificateOrderState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, CertificateOrderState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing CertificateOrder resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CertificateOrder Get(string name, Input&lt;string&gt; id, CertificateOrderState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CertificateOrder Get(string name, Input&lt;string&gt; id, CertificateOrderState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -676,7 +737,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -688,7 +749,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -717,7 +778,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/CertificateOrder.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/CertificateOrder.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.BigTable
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,6 +89,31 @@
       <section><p>Creates a Google Bigtable instance. For more information see
 <a href="https://cloud.google.com/bigtable/">the official documentation</a> and
 <a href="https://cloud.google.com/bigtable/docs/go/reference">API</a>.</p>
+<h2 id="example-usage---development-instance">Example Usage - Development Instance</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var development_instance = new Gcp.BigTable.Instance(&amp;quot;development-instance&amp;quot;, new Gcp.BigTable.InstanceArgs
+    {
+        Clusters = 
+        {
+            new Gcp.BigTable.Inputs.InstanceClusterArgs
+            {
+                ClusterId = &amp;quot;tf-instance-cluster&amp;quot;,
+                StorageType = &amp;quot;HDD&amp;quot;,
+                Zone = &amp;quot;us-central1-b&amp;quot;,
+            },
+        },
+        InstanceType = &amp;quot;DEVELOPMENT&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.BigTable.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
@@ -105,6 +130,77 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.bigtable.InstanceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.bigtable.InstanceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_bigtable_instance_iam_policy">google_bigtable_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.BigTable.InstanceIamPolicy(&amp;quot;editor&amp;quot;, new Gcp.BigTable.InstanceIamPolicyArgs
+    {
+        Project = &amp;quot;your-project&amp;quot;,
+        Instance = &amp;quot;your-bigtable-instance&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_bigtable_instance_iam_binding">google_bigtable_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.BigTable.InstanceIamBinding(&amp;quot;editor&amp;quot;, new Gcp.BigTable.InstanceIamBindingArgs
+    {
+        Instance = &amp;quot;your-bigtable-instance&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_bigtable_instance_iam_member">google_bigtable_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.BigTable.InstanceIamMember(&amp;quot;editor&amp;quot;, new Gcp.BigTable.InstanceIamMemberArgs
+    {
+        Instance = &amp;quot;your-bigtable-instance&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.BigTable.InstanceIamBindingArgs.html">InstanceIamBindingArgs</a></h4>
       <section></section>
@@ -123,6 +219,77 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.bigtable.InstanceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.bigtable.InstanceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_bigtable_instance_iam_policy">google_bigtable_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.BigTable.InstanceIamPolicy(&amp;quot;editor&amp;quot;, new Gcp.BigTable.InstanceIamPolicyArgs
+    {
+        Project = &amp;quot;your-project&amp;quot;,
+        Instance = &amp;quot;your-bigtable-instance&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_bigtable_instance_iam_binding">google_bigtable_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.BigTable.InstanceIamBinding(&amp;quot;editor&amp;quot;, new Gcp.BigTable.InstanceIamBindingArgs
+    {
+        Instance = &amp;quot;your-bigtable-instance&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_bigtable_instance_iam_member">google_bigtable_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.BigTable.InstanceIamMember(&amp;quot;editor&amp;quot;, new Gcp.BigTable.InstanceIamMemberArgs
+    {
+        Instance = &amp;quot;your-bigtable-instance&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.BigTable.InstanceIamMemberArgs.html">InstanceIamMemberArgs</a></h4>
       <section></section>
@@ -141,6 +308,77 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.bigtable.InstanceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.bigtable.InstanceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_bigtable_instance_iam_policy">google_bigtable_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.BigTable.InstanceIamPolicy(&amp;quot;editor&amp;quot;, new Gcp.BigTable.InstanceIamPolicyArgs
+    {
+        Project = &amp;quot;your-project&amp;quot;,
+        Instance = &amp;quot;your-bigtable-instance&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_bigtable_instance_iam_binding">google_bigtable_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.BigTable.InstanceIamBinding(&amp;quot;editor&amp;quot;, new Gcp.BigTable.InstanceIamBindingArgs
+    {
+        Instance = &amp;quot;your-bigtable-instance&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_bigtable_instance_iam_member">google_bigtable_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.BigTable.InstanceIamMember(&amp;quot;editor&amp;quot;, new Gcp.BigTable.InstanceIamMemberArgs
+    {
+        Instance = &amp;quot;your-bigtable-instance&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.BigTable.InstanceIamPolicyArgs.html">InstanceIamPolicyArgs</a></h4>
       <section></section>

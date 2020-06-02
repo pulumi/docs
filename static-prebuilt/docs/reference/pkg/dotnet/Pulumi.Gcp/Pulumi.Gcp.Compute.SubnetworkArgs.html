@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SubnetworkArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SubnetworkArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">SubnetworkArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L290">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L338">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs__ctor_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs__ctor" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.#ctor">SubnetworkArgs()</h4>
@@ -100,17 +129,18 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs_Description_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs_Description" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Description">Description</h4>
-  <div class="markdown level1 summary"><p>An optional description of this resource. Provide this property when you create the resource. This field can be set only
-at resource creation time.</p>
+  <div class="markdown level1 summary"><p>An optional description of this resource. Provide this property when
+you create the resource. This field can be set only at resource
+creation time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,19 +152,20 @@ at resource creation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L212">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L252">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs_IpCidrRange_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.IpCidrRange*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs_IpCidrRange" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.IpCidrRange">IpCidrRange</h4>
-  <div class="markdown level1 summary"><p>The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork.
-For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is
-supported.</p>
+  <div class="markdown level1 summary"><p>The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -151,23 +182,24 @@ supported.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L260">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs_LogConfig_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.LogConfig*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs_LogConfig" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.LogConfig">LogConfig</h4>
-  <div class="markdown level1 summary"><p>Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver.
-This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_LOAD_BALANCER'</p>
+  <div class="markdown level1 summary"><p>Denotes the logging options for the subnetwork flow logs. If logging is enabled
+logs will be exported to Stackdriver. This field cannot be set if the <code>purpose</code> of this
+subnetwork is <code>INTERNAL_HTTPS_LOAD_BALANCER</code>  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;SubnetworkLogConfigArgs&gt;? LogConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;SubnetworkLogConfigArgs&gt; LogConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,25 +211,28 @@ This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.SubnetworkLogConfigArgs.html">SubnetworkLogConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.SubnetworkLogConfigArgs.html">SubnetworkLogConfigArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L272">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs_Name_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs_Name" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the resource, provided by the client when initially creating the resource. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+  <div class="markdown level1 summary"><p>The name of the resource, provided by the client when initially
+creating the resource. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression <code>a-z?</code> which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,17 +244,18 @@ must be a dash, lowercase letter, or digit, except the last character, which can
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs_Network_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Network*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs_Network" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Network">Network</h4>
-  <div class="markdown level1 summary"><p>The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.</p>
+  <div class="markdown level1 summary"><p>The network this subnet belongs to.
+Only networks that are in the distributed mode can have subnetworks.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -236,23 +272,23 @@ must be a dash, lowercase letter, or digit, except the last character, which can
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L241">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs_PrivateIpGoogleAccess_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.PrivateIpGoogleAccess*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs_PrivateIpGoogleAccess" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.PrivateIpGoogleAccess">PrivateIpGoogleAccess</h4>
-  <div class="markdown level1 summary"><p>When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private
-Google Access.</p>
+  <div class="markdown level1 summary"><p>When enabled, VMs in this subnetwork without external IP addresses can
+access Google APIs and services by using Private Google Access.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? PrivateIpGoogleAccess { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; PrivateIpGoogleAccess { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,13 +300,13 @@ Google Access.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L248">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L293">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs_Project_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs_Project" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Project">Project</h4>
@@ -280,7 +316,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,24 +328,27 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L304">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs_Purpose_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Purpose*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs_Purpose" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Purpose">Purpose</h4>
-  <div class="markdown level1 summary"><p>The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.</p>
+  <div class="markdown level1 summary"><p>The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Purpose { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Purpose { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -321,13 +360,13 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L262">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L310">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs_Region_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs_Region" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Region">Region</h4>
@@ -336,7 +375,7 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -348,24 +387,26 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L270">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L320">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs_Role_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Role*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs_Role" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.Role">Role</h4>
-  <div class="markdown level1 summary"><p>The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.</p>
+  <div class="markdown level1 summary"><p>The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Role { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Role { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -377,22 +418,20 @@ BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L284">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L332">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkArgs_SecondaryIpRanges_" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.SecondaryIpRanges*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkArgs_SecondaryIpRanges" data-uid="Pulumi.Gcp.Compute.SubnetworkArgs.SecondaryIpRanges">SecondaryIpRanges</h4>
-  <div class="markdown level1 summary"><p>An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. <strong>Note</strong>: This field uses <a href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attr-as-block mode</a>
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: 'example=[]' For more details about this behavior, see <a href="https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value">this
-section</a>.</p>
+  <div class="markdown level1 summary"><p>An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -409,7 +448,7 @@ section</a>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.SubnetworkSecondaryIpRangeArgs.html">SubnetworkSecondaryIpRangeArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.SubnetworkSecondaryIpRangeArgs.html">SubnetworkSecondaryIpRangeArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -421,7 +460,7 @@ section</a>.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Subnetwork.cs/#L198" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Subnetwork.cs/#L236" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

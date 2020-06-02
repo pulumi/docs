@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetNetworkInterfaces
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,22 +78,142 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetNetworkInterfaces</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Ecs.html">Pulumi.AliCloud.Ecs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_Ecs_GetNetworkInterfaces_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetNetworkInterfaces : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetNetworkInterfaces</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/GetNetworkInterfaces.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/GetNetworkInterfaces.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_GetNetworkInterfaces_InvokeAsync_" data-uid="Pulumi.AliCloud.Ecs.GetNetworkInterfaces.InvokeAsync*"></a>
-  <h4 id="Pulumi_AliCloud_Ecs_GetNetworkInterfaces_InvokeAsync_Pulumi_AliCloud_Ecs_GetNetworkInterfacesArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.AliCloud.Ecs.GetNetworkInterfaces.InvokeAsync(Pulumi.AliCloud.Ecs.GetNetworkInterfacesArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetNetworkInterfacesArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Ecs_GetNetworkInterfaces_InvokeAsync_Pulumi_AliCloud_Ecs_GetNetworkInterfacesArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Ecs.GetNetworkInterfaces.InvokeAsync(Pulumi.AliCloud.Ecs.GetNetworkInterfacesArgs,Pulumi.InvokeOptions)">InvokeAsync(GetNetworkInterfacesArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Use this data source to get a list of elastic network interfaces according to the specified filters in an Alibaba Cloud account.</p>
 <p>For information about elastic network interface and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/58496.html">Elastic Network Interface</a></p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;networkInterfacesName&amp;quot;;
+    var vpc = new AliCloud.Vpc.Network(&amp;quot;vpc&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;192.168.0.0/24&amp;quot;,
+    });
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var vswitch = new AliCloud.Vpc.Switch(&amp;quot;vswitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;192.168.0.0/24&amp;quot;,
+        VpcId = vpc.Id,
+    });
+    var @group = new AliCloud.Ecs.SecurityGroup(&amp;quot;group&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        VpcId = vpc.Id,
+    });
+    var @interface = new AliCloud.Vpc.NetworkInterface(&amp;quot;interface&amp;quot;, new AliCloud.Vpc.NetworkInterfaceArgs
+    {
+        Description = &amp;quot;Basic test&amp;quot;,
+        PrivateIp = &amp;quot;192.168.0.2&amp;quot;,
+        SecurityGroups = 
+        {
+            @group.Id,
+        },
+        Tags = 
+        {
+            { &amp;quot;TF-VER&amp;quot;, &amp;quot;0.11.3&amp;quot; },
+        },
+        VswitchId = vswitch.Id,
+    });
+    var instance = new AliCloud.Ecs.Instance(&amp;quot;instance&amp;quot;, new AliCloud.Ecs.InstanceArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        ImageId = &amp;quot;centos_7_04_64_20G_alibase_201701015.vhd&amp;quot;,
+        InstanceName = name,
+        InstanceType = &amp;quot;ecs.e3.xlarge&amp;quot;,
+        InternetMaxBandwidthOut = 10,
+        SecurityGroups = 
+        {
+            @group.Id,
+        },
+        SystemDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        VswitchId = vswitch.Id,
+    });
+    var attachment = new AliCloud.Vpc.NetworkInterfaceAttachment(&amp;quot;attachment&amp;quot;, new AliCloud.Vpc.NetworkInterfaceAttachmentArgs
+    {
+        InstanceId = instance.Id,
+        NetworkInterfaceId = @interface.Id,
+    });
+    var defaultNetworkInterfaces = Output.Tuple(attachment.NetworkInterfaceId, instance.Id, @group.Id, vpc.Id, vswitch.Id).Apply(values =&gt;
+    {
+        var networkInterfaceId = values.Item1;
+        var instanceId = values.Item2;
+        var groupId = values.Item3;
+        var vpcId = values.Item4;
+        var vswitchId = values.Item5;
+        return AliCloud.Ecs.GetNetworkInterfaces.InvokeAsync(new AliCloud.Ecs.GetNetworkInterfacesArgs
+        {
+            Ids = 
+            {
+                networkInterfaceId,
+            },
+            InstanceId = instanceId,
+            NameRegex = name,
+            PrivateIp = &amp;quot;192.168.0.2&amp;quot;,
+            SecurityGroupId = groupId,
+            Tags = 
+            {
+                { &amp;quot;TF-VER&amp;quot;, &amp;quot;0.11.3&amp;quot; },
+            },
+            Type = &amp;quot;Secondary&amp;quot;,
+            VpcId = vpcId,
+            VswitchId = vswitchId,
+        });
+    });
+    this.Eni0Name = defaultNetworkInterfaces.Apply(defaultNetworkInterfaces =&gt; defaultNetworkInterfaces.Interfaces[0].Name);
+}
+
+[Output(&amp;quot;eni0Name&amp;quot;)]
+public Output&amp;lt;string&gt; Eni0Name { get; set; }
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 <h2 id="argument-reference">Argument Reference</h2>
 <p>The following arguments are supported:</p>
@@ -115,7 +235,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetNetworkInterfacesResult&gt; InvokeAsync(GetNetworkInterfacesArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetNetworkInterfacesResult&gt; InvokeAsync(GetNetworkInterfacesArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,7 +253,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -149,7 +269,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Ecs.GetNetworkInterfacesResult.html">GetNetworkInterfacesResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Ecs.GetNetworkInterfacesResult.html">GetNetworkInterfacesResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -161,7 +281,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/GetNetworkInterfaces.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/GetNetworkInterfaces.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

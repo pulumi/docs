@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AmiFromInstanceEbsBlockDevice
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">AmiFromInstanceEbsBlockDevice</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.Outputs.html">Pulumi.Aws.Ec2.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2_Outputs_AmiFromInstanceEbsBlockDevice_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class AmiFromInstanceEbsBlockDevice : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class AmiFromInstanceEbsBlockDevice</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L20">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_AmiFromInstanceEbsBlockDevice_DeleteOnTermination" data-uid="Pulumi.Aws.Ec2.Outputs.AmiFromInstanceEbsBlockDevice.DeleteOnTermination">DeleteOnTermination</h4>
   <div class="markdown level1 summary"><p>Boolean controlling whether the EBS volumes created to
@@ -114,7 +138,7 @@ support each created instance will be deleted once that instance is terminated.<
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L24">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_AmiFromInstanceEbsBlockDevice_DeviceName" data-uid="Pulumi.Aws.Ec2.Outputs.AmiFromInstanceEbsBlockDevice.DeviceName">DeviceName</h4>
   <div class="markdown level1 summary"><p>The path at which the device is exposed to created instances.</p>
@@ -122,7 +146,7 @@ support each created instance will be deleted once that instance is terminated.<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DeviceName</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DeviceName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,13 +158,13 @@ support each created instance will be deleted once that instance is terminated.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L28">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_AmiFromInstanceEbsBlockDevice_Encrypted" data-uid="Pulumi.Aws.Ec2.Outputs.AmiFromInstanceEbsBlockDevice.Encrypted">Encrypted</h4>
   <div class="markdown level1 summary"><p>Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with <code>snapshot_id</code>.</p>
@@ -166,7 +190,7 @@ support each created instance will be deleted once that instance is terminated.<
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L33">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_AmiFromInstanceEbsBlockDevice_Iops" data-uid="Pulumi.Aws.Ec2.Outputs.AmiFromInstanceEbsBlockDevice.Iops">Iops</h4>
   <div class="markdown level1 summary"><p>Number of I/O operations per second the
@@ -193,7 +217,7 @@ created volumes will support.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_AmiFromInstanceEbsBlockDevice_SnapshotId" data-uid="Pulumi.Aws.Ec2.Outputs.AmiFromInstanceEbsBlockDevice.SnapshotId">SnapshotId</h4>
   <div class="markdown level1 summary"><p>The id of an EBS snapshot that will be used to initialize the created
@@ -203,7 +227,7 @@ snapshot.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? SnapshotId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string SnapshotId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -215,13 +239,13 @@ snapshot.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L45">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_AmiFromInstanceEbsBlockDevice_VolumeSize" data-uid="Pulumi.Aws.Ec2.Outputs.AmiFromInstanceEbsBlockDevice.VolumeSize">VolumeSize</h4>
   <div class="markdown level1 summary"><p>The size of created volumes in GiB.
@@ -249,7 +273,7 @@ as the selected snapshot.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L50">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_AmiFromInstanceEbsBlockDevice_VolumeType" data-uid="Pulumi.Aws.Ec2.Outputs.AmiFromInstanceEbsBlockDevice.VolumeType">VolumeType</h4>
   <div class="markdown level1 summary"><p>The type of EBS volume to create. Can be one of &quot;standard&quot; (the
@@ -258,7 +282,7 @@ default), &quot;io1&quot; or &quot;gp2&quot;.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? VolumeType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string VolumeType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -270,7 +294,7 @@ default), &quot;io1&quot; or &quot;gp2&quot;.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -282,7 +306,7 @@ default), &quot;io1&quot; or &quot;gp2&quot;.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Outputs/AmiFromInstanceEbsBlockDevice.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

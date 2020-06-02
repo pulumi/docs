@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class HaVpnGateway
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,12 +81,243 @@ of VPN solutions with higher availability than classic Target VPN Gateways.</p>
 <li><a href="https://cloud.google.com/vpn/docs/how-to/choosing-a-vpn">Choosing a VPN</a></li>
 <li><a href="https://cloud.google.com/vpn/docs/concepts/overview">Cloud VPN Overview</a></li>
 </ul>
+<h2 id="example-usage---ha-vpn-gateway-basic">Example Usage - Ha Vpn Gateway Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new Gcp.Compute.Network(&amp;quot;network1&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        AutoCreateSubnetworks = false,
+    });
+    var haGateway1 = new Gcp.Compute.HaVpnGateway(&amp;quot;haGateway1&amp;quot;, new Gcp.Compute.HaVpnGatewayArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = network1.Id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---ha-vpn-gateway-gcp-to-gcp">Example Usage - Ha Vpn Gateway Gcp To Gcp</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new Gcp.Compute.Network(&amp;quot;network1&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        RoutingMode = &amp;quot;GLOBAL&amp;quot;,
+        AutoCreateSubnetworks = false,
+    });
+    var haGateway1 = new Gcp.Compute.HaVpnGateway(&amp;quot;haGateway1&amp;quot;, new Gcp.Compute.HaVpnGatewayArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = network1.Id,
+    });
+    var network2 = new Gcp.Compute.Network(&amp;quot;network2&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        RoutingMode = &amp;quot;GLOBAL&amp;quot;,
+        AutoCreateSubnetworks = false,
+    });
+    var haGateway2 = new Gcp.Compute.HaVpnGateway(&amp;quot;haGateway2&amp;quot;, new Gcp.Compute.HaVpnGatewayArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = network2.Id,
+    });
+    var network1Subnet1 = new Gcp.Compute.Subnetwork(&amp;quot;network1Subnet1&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;10.0.1.0/24&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = network1.Id,
+    });
+    var network1Subnet2 = new Gcp.Compute.Subnetwork(&amp;quot;network1Subnet2&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;10.0.2.0/24&amp;quot;,
+        Region = &amp;quot;us-west1&amp;quot;,
+        Network = network1.Id,
+    });
+    var network2Subnet1 = new Gcp.Compute.Subnetwork(&amp;quot;network2Subnet1&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;192.168.1.0/24&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = network2.Id,
+    });
+    var network2Subnet2 = new Gcp.Compute.Subnetwork(&amp;quot;network2Subnet2&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;192.168.2.0/24&amp;quot;,
+        Region = &amp;quot;us-east1&amp;quot;,
+        Network = network2.Id,
+    });
+    var router1 = new Gcp.Compute.Router(&amp;quot;router1&amp;quot;, new Gcp.Compute.RouterArgs
+    {
+        Network = network1.Name,
+        Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+        {
+            Asn = 64514,
+        },
+    });
+    var router2 = new Gcp.Compute.Router(&amp;quot;router2&amp;quot;, new Gcp.Compute.RouterArgs
+    {
+        Network = network2.Name,
+        Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+        {
+            Asn = 64515,
+        },
+    });
+    var tunnel1 = new Gcp.Compute.VPNTunnel(&amp;quot;tunnel1&amp;quot;, new Gcp.Compute.VPNTunnelArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        VpnGateway = haGateway1.Id,
+        PeerGcpGateway = haGateway2.Id,
+        SharedSecret = &amp;quot;a secret message&amp;quot;,
+        Router = router1.Id,
+        VpnGatewayInterface = 0,
+    });
+    var tunnel2 = new Gcp.Compute.VPNTunnel(&amp;quot;tunnel2&amp;quot;, new Gcp.Compute.VPNTunnelArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        VpnGateway = haGateway1.Id,
+        PeerGcpGateway = haGateway2.Id,
+        SharedSecret = &amp;quot;a secret message&amp;quot;,
+        Router = router1.Id,
+        VpnGatewayInterface = 1,
+    });
+    var tunnel3 = new Gcp.Compute.VPNTunnel(&amp;quot;tunnel3&amp;quot;, new Gcp.Compute.VPNTunnelArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        VpnGateway = haGateway2.Id,
+        PeerGcpGateway = haGateway1.Id,
+        SharedSecret = &amp;quot;a secret message&amp;quot;,
+        Router = router2.Id,
+        VpnGatewayInterface = 0,
+    });
+    var tunnel4 = new Gcp.Compute.VPNTunnel(&amp;quot;tunnel4&amp;quot;, new Gcp.Compute.VPNTunnelArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        VpnGateway = haGateway2.Id,
+        PeerGcpGateway = haGateway1.Id,
+        SharedSecret = &amp;quot;a secret message&amp;quot;,
+        Router = router2.Id,
+        VpnGatewayInterface = 1,
+    });
+    var router1Interface1 = new Gcp.Compute.RouterInterface(&amp;quot;router1Interface1&amp;quot;, new Gcp.Compute.RouterInterfaceArgs
+    {
+        Router = router1.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        IpRange = &amp;quot;169.254.0.1/30&amp;quot;,
+        VpnTunnel = tunnel1.Name,
+    });
+    var router1Peer1 = new Gcp.Compute.RouterPeer(&amp;quot;router1Peer1&amp;quot;, new Gcp.Compute.RouterPeerArgs
+    {
+        Router = router1.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        PeerIpAddress = &amp;quot;169.254.0.2&amp;quot;,
+        PeerAsn = 64515,
+        AdvertisedRoutePriority = 100,
+        Interface = router1Interface1.Name,
+    });
+    var router1Interface2 = new Gcp.Compute.RouterInterface(&amp;quot;router1Interface2&amp;quot;, new Gcp.Compute.RouterInterfaceArgs
+    {
+        Router = router1.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        IpRange = &amp;quot;169.254.1.1/30&amp;quot;,
+        VpnTunnel = tunnel2.Name,
+    });
+    var router1Peer2 = new Gcp.Compute.RouterPeer(&amp;quot;router1Peer2&amp;quot;, new Gcp.Compute.RouterPeerArgs
+    {
+        Router = router1.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        PeerIpAddress = &amp;quot;169.254.1.2&amp;quot;,
+        PeerAsn = 64515,
+        AdvertisedRoutePriority = 100,
+        Interface = router1Interface2.Name,
+    });
+    var router2Interface1 = new Gcp.Compute.RouterInterface(&amp;quot;router2Interface1&amp;quot;, new Gcp.Compute.RouterInterfaceArgs
+    {
+        Router = router2.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        IpRange = &amp;quot;169.254.0.1/30&amp;quot;,
+        VpnTunnel = tunnel3.Name,
+    });
+    var router2Peer1 = new Gcp.Compute.RouterPeer(&amp;quot;router2Peer1&amp;quot;, new Gcp.Compute.RouterPeerArgs
+    {
+        Router = router2.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        PeerIpAddress = &amp;quot;169.254.0.2&amp;quot;,
+        PeerAsn = 64514,
+        AdvertisedRoutePriority = 100,
+        Interface = router2Interface1.Name,
+    });
+    var router2Interface2 = new Gcp.Compute.RouterInterface(&amp;quot;router2Interface2&amp;quot;, new Gcp.Compute.RouterInterfaceArgs
+    {
+        Router = router2.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        IpRange = &amp;quot;169.254.1.1/30&amp;quot;,
+        VpnTunnel = tunnel4.Name,
+    });
+    var router2Peer2 = new Gcp.Compute.RouterPeer(&amp;quot;router2Peer2&amp;quot;, new Gcp.Compute.RouterPeerArgs
+    {
+        Router = router2.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        PeerIpAddress = &amp;quot;169.254.1.2&amp;quot;,
+        PeerAsn = 64514,
+        AdvertisedRoutePriority = 100,
+        Interface = router2Interface2.Name,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">HaVpnGateway</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">HaVpnGateway</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -97,16 +328,16 @@ of VPN solutions with higher availability than classic Target VPN Gateways.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HaVpnGateway.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/HaVpnGateway.cs/#L283">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HaVpnGateway__ctor_" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_HaVpnGateway__ctor_System_String_Pulumi_Gcp_Compute_HaVpnGatewayArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.#ctor(System.String,Pulumi.Gcp.Compute.HaVpnGatewayArgs,System.Nullable{CustomResourceOptions})">HaVpnGateway(String, HaVpnGatewayArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_HaVpnGateway__ctor_System_String_Pulumi_Gcp_Compute_HaVpnGatewayArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.#ctor(System.String,Pulumi.Gcp.Compute.HaVpnGatewayArgs,Pulumi.CustomResourceOptions)">HaVpnGateway(String, HaVpnGatewayArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a HaVpnGateway resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HaVpnGateway(string name, HaVpnGatewayArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public HaVpnGateway(string name, HaVpnGatewayArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,7 +362,7 @@ of VPN solutions with higher availability than classic Target VPN Gateways.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -141,7 +372,7 @@ of VPN solutions with higher availability than classic Target VPN Gateways.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HaVpnGateway.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/HaVpnGateway.cs/#L229">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HaVpnGateway_Description_" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_HaVpnGateway_Description" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Description">Description</h4>
@@ -150,7 +381,7 @@ of VPN solutions with higher availability than classic Target VPN Gateways.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,20 +393,23 @@ of VPN solutions with higher availability than classic Target VPN Gateways.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HaVpnGateway.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/HaVpnGateway.cs/#L241">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HaVpnGateway_Name_" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_HaVpnGateway_Name" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression <code>a-z?</code> which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -192,13 +426,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HaVpnGateway.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/HaVpnGateway.cs/#L247">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HaVpnGateway_Network_" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Network*"></a>
   <h4 id="Pulumi_Gcp_Compute_HaVpnGateway_Network" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Network">Network</h4>
@@ -219,13 +453,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HaVpnGateway.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/HaVpnGateway.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HaVpnGateway_Project_" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_HaVpnGateway_Project" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Project">Project</h4>
@@ -247,13 +481,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HaVpnGateway.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/HaVpnGateway.cs/#L260">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HaVpnGateway_Region_" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_HaVpnGateway_Region" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Region">Region</h4>
@@ -274,13 +508,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HaVpnGateway.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/HaVpnGateway.cs/#L266">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HaVpnGateway_SelfLink_" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_HaVpnGateway_SelfLink" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.SelfLink">SelfLink</h4>
@@ -301,13 +535,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HaVpnGateway.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/HaVpnGateway.cs/#L272">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HaVpnGateway_VpnInterfaces_" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.VpnInterfaces*"></a>
   <h4 id="Pulumi_Gcp_Compute_HaVpnGateway_VpnInterfaces" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.VpnInterfaces">VpnInterfaces</h4>
@@ -328,7 +562,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HaVpnGatewayVpnInterface.html">HaVpnGatewayVpnInterface</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HaVpnGatewayVpnInterface.html">HaVpnGatewayVpnInterface</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -336,17 +570,17 @@ If it is not provided, the provider project is used.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HaVpnGateway.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/HaVpnGateway.cs/#L313">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HaVpnGateway_Get_" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_HaVpnGateway_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_HaVpnGatewayState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.HaVpnGatewayState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, HaVpnGatewayState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_HaVpnGateway_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_HaVpnGatewayState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.HaVpnGateway.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.HaVpnGatewayState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, HaVpnGatewayState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing HaVpnGateway resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static HaVpnGateway Get(string name, Input&lt;string&gt; id, HaVpnGatewayState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static HaVpnGateway Get(string name, Input&lt;string&gt; id, HaVpnGatewayState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,7 +599,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -377,7 +611,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -406,7 +640,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HaVpnGateway.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/HaVpnGateway.cs/#L224" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

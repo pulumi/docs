@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Logging
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,12 +76,65 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.BillingAccountBucketConfig.html">BillingAccountBucketConfig</a></h4>
+      <section><p>Manages a billing account level logging bucket config. For more information see
+<a href="https://cloud.google.com/logging/docs/">the official logging documentation</a> and
+<a href="https://cloud.google.com/logging/docs/storage">Storing Logs</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are &quot;_Default&quot; and &quot;_Required&quot;.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = Output.Create(Gcp.Organizations.GetBillingAccount.InvokeAsync(new Gcp.Organizations.GetBillingAccountArgs
+    {
+        BillingAccount = &amp;quot;00AA00-000AAA-00AA0A&amp;quot;,
+    }));
+    var basic = new Gcp.Logging.BillingAccountBucketConfig(&amp;quot;basic&amp;quot;, new Gcp.Logging.BillingAccountBucketConfigArgs
+    {
+        BillingAccount = @default.Apply(@default =&gt; @default.BillingAccount),
+        Location = &amp;quot;global&amp;quot;,
+        RetentionDays = 30,
+        BucketId = &amp;quot;_Default&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.BillingAccountBucketConfigArgs.html">BillingAccountBucketConfigArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.BillingAccountBucketConfigState.html">BillingAccountBucketConfigState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.BillingAccountExclusion.html">BillingAccountExclusion</a></h4>
       <section><p>Manages a billing account logging exclusion. For more information see
 <a href="https://cloud.google.com/logging/docs/">the official documentation</a> and
 <a href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
 granted to the credentials used with the provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_exclusion = new Gcp.Logging.BillingAccountExclusion(&amp;quot;my-exclusion&amp;quot;, new Gcp.Logging.BillingAccountExclusionArgs
+    {
+        BillingAccount = &amp;quot;ABCDEF-012345-GHIJKL&amp;quot;,
+        Description = &amp;quot;Exclude GCE instance debug logs&amp;quot;,
+        Filter = &amp;quot;resource.type = gce_instance AND severity &amp;lt;= DEBUG&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.BillingAccountExclusionArgs.html">BillingAccountExclusionArgs</a></h4>
       <section></section>
@@ -97,10 +150,74 @@ granted to the credentials used with the provider.</p>
 the credentials used with this provider. <a href="https://cloud.google.com/billing/docs/how-to/billing-access">IAM roles granted on a billing account</a> are separate from the
 typical IAM roles granted on a project.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var log_bucket = new Gcp.Storage.Bucket(&amp;quot;log-bucket&amp;quot;, new Gcp.Storage.BucketArgs
+    {
+    });
+    var my_sink = new Gcp.Logging.BillingAccountSink(&amp;quot;my-sink&amp;quot;, new Gcp.Logging.BillingAccountSinkArgs
+    {
+        BillingAccount = &amp;quot;ABCDEF-012345-GHIJKL&amp;quot;,
+        Destination = log_bucket.Name.Apply(name =&gt; $&amp;quot;storage.googleapis.com/{name}&amp;quot;),
+    });
+    var log_writer = new Gcp.Projects.IAMBinding(&amp;quot;log-writer&amp;quot;, new Gcp.Projects.IAMBindingArgs
+    {
+        Role = &amp;quot;roles/storage.objectCreator&amp;quot;,
+        Members = 
+        {
+            my_sink.WriterIdentity,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.BillingAccountSinkArgs.html">BillingAccountSinkArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.BillingAccountSinkState.html">BillingAccountSinkState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.FolderBucketConfig.html">FolderBucketConfig</a></h4>
+      <section><p>Manages a folder-level logging bucket config. For more information see
+<a href="https://cloud.google.com/logging/docs/">the official logging documentation</a> and
+<a href="https://cloud.google.com/logging/docs/storage">Storing Logs</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are &quot;_Default&quot; and &quot;_Required&quot;.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Organizations.Folder(&amp;quot;default&amp;quot;, new Gcp.Organizations.FolderArgs
+    {
+        DisplayName = &amp;quot;some-folder-name&amp;quot;,
+        Parent = &amp;quot;organizations/123456789&amp;quot;,
+    });
+    var basic = new Gcp.Logging.FolderBucketConfig(&amp;quot;basic&amp;quot;, new Gcp.Logging.FolderBucketConfigArgs
+    {
+        Folder = @default.Name,
+        Location = &amp;quot;global&amp;quot;,
+        RetentionDays = 30,
+        BucketId = &amp;quot;_Default&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.FolderBucketConfigArgs.html">FolderBucketConfigArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.FolderBucketConfigState.html">FolderBucketConfigState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.FolderExclusion.html">FolderExclusion</a></h4>
       <section><p>Manages a folder-level logging exclusion. For more information see
@@ -108,6 +225,29 @@ typical IAM roles granted on a project.</p>
 <a href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
 granted to the credentials used with this provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_folder = new Gcp.Organizations.Folder(&amp;quot;my-folder&amp;quot;, new Gcp.Organizations.FolderArgs
+    {
+        DisplayName = &amp;quot;My folder&amp;quot;,
+        Parent = &amp;quot;organizations/123456&amp;quot;,
+    });
+    var my_exclusion = new Gcp.Logging.FolderExclusion(&amp;quot;my-exclusion&amp;quot;, new Gcp.Logging.FolderExclusionArgs
+    {
+        Folder = my_folder.Name,
+        Description = &amp;quot;Exclude GCE instance debug logs&amp;quot;,
+        Filter = &amp;quot;resource.type = gce_instance AND severity &amp;lt;= DEBUG&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.FolderExclusionArgs.html">FolderExclusionArgs</a></h4>
       <section></section>
@@ -119,6 +259,40 @@ granted to the credentials used with this provider.</p>
 <a href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
 granted to the credentials used with this provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var log_bucket = new Gcp.Storage.Bucket(&amp;quot;log-bucket&amp;quot;, new Gcp.Storage.BucketArgs
+    {
+    });
+    var my_folder = new Gcp.Organizations.Folder(&amp;quot;my-folder&amp;quot;, new Gcp.Organizations.FolderArgs
+    {
+        DisplayName = &amp;quot;My folder&amp;quot;,
+        Parent = &amp;quot;organizations/123456&amp;quot;,
+    });
+    var my_sink = new Gcp.Logging.FolderSink(&amp;quot;my-sink&amp;quot;, new Gcp.Logging.FolderSinkArgs
+    {
+        Folder = my_folder.Name,
+        Destination = log_bucket.Name.Apply(name =&gt; $&amp;quot;storage.googleapis.com/{name}&amp;quot;),
+        Filter = &amp;quot;resource.type = gce_instance AND severity &gt;= WARN&amp;quot;,
+    });
+    var log_writer = new Gcp.Projects.IAMBinding(&amp;quot;log-writer&amp;quot;, new Gcp.Projects.IAMBindingArgs
+    {
+        Role = &amp;quot;roles/storage.objectCreator&amp;quot;,
+        Members = 
+        {
+            my_sink.WriterIdentity,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.FolderSinkArgs.html">FolderSinkArgs</a></h4>
       <section></section>
@@ -134,10 +308,153 @@ an optional histogram of the values as specified by the bucket options.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/logging/docs/apis">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---logging-metric-basic">Example Usage - Logging Metric Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var loggingMetric = new Gcp.Logging.Metric(&amp;quot;loggingMetric&amp;quot;, new Gcp.Logging.MetricArgs
+    {
+        BucketOptions = new Gcp.Logging.Inputs.MetricBucketOptionsArgs
+        {
+            LinearBuckets = new Gcp.Logging.Inputs.MetricBucketOptionsLinearBucketsArgs
+            {
+                NumFiniteBuckets = 3,
+                Offset = 1,
+                Width = 1,
+            },
+        },
+        Filter = &amp;quot;resource.type=gae_app AND severity&gt;=ERROR&amp;quot;,
+        LabelExtractors = 
+        {
+            { &amp;quot;mass&amp;quot;, &amp;quot;EXTRACT(jsonPayload.request)&amp;quot; },
+            { &amp;quot;sku&amp;quot;, &amp;quot;EXTRACT(jsonPayload.id)&amp;quot; },
+        },
+        MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
+        {
+            DisplayName = &amp;quot;My metric&amp;quot;,
+            Labels = 
+            {
+                new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
+                {
+                    Description = &amp;quot;amount of matter&amp;quot;,
+                    Key = &amp;quot;mass&amp;quot;,
+                    ValueType = &amp;quot;STRING&amp;quot;,
+                },
+                new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
+                {
+                    Description = &amp;quot;Identifying number for item&amp;quot;,
+                    Key = &amp;quot;sku&amp;quot;,
+                    ValueType = &amp;quot;INT64&amp;quot;,
+                },
+            },
+            MetricKind = &amp;quot;DELTA&amp;quot;,
+            Unit = &amp;quot;1&amp;quot;,
+            ValueType = &amp;quot;DISTRIBUTION&amp;quot;,
+        },
+        ValueExtractor = &amp;quot;EXTRACT(jsonPayload.request)&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---logging-metric-counter-basic">Example Usage - Logging Metric Counter Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var loggingMetric = new Gcp.Logging.Metric(&amp;quot;loggingMetric&amp;quot;, new Gcp.Logging.MetricArgs
+    {
+        Filter = &amp;quot;resource.type=gae_app AND severity&gt;=ERROR&amp;quot;,
+        MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
+        {
+            MetricKind = &amp;quot;DELTA&amp;quot;,
+            ValueType = &amp;quot;INT64&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---logging-metric-counter-labels">Example Usage - Logging Metric Counter Labels</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var loggingMetric = new Gcp.Logging.Metric(&amp;quot;loggingMetric&amp;quot;, new Gcp.Logging.MetricArgs
+    {
+        Filter = &amp;quot;resource.type=gae_app AND severity&gt;=ERROR&amp;quot;,
+        LabelExtractors = 
+        {
+            { &amp;quot;mass&amp;quot;, &amp;quot;EXTRACT(jsonPayload.request)&amp;quot; },
+        },
+        MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
+        {
+            Labels = 
+            {
+                new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
+                {
+                    Description = &amp;quot;amount of matter&amp;quot;,
+                    Key = &amp;quot;mass&amp;quot;,
+                    ValueType = &amp;quot;STRING&amp;quot;,
+                },
+            },
+            MetricKind = &amp;quot;DELTA&amp;quot;,
+            ValueType = &amp;quot;INT64&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.MetricArgs.html">MetricArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.MetricState.html">MetricState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationBucketConfig.html">OrganizationBucketConfig</a></h4>
+      <section><p>Manages a organization-level logging bucket config. For more information see
+<a href="https://cloud.google.com/logging/docs/">the official logging documentation</a> and
+<a href="https://cloud.google.com/logging/docs/storage">Storing Logs</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are &quot;_Default&quot; and &quot;_Required&quot;.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = Output.Create(Gcp.Organizations.GetOrganization.InvokeAsync(new Gcp.Organizations.GetOrganizationArgs
+    {
+        Organization = &amp;quot;123456789&amp;quot;,
+    }));
+    var basic = new Gcp.Logging.OrganizationBucketConfig(&amp;quot;basic&amp;quot;, new Gcp.Logging.OrganizationBucketConfigArgs
+    {
+        Organization = @default.Apply(@default =&gt; @default.Organization),
+        Location = &amp;quot;global&amp;quot;,
+        RetentionDays = 30,
+        BucketId = &amp;quot;_Default&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationBucketConfigArgs.html">OrganizationBucketConfigArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationBucketConfigState.html">OrganizationBucketConfigState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationExclusion.html">OrganizationExclusion</a></h4>
       <section><p>Manages an organization-level logging exclusion. For more information see
@@ -145,6 +462,24 @@ an optional histogram of the values as specified by the bucket options.</p>
 <a href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
 granted to the credentials used with this provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_exclusion = new Gcp.Logging.OrganizationExclusion(&amp;quot;my-exclusion&amp;quot;, new Gcp.Logging.OrganizationExclusionArgs
+    {
+        Description = &amp;quot;Exclude GCE instance debug logs&amp;quot;,
+        Filter = &amp;quot;resource.type = gce_instance AND severity &amp;lt;= DEBUG&amp;quot;,
+        OrgId = &amp;quot;123456789&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationExclusionArgs.html">OrganizationExclusionArgs</a></h4>
       <section></section>
@@ -156,10 +491,72 @@ granted to the credentials used with this provider.</p>
 <a href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
 granted to the credentials used with this provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var log_bucket = new Gcp.Storage.Bucket(&amp;quot;log-bucket&amp;quot;, new Gcp.Storage.BucketArgs
+    {
+    });
+    var my_sink = new Gcp.Logging.OrganizationSink(&amp;quot;my-sink&amp;quot;, new Gcp.Logging.OrganizationSinkArgs
+    {
+        OrgId = &amp;quot;123456789&amp;quot;,
+        Destination = log_bucket.Name.Apply(name =&gt; $&amp;quot;storage.googleapis.com/{name}&amp;quot;),
+        Filter = &amp;quot;resource.type = gce_instance AND severity &gt;= WARN&amp;quot;,
+    });
+    var log_writer = new Gcp.Projects.IAMMember(&amp;quot;log-writer&amp;quot;, new Gcp.Projects.IAMMemberArgs
+    {
+        Role = &amp;quot;roles/storage.objectCreator&amp;quot;,
+        Member = my_sink.WriterIdentity,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationSinkArgs.html">OrganizationSinkArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationSinkState.html">OrganizationSinkState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.ProjectBucketConfig.html">ProjectBucketConfig</a></h4>
+      <section><p>Manages a project-level logging bucket config. For more information see
+<a href="https://cloud.google.com/logging/docs/">the official logging documentation</a> and
+<a href="https://cloud.google.com/logging/docs/storage">Storing Logs</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are &quot;_Default&quot; and &quot;_Required&quot;.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Organizations.Project(&amp;quot;default&amp;quot;, new Gcp.Organizations.ProjectArgs
+    {
+        ProjectId = &amp;quot;your-project-id&amp;quot;,
+        OrgId = &amp;quot;123456789&amp;quot;,
+    });
+    var basic = new Gcp.Logging.ProjectBucketConfig(&amp;quot;basic&amp;quot;, new Gcp.Logging.ProjectBucketConfigArgs
+    {
+        Project = @default.Name,
+        Location = &amp;quot;global&amp;quot;,
+        RetentionDays = 30,
+        BucketId = &amp;quot;_Default&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.ProjectBucketConfigArgs.html">ProjectBucketConfigArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Logging.ProjectBucketConfigState.html">ProjectBucketConfigState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.ProjectExclusion.html">ProjectExclusion</a></h4>
       <section><p>Manages a project-level logging exclusion. For more information see
@@ -167,6 +564,23 @@ granted to the credentials used with this provider.</p>
 <a href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
 granted to the credentials used with this provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_exclusion = new Gcp.Logging.ProjectExclusion(&amp;quot;my-exclusion&amp;quot;, new Gcp.Logging.ProjectExclusionArgs
+    {
+        Description = &amp;quot;Exclude GCE instance debug logs&amp;quot;,
+        Filter = &amp;quot;resource.type = gce_instance AND severity &amp;lt;= DEBUG&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.ProjectExclusionArgs.html">ProjectExclusionArgs</a></h4>
       <section></section>

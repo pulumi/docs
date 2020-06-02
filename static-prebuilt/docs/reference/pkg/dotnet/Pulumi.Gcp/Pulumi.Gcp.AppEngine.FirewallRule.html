@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FirewallRule
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,12 +79,79 @@ and provides an action to take on matched requests.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/appengine/docs/standard/python/creating-firewalls#creating_firewall_rules">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---app-engine-firewall-rule-basic">Example Usage - App Engine Firewall Rule Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myProject = new Gcp.Organizations.Project(&amp;quot;myProject&amp;quot;, new Gcp.Organizations.ProjectArgs
+    {
+        ProjectId = &amp;quot;ae-project&amp;quot;,
+        OrgId = &amp;quot;123456789&amp;quot;,
+    });
+    var app = new Gcp.AppEngine.Application(&amp;quot;app&amp;quot;, new Gcp.AppEngine.ApplicationArgs
+    {
+        Project = myProject.ProjectId,
+        LocationId = &amp;quot;us-central&amp;quot;,
+    });
+    var rule = new Gcp.AppEngine.FirewallRule(&amp;quot;rule&amp;quot;, new Gcp.AppEngine.FirewallRuleArgs
+    {
+        Project = app.Project,
+        Priority = 1000,
+        Action = &amp;quot;ALLOW&amp;quot;,
+        SourceRange = &amp;quot;*&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">FirewallRule</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">FirewallRule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.AppEngine.html">Pulumi.Gcp.AppEngine</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -95,16 +162,16 @@ and provides an action to take on matched requests.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FirewallRule.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/FirewallRule.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_FirewallRule__ctor_" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_AppEngine_FirewallRule__ctor_System_String_Pulumi_Gcp_AppEngine_FirewallRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.#ctor(System.String,Pulumi.Gcp.AppEngine.FirewallRuleArgs,System.Nullable{CustomResourceOptions})">FirewallRule(String, FirewallRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_AppEngine_FirewallRule__ctor_System_String_Pulumi_Gcp_AppEngine_FirewallRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.#ctor(System.String,Pulumi.Gcp.AppEngine.FirewallRuleArgs,Pulumi.CustomResourceOptions)">FirewallRule(String, FirewallRuleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a FirewallRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FirewallRule(string name, FirewallRuleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public FirewallRule(string name, FirewallRuleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,7 +196,7 @@ and provides an action to take on matched requests.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -139,7 +206,7 @@ and provides an action to take on matched requests.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FirewallRule.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/FirewallRule.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_FirewallRule_Action_" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.Action*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_FirewallRule_Action" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.Action">Action</h4>
@@ -160,13 +227,13 @@ and provides an action to take on matched requests.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FirewallRule.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/FirewallRule.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_FirewallRule_Description_" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.Description*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_FirewallRule_Description" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.Description">Description</h4>
@@ -175,7 +242,7 @@ and provides an action to take on matched requests.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,19 +254,21 @@ and provides an action to take on matched requests.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FirewallRule.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/FirewallRule.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_FirewallRule_Priority_" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.Priority*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_FirewallRule_Priority" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.Priority">Priority</h4>
-  <div class="markdown level1 summary"><p>A positive integer that defines the order of rule evaluation. Rules with the lowest priority are evaluated first. A
-default rule at priority Int32.MaxValue matches all IPv4 and IPv6 traffic when no previous rule matches. Only the action
-of this rule can be modified by the user.</p>
+  <div class="markdown level1 summary"><p>A positive integer that defines the order of rule evaluation.
+Rules with the lowest priority are evaluated first.
+A default rule at priority Int32.MaxValue matches all IPv4 and
+IPv6 traffic when no previous rule matches. Only the action of
+this rule can be modified by the user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -216,13 +285,13 @@ of this rule can be modified by the user.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FirewallRule.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/FirewallRule.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_FirewallRule_Project_" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.Project*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_FirewallRule_Project" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.Project">Project</h4>
@@ -244,13 +313,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FirewallRule.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/FirewallRule.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_FirewallRule_SourceRange_" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.SourceRange*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_FirewallRule_SourceRange" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.SourceRange">SourceRange</h4>
@@ -271,7 +340,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -279,17 +348,17 @@ If it is not provided, the provider project is used.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FirewallRule.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/FirewallRule.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_FirewallRule_Get_" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.Get*"></a>
-  <h4 id="Pulumi_Gcp_AppEngine_FirewallRule_Get_System_String_Input_System_String__Pulumi_Gcp_AppEngine_FirewallRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.Get(System.String,Input{System.String},Pulumi.Gcp.AppEngine.FirewallRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FirewallRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_AppEngine_FirewallRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_AppEngine_FirewallRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.AppEngine.FirewallRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.AppEngine.FirewallRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, FirewallRuleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing FirewallRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static FirewallRule Get(string name, Input&lt;string&gt; id, FirewallRuleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static FirewallRule Get(string name, Input&lt;string&gt; id, FirewallRuleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,7 +377,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -320,7 +389,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -349,7 +418,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FirewallRule.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/FirewallRule.cs/#L56" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

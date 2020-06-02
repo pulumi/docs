@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Project
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,89 @@
   <h1 id="Pulumi_Rancher2_Project" data-uid="Pulumi.Rancher2.Project" class="text-break">Class Project
   </h1>
   <div class="markdown level0 summary"><p>Provides a Rancher v2 Project resource. This can be used to create projects for Rancher v2 environments and retrieve their information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Project
+    var foo = new Rancher2.Project(&amp;quot;foo&amp;quot;, new Rancher2.ProjectArgs
+    {
+        ClusterId = &amp;quot;&amp;lt;CLUSTER_ID&gt;&amp;quot;,
+        ContainerResourceLimit = new Rancher2.Inputs.ProjectContainerResourceLimitArgs
+        {
+            LimitsCpu = &amp;quot;20m&amp;quot;,
+            LimitsMemory = &amp;quot;20Mi&amp;quot;,
+            RequestsCpu = &amp;quot;1m&amp;quot;,
+            RequestsMemory = &amp;quot;1Mi&amp;quot;,
+        },
+        ResourceQuota = new Rancher2.Inputs.ProjectResourceQuotaArgs
+        {
+            NamespaceDefaultLimit = new Rancher2.Inputs.ProjectResourceQuotaNamespaceDefaultLimitArgs
+            {
+                LimitsCpu = &amp;quot;2000m&amp;quot;,
+                LimitsMemory = &amp;quot;500Mi&amp;quot;,
+                RequestsStorage = &amp;quot;1Gi&amp;quot;,
+            },
+            ProjectLimit = new Rancher2.Inputs.ProjectResourceQuotaProjectLimitArgs
+            {
+                LimitsCpu = &amp;quot;2000m&amp;quot;,
+                LimitsMemory = &amp;quot;2000Mi&amp;quot;,
+                RequestsStorage = &amp;quot;2Gi&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Project</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Project</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
@@ -88,16 +165,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project__ctor_" data-uid="Pulumi.Rancher2.Project.#ctor*"></a>
-  <h4 id="Pulumi_Rancher2_Project__ctor_System_String_Pulumi_Rancher2_ProjectArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.Project.#ctor(System.String,Pulumi.Rancher2.ProjectArgs,System.Nullable{CustomResourceOptions})">Project(String, ProjectArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Rancher2_Project__ctor_System_String_Pulumi_Rancher2_ProjectArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Rancher2.Project.#ctor(System.String,Pulumi.Rancher2.ProjectArgs,Pulumi.CustomResourceOptions)">Project(String, ProjectArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Project resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Project(string name, ProjectArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Project(string name, ProjectArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +199,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +209,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_Annotations_" data-uid="Pulumi.Rancher2.Project.Annotations*"></a>
   <h4 id="Pulumi_Rancher2_Project_Annotations" data-uid="Pulumi.Rancher2.Project.Annotations">Annotations</h4>
@@ -153,13 +230,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_ClusterId_" data-uid="Pulumi.Rancher2.Project.ClusterId*"></a>
   <h4 id="Pulumi_Rancher2_Project_ClusterId" data-uid="Pulumi.Rancher2.Project.ClusterId">ClusterId</h4>
@@ -180,13 +257,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_ContainerResourceLimit_" data-uid="Pulumi.Rancher2.Project.ContainerResourceLimit*"></a>
   <h4 id="Pulumi_Rancher2_Project_ContainerResourceLimit" data-uid="Pulumi.Rancher2.Project.ContainerResourceLimit">ContainerResourceLimit</h4>
@@ -207,13 +284,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ProjectContainerResourceLimit.html">ProjectContainerResourceLimit</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ProjectContainerResourceLimit.html">ProjectContainerResourceLimit</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_Description_" data-uid="Pulumi.Rancher2.Project.Description*"></a>
   <h4 id="Pulumi_Rancher2_Project_Description" data-uid="Pulumi.Rancher2.Project.Description">Description</h4>
@@ -222,7 +299,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +311,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_EnableProjectMonitoring_" data-uid="Pulumi.Rancher2.Project.EnableProjectMonitoring*"></a>
   <h4 id="Pulumi_Rancher2_Project_EnableProjectMonitoring" data-uid="Pulumi.Rancher2.Project.EnableProjectMonitoring">EnableProjectMonitoring</h4>
@@ -261,13 +338,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_Labels_" data-uid="Pulumi.Rancher2.Project.Labels*"></a>
   <h4 id="Pulumi_Rancher2_Project_Labels" data-uid="Pulumi.Rancher2.Project.Labels">Labels</h4>
@@ -288,13 +365,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_Name_" data-uid="Pulumi.Rancher2.Project.Name*"></a>
   <h4 id="Pulumi_Rancher2_Project_Name" data-uid="Pulumi.Rancher2.Project.Name">Name</h4>
@@ -315,13 +392,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_PodSecurityPolicyTemplateId_" data-uid="Pulumi.Rancher2.Project.PodSecurityPolicyTemplateId*"></a>
   <h4 id="Pulumi_Rancher2_Project_PodSecurityPolicyTemplateId" data-uid="Pulumi.Rancher2.Project.PodSecurityPolicyTemplateId">PodSecurityPolicyTemplateId</h4>
@@ -330,7 +407,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PodSecurityPolicyTemplateId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PodSecurityPolicyTemplateId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,13 +419,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_ProjectMonitoringInput_" data-uid="Pulumi.Rancher2.Project.ProjectMonitoringInput*"></a>
   <h4 id="Pulumi_Rancher2_Project_ProjectMonitoringInput" data-uid="Pulumi.Rancher2.Project.ProjectMonitoringInput">ProjectMonitoringInput</h4>
@@ -369,13 +446,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ProjectProjectMonitoringInput.html">ProjectProjectMonitoringInput</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ProjectProjectMonitoringInput.html">ProjectProjectMonitoringInput</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_ResourceQuota_" data-uid="Pulumi.Rancher2.Project.ResourceQuota*"></a>
   <h4 id="Pulumi_Rancher2_Project_ResourceQuota" data-uid="Pulumi.Rancher2.Project.ResourceQuota">ResourceQuota</h4>
@@ -396,13 +473,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ProjectResourceQuota.html">ProjectResourceQuota</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ProjectResourceQuota.html">ProjectResourceQuota</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_WaitForCluster_" data-uid="Pulumi.Rancher2.Project.WaitForCluster*"></a>
   <h4 id="Pulumi_Rancher2_Project_WaitForCluster" data-uid="Pulumi.Rancher2.Project.WaitForCluster">WaitForCluster</h4>
@@ -423,7 +500,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -431,17 +508,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Project_Get_" data-uid="Pulumi.Rancher2.Project.Get*"></a>
-  <h4 id="Pulumi_Rancher2_Project_Get_System_String_Input_System_String__Pulumi_Rancher2_ProjectState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.Project.Get(System.String,Input{System.String},Pulumi.Rancher2.ProjectState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ProjectState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Rancher2_Project_Get_System_String_Pulumi_Input_System_String__Pulumi_Rancher2_ProjectState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Rancher2.Project.Get(System.String,Pulumi.Input{System.String},Pulumi.Rancher2.ProjectState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ProjectState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Project resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Project Get(string name, Input&lt;string&gt; id, ProjectState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Project Get(string name, Input&lt;string&gt; id, ProjectState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,7 +537,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -472,7 +549,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -501,7 +578,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L59" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

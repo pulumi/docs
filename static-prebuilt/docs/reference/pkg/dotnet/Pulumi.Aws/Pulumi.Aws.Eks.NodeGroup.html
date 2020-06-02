@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NodeGroup
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,100 @@
   <h1 id="Pulumi_Aws_Eks_NodeGroup" data-uid="Pulumi.Aws.Eks.NodeGroup" class="text-break">Class NodeGroup
   </h1>
   <div class="markdown level0 summary"><p>Manages an EKS Node Group, which can provision and optionally update an Auto Scaling Group of Kubernetes worker nodes compatible with EKS. Additional documentation about this functionality can be found in the <a href="https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html">EKS User Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="example-iam-role-for-eks-node-group">Example IAM Role for EKS Node Group</h3>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Iam.Role(&amp;quot;example&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;Statement&amp;quot;, new[]
+                {
+                    new Dictionary&amp;lt;string, object?&gt;
+                    {
+                        { &amp;quot;Action&amp;quot;, &amp;quot;sts:AssumeRole&amp;quot; },
+                        { &amp;quot;Effect&amp;quot;, &amp;quot;Allow&amp;quot; },
+                        { &amp;quot;Principal&amp;quot;, new Dictionary&amp;lt;string, object?&gt;
+                        {
+                            { &amp;quot;Service&amp;quot;, &amp;quot;ec2.amazonaws.com&amp;quot; },
+                        } },
+                    },
+                }
+             },
+            { &amp;quot;Version&amp;quot;, &amp;quot;2012-10-17&amp;quot; },
+        }),
+    });
+    var example_AmazonEKSWorkerNodePolicy = new Aws.Iam.RolePolicyAttachment(&amp;quot;example-AmazonEKSWorkerNodePolicy&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy&amp;quot;,
+        Role = example.Name,
+    });
+    var example_AmazonEKSCNIPolicy = new Aws.Iam.RolePolicyAttachment(&amp;quot;example-AmazonEKSCNIPolicy&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy&amp;quot;,
+        Role = example.Name,
+    });
+    var example_AmazonEC2ContainerRegistryReadOnly = new Aws.Iam.RolePolicyAttachment(&amp;quot;example-AmazonEC2ContainerRegistryReadOnly&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly&amp;quot;,
+        Role = example.Name,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">NodeGroup</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">NodeGroup</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Eks.html">Pulumi.Aws.Eks</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +176,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup__ctor_" data-uid="Pulumi.Aws.Eks.NodeGroup.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Eks_NodeGroup__ctor_System_String_Pulumi_Aws_Eks_NodeGroupArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Eks.NodeGroup.#ctor(System.String,Pulumi.Aws.Eks.NodeGroupArgs,System.Nullable{CustomResourceOptions})">NodeGroup(String, NodeGroupArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Eks_NodeGroup__ctor_System_String_Pulumi_Aws_Eks_NodeGroupArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Eks.NodeGroup.#ctor(System.String,Pulumi.Aws.Eks.NodeGroupArgs,Pulumi.CustomResourceOptions)">NodeGroup(String, NodeGroupArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a NodeGroup resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NodeGroup(string name, NodeGroupArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public NodeGroup(string name, NodeGroupArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +210,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +220,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_AmiType_" data-uid="Pulumi.Aws.Eks.NodeGroup.AmiType*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_AmiType" data-uid="Pulumi.Aws.Eks.NodeGroup.AmiType">AmiType</h4>
@@ -153,13 +241,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_Arn_" data-uid="Pulumi.Aws.Eks.NodeGroup.Arn*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_Arn" data-uid="Pulumi.Aws.Eks.NodeGroup.Arn">Arn</h4>
@@ -180,13 +268,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_ClusterName_" data-uid="Pulumi.Aws.Eks.NodeGroup.ClusterName*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_ClusterName" data-uid="Pulumi.Aws.Eks.NodeGroup.ClusterName">ClusterName</h4>
@@ -207,13 +295,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_DiskSize_" data-uid="Pulumi.Aws.Eks.NodeGroup.DiskSize*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_DiskSize" data-uid="Pulumi.Aws.Eks.NodeGroup.DiskSize">DiskSize</h4>
@@ -234,13 +322,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L98">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Eks_NodeGroup_ForceUpdateVersion_" data-uid="Pulumi.Aws.Eks.NodeGroup.ForceUpdateVersion*"></a>
+  <h4 id="Pulumi_Aws_Eks_NodeGroup_ForceUpdateVersion" data-uid="Pulumi.Aws.Eks.NodeGroup.ForceUpdateVersion">ForceUpdateVersion</h4>
+  <div class="markdown level1 summary"><p>Force version update if existing pods are unable to be drained due to a pod disruption budget issue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ForceUpdateVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_InstanceTypes_" data-uid="Pulumi.Aws.Eks.NodeGroup.InstanceTypes*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_InstanceTypes" data-uid="Pulumi.Aws.Eks.NodeGroup.InstanceTypes">InstanceTypes</h4>
@@ -261,22 +376,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_Labels_" data-uid="Pulumi.Aws.Eks.NodeGroup.Labels*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_Labels" data-uid="Pulumi.Aws.Eks.NodeGroup.Labels">Labels</h4>
-  <div class="markdown level1 summary"><p>Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.</p>
+  <div class="markdown level1 summary"><p>Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -288,13 +403,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_NodeGroupName_" data-uid="Pulumi.Aws.Eks.NodeGroup.NodeGroupName*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_NodeGroupName" data-uid="Pulumi.Aws.Eks.NodeGroup.NodeGroupName">NodeGroupName</h4>
@@ -315,13 +430,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_NodeRoleArn_" data-uid="Pulumi.Aws.Eks.NodeGroup.NodeRoleArn*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_NodeRoleArn" data-uid="Pulumi.Aws.Eks.NodeGroup.NodeRoleArn">NodeRoleArn</h4>
@@ -342,13 +457,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_ReleaseVersion_" data-uid="Pulumi.Aws.Eks.NodeGroup.ReleaseVersion*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_ReleaseVersion" data-uid="Pulumi.Aws.Eks.NodeGroup.ReleaseVersion">ReleaseVersion</h4>
@@ -369,13 +484,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_RemoteAccess_" data-uid="Pulumi.Aws.Eks.NodeGroup.RemoteAccess*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_RemoteAccess" data-uid="Pulumi.Aws.Eks.NodeGroup.RemoteAccess">RemoteAccess</h4>
@@ -396,13 +511,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Eks.Outputs.NodeGroupRemoteAccess.html">NodeGroupRemoteAccess</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Eks.Outputs.NodeGroupRemoteAccess.html">NodeGroupRemoteAccess</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_Resources_" data-uid="Pulumi.Aws.Eks.NodeGroup.Resources*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_Resources" data-uid="Pulumi.Aws.Eks.NodeGroup.Resources">Resources</h4>
@@ -423,13 +538,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Eks.Outputs.NodeGroupResource.html">NodeGroupResource</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Eks.Outputs.NodeGroupResource.html">NodeGroupResource</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_ScalingConfig_" data-uid="Pulumi.Aws.Eks.NodeGroup.ScalingConfig*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_ScalingConfig" data-uid="Pulumi.Aws.Eks.NodeGroup.ScalingConfig">ScalingConfig</h4>
@@ -450,13 +565,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Eks.Outputs.NodeGroupScalingConfig.html">NodeGroupScalingConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Eks.Outputs.NodeGroupScalingConfig.html">NodeGroupScalingConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_Status_" data-uid="Pulumi.Aws.Eks.NodeGroup.Status*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_Status" data-uid="Pulumi.Aws.Eks.NodeGroup.Status">Status</h4>
@@ -477,13 +592,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_SubnetIds_" data-uid="Pulumi.Aws.Eks.NodeGroup.SubnetIds*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_SubnetIds" data-uid="Pulumi.Aws.Eks.NodeGroup.SubnetIds">SubnetIds</h4>
@@ -504,13 +619,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_Tags_" data-uid="Pulumi.Aws.Eks.NodeGroup.Tags*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_Tags" data-uid="Pulumi.Aws.Eks.NodeGroup.Tags">Tags</h4>
@@ -519,7 +634,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -531,13 +646,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_Version_" data-uid="Pulumi.Aws.Eks.NodeGroup.Version*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroup_Version" data-uid="Pulumi.Aws.Eks.NodeGroup.Version">Version</h4>
@@ -558,7 +673,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -566,17 +681,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L151">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L211">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroup_Get_" data-uid="Pulumi.Aws.Eks.NodeGroup.Get*"></a>
-  <h4 id="Pulumi_Aws_Eks_NodeGroup_Get_System_String_Input_System_String__Pulumi_Aws_Eks_NodeGroupState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Eks.NodeGroup.Get(System.String,Input{System.String},Pulumi.Aws.Eks.NodeGroupState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NodeGroupState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Eks_NodeGroup_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Eks_NodeGroupState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Eks.NodeGroup.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Eks.NodeGroupState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NodeGroupState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing NodeGroup resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NodeGroup Get(string name, Input&lt;string&gt; id, NodeGroupState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NodeGroup Get(string name, Input&lt;string&gt; id, NodeGroupState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -595,7 +710,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -607,7 +722,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -636,7 +751,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Eks/NodeGroup.cs/#L69" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StackScript
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,7 +71,84 @@
   
   <h1 id="Pulumi_Linode_StackScript" data-uid="Pulumi.Linode.StackScript" class="text-break">Class StackScript
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides a Linode StackScript resource.  This can be used to create, modify, and delete Linode StackScripts.  StackScripts are private or public managed scripts which run within an instance during startup.  StackScripts can include variables whose values are specified when the Instance is created.</p>
+<p>For more information, see <a href="https://www.linode.com/docs/platform/stackscripts/">Automate Deployment with StackScripts</a> and the <a href="https://developers.linode.com/api/v4#tag/StackScripts">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fooStackScript = new Linode.StackScript(&amp;quot;fooStackScript&amp;quot;, new Linode.StackScriptArgs
+    {
+        Description = &amp;quot;Installs a Package&amp;quot;,
+        Images = 
+        {
+            &amp;quot;linode/ubuntu18.04&amp;quot;,
+            &amp;quot;linode/ubuntu16.04lts&amp;quot;,
+        },
+        Label = &amp;quot;foo&amp;quot;,
+        RevNote = &amp;quot;initial version&amp;quot;,
+        Script = @&amp;quot;#!/bin/bash
+# &amp;lt;UDF name=&amp;quot;&amp;quot;package&amp;quot;&amp;quot; label=&amp;quot;&amp;quot;System Package to Install&amp;quot;&amp;quot; example=&amp;quot;&amp;quot;nginx&amp;quot;&amp;quot; default=&amp;quot;&amp;quot;&amp;quot;&amp;quot;&gt;
+apt-get -q update &amp;amp;&amp;amp; apt-get -q -y install $$PACKAGE
+
+&amp;quot;,
+    });
+    var fooInstance = new Linode.Instance(&amp;quot;fooInstance&amp;quot;, new Linode.InstanceArgs
+    {
+        AuthorizedKeys = 
+        {
+            &amp;quot;...&amp;quot;,
+        },
+        Image = &amp;quot;linode/ubuntu18.04&amp;quot;,
+        Label = &amp;quot;foo&amp;quot;,
+        Region = &amp;quot;us-east&amp;quot;,
+        RootPass = &amp;quot;...&amp;quot;,
+        StackscriptData = 
+        {
+            { &amp;quot;package&amp;quot;, &amp;quot;nginx&amp;quot; },
+        },
+        StackscriptId = linode_stackscript.Install_nginx.Id,
+        Type = &amp;quot;g6-nanode-1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This resource exports the following attributes:</p>
+<ul>
+<li><p><code>deployments_active</code> - Count of currently active, deployed Linodes created from this StackScript.</p>
+</li>
+<li><p><code>user_gravatar_id</code> - The Gravatar ID for the User who created the StackScript.</p>
+</li>
+<li><p><code>deployments_total</code> - The total number of times this StackScript has been deployed.</p>
+</li>
+<li><p><code>username</code> - The User who created the StackScript.</p>
+</li>
+<li><p><code>created</code> - The date this StackScript was created.</p>
+</li>
+<li><p><code>updated</code> - The date this StackScript was updated.</p>
+</li>
+<li><p><code>user_defined_fields</code> - This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized parameters during deployment.</p>
+</li>
+<li><p><code>label</code> - A human-readable label for the field that will serve as the input prompt for entering the value during deployment.</p>
+</li>
+<li><p><code>name</code> - The name of the field.</p>
+</li>
+<li><p><code>example</code> - An example value for the field.</p>
+</li>
+<li><p><code>one_of</code> - A list of acceptable single values for the field.</p>
+</li>
+<li><p><code>many_of</code> - A list of acceptable values for the field in any quantity, combination or order.</p>
+</li>
+<li><p><code>default</code> - The default value. If not specified, this value will be used.</p>
+</li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -125,7 +202,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript__ctor_" data-uid="Pulumi.Linode.StackScript.#ctor*"></a>
   <h4 id="Pulumi_Linode_StackScript__ctor_System_String_Pulumi_Linode_StackScriptArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.StackScript.#ctor(System.String,Pulumi.Linode.StackScriptArgs,Pulumi.CustomResourceOptions)">StackScript(String, StackScriptArgs, CustomResourceOptions)</h4>
@@ -169,7 +246,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_Created_" data-uid="Pulumi.Linode.StackScript.Created*"></a>
   <h4 id="Pulumi_Linode_StackScript_Created" data-uid="Pulumi.Linode.StackScript.Created">Created</h4>
@@ -196,7 +273,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_DeploymentsActive_" data-uid="Pulumi.Linode.StackScript.DeploymentsActive*"></a>
   <h4 id="Pulumi_Linode_StackScript_DeploymentsActive" data-uid="Pulumi.Linode.StackScript.DeploymentsActive">DeploymentsActive</h4>
@@ -223,7 +300,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_DeploymentsTotal_" data-uid="Pulumi.Linode.StackScript.DeploymentsTotal*"></a>
   <h4 id="Pulumi_Linode_StackScript_DeploymentsTotal" data-uid="Pulumi.Linode.StackScript.DeploymentsTotal">DeploymentsTotal</h4>
@@ -250,7 +327,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_Description_" data-uid="Pulumi.Linode.StackScript.Description*"></a>
   <h4 id="Pulumi_Linode_StackScript_Description" data-uid="Pulumi.Linode.StackScript.Description">Description</h4>
@@ -277,7 +354,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_Images_" data-uid="Pulumi.Linode.StackScript.Images*"></a>
   <h4 id="Pulumi_Linode_StackScript_Images" data-uid="Pulumi.Linode.StackScript.Images">Images</h4>
@@ -304,7 +381,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_IsPublic_" data-uid="Pulumi.Linode.StackScript.IsPublic*"></a>
   <h4 id="Pulumi_Linode_StackScript_IsPublic" data-uid="Pulumi.Linode.StackScript.IsPublic">IsPublic</h4>
@@ -331,7 +408,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_Label_" data-uid="Pulumi.Linode.StackScript.Label*"></a>
   <h4 id="Pulumi_Linode_StackScript_Label" data-uid="Pulumi.Linode.StackScript.Label">Label</h4>
@@ -358,7 +435,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_RevNote_" data-uid="Pulumi.Linode.StackScript.RevNote*"></a>
   <h4 id="Pulumi_Linode_StackScript_RevNote" data-uid="Pulumi.Linode.StackScript.RevNote">RevNote</h4>
@@ -385,7 +462,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_Script_" data-uid="Pulumi.Linode.StackScript.Script*"></a>
   <h4 id="Pulumi_Linode_StackScript_Script" data-uid="Pulumi.Linode.StackScript.Script">Script</h4>
@@ -412,7 +489,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_Updated_" data-uid="Pulumi.Linode.StackScript.Updated*"></a>
   <h4 id="Pulumi_Linode_StackScript_Updated" data-uid="Pulumi.Linode.StackScript.Updated">Updated</h4>
@@ -439,7 +516,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_UserDefinedFields_" data-uid="Pulumi.Linode.StackScript.UserDefinedFields*"></a>
   <h4 id="Pulumi_Linode_StackScript_UserDefinedFields" data-uid="Pulumi.Linode.StackScript.UserDefinedFields">UserDefinedFields</h4>
@@ -467,7 +544,7 @@ parameters during deployment.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_UserGravatarId_" data-uid="Pulumi.Linode.StackScript.UserGravatarId*"></a>
   <h4 id="Pulumi_Linode_StackScript_UserGravatarId" data-uid="Pulumi.Linode.StackScript.UserGravatarId">UserGravatarId</h4>
@@ -494,7 +571,7 @@ parameters during deployment.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_Username_" data-uid="Pulumi.Linode.StackScript.Username*"></a>
   <h4 id="Pulumi_Linode_StackScript_Username" data-uid="Pulumi.Linode.StackScript.Username">Username</h4>
@@ -523,7 +600,7 @@ parameters during deployment.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_Linode_StackScript_Get_" data-uid="Pulumi.Linode.StackScript.Get*"></a>
   <h4 id="Pulumi_Linode_StackScript_Get_System_String_Pulumi_Input_System_String__Pulumi_Linode_StackScriptState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.StackScript.Get(System.String,Pulumi.Input{System.String},Pulumi.Linode.StackScriptState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, StackScriptState, CustomResourceOptions)</h4>
@@ -593,7 +670,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L97" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VirtualMachine
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,45 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">VirtualMachine</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">VirtualMachine</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -87,16 +125,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L589">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L610">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine__ctor_" data-uid="Pulumi.VSphere.VirtualMachine.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_VirtualMachine__ctor_System_String_Pulumi_VSphere_VirtualMachineArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.VirtualMachine.#ctor(System.String,Pulumi.VSphere.VirtualMachineArgs,System.Nullable{CustomResourceOptions})">VirtualMachine(String, VirtualMachineArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_VirtualMachine__ctor_System_String_Pulumi_VSphere_VirtualMachineArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.VirtualMachine.#ctor(System.String,Pulumi.VSphere.VirtualMachineArgs,Pulumi.CustomResourceOptions)">VirtualMachine(String, VirtualMachineArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a VirtualMachine resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VirtualMachine(string name, VirtualMachineArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public VirtualMachine(string name, VirtualMachineArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +159,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -131,7 +169,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_AlternateGuestName_" data-uid="Pulumi.VSphere.VirtualMachine.AlternateGuestName*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_AlternateGuestName" data-uid="Pulumi.VSphere.VirtualMachine.AlternateGuestName">AlternateGuestName</h4>
@@ -141,7 +179,7 @@ when <code>guest_id</code> is <code>other</code> or <code>other-64</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AlternateGuestName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AlternateGuestName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +191,13 @@ when <code>guest_id</code> is <code>other</code> or <code>other-64</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Annotation_" data-uid="Pulumi.VSphere.VirtualMachine.Annotation*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Annotation" data-uid="Pulumi.VSphere.VirtualMachine.Annotation">Annotation</h4>
@@ -169,7 +207,7 @@ The default is no annotation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Annotation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Annotation { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,13 +219,13 @@ The default is no annotation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_BootDelay_" data-uid="Pulumi.VSphere.VirtualMachine.BootDelay*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_BootDelay" data-uid="Pulumi.VSphere.VirtualMachine.BootDelay">BootDelay</h4>
@@ -209,13 +247,13 @@ the boot sequence. The default is no delay.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_BootRetryDelay_" data-uid="Pulumi.VSphere.VirtualMachine.BootRetryDelay*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_BootRetryDelay" data-uid="Pulumi.VSphere.VirtualMachine.BootRetryDelay">BootRetryDelay</h4>
@@ -238,13 +276,13 @@ Default: <code>10000</code> (10 seconds).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_BootRetryEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.BootRetryEnabled*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_BootRetryEnabled" data-uid="Pulumi.VSphere.VirtualMachine.BootRetryEnabled">BootRetryEnabled</h4>
@@ -267,13 +305,13 @@ Default: <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Cdrom_" data-uid="Pulumi.VSphere.VirtualMachine.Cdrom*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Cdrom" data-uid="Pulumi.VSphere.VirtualMachine.Cdrom">Cdrom</h4>
@@ -295,13 +333,13 @@ machine. See CDROM options below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineCdrom.html">VirtualMachineCdrom</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineCdrom.html">VirtualMachineCdrom</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_ChangeVersion_" data-uid="Pulumi.VSphere.VirtualMachine.ChangeVersion*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_ChangeVersion" data-uid="Pulumi.VSphere.VirtualMachine.ChangeVersion">ChangeVersion</h4>
@@ -324,13 +362,13 @@ configuration.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Clone_" data-uid="Pulumi.VSphere.VirtualMachine.Clone*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Clone" data-uid="Pulumi.VSphere.VirtualMachine.Clone">Clone</h4>
@@ -354,13 +392,13 @@ template for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineClone.html">VirtualMachineClone</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineClone.html">VirtualMachineClone</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_CpuHotAddEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.CpuHotAddEnabled*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_CpuHotAddEnabled" data-uid="Pulumi.VSphere.VirtualMachine.CpuHotAddEnabled">CpuHotAddEnabled</h4>
@@ -382,13 +420,13 @@ machine while it is running.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_CpuHotRemoveEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.CpuHotRemoveEnabled*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_CpuHotRemoveEnabled" data-uid="Pulumi.VSphere.VirtualMachine.CpuHotRemoveEnabled">CpuHotRemoveEnabled</h4>
@@ -410,13 +448,13 @@ virtual machine while it is running.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_CpuLimit_" data-uid="Pulumi.VSphere.VirtualMachine.CpuLimit*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_CpuLimit" data-uid="Pulumi.VSphere.VirtualMachine.CpuLimit">CpuLimit</h4>
@@ -439,13 +477,13 @@ limit.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_CpuPerformanceCountersEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.CpuPerformanceCountersEnabled*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_CpuPerformanceCountersEnabled" data-uid="Pulumi.VSphere.VirtualMachine.CpuPerformanceCountersEnabled">CpuPerformanceCountersEnabled</h4>
@@ -467,13 +505,13 @@ counters on this virtual machine. Default: <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_CpuReservation_" data-uid="Pulumi.VSphere.VirtualMachine.CpuReservation*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_CpuReservation" data-uid="Pulumi.VSphere.VirtualMachine.CpuReservation">CpuReservation</h4>
@@ -495,13 +533,13 @@ machine is guaranteed. The default is no reservation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_CpuShareCount_" data-uid="Pulumi.VSphere.VirtualMachine.CpuShareCount*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_CpuShareCount" data-uid="Pulumi.VSphere.VirtualMachine.CpuShareCount">CpuShareCount</h4>
@@ -523,13 +561,13 @@ virtual machine when the <code>cpu_share_level</code> is <code>custom</code>.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_CpuShareLevel_" data-uid="Pulumi.VSphere.VirtualMachine.CpuShareLevel*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_CpuShareLevel" data-uid="Pulumi.VSphere.VirtualMachine.CpuShareLevel">CpuShareLevel</h4>
@@ -539,7 +577,7 @@ one of <code>high</code>, <code>low</code>, <code>normal</code>, or <code>custom
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CpuShareLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CpuShareLevel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -551,25 +589,23 @@ one of <code>high</code>, <code>low</code>, <code>normal</code>, or <code>custom
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_CustomAttributes_" data-uid="Pulumi.VSphere.VirtualMachine.CustomAttributes*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_CustomAttributes" data-uid="Pulumi.VSphere.VirtualMachine.CustomAttributes">CustomAttributes</h4>
   <div class="markdown level1 summary"><p>Map of custom attribute ids to attribute
-value strings to set for virtual machine. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.</p>
+value strings to set for virtual machine.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; CustomAttributes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; CustomAttributes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -581,18 +617,46 @@ for custom attributes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L136">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_DatacenterId_" data-uid="Pulumi.VSphere.VirtualMachine.DatacenterId*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_DatacenterId" data-uid="Pulumi.VSphere.VirtualMachine.DatacenterId">DatacenterId</h4>
+  <div class="markdown level1 summary"><p>The datacenter id. Required only when deploying
+an ovf template.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DatacenterId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_DatastoreClusterId_" data-uid="Pulumi.VSphere.VirtualMachine.DatastoreClusterId*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_DatastoreClusterId" data-uid="Pulumi.VSphere.VirtualMachine.DatastoreClusterId">DatastoreClusterId</h4>
-  <div class="markdown level1 summary"><p>The [managed object reference
-ID][docs-about-morefs] of the datastore cluster ID to use. This setting
+  <div class="markdown level1 summary"><p>The managed object reference
+ID of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.</p>
@@ -600,7 +664,7 @@ migration for details on changing this value.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DatastoreClusterId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DatastoreClusterId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -612,13 +676,13 @@ migration for details on changing this value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_DatastoreId_" data-uid="Pulumi.VSphere.VirtualMachine.DatastoreId*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_DatastoreId" data-uid="Pulumi.VSphere.VirtualMachine.DatastoreId">DatastoreId</h4>
@@ -640,17 +704,23 @@ Requried for using a datastore ISO. Conflicts with <code>client_device</code>.</
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_DefaultIpAddress_" data-uid="Pulumi.VSphere.VirtualMachine.DefaultIpAddress*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_DefaultIpAddress" data-uid="Pulumi.VSphere.VirtualMachine.DefaultIpAddress">DefaultIpAddress</h4>
-  <div class="markdown level1 summary"><p>The IP address selected by Terraform to be used for the provisioner.</p>
+  <div class="markdown level1 summary"><p>The IP address selected by the provider to be used with
+any provisioners configured on this resource.
+Whenever possible, this is the first IPv4 address that is reachable through
+the default gateway configured on the machine, then the first reachable IPv6
+address, and then the first general discovered address if neither exist. If
+VMware tools is not running on the virtual machine, or if the VM is powered
+off, this value will be blank.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -667,13 +737,13 @@ Requried for using a datastore ISO. Conflicts with <code>client_device</code>.</
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Disks_" data-uid="Pulumi.VSphere.VirtualMachine.Disks*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Disks" data-uid="Pulumi.VSphere.VirtualMachine.Disks">Disks</h4>
@@ -695,13 +765,13 @@ machine. See disk options below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineDisk.html">VirtualMachineDisk</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineDisk.html">VirtualMachineDisk</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_EfiSecureBootEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.EfiSecureBootEnabled*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_EfiSecureBootEnabled" data-uid="Pulumi.VSphere.VirtualMachine.EfiSecureBootEnabled">EfiSecureBootEnabled</h4>
@@ -723,13 +793,13 @@ machine. See disk options below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_EnableDiskUuid_" data-uid="Pulumi.VSphere.VirtualMachine.EnableDiskUuid*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_EnableDiskUuid" data-uid="Pulumi.VSphere.VirtualMachine.EnableDiskUuid">EnableDiskUuid</h4>
@@ -751,13 +821,13 @@ the virtual machine, allowing access to them in the guest. Default: <code>false<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_EnableLogging_" data-uid="Pulumi.VSphere.VirtualMachine.EnableLogging*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_EnableLogging" data-uid="Pulumi.VSphere.VirtualMachine.EnableLogging">EnableLogging</h4>
@@ -779,13 +849,13 @@ log file stored in the virtual machine directory. Default: <code>false</code>.</
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L201">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_EptRviMode_" data-uid="Pulumi.VSphere.VirtualMachine.EptRviMode*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_EptRviMode" data-uid="Pulumi.VSphere.VirtualMachine.EptRviMode">EptRviMode</h4>
@@ -796,7 +866,7 @@ Default: <code>automatic</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EptRviMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EptRviMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -808,13 +878,13 @@ Default: <code>automatic</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_ExtraConfig_" data-uid="Pulumi.VSphere.VirtualMachine.ExtraConfig*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_ExtraConfig" data-uid="Pulumi.VSphere.VirtualMachine.ExtraConfig">ExtraConfig</h4>
@@ -825,7 +895,7 @@ configuration, such as instance metadata.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; ExtraConfig { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; ExtraConfig { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -837,13 +907,13 @@ configuration, such as instance metadata.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L205">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Firmware_" data-uid="Pulumi.VSphere.VirtualMachine.Firmware*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Firmware" data-uid="Pulumi.VSphere.VirtualMachine.Firmware">Firmware</h4>
@@ -853,7 +923,7 @@ Can be one of <code>bios</code> or <code>EFI</code>. Default: <code>bios</code>.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Firmware { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Firmware { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -865,13 +935,13 @@ Can be one of <code>bios</code> or <code>EFI</code>. Default: <code>bios</code>.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L212">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L223">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Folder_" data-uid="Pulumi.VSphere.VirtualMachine.Folder*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Folder" data-uid="Pulumi.VSphere.VirtualMachine.Folder">Folder</h4>
@@ -881,7 +951,7 @@ relative to the datacenter that the resource pool is in.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Folder { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Folder { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -893,13 +963,13 @@ relative to the datacenter that the resource pool is in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L221">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_ForcePowerOff_" data-uid="Pulumi.VSphere.VirtualMachine.ForcePowerOff*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_ForcePowerOff" data-uid="Pulumi.VSphere.VirtualMachine.ForcePowerOff">ForcePowerOff</h4>
@@ -923,13 +993,13 @@ the virtual machine. Default: <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L239">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_GuestId_" data-uid="Pulumi.VSphere.VirtualMachine.GuestId*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_GuestId" data-uid="Pulumi.VSphere.VirtualMachine.GuestId">GuestId</h4>
@@ -939,7 +1009,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: <code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; GuestId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GuestId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -951,13 +1021,13 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: <code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L238">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_GuestIpAddresses_" data-uid="Pulumi.VSphere.VirtualMachine.GuestIpAddresses*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_GuestIpAddresses" data-uid="Pulumi.VSphere.VirtualMachine.GuestIpAddresses">GuestIpAddresses</h4>
@@ -965,7 +1035,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: <code>
 including the value of <code>default_ip_address</code>. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.</p>
 <ul>
-<li><code>moid</code>: The [managed object reference ID][docs-about-morefs] of the created
+<li><code>moid</code>: The managed object reference ID of the created
 virtual machine.</li>
 </ul>
 </div>
@@ -984,13 +1054,13 @@ virtual machine.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L258">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_HardwareVersion_" data-uid="Pulumi.VSphere.VirtualMachine.HardwareVersion*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_HardwareVersion" data-uid="Pulumi.VSphere.VirtualMachine.HardwareVersion">HardwareVersion</h4>
@@ -1014,18 +1084,18 @@ more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L258">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L269">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_HostSystemId_" data-uid="Pulumi.VSphere.VirtualMachine.HostSystemId*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_HostSystemId" data-uid="Pulumi.VSphere.VirtualMachine.HostSystemId">HostSystemId</h4>
-  <div class="markdown level1 summary"><p>An optional [managed object reference
-ID][docs-about-morefs] of a host to put this virtual machine on. See the
+  <div class="markdown level1 summary"><p>An optional managed object reference
+ID of a host to put this virtual machine on. See the
 section on virtual machine migration for
 details on changing this value. If a <code>host_system_id</code> is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
@@ -1046,13 +1116,13 @@ according to any defaults or DRS policies in place.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L266">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L277">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_HvMode_" data-uid="Pulumi.VSphere.VirtualMachine.HvMode*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_HvMode" data-uid="Pulumi.VSphere.VirtualMachine.HvMode">HvMode</h4>
@@ -1063,7 +1133,7 @@ this virtual machine. Can be one of <code>hvAuto</code>, <code>hvOn</code>, or <
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HvMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HvMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1075,13 +1145,13 @@ this virtual machine. Can be one of <code>hvAuto</code>, <code>hvOn</code>, or <
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L275">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_IgnoredGuestIps_" data-uid="Pulumi.VSphere.VirtualMachine.IgnoredGuestIps*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_IgnoredGuestIps" data-uid="Pulumi.VSphere.VirtualMachine.IgnoredGuestIps">IgnoredGuestIps</h4>
@@ -1105,13 +1175,13 @@ waiter will continue to wait for a real IP address. Default: [].</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L284">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L295">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Imported_" data-uid="Pulumi.VSphere.VirtualMachine.Imported*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Imported" data-uid="Pulumi.VSphere.VirtualMachine.Imported">Imported</h4>
@@ -1135,13 +1205,13 @@ section on importing below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L294">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L305">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_LatencySensitivity_" data-uid="Pulumi.VSphere.VirtualMachine.LatencySensitivity*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_LatencySensitivity" data-uid="Pulumi.VSphere.VirtualMachine.LatencySensitivity">LatencySensitivity</h4>
@@ -1154,7 +1224,7 @@ require frequent access to mouse or keyboard devices. Can be one of <code>low</c
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LatencySensitivity { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LatencySensitivity { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1166,13 +1236,13 @@ require frequent access to mouse or keyboard devices. Can be one of <code>low</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L301">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L312">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Memory_" data-uid="Pulumi.VSphere.VirtualMachine.Memory*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Memory" data-uid="Pulumi.VSphere.VirtualMachine.Memory">Memory</h4>
@@ -1194,13 +1264,13 @@ Default: <code>1024</code> (1 GB).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L308">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L319">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_MemoryHotAddEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.MemoryHotAddEnabled*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_MemoryHotAddEnabled" data-uid="Pulumi.VSphere.VirtualMachine.MemoryHotAddEnabled">MemoryHotAddEnabled</h4>
@@ -1222,13 +1292,13 @@ virtual machine while it is running.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L316">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L327">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_MemoryLimit_" data-uid="Pulumi.VSphere.VirtualMachine.MemoryLimit*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_MemoryLimit" data-uid="Pulumi.VSphere.VirtualMachine.MemoryLimit">MemoryLimit</h4>
@@ -1251,13 +1321,13 @@ is no limit.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L323">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L334">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_MemoryReservation_" data-uid="Pulumi.VSphere.VirtualMachine.MemoryReservation*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_MemoryReservation" data-uid="Pulumi.VSphere.VirtualMachine.MemoryReservation">MemoryReservation</h4>
@@ -1279,13 +1349,13 @@ virtual machine is guaranteed. The default is no reservation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L330">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L341">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_MemoryShareCount_" data-uid="Pulumi.VSphere.VirtualMachine.MemoryShareCount*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_MemoryShareCount" data-uid="Pulumi.VSphere.VirtualMachine.MemoryShareCount">MemoryShareCount</h4>
@@ -1307,13 +1377,13 @@ the virtual machine when the <code>memory_share_level</code> is <code>custom</co
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L337">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L348">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_MemoryShareLevel_" data-uid="Pulumi.VSphere.VirtualMachine.MemoryShareLevel*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_MemoryShareLevel" data-uid="Pulumi.VSphere.VirtualMachine.MemoryShareLevel">MemoryShareLevel</h4>
@@ -1323,7 +1393,7 @@ Can be one of <code>high</code>, <code>low</code>, <code>normal</code>, or <code
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MemoryShareLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MemoryShareLevel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1335,13 +1405,13 @@ Can be one of <code>high</code>, <code>low</code>, <code>normal</code>, or <code
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L346">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L357">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_MigrateWaitTimeout_" data-uid="Pulumi.VSphere.VirtualMachine.MigrateWaitTimeout*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_MigrateWaitTimeout" data-uid="Pulumi.VSphere.VirtualMachine.MigrateWaitTimeout">MigrateWaitTimeout</h4>
@@ -1365,13 +1435,13 @@ migration.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L352">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L363">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Moid_" data-uid="Pulumi.VSphere.VirtualMachine.Moid*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Moid" data-uid="Pulumi.VSphere.VirtualMachine.Moid">Moid</h4>
@@ -1392,13 +1462,13 @@ migration.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L359">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L370">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Name_" data-uid="Pulumi.VSphere.VirtualMachine.Name*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Name" data-uid="Pulumi.VSphere.VirtualMachine.Name">Name</h4>
@@ -1420,13 +1490,13 @@ using <code>attach</code>. Required if not using <code>label</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L367">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L378">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_NestedHvEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.NestedHvEnabled*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_NestedHvEnabled" data-uid="Pulumi.VSphere.VirtualMachine.NestedHvEnabled">NestedHvEnabled</h4>
@@ -1449,13 +1519,13 @@ Default: <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L375">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L386">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_NetworkInterfaces_" data-uid="Pulumi.VSphere.VirtualMachine.NetworkInterfaces*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_NetworkInterfaces" data-uid="Pulumi.VSphere.VirtualMachine.NetworkInterfaces">NetworkInterfaces</h4>
@@ -1478,13 +1548,13 @@ below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineNetworkInterface.html">VirtualMachineNetworkInterface</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineNetworkInterface.html">VirtualMachineNetworkInterface</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L384">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L395">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_NumCoresPerSocket_" data-uid="Pulumi.VSphere.VirtualMachine.NumCoresPerSocket*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_NumCoresPerSocket" data-uid="Pulumi.VSphere.VirtualMachine.NumCoresPerSocket">NumCoresPerSocket</h4>
@@ -1508,13 +1578,13 @@ supplied to <code>num_cpus</code> must be evenly divisible by this value. Defaul
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L391">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L402">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_NumCpus_" data-uid="Pulumi.VSphere.VirtualMachine.NumCpus*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_NumCpus" data-uid="Pulumi.VSphere.VirtualMachine.NumCpus">NumCpus</h4>
@@ -1536,13 +1606,42 @@ to this virtual machine. Default: <code>1</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L397">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L410">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_OvfDeploy_" data-uid="Pulumi.VSphere.VirtualMachine.OvfDeploy*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_OvfDeploy" data-uid="Pulumi.VSphere.VirtualMachine.OvfDeploy">OvfDeploy</h4>
+  <div class="markdown level1 summary"><p>When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;VirtualMachineOvfDeploy&gt; OvfDeploy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineOvfDeploy.html">VirtualMachineOvfDeploy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L416">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_PoweronTimeout_" data-uid="Pulumi.VSphere.VirtualMachine.PoweronTimeout*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_PoweronTimeout" data-uid="Pulumi.VSphere.VirtualMachine.PoweronTimeout">PoweronTimeout</h4>
@@ -1563,17 +1662,19 @@ to this virtual machine. Default: <code>1</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L403">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L424">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_RebootRequired_" data-uid="Pulumi.VSphere.VirtualMachine.RebootRequired*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_RebootRequired" data-uid="Pulumi.VSphere.VirtualMachine.RebootRequired">RebootRequired</h4>
-  <div class="markdown level1 summary"><p>Value internal to Terraform used to determine if a configuration set change requires a reboot.</p>
+  <div class="markdown level1 summary"><p>Value internal to the provider used to determine if a
+configuration set change requires a reboot. This value is only useful during
+an update process and gets reset on refresh.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1590,18 +1691,18 @@ to this virtual machine. Default: <code>1</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L412">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L433">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_ResourcePoolId_" data-uid="Pulumi.VSphere.VirtualMachine.ResourcePoolId*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_ResourcePoolId" data-uid="Pulumi.VSphere.VirtualMachine.ResourcePoolId">ResourcePoolId</h4>
-  <div class="markdown level1 summary"><p>The [managed object reference
-ID][docs-about-morefs] of the resource pool to put this virtual machine in.
+  <div class="markdown level1 summary"><p>The managed object reference
+ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.</p>
 </div>
@@ -1620,13 +1721,13 @@ for details on changing this value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L419">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L440">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsAfterPowerOn_" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsAfterPowerOn*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsAfterPowerOn" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsAfterPowerOn">RunToolsScriptsAfterPowerOn</h4>
@@ -1648,13 +1749,13 @@ post-power-on scripts when VMware tools is installed. Default: <code>true</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L426">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L447">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsAfterResume_" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsAfterResume*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsAfterResume" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsAfterResume">RunToolsScriptsAfterResume</h4>
@@ -1676,13 +1777,13 @@ post-resume scripts when VMware tools is installed. Default: <code>true</code>.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L433">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L454">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestReboot_" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestReboot*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestReboot" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestReboot">RunToolsScriptsBeforeGuestReboot</h4>
@@ -1704,13 +1805,13 @@ pre-reboot scripts when VMware tools is installed. Default: <code>false</code>.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L440">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L461">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestShutdown_" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestShutdown*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestShutdown" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestShutdown">RunToolsScriptsBeforeGuestShutdown</h4>
@@ -1732,13 +1833,13 @@ of pre-shutdown scripts when VMware tools is installed. Default: <code>true</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L447">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L468">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestStandby_" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestStandby*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestStandby" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestStandby">RunToolsScriptsBeforeGuestStandby</h4>
@@ -1760,13 +1861,13 @@ pre-standby scripts when VMware tools is installed. Default: <code>true</code>.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L454">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L475">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_ScsiBusSharing_" data-uid="Pulumi.VSphere.VirtualMachine.ScsiBusSharing*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_ScsiBusSharing" data-uid="Pulumi.VSphere.VirtualMachine.ScsiBusSharing">ScsiBusSharing</h4>
@@ -1776,7 +1877,7 @@ physicalSharing, virtualSharing, and noSharing. Default: <code>noSharing</code>.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ScsiBusSharing { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ScsiBusSharing { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1788,19 +1889,20 @@ physicalSharing, virtualSharing, and noSharing. Default: <code>noSharing</code>.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L462">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L484">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_ScsiControllerCount_" data-uid="Pulumi.VSphere.VirtualMachine.ScsiControllerCount*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_ScsiControllerCount" data-uid="Pulumi.VSphere.VirtualMachine.ScsiControllerCount">ScsiControllerCount</h4>
-  <div class="markdown level1 summary"><p>The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
-you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
-controllers.</p>
+  <div class="markdown level1 summary"><p>The number of SCSI controllers that
+this provider manages on this virtual machine. This directly affects the amount
+of disks you can add to the virtual machine and the maximum disk unit number.
+Note that lowering this value does not remove controllers. Default: <code>1</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1817,13 +1919,13 @@ controllers.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L470">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L492">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_ScsiType_" data-uid="Pulumi.VSphere.VirtualMachine.ScsiType*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_ScsiType" data-uid="Pulumi.VSphere.VirtualMachine.ScsiType">ScsiType</h4>
@@ -1834,7 +1936,7 @@ pvscsi (VMware Paravirtual). Defualt: <code>pvscsi</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ScsiType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ScsiType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1846,13 +1948,13 @@ pvscsi (VMware Paravirtual). Defualt: <code>pvscsi</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L479">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L501">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_ShutdownWaitTimeout_" data-uid="Pulumi.VSphere.VirtualMachine.ShutdownWaitTimeout*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_ShutdownWaitTimeout" data-uid="Pulumi.VSphere.VirtualMachine.ShutdownWaitTimeout">ShutdownWaitTimeout</h4>
@@ -1876,13 +1978,13 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L485">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L507">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_StoragePolicyId_" data-uid="Pulumi.VSphere.VirtualMachine.StoragePolicyId*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_StoragePolicyId" data-uid="Pulumi.VSphere.VirtualMachine.StoragePolicyId">StoragePolicyId</h4>
@@ -1891,7 +1993,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; StoragePolicyId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StoragePolicyId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1903,13 +2005,13 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L493">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L515">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_SwapPlacementPolicy_" data-uid="Pulumi.VSphere.VirtualMachine.SwapPlacementPolicy*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_SwapPlacementPolicy" data-uid="Pulumi.VSphere.VirtualMachine.SwapPlacementPolicy">SwapPlacementPolicy</h4>
@@ -1920,7 +2022,7 @@ Default: <code>inherit</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SwapPlacementPolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SwapPlacementPolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1932,13 +2034,13 @@ Default: <code>inherit</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L500">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L522">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_SyncTimeWithHost_" data-uid="Pulumi.VSphere.VirtualMachine.SyncTimeWithHost*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_SyncTimeWithHost" data-uid="Pulumi.VSphere.VirtualMachine.SyncTimeWithHost">SyncTimeWithHost</h4>
@@ -1960,18 +2062,17 @@ the host. Requires VMware tools to be installed. Default: <code>false</code>.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L507">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L528">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Tags_" data-uid="Pulumi.VSphere.VirtualMachine.Tags*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Tags" data-uid="Pulumi.VSphere.VirtualMachine.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.</p>
+  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1988,13 +2089,13 @@ the host. Requires VMware tools to be installed. Default: <code>false</code>.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L514">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L535">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Uuid_" data-uid="Pulumi.VSphere.VirtualMachine.Uuid*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Uuid" data-uid="Pulumi.VSphere.VirtualMachine.Uuid">Uuid</h4>
@@ -2016,13 +2117,13 @@ virtual disk on the virtual machine.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L524">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L545">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Vapp_" data-uid="Pulumi.VSphere.VirtualMachine.Vapp*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_Vapp" data-uid="Pulumi.VSphere.VirtualMachine.Vapp">Vapp</h4>
@@ -2047,13 +2148,13 @@ more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineVapp.html">VirtualMachineVapp</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineVapp.html">VirtualMachineVapp</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L532">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L553">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_VappTransports_" data-uid="Pulumi.VSphere.VirtualMachine.VappTransports*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_VappTransports" data-uid="Pulumi.VSphere.VirtualMachine.VappTransports">VappTransports</h4>
@@ -2076,13 +2177,13 @@ machine or template.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L539">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L560">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_VmwareToolsStatus_" data-uid="Pulumi.VSphere.VirtualMachine.VmwareToolsStatus*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_VmwareToolsStatus" data-uid="Pulumi.VSphere.VirtualMachine.VmwareToolsStatus">VmwareToolsStatus</h4>
@@ -2104,13 +2205,13 @@ determine the proper course of action for some device operations.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L546">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L567">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_VmxPath_" data-uid="Pulumi.VSphere.VirtualMachine.VmxPath*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_VmxPath" data-uid="Pulumi.VSphere.VirtualMachine.VmxPath">VmxPath</h4>
@@ -2132,13 +2233,13 @@ datastore.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L556">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L577">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_WaitForGuestIpTimeout_" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestIpTimeout*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_WaitForGuestIpTimeout" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestIpTimeout">WaitForGuestIpTimeout</h4>
@@ -2163,13 +2264,13 @@ used. A value less than 1 disables the waiter. Default: 0.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L567">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L588">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_WaitForGuestNetRoutable_" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestNetRoutable*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_WaitForGuestNetRoutable" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestNetRoutable">WaitForGuestNetRoutable</h4>
@@ -2195,13 +2296,13 @@ waiter is used. Default: <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L578">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L599">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_WaitForGuestNetTimeout_" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestNetTimeout*"></a>
   <h4 id="Pulumi_VSphere_VirtualMachine_WaitForGuestNetTimeout" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestNetTimeout">WaitForGuestNetTimeout</h4>
@@ -2227,7 +2328,7 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2235,17 +2336,17 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L619">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L640">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VirtualMachine_Get_" data-uid="Pulumi.VSphere.VirtualMachine.Get*"></a>
-  <h4 id="Pulumi_VSphere_VirtualMachine_Get_System_String_Input_System_String__Pulumi_VSphere_VirtualMachineState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.VirtualMachine.Get(System.String,Input{System.String},Pulumi.VSphere.VirtualMachineState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VirtualMachineState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_VirtualMachineState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.VirtualMachine.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.VirtualMachineState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VirtualMachineState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing VirtualMachine resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static VirtualMachine Get(string name, Input&lt;string&gt; id, VirtualMachineState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static VirtualMachine Get(string name, Input&lt;string&gt; id, VirtualMachineState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2264,7 +2365,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -2276,7 +2377,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -2305,7 +2406,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VirtualMachine.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VirtualMachine.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

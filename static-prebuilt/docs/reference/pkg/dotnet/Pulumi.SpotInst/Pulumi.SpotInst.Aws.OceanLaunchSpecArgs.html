@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class OceanLaunchSpecArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">OceanLaunchSpecArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">OceanLaunchSpecArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.SpotInst.Aws.html">Pulumi.SpotInst.Aws</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.SpotInst.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L243">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L340">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs__ctor_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.#ctor*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs__ctor" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.#ctor">OceanLaunchSpecArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L226">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_AutoscaleHeadrooms_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.AutoscaleHeadrooms*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_AutoscaleHeadrooms" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.AutoscaleHeadrooms">AutoscaleHeadrooms</h4>
@@ -121,13 +150,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecAutoscaleHeadroomArgs.html">OceanLaunchSpecAutoscaleHeadroomArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecAutoscaleHeadroomArgs.html">OceanLaunchSpecAutoscaleHeadroomArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L238">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_ElasticIpPools_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.ElasticIpPools*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_ElasticIpPools" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.ElasticIpPools">ElasticIpPools</h4>
+  <div class="markdown level1 summary"><p>Assign an Elastic IP to the instances spun by the launch spec. Can be null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;OceanLaunchSpecElasticIpPoolArgs&gt; ElasticIpPools { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecElasticIpPoolArgs.html">OceanLaunchSpecElasticIpPoolArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L247">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_IamInstanceProfile_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.IamInstanceProfile*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_IamInstanceProfile" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.IamInstanceProfile">IamInstanceProfile</h4>
@@ -136,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IamInstanceProfile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IamInstanceProfile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +204,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L253">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_ImageId_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.ImageId*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_ImageId" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.ImageId">ImageId</h4>
@@ -163,7 +219,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ImageId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ImageId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +231,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L262">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_Labels_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.Labels*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_Labels" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.Labels">Labels</h4>
@@ -202,13 +258,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecLabelArgs.html">OceanLaunchSpecLabelArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecLabelArgs.html">OceanLaunchSpecLabelArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L174">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_Name_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.Name*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_Name" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.Name">Name</h4>
@@ -217,7 +273,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,13 +285,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L277">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_OceanId_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.OceanId*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_OceanId" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.OceanId">OceanId</h4>
@@ -256,13 +312,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L186">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L283">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_RootVolumeSize_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.RootVolumeSize*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_RootVolumeSize" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.RootVolumeSize">RootVolumeSize</h4>
@@ -271,7 +327,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? RootVolumeSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; RootVolumeSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,13 +339,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L195">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L292">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_SecurityGroups_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.SecurityGroups*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_SecurityGroups" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.SecurityGroups">SecurityGroups</h4>
@@ -310,13 +366,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L304">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_SubnetIds_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.SubnetIds*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_SubnetIds" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.SubnetIds">SubnetIds</h4>
@@ -337,13 +393,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L316">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_Tags_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.Tags*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_Tags" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.Tags">Tags</h4>
@@ -364,13 +420,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecTagArgs.html">OceanLaunchSpecTagArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecTagArgs.html">OceanLaunchSpecTagArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L231">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L328">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_Taints_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.Taints*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_Taints" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.Taints">Taints</h4>
@@ -391,13 +447,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecTaintArgs.html">OceanLaunchSpecTaintArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecTaintArgs.html">OceanLaunchSpecTaintArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L240">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L337">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_UserData_" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.UserData*"></a>
   <h4 id="Pulumi_SpotInst_Aws_OceanLaunchSpecArgs_UserData" data-uid="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.UserData">UserData</h4>
@@ -406,7 +462,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserData { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; UserData { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -418,7 +474,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -430,7 +486,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L133" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/OceanLaunchSpec.cs/#L218" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

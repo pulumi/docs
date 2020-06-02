@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.DocDB
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,17 +89,75 @@ phase because a modification has not yet taken place. You can use the
 <strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var docdb = new Aws.DocDB.Cluster(&amp;quot;docdb&amp;quot;, new Aws.DocDB.ClusterArgs
+    {
+        BackupRetentionPeriod = 5,
+        ClusterIdentifier = &amp;quot;my-docdb-cluster&amp;quot;,
+        Engine = &amp;quot;docdb&amp;quot;,
+        MasterPassword = &amp;quot;mustbeeightchars&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+        PreferredBackupWindow = &amp;quot;07:00-09:00&amp;quot;,
+        SkipFinalSnapshot = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DocDB.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DocDB.ClusterInstance.html">ClusterInstance</a></h4>
       <section><p>Provides an DocDB Cluster Resource Instance. A Cluster Instance Resource defines
-attributes that are specific to a single instance in a [DocDB Cluster][1].</p>
+attributes that are specific to a single instance in a <a href="https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html">DocDB Cluster</a>.</p>
 <p>You do not designate a primary and subsequent replicas. Instead, you simply add DocDB
-Instances and DocDB manages the replication. You can use the [count][3]
+Instances and DocDB manages the replication. You can use the <a href="https://www.terraform.io/docs/configuration/resources.html#count">count</a>
 meta-parameter to make multiple instances and join them all to the same DocDB
 Cluster, or you may specify different Cluster Instance resources with various
 <code>instance_class</code> sizes.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.DocDB.Cluster(&amp;quot;default&amp;quot;, new Aws.DocDB.ClusterArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-west-2a&amp;quot;,
+            &amp;quot;us-west-2b&amp;quot;,
+            &amp;quot;us-west-2c&amp;quot;,
+        },
+        ClusterIdentifier = &amp;quot;docdb-cluster-demo&amp;quot;,
+        MasterPassword = &amp;quot;barbut8chars&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+    });
+    var clusterInstances = new List&amp;lt;Aws.DocDB.ClusterInstance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 2; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        clusterInstances.Add(new Aws.DocDB.ClusterInstance($&amp;quot;clusterInstances-{range.Value}&amp;quot;, new Aws.DocDB.ClusterInstanceArgs
+        {
+            ClusterIdentifier = @default.Id,
+            Identifier = $&amp;quot;docdb-cluster-demo-{range.Value}&amp;quot;,
+            InstanceClass = &amp;quot;db.r5.large&amp;quot;,
+        }));
+    }
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DocDB.ClusterInstanceArgs.html">ClusterInstanceArgs</a></h4>
       <section></section>
@@ -107,6 +165,31 @@ Cluster, or you may specify different Cluster Instance resources with various
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DocDB.ClusterParameterGroup.html">ClusterParameterGroup</a></h4>
       <section><p>Manages a DocumentDB Cluster Parameter Group</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.DocDB.ClusterParameterGroup(&amp;quot;example&amp;quot;, new Aws.DocDB.ClusterParameterGroupArgs
+    {
+        Description = &amp;quot;docdb cluster parameter group&amp;quot;,
+        Family = &amp;quot;docdb3.6&amp;quot;,
+        Parameters = 
+        {
+            new Aws.DocDB.Inputs.ClusterParameterGroupParameterArgs
+            {
+                Name = &amp;quot;tls&amp;quot;,
+                Value = &amp;quot;enabled&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DocDB.ClusterParameterGroupArgs.html">ClusterParameterGroupArgs</a></h4>
       <section></section>
@@ -114,6 +197,23 @@ Cluster, or you may specify different Cluster Instance resources with various
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DocDB.ClusterSnapshot.html">ClusterSnapshot</a></h4>
       <section><p>Manages a DocDB database cluster snapshot for DocDB clusters.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.DocDB.ClusterSnapshot(&amp;quot;example&amp;quot;, new Aws.DocDB.ClusterSnapshotArgs
+    {
+        DbClusterIdentifier = aws_docdb_cluster.Example.Id,
+        DbClusterSnapshotIdentifier = &amp;quot;resourcetestsnapshot1234&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DocDB.ClusterSnapshotArgs.html">ClusterSnapshotArgs</a></h4>
       <section></section>
@@ -123,6 +223,30 @@ Cluster, or you may specify different Cluster Instance resources with various
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DocDB.SubnetGroup.html">SubnetGroup</a></h4>
       <section><p>Provides an DocumentDB subnet group resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.DocDB.SubnetGroup(&amp;quot;default&amp;quot;, new Aws.DocDB.SubnetGroupArgs
+    {
+        SubnetIds = 
+        {
+            aws_subnet.Frontend.Id,
+            aws_subnet.Backend.Id,
+        },
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;My docdb subnet group&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DocDB.SubnetGroupArgs.html">SubnetGroupArgs</a></h4>
       <section></section>

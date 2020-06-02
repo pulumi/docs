@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatabaseArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DatabaseArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">DatabaseArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.MySql.html">Pulumi.MySql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.MySql.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Database.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Database.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_MySql_DatabaseArgs__ctor_" data-uid="Pulumi.MySql.DatabaseArgs.#ctor*"></a>
   <h4 id="Pulumi_MySql_DatabaseArgs__ctor" data-uid="Pulumi.MySql.DatabaseArgs.#ctor">DatabaseArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Database.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Database.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_MySql_DatabaseArgs_DefaultCharacterSet_" data-uid="Pulumi.MySql.DatabaseArgs.DefaultCharacterSet*"></a>
   <h4 id="Pulumi_MySql_DatabaseArgs_DefaultCharacterSet" data-uid="Pulumi.MySql.DatabaseArgs.DefaultCharacterSet">DefaultCharacterSet</h4>
@@ -111,7 +140,7 @@ to &quot;utf8&quot;.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DefaultCharacterSet { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DefaultCharacterSet { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,13 +152,13 @@ to &quot;utf8&quot;.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Database.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Database.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_MySql_DatabaseArgs_DefaultCollation_" data-uid="Pulumi.MySql.DatabaseArgs.DefaultCollation*"></a>
   <h4 id="Pulumi_MySql_DatabaseArgs_DefaultCollation" data-uid="Pulumi.MySql.DatabaseArgs.DefaultCollation">DefaultCollation</h4>
@@ -141,7 +170,7 @@ changing the character set requires also changing the collation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DefaultCollation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DefaultCollation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +182,13 @@ changing the character set requires also changing the collation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Database.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Database.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_MySql_DatabaseArgs_Name_" data-uid="Pulumi.MySql.DatabaseArgs.Name*"></a>
   <h4 id="Pulumi_MySql_DatabaseArgs_Name" data-uid="Pulumi.MySql.DatabaseArgs.Name">Name</h4>
@@ -170,7 +199,7 @@ the operating system on which the MySQL server is running.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,7 +211,7 @@ the operating system on which the MySQL server is running.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -194,7 +223,7 @@ the operating system on which the MySQL server is running.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Database.cs/#L93" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Database.cs/#L113" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

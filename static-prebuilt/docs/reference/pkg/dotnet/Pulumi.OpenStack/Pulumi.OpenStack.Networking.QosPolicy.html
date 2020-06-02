@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QosPolicy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,67 @@
   <h1 id="Pulumi_OpenStack_Networking_QosPolicy" data-uid="Pulumi.OpenStack.Networking.QosPolicy" class="text-break">Class QosPolicy
   </h1>
   <div class="markdown level0 summary"><p>Manages a V2 Neutron QoS policy resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-qos-policy">Create a QoS Policy</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var qosPolicy1 = new OpenStack.Networking.QosPolicy(&amp;quot;qosPolicy1&amp;quot;, new OpenStack.Networking.QosPolicyArgs
+    {
+        Description = &amp;quot;bw_limit&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">QosPolicy</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">QosPolicy</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Networking.html">Pulumi.OpenStack.Networking</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -88,16 +143,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy__ctor_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_Networking_QosPolicy__ctor_System_String_Pulumi_OpenStack_Networking_QosPolicyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.QosPolicy.#ctor(System.String,Pulumi.OpenStack.Networking.QosPolicyArgs,System.Nullable{CustomResourceOptions})">QosPolicy(String, QosPolicyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy__ctor_System_String_Pulumi_OpenStack_Networking_QosPolicyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.#ctor(System.String,Pulumi.OpenStack.Networking.QosPolicyArgs,Pulumi.CustomResourceOptions)">QosPolicy(String, QosPolicyArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a QosPolicy resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public QosPolicy(string name, QosPolicyArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public QosPolicy(string name, QosPolicyArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +177,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +187,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_AllTags_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.AllTags*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_AllTags" data-uid="Pulumi.OpenStack.Networking.QosPolicy.AllTags">AllTags</h4>
@@ -154,13 +209,13 @@ explicitly and implicitly added.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_CreatedAt_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.CreatedAt*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_CreatedAt" data-uid="Pulumi.OpenStack.Networking.QosPolicy.CreatedAt">CreatedAt</h4>
@@ -181,13 +236,13 @@ explicitly and implicitly added.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_Description_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Description*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Description" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Description">Description</h4>
@@ -197,7 +252,7 @@ Changing this updates the description of the existing QoS policy.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +264,13 @@ Changing this updates the description of the existing QoS policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_IsDefault_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.IsDefault*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_IsDefault" data-uid="Pulumi.OpenStack.Networking.QosPolicy.IsDefault">IsDefault</h4>
@@ -238,13 +293,13 @@ QoS policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_Name_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Name*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Name" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Name">Name</h4>
@@ -266,13 +321,13 @@ the existing QoS policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_ProjectId_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.ProjectId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_ProjectId" data-uid="Pulumi.OpenStack.Networking.QosPolicy.ProjectId">ProjectId</h4>
@@ -294,13 +349,13 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_Region_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Region*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Region" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Region">Region</h4>
@@ -324,13 +379,13 @@ QoS policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_RevisionNumber_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.RevisionNumber*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_RevisionNumber" data-uid="Pulumi.OpenStack.Networking.QosPolicy.RevisionNumber">RevisionNumber</h4>
@@ -351,13 +406,13 @@ QoS policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_Shared_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Shared*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Shared" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Shared">Shared</h4>
@@ -380,13 +435,13 @@ QoS policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_Tags_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Tags*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Tags" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Tags">Tags</h4>
@@ -407,13 +462,13 @@ QoS policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_UpdatedAt_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.UpdatedAt*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_UpdatedAt" data-uid="Pulumi.OpenStack.Networking.QosPolicy.UpdatedAt">UpdatedAt</h4>
@@ -434,13 +489,13 @@ QoS policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_ValueSpecs_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.ValueSpecs*"></a>
   <h4 id="Pulumi_OpenStack_Networking_QosPolicy_ValueSpecs" data-uid="Pulumi.OpenStack.Networking.QosPolicy.ValueSpecs">ValueSpecs</h4>
@@ -449,7 +504,7 @@ QoS policy.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; ValueSpecs { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; ValueSpecs { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -461,7 +516,7 @@ QoS policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -469,17 +524,17 @@ QoS policy.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_QosPolicy_Get_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Get*"></a>
-  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Get_System_String_Input_System_String__Pulumi_OpenStack_Networking_QosPolicyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Get(System.String,Input{System.String},Pulumi.OpenStack.Networking.QosPolicyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, QosPolicyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_Networking_QosPolicyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.Networking.QosPolicyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, QosPolicyState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing QosPolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static QosPolicy Get(string name, Input&lt;string&gt; id, QosPolicyState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static QosPolicy Get(string name, Input&lt;string&gt; id, QosPolicyState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -498,7 +553,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -510,7 +565,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -539,7 +594,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/QosPolicy.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L36" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

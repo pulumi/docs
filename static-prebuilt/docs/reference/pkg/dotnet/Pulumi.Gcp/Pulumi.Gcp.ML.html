@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.ML
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,6 +80,46 @@
       <section><p>Represents a machine learning solution.</p>
 <p>A model can have multiple versions, each of which is a deployed, trained model
 ready to receive prediction requests. The model itself is just a container.</p>
+<h2 id="example-usage---ml-model-basic">Example Usage - Ml Model Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.ML.EngineModel(&amp;quot;default&amp;quot;, new Gcp.ML.EngineModelArgs
+    {
+        Description = &amp;quot;My model&amp;quot;,
+        Regions = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---ml-model-full">Example Usage - Ml Model Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.ML.EngineModel(&amp;quot;default&amp;quot;, new Gcp.ML.EngineModelArgs
+    {
+        Description = &amp;quot;My model&amp;quot;,
+        Labels = 
+        {
+            { &amp;quot;my_model&amp;quot;, &amp;quot;foo&amp;quot; },
+        },
+        OnlinePredictionConsoleLogging = true,
+        OnlinePredictionLogging = true,
+        Regions = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.ML.EngineModelArgs.html">EngineModelArgs</a></h4>
       <section></section>

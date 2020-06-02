@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.Jwt
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,15 +77,46 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Vault.Jwt.AuthBackend.html">AuthBackend</a></h4>
-      <section><p>Provides a resource for managing an
-<a href="https://www.vaultproject.io/docs/auth/jwt.html">JWT auth backend within Vault</a>.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Jwt.AuthBackendArgs.html">AuthBackendArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Jwt.AuthBackendRole.html">AuthBackendRole</a></h4>
       <section><p>Manages an JWT/OIDC auth backend role in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/jwt.html">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var jwt = new Vault.Jwt.AuthBackend(&amp;quot;jwt&amp;quot;, new Vault.Jwt.AuthBackendArgs
+    {
+        Path = &amp;quot;jwt&amp;quot;,
+    });
+    var example = new Vault.Jwt.AuthBackendRole(&amp;quot;example&amp;quot;, new Vault.Jwt.AuthBackendRoleArgs
+    {
+        Backend = jwt.Path,
+        RoleName = &amp;quot;test-role&amp;quot;,
+        TokenPolicies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;dev&amp;quot;,
+            &amp;quot;prod&amp;quot;,
+        },
+        BoundAudiences = 
+        {
+            &amp;quot;https://myco.test&amp;quot;,
+        },
+        UserClaim = &amp;quot;https://vault/user&amp;quot;,
+        RoleType = &amp;quot;jwt&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Jwt.AuthBackendRoleArgs.html">AuthBackendRoleArgs</a></h4>
       <section></section>

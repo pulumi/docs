@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.CloudBuild
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,32 @@
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/cloud-build/docs/running-builds/automate-builds">Automating builds using build triggers</a></li>
 </ul>
+<h2 id="example-usage---cloudbuild-trigger-filename">Example Usage - Cloudbuild Trigger Filename</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var filename_trigger = new Gcp.CloudBuild.Trigger(&amp;quot;filename-trigger&amp;quot;, new Gcp.CloudBuild.TriggerArgs
+    {
+        Filename = &amp;quot;cloudbuild.yaml&amp;quot;,
+        Substitutions = 
+        {
+            { &amp;quot;_BAZ&amp;quot;, &amp;quot;qux&amp;quot; },
+            { &amp;quot;_FOO&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+        TriggerTemplate = new Gcp.CloudBuild.Inputs.TriggerTriggerTemplateArgs
+        {
+            BranchName = &amp;quot;master&amp;quot;,
+            RepoName = &amp;quot;my-repo&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudBuild.TriggerArgs.html">TriggerArgs</a></h4>
       <section></section>

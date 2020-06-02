@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GraphQLApi
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,214 @@
   <h1 id="Pulumi_Aws_AppSync_GraphQLApi" data-uid="Pulumi.Aws.AppSync.GraphQLApi" class="text-break">Class GraphQLApi
   </h1>
   <div class="markdown level0 summary"><p>Provides an AppSync GraphQL API.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="api-key-authentication">API Key Authentication</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;API_KEY&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="aws-cognito-user-pool-authentication">AWS Cognito User Pool Authentication</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;AMAZON_COGNITO_USER_POOLS&amp;quot;,
+        UserPoolConfig = new Aws.AppSync.Inputs.GraphQLApiUserPoolConfigArgs
+        {
+            AwsRegion = data.Aws_region.Current.Name,
+            DefaultAction = &amp;quot;DENY&amp;quot;,
+            UserPoolId = aws_cognito_user_pool.Example.Id,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="aws-iam-authentication">AWS IAM Authentication</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;AWS_IAM&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="with-schema">With Schema</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;AWS_IAM&amp;quot;,
+        Schema = @&amp;quot;schema {
+query: Query
+}
+type Query {
+test: Int
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="openid-connect-authentication">OpenID Connect Authentication</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;OPENID_CONNECT&amp;quot;,
+        OpenidConnectConfig = new Aws.AppSync.Inputs.GraphQLApiOpenidConnectConfigArgs
+        {
+            Issuer = &amp;quot;https://example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="with-multiple-authentication-providers">With Multiple Authentication Providers</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AdditionalAuthenticationProviders = 
+        {
+            new Aws.AppSync.Inputs.GraphQLApiAdditionalAuthenticationProviderArgs
+            {
+                AuthenticationType = &amp;quot;AWS_IAM&amp;quot;,
+            },
+        },
+        AuthenticationType = &amp;quot;API_KEY&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="enabling-logging">Enabling Logging</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleRole = new Aws.Iam.Role(&amp;quot;exampleRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+    {
+    &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+        &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;appsync.amazonaws.com&amp;quot;&amp;quot;
+    },
+    &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;
+    }
+]
+}
+
+&amp;quot;,
+    });
+    var exampleRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment(&amp;quot;exampleRolePolicyAttachment&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs&amp;quot;,
+        Role = exampleRole.Name,
+    });
+    var exampleGraphQLApi = new Aws.AppSync.GraphQLApi(&amp;quot;exampleGraphQLApi&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        LogConfig = new Aws.AppSync.Inputs.GraphQLApiLogConfigArgs
+        {
+            CloudwatchLogsRoleArn = exampleRole.Arn,
+            FieldLogLevel = &amp;quot;ERROR&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GraphQLApi</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">GraphQLApi</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.AppSync.html">Pulumi.Aws.AppSync</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +290,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L277">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi__ctor_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.#ctor*"></a>
-  <h4 id="Pulumi_Aws_AppSync_GraphQLApi__ctor_System_String_Pulumi_Aws_AppSync_GraphQLApiArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.AppSync.GraphQLApi.#ctor(System.String,Pulumi.Aws.AppSync.GraphQLApiArgs,System.Nullable{CustomResourceOptions})">GraphQLApi(String, GraphQLApiArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_AppSync_GraphQLApi__ctor_System_String_Pulumi_Aws_AppSync_GraphQLApiArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.#ctor(System.String,Pulumi.Aws.AppSync.GraphQLApiArgs,Pulumi.CustomResourceOptions)">GraphQLApi(String, GraphQLApiArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a GraphQLApi resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GraphQLApi(string name, GraphQLApiArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public GraphQLApi(string name, GraphQLApiArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +324,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +334,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_AdditionalAuthenticationProviders_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.AdditionalAuthenticationProviders*"></a>
   <h4 id="Pulumi_Aws_AppSync_GraphQLApi_AdditionalAuthenticationProviders" data-uid="Pulumi.Aws.AppSync.GraphQLApi.AdditionalAuthenticationProviders">AdditionalAuthenticationProviders</h4>
@@ -153,13 +355,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.GraphQLApiAdditionalAuthenticationProvider.html">GraphQLApiAdditionalAuthenticationProvider</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.GraphQLApiAdditionalAuthenticationProvider.html">GraphQLApiAdditionalAuthenticationProvider</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_Arn_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Arn*"></a>
   <h4 id="Pulumi_Aws_AppSync_GraphQLApi_Arn" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Arn">Arn</h4>
@@ -180,13 +382,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L218">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_AuthenticationType_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.AuthenticationType*"></a>
   <h4 id="Pulumi_Aws_AppSync_GraphQLApi_AuthenticationType" data-uid="Pulumi.Aws.AppSync.GraphQLApi.AuthenticationType">AuthenticationType</h4>
@@ -207,13 +409,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_LogConfig_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.LogConfig*"></a>
   <h4 id="Pulumi_Aws_AppSync_GraphQLApi_LogConfig" data-uid="Pulumi.Aws.AppSync.GraphQLApi.LogConfig">LogConfig</h4>
@@ -234,13 +436,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.GraphQLApiLogConfig.html">GraphQLApiLogConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.GraphQLApiLogConfig.html">GraphQLApiLogConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_Name_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Name*"></a>
   <h4 id="Pulumi_Aws_AppSync_GraphQLApi_Name" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Name">Name</h4>
@@ -261,13 +463,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_OpenidConnectConfig_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.OpenidConnectConfig*"></a>
   <h4 id="Pulumi_Aws_AppSync_GraphQLApi_OpenidConnectConfig" data-uid="Pulumi.Aws.AppSync.GraphQLApi.OpenidConnectConfig">OpenidConnectConfig</h4>
@@ -288,13 +490,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.GraphQLApiOpenidConnectConfig.html">GraphQLApiOpenidConnectConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.GraphQLApiOpenidConnectConfig.html">GraphQLApiOpenidConnectConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_Schema_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Schema*"></a>
   <h4 id="Pulumi_Aws_AppSync_GraphQLApi_Schema" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Schema">Schema</h4>
@@ -303,7 +505,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Schema { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Schema { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,22 +517,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_Tags_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Tags*"></a>
   <h4 id="Pulumi_Aws_AppSync_GraphQLApi_Tags" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,13 +544,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_Uris_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Uris*"></a>
   <h4 id="Pulumi_Aws_AppSync_GraphQLApi_Uris" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Uris">Uris</h4>
@@ -369,13 +571,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L260">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_UserPoolConfig_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.UserPoolConfig*"></a>
   <h4 id="Pulumi_Aws_AppSync_GraphQLApi_UserPoolConfig" data-uid="Pulumi.Aws.AppSync.GraphQLApi.UserPoolConfig">UserPoolConfig</h4>
@@ -396,13 +598,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.GraphQLApiUserPoolConfig.html">GraphQLApiUserPoolConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.GraphQLApiUserPoolConfig.html">GraphQLApiUserPoolConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L266">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_XrayEnabled_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.XrayEnabled*"></a>
   <h4 id="Pulumi_Aws_AppSync_GraphQLApi_XrayEnabled" data-uid="Pulumi.Aws.AppSync.GraphQLApi.XrayEnabled">XrayEnabled</h4>
@@ -423,7 +625,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -431,17 +633,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L307">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_GraphQLApi_Get_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Get*"></a>
-  <h4 id="Pulumi_Aws_AppSync_GraphQLApi_Get_System_String_Input_System_String__Pulumi_Aws_AppSync_GraphQLApiState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Get(System.String,Input{System.String},Pulumi.Aws.AppSync.GraphQLApiState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GraphQLApiState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_AppSync_GraphQLApi_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_AppSync_GraphQLApiState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.AppSync.GraphQLApi.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.AppSync.GraphQLApiState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, GraphQLApiState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing GraphQLApi resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static GraphQLApi Get(string name, Input&lt;string&gt; id, GraphQLApiState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static GraphQLApi Get(string name, Input&lt;string&gt; id, GraphQLApiState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,7 +662,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -472,7 +674,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -501,7 +703,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/GraphQLApi.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/GraphQLApi.cs/#L201" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EnvironmentConfigNodeConfigIpAllocationPolicy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,23 +78,53 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">EnvironmentConfigNodeConfigIpAllocationPolicy</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Composer.Outputs.html">Pulumi.Gcp.Composer.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfigIpAllocationPolicy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class EnvironmentConfigNodeConfigIpAllocationPolicy : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class EnvironmentConfigNodeConfigIpAllocationPolicy</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L24">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfigIpAllocationPolicy_ClusterIpv4CidrBlock" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfigIpAllocationPolicy.ClusterIpv4CidrBlock">ClusterIpv4CidrBlock</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IP address range used to allocate IP addresses to pods in the cluster.
+Set to blank to have GKE choose a range with the default size.
+Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
+Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
+(e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
+Specify either <code>cluster_secondary_range_name</code> or <code>cluster_ipv4_cidr_block</code> but not both.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ClusterIpv4CidrBlock</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ClusterIpv4CidrBlock</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -106,20 +136,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L30">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfigIpAllocationPolicy_ClusterSecondaryRangeName" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfigIpAllocationPolicy.ClusterSecondaryRangeName">ClusterSecondaryRangeName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the cluster's secondary range used to allocate IP addresses to pods.
+Specify either <code>cluster_secondary_range_name</code> or <code>cluster_ipv4_cidr_block</code> but not both.
+This field is applicable only when <code>use_ip_aliases</code> is true.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ClusterSecondaryRangeName</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ClusterSecondaryRangeName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,20 +164,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfigIpAllocationPolicy_ServicesIpv4CidrBlock" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfigIpAllocationPolicy.ServicesIpv4CidrBlock">ServicesIpv4CidrBlock</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IP address range used to allocate IP addresses in this cluster.
+Set to blank to have GKE choose a range with the default size.
+Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
+Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
+(e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
+Specify either <code>services_secondary_range_name</code> or <code>services_ipv4_cidr_block</code> but not both.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ServicesIpv4CidrBlock</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ServicesIpv4CidrBlock</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,20 +195,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L45">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfigIpAllocationPolicy_ServicesSecondaryRangeName" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfigIpAllocationPolicy.ServicesSecondaryRangeName">ServicesSecondaryRangeName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the services' secondary range used to allocate IP addresses to the cluster.
+Specify either <code>services_secondary_range_name</code> or <code>services_ipv4_cidr_block</code> but not both.
+This field is applicable only when <code>use_ip_aliases</code> is true.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ServicesSecondaryRangeName</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ServicesSecondaryRangeName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,16 +223,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L50">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigNodeConfigIpAllocationPolicy_UseIpAliases" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigNodeConfigIpAllocationPolicy.UseIpAliases">UseIpAliases</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
+Defaults to true if the <code>ip_allocation_block</code> is present in config.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -218,7 +262,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigNodeConfigIpAllocationPolicy.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

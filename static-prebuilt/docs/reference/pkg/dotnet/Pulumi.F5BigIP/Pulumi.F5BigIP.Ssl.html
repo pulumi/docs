@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.F5BigIP.Ssl
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,25 @@
       <h4><a class="xref" href="Pulumi.F5BigIP.Ssl.Certificate.html">Certificate</a></h4>
       <section><p><code>f5bigip.ssl.Certificate</code> This resource will import SSL certificates on BIG-IP LTM.
 Certificates can be imported from certificate files on the local disk, in PEM format</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test_cert = new F5BigIP.Ssl.Certificate(&amp;quot;test-cert&amp;quot;, new F5BigIP.Ssl.CertificateArgs
+    {
+        Name = &amp;quot;servercert.crt&amp;quot;,
+        Content = File.ReadAllText(&amp;quot;servercert.crt&amp;quot;),
+        Partition = &amp;quot;Common&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ssl.CertificateArgs.html">CertificateArgs</a></h4>
       <section></section>
@@ -87,6 +106,25 @@ Certificates can be imported from certificate files on the local disk, in PEM fo
       <h4><a class="xref" href="Pulumi.F5BigIP.Ssl.Key.html">Key</a></h4>
       <section><p><code>f5bigip.ssl.Key</code> This resource will import SSL certificate key on BIG-IP LTM.
 Certificate key can be imported from certificate key files on the local disk, in PEM format</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test_key = new F5BigIP.Ssl.Key(&amp;quot;test-key&amp;quot;, new F5BigIP.Ssl.KeyArgs
+    {
+        Name = &amp;quot;serverkey.key&amp;quot;,
+        Content = File.ReadAllText(&amp;quot;serverkey.key&amp;quot;),
+        Partition = &amp;quot;Common&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ssl.KeyArgs.html">KeyArgs</a></h4>
       <section></section>

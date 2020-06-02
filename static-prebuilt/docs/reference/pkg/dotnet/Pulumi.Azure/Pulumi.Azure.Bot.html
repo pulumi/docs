@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Bot
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -98,6 +98,39 @@
 <blockquote>
 <p><strong>Note</strong> A bot can only have a single Slack Channel associated with it.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleChannelsRegistration = new Azure.Bot.ChannelsRegistration(&amp;quot;exampleChannelsRegistration&amp;quot;, new Azure.Bot.ChannelsRegistrationArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;F0&amp;quot;,
+        MicrosoftAppId = current.Apply(current =&gt; current.ClientId),
+    });
+    var exampleChannelSlack = new Azure.Bot.ChannelSlack(&amp;quot;exampleChannelSlack&amp;quot;, new Azure.Bot.ChannelSlackArgs
+    {
+        BotName = exampleChannelsRegistration.Name,
+        Location = exampleChannelsRegistration.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        ClientId = &amp;quot;exampleId&amp;quot;,
+        ClientSecret = &amp;quot;exampleSecret&amp;quot;,
+        VerificationToken = &amp;quot;exampleVerificationToken&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Bot.ChannelSlackArgs.html">ChannelSlackArgs</a></h4>
       <section></section>
@@ -105,6 +138,30 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Bot.ChannelsRegistration.html">ChannelsRegistration</a></h4>
       <section><p>Manages a Bot Channels Registration.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleChannelsRegistration = new Azure.Bot.ChannelsRegistration(&amp;quot;exampleChannelsRegistration&amp;quot;, new Azure.Bot.ChannelsRegistrationArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;F0&amp;quot;,
+        MicrosoftAppId = current.Apply(current =&gt; current.ClientId),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Bot.ChannelsRegistrationArgs.html">ChannelsRegistrationArgs</a></h4>
       <section></section>
@@ -115,6 +172,38 @@
 <blockquote>
 <p><strong>Note</strong> A bot can only have a single MS Teams Channel associated with it.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleChannelsRegistration = new Azure.Bot.ChannelsRegistration(&amp;quot;exampleChannelsRegistration&amp;quot;, new Azure.Bot.ChannelsRegistrationArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;F0&amp;quot;,
+        MicrosoftAppId = current.Apply(current =&gt; current.ClientId),
+    });
+    var exampleChannelTeams = new Azure.Bot.ChannelTeams(&amp;quot;exampleChannelTeams&amp;quot;, new Azure.Bot.ChannelTeamsArgs
+    {
+        BotName = exampleChannelsRegistration.Name,
+        Location = exampleChannelsRegistration.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        CallingWebHook = &amp;quot;https://example2.com/&amp;quot;,
+        EnableCalling = false,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Bot.ChannelTeamsArgs.html">ChannelTeamsArgs</a></h4>
       <section></section>
@@ -122,6 +211,39 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Bot.Connection.html">Connection</a></h4>
       <section><p>Manages a Bot Connection.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleChannelsRegistration = new Azure.Bot.ChannelsRegistration(&amp;quot;exampleChannelsRegistration&amp;quot;, new Azure.Bot.ChannelsRegistrationArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;F0&amp;quot;,
+        MicrosoftAppId = current.Apply(current =&gt; current.ClientId),
+    });
+    var exampleConnection = new Azure.Bot.Connection(&amp;quot;exampleConnection&amp;quot;, new Azure.Bot.ConnectionArgs
+    {
+        BotName = exampleChannelsRegistration.Name,
+        Location = exampleChannelsRegistration.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        ServiceProviderName = &amp;quot;box&amp;quot;,
+        ClientId = &amp;quot;exampleId&amp;quot;,
+        ClientSecret = &amp;quot;exampleSecret&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Bot.ConnectionArgs.html">ConnectionArgs</a></h4>
       <section></section>
@@ -129,6 +251,30 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Bot.WebApp.html">WebApp</a></h4>
       <section><p>Manages a Bot Web App.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleWebApp = new Azure.Bot.WebApp(&amp;quot;exampleWebApp&amp;quot;, new Azure.Bot.WebAppArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;F0&amp;quot;,
+        MicrosoftAppId = current.Apply(current =&gt; current.ClientId),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Bot.WebAppArgs.html">WebAppArgs</a></h4>
       <section></section>

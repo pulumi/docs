@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class InstanceBlockDevice
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">InstanceBlockDevice</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Compute.Outputs.html">Pulumi.OpenStack.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
   <h5 id="Pulumi_OpenStack_Compute_Outputs_InstanceBlockDevice_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class InstanceBlockDevice : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class InstanceBlockDevice</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L20">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_Compute_Outputs_InstanceBlockDevice_BootIndex" data-uid="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.BootIndex">BootIndex</h4>
   <div class="markdown level1 summary"><p>The boot index of the volume. It defaults to 0.
@@ -114,7 +138,7 @@ Changing this creates a new server.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L26">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_Compute_Outputs_InstanceBlockDevice_DeleteOnTermination" data-uid="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.DeleteOnTermination">DeleteOnTermination</h4>
   <div class="markdown level1 summary"><p>Delete the volume / block device upon
@@ -142,7 +166,7 @@ new server.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_Compute_Outputs_InstanceBlockDevice_DestinationType" data-uid="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.DestinationType">DestinationType</h4>
   <div class="markdown level1 summary"><p>The type that gets created. Possible values
@@ -151,7 +175,7 @@ are &quot;volume&quot; and &quot;local&quot;. Changing this creates a new server
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DestinationType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DestinationType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,13 +187,13 @@ are &quot;volume&quot; and &quot;local&quot;. Changing this creates a new server
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L36">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_Compute_Outputs_InstanceBlockDevice_DeviceType" data-uid="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.DeviceType">DeviceType</h4>
   <div class="markdown level1 summary"><p>The low-level device type that will be used. Most
@@ -178,7 +202,7 @@ common thing is to leave this empty. Changing this creates a new server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DeviceType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DeviceType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,13 +214,13 @@ common thing is to leave this empty. Changing this creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L41">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_Compute_Outputs_InstanceBlockDevice_DiskBus" data-uid="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.DiskBus">DiskBus</h4>
   <div class="markdown level1 summary"><p>The low-level disk bus that will be used. Most common
@@ -205,7 +229,7 @@ thing is to leave this empty. Changing this creates a new server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DiskBus</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DiskBus</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,20 +241,20 @@ thing is to leave this empty. Changing this creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L42">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_Compute_Outputs_InstanceBlockDevice_GuestFormat" data-uid="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.GuestFormat">GuestFormat</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? GuestFormat</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string GuestFormat</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,13 +266,13 @@ thing is to leave this empty. Changing this creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L48">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_Compute_Outputs_InstanceBlockDevice_SourceType" data-uid="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.SourceType">SourceType</h4>
   <div class="markdown level1 summary"><p>The source type of the device. Must be one of
@@ -276,7 +300,7 @@ server.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_Compute_Outputs_InstanceBlockDevice_Uuid" data-uid="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.Uuid">Uuid</h4>
   <div class="markdown level1 summary"><p>The UUID of
@@ -285,7 +309,7 @@ the image, volume, or snapshot. Changing this creates a new server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Uuid</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Uuid</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -297,13 +321,13 @@ the image, volume, or snapshot. Changing this creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L60">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_Compute_Outputs_InstanceBlockDevice_VolumeSize" data-uid="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.VolumeSize">VolumeSize</h4>
   <div class="markdown level1 summary"><p>The size of the volume to create (in gigabytes). Required
@@ -332,7 +356,7 @@ Changing this creates a new server.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_Compute_Outputs_InstanceBlockDevice_VolumeType" data-uid="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.VolumeType">VolumeType</h4>
   <div class="markdown level1 summary"><p>The volume type that will be used, for example SSD
@@ -343,7 +367,7 @@ creates a new server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? VolumeType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string VolumeType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,7 +379,7 @@ creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -367,7 +391,7 @@ creates a new server.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Outputs/InstanceBlockDevice.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

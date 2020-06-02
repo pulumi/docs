@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Efs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,12 +76,131 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.Aws.Efs.AccessPoint.html">AccessPoint</a></h4>
+      <section><p>Provides an Elastic File System (EFS) access point.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Aws.Efs.AccessPoint(&amp;quot;test&amp;quot;, new Aws.Efs.AccessPointArgs
+    {
+        FileSystemId = aws_efs_file_system.Foo.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Efs.AccessPointArgs.html">AccessPointArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Efs.AccessPointState.html">AccessPointState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Efs.FileSystem.html">FileSystem</a></h4>
-      <section><p>Provides an Elastic File System (EFS) resource.</p>
+      <section><p>Provides an Elastic File System (EFS) File System resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="efs-file-system-w-tags">EFS File System w/ tags</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.Efs.FileSystem(&amp;quot;foo&amp;quot;, new Aws.Efs.FileSystemArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;MyProduct&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="using-lifecycle-policy">Using lifecycle policy</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fooWithLifecylePolicy = new Aws.Efs.FileSystem(&amp;quot;fooWithLifecylePolicy&amp;quot;, new Aws.Efs.FileSystemArgs
+    {
+        LifecyclePolicy = new Aws.Efs.Inputs.FileSystemLifecyclePolicyArgs
+        {
+            TransitionToIa = &amp;quot;AFTER_30_DAYS&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Efs.FileSystemArgs.html">FileSystemArgs</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Efs.FileSystemPolicy.html">FileSystemPolicy</a></h4>
+      <section><p>Provides an Elastic File System (EFS) File System Policy resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fs = new Aws.Efs.FileSystem(&amp;quot;fs&amp;quot;, new Aws.Efs.FileSystemArgs
+    {
+    });
+    var policy = new Aws.Efs.FileSystemPolicy(&amp;quot;policy&amp;quot;, new Aws.Efs.FileSystemPolicyArgs
+    {
+        FileSystemId = fs.Id,
+        Policy = @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Id&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ExamplePolicy01&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+    {{
+        &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ExampleSatement01&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {{
+            &amp;quot;&amp;quot;AWS&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+        }},
+        &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;{aws_efs_file_system.Test.Arn}&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+            &amp;quot;&amp;quot;elasticfilesystem:ClientMount&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;elasticfilesystem:ClientWrite&amp;quot;&amp;quot;
+        ],
+        &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {{
+            &amp;quot;&amp;quot;Bool&amp;quot;&amp;quot;: {{
+                &amp;quot;&amp;quot;aws:SecureTransport&amp;quot;&amp;quot;: &amp;quot;&amp;quot;true&amp;quot;&amp;quot;
+            }}
+        }}
+    }}
+]
+}}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Efs.FileSystemPolicyArgs.html">FileSystemPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Efs.FileSystemPolicyState.html">FileSystemPolicyState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Efs.FileSystemState.html">FileSystemState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Efs.GetAccessPoint.html">GetAccessPoint</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Efs.GetAccessPointArgs.html">GetAccessPointArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Efs.GetAccessPointResult.html">GetAccessPointResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Efs.GetFileSystem.html">GetFileSystem</a></h4>
       <section></section>
@@ -97,6 +216,33 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Efs.MountTarget.html">MountTarget</a></h4>
       <section><p>Provides an Elastic File System (EFS) mount target.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.Ec2.Vpc(&amp;quot;foo&amp;quot;, new Aws.Ec2.VpcArgs
+    {
+        CidrBlock = &amp;quot;10.0.0.0/16&amp;quot;,
+    });
+    var alphaSubnet = new Aws.Ec2.Subnet(&amp;quot;alphaSubnet&amp;quot;, new Aws.Ec2.SubnetArgs
+    {
+        AvailabilityZone = &amp;quot;us-west-2a&amp;quot;,
+        CidrBlock = &amp;quot;10.0.1.0/24&amp;quot;,
+        VpcId = foo.Id,
+    });
+    var alphaMountTarget = new Aws.Efs.MountTarget(&amp;quot;alphaMountTarget&amp;quot;, new Aws.Efs.MountTargetArgs
+    {
+        FileSystemId = aws_efs_file_system.Foo.Id,
+        SubnetId = alphaSubnet.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Efs.MountTargetArgs.html">MountTargetArgs</a></h4>
       <section></section>

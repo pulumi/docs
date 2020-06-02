@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Sqs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,12 +83,115 @@
       <h4><a class="xref" href="Pulumi.Aws.Sqs.GetQueueResult.html">GetQueueResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Sqs.Queue.html">Queue</a></h4>
-      <section></section>
+      <section><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var queue = new Aws.Sqs.Queue(&amp;quot;queue&amp;quot;, new Aws.Sqs.QueueArgs
+    {
+        DelaySeconds = 90,
+        MaxMessageSize = 2048,
+        MessageRetentionSeconds = 86400,
+        ReceiveWaitTimeSeconds = 10,
+        RedrivePolicy = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;deadLetterTargetArn&amp;quot;, aws_sqs_queue.Queue_deadletter.Arn },
+            { &amp;quot;maxReceiveCount&amp;quot;, 4 },
+        }),
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="fifo-queue">FIFO queue</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var queue = new Aws.Sqs.Queue(&amp;quot;queue&amp;quot;, new Aws.Sqs.QueueArgs
+    {
+        ContentBasedDeduplication = true,
+        FifoQueue = true,
+    });
+}
+
+}
+</code></pre>
+<h2 id="server-side-encryption-sse">Server-side encryption (SSE)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var queue = new Aws.Sqs.Queue(&amp;quot;queue&amp;quot;, new Aws.Sqs.QueueArgs
+    {
+        KmsDataKeyReusePeriodSeconds = 300,
+        KmsMasterKeyId = &amp;quot;alias/aws/sqs&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.Sqs.QueueArgs.html">QueueArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Sqs.QueuePolicy.html">QueuePolicy</a></h4>
       <section><p>Allows you to set a policy of an SQS Queue
 while referencing ARN of the queue within the policy.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var queue = new Aws.Sqs.Queue(&amp;quot;queue&amp;quot;, new Aws.Sqs.QueueArgs
+    {
+    });
+    var test = new Aws.Sqs.QueuePolicy(&amp;quot;test&amp;quot;, new Aws.Sqs.QueuePolicyArgs
+    {
+        Policy = queue.Arn.Apply(arn =&gt; @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Id&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sqspolicy&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;First&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sqs:SendMessage&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;{arn}&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {{
+    &amp;quot;&amp;quot;ArnEquals&amp;quot;&amp;quot;: {{
+      &amp;quot;&amp;quot;aws:SourceArn&amp;quot;&amp;quot;: &amp;quot;&amp;quot;{aws_sns_topic.Example.Arn}&amp;quot;&amp;quot;
+    }}
+  }}
+}}
+]
+}}
+
+&amp;quot;),
+        QueueUrl = queue.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sqs.QueuePolicyArgs.html">QueuePolicyArgs</a></h4>
       <section></section>

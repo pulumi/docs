@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Hl7StoreParserConfig
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,19 +78,44 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Hl7StoreParserConfig</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Healthcare.Outputs.html">Pulumi.Gcp.Healthcare.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Healthcare_Outputs_Hl7StoreParserConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Hl7StoreParserConfig : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Hl7StoreParserConfig</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/Outputs/Hl7StoreParserConfig.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Healthcare/Outputs/Hl7StoreParserConfig.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Healthcare_Outputs_Hl7StoreParserConfig_AllowNullHeader" data-uid="Pulumi.Gcp.Healthcare.Outputs.Hl7StoreParserConfig.AllowNullHeader">AllowNullHeader</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether messages with no header are allowed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -112,14 +137,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/Outputs/Hl7StoreParserConfig.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Healthcare/Outputs/Hl7StoreParserConfig.cs/#L24">View Source</a>
   </span>
-  <h4 id="Pulumi_Gcp_Healthcare_Outputs_Hl7StoreParserConfig_SegmentTerminator" data-uid="Pulumi.Gcp.Healthcare.Outputs.Hl7StoreParserConfig.SegmentTerminator">SegmentTerminator</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Pulumi_Gcp_Healthcare_Outputs_Hl7StoreParserConfig_Schema" data-uid="Pulumi.Gcp.Healthcare.Outputs.Hl7StoreParserConfig.Schema">Schema</h4>
+  <div class="markdown level1 summary"><p>JSON encoded string for schemas used to parse messages in this
+store if schematized parsing is desired.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? SegmentTerminator</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Schema</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,7 +158,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Healthcare/Outputs/Hl7StoreParserConfig.cs/#L29">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_Healthcare_Outputs_Hl7StoreParserConfig_SegmentTerminator" data-uid="Pulumi.Gcp.Healthcare.Outputs.Hl7StoreParserConfig.SegmentTerminator">SegmentTerminator</h4>
+  <div class="markdown level1 summary"><p>Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
+A base64-encoded string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string SegmentTerminator</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -143,7 +197,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/Outputs/Hl7StoreParserConfig.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Healthcare/Outputs/Hl7StoreParserConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

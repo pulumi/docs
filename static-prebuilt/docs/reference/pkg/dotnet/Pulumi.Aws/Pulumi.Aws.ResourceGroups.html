@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.ResourceGroups
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,37 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.ResourceGroups.Group.html">Group</a></h4>
       <section><p>Provides a Resource Group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Aws.ResourceGroups.Group(&amp;quot;test&amp;quot;, new Aws.ResourceGroups.GroupArgs
+    {
+        ResourceQuery = new Aws.ResourceGroups.Inputs.GroupResourceQueryArgs
+        {
+            Query = @&amp;quot;{
+&amp;quot;&amp;quot;ResourceTypeFilters&amp;quot;&amp;quot;: [
+&amp;quot;&amp;quot;AWS::EC2::Instance&amp;quot;&amp;quot;
+],
+&amp;quot;&amp;quot;TagFilters&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Key&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Stage&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Values&amp;quot;&amp;quot;: [&amp;quot;&amp;quot;Test&amp;quot;&amp;quot;]
+}
+]
+}
+
+&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ResourceGroups.GroupArgs.html">GroupArgs</a></h4>
       <section></section>

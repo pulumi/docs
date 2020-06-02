@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class HostedPrivateVirtualInterface
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,69 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides a Direct Connect hosted private virtual interface resource. This resource represents the allocator's side of the hosted virtual interface.
 A hosted virtual interface is a virtual interface that is owned by another AWS account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.DirectConnect.HostedPrivateVirtualInterface(&amp;quot;foo&amp;quot;, new Aws.DirectConnect.HostedPrivateVirtualInterfaceArgs
+    {
+        AddressFamily = &amp;quot;ipv4&amp;quot;,
+        BgpAsn = 65352,
+        ConnectionId = &amp;quot;dxcon-zzzzzzzz&amp;quot;,
+        Vlan = 4094,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">HostedPrivateVirtualInterface</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">HostedPrivateVirtualInterface</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.DirectConnect.html">Pulumi.Aws.DirectConnect</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -89,16 +146,16 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface__ctor_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.#ctor*"></a>
-  <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface__ctor_System_String_Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.#ctor(System.String,Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceArgs,System.Nullable{CustomResourceOptions})">HostedPrivateVirtualInterface(String, HostedPrivateVirtualInterfaceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface__ctor_System_String_Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.#ctor(System.String,Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceArgs,Pulumi.CustomResourceOptions)">HostedPrivateVirtualInterface(String, HostedPrivateVirtualInterfaceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a HostedPrivateVirtualInterface resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HostedPrivateVirtualInterface(string name, HostedPrivateVirtualInterfaceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public HostedPrivateVirtualInterface(string name, HostedPrivateVirtualInterfaceArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +180,7 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +190,7 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_AddressFamily_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.AddressFamily*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_AddressFamily" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.AddressFamily">AddressFamily</h4>
@@ -154,13 +211,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_AmazonAddress_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.AmazonAddress*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_AmazonAddress" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.AmazonAddress">AmazonAddress</h4>
@@ -181,13 +238,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_AmazonSideAsn_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.AmazonSideAsn*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_AmazonSideAsn" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.AmazonSideAsn">AmazonSideAsn</h4>
@@ -207,13 +264,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_Arn_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.Arn*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_Arn" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.Arn">Arn</h4>
@@ -234,13 +291,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_AwsDevice_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.AwsDevice*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_AwsDevice" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.AwsDevice">AwsDevice</h4>
@@ -261,13 +318,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_BgpAsn_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.BgpAsn*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_BgpAsn" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.BgpAsn">BgpAsn</h4>
@@ -288,13 +345,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_BgpAuthKey_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.BgpAuthKey*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_BgpAuthKey" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.BgpAuthKey">BgpAuthKey</h4>
@@ -315,13 +372,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_ConnectionId_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.ConnectionId*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_ConnectionId" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.ConnectionId">ConnectionId</h4>
@@ -342,13 +399,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_CustomerAddress_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.CustomerAddress*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_CustomerAddress" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.CustomerAddress">CustomerAddress</h4>
@@ -369,13 +426,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_JumboFrameCapable_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.JumboFrameCapable*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_JumboFrameCapable" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.JumboFrameCapable">JumboFrameCapable</h4>
@@ -396,13 +453,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_Mtu_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.Mtu*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_Mtu" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.Mtu">Mtu</h4>
@@ -423,13 +480,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_Name_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.Name*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_Name" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.Name">Name</h4>
@@ -450,13 +507,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_OwnerAccountId_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.OwnerAccountId*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_OwnerAccountId" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.OwnerAccountId">OwnerAccountId</h4>
@@ -477,13 +534,13 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_Vlan_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.Vlan*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_Vlan" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.Vlan">Vlan</h4>
@@ -504,7 +561,7 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -512,17 +569,17 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_Get_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.Get*"></a>
-  <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_Get_System_String_Input_System_String__Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.Get(System.String,Input{System.String},Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, HostedPrivateVirtualInterfaceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterface_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, HostedPrivateVirtualInterfaceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing HostedPrivateVirtualInterface resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static HostedPrivateVirtualInterface Get(string name, Input&lt;string&gt; id, HostedPrivateVirtualInterfaceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static HostedPrivateVirtualInterface Get(string name, Input&lt;string&gt; id, HostedPrivateVirtualInterfaceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -541,7 +598,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -553,7 +610,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -582,7 +639,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterface.cs/#L40" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UserAttributeMapper
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,6 +76,46 @@
 federated via LDAP.</p>
 <p>The LDAP user attribute mapper can be used to map a single LDAP attribute
 to an attribute on the Keycloak user model.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;test&amp;quot;,
+    });
+    var ldapUserFederation = new Keycloak.Ldap.UserFederation(&amp;quot;ldapUserFederation&amp;quot;, new Keycloak.Ldap.UserFederationArgs
+    {
+        BindCredential = &amp;quot;admin&amp;quot;,
+        BindDn = &amp;quot;cn=admin,dc=example,dc=org&amp;quot;,
+        ConnectionUrl = &amp;quot;ldap://openldap&amp;quot;,
+        RdnLdapAttribute = &amp;quot;cn&amp;quot;,
+        RealmId = realm.Id,
+        UserObjectClasses = 
+        {
+            &amp;quot;simpleSecurityObject&amp;quot;,
+            &amp;quot;organizationalRole&amp;quot;,
+        },
+        UsernameLdapAttribute = &amp;quot;cn&amp;quot;,
+        UsersDn = &amp;quot;dc=example,dc=org&amp;quot;,
+        UuidLdapAttribute = &amp;quot;entryDN&amp;quot;,
+    });
+    var ldapUserAttributeMapper = new Keycloak.Ldap.UserAttributeMapper(&amp;quot;ldapUserAttributeMapper&amp;quot;, new Keycloak.Ldap.UserAttributeMapperArgs
+    {
+        LdapAttribute = &amp;quot;bar&amp;quot;,
+        LdapUserFederationId = ldapUserFederation.Id,
+        RealmId = realm.Id,
+        UserModelAttribute = &amp;quot;foo&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -93,7 +133,45 @@ to an attribute on the Keycloak user model.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UserAttributeMapper</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">UserAttributeMapper</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.Ldap.html">Pulumi.Keycloak.Ldap</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
@@ -104,16 +182,16 @@ to an attribute on the Keycloak user model.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserAttributeMapper__ctor_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.#ctor*"></a>
-  <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper__ctor_System_String_Pulumi_Keycloak_Ldap_UserAttributeMapperArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.#ctor(System.String,Pulumi.Keycloak.Ldap.UserAttributeMapperArgs,System.Nullable{CustomResourceOptions})">UserAttributeMapper(String, UserAttributeMapperArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper__ctor_System_String_Pulumi_Keycloak_Ldap_UserAttributeMapperArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.#ctor(System.String,Pulumi.Keycloak.Ldap.UserAttributeMapperArgs,Pulumi.CustomResourceOptions)">UserAttributeMapper(String, UserAttributeMapperArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a UserAttributeMapper resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UserAttributeMapper(string name, UserAttributeMapperArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public UserAttributeMapper(string name, UserAttributeMapperArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,7 +216,7 @@ to an attribute on the Keycloak user model.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -148,7 +226,7 @@ to an attribute on the Keycloak user model.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserAttributeMapper_AlwaysReadValueFromLdap_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.AlwaysReadValueFromLdap*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper_AlwaysReadValueFromLdap" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.AlwaysReadValueFromLdap">AlwaysReadValueFromLdap</h4>
@@ -169,13 +247,13 @@ to an attribute on the Keycloak user model.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserAttributeMapper_IsMandatoryInLdap_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.IsMandatoryInLdap*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper_IsMandatoryInLdap" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.IsMandatoryInLdap">IsMandatoryInLdap</h4>
@@ -196,13 +274,13 @@ to an attribute on the Keycloak user model.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserAttributeMapper_LdapAttribute_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.LdapAttribute*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper_LdapAttribute" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.LdapAttribute">LdapAttribute</h4>
@@ -223,13 +301,13 @@ to an attribute on the Keycloak user model.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserAttributeMapper_LdapUserFederationId_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.LdapUserFederationId*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper_LdapUserFederationId" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.LdapUserFederationId">LdapUserFederationId</h4>
@@ -250,13 +328,13 @@ to an attribute on the Keycloak user model.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserAttributeMapper_Name_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.Name*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper_Name" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.Name">Name</h4>
@@ -277,13 +355,13 @@ to an attribute on the Keycloak user model.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserAttributeMapper_ReadOnly_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.ReadOnly*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper_ReadOnly" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.ReadOnly">ReadOnly</h4>
@@ -304,13 +382,13 @@ to an attribute on the Keycloak user model.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserAttributeMapper_RealmId_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.RealmId*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper_RealmId" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.RealmId">RealmId</h4>
@@ -331,13 +409,13 @@ to an attribute on the Keycloak user model.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserAttributeMapper_UserModelAttribute_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.UserModelAttribute*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper_UserModelAttribute" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.UserModelAttribute">UserModelAttribute</h4>
@@ -358,7 +436,7 @@ to an attribute on the Keycloak user model.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -366,17 +444,17 @@ to an attribute on the Keycloak user model.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserAttributeMapper_Get_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.Get*"></a>
-  <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper_Get_System_String_Input_System_String__Pulumi_Keycloak_Ldap_UserAttributeMapperState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.Get(System.String,Input{System.String},Pulumi.Keycloak.Ldap.UserAttributeMapperState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, UserAttributeMapperState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_Ldap_UserAttributeMapper_Get_System_String_Pulumi_Input_System_String__Pulumi_Keycloak_Ldap_UserAttributeMapperState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.Ldap.UserAttributeMapper.Get(System.String,Pulumi.Input{System.String},Pulumi.Keycloak.Ldap.UserAttributeMapperState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, UserAttributeMapperState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing UserAttributeMapper resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static UserAttributeMapper Get(string name, Input&lt;string&gt; id, UserAttributeMapperState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static UserAttributeMapper Get(string name, Input&lt;string&gt; id, UserAttributeMapperState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -395,7 +473,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -407,7 +485,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -436,7 +514,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L34" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserAttributeMapper.cs/#L77" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

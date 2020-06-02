@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ServiceArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ServiceArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">ServiceArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.CloudRun.html">Pulumi.Gcp.CloudRun</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Service.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Service.cs/#L405">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudRun_ServiceArgs__ctor_" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_CloudRun_ServiceArgs__ctor" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.#ctor">ServiceArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Service.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Service.cs/#L349">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudRun_ServiceArgs_AutogenerateRevisionName_" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.AutogenerateRevisionName*"></a>
   <h4 id="Pulumi_Gcp_CloudRun_ServiceArgs_AutogenerateRevisionName" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.AutogenerateRevisionName">AutogenerateRevisionName</h4>
@@ -113,7 +142,7 @@ this field is set to false, the revision name will still autogenerate.)</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutogenerateRevisionName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutogenerateRevisionName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,13 +154,13 @@ this field is set to false, the revision name will still autogenerate.)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Service.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Service.cs/#L355">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudRun_ServiceArgs_Location_" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Location*"></a>
   <h4 id="Pulumi_Gcp_CloudRun_ServiceArgs_Location" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Location">Location</h4>
@@ -152,22 +181,23 @@ this field is set to false, the revision name will still autogenerate.)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Service.cs/#L162">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Service.cs/#L362">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudRun_ServiceArgs_Metadata_" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Metadata*"></a>
   <h4 id="Pulumi_Gcp_CloudRun_ServiceArgs_Metadata" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Metadata">Metadata</h4>
-  <div class="markdown level1 summary"><p>Metadata associated with this Service, including name, namespace, labels, and annotations.</p>
+  <div class="markdown level1 summary"><p>Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ServiceMetadataArgs&gt;? Metadata { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ServiceMetadataArgs&gt; Metadata { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,24 +209,22 @@ this field is set to false, the revision name will still autogenerate.)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudRun.Inputs.ServiceMetadataArgs.html">ServiceMetadataArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudRun.Inputs.ServiceMetadataArgs.html">ServiceMetadataArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Service.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Service.cs/#L368">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudRun_ServiceArgs_Name_" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_CloudRun_ServiceArgs_Name" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-<a href="http://kubernetes.io/docs/user-guide/identifiers#names">http://kubernetes.io/docs/user-guide/identifiers#names</a></p>
+  <div class="markdown level1 summary"><p>Name of the environment variable.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +236,13 @@ primarily intended for creation idempotence and configuration definition. Cannot
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Service.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Service.cs/#L375">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudRun_ServiceArgs_Project_" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_CloudRun_ServiceArgs_Project" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Project">Project</h4>
@@ -224,7 +252,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,28 +264,30 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Service.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Service.cs/#L389">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudRun_ServiceArgs_Template_" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Template*"></a>
   <h4 id="Pulumi_Gcp_CloudRun_ServiceArgs_Template" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Template">Template</h4>
-  <div class="markdown level1 summary"><p>template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-<a href="https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions">https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions</a> Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.</p>
+  <div class="markdown level1 summary"><p>template holds the latest specification for the Revision to
+be stamped out. The template references the container image, and may also
+include labels and annotations that should be attached to the Revision.
+To correlate a Revision, and/or to force a Revision to be created when the
+spec doesn't otherwise change, a nonce label may be provided in the
+template metadata. For more details, see:
+<a href="https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions">https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions</a>
+Cloud Run does not currently support referencing a build that is
+responsible for materializing the container image from source.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ServiceTemplateArgs&gt;? Template { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ServiceTemplateArgs&gt; Template { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -269,17 +299,18 @@ source.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateArgs.html">ServiceTemplateArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateArgs.html">ServiceTemplateArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Service.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Service.cs/#L399">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudRun_ServiceArgs_Traffics_" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Traffics*"></a>
   <h4 id="Pulumi_Gcp_CloudRun_ServiceArgs_Traffics" data-uid="Pulumi.Gcp.CloudRun.ServiceArgs.Traffics">Traffics</h4>
-  <div class="markdown level1 summary"><p>Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations</p>
+  <div class="markdown level1 summary"><p>Traffic specifies how to distribute traffic over a collection of Knative Revisions
+and Configurations  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -296,7 +327,7 @@ source.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudRun.Inputs.ServiceTrafficArgs.html">ServiceTrafficArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudRun.Inputs.ServiceTrafficArgs.html">ServiceTrafficArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -308,7 +339,7 @@ source.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Service.cs/#L141" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Service.cs/#L340" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

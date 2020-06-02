@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.Aws
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -91,7 +91,28 @@
       <h4><a class="xref" href="Pulumi.Vault.Aws.AuthBackendIdentityWhitelist.html">AuthBackendIdentityWhitelist</a></h4>
       <section><p>Configures the periodic tidying operation of the whitelisted identity entries.</p>
 <p>For more information, see the
-<a href="https://www.vaultproject.io/api/auth/aws/index.html#configure-identity-whitelist-tidy-operation">Vault docs</a>.</p>
+<a href="https://www.vaultproject.io/api-docs/auth/aws#configure-identity-whitelist-tidy-operation">Vault docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleAuthBackend = new Vault.AuthBackend(&amp;quot;exampleAuthBackend&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Type = &amp;quot;aws&amp;quot;,
+    });
+    var exampleAuthBackendIdentityWhitelist = new Vault.Aws.AuthBackendIdentityWhitelist(&amp;quot;exampleAuthBackendIdentityWhitelist&amp;quot;, new Vault.Aws.AuthBackendIdentityWhitelistArgs
+    {
+        Backend = exampleAuthBackend.Path,
+        SafetyBuffer = 3600,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Aws.AuthBackendIdentityWhitelistArgs.html">AuthBackendIdentityWhitelistArgs</a></h4>
       <section></section>
@@ -113,6 +134,62 @@ instances or principals that can perform the login operation against the
 backend. See the <a href="https://www.vaultproject.io/docs/auth/aws.html">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var aws = new Vault.AuthBackend(&amp;quot;aws&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Type = &amp;quot;aws&amp;quot;,
+    });
+    var example = new Vault.Aws.AuthBackendRole(&amp;quot;example&amp;quot;, new Vault.Aws.AuthBackendRoleArgs
+    {
+        Backend = aws.Path,
+        Role = &amp;quot;test-role&amp;quot;,
+        AuthType = &amp;quot;iam&amp;quot;,
+        BoundAmiIds = 
+        {
+            &amp;quot;ami-8c1be5f6&amp;quot;,
+        },
+        BoundAccountIds = 
+        {
+            &amp;quot;123456789012&amp;quot;,
+        },
+        BoundVpcIds = 
+        {
+            &amp;quot;vpc-b61106d4&amp;quot;,
+        },
+        BoundSubnetIds = 
+        {
+            &amp;quot;vpc-133128f1&amp;quot;,
+        },
+        BoundIamRoleArns = 
+        {
+            &amp;quot;arn:aws:iam::123456789012:role/MyRole&amp;quot;,
+        },
+        BoundIamInstanceProfileArns = 
+        {
+            &amp;quot;arn:aws:iam::123456789012:instance-profile/MyProfile&amp;quot;,
+        },
+        InferredEntityType = &amp;quot;ec2_instance&amp;quot;,
+        InferredAwsRegion = &amp;quot;us-east-1&amp;quot;,
+        TokenTtl = 60,
+        TokenMaxTtl = 120,
+        TokenPolicies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;dev&amp;quot;,
+            &amp;quot;prod&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Aws.AuthBackendRoleArgs.html">AuthBackendRoleArgs</a></h4>
       <section></section>
@@ -125,6 +202,27 @@ information.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Aws.AuthBackendRoletagBlacklist.html">AuthBackendRoletagBlacklist</a></h4>
       <section><p>Configures the periodic tidying operation of the blacklisted role tag entries.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleAuthBackend = new Vault.AuthBackend(&amp;quot;exampleAuthBackend&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Type = &amp;quot;aws&amp;quot;,
+    });
+    var exampleAuthBackendRoletagBlacklist = new Vault.Aws.AuthBackendRoletagBlacklist(&amp;quot;exampleAuthBackendRoletagBlacklist&amp;quot;, new Vault.Aws.AuthBackendRoletagBlacklistArgs
+    {
+        Backend = exampleAuthBackend.Path,
+        SafetyBuffer = 360,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Aws.AuthBackendRoletagBlacklistArgs.html">AuthBackendRoletagBlacklistArgs</a></h4>
       <section></section>

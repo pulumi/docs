@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Drds
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -93,6 +93,27 @@ transparent read/write splitting, and distributed transactions, providing O&amp;
 <blockquote>
 <p><strong>NOTE:</strong> Currently, this resource only support <code>Domestic Site Account</code>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.Drds.Instance(&amp;quot;default&amp;quot;, new AliCloud.Drds.InstanceArgs
+    {
+        Description = &amp;quot;drds instance&amp;quot;,
+        InstanceChargeType = &amp;quot;PostPaid&amp;quot;,
+        InstanceSeries = &amp;quot;drds.sn1.4c8g&amp;quot;,
+        Specification = &amp;quot;drds.sn1.4c8g.8C16G&amp;quot;,
+        VswitchId = &amp;quot;vsw-bp1jlu3swk8rq2yoi40ey&amp;quot;,
+        ZoneId = &amp;quot;cn-hangzhou-e&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Drds.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>

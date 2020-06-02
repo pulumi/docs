@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.PubSub
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,6 +85,27 @@ specific topic, to be delivered to the subscribing application.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/pubsub/docs/admin#managing_subscriptions">Managing Subscriptions</a></li>
 </ul>
+<h2 id="example-usage---pubsub-subscription-different-project">Example Usage - Pubsub Subscription Different Project</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleTopic = new Gcp.PubSub.Topic(&amp;quot;exampleTopic&amp;quot;, new Gcp.PubSub.TopicArgs
+    {
+        Project = &amp;quot;topic-project&amp;quot;,
+    });
+    var exampleSubscription = new Gcp.PubSub.Subscription(&amp;quot;exampleSubscription&amp;quot;, new Gcp.PubSub.SubscriptionArgs
+    {
+        Project = &amp;quot;subscription-project&amp;quot;,
+        Topic = exampleTopic.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.SubscriptionArgs.html">SubscriptionArgs</a></h4>
       <section></section>
@@ -101,6 +122,76 @@ specific topic, to be delivered to the subscribing application.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.pubsub.SubscriptionIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.SubscriptionIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_subscription_iam_policy">google_pubsub_subscription_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.PubSub.SubscriptionIAMPolicy(&amp;quot;editor&amp;quot;, new Gcp.PubSub.SubscriptionIAMPolicyArgs
+    {
+        Subscription = &amp;quot;your-subscription-name&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_binding">google_pubsub_subscription_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.PubSub.SubscriptionIAMBinding(&amp;quot;editor&amp;quot;, new Gcp.PubSub.SubscriptionIAMBindingArgs
+    {
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+        Subscription = &amp;quot;your-subscription-name&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_member">google_pubsub_subscription_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.PubSub.SubscriptionIAMMember(&amp;quot;editor&amp;quot;, new Gcp.PubSub.SubscriptionIAMMemberArgs
+    {
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+        Subscription = &amp;quot;your-subscription-name&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.SubscriptionIAMBindingArgs.html">SubscriptionIAMBindingArgs</a></h4>
       <section></section>
@@ -119,6 +210,76 @@ specific topic, to be delivered to the subscribing application.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.pubsub.SubscriptionIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.SubscriptionIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_subscription_iam_policy">google_pubsub_subscription_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.PubSub.SubscriptionIAMPolicy(&amp;quot;editor&amp;quot;, new Gcp.PubSub.SubscriptionIAMPolicyArgs
+    {
+        Subscription = &amp;quot;your-subscription-name&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_binding">google_pubsub_subscription_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.PubSub.SubscriptionIAMBinding(&amp;quot;editor&amp;quot;, new Gcp.PubSub.SubscriptionIAMBindingArgs
+    {
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+        Subscription = &amp;quot;your-subscription-name&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_member">google_pubsub_subscription_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.PubSub.SubscriptionIAMMember(&amp;quot;editor&amp;quot;, new Gcp.PubSub.SubscriptionIAMMemberArgs
+    {
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+        Subscription = &amp;quot;your-subscription-name&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.SubscriptionIAMMemberArgs.html">SubscriptionIAMMemberArgs</a></h4>
       <section></section>
@@ -137,6 +298,76 @@ specific topic, to be delivered to the subscribing application.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.pubsub.SubscriptionIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.SubscriptionIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_subscription_iam_policy">google_pubsub_subscription_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.PubSub.SubscriptionIAMPolicy(&amp;quot;editor&amp;quot;, new Gcp.PubSub.SubscriptionIAMPolicyArgs
+    {
+        Subscription = &amp;quot;your-subscription-name&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_binding">google_pubsub_subscription_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.PubSub.SubscriptionIAMBinding(&amp;quot;editor&amp;quot;, new Gcp.PubSub.SubscriptionIAMBindingArgs
+    {
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+        Subscription = &amp;quot;your-subscription-name&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_member">google_pubsub_subscription_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.PubSub.SubscriptionIAMMember(&amp;quot;editor&amp;quot;, new Gcp.PubSub.SubscriptionIAMMemberArgs
+    {
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+        Subscription = &amp;quot;your-subscription-name&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.SubscriptionIAMPolicyArgs.html">SubscriptionIAMPolicyArgs</a></h4>
       <section></section>
@@ -152,6 +383,71 @@ specific topic, to be delivered to the subscribing application.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/pubsub/docs/admin#managing_topics">Managing Topics</a></li>
 </ul>
+<h2 id="example-usage---pubsub-topic-basic">Example Usage - Pubsub Topic Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Gcp.PubSub.Topic(&amp;quot;example&amp;quot;, new Gcp.PubSub.TopicArgs
+    {
+        Labels = 
+        {
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---pubsub-topic-cmek">Example Usage - Pubsub Topic Cmek</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRing(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+    var cryptoKey = new Gcp.Kms.CryptoKey(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyArgs
+    {
+        KeyRing = keyRing.Id,
+    });
+    var example = new Gcp.PubSub.Topic(&amp;quot;example&amp;quot;, new Gcp.PubSub.TopicArgs
+    {
+        KmsKeyName = cryptoKey.Id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---pubsub-topic-geo-restricted">Example Usage - Pubsub Topic Geo Restricted</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Gcp.PubSub.Topic(&amp;quot;example&amp;quot;, new Gcp.PubSub.TopicArgs
+    {
+        MessageStoragePolicy = new Gcp.PubSub.Inputs.TopicMessageStoragePolicyArgs
+        {
+            AllowedPersistenceRegions = 
+            {
+                &amp;quot;europe-west3&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicArgs.html">TopicArgs</a></h4>
       <section></section>
@@ -168,6 +464,79 @@ specific topic, to be delivered to the subscribing application.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.TopicIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_topic_iam_policy">google_pubsub_topic_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.PubSub.TopicIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.PubSub.TopicIAMPolicyArgs
+    {
+        Project = google_pubsub_topic.Example.Project,
+        Topic = google_pubsub_topic.Example.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_topic_iam_binding">google_pubsub_topic_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.PubSub.TopicIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.PubSub.TopicIAMBindingArgs
+    {
+        Project = google_pubsub_topic.Example.Project,
+        Topic = google_pubsub_topic.Example.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_topic_iam_member">google_pubsub_topic_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.PubSub.TopicIAMMember(&amp;quot;member&amp;quot;, new Gcp.PubSub.TopicIAMMemberArgs
+    {
+        Project = google_pubsub_topic.Example.Project,
+        Topic = google_pubsub_topic.Example.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMBindingArgs.html">TopicIAMBindingArgs</a></h4>
       <section></section>
@@ -186,6 +555,79 @@ specific topic, to be delivered to the subscribing application.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.TopicIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_topic_iam_policy">google_pubsub_topic_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.PubSub.TopicIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.PubSub.TopicIAMPolicyArgs
+    {
+        Project = google_pubsub_topic.Example.Project,
+        Topic = google_pubsub_topic.Example.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_topic_iam_binding">google_pubsub_topic_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.PubSub.TopicIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.PubSub.TopicIAMBindingArgs
+    {
+        Project = google_pubsub_topic.Example.Project,
+        Topic = google_pubsub_topic.Example.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_topic_iam_member">google_pubsub_topic_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.PubSub.TopicIAMMember(&amp;quot;member&amp;quot;, new Gcp.PubSub.TopicIAMMemberArgs
+    {
+        Project = google_pubsub_topic.Example.Project,
+        Topic = google_pubsub_topic.Example.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMMemberArgs.html">TopicIAMMemberArgs</a></h4>
       <section></section>
@@ -204,6 +646,79 @@ specific topic, to be delivered to the subscribing application.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.TopicIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_topic_iam_policy">google_pubsub_topic_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.PubSub.TopicIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.PubSub.TopicIAMPolicyArgs
+    {
+        Project = google_pubsub_topic.Example.Project,
+        Topic = google_pubsub_topic.Example.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_topic_iam_binding">google_pubsub_topic_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.PubSub.TopicIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.PubSub.TopicIAMBindingArgs
+    {
+        Project = google_pubsub_topic.Example.Project,
+        Topic = google_pubsub_topic.Example.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_topic_iam_member">google_pubsub_topic_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.PubSub.TopicIAMMember(&amp;quot;member&amp;quot;, new Gcp.PubSub.TopicIAMMemberArgs
+    {
+        Project = google_pubsub_topic.Example.Project,
+        Topic = google_pubsub_topic.Example.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMPolicyArgs.html">TopicIAMPolicyArgs</a></h4>
       <section></section>

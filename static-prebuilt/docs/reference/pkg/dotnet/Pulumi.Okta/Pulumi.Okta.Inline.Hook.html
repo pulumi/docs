@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Hook
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,79 @@
   </h1>
   <div class="markdown level0 summary"><p>Creates an inline hook.</p>
 <p>This resource allows you to create and configure an inline hook.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Inline.Hook(&amp;quot;example&amp;quot;, new Okta.Inline.HookArgs
+    {
+        Auth = new Okta.Inline.Inputs.HookAuthArgs
+        {
+            Key = &amp;quot;Authorization&amp;quot;,
+            Type = &amp;quot;HEADER&amp;quot;,
+            Value = &amp;quot;secret&amp;quot;,
+        },
+        Channel = new Okta.Inline.Inputs.HookChannelArgs
+        {
+            Method = &amp;quot;POST&amp;quot;,
+            Uri = &amp;quot;https://example.com/test&amp;quot;,
+            Version = &amp;quot;1.0.0&amp;quot;,
+        },
+        Type = &amp;quot;com.okta.oauth2.tokens.transform&amp;quot;,
+        Version = &amp;quot;1.0.1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Hook</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Hook</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Okta.Inline.html">Pulumi.Okta.Inline</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Okta.dll</h6>
@@ -89,16 +156,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Inline/Hook.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Inline/Hook.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Okta_Inline_Hook__ctor_" data-uid="Pulumi.Okta.Inline.Hook.#ctor*"></a>
-  <h4 id="Pulumi_Okta_Inline_Hook__ctor_System_String_Pulumi_Okta_Inline_HookArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.Inline.Hook.#ctor(System.String,Pulumi.Okta.Inline.HookArgs,System.Nullable{CustomResourceOptions})">Hook(String, HookArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_Inline_Hook__ctor_System_String_Pulumi_Okta_Inline_HookArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.Inline.Hook.#ctor(System.String,Pulumi.Okta.Inline.HookArgs,Pulumi.CustomResourceOptions)">Hook(String, HookArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Hook resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Hook(string name, HookArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Hook(string name, HookArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +190,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +200,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Inline/Hook.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Inline/Hook.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Okta_Inline_Hook_Auth_" data-uid="Pulumi.Okta.Inline.Hook.Auth*"></a>
   <h4 id="Pulumi_Okta_Inline_Hook_Auth" data-uid="Pulumi.Okta.Inline.Hook.Auth">Auth</h4>
@@ -154,13 +221,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Inline.Outputs.HookAuth.html">HookAuth</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Inline.Outputs.HookAuth.html">HookAuth</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Inline/Hook.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Inline/Hook.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Okta_Inline_Hook_Channel_" data-uid="Pulumi.Okta.Inline.Hook.Channel*"></a>
   <h4 id="Pulumi_Okta_Inline_Hook_Channel" data-uid="Pulumi.Okta.Inline.Hook.Channel">Channel</h4>
@@ -181,13 +248,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Inline.Outputs.HookChannel.html">HookChannel</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Inline.Outputs.HookChannel.html">HookChannel</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Inline/Hook.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Inline/Hook.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Okta_Inline_Hook_Headers_" data-uid="Pulumi.Okta.Inline.Hook.Headers*"></a>
   <h4 id="Pulumi_Okta_Inline_Hook_Headers" data-uid="Pulumi.Okta.Inline.Hook.Headers">Headers</h4>
@@ -208,13 +275,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.Inline.Outputs.HookHeader.html">HookHeader</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.Inline.Outputs.HookHeader.html">HookHeader</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Inline/Hook.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Inline/Hook.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Okta_Inline_Hook_Name_" data-uid="Pulumi.Okta.Inline.Hook.Name*"></a>
   <h4 id="Pulumi_Okta_Inline_Hook_Name" data-uid="Pulumi.Okta.Inline.Hook.Name">Name</h4>
@@ -235,13 +302,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Inline/Hook.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Inline/Hook.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Okta_Inline_Hook_Status_" data-uid="Pulumi.Okta.Inline.Hook.Status*"></a>
   <h4 id="Pulumi_Okta_Inline_Hook_Status" data-uid="Pulumi.Okta.Inline.Hook.Status">Status</h4>
@@ -249,7 +316,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Status { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +328,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Inline/Hook.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Inline/Hook.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Okta_Inline_Hook_Type_" data-uid="Pulumi.Okta.Inline.Hook.Type*"></a>
   <h4 id="Pulumi_Okta_Inline_Hook_Type" data-uid="Pulumi.Okta.Inline.Hook.Type">Type</h4>
@@ -288,13 +355,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Inline/Hook.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Inline/Hook.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Okta_Inline_Hook_Version_" data-uid="Pulumi.Okta.Inline.Hook.Version*"></a>
   <h4 id="Pulumi_Okta_Inline_Hook_Version" data-uid="Pulumi.Okta.Inline.Hook.Version">Version</h4>
@@ -315,7 +382,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -323,17 +390,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Inline/Hook.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Inline/Hook.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Okta_Inline_Hook_Get_" data-uid="Pulumi.Okta.Inline.Hook.Get*"></a>
-  <h4 id="Pulumi_Okta_Inline_Hook_Get_System_String_Input_System_String__Pulumi_Okta_Inline_HookState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.Inline.Hook.Get(System.String,Input{System.String},Pulumi.Okta.Inline.HookState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, HookState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_Inline_Hook_Get_System_String_Pulumi_Input_System_String__Pulumi_Okta_Inline_HookState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.Inline.Hook.Get(System.String,Pulumi.Input{System.String},Pulumi.Okta.Inline.HookState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, HookState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Hook resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Hook Get(string name, Input&lt;string&gt; id, HookState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Hook Get(string name, Input&lt;string&gt; id, HookState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -352,7 +419,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -364,7 +431,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -393,7 +460,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Inline/Hook.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Inline/Hook.cs/#L51" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

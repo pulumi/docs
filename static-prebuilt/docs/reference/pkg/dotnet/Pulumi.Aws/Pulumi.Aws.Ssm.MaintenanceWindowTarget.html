@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MaintenanceWindowTarget
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,121 @@
   <h1 id="Pulumi_Aws_Ssm_MaintenanceWindowTarget" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget" class="text-break">Class MaintenanceWindowTarget
   </h1>
   <div class="markdown level0 summary"><p>Provides an SSM Maintenance Window Target resource</p>
+<h2 id="instance-target-example-usage">Instance Target Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var window = new Aws.Ssm.MaintenanceWindow(&amp;quot;window&amp;quot;, new Aws.Ssm.MaintenanceWindowArgs
+    {
+        Cutoff = 1,
+        Duration = 3,
+        Schedule = &amp;quot;cron(0 16 ? * TUE *)&amp;quot;,
+    });
+    var target1 = new Aws.Ssm.MaintenanceWindowTarget(&amp;quot;target1&amp;quot;, new Aws.Ssm.MaintenanceWindowTargetArgs
+    {
+        Description = &amp;quot;This is a maintenance window target&amp;quot;,
+        ResourceType = &amp;quot;INSTANCE&amp;quot;,
+        Targets = 
+        {
+            new Aws.Ssm.Inputs.MaintenanceWindowTargetTargetArgs
+            {
+                Key = &amp;quot;tag:Name&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;acceptance_test&amp;quot;,
+                },
+            },
+        },
+        WindowId = window.Id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="resource-group-target-example-usage">Resource Group Target Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var window = new Aws.Ssm.MaintenanceWindow(&amp;quot;window&amp;quot;, new Aws.Ssm.MaintenanceWindowArgs
+    {
+        Cutoff = 1,
+        Duration = 3,
+        Schedule = &amp;quot;cron(0 16 ? * TUE *)&amp;quot;,
+    });
+    var target1 = new Aws.Ssm.MaintenanceWindowTarget(&amp;quot;target1&amp;quot;, new Aws.Ssm.MaintenanceWindowTargetArgs
+    {
+        Description = &amp;quot;This is a maintenance window target&amp;quot;,
+        ResourceType = &amp;quot;RESOURCE_GROUP&amp;quot;,
+        Targets = 
+        {
+            new Aws.Ssm.Inputs.MaintenanceWindowTargetTargetArgs
+            {
+                Key = &amp;quot;resource-groups:ResourceTypeFilters&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;AWS::EC2::INSTANCE&amp;quot;,
+                    &amp;quot;AWS::EC2::VPC&amp;quot;,
+                },
+            },
+        },
+        WindowId = window.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">MaintenanceWindowTarget</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">MaintenanceWindowTarget</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ssm.html">Pulumi.Aws.Ssm</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +197,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_MaintenanceWindowTarget__ctor_" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ssm_MaintenanceWindowTarget__ctor_System_String_Pulumi_Aws_Ssm_MaintenanceWindowTargetArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.#ctor(System.String,Pulumi.Aws.Ssm.MaintenanceWindowTargetArgs,System.Nullable{CustomResourceOptions})">MaintenanceWindowTarget(String, MaintenanceWindowTargetArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ssm_MaintenanceWindowTarget__ctor_System_String_Pulumi_Aws_Ssm_MaintenanceWindowTargetArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.#ctor(System.String,Pulumi.Aws.Ssm.MaintenanceWindowTargetArgs,Pulumi.CustomResourceOptions)">MaintenanceWindowTarget(String, MaintenanceWindowTargetArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a MaintenanceWindowTarget resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MaintenanceWindowTarget(string name, MaintenanceWindowTargetArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public MaintenanceWindowTarget(string name, MaintenanceWindowTargetArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +231,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +241,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_Description_" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.Description*"></a>
   <h4 id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_Description" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.Description">Description</h4>
@@ -141,7 +250,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +262,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_Name_" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.Name*"></a>
   <h4 id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_Name" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.Name">Name</h4>
@@ -180,13 +289,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_OwnerInformation_" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.OwnerInformation*"></a>
   <h4 id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_OwnerInformation" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.OwnerInformation">OwnerInformation</h4>
@@ -195,7 +304,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OwnerInformation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OwnerInformation { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,17 +316,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_ResourceType_" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.ResourceType*"></a>
   <h4 id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_ResourceType" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.ResourceType">ResourceType</h4>
-  <div class="markdown level1 summary"><p>The type of target being registered with the Maintenance Window. Possible values <code>INSTANCE</code>.</p>
+  <div class="markdown level1 summary"><p>The type of target being registered with the Maintenance Window. Possible values are <code>INSTANCE</code> and <code>RESOURCE_GROUP</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -234,17 +343,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_Targets_" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.Targets*"></a>
   <h4 id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_Targets" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.Targets">Targets</h4>
-  <div class="markdown level1 summary"><p>The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.</p>
+  <div class="markdown level1 summary"><p>The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+(<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html</a>)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -261,13 +371,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTargetTarget.html">MaintenanceWindowTargetTarget</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTargetTarget.html">MaintenanceWindowTargetTarget</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_WindowId_" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.WindowId*"></a>
   <h4 id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_WindowId" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.WindowId">WindowId</h4>
@@ -288,7 +398,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -296,17 +406,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_Get_" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.Get*"></a>
-  <h4 id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_Get_System_String_Input_System_String__Pulumi_Aws_Ssm_MaintenanceWindowTargetState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.Get(System.String,Input{System.String},Pulumi.Aws.Ssm.MaintenanceWindowTargetState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, MaintenanceWindowTargetState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ssm_MaintenanceWindowTarget_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ssm_MaintenanceWindowTargetState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ssm.MaintenanceWindowTarget.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ssm.MaintenanceWindowTargetState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, MaintenanceWindowTargetState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing MaintenanceWindowTarget resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static MaintenanceWindowTarget Get(string name, Input&lt;string&gt; id, MaintenanceWindowTargetState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static MaintenanceWindowTarget Get(string name, Input&lt;string&gt; id, MaintenanceWindowTargetState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -325,7 +435,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -337,7 +447,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -366,7 +476,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/MaintenanceWindowTarget.cs/#L92" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

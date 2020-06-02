@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.WorkLink
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,13 +77,49 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.WorkLink.Fleet.html">Fleet</a></h4>
-      <section></section>
+      <section><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.WorkLink.Fleet(&amp;quot;example&amp;quot;, new Aws.WorkLink.FleetArgs
+    {
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.WorkLink.FleetArgs.html">FleetArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.WorkLink.FleetState.html">FleetState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.WorkLink.WebsiteCertificateAuthorityAssociation.html">WebsiteCertificateAuthorityAssociation</a></h4>
-      <section></section>
+      <section><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.WorkLink.Fleet(&amp;quot;example&amp;quot;, new Aws.WorkLink.FleetArgs
+    {
+    });
+    var test = new Aws.WorkLink.WebsiteCertificateAuthorityAssociation(&amp;quot;test&amp;quot;, new Aws.WorkLink.WebsiteCertificateAuthorityAssociationArgs
+    {
+        Certificate = File.ReadAllText(&amp;quot;certificate.pem&amp;quot;),
+        FleetArn = aws_worklink_fleet.Test.Arn,
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.WorkLink.WebsiteCertificateAuthorityAssociationArgs.html">WebsiteCertificateAuthorityAssociationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.WorkLink.WebsiteCertificateAuthorityAssociationState.html">WebsiteCertificateAuthorityAssociationState</a></h4>

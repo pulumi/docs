@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Healthcare
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,60 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Healthcare.Service.html">Service</a></h4>
       <section><p>Manages a Healthcare Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Healthcare.Service(&amp;quot;example&amp;quot;, new Azure.Healthcare.ServiceArgs
+    {
+        AccessPolicyObjectIds = 
+        {
+            &amp;quot;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;quot;,
+        },
+        AuthenticationConfiguration = new Azure.Healthcare.Inputs.ServiceAuthenticationConfigurationArgs
+        {
+            Audience = &amp;quot;https://azurehealthcareapis.com/&amp;quot;,
+            Authority = &amp;quot;https://login.microsoftonline.com/$$%7Bdata.azurerm_client_config.current.tenant_id%7D&amp;quot;,
+            SmartProxyEnabled = &amp;quot;true&amp;quot;,
+        },
+        CorsConfiguration = new Azure.Healthcare.Inputs.ServiceCorsConfigurationArgs
+        {
+            AllowCredentials = &amp;quot;true&amp;quot;,
+            AllowedHeaders = 
+            {
+                &amp;quot;x-tempo-*&amp;quot;,
+                &amp;quot;x-tempo2-*&amp;quot;,
+            },
+            AllowedMethods = 
+            {
+                &amp;quot;GET&amp;quot;,
+                &amp;quot;PUT&amp;quot;,
+            },
+            AllowedOrigins = 
+            {
+                &amp;quot;http://www.example.com&amp;quot;,
+                &amp;quot;http://www.example2.com&amp;quot;,
+            },
+            MaxAgeInSeconds = &amp;quot;500&amp;quot;,
+        },
+        CosmosdbThroughput = &amp;quot;2000&amp;quot;,
+        Kind = &amp;quot;fhir-R4&amp;quot;,
+        Location = &amp;quot;westus2&amp;quot;,
+        ResourceGroupName = &amp;quot;sample-resource-group&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;testenv&amp;quot; },
+            { &amp;quot;purpose&amp;quot;, &amp;quot;AcceptanceTests&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Healthcare.ServiceArgs.html">ServiceArgs</a></h4>
       <section></section>

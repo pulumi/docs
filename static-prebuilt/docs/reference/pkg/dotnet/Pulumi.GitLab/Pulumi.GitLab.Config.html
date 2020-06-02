@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Config
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Config</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.GitLab.html">Pulumi.GitLab</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.GitLab.dll</h6>
   <h5 id="Pulumi_GitLab_Config_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Config : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Config</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Config/Config.cs/#L14">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Config/Config.cs/#L14">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Config_BaseUrl_" data-uid="Pulumi.GitLab.Config.BaseUrl*"></a>
   <h4 id="Pulumi_GitLab_Config_BaseUrl" data-uid="Pulumi.GitLab.Config.BaseUrl">BaseUrl</h4>
@@ -96,7 +120,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? BaseUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string BaseUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -108,13 +132,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Config/Config.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Config/Config.cs/#L19">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Config_CacertFile_" data-uid="Pulumi.GitLab.Config.CacertFile*"></a>
   <h4 id="Pulumi_GitLab_Config_CacertFile" data-uid="Pulumi.GitLab.Config.CacertFile">CacertFile</h4>
@@ -123,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? CacertFile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string CacertFile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,13 +159,67 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Config/Config.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Config/Config.cs/#L24">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_Config_ClientCert_" data-uid="Pulumi.GitLab.Config.ClientCert*"></a>
+  <h4 id="Pulumi_GitLab_Config_ClientCert" data-uid="Pulumi.GitLab.Config.ClientCert">ClientCert</h4>
+  <div class="markdown level1 summary"><p>File path to client certificate when GitLab instance is behind company proxy. File must contain PEM encoded data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ClientCert { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Config/Config.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_Config_ClientKey_" data-uid="Pulumi.GitLab.Config.ClientKey*"></a>
+  <h4 id="Pulumi_GitLab_Config_ClientKey" data-uid="Pulumi.GitLab.Config.ClientKey">ClientKey</h4>
+  <div class="markdown level1 summary"><p>File path to client key when GitLab instance is behind company proxy. File must contain PEM encoded data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ClientKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Config/Config.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Config_Insecure_" data-uid="Pulumi.GitLab.Config.Insecure*"></a>
   <h4 id="Pulumi_GitLab_Config_Insecure" data-uid="Pulumi.GitLab.Config.Insecure">Insecure</h4>
@@ -168,7 +246,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Config/Config.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Config/Config.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Config_Token_" data-uid="Pulumi.GitLab.Config.Token*"></a>
   <h4 id="Pulumi_GitLab_Config_Token" data-uid="Pulumi.GitLab.Config.Token">Token</h4>
@@ -177,7 +255,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? Token { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string Token { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,7 +267,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -201,7 +279,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Config/Config.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Config/Config.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

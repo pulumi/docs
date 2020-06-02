@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Okta.Template
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,37 @@
       <h4><a class="xref" href="Pulumi.Okta.Template.Email.html">Email</a></h4>
       <section><p>Creates an Okta Email Template.</p>
 <p>This resource allows you to create and configure an Okta Email Template.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Template.Email(&amp;quot;example&amp;quot;, new Okta.Template.EmailArgs
+    {
+        Translations = 
+        {
+            new Okta.Template.Inputs.EmailTranslationArgs
+            {
+                Language = &amp;quot;en&amp;quot;,
+                Subject = &amp;quot;Stuff&amp;quot;,
+                Template = $&amp;quot;Hi {user.FirstName},&amp;lt;br/&gt;&amp;lt;br/&gt;Blah blah {resetPasswordLink}&amp;quot;,
+            },
+            new Okta.Template.Inputs.EmailTranslationArgs
+            {
+                Language = &amp;quot;es&amp;quot;,
+                Subject = &amp;quot;Cosas&amp;quot;,
+                Template = $&amp;quot;Hola {user.FirstName},&amp;lt;br/&gt;&amp;lt;br/&gt;Puedo ir al bano {resetPasswordLink}&amp;quot;,
+            },
+        },
+        Type = &amp;quot;email.forgotPassword&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Template.EmailArgs.html">EmailArgs</a></h4>
       <section></section>

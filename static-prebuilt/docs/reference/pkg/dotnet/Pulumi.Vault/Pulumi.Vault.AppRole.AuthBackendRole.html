@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AuthBackendRole
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,15 +71,80 @@
   
   <h1 id="Pulumi_Vault_AppRole_AuthBackendRole" data-uid="Pulumi.Vault.AppRole.AuthBackendRole" class="text-break">Class AuthBackendRole
   </h1>
-  <div class="markdown level0 summary"><p>Manages an AppRole auth backend role in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/approle.html">Vault
+  <div class="markdown level0 summary"><p>Manages an AppRole auth backend role in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/approle">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var approle = new Vault.AuthBackend(&amp;quot;approle&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Type = &amp;quot;approle&amp;quot;,
+    });
+    var example = new Vault.AppRole.AuthBackendRole(&amp;quot;example&amp;quot;, new Vault.AppRole.AuthBackendRoleArgs
+    {
+        Backend = approle.Path,
+        RoleName = &amp;quot;test-role&amp;quot;,
+        TokenPolicies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;dev&amp;quot;,
+            &amp;quot;prod&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AuthBackendRole</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AuthBackendRole</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Vault.AppRole.html">Pulumi.Vault.AppRole</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Vault.dll</h6>
@@ -90,16 +155,16 @@ information.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole__ctor_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.#ctor*"></a>
-  <h4 id="Pulumi_Vault_AppRole_AuthBackendRole__ctor_System_String_Pulumi_Vault_AppRole_AuthBackendRoleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.#ctor(System.String,Pulumi.Vault.AppRole.AuthBackendRoleArgs,System.Nullable{CustomResourceOptions})">AuthBackendRole(String, AuthBackendRoleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_AppRole_AuthBackendRole__ctor_System_String_Pulumi_Vault_AppRole_AuthBackendRoleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.#ctor(System.String,Pulumi.Vault.AppRole.AuthBackendRoleArgs,Pulumi.CustomResourceOptions)">AuthBackendRole(String, AuthBackendRoleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a AuthBackendRole resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AuthBackendRole(string name, AuthBackendRoleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AuthBackendRole(string name, AuthBackendRoleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +189,7 @@ information.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -134,7 +199,7 @@ information.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_Backend_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.Backend*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_Backend" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.Backend">Backend</h4>
@@ -144,7 +209,7 @@ Defaults to <code>approle</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Backend { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Backend { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +221,13 @@ Defaults to <code>approle</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_BindSecretId_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.BindSecretId*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_BindSecretId" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.BindSecretId">BindSecretId</h4>
@@ -184,13 +249,13 @@ presented when logging in using this AppRole. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_BoundCidrLists_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.BoundCidrLists*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_BoundCidrLists" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.BoundCidrLists">BoundCidrLists</h4>
@@ -212,13 +277,13 @@ specifies blocks of IP addresses which can perform the login operation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_Period_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.Period*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_Period" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.Period">Period</h4>
@@ -242,13 +307,13 @@ value of this field. Specified in seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_Policies_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.Policies*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_Policies" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.Policies">Policies</h4>
@@ -270,13 +335,13 @@ specifying the policies to be set on tokens issued using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_RoleId_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.RoleId*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_RoleId" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.RoleId">RoleId</h4>
@@ -298,13 +363,13 @@ auto-generated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_RoleName_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.RoleName*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_RoleName" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.RoleName">RoleName</h4>
@@ -325,13 +390,13 @@ auto-generated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_SecretIdBoundCidrs_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.SecretIdBoundCidrs*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_SecretIdBoundCidrs" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.SecretIdBoundCidrs">SecretIdBoundCidrs</h4>
@@ -353,13 +418,13 @@ specifies blocks of IP addresses which can perform the login operation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_SecretIdNumUses_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.SecretIdNumUses*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_SecretIdNumUses" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.SecretIdNumUses">SecretIdNumUses</h4>
@@ -382,13 +447,13 @@ expire. A value of zero will allow unlimited uses.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_SecretIdTtl_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.SecretIdTtl*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_SecretIdTtl" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.SecretIdTtl">SecretIdTtl</h4>
@@ -410,13 +475,13 @@ expires.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_TokenBoundCidrs_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenBoundCidrs*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_TokenBoundCidrs" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenBoundCidrs">TokenBoundCidrs</h4>
@@ -439,13 +504,13 @@ as well.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_TokenExplicitMaxTtl_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenExplicitMaxTtl*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_TokenExplicitMaxTtl" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenExplicitMaxTtl">TokenExplicitMaxTtl</h4>
@@ -469,13 +534,13 @@ onto the token in number of seconds. This is a hard cap even if <code>token_ttl<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_TokenMaxTtl_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenMaxTtl*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_TokenMaxTtl" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenMaxTtl">TokenMaxTtl</h4>
@@ -497,13 +562,13 @@ Its current value will be referenced at renewal time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_TokenNoDefaultPolicy_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenNoDefaultPolicy*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_TokenNoDefaultPolicy" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenNoDefaultPolicy">TokenNoDefaultPolicy</h4>
@@ -525,13 +590,13 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_TokenNumUses_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenNumUses*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_TokenNumUses" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenNumUses">TokenNumUses</h4>
@@ -554,13 +619,13 @@ if any, in number of seconds to set on the token.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_TokenPeriod_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenPeriod*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_TokenPeriod" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenPeriod">TokenPeriod</h4>
@@ -584,13 +649,13 @@ value of this field. Specified in seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_TokenPolicies_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenPolicies*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_TokenPolicies" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenPolicies">TokenPolicies</h4>
@@ -612,13 +677,13 @@ on the auth method, this list may be supplemented by user/group/other values.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_TokenTtl_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenTtl*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_TokenTtl" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenTtl">TokenTtl</h4>
@@ -640,13 +705,13 @@ Its current value will be referenced at renewal time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L192">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_TokenType_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenType*"></a>
   <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_TokenType" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.TokenType">TokenType</h4>
@@ -659,7 +724,7 @@ requests a different type at generation time.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TokenType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TokenType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -671,7 +736,7 @@ requests a different type at generation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -679,17 +744,17 @@ requests a different type at generation time.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L201">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L233">View Source</a>
   </span>
   <a id="Pulumi_Vault_AppRole_AuthBackendRole_Get_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.Get*"></a>
-  <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_Get_System_String_Input_System_String__Pulumi_Vault_AppRole_AuthBackendRoleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.Get(System.String,Input{System.String},Pulumi.Vault.AppRole.AuthBackendRoleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AuthBackendRoleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_AppRole_AuthBackendRole_Get_System_String_Pulumi_Input_System_String__Pulumi_Vault_AppRole_AuthBackendRoleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.AppRole.AuthBackendRole.Get(System.String,Pulumi.Input{System.String},Pulumi.Vault.AppRole.AuthBackendRoleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AuthBackendRoleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing AuthBackendRole resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AuthBackendRole Get(string name, Input&lt;string&gt; id, AuthBackendRoleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AuthBackendRole Get(string name, Input&lt;string&gt; id, AuthBackendRoleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -708,7 +773,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -720,7 +785,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -749,7 +814,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/AppRole/AuthBackendRole.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AppRole/AuthBackendRole.cs/#L49" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

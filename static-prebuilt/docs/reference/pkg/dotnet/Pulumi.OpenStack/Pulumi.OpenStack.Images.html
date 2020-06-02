@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.Images
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,28 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Images.Image.html">Image</a></h4>
       <section><p>Manages a V2 Image resource within OpenStack Glance.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rancheros = new OpenStack.Images.Image(&amp;quot;rancheros&amp;quot;, new OpenStack.Images.ImageArgs
+    {
+        ContainerFormat = &amp;quot;bare&amp;quot;,
+        DiskFormat = &amp;quot;qcow2&amp;quot;,
+        ImageSourceUrl = &amp;quot;https://releases.rancher.com/os/latest/rancheros-openstack.img&amp;quot;,
+        Properties = 
+        {
+            { &amp;quot;key&amp;quot;, &amp;quot;value&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="notes">Notes</h2>
 <h3 id="properties">Properties</h3>
 <p>This resource supports the ability to add properties to a resource during
@@ -99,10 +121,91 @@ Image Service set it.</p>
       <h4><a class="xref" href="Pulumi.OpenStack.Images.ImageAccess.html">ImageAccess</a></h4>
       <section><p>Manages members for the shared OpenStack Glance V2 Image within the source
 project, which owns the Image.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="unprivileged-user">Unprivileged user</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rancheros = new OpenStack.Images.Image(&amp;quot;rancheros&amp;quot;, new OpenStack.Images.ImageArgs
+    {
+        ContainerFormat = &amp;quot;bare&amp;quot;,
+        DiskFormat = &amp;quot;qcow2&amp;quot;,
+        ImageSourceUrl = &amp;quot;https://releases.rancher.com/os/latest/rancheros-openstack.img&amp;quot;,
+        Properties = 
+        {
+            { &amp;quot;key&amp;quot;, &amp;quot;value&amp;quot; },
+        },
+        Visibility = &amp;quot;shared&amp;quot;,
+    });
+    var rancherosMember = new OpenStack.Images.ImageAccess(&amp;quot;rancherosMember&amp;quot;, new OpenStack.Images.ImageAccessArgs
+    {
+        ImageId = rancheros.Id,
+        MemberId = &amp;quot;bed6b6cbb86a4e2d8dc2735c2f1000e4&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="privileged-user">Privileged user</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rancheros = new OpenStack.Images.Image(&amp;quot;rancheros&amp;quot;, new OpenStack.Images.ImageArgs
+    {
+        ContainerFormat = &amp;quot;bare&amp;quot;,
+        DiskFormat = &amp;quot;qcow2&amp;quot;,
+        ImageSourceUrl = &amp;quot;https://releases.rancher.com/os/latest/rancheros-openstack.img&amp;quot;,
+        Properties = 
+        {
+            { &amp;quot;key&amp;quot;, &amp;quot;value&amp;quot; },
+        },
+        Visibility = &amp;quot;shared&amp;quot;,
+    });
+    var rancherosMember = new OpenStack.Images.ImageAccess(&amp;quot;rancherosMember&amp;quot;, new OpenStack.Images.ImageAccessArgs
+    {
+        ImageId = rancheros.Id,
+        MemberId = &amp;quot;bed6b6cbb86a4e2d8dc2735c2f1000e4&amp;quot;,
+        Status = &amp;quot;accepted&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Images.ImageAccessAccept.html">ImageAccessAccept</a></h4>
       <section><p>Manages memberships status for the shared OpenStack Glance V2 Image within the
 destination project, which has a member proposal.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rancheros = Output.Create(OpenStack.Images.GetImage.InvokeAsync(new OpenStack.Images.GetImageArgs
+    {
+        MemberStatus = &amp;quot;all&amp;quot;,
+        Name = &amp;quot;RancherOS&amp;quot;,
+        Visibility = &amp;quot;shared&amp;quot;,
+    }));
+    var rancherosMember = new OpenStack.Images.ImageAccessAccept(&amp;quot;rancherosMember&amp;quot;, new OpenStack.Images.ImageAccessAcceptArgs
+    {
+        ImageId = rancheros.Apply(rancheros =&gt; rancheros.Id),
+        Status = &amp;quot;accepted&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Images.ImageAccessAcceptArgs.html">ImageAccessAcceptArgs</a></h4>
       <section></section>

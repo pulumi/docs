@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FirewallState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">FirewallState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">FirewallState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Firewall.html">Pulumi.OpenStack.Firewall</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Firewall/Firewall.cs/#L298">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Firewall/Firewall.cs/#L343">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Firewall_FirewallState__ctor_" data-uid="Pulumi.OpenStack.Firewall.FirewallState.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_Firewall_FirewallState__ctor" data-uid="Pulumi.OpenStack.Firewall.FirewallState.#ctor">FirewallState()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Firewall/Firewall.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Firewall/Firewall.cs/#L268">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Firewall_FirewallState_AdminStateUp_" data-uid="Pulumi.OpenStack.Firewall.FirewallState.AdminStateUp*"></a>
   <h4 id="Pulumi_OpenStack_Firewall_FirewallState_AdminStateUp" data-uid="Pulumi.OpenStack.Firewall.FirewallState.AdminStateUp">AdminStateUp</h4>
@@ -111,7 +140,7 @@ Changing this updates the <code>admin_state_up</code> of an existing firewall.</
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AdminStateUp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AdminStateUp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,13 +152,13 @@ Changing this updates the <code>admin_state_up</code> of an existing firewall.</
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Firewall/Firewall.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Firewall/Firewall.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Firewall_FirewallState_AssociatedRouters_" data-uid="Pulumi.OpenStack.Firewall.FirewallState.AssociatedRouters*"></a>
   <h4 id="Pulumi_OpenStack_Firewall_FirewallState_AssociatedRouters" data-uid="Pulumi.OpenStack.Firewall.FirewallState.AssociatedRouters">AssociatedRouters</h4>
@@ -152,13 +181,13 @@ of an existing firewall. Conflicts with <code>no_routers</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Firewall/Firewall.cs/#L244">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Firewall/Firewall.cs/#L289">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Firewall_FirewallState_Description_" data-uid="Pulumi.OpenStack.Firewall.FirewallState.Description*"></a>
   <h4 id="Pulumi_OpenStack_Firewall_FirewallState_Description" data-uid="Pulumi.OpenStack.Firewall.FirewallState.Description">Description</h4>
@@ -168,7 +197,7 @@ updates the <code>description</code> of an existing firewall.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +209,13 @@ updates the <code>description</code> of an existing firewall.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Firewall/Firewall.cs/#L251">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Firewall/Firewall.cs/#L296">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Firewall_FirewallState_Name_" data-uid="Pulumi.OpenStack.Firewall.FirewallState.Name*"></a>
   <h4 id="Pulumi_OpenStack_Firewall_FirewallState_Name" data-uid="Pulumi.OpenStack.Firewall.FirewallState.Name">Name</h4>
@@ -196,7 +225,7 @@ updates the <code>name</code> of an existing firewall.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +237,13 @@ updates the <code>name</code> of an existing firewall.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Firewall/Firewall.cs/#L259">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Firewall/Firewall.cs/#L304">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Firewall_FirewallState_NoRouters_" data-uid="Pulumi.OpenStack.Firewall.FirewallState.NoRouters*"></a>
   <h4 id="Pulumi_OpenStack_Firewall_FirewallState_NoRouters" data-uid="Pulumi.OpenStack.Firewall.FirewallState.NoRouters">NoRouters</h4>
@@ -225,7 +254,7 @@ Conflicts with <code>associated_routers</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? NoRouters { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; NoRouters { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +266,13 @@ Conflicts with <code>associated_routers</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Firewall/Firewall.cs/#L266">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Firewall/Firewall.cs/#L311">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Firewall_FirewallState_PolicyId_" data-uid="Pulumi.OpenStack.Firewall.FirewallState.PolicyId*"></a>
   <h4 id="Pulumi_OpenStack_Firewall_FirewallState_PolicyId" data-uid="Pulumi.OpenStack.Firewall.FirewallState.PolicyId">PolicyId</h4>
@@ -253,7 +282,7 @@ this updates the <code>policy_id</code> of an existing firewall.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PolicyId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PolicyId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -265,13 +294,13 @@ this updates the <code>policy_id</code> of an existing firewall.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Firewall/Firewall.cs/#L275">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Firewall/Firewall.cs/#L320">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Firewall_FirewallState_Region_" data-uid="Pulumi.OpenStack.Firewall.FirewallState.Region*"></a>
   <h4 id="Pulumi_OpenStack_Firewall_FirewallState_Region" data-uid="Pulumi.OpenStack.Firewall.FirewallState.Region">Region</h4>
@@ -283,7 +312,7 @@ firewall.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -295,13 +324,13 @@ firewall.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Firewall/Firewall.cs/#L283">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Firewall/Firewall.cs/#L328">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Firewall_FirewallState_TenantId_" data-uid="Pulumi.OpenStack.Firewall.FirewallState.TenantId*"></a>
   <h4 id="Pulumi_OpenStack_Firewall_FirewallState_TenantId" data-uid="Pulumi.OpenStack.Firewall.FirewallState.TenantId">TenantId</h4>
@@ -312,7 +341,7 @@ firewall.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TenantId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TenantId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -324,13 +353,13 @@ firewall.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Firewall/Firewall.cs/#L292">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Firewall/Firewall.cs/#L337">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Firewall_FirewallState_ValueSpecs_" data-uid="Pulumi.OpenStack.Firewall.FirewallState.ValueSpecs*"></a>
   <h4 id="Pulumi_OpenStack_Firewall_FirewallState_ValueSpecs" data-uid="Pulumi.OpenStack.Firewall.FirewallState.ValueSpecs">ValueSpecs</h4>
@@ -351,7 +380,7 @@ firewall.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -363,7 +392,7 @@ firewall.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Firewall/Firewall.cs/#L216" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Firewall/Firewall.cs/#L261" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

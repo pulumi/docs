@@ -1,0 +1,597 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CloudProviderSnapshotBackupPolicy
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CloudProviderSnapshotBackupPolicy
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy">
+  
+  <h1 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy" class="text-break">Class CloudProviderSnapshotBackupPolicy
+  </h1>
+  <div class="markdown level0 summary"><p><code>mongodbatlas..CloudProviderSnapshotBackupPolicy</code> provides a resource that enables you to view and modify the snapshot schedule and retention settings for an Atlas cluster with Cloud Provider Snapshots enabled.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code>groupId</code> in the official documentation.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Mongodbatlas = Pulumi.Mongodbatlas;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myCluster = new Mongodbatlas.Cluster(&amp;quot;myCluster&amp;quot;, new Mongodbatlas.ClusterArgs
+    {
+        ProjectId = &amp;quot;&amp;lt;PROJECT-ID&gt;&amp;quot;,
+        DiskSizeGb = 5,
+        ProviderName = &amp;quot;AWS&amp;quot;,
+        ProviderRegionName = &amp;quot;EU_CENTRAL_1&amp;quot;,
+        ProviderInstanceSizeName = &amp;quot;M10&amp;quot;,
+        ProviderBackupEnabled = true,
+        ProviderDiskIops = 100,
+        ProviderEncryptEbsVolume = false,
+    });
+    var test = new Mongodbatlas.CloudProviderSnapshotBackupPolicy(&amp;quot;test&amp;quot;, new Mongodbatlas.CloudProviderSnapshotBackupPolicyArgs
+    {
+        ProjectId = myCluster.ProjectId,
+        ClusterName = myCluster.Name,
+        ReferenceHourOfDay = 3,
+        ReferenceMinuteOfHour = 45,
+        RestoreWindowDays = 4,
+        Policies = 
+        {
+            new Mongodbatlas.Inputs.CloudProviderSnapshotBackupPolicyPolicyArgs
+            {
+                Id = myCluster.SnapshotBackupPolicies.Apply(snapshotBackupPolicies =&gt; snapshotBackupPolicies[0].Policies?[0]?.Id),
+                Policy_item = 
+                {
+
+                    {
+                        { &amp;quot;id&amp;quot;, myCluster.SnapshotBackupPolicies.Apply(snapshotBackupPolicies =&gt; snapshotBackupPolicies[0].Policies?[0]?.PolicyItems?[0]?.Id) },
+                        { &amp;quot;frequencyInterval&amp;quot;, 1 },
+                        { &amp;quot;frequencyType&amp;quot;, &amp;quot;hourly&amp;quot; },
+                        { &amp;quot;retentionUnit&amp;quot;, &amp;quot;days&amp;quot; },
+                        { &amp;quot;retentionValue&amp;quot;, 1 },
+                    },
+
+                    {
+                        { &amp;quot;id&amp;quot;, myCluster.SnapshotBackupPolicies.Apply(snapshotBackupPolicies =&gt; snapshotBackupPolicies[0].Policies?[0]?.PolicyItems?[1]?.Id) },
+                        { &amp;quot;frequencyInterval&amp;quot;, 1 },
+                        { &amp;quot;frequencyType&amp;quot;, &amp;quot;daily&amp;quot; },
+                        { &amp;quot;retentionUnit&amp;quot;, &amp;quot;days&amp;quot; },
+                        { &amp;quot;retentionValue&amp;quot;, 2 },
+                    },
+
+                    {
+                        { &amp;quot;id&amp;quot;, myCluster.SnapshotBackupPolicies.Apply(snapshotBackupPolicies =&gt; snapshotBackupPolicies[0].Policies?[0]?.PolicyItems?[2]?.Id) },
+                        { &amp;quot;frequencyInterval&amp;quot;, 4 },
+                        { &amp;quot;frequencyType&amp;quot;, &amp;quot;weekly&amp;quot; },
+                        { &amp;quot;retentionUnit&amp;quot;, &amp;quot;weeks&amp;quot; },
+                        { &amp;quot;retentionValue&amp;quot;, 3 },
+                    },
+
+                    {
+                        { &amp;quot;id&amp;quot;, myCluster.SnapshotBackupPolicies.Apply(snapshotBackupPolicies =&gt; snapshotBackupPolicies[0].Policies?[0]?.PolicyItems?[3]?.Id) },
+                        { &amp;quot;frequencyInterval&amp;quot;, 5 },
+                        { &amp;quot;frequencyType&amp;quot;, &amp;quot;monthly&amp;quot; },
+                        { &amp;quot;retentionUnit&amp;quot;, &amp;quot;months&amp;quot; },
+                        { &amp;quot;retentionValue&amp;quot;, 4 },
+                    },
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">CloudProviderSnapshotBackupPolicy</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Mongodbatlas.html">Pulumi.Mongodbatlas</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Mongodbatlas.dll</h6>
+  <h5 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CloudProviderSnapshotBackupPolicy : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L160">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy__ctor_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.#ctor*"></a>
+  <h4 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy__ctor_System_String_Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.#ctor(System.String,Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicyArgs,Pulumi.CustomResourceOptions)">CloudProviderSnapshotBackupPolicy(String, CloudProviderSnapshotBackupPolicyArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a CloudProviderSnapshotBackupPolicy resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudProviderSnapshotBackupPolicy(string name, CloudProviderSnapshotBackupPolicyArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicyArgs.html">CloudProviderSnapshotBackupPolicyArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L100">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_ClusterId_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.ClusterId*"></a>
+  <h4 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_ClusterId" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.ClusterId">ClusterId</h4>
+  <div class="markdown level1 summary"><p>Unique identifier of the Atlas cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClusterId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L106">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_ClusterName_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.ClusterName*"></a>
+  <h4 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_ClusterName" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.ClusterName">ClusterName</h4>
+  <div class="markdown level1 summary"><p>The name of the Atlas cluster that contains the snapshot backup policy you want to retrieve.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClusterName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L112">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_NextSnapshot_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.NextSnapshot*"></a>
+  <h4 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_NextSnapshot" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.NextSnapshot">NextSnapshot</h4>
+  <div class="markdown level1 summary"><p>Timestamp in the number of seconds that have elapsed since the UNIX epoch when Atlas takes the next snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NextSnapshot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_Policies_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.Policies*"></a>
+  <h4 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_Policies" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.Policies">Policies</h4>
+  <div class="markdown level1 summary"><p>Contains a document for each backup policy item in the desired updated backup policy.</p>
+<ul>
+<li><code>policies.#.id</code> - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas..Cluster resource. provider_backup_enabled of the mongodbatlas..Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas..Cluster resource for policies.#.id</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;CloudProviderSnapshotBackupPolicyPolicy&gt;&gt; Policies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Mongodbatlas.Outputs.CloudProviderSnapshotBackupPolicyPolicy.html">CloudProviderSnapshotBackupPolicyPolicy</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_ProjectId_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.ProjectId*"></a>
+  <h4 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_ProjectId" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.ProjectId">ProjectId</h4>
+  <div class="markdown level1 summary"><p>The unique identifier of the project for the Atlas cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProjectId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_ReferenceHourOfDay_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.ReferenceHourOfDay*"></a>
+  <h4 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_ReferenceHourOfDay" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.ReferenceHourOfDay">ReferenceHourOfDay</h4>
+  <div class="markdown level1 summary"><p>UTC Hour of day between 0 and 23, inclusive, representing which hour of the day that Atlas takes snapshots for backup policy items.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; ReferenceHourOfDay { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_ReferenceMinuteOfHour_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.ReferenceMinuteOfHour*"></a>
+  <h4 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_ReferenceMinuteOfHour" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.ReferenceMinuteOfHour">ReferenceMinuteOfHour</h4>
+  <div class="markdown level1 summary"><p>UTC Minutes after referenceHourOfDay that Atlas takes snapshots for backup policy items. Must be between 0 and 59, inclusive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; ReferenceMinuteOfHour { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_RestoreWindowDays_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.RestoreWindowDays*"></a>
+  <h4 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_RestoreWindowDays" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.RestoreWindowDays">RestoreWindowDays</h4>
+  <div class="markdown level1 summary"><p>Number of days back in time you can restore to with point-in-time accuracy. Must be a positive, non-zero integer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; RestoreWindowDays { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_UpdateSnapshots_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.UpdateSnapshots*"></a>
+  <h4 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_UpdateSnapshots" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.UpdateSnapshots">UpdateSnapshots</h4>
+  <div class="markdown level1 summary"><p>Specify true to apply the retention changes in the updated backup policy to snapshots that Atlas took previously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; UpdateSnapshots { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L190">View Source</a>
+  </span>
+  <a id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_Get_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.Get*"></a>
+  <h4 id="Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicy_Get_System_String_Pulumi_Input_System_String__Pulumi_Mongodbatlas_CloudProviderSnapshotBackupPolicyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.Get(System.String,Pulumi.Input{System.String},Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, CloudProviderSnapshotBackupPolicyState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing CloudProviderSnapshotBackupPolicy resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CloudProviderSnapshotBackupPolicy Get(string name, Input&lt;string&gt; id, CloudProviderSnapshotBackupPolicyState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicyState.html">CloudProviderSnapshotBackupPolicyState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.html">CloudProviderSnapshotBackupPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/master/sdk/dotnet/CloudProviderSnapshotBackupPolicy.cs/#L95" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

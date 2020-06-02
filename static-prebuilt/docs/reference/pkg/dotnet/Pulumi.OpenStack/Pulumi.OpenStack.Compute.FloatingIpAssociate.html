@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FloatingIpAssociate
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,125 @@
   </h1>
   <div class="markdown level0 summary"><p>Associate a floating IP to an instance. This can be used instead of the
 <code>floating_ip</code> options in <code>openstack.compute.Instance</code>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="automatically-detect-the-correct-network">Automatically detect the correct network</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        FlavorId = 3,
+        ImageId = &amp;quot;ad091b52-742f-469e-8f3c-fd81cadf0743&amp;quot;,
+        KeyPair = &amp;quot;my_key_pair_name&amp;quot;,
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+    });
+    var fip1FloatingIp = new OpenStack.Networking.FloatingIp(&amp;quot;fip1FloatingIp&amp;quot;, new OpenStack.Networking.FloatingIpArgs
+    {
+        Pool = &amp;quot;my_pool&amp;quot;,
+    });
+    var fip1FloatingIpAssociate = new OpenStack.Compute.FloatingIpAssociate(&amp;quot;fip1FloatingIpAssociate&amp;quot;, new OpenStack.Compute.FloatingIpAssociateArgs
+    {
+        FloatingIp = fip1FloatingIp.Address,
+        InstanceId = instance1.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="explicitly-set-the-network-to-attach-to">Explicitly set the network to attach to</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        FlavorId = 3,
+        ImageId = &amp;quot;ad091b52-742f-469e-8f3c-fd81cadf0743&amp;quot;,
+        KeyPair = &amp;quot;my_key_pair_name&amp;quot;,
+        Networks = 
+        {
+            new OpenStack.Compute.Inputs.InstanceNetworkArgs
+            {
+                Name = &amp;quot;my_network&amp;quot;,
+            },
+            new OpenStack.Compute.Inputs.InstanceNetworkArgs
+            {
+                Name = &amp;quot;default&amp;quot;,
+            },
+        },
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+    });
+    var fip1FloatingIp = new OpenStack.Networking.FloatingIp(&amp;quot;fip1FloatingIp&amp;quot;, new OpenStack.Networking.FloatingIpArgs
+    {
+        Pool = &amp;quot;my_pool&amp;quot;,
+    });
+    var fip1FloatingIpAssociate = new OpenStack.Compute.FloatingIpAssociate(&amp;quot;fip1FloatingIpAssociate&amp;quot;, new OpenStack.Compute.FloatingIpAssociateArgs
+    {
+        FixedIp = instance1.Networks.Apply(networks =&gt; networks[1].FixedIpV4),
+        FloatingIp = fip1FloatingIp.Address,
+        InstanceId = instance1.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">FloatingIpAssociate</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">FloatingIpAssociate</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Compute.html">Pulumi.OpenStack.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -89,16 +202,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_FloatingIpAssociate__ctor_" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_Compute_FloatingIpAssociate__ctor_System_String_Pulumi_OpenStack_Compute_FloatingIpAssociateArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.#ctor(System.String,Pulumi.OpenStack.Compute.FloatingIpAssociateArgs,System.Nullable{CustomResourceOptions})">FloatingIpAssociate(String, FloatingIpAssociateArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Compute_FloatingIpAssociate__ctor_System_String_Pulumi_OpenStack_Compute_FloatingIpAssociateArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.#ctor(System.String,Pulumi.OpenStack.Compute.FloatingIpAssociateArgs,Pulumi.CustomResourceOptions)">FloatingIpAssociate(String, FloatingIpAssociateArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a FloatingIpAssociate resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FloatingIpAssociate(string name, FloatingIpAssociateArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public FloatingIpAssociate(string name, FloatingIpAssociateArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +236,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +246,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_FloatingIpAssociate_FixedIp_" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.FixedIp*"></a>
   <h4 id="Pulumi_OpenStack_Compute_FloatingIpAssociate_FixedIp" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.FixedIp">FixedIp</h4>
@@ -142,7 +255,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; FixedIp { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FixedIp { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,13 +267,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_FloatingIpAssociate_FloatingIp_" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.FloatingIp*"></a>
   <h4 id="Pulumi_OpenStack_Compute_FloatingIpAssociate_FloatingIp" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.FloatingIp">FloatingIp</h4>
@@ -181,13 +294,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_FloatingIpAssociate_InstanceId_" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.InstanceId*"></a>
   <h4 id="Pulumi_OpenStack_Compute_FloatingIpAssociate_InstanceId" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.InstanceId">InstanceId</h4>
@@ -208,13 +321,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_FloatingIpAssociate_Region_" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.Region*"></a>
   <h4 id="Pulumi_OpenStack_Compute_FloatingIpAssociate_Region" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.Region">Region</h4>
@@ -238,13 +351,13 @@ Changing this creates a new floatingip_associate.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_FloatingIpAssociate_WaitUntilAssociated_" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.WaitUntilAssociated*"></a>
   <h4 id="Pulumi_OpenStack_Compute_FloatingIpAssociate_WaitUntilAssociated" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.WaitUntilAssociated">WaitUntilAssociated</h4>
@@ -264,7 +377,7 @@ Changing this creates a new floatingip_associate.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -272,17 +385,17 @@ Changing this creates a new floatingip_associate.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_FloatingIpAssociate_Get_" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.Get*"></a>
-  <h4 id="Pulumi_OpenStack_Compute_FloatingIpAssociate_Get_System_String_Input_System_String__Pulumi_OpenStack_Compute_FloatingIpAssociateState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.Get(System.String,Input{System.String},Pulumi.OpenStack.Compute.FloatingIpAssociateState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FloatingIpAssociateState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Compute_FloatingIpAssociate_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_Compute_FloatingIpAssociateState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Compute.FloatingIpAssociate.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.Compute.FloatingIpAssociateState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, FloatingIpAssociateState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing FloatingIpAssociate resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static FloatingIpAssociate Get(string name, Input&lt;string&gt; id, FloatingIpAssociateState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static FloatingIpAssociate Get(string name, Input&lt;string&gt; id, FloatingIpAssociateState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,7 +414,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -313,7 +426,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -342,7 +455,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/FloatingIpAssociate.cs/#L98" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

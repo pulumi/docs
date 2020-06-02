@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PoolStartTaskResourceFile
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PoolStartTaskResourceFile</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Batch.Outputs.html">Pulumi.Azure.Batch.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Batch_Outputs_PoolStartTaskResourceFile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class PoolStartTaskResourceFile : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PoolStartTaskResourceFile</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTaskResourceFile_AutoStorageContainerName" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTaskResourceFile.AutoStorageContainerName">AutoStorageContainerName</h4>
   <div class="markdown level1 summary"><p>The storage container name in the auto storage account.</p>
@@ -95,7 +119,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? AutoStorageContainerName</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string AutoStorageContainerName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -107,13 +131,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTaskResourceFile_BlobPrefix" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTaskResourceFile.BlobPrefix">BlobPrefix</h4>
   <div class="markdown level1 summary"><p>The blob prefix to use when downloading blobs from an Azure Storage container. Only the blobs whose names begin with the specified prefix will be downloaded. The property is valid only when <code>auto_storage_container_name</code> or <code>storage_container_url</code> is used. This prefix can be a partial filename or a subdirectory. If a prefix is not specified, all the files in the container will be downloaded.</p>
@@ -121,7 +145,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? BlobPrefix</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string BlobPrefix</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTaskResourceFile_FileMode" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTaskResourceFile.FileMode">FileMode</h4>
   <div class="markdown level1 summary"><p>The file permission mode represented as a string in octal format (e.g. <code>&amp;quot;0644&amp;quot;</code>). This property applies only to files being downloaded to Linux compute nodes. It will be ignored if it is specified for a <code>resource_file</code> which will be downloaded to a Windows node. If this property is not specified for a Linux node, then a default value of 0770 is applied to the file.</p>
@@ -147,7 +171,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? FileMode</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string FileMode</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTaskResourceFile_FilePath" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTaskResourceFile.FilePath">FilePath</h4>
   <div class="markdown level1 summary"><p>The location on the compute node to which to download the file, relative to the task's working directory. If the <code>http_url</code> property is specified, the <code>file_path</code> is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the <code>auto_storage_container_name</code> or <code>storage_container_url</code> property is specified, <code>file_path</code> is optional and is the directory to download the files to. In the case where <code>file_path</code> is used as a directory, any directory structure already associated with the input data will be retained in full and appended to the specified filePath directory. The specified relative path cannot break out of the task's working directory (for example by using '..').</p>
@@ -173,7 +197,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? FilePath</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string FilePath</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,13 +209,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTaskResourceFile_HttpUrl" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTaskResourceFile.HttpUrl">HttpUrl</h4>
   <div class="markdown level1 summary"><p>The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access; that is, the Batch service does not present any credentials when downloading the blob. There are two ways to get such a URL for a blob in Azure storage: include a Shared Access Signature (SAS) granting read permissions on the blob, or set the ACL for the blob or its container to allow public access.</p>
@@ -199,7 +223,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? HttpUrl</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string HttpUrl</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,13 +235,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTaskResourceFile_StorageContainerUrl" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTaskResourceFile.StorageContainerUrl">StorageContainerUrl</h4>
   <div class="markdown level1 summary"><p>The URL of the blob container within Azure Blob Storage. This URL must be readable and listable using anonymous access; that is, the Batch service does not present any credentials when downloading the blob. There are two ways to get such a URL for a blob in Azure storage: include a Shared Access Signature (SAS) granting read and list permissions on the blob, or set the ACL for the blob or its container to allow public access.</p>
@@ -225,7 +249,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? StorageContainerUrl</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string StorageContainerUrl</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,7 +261,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -249,7 +273,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolStartTaskResourceFile.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

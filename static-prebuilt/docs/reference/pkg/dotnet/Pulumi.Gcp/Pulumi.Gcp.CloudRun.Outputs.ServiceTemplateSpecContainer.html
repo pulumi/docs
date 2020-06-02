@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ServiceTemplateSpecContainer
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,19 +78,52 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ServiceTemplateSpecContainer</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.CloudRun.Outputs.html">Pulumi.Gcp.CloudRun.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_CloudRun_Outputs_ServiceTemplateSpecContainer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ServiceTemplateSpecContainer : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ServiceTemplateSpecContainer</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudRun_Outputs_ServiceTemplateSpecContainer_Args" data-uid="Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainer.Args">Args</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Arguments to the entrypoint.
+The docker image's CMD is used if this is not provided.
+Variable references $(VAR_NAME) are expanded using the container's
+environment. If a variable cannot be resolved, the reference in the input
+string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+regardless of whether the variable exists or not.
+More info:
+<a href="https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell">https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -106,16 +139,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudRun_Outputs_ServiceTemplateSpecContainer_Commands" data-uid="Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainer.Commands">Commands</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Entrypoint array. Not executed within a shell.
+The docker image's ENTRYPOINT is used if this is not provided.
+Variable references $(VAR_NAME) are expanded using the container's
+environment. If a variable cannot be resolved, the reference in the input
+string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+regardless of whether the variable exists or not.
+More info:
+<a href="https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell">https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -131,16 +173,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudRun_Outputs_ServiceTemplateSpecContainer_EnvFroms" data-uid="Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainer.EnvFroms">EnvFroms</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><ul>
+<li></li>
+</ul>
+<p>(Optional, Deprecated)
+List of sources to populate environment variables in the container.
+All invalid keys will be reported as an event when the container is starting.
+When a key exists in multiple sources, the value associated with the last source will
+take precedence. Values defined by an Env with a duplicate key will take
+precedence.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -156,16 +207,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFrom.html">ServiceTemplateSpecContainerEnvFrom</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFrom.html">ServiceTemplateSpecContainerEnvFrom</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudRun_Outputs_ServiceTemplateSpecContainer_Envs" data-uid="Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainer.Envs">Envs</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>List of environment variables to set in the container.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -181,16 +233,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnv.html">ServiceTemplateSpecContainerEnv</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnv.html">ServiceTemplateSpecContainerEnv</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudRun_Outputs_ServiceTemplateSpecContainer_Image" data-uid="Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainer.Image">Image</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Docker image name. This is most often a reference to a container located
+in the container registry, such as gcr.io/cloudrun/hello
+More info: <a href="https://kubernetes.io/docs/concepts/containers/images">https://kubernetes.io/docs/concepts/containers/images</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -212,10 +267,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudRun_Outputs_ServiceTemplateSpecContainer_Resources" data-uid="Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainer.Resources">Resources</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compute Resources required by this container. Used to set values such as max memory
+More info:
+<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources">https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources</a>  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -237,14 +295,21 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudRun_Outputs_ServiceTemplateSpecContainer_WorkingDir" data-uid="Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainer.WorkingDir">WorkingDir</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><ul>
+<li></li>
+</ul>
+<p>(Optional, Deprecated)
+Container's working directory.
+If not specified, the container runtime's default will be used, which
+might be configured in the container image.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? WorkingDir</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string WorkingDir</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,7 +321,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -268,7 +333,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudRun/Outputs/ServiceTemplateSpecContainer.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Image
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,12 +90,99 @@ to create an instance.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/images">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---image-basic">Example Usage - Image Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Gcp.Compute.Image(&amp;quot;example&amp;quot;, new Gcp.Compute.ImageArgs
+    {
+        RawDisk = new Gcp.Compute.Inputs.ImageRawDiskArgs
+        {
+            Source = &amp;quot;https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---image-guest-os">Example Usage - Image Guest Os</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Gcp.Compute.Image(&amp;quot;example&amp;quot;, new Gcp.Compute.ImageArgs
+    {
+        GuestOsFeatures = 
+        {
+            new Gcp.Compute.Inputs.ImageGuestOsFeatureArgs
+            {
+                Type = &amp;quot;SECURE_BOOT&amp;quot;,
+            },
+            new Gcp.Compute.Inputs.ImageGuestOsFeatureArgs
+            {
+                Type = &amp;quot;MULTI_IP_SUBNET&amp;quot;,
+            },
+        },
+        RawDisk = new Gcp.Compute.Inputs.ImageRawDiskArgs
+        {
+            Source = &amp;quot;https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Image</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Image</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -106,16 +193,16 @@ to create an instance.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image__ctor_" data-uid="Pulumi.Gcp.Compute.Image.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_Image__ctor_System_String_Pulumi_Gcp_Compute_ImageArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.Image.#ctor(System.String,Pulumi.Gcp.Compute.ImageArgs,System.Nullable{CustomResourceOptions})">Image(String, ImageArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_Image__ctor_System_String_Pulumi_Gcp_Compute_ImageArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.Image.#ctor(System.String,Pulumi.Gcp.Compute.ImageArgs,Pulumi.CustomResourceOptions)">Image(String, ImageArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Image resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Image(string name, ImageArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Image(string name, ImageArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,7 +227,7 @@ to create an instance.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -150,7 +237,7 @@ to create an instance.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_ArchiveSizeBytes_" data-uid="Pulumi.Gcp.Compute.Image.ArchiveSizeBytes*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_ArchiveSizeBytes" data-uid="Pulumi.Gcp.Compute.Image.ArchiveSizeBytes">ArchiveSizeBytes</h4>
@@ -171,13 +258,13 @@ to create an instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.Image.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.Image.CreationTimestamp">CreationTimestamp</h4>
@@ -198,22 +285,23 @@ to create an instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_Description_" data-uid="Pulumi.Gcp.Compute.Image.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_Description" data-uid="Pulumi.Gcp.Compute.Image.Description">Description</h4>
-  <div class="markdown level1 summary"><p>An optional description of this resource. Provide this property when you create the resource.</p>
+  <div class="markdown level1 summary"><p>An optional description of this resource. Provide this property when
+you create the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -225,13 +313,13 @@ to create an instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_DiskSizeGb_" data-uid="Pulumi.Gcp.Compute.Image.DiskSizeGb*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_DiskSizeGb" data-uid="Pulumi.Gcp.Compute.Image.DiskSizeGb">DiskSizeGb</h4>
@@ -252,24 +340,26 @@ to create an instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_Family_" data-uid="Pulumi.Gcp.Compute.Image.Family*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_Family" data-uid="Pulumi.Gcp.Compute.Image.Family">Family</h4>
-  <div class="markdown level1 summary"><p>The name of the image family to which this image belongs. You can create disks by specifying an image family instead of
-a specific image name. The image family always returns its latest image that is not deprecated. The name of the image
-family must comply with RFC1035.</p>
+  <div class="markdown level1 summary"><p>The name of the image family to which this image belongs. You can
+create disks by specifying an image family instead of a specific
+image name. The image family always returns its latest image that is
+not deprecated. The name of the image family must comply with
+RFC1035.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Family { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Family { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -281,17 +371,18 @@ family must comply with RFC1035.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_GuestOsFeatures_" data-uid="Pulumi.Gcp.Compute.Image.GuestOsFeatures*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_GuestOsFeatures" data-uid="Pulumi.Gcp.Compute.Image.GuestOsFeatures">GuestOsFeatures</h4>
-  <div class="markdown level1 summary"><p>A list of features to enable on the guest operating system. Applicable only for bootable images.</p>
+  <div class="markdown level1 summary"><p>A list of features to enable on the guest operating system.
+Applicable only for bootable images.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -308,13 +399,13 @@ family must comply with RFC1035.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.ImageGuestOsFeature.html">ImageGuestOsFeature</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.ImageGuestOsFeature.html">ImageGuestOsFeature</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_LabelFingerprint_" data-uid="Pulumi.Gcp.Compute.Image.LabelFingerprint*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_LabelFingerprint" data-uid="Pulumi.Gcp.Compute.Image.LabelFingerprint">LabelFingerprint</h4>
@@ -335,13 +426,13 @@ family must comply with RFC1035.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_Labels_" data-uid="Pulumi.Gcp.Compute.Image.Labels*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_Labels" data-uid="Pulumi.Gcp.Compute.Image.Labels">Labels</h4>
@@ -350,7 +441,7 @@ family must comply with RFC1035.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -362,13 +453,13 @@ family must comply with RFC1035.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_Licenses_" data-uid="Pulumi.Gcp.Compute.Image.Licenses*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_Licenses" data-uid="Pulumi.Gcp.Compute.Image.Licenses">Licenses</h4>
@@ -389,20 +480,23 @@ family must comply with RFC1035.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_Name_" data-uid="Pulumi.Gcp.Compute.Image.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_Name" data-uid="Pulumi.Gcp.Compute.Image.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression <code>a-z?</code> which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -419,13 +513,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_Project_" data-uid="Pulumi.Gcp.Compute.Image.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_Project" data-uid="Pulumi.Gcp.Compute.Image.Project">Project</h4>
@@ -447,17 +541,17 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_RawDisk_" data-uid="Pulumi.Gcp.Compute.Image.RawDisk*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_RawDisk" data-uid="Pulumi.Gcp.Compute.Image.RawDisk">RawDisk</h4>
-  <div class="markdown level1 summary"><p>The parameters of the raw disk image.</p>
+  <div class="markdown level1 summary"><p>The parameters of the raw disk image.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -474,13 +568,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.ImageRawDisk.html">ImageRawDisk</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.ImageRawDisk.html">ImageRawDisk</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_SelfLink_" data-uid="Pulumi.Gcp.Compute.Image.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_SelfLink" data-uid="Pulumi.Gcp.Compute.Image.SelfLink">SelfLink</h4>
@@ -501,23 +595,24 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L191">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_SourceDisk_" data-uid="Pulumi.Gcp.Compute.Image.SourceDisk*"></a>
   <h4 id="Pulumi_Gcp_Compute_Image_SourceDisk" data-uid="Pulumi.Gcp.Compute.Image.SourceDisk">SourceDisk</h4>
-  <div class="markdown level1 summary"><p>The source disk to create this image based on. You must provide either this property or the rawDisk.source property but
-not both to create an image.</p>
+  <div class="markdown level1 summary"><p>The source disk to create this image based on.
+You must provide either this property or the
+rawDisk.source property but not both to create an image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceDisk { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceDisk { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -529,7 +624,7 @@ not both to create an image.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -537,17 +632,17 @@ not both to create an image.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Image_Get_" data-uid="Pulumi.Gcp.Compute.Image.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_Image_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_ImageState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.Image.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.ImageState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ImageState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_Image_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_ImageState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.Image.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.ImageState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ImageState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Image resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Image Get(string name, Input&lt;string&gt; id, ImageState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Image Get(string name, Input&lt;string&gt; id, ImageState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -566,7 +661,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -578,7 +673,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -607,7 +702,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Image.cs/#L37" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Image.cs/#L93" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

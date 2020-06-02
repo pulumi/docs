@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.RocketMQ
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,6 +85,21 @@
 <blockquote>
 <p><strong>NOTE:</strong> Only the following regions support create Cloud Connect Network. [<code>cn-shanghai</code>, <code>cn-shanghai-finance-1</code>, <code>cn-hongkong</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-southeast-3</code>, <code>ap-southeast-5</code>, <code>ap-northeast-1</code>, <code>eu-central-1</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.RocketMQ.Acl(&amp;quot;default&amp;quot;, new AliCloud.RocketMQ.AclArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.RocketMQ.AclArgs.html">AclArgs</a></h4>
       <section></section>
@@ -113,6 +128,27 @@
 <blockquote>
 <p><strong>NOTE:</strong> Only the following regions support. [<code>cn-shanghai</code>, <code>cn-shanghai-finance-1</code>, <code>cn-hongkong</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-southeast-3</code>, <code>ap-southeast-5</code>, <code>ap-northeast-1</code>, <code>eu-central-1</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.RocketMQ.ClientUser(&amp;quot;default&amp;quot;, new AliCloud.RocketMQ.ClientUserArgs
+    {
+        Bandwidth = &amp;quot;20&amp;quot;,
+        ClientIp = &amp;quot;192.1.10.0&amp;quot;,
+        Password = &amp;quot;xxxxxxx&amp;quot;,
+        SagId = &amp;quot;sag-xxxxx&amp;quot;,
+        UserMail = &amp;quot;tftest-xxxxx@test.com&amp;quot;,
+        UserName = &amp;quot;th-username-xxxxx&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.RocketMQ.ClientUserArgs.html">ClientUserArgs</a></h4>
       <section></section>
@@ -127,6 +163,28 @@
 <blockquote>
 <p><strong>NOTE:</strong> Only the following regions suppor. [<code>cn-shanghai</code>, <code>cn-shanghai-finance-1</code>, <code>cn-hongkong</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-southeast-3</code>, <code>ap-southeast-5</code>, <code>ap-northeast-1</code>, <code>eu-central-1</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.RocketMQ.DnatEntry(&amp;quot;default&amp;quot;, new AliCloud.RocketMQ.DnatEntryArgs
+    {
+        ExternalIp = &amp;quot;1.0.0.2&amp;quot;,
+        ExternalPort = &amp;quot;1&amp;quot;,
+        InternalIp = &amp;quot;10.0.0.2&amp;quot;,
+        InternalPort = &amp;quot;20&amp;quot;,
+        IpProtocol = &amp;quot;tcp&amp;quot;,
+        SagId = &amp;quot;sag-3rb1t3iagy3w0zgwy9&amp;quot;,
+        Type = &amp;quot;Intranet&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.RocketMQ.DnatEntryArgs.html">DnatEntryArgs</a></h4>
       <section></section>
@@ -156,6 +214,31 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.53.0+</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;onsInstanceName&amp;quot;;
+    var groupId = config.Get(&amp;quot;groupId&amp;quot;) ?? &amp;quot;GID-onsGroupDatasourceName&amp;quot;;
+    var defaultInstance = new AliCloud.RocketMQ.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.RocketMQ.InstanceArgs
+    {
+        Remark = &amp;quot;default_ons_instance_remark&amp;quot;,
+    });
+    var defaultGroup = new AliCloud.RocketMQ.Group(&amp;quot;defaultGroup&amp;quot;, new AliCloud.RocketMQ.GroupArgs
+    {
+        GroupId = groupId,
+        InstanceId = defaultInstance.Id,
+        Remark = &amp;quot;dafault_ons_group_remark&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.RocketMQ.GroupArgs.html">GroupArgs</a></h4>
       <section></section>
@@ -170,6 +253,22 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.51.0+</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new AliCloud.RocketMQ.Instance(&amp;quot;example&amp;quot;, new AliCloud.RocketMQ.InstanceArgs
+    {
+        Remark = &amp;quot;tf-example-ons-instance-remark&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.RocketMQ.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
@@ -184,6 +283,21 @@
 <blockquote>
 <p><strong>NOTE:</strong> Only the following regions support. [<code>cn-shanghai</code>, <code>cn-shanghai-finance-1</code>, <code>cn-hongkong</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-southeast-3</code>, <code>ap-southeast-5</code>, <code>ap-northeast-1</code>, <code>eu-central-1</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.RocketMQ.Qos(&amp;quot;default&amp;quot;, new AliCloud.RocketMQ.QosArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.RocketMQ.QosArgs.html">QosArgs</a></h4>
       <section></section>
@@ -197,6 +311,33 @@ You need to create a QoS car to set priorities, rate limits, and quintuple rules
 <blockquote>
 <p><strong>NOTE:</strong> Only the following regions support. [<code>cn-shanghai</code>, <code>cn-shanghai-finance-1</code>, <code>cn-hongkong</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-southeast-3</code>, <code>ap-southeast-5</code>, <code>ap-northeast-1</code>, <code>eu-central-1</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultQos = new AliCloud.RocketMQ.Qos(&amp;quot;defaultQos&amp;quot;, new AliCloud.RocketMQ.QosArgs
+    {
+    });
+    var defaultQosCar = new AliCloud.RocketMQ.QosCar(&amp;quot;defaultQosCar&amp;quot;, new AliCloud.RocketMQ.QosCarArgs
+    {
+        Description = &amp;quot;tf-testSagQosCarDescription&amp;quot;,
+        LimitType = &amp;quot;Absolute&amp;quot;,
+        MaxBandwidthAbs = &amp;quot;20&amp;quot;,
+        MaxBandwidthPercent = &amp;quot;20&amp;quot;,
+        MinBandwidthAbs = &amp;quot;10&amp;quot;,
+        MinBandwidthPercent = &amp;quot;10&amp;quot;,
+        PercentSourceType = &amp;quot;InternetUpBandwidth&amp;quot;,
+        Priority = &amp;quot;1&amp;quot;,
+        QosId = defaultQos.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.RocketMQ.QosCarArgs.html">QosCarArgs</a></h4>
       <section></section>
@@ -212,6 +353,34 @@ You need to create a QoS policy to set priorities, rate limits, and quintuple ru
 <blockquote>
 <p><strong>NOTE:</strong> Only the following regions support. [<code>cn-shanghai</code>, <code>cn-shanghai-finance-1</code>, <code>cn-hongkong</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-southeast-3</code>, <code>ap-southeast-5</code>, <code>ap-northeast-1</code>, <code>eu-central-1</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultQos = new AliCloud.RocketMQ.Qos(&amp;quot;defaultQos&amp;quot;, new AliCloud.RocketMQ.QosArgs
+    {
+    });
+    var defaultQosPolicy = new AliCloud.RocketMQ.QosPolicy(&amp;quot;defaultQosPolicy&amp;quot;, new AliCloud.RocketMQ.QosPolicyArgs
+    {
+        Description = &amp;quot;tf-testSagQosPolicyDescription&amp;quot;,
+        DestCidr = &amp;quot;10.10.0.0/24&amp;quot;,
+        DestPortRange = &amp;quot;-1/-1&amp;quot;,
+        EndTime = &amp;quot;2019-10-26T16:41:33+0800&amp;quot;,
+        IpProtocol = &amp;quot;ALL&amp;quot;,
+        Priority = &amp;quot;1&amp;quot;,
+        QosId = defaultQos.Id,
+        SourceCidr = &amp;quot;192.168.0.0/24&amp;quot;,
+        SourcePortRange = &amp;quot;-1/-1&amp;quot;,
+        StartTime = &amp;quot;2019-10-25T16:41:33+0800&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.RocketMQ.QosPolicyArgs.html">QosPolicyArgs</a></h4>
       <section></section>
@@ -228,6 +397,24 @@ You need to create a QoS policy to set priorities, rate limits, and quintuple ru
 <blockquote>
 <p><strong>NOTE:</strong> Only the following regions support. [<code>cn-shanghai</code>, <code>cn-shanghai-finance-1</code>, <code>cn-hongkong</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-southeast-3</code>, <code>ap-southeast-5</code>, <code>ap-northeast-1</code>, <code>eu-central-1</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.RocketMQ.SnatEntry(&amp;quot;default&amp;quot;, new AliCloud.RocketMQ.SnatEntryArgs
+    {
+        CidrBlock = &amp;quot;192.168.7.0/24&amp;quot;,
+        SagId = &amp;quot;sag-3rb1t3iagy3w0zgwy9&amp;quot;,
+        SnatIp = &amp;quot;192.0.0.2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.RocketMQ.SnatEntryArgs.html">SnatEntryArgs</a></h4>
       <section></section>
@@ -239,6 +426,32 @@ You need to create a QoS policy to set priorities, rate limits, and quintuple ru
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.53.0+</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;onsInstanceName&amp;quot;;
+    var topic = config.Get(&amp;quot;topic&amp;quot;) ?? &amp;quot;onsTopicName&amp;quot;;
+    var defaultInstance = new AliCloud.RocketMQ.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.RocketMQ.InstanceArgs
+    {
+        Remark = &amp;quot;default_ons_instance_remark&amp;quot;,
+    });
+    var defaultTopic = new AliCloud.RocketMQ.Topic(&amp;quot;defaultTopic&amp;quot;, new AliCloud.RocketMQ.TopicArgs
+    {
+        InstanceId = defaultInstance.Id,
+        MessageType = 0,
+        Remark = &amp;quot;dafault_ons_topic_remark&amp;quot;,
+        Topic = topic,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.RocketMQ.TopicArgs.html">TopicArgs</a></h4>
       <section></section>

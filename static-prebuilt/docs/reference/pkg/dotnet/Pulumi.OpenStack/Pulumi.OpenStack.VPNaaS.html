@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.VPNaaS
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,27 @@
   </h3>
       <h4><a class="xref" href="Pulumi.OpenStack.VPNaaS.EndpointGroup.html">EndpointGroup</a></h4>
       <section><p>Manages a V2 Neutron Endpoint Group resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var group1 = new OpenStack.VPNaaS.EndpointGroup(&amp;quot;group1&amp;quot;, new OpenStack.VPNaaS.EndpointGroupArgs
+    {
+        Endpoints = 
+        {
+            &amp;quot;10.2.0.0/24&amp;quot;,
+            &amp;quot;10.3.0.0/24&amp;quot;,
+        },
+        Type = &amp;quot;cidr&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.VPNaaS.EndpointGroupArgs.html">EndpointGroupArgs</a></h4>
       <section></section>
@@ -85,6 +106,21 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.VPNaaS.IkePolicy.html">IkePolicy</a></h4>
       <section><p>Manages a V2 Neutron IKE policy resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var policy1 = new OpenStack.VPNaaS.IkePolicy(&amp;quot;policy1&amp;quot;, new OpenStack.VPNaaS.IkePolicyArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.VPNaaS.IkePolicyArgs.html">IkePolicyArgs</a></h4>
       <section></section>
@@ -92,6 +128,21 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.VPNaaS.IpSecPolicy.html">IpSecPolicy</a></h4>
       <section><p>Manages a V2 Neutron IPSec policy resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var policy1 = new OpenStack.VPNaaS.IpSecPolicy(&amp;quot;policy1&amp;quot;, new OpenStack.VPNaaS.IpSecPolicyArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.VPNaaS.IpSecPolicyArgs.html">IpSecPolicyArgs</a></h4>
       <section></section>
@@ -99,6 +150,23 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.VPNaaS.Service.html">Service</a></h4>
       <section><p>Manages a V2 Neutron VPN service resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var service1 = new OpenStack.VPNaaS.Service(&amp;quot;service1&amp;quot;, new OpenStack.VPNaaS.ServiceArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+        RouterId = &amp;quot;14a75700-fc03-4602-9294-26ee44f366b3&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.VPNaaS.ServiceArgs.html">ServiceArgs</a></h4>
       <section></section>
@@ -106,6 +174,28 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.VPNaaS.SiteConnection.html">SiteConnection</a></h4>
       <section><p>Manages a V2 Neutron IPSec site connection resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var conn1 = new OpenStack.VPNaaS.SiteConnection(&amp;quot;conn1&amp;quot;, new OpenStack.VPNaaS.SiteConnectionArgs
+    {
+        IkepolicyId = openstack_vpnaas_ike_policy_v2.Policy_2.Id,
+        IpsecpolicyId = openstack_vpnaas_ipsec_policy_v2.Policy_1.Id,
+        LocalEpGroupId = openstack_vpnaas_endpoint_group_v2.Group_2.Id,
+        PeerAddress = &amp;quot;192.168.10.1&amp;quot;,
+        PeerEpGroupId = openstack_vpnaas_endpoint_group_v2.Group_1.Id,
+        Psk = &amp;quot;secret&amp;quot;,
+        VpnserviceId = openstack_vpnaas_service_v2.Service_1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.VPNaaS.SiteConnectionArgs.html">SiteConnectionArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Backup
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,8 +76,50 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.Aws.Backup.GetPlan.html">GetPlan</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Backup.GetPlanArgs.html">GetPlanArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Backup.GetPlanResult.html">GetPlanResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Backup.GetSelection.html">GetSelection</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Backup.GetSelectionArgs.html">GetSelectionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Backup.GetSelectionResult.html">GetSelectionResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Backup.GetVault.html">GetVault</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Backup.GetVaultArgs.html">GetVaultArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Backup.GetVaultResult.html">GetVaultResult</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Backup.Plan.html">Plan</a></h4>
       <section><p>Provides an AWS Backup plan resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Backup.Plan(&amp;quot;example&amp;quot;, new Aws.Backup.PlanArgs
+    {
+        Rules = 
+        {
+            new Aws.Backup.Inputs.PlanRuleArgs
+            {
+                RuleName = &amp;quot;tf_example_backup_rule&amp;quot;,
+                Schedule = &amp;quot;cron(0 12 * * ? *)&amp;quot;,
+                TargetVaultName = aws_backup_vault.Test.Name,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Backup.PlanArgs.html">PlanArgs</a></h4>
       <section></section>
@@ -85,6 +127,94 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Backup.Selection.html">Selection</a></h4>
       <section><p>Manages selection conditions for AWS Backup plan resources.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="iam-role">IAM Role</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleRole = new Aws.Iam.Role(&amp;quot;exampleRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [&amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: [&amp;quot;&amp;quot;backup.amazonaws.com&amp;quot;&amp;quot;]
+  }
+}
+]
+}
+
+&amp;quot;,
+    });
+    var exampleRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment(&amp;quot;exampleRolePolicyAttachment&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup&amp;quot;,
+        Role = exampleRole.Name,
+    });
+    var exampleSelection = new Aws.Backup.Selection(&amp;quot;exampleSelection&amp;quot;, new Aws.Backup.SelectionArgs
+    {
+        IamRoleArn = exampleRole.Arn,
+    });
+}
+
+}
+</code></pre>
+<h3 id="selecting-backups-by-tag">Selecting Backups By Tag</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Backup.Selection(&amp;quot;example&amp;quot;, new Aws.Backup.SelectionArgs
+    {
+        IamRoleArn = aws_iam_role.Example.Arn,
+        PlanId = aws_backup_plan.Example.Id,
+        SelectionTags = 
+        {
+            new Aws.Backup.Inputs.SelectionSelectionTagArgs
+            {
+                Key = &amp;quot;foo&amp;quot;,
+                Type = &amp;quot;STRINGEQUALS&amp;quot;,
+                Value = &amp;quot;bar&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="selecting-backups-by-resource">Selecting Backups By Resource</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Backup.Selection(&amp;quot;example&amp;quot;, new Aws.Backup.SelectionArgs
+    {
+        IamRoleArn = aws_iam_role.Example.Arn,
+        PlanId = aws_backup_plan.Example.Id,
+        Resources = 
+        {
+            aws_db_instance.Example.Arn,
+            aws_ebs_volume.Example.Arn,
+            aws_efs_file_system.Example.Arn,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Backup.SelectionArgs.html">SelectionArgs</a></h4>
       <section></section>
@@ -92,6 +222,22 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Backup.Vault.html">Vault</a></h4>
       <section><p>Provides an AWS Backup vault resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Backup.Vault(&amp;quot;example&amp;quot;, new Aws.Backup.VaultArgs
+    {
+        KmsKeyArn = aws_kms_key.Example.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Backup.VaultArgs.html">VaultArgs</a></h4>
       <section></section>

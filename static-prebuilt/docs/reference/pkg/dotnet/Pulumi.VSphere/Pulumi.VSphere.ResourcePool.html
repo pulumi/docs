@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ResourcePool
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,78 @@
 resource pools in standalone hosts or on compute clusters.</p>
 <p>For more information on vSphere resource pools, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html">this
 page</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var datacenter = config.Get(&amp;quot;datacenter&amp;quot;) ?? &amp;quot;dc1&amp;quot;;
+    var cluster = config.Get(&amp;quot;cluster&amp;quot;) ?? &amp;quot;cluster1&amp;quot;;
+    var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+    {
+        Name = datacenter,
+    }));
+    var computeCluster = dc.Apply(dc =&gt; Output.Create(VSphere.GetComputeCluster.InvokeAsync(new VSphere.GetComputeClusterArgs
+    {
+        DatacenterId = dc.Id,
+        Name = cluster,
+    })));
+    var resourcePool = new VSphere.ResourcePool(&amp;quot;resourcePool&amp;quot;, new VSphere.ResourcePoolArgs
+    {
+        ParentResourcePoolId = computeCluster.Apply(computeCluster =&gt; computeCluster.ResourcePoolId),
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ResourcePool</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ResourcePool</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -91,16 +157,16 @@ page</a>.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool__ctor_" data-uid="Pulumi.VSphere.ResourcePool.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_ResourcePool__ctor_System_String_Pulumi_VSphere_ResourcePoolArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.ResourcePool.#ctor(System.String,Pulumi.VSphere.ResourcePoolArgs,System.Nullable{CustomResourceOptions})">ResourcePool(String, ResourcePoolArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_ResourcePool__ctor_System_String_Pulumi_VSphere_ResourcePoolArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.ResourcePool.#ctor(System.String,Pulumi.VSphere.ResourcePoolArgs,Pulumi.CustomResourceOptions)">ResourcePool(String, ResourcePoolArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ResourcePool resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResourcePool(string name, ResourcePoolArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ResourcePool(string name, ResourcePoolArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +191,7 @@ page</a>.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +201,7 @@ page</a>.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_CpuExpandable_" data-uid="Pulumi.VSphere.ResourcePool.CpuExpandable*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_CpuExpandable" data-uid="Pulumi.VSphere.ResourcePool.CpuExpandable">CpuExpandable</h4>
@@ -158,13 +224,13 @@ unreserved resources. Default: <code>true</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_CpuLimit_" data-uid="Pulumi.VSphere.ResourcePool.CpuLimit*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_CpuLimit" data-uid="Pulumi.VSphere.ResourcePool.CpuLimit">CpuLimit</h4>
@@ -187,13 +253,13 @@ Default: <code>-1</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_CpuReservation_" data-uid="Pulumi.VSphere.ResourcePool.CpuReservation*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_CpuReservation" data-uid="Pulumi.VSphere.ResourcePool.CpuReservation">CpuReservation</h4>
@@ -215,13 +281,13 @@ available to the resource pool. Default: <code>0</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_CpuShareLevel_" data-uid="Pulumi.VSphere.ResourcePool.CpuShareLevel*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_CpuShareLevel" data-uid="Pulumi.VSphere.ResourcePool.CpuShareLevel">CpuShareLevel</h4>
@@ -234,7 +300,7 @@ ignored.  Default: <code>normal</code></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CpuShareLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CpuShareLevel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -246,13 +312,13 @@ ignored.  Default: <code>normal</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_CpuShares_" data-uid="Pulumi.VSphere.ResourcePool.CpuShares*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_CpuShares" data-uid="Pulumi.VSphere.ResourcePool.CpuShares">CpuShares</h4>
@@ -275,13 +341,13 @@ determine resource allocation in case of resource contention. If this is set,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_CustomAttributes_" data-uid="Pulumi.VSphere.ResourcePool.CustomAttributes*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_CustomAttributes" data-uid="Pulumi.VSphere.ResourcePool.CustomAttributes">CustomAttributes</h4>
@@ -290,7 +356,7 @@ determine resource allocation in case of resource contention. If this is set,
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; CustomAttributes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; CustomAttributes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,13 +368,13 @@ determine resource allocation in case of resource contention. If this is set,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_MemoryExpandable_" data-uid="Pulumi.VSphere.ResourcePool.MemoryExpandable*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_MemoryExpandable" data-uid="Pulumi.VSphere.ResourcePool.MemoryExpandable">MemoryExpandable</h4>
@@ -331,13 +397,13 @@ unreserved resources. Default: <code>true</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_MemoryLimit_" data-uid="Pulumi.VSphere.ResourcePool.MemoryLimit*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_MemoryLimit" data-uid="Pulumi.VSphere.ResourcePool.MemoryLimit">MemoryLimit</h4>
@@ -360,13 +426,13 @@ Default: <code>-1</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_MemoryReservation_" data-uid="Pulumi.VSphere.ResourcePool.MemoryReservation*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_MemoryReservation" data-uid="Pulumi.VSphere.ResourcePool.MemoryReservation">MemoryReservation</h4>
@@ -388,13 +454,13 @@ available to the resource pool. Default: <code>0</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_MemoryShareLevel_" data-uid="Pulumi.VSphere.ResourcePool.MemoryShareLevel*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_MemoryShareLevel" data-uid="Pulumi.VSphere.ResourcePool.MemoryShareLevel">MemoryShareLevel</h4>
@@ -407,7 +473,7 @@ ignored.  Default: <code>normal</code></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MemoryShareLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MemoryShareLevel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,13 +485,13 @@ ignored.  Default: <code>normal</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_MemoryShares_" data-uid="Pulumi.VSphere.ResourcePool.MemoryShares*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_MemoryShares" data-uid="Pulumi.VSphere.ResourcePool.MemoryShares">MemoryShares</h4>
@@ -448,13 +514,13 @@ determine resource allocation in case of resource contention. If this is set,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_Name_" data-uid="Pulumi.VSphere.ResourcePool.Name*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_Name" data-uid="Pulumi.VSphere.ResourcePool.Name">Name</h4>
@@ -475,17 +541,17 @@ determine resource allocation in case of resource contention. If this is set,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_ParentResourcePoolId_" data-uid="Pulumi.VSphere.ResourcePool.ParentResourcePoolId*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_ParentResourcePoolId" data-uid="Pulumi.VSphere.ResourcePool.ParentResourcePoolId">ParentResourcePoolId</h4>
-  <div class="markdown level1 summary"><p>The [managed object ID][docs-about-morefs]
+  <div class="markdown level1 summary"><p>The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a resource pool
 from one parent resource pool to another, both must share a common root
@@ -506,18 +572,17 @@ resource pool or the move will fail.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_Tags_" data-uid="Pulumi.VSphere.ResourcePool.Tags*"></a>
   <h4 id="Pulumi_VSphere_ResourcePool_Tags" data-uid="Pulumi.VSphere.ResourcePool.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.</p>
+  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -534,7 +599,7 @@ resource pool or the move will fail.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -542,17 +607,17 @@ resource pool or the move will fail.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ResourcePool_Get_" data-uid="Pulumi.VSphere.ResourcePool.Get*"></a>
-  <h4 id="Pulumi_VSphere_ResourcePool_Get_System_String_Input_System_String__Pulumi_VSphere_ResourcePoolState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.ResourcePool.Get(System.String,Input{System.String},Pulumi.VSphere.ResourcePoolState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ResourcePoolState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_ResourcePool_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_ResourcePoolState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.ResourcePool.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.ResourcePoolState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ResourcePoolState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ResourcePool resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ResourcePool Get(string name, Input&lt;string&gt; id, ResourcePoolState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ResourcePool Get(string name, Input&lt;string&gt; id, ResourcePoolState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -571,7 +636,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -583,7 +648,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -612,7 +677,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ResourcePool.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ResourcePool.cs/#L54" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.AccessContextManager
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,6 +85,54 @@ along with a list of requirements necessary for the label to be applied.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/access-context-manager/docs/quickstart">Access Policy Quickstart</a></li>
 </ul>
+<h2 id="example-usage---access-context-manager-access-level-basic">Example Usage - Access Context Manager Access Level Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var access_policy = new Gcp.AccessContextManager.AccessPolicy(&amp;quot;access-policy&amp;quot;, new Gcp.AccessContextManager.AccessPolicyArgs
+    {
+        Parent = &amp;quot;organizations/123456789&amp;quot;,
+        Title = &amp;quot;my policy&amp;quot;,
+    });
+    var access_level = new Gcp.AccessContextManager.AccessLevel(&amp;quot;access-level&amp;quot;, new Gcp.AccessContextManager.AccessLevelArgs
+    {
+        Basic = new Gcp.AccessContextManager.Inputs.AccessLevelBasicArgs
+        {
+            Conditions = 
+            {
+                new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs
+                {
+                    DevicePolicy = new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs
+                    {
+                        OsConstraints = 
+                        {
+                            new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyOsConstraintArgs
+                            {
+                                OsType = &amp;quot;DESKTOP_CHROME_OS&amp;quot;,
+                            },
+                        },
+                        RequireScreenLock = true,
+                    },
+                    Regions = 
+                    {
+                        &amp;quot;CH&amp;quot;,
+                        &amp;quot;IT&amp;quot;,
+                        &amp;quot;US&amp;quot;,
+                    },
+                },
+            },
+        },
+        Parent = access_policy.Name.Apply(name =&gt; $&amp;quot;accessPolicies/{name}&amp;quot;),
+        Title = &amp;quot;chromeos_no_lock&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.AccessContextManager.AccessLevelArgs.html">AccessLevelArgs</a></h4>
       <section></section>
@@ -102,6 +150,23 @@ restrictions it specifies apply to all projects within an organization.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/access-context-manager/docs/quickstart">Access Policy Quickstart</a></li>
 </ul>
+<h2 id="example-usage---access-context-manager-access-policy-basic">Example Usage - Access Context Manager Access Policy Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var access_policy = new Gcp.AccessContextManager.AccessPolicy(&amp;quot;access-policy&amp;quot;, new Gcp.AccessContextManager.AccessPolicyArgs
+    {
+        Parent = &amp;quot;organizations/123456789&amp;quot;,
+        Title = &amp;quot;my policy&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.AccessContextManager.AccessPolicyArgs.html">AccessPolicyArgs</a></h4>
       <section></section>
@@ -125,6 +190,103 @@ project may belong to multiple Service Perimeter Bridges.</li>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/vpc-service-controls/docs/quickstart">Service Perimeter Quickstart</a></li>
 </ul>
+<h2 id="example-usage---access-context-manager-service-perimeter-basic">Example Usage - Access Context Manager Service Perimeter Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var access_policy = new Gcp.AccessContextManager.AccessPolicy(&amp;quot;access-policy&amp;quot;, new Gcp.AccessContextManager.AccessPolicyArgs
+    {
+        Parent = &amp;quot;organizations/123456789&amp;quot;,
+        Title = &amp;quot;my policy&amp;quot;,
+    });
+    var service_perimeter = new Gcp.AccessContextManager.ServicePerimeter(&amp;quot;service-perimeter&amp;quot;, new Gcp.AccessContextManager.ServicePerimeterArgs
+    {
+        Parent = access_policy.Name.Apply(name =&gt; $&amp;quot;accessPolicies/{name}&amp;quot;),
+        Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
+        {
+            RestrictedServices = 
+            {
+                &amp;quot;storage.googleapis.com&amp;quot;,
+            },
+        },
+        Title = &amp;quot;restrict_storage&amp;quot;,
+    });
+    var access_level = new Gcp.AccessContextManager.AccessLevel(&amp;quot;access-level&amp;quot;, new Gcp.AccessContextManager.AccessLevelArgs
+    {
+        Basic = new Gcp.AccessContextManager.Inputs.AccessLevelBasicArgs
+        {
+            Conditions = 
+            {
+                new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs
+                {
+                    DevicePolicy = new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs
+                    {
+                        OsConstraints = 
+                        {
+                            new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyOsConstraintArgs
+                            {
+                                OsType = &amp;quot;DESKTOP_CHROME_OS&amp;quot;,
+                            },
+                        },
+                        RequireScreenLock = false,
+                    },
+                    Regions = 
+                    {
+                        &amp;quot;CH&amp;quot;,
+                        &amp;quot;IT&amp;quot;,
+                        &amp;quot;US&amp;quot;,
+                    },
+                },
+            },
+        },
+        Parent = access_policy.Name.Apply(name =&gt; $&amp;quot;accessPolicies/{name}&amp;quot;),
+        Title = &amp;quot;chromeos_no_lock&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---access-context-manager-service-perimeter-dry-run">Example Usage - Access Context Manager Service Perimeter Dry Run</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var access_policy = new Gcp.AccessContextManager.AccessPolicy(&amp;quot;access-policy&amp;quot;, new Gcp.AccessContextManager.AccessPolicyArgs
+    {
+        Parent = &amp;quot;organizations/123456789&amp;quot;,
+        Title = &amp;quot;my policy&amp;quot;,
+    });
+    var service_perimeter = new Gcp.AccessContextManager.ServicePerimeter(&amp;quot;service-perimeter&amp;quot;, new Gcp.AccessContextManager.ServicePerimeterArgs
+    {
+        Parent = access_policy.Name.Apply(name =&gt; $&amp;quot;accessPolicies/{name}&amp;quot;),
+        Spec = new Gcp.AccessContextManager.Inputs.ServicePerimeterSpecArgs
+        {
+            RestrictedServices = 
+            {
+                &amp;quot;storage.googleapis.com&amp;quot;,
+            },
+        },
+        Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
+        {
+            RestrictedServices = 
+            {
+                &amp;quot;bigquery.googleapis.com&amp;quot;,
+            },
+        },
+        Title = &amp;quot;restrict_bigquery_dryrun_storage&amp;quot;,
+        UseExplicitDryRunSpec = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.AccessContextManager.ServicePerimeterArgs.html">ServicePerimeterArgs</a></h4>
       <section></section>
@@ -144,6 +306,40 @@ they don't fight over which resources should be in the policy.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/vpc-service-controls/docs/quickstart">Service Perimeter Quickstart</a></li>
 </ul>
+<h2 id="example-usage---access-context-manager-service-perimeter-resource-basic">Example Usage - Access Context Manager Service Perimeter Resource Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var access_policy = new Gcp.AccessContextManager.AccessPolicy(&amp;quot;access-policy&amp;quot;, new Gcp.AccessContextManager.AccessPolicyArgs
+    {
+        Parent = &amp;quot;organizations/123456789&amp;quot;,
+        Title = &amp;quot;my policy&amp;quot;,
+    });
+    var service_perimeter_resourceServicePerimeter = new Gcp.AccessContextManager.ServicePerimeter(&amp;quot;service-perimeter-resourceServicePerimeter&amp;quot;, new Gcp.AccessContextManager.ServicePerimeterArgs
+    {
+        Parent = access_policy.Name.Apply(name =&gt; $&amp;quot;accessPolicies/{name}&amp;quot;),
+        Title = &amp;quot;restrict_all&amp;quot;,
+        Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
+        {
+            RestrictedServices = 
+            {
+                &amp;quot;storage.googleapis.com&amp;quot;,
+            },
+        },
+    });
+    var service_perimeter_resourceServicePerimeterResource = new Gcp.AccessContextManager.ServicePerimeterResource(&amp;quot;service-perimeter-resourceServicePerimeterResource&amp;quot;, new Gcp.AccessContextManager.ServicePerimeterResourceArgs
+    {
+        PerimeterName = service_perimeter_resourceServicePerimeter.Name,
+        Resource = &amp;quot;projects/987654321&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.AccessContextManager.ServicePerimeterResourceArgs.html">ServicePerimeterResourceArgs</a></h4>
       <section></section>

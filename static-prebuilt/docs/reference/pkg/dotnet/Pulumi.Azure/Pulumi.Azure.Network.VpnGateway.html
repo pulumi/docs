@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VpnGateway
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,93 @@
   <h1 id="Pulumi_Azure_Network_VpnGateway" data-uid="Pulumi.Azure.Network.VpnGateway" class="text-break">Class VpnGateway
   </h1>
   <div class="markdown level0 summary"><p>Manages a VPN Gateway within a Virtual Hub, which enables Site-to-Site communication.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleVirtualNetwork = new Azure.Network.VirtualNetwork(&amp;quot;exampleVirtualNetwork&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AddressSpaces = 
+        {
+            &amp;quot;10.0.0.0/16&amp;quot;,
+        },
+    });
+    var exampleVirtualWan = new Azure.Network.VirtualWan(&amp;quot;exampleVirtualWan&amp;quot;, new Azure.Network.VirtualWanArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+    var exampleVirtualHub = new Azure.Network.VirtualHub(&amp;quot;exampleVirtualHub&amp;quot;, new Azure.Network.VirtualHubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        VirtualWanId = exampleVirtualWan.Id,
+        AddressPrefix = &amp;quot;10.0.1.0/24&amp;quot;,
+    });
+    var exampleVpnGateway = new Azure.Network.VpnGateway(&amp;quot;exampleVpnGateway&amp;quot;, new Azure.Network.VpnGatewayArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        VirtualHubId = exampleVirtualHub.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">VpnGateway</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">VpnGateway</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.html">Pulumi.Azure.Network</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -88,16 +169,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/VpnGateway.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnGateway.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_VpnGateway__ctor_" data-uid="Pulumi.Azure.Network.VpnGateway.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Network_VpnGateway__ctor_System_String_Pulumi_Azure_Network_VpnGatewayArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Network.VpnGateway.#ctor(System.String,Pulumi.Azure.Network.VpnGatewayArgs,System.Nullable{CustomResourceOptions})">VpnGateway(String, VpnGatewayArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Network_VpnGateway__ctor_System_String_Pulumi_Azure_Network_VpnGatewayArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Network.VpnGateway.#ctor(System.String,Pulumi.Azure.Network.VpnGatewayArgs,Pulumi.CustomResourceOptions)">VpnGateway(String, VpnGatewayArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a VpnGateway resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VpnGateway(string name, VpnGatewayArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public VpnGateway(string name, VpnGatewayArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +203,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +213,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/VpnGateway.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnGateway.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_VpnGateway_BgpSettings_" data-uid="Pulumi.Azure.Network.VpnGateway.BgpSettings*"></a>
   <h4 id="Pulumi_Azure_Network_VpnGateway_BgpSettings" data-uid="Pulumi.Azure.Network.VpnGateway.BgpSettings">BgpSettings</h4>
@@ -153,13 +234,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.VpnGatewayBgpSetting.html">VpnGatewayBgpSetting</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.VpnGatewayBgpSetting.html">VpnGatewayBgpSetting</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/VpnGateway.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnGateway.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_VpnGateway_Location_" data-uid="Pulumi.Azure.Network.VpnGateway.Location*"></a>
   <h4 id="Pulumi_Azure_Network_VpnGateway_Location" data-uid="Pulumi.Azure.Network.VpnGateway.Location">Location</h4>
@@ -180,13 +261,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/VpnGateway.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnGateway.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_VpnGateway_Name_" data-uid="Pulumi.Azure.Network.VpnGateway.Name*"></a>
   <h4 id="Pulumi_Azure_Network_VpnGateway_Name" data-uid="Pulumi.Azure.Network.VpnGateway.Name">Name</h4>
@@ -207,13 +288,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/VpnGateway.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnGateway.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_VpnGateway_ResourceGroupName_" data-uid="Pulumi.Azure.Network.VpnGateway.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Network_VpnGateway_ResourceGroupName" data-uid="Pulumi.Azure.Network.VpnGateway.ResourceGroupName">ResourceGroupName</h4>
@@ -234,13 +315,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/VpnGateway.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnGateway.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_VpnGateway_ScaleUnit_" data-uid="Pulumi.Azure.Network.VpnGateway.ScaleUnit*"></a>
   <h4 id="Pulumi_Azure_Network_VpnGateway_ScaleUnit" data-uid="Pulumi.Azure.Network.VpnGateway.ScaleUnit">ScaleUnit</h4>
@@ -261,13 +342,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/VpnGateway.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnGateway.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_VpnGateway_Tags_" data-uid="Pulumi.Azure.Network.VpnGateway.Tags*"></a>
   <h4 id="Pulumi_Azure_Network_VpnGateway_Tags" data-uid="Pulumi.Azure.Network.VpnGateway.Tags">Tags</h4>
@@ -276,7 +357,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -288,13 +369,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/VpnGateway.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnGateway.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_VpnGateway_VirtualHubId_" data-uid="Pulumi.Azure.Network.VpnGateway.VirtualHubId*"></a>
   <h4 id="Pulumi_Azure_Network_VpnGateway_VirtualHubId" data-uid="Pulumi.Azure.Network.VpnGateway.VirtualHubId">VirtualHubId</h4>
@@ -315,7 +396,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -323,17 +404,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/VpnGateway.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnGateway.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_VpnGateway_Get_" data-uid="Pulumi.Azure.Network.VpnGateway.Get*"></a>
-  <h4 id="Pulumi_Azure_Network_VpnGateway_Get_System_String_Input_System_String__Pulumi_Azure_Network_VpnGatewayState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Network.VpnGateway.Get(System.String,Input{System.String},Pulumi.Azure.Network.VpnGatewayState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VpnGatewayState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Network_VpnGateway_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Network_VpnGatewayState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Network.VpnGateway.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Network.VpnGatewayState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VpnGatewayState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing VpnGateway resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static VpnGateway Get(string name, Input&lt;string&gt; id, VpnGatewayState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static VpnGateway Get(string name, Input&lt;string&gt; id, VpnGatewayState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -352,7 +433,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -364,7 +445,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -393,7 +474,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/VpnGateway.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnGateway.cs/#L63" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

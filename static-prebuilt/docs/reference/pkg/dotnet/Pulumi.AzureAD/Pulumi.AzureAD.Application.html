@@ -1,0 +1,793 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Application
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Application
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.AzureAD.Application">
+  
+  <h1 id="Pulumi_AzureAD_Application" data-uid="Pulumi.AzureAD.Application" class="text-break">Class Application
+  </h1>
+  <div class="markdown level0 summary"><p>Manages an Application within Azure Active Directory.</p>
+<blockquote>
+<p><strong>NOTE:</strong> If you're authenticating using a Service Principal then it must have permissions to both <code>Read and write owned by applications</code> and <code>Sign in and read user profile</code> within the <code>Windows Azure Active Directory</code> API.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new AzureAD.Application(&amp;quot;example&amp;quot;, new AzureAD.ApplicationArgs
+    {
+        AppRoles = 
+        {
+            new AzureAD.Inputs.ApplicationAppRoleArgs
+            {
+                AllowedMemberTypes = 
+                {
+                    &amp;quot;User&amp;quot;,
+                    &amp;quot;Application&amp;quot;,
+                },
+                Description = &amp;quot;Admins can manage roles and perform all task actions&amp;quot;,
+                DisplayName = &amp;quot;Admin&amp;quot;,
+                IsEnabled = true,
+                Value = &amp;quot;Admin&amp;quot;,
+            },
+        },
+        AvailableToOtherTenants = false,
+        Homepage = &amp;quot;https://homepage&amp;quot;,
+        IdentifierUris = 
+        {
+            &amp;quot;https://uri&amp;quot;,
+        },
+        Oauth2AllowImplicitFlow = true,
+        Owners = 
+        {
+            &amp;quot;00000004-0000-0000-c000-000000000000&amp;quot;,
+        },
+        ReplyUrls = 
+        {
+            &amp;quot;https://replyurl&amp;quot;,
+        },
+        RequiredResourceAccesses = 
+        {
+            new AzureAD.Inputs.ApplicationRequiredResourceAccessArgs
+            {
+                ResourceAccess = 
+                {
+
+                    {
+                        { &amp;quot;id&amp;quot;, &amp;quot;...&amp;quot; },
+                        { &amp;quot;type&amp;quot;, &amp;quot;Role&amp;quot; },
+                    },
+
+                    {
+                        { &amp;quot;id&amp;quot;, &amp;quot;...&amp;quot; },
+                        { &amp;quot;type&amp;quot;, &amp;quot;Scope&amp;quot; },
+                    },
+
+                    {
+                        { &amp;quot;id&amp;quot;, &amp;quot;...&amp;quot; },
+                        { &amp;quot;type&amp;quot;, &amp;quot;Scope&amp;quot; },
+                    },
+                },
+                ResourceAppId = &amp;quot;00000003-0000-0000-c000-000000000000&amp;quot;,
+            },
+            new AzureAD.Inputs.ApplicationRequiredResourceAccessArgs
+            {
+                ResourceAccess = 
+                {
+
+                    {
+                        { &amp;quot;id&amp;quot;, &amp;quot;...&amp;quot; },
+                        { &amp;quot;type&amp;quot;, &amp;quot;Scope&amp;quot; },
+                    },
+                },
+                ResourceAppId = &amp;quot;00000002-0000-0000-c000-000000000000&amp;quot;,
+            },
+        },
+        Type = &amp;quot;webapp/api&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Application</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AzureAD.html">Pulumi.AzureAD</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.AzureAD.dll</h6>
+  <h5 id="Pulumi_AzureAD_Application_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Application : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L211">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application__ctor_" data-uid="Pulumi.AzureAD.Application.#ctor*"></a>
+  <h4 id="Pulumi_AzureAD_Application__ctor_System_String_Pulumi_AzureAD_ApplicationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AzureAD.Application.#ctor(System.String,Pulumi.AzureAD.ApplicationArgs,Pulumi.CustomResourceOptions)">Application(String, ApplicationArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Application resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Application(string name, ApplicationArgs args = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AzureAD.ApplicationArgs.html">ApplicationArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L116">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_ApplicationId_" data-uid="Pulumi.AzureAD.Application.ApplicationId*"></a>
+  <h4 id="Pulumi_AzureAD_Application_ApplicationId" data-uid="Pulumi.AzureAD.Application.ApplicationId">ApplicationId</h4>
+  <div class="markdown level1 summary"><p>The Application ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ApplicationId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L110">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_AppRoles_" data-uid="Pulumi.AzureAD.Application.AppRoles*"></a>
+  <h4 id="Pulumi_AzureAD_Application_AppRoles" data-uid="Pulumi.AzureAD.Application.AppRoles">AppRoles</h4>
+  <div class="markdown level1 summary"><p>A collection of <code>app_role</code> blocks as documented below. For more information <a href="https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles">https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ApplicationAppRole&gt;&gt; AppRoles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AzureAD.Outputs.ApplicationAppRole.html">ApplicationAppRole</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L122">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_AvailableToOtherTenants_" data-uid="Pulumi.AzureAD.Application.AvailableToOtherTenants*"></a>
+  <h4 id="Pulumi_AzureAD_Application_AvailableToOtherTenants" data-uid="Pulumi.AzureAD.Application.AvailableToOtherTenants">AvailableToOtherTenants</h4>
+  <div class="markdown level1 summary"><p>Is this Azure AD Application available to other tenants? Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AvailableToOtherTenants { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L128">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_GroupMembershipClaims_" data-uid="Pulumi.AzureAD.Application.GroupMembershipClaims*"></a>
+  <h4 id="Pulumi_AzureAD_Application_GroupMembershipClaims" data-uid="Pulumi.AzureAD.Application.GroupMembershipClaims">GroupMembershipClaims</h4>
+  <div class="markdown level1 summary"><p>Configures the <code>groups</code> claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to <code>SecurityGroup</code>. Possible values are <code>None</code>, <code>SecurityGroup</code>, <code>DirectoryRole</code>, <code>ApplicationGroup</code> or <code>All</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupMembershipClaims { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L134">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_Homepage_" data-uid="Pulumi.AzureAD.Application.Homepage*"></a>
+  <h4 id="Pulumi_AzureAD_Application_Homepage" data-uid="Pulumi.AzureAD.Application.Homepage">Homepage</h4>
+  <div class="markdown level1 summary"><p>The URL to the application's home page. If no homepage is specified this defaults to <code>https://{name}</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Homepage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L140">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_IdentifierUris_" data-uid="Pulumi.AzureAD.Application.IdentifierUris*"></a>
+  <h4 id="Pulumi_AzureAD_Application_IdentifierUris" data-uid="Pulumi.AzureAD.Application.IdentifierUris">IdentifierUris</h4>
+  <div class="markdown level1 summary"><p>A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; IdentifierUris { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L146">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_LogoutUrl_" data-uid="Pulumi.AzureAD.Application.LogoutUrl*"></a>
+  <h4 id="Pulumi_AzureAD_Application_LogoutUrl" data-uid="Pulumi.AzureAD.Application.LogoutUrl">LogoutUrl</h4>
+  <div class="markdown level1 summary"><p>The URL of the logout page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LogoutUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L152">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_Name_" data-uid="Pulumi.AzureAD.Application.Name*"></a>
+  <h4 id="Pulumi_AzureAD_Application_Name" data-uid="Pulumi.AzureAD.Application.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The display name for the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L158">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_Oauth2AllowImplicitFlow_" data-uid="Pulumi.AzureAD.Application.Oauth2AllowImplicitFlow*"></a>
+  <h4 id="Pulumi_AzureAD_Application_Oauth2AllowImplicitFlow" data-uid="Pulumi.AzureAD.Application.Oauth2AllowImplicitFlow">Oauth2AllowImplicitFlow</h4>
+  <div class="markdown level1 summary"><p>Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Oauth2AllowImplicitFlow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L164">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_Oauth2Permissions_" data-uid="Pulumi.AzureAD.Application.Oauth2Permissions*"></a>
+  <h4 id="Pulumi_AzureAD_Application_Oauth2Permissions" data-uid="Pulumi.AzureAD.Application.Oauth2Permissions">Oauth2Permissions</h4>
+  <div class="markdown level1 summary"><p>A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a <code>oauth2_permission</code> block as documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ApplicationOauth2Permission&gt;&gt; Oauth2Permissions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AzureAD.Outputs.ApplicationOauth2Permission.html">ApplicationOauth2Permission</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L170">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_ObjectId_" data-uid="Pulumi.AzureAD.Application.ObjectId*"></a>
+  <h4 id="Pulumi_AzureAD_Application_ObjectId" data-uid="Pulumi.AzureAD.Application.ObjectId">ObjectId</h4>
+  <div class="markdown level1 summary"><p>The Application's Object ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ObjectId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L176">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_Owners_" data-uid="Pulumi.AzureAD.Application.Owners*"></a>
+  <h4 id="Pulumi_AzureAD_Application_Owners" data-uid="Pulumi.AzureAD.Application.Owners">Owners</h4>
+  <div class="markdown level1 summary"><p>A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Owners { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L182">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_PublicClient_" data-uid="Pulumi.AzureAD.Application.PublicClient*"></a>
+  <h4 id="Pulumi_AzureAD_Application_PublicClient" data-uid="Pulumi.AzureAD.Application.PublicClient">PublicClient</h4>
+  <div class="markdown level1 summary"><p>Is this Azure AD Application a public client? Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; PublicClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L188">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_ReplyUrls_" data-uid="Pulumi.AzureAD.Application.ReplyUrls*"></a>
+  <h4 id="Pulumi_AzureAD_Application_ReplyUrls" data-uid="Pulumi.AzureAD.Application.ReplyUrls">ReplyUrls</h4>
+  <div class="markdown level1 summary"><p>A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ReplyUrls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L194">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_RequiredResourceAccesses_" data-uid="Pulumi.AzureAD.Application.RequiredResourceAccesses*"></a>
+  <h4 id="Pulumi_AzureAD_Application_RequiredResourceAccesses" data-uid="Pulumi.AzureAD.Application.RequiredResourceAccesses">RequiredResourceAccesses</h4>
+  <div class="markdown level1 summary"><p>A collection of <code>required_resource_access</code> blocks as documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ApplicationRequiredResourceAccess&gt;&gt; RequiredResourceAccesses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AzureAD.Outputs.ApplicationRequiredResourceAccess.html">ApplicationRequiredResourceAccess</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L200">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_Type_" data-uid="Pulumi.AzureAD.Application.Type*"></a>
+  <h4 id="Pulumi_AzureAD_Application_Type" data-uid="Pulumi.AzureAD.Application.Type">Type</h4>
+  <div class="markdown level1 summary"><p>Type of an application: <code>webapp/api</code> or <code>native</code>. Defaults to <code>webapp/api</code>. For <code>native</code> apps type <code>identifier_uris</code> property can not not be set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L241">View Source</a>
+  </span>
+  <a id="Pulumi_AzureAD_Application_Get_" data-uid="Pulumi.AzureAD.Application.Get*"></a>
+  <h4 id="Pulumi_AzureAD_Application_Get_System_String_Pulumi_Input_System_String__Pulumi_AzureAD_ApplicationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AzureAD.Application.Get(System.String,Pulumi.Input{System.String},Pulumi.AzureAD.ApplicationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ApplicationState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Application resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Application Get(string name, Input&lt;string&gt; id, ApplicationState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AzureAD.ApplicationState.html">ApplicationState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AzureAD.Application.html">Application</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-azuread/blob/master/sdk/dotnet/Application.cs/#L105" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Cluster
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,7 +77,45 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Cluster</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Cluster</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
@@ -88,16 +126,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L206">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster__ctor_" data-uid="Pulumi.Rancher2.Cluster.#ctor*"></a>
-  <h4 id="Pulumi_Rancher2_Cluster__ctor_System_String_Pulumi_Rancher2_ClusterArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.Cluster.#ctor(System.String,Pulumi.Rancher2.ClusterArgs,System.Nullable{CustomResourceOptions})">Cluster(String, ClusterArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Rancher2_Cluster__ctor_System_String_Pulumi_Rancher2_ClusterArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Rancher2.Cluster.#ctor(System.String,Pulumi.Rancher2.ClusterArgs,Pulumi.CustomResourceOptions)">Cluster(String, ClusterArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Cluster resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +160,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +170,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_AksConfig_" data-uid="Pulumi.Rancher2.Cluster.AksConfig*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_AksConfig" data-uid="Pulumi.Rancher2.Cluster.AksConfig">AksConfig</h4>
@@ -153,13 +191,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterAksConfig.html">ClusterAksConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterAksConfig.html">ClusterAksConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_Annotations_" data-uid="Pulumi.Rancher2.Cluster.Annotations*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_Annotations" data-uid="Pulumi.Rancher2.Cluster.Annotations">Annotations</h4>
@@ -180,13 +218,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_ClusterAuthEndpoint_" data-uid="Pulumi.Rancher2.Cluster.ClusterAuthEndpoint*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_ClusterAuthEndpoint" data-uid="Pulumi.Rancher2.Cluster.ClusterAuthEndpoint">ClusterAuthEndpoint</h4>
@@ -207,13 +245,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterClusterAuthEndpoint.html">ClusterClusterAuthEndpoint</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterClusterAuthEndpoint.html">ClusterClusterAuthEndpoint</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_ClusterMonitoringInput_" data-uid="Pulumi.Rancher2.Cluster.ClusterMonitoringInput*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_ClusterMonitoringInput" data-uid="Pulumi.Rancher2.Cluster.ClusterMonitoringInput">ClusterMonitoringInput</h4>
@@ -234,13 +272,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterClusterMonitoringInput.html">ClusterClusterMonitoringInput</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterClusterMonitoringInput.html">ClusterClusterMonitoringInput</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_ClusterRegistrationToken_" data-uid="Pulumi.Rancher2.Cluster.ClusterRegistrationToken*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_ClusterRegistrationToken" data-uid="Pulumi.Rancher2.Cluster.ClusterRegistrationToken">ClusterRegistrationToken</h4>
@@ -261,13 +299,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterClusterRegistrationToken.html">ClusterClusterRegistrationToken</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterClusterRegistrationToken.html">ClusterClusterRegistrationToken</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_ClusterTemplateAnswers_" data-uid="Pulumi.Rancher2.Cluster.ClusterTemplateAnswers*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_ClusterTemplateAnswers" data-uid="Pulumi.Rancher2.Cluster.ClusterTemplateAnswers">ClusterTemplateAnswers</h4>
@@ -288,13 +326,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterClusterTemplateAnswers.html">ClusterClusterTemplateAnswers</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterClusterTemplateAnswers.html">ClusterClusterTemplateAnswers</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_ClusterTemplateId_" data-uid="Pulumi.Rancher2.Cluster.ClusterTemplateId*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_ClusterTemplateId" data-uid="Pulumi.Rancher2.Cluster.ClusterTemplateId">ClusterTemplateId</h4>
@@ -303,7 +341,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClusterTemplateId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClusterTemplateId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,13 +353,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_ClusterTemplateQuestions_" data-uid="Pulumi.Rancher2.Cluster.ClusterTemplateQuestions*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_ClusterTemplateQuestions" data-uid="Pulumi.Rancher2.Cluster.ClusterTemplateQuestions">ClusterTemplateQuestions</h4>
@@ -342,13 +380,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterClusterTemplateQuestion.html">ClusterClusterTemplateQuestion</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterClusterTemplateQuestion.html">ClusterClusterTemplateQuestion</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_ClusterTemplateRevisionId_" data-uid="Pulumi.Rancher2.Cluster.ClusterTemplateRevisionId*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_ClusterTemplateRevisionId" data-uid="Pulumi.Rancher2.Cluster.ClusterTemplateRevisionId">ClusterTemplateRevisionId</h4>
@@ -357,7 +395,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClusterTemplateRevisionId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClusterTemplateRevisionId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,13 +407,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_DefaultPodSecurityPolicyTemplateId_" data-uid="Pulumi.Rancher2.Cluster.DefaultPodSecurityPolicyTemplateId*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_DefaultPodSecurityPolicyTemplateId" data-uid="Pulumi.Rancher2.Cluster.DefaultPodSecurityPolicyTemplateId">DefaultPodSecurityPolicyTemplateId</h4>
@@ -396,13 +434,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_DefaultProjectId_" data-uid="Pulumi.Rancher2.Cluster.DefaultProjectId*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_DefaultProjectId" data-uid="Pulumi.Rancher2.Cluster.DefaultProjectId">DefaultProjectId</h4>
@@ -423,13 +461,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_Description_" data-uid="Pulumi.Rancher2.Cluster.Description*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_Description" data-uid="Pulumi.Rancher2.Cluster.Description">Description</h4>
@@ -438,7 +476,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,13 +488,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_DesiredAgentImage_" data-uid="Pulumi.Rancher2.Cluster.DesiredAgentImage*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_DesiredAgentImage" data-uid="Pulumi.Rancher2.Cluster.DesiredAgentImage">DesiredAgentImage</h4>
@@ -477,13 +515,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_DesiredAuthImage_" data-uid="Pulumi.Rancher2.Cluster.DesiredAuthImage*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_DesiredAuthImage" data-uid="Pulumi.Rancher2.Cluster.DesiredAuthImage">DesiredAuthImage</h4>
@@ -504,13 +542,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_DockerRootDir_" data-uid="Pulumi.Rancher2.Cluster.DockerRootDir*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_DockerRootDir" data-uid="Pulumi.Rancher2.Cluster.DockerRootDir">DockerRootDir</h4>
@@ -531,13 +569,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_Driver_" data-uid="Pulumi.Rancher2.Cluster.Driver*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_Driver" data-uid="Pulumi.Rancher2.Cluster.Driver">Driver</h4>
@@ -558,13 +596,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_EksConfig_" data-uid="Pulumi.Rancher2.Cluster.EksConfig*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_EksConfig" data-uid="Pulumi.Rancher2.Cluster.EksConfig">EksConfig</h4>
@@ -585,13 +623,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterEksConfig.html">ClusterEksConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterEksConfig.html">ClusterEksConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_EnableClusterAlerting_" data-uid="Pulumi.Rancher2.Cluster.EnableClusterAlerting*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_EnableClusterAlerting" data-uid="Pulumi.Rancher2.Cluster.EnableClusterAlerting">EnableClusterAlerting</h4>
@@ -612,13 +650,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_EnableClusterIstio_" data-uid="Pulumi.Rancher2.Cluster.EnableClusterIstio*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_EnableClusterIstio" data-uid="Pulumi.Rancher2.Cluster.EnableClusterIstio">EnableClusterIstio</h4>
@@ -639,13 +677,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_EnableClusterMonitoring_" data-uid="Pulumi.Rancher2.Cluster.EnableClusterMonitoring*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_EnableClusterMonitoring" data-uid="Pulumi.Rancher2.Cluster.EnableClusterMonitoring">EnableClusterMonitoring</h4>
@@ -666,20 +704,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_EnableNetworkPolicy_" data-uid="Pulumi.Rancher2.Cluster.EnableNetworkPolicy*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_EnableNetworkPolicy" data-uid="Pulumi.Rancher2.Cluster.EnableNetworkPolicy">EnableNetworkPolicy</h4>
   <div class="markdown level1 summary"><p>Enable project network isolation. Default <code>false</code> (bool)</p>
-<ul>
-<li><code>scheduled_cluster_scan</code>- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)</li>
-</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -696,13 +731,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_GkeConfig_" data-uid="Pulumi.Rancher2.Cluster.GkeConfig*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_GkeConfig" data-uid="Pulumi.Rancher2.Cluster.GkeConfig">GkeConfig</h4>
@@ -723,13 +758,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterGkeConfig.html">ClusterGkeConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterGkeConfig.html">ClusterGkeConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_K3sConfig_" data-uid="Pulumi.Rancher2.Cluster.K3sConfig*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_K3sConfig" data-uid="Pulumi.Rancher2.Cluster.K3sConfig">K3sConfig</h4>
@@ -750,13 +785,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterK3sConfig.html">ClusterK3sConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterK3sConfig.html">ClusterK3sConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_KubeConfig_" data-uid="Pulumi.Rancher2.Cluster.KubeConfig*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_KubeConfig" data-uid="Pulumi.Rancher2.Cluster.KubeConfig">KubeConfig</h4>
@@ -777,13 +812,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_Labels_" data-uid="Pulumi.Rancher2.Cluster.Labels*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_Labels" data-uid="Pulumi.Rancher2.Cluster.Labels">Labels</h4>
@@ -804,13 +839,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_Name_" data-uid="Pulumi.Rancher2.Cluster.Name*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_Name" data-uid="Pulumi.Rancher2.Cluster.Name">Name</h4>
@@ -831,13 +866,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_RkeConfig_" data-uid="Pulumi.Rancher2.Cluster.RkeConfig*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_RkeConfig" data-uid="Pulumi.Rancher2.Cluster.RkeConfig">RkeConfig</h4>
@@ -858,17 +893,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterRkeConfig.html">ClusterRkeConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterRkeConfig.html">ClusterRkeConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L183">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_ScheduledClusterScan_" data-uid="Pulumi.Rancher2.Cluster.ScheduledClusterScan*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_ScheduledClusterScan" data-uid="Pulumi.Rancher2.Cluster.ScheduledClusterScan">ScheduledClusterScan</h4>
-  <div class="markdown level1 summary"><p>Cluster scheduled scan</p>
+  <div class="markdown level1 summary"><p>Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -885,13 +920,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterScheduledClusterScan.html">ClusterScheduledClusterScan</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.ClusterScheduledClusterScan.html">ClusterScheduledClusterScan</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_SystemProjectId_" data-uid="Pulumi.Rancher2.Cluster.SystemProjectId*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_SystemProjectId" data-uid="Pulumi.Rancher2.Cluster.SystemProjectId">SystemProjectId</h4>
@@ -912,13 +947,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L195">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_WindowsPreferedCluster_" data-uid="Pulumi.Rancher2.Cluster.WindowsPreferedCluster*"></a>
   <h4 id="Pulumi_Rancher2_Cluster_WindowsPreferedCluster" data-uid="Pulumi.Rancher2.Cluster.WindowsPreferedCluster">WindowsPreferedCluster</h4>
@@ -939,7 +974,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -947,17 +982,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L236">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L235">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_Cluster_Get_" data-uid="Pulumi.Rancher2.Cluster.Get*"></a>
-  <h4 id="Pulumi_Rancher2_Cluster_Get_System_String_Input_System_String__Pulumi_Rancher2_ClusterState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.Cluster.Get(System.String,Input{System.String},Pulumi.Rancher2.ClusterState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClusterState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Rancher2_Cluster_Get_System_String_Pulumi_Input_System_String__Pulumi_Rancher2_ClusterState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Rancher2.Cluster.Get(System.String,Pulumi.Input{System.String},Pulumi.Rancher2.ClusterState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClusterState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Cluster resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -976,7 +1011,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -988,7 +1023,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1017,7 +1052,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Cluster.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ObjectACL
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,12 +82,81 @@ and
 <p>Want fine-grained control over object ACLs? Use <code>gcp.storage.ObjectAccessControl</code> to control individual
 role entity pairs.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var image_store = new Gcp.Storage.Bucket(&amp;quot;image-store&amp;quot;, new Gcp.Storage.BucketArgs
+    {
+        Location = &amp;quot;EU&amp;quot;,
+    });
+    var image = new Gcp.Storage.BucketObject(&amp;quot;image&amp;quot;, new Gcp.Storage.BucketObjectArgs
+    {
+        Bucket = image_store.Name,
+        Source = new FileAsset(&amp;quot;image1.jpg&amp;quot;),
+    });
+    var image_store_acl = new Gcp.Storage.ObjectACL(&amp;quot;image-store-acl&amp;quot;, new Gcp.Storage.ObjectACLArgs
+    {
+        Bucket = image_store.Name,
+        Object = image.OutputName,
+        RoleEntities = 
+        {
+            &amp;quot;OWNER:user-my.email@gmail.com&amp;quot;,
+            &amp;quot;READER:group-mygroup&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ObjectACL</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ObjectACL</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Storage.html">Pulumi.Gcp.Storage</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -98,16 +167,16 @@ role entity pairs.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/ObjectACL.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/ObjectACL.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_ObjectACL__ctor_" data-uid="Pulumi.Gcp.Storage.ObjectACL.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Storage_ObjectACL__ctor_System_String_Pulumi_Gcp_Storage_ObjectACLArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Storage.ObjectACL.#ctor(System.String,Pulumi.Gcp.Storage.ObjectACLArgs,System.Nullable{CustomResourceOptions})">ObjectACL(String, ObjectACLArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Storage_ObjectACL__ctor_System_String_Pulumi_Gcp_Storage_ObjectACLArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.ObjectACL.#ctor(System.String,Pulumi.Gcp.Storage.ObjectACLArgs,Pulumi.CustomResourceOptions)">ObjectACL(String, ObjectACLArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ObjectACL resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ObjectACL(string name, ObjectACLArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ObjectACL(string name, ObjectACLArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +201,7 @@ role entity pairs.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -142,7 +211,7 @@ role entity pairs.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/ObjectACL.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/ObjectACL.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_ObjectACL_Bucket_" data-uid="Pulumi.Gcp.Storage.ObjectACL.Bucket*"></a>
   <h4 id="Pulumi_Gcp_Storage_ObjectACL_Bucket" data-uid="Pulumi.Gcp.Storage.ObjectACL.Bucket">Bucket</h4>
@@ -163,13 +232,13 @@ role entity pairs.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/ObjectACL.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/ObjectACL.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_ObjectACL_Object_" data-uid="Pulumi.Gcp.Storage.ObjectACL.Object*"></a>
   <h4 id="Pulumi_Gcp_Storage_ObjectACL_Object" data-uid="Pulumi.Gcp.Storage.ObjectACL.Object">Object</h4>
@@ -190,13 +259,13 @@ role entity pairs.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/ObjectACL.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/ObjectACL.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_ObjectACL_PredefinedAcl_" data-uid="Pulumi.Gcp.Storage.ObjectACL.PredefinedAcl*"></a>
   <h4 id="Pulumi_Gcp_Storage_ObjectACL_PredefinedAcl" data-uid="Pulumi.Gcp.Storage.ObjectACL.PredefinedAcl">PredefinedAcl</h4>
@@ -205,7 +274,7 @@ role entity pairs.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PredefinedAcl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PredefinedAcl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,13 +286,13 @@ role entity pairs.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/ObjectACL.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/ObjectACL.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_ObjectACL_RoleEntities_" data-uid="Pulumi.Gcp.Storage.ObjectACL.RoleEntities*"></a>
   <h4 id="Pulumi_Gcp_Storage_ObjectACL_RoleEntities" data-uid="Pulumi.Gcp.Storage.ObjectACL.RoleEntities">RoleEntities</h4>
@@ -245,7 +314,7 @@ Must be set if <code>predefined_acl</code> is not.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -253,17 +322,17 @@ Must be set if <code>predefined_acl</code> is not.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/ObjectACL.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/ObjectACL.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_ObjectACL_Get_" data-uid="Pulumi.Gcp.Storage.ObjectACL.Get*"></a>
-  <h4 id="Pulumi_Gcp_Storage_ObjectACL_Get_System_String_Input_System_String__Pulumi_Gcp_Storage_ObjectACLState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Storage.ObjectACL.Get(System.String,Input{System.String},Pulumi.Gcp.Storage.ObjectACLState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ObjectACLState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Storage_ObjectACL_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Storage_ObjectACLState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.ObjectACL.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Storage.ObjectACLState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ObjectACLState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ObjectACL resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ObjectACL Get(string name, Input&lt;string&gt; id, ObjectACLState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ObjectACL Get(string name, Input&lt;string&gt; id, ObjectACLState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -282,7 +351,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -294,7 +363,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -323,7 +392,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/ObjectACL.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/ObjectACL.cs/#L61" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

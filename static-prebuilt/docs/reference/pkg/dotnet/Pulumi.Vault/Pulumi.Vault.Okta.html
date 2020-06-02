@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.Okta
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,14 +77,39 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Vault.Okta.AuthBackend.html">AuthBackend</a></h4>
-      <section><p>Provides a resource for managing an
-<a href="https://www.vaultproject.io/docs/auth/okta.html">Okta auth backend within Vault</a>.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Okta.AuthBackendArgs.html">AuthBackendArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Okta.AuthBackendGroup.html">AuthBackendGroup</a></h4>
       <section><p>Provides a resource to create a group in an
 <a href="https://www.vaultproject.io/docs/auth/okta.html">Okta auth backend within Vault</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Vault.Okta.AuthBackend(&amp;quot;example&amp;quot;, new Vault.Okta.AuthBackendArgs
+    {
+        Organization = &amp;quot;dummy&amp;quot;,
+        Path = &amp;quot;group_okta&amp;quot;,
+    });
+    var foo = new Vault.Okta.AuthBackendGroup(&amp;quot;foo&amp;quot;, new Vault.Okta.AuthBackendGroupArgs
+    {
+        GroupName = &amp;quot;foo&amp;quot;,
+        Path = example.Path,
+        Policies = 
+        {
+            &amp;quot;one&amp;quot;,
+            &amp;quot;two&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Okta.AuthBackendGroupArgs.html">AuthBackendGroupArgs</a></h4>
       <section></section>
@@ -95,6 +120,33 @@
       <h4><a class="xref" href="Pulumi.Vault.Okta.AuthBackendUser.html">AuthBackendUser</a></h4>
       <section><p>Provides a resource to create a user in an
 <a href="https://www.vaultproject.io/docs/auth/okta.html">Okta auth backend within Vault</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Vault.Okta.AuthBackend(&amp;quot;example&amp;quot;, new Vault.Okta.AuthBackendArgs
+    {
+        Organization = &amp;quot;dummy&amp;quot;,
+        Path = &amp;quot;user_okta&amp;quot;,
+    });
+    var foo = new Vault.Okta.AuthBackendUser(&amp;quot;foo&amp;quot;, new Vault.Okta.AuthBackendUserArgs
+    {
+        Groups = 
+        {
+            &amp;quot;one&amp;quot;,
+            &amp;quot;two&amp;quot;,
+        },
+        Path = example.Path,
+        Username = &amp;quot;foo&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Okta.AuthBackendUserArgs.html">AuthBackendUserArgs</a></h4>
       <section></section>

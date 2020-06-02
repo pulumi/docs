@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.ApplicationLoadBalancing
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -99,6 +99,205 @@
 <blockquote>
 <p><strong>Note:</strong> <code>aws.alb.Listener</code> is known as <code>aws.lb.Listener</code>. The functionality is identical.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="forward-action">Forward Action</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndTargetGroup = new Aws.LB.TargetGroup(&amp;quot;frontEndTargetGroup&amp;quot;, new Aws.LB.TargetGroupArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        CertificateArn = &amp;quot;arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4&amp;quot;,
+        DefaultActions = 
+        {
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                TargetGroupArn = frontEndTargetGroup.Arn,
+                Type = &amp;quot;forward&amp;quot;,
+            },
+        },
+        LoadBalancerArn = frontEndLoadBalancer.Arn,
+        Port = &amp;quot;443&amp;quot;,
+        Protocol = &amp;quot;HTTPS&amp;quot;,
+        SslPolicy = &amp;quot;ELBSecurityPolicy-2016-08&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="redirect-action">Redirect Action</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        DefaultActions = 
+        {
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                Redirect = new Aws.LB.Inputs.ListenerDefaultActionRedirectArgs
+                {
+                    Port = &amp;quot;443&amp;quot;,
+                    Protocol = &amp;quot;HTTPS&amp;quot;,
+                    StatusCode = &amp;quot;HTTP_301&amp;quot;,
+                },
+                Type = &amp;quot;redirect&amp;quot;,
+            },
+        },
+        LoadBalancerArn = frontEndLoadBalancer.Arn,
+        Port = &amp;quot;80&amp;quot;,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="fixed-response-action">Fixed-response Action</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        DefaultActions = 
+        {
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                FixedResponse = new Aws.LB.Inputs.ListenerDefaultActionFixedResponseArgs
+                {
+                    ContentType = &amp;quot;text/plain&amp;quot;,
+                    MessageBody = &amp;quot;Fixed response content&amp;quot;,
+                    StatusCode = &amp;quot;200&amp;quot;,
+                },
+                Type = &amp;quot;fixed-response&amp;quot;,
+            },
+        },
+        LoadBalancerArn = frontEndLoadBalancer.Arn,
+        Port = &amp;quot;80&amp;quot;,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="authenticate-cognito-action">Authenticate-cognito Action</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndTargetGroup = new Aws.LB.TargetGroup(&amp;quot;frontEndTargetGroup&amp;quot;, new Aws.LB.TargetGroupArgs
+    {
+    });
+    var pool = new Aws.Cognito.UserPool(&amp;quot;pool&amp;quot;, new Aws.Cognito.UserPoolArgs
+    {
+    });
+    var client = new Aws.Cognito.UserPoolClient(&amp;quot;client&amp;quot;, new Aws.Cognito.UserPoolClientArgs
+    {
+    });
+    var domain = new Aws.Cognito.UserPoolDomain(&amp;quot;domain&amp;quot;, new Aws.Cognito.UserPoolDomainArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        DefaultActions = 
+        {
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                AuthenticateCognito = new Aws.LB.Inputs.ListenerDefaultActionAuthenticateCognitoArgs
+                {
+                    UserPoolArn = pool.Arn,
+                    UserPoolClientId = client.Id,
+                    UserPoolDomain = domain.Domain,
+                },
+                Type = &amp;quot;authenticate-cognito&amp;quot;,
+            },
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                TargetGroupArn = frontEndTargetGroup.Arn,
+                Type = &amp;quot;forward&amp;quot;,
+            },
+        },
+        LoadBalancerArn = frontEndLoadBalancer.Arn,
+        Port = &amp;quot;80&amp;quot;,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="authenticate-oidc-action">Authenticate-oidc Action</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndTargetGroup = new Aws.LB.TargetGroup(&amp;quot;frontEndTargetGroup&amp;quot;, new Aws.LB.TargetGroupArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        DefaultActions = 
+        {
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                AuthenticateOidc = new Aws.LB.Inputs.ListenerDefaultActionAuthenticateOidcArgs
+                {
+                    AuthorizationEndpoint = &amp;quot;https://example.com/authorization_endpoint&amp;quot;,
+                    ClientId = &amp;quot;client_id&amp;quot;,
+                    ClientSecret = &amp;quot;client_secret&amp;quot;,
+                    Issuer = &amp;quot;https://example.com&amp;quot;,
+                    TokenEndpoint = &amp;quot;https://example.com/token_endpoint&amp;quot;,
+                    UserInfoEndpoint = &amp;quot;https://example.com/user_info_endpoint&amp;quot;,
+                },
+                Type = &amp;quot;authenticate-oidc&amp;quot;,
+            },
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                TargetGroupArn = frontEndTargetGroup.Arn,
+                Type = &amp;quot;forward&amp;quot;,
+            },
+        },
+        LoadBalancerArn = frontEndLoadBalancer.Arn,
+        Port = &amp;quot;80&amp;quot;,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApplicationLoadBalancing.ListenerArgs.html">ListenerArgs</a></h4>
       <section></section>
@@ -108,6 +307,32 @@
 <blockquote>
 <p><strong>Note:</strong> <code>aws.alb.ListenerCertificate</code> is known as <code>aws.lb.ListenerCertificate</code>. The functionality is identical.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleCertificate = new Aws.Acm.Certificate(&amp;quot;exampleCertificate&amp;quot;, new Aws.Acm.CertificateArgs
+    {
+    });
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+    });
+    var exampleListenerCertificate = new Aws.LB.ListenerCertificate(&amp;quot;exampleListenerCertificate&amp;quot;, new Aws.LB.ListenerCertificateArgs
+    {
+        CertificateArn = exampleCertificate.Arn,
+        ListenerArn = frontEndListener.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApplicationLoadBalancing.ListenerCertificateArgs.html">ListenerCertificateArgs</a></h4>
       <section></section>
@@ -118,6 +343,186 @@
 <blockquote>
 <p><strong>Note:</strong> <code>aws.alb.ListenerRule</code> is known as <code>aws.lb.ListenerRule</code>. The functionality is identical.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+    });
+    var @static = new Aws.LB.ListenerRule(&amp;quot;static&amp;quot;, new Aws.LB.ListenerRuleArgs
+    {
+        Actions = 
+        {
+            new Aws.LB.Inputs.ListenerRuleActionArgs
+            {
+                TargetGroupArn = aws_lb_target_group.Static.Arn,
+                Type = &amp;quot;forward&amp;quot;,
+            },
+        },
+        Conditions = 
+        {
+            new Aws.LB.Inputs.ListenerRuleConditionArgs
+            {
+                PathPattern = new Aws.LB.Inputs.ListenerRuleConditionPathPatternArgs
+                {
+                    Values = 
+                    {
+                        &amp;quot;/static/*&amp;quot;,
+                    },
+                },
+            },
+            new Aws.LB.Inputs.ListenerRuleConditionArgs
+            {
+                HostHeader = new Aws.LB.Inputs.ListenerRuleConditionHostHeaderArgs
+                {
+                    Values = 
+                    {
+                        &amp;quot;example.com&amp;quot;,
+                    },
+                },
+            },
+        },
+        ListenerArn = frontEndListener.Arn,
+        Priority = 100,
+    });
+    var hostBasedRouting = new Aws.LB.ListenerRule(&amp;quot;hostBasedRouting&amp;quot;, new Aws.LB.ListenerRuleArgs
+    {
+        Actions = 
+        {
+            new Aws.LB.Inputs.ListenerRuleActionArgs
+            {
+                TargetGroupArn = aws_lb_target_group.Static.Arn,
+                Type = &amp;quot;forward&amp;quot;,
+            },
+        },
+        Conditions = 
+        {
+            new Aws.LB.Inputs.ListenerRuleConditionArgs
+            {
+                HostHeader = new Aws.LB.Inputs.ListenerRuleConditionHostHeaderArgs
+                {
+                    Values = 
+                    {
+                        &amp;quot;my-service.*.mydomain.io&amp;quot;,
+                    },
+                },
+            },
+        },
+        ListenerArn = frontEndListener.Arn,
+        Priority = 99,
+    });
+    var redirectHttpToHttps = new Aws.LB.ListenerRule(&amp;quot;redirectHttpToHttps&amp;quot;, new Aws.LB.ListenerRuleArgs
+    {
+        Actions = 
+        {
+            new Aws.LB.Inputs.ListenerRuleActionArgs
+            {
+                Redirect = new Aws.LB.Inputs.ListenerRuleActionRedirectArgs
+                {
+                    Port = &amp;quot;443&amp;quot;,
+                    Protocol = &amp;quot;HTTPS&amp;quot;,
+                    StatusCode = &amp;quot;HTTP_301&amp;quot;,
+                },
+                Type = &amp;quot;redirect&amp;quot;,
+            },
+        },
+        Conditions = 
+        {
+            new Aws.LB.Inputs.ListenerRuleConditionArgs
+            {
+                HttpHeader = new Aws.LB.Inputs.ListenerRuleConditionHttpHeaderArgs
+                {
+                    HttpHeaderName = &amp;quot;X-Forwarded-For&amp;quot;,
+                    Values = 
+                    {
+                        &amp;quot;192.168.1.*&amp;quot;,
+                    },
+                },
+            },
+        },
+        ListenerArn = frontEndListener.Arn,
+    });
+    var healthCheck = new Aws.LB.ListenerRule(&amp;quot;healthCheck&amp;quot;, new Aws.LB.ListenerRuleArgs
+    {
+        Actions = 
+        {
+            new Aws.LB.Inputs.ListenerRuleActionArgs
+            {
+                FixedResponse = new Aws.LB.Inputs.ListenerRuleActionFixedResponseArgs
+                {
+                    ContentType = &amp;quot;text/plain&amp;quot;,
+                    MessageBody = &amp;quot;HEALTHY&amp;quot;,
+                    StatusCode = &amp;quot;200&amp;quot;,
+                },
+                Type = &amp;quot;fixed-response&amp;quot;,
+            },
+        },
+        Conditions = 
+        {
+            new Aws.LB.Inputs.ListenerRuleConditionArgs
+            {
+                QueryString = 
+                {
+
+                    {
+                        { &amp;quot;key&amp;quot;, &amp;quot;health&amp;quot; },
+                        { &amp;quot;value&amp;quot;, &amp;quot;check&amp;quot; },
+                    },
+
+                    {
+                        { &amp;quot;value&amp;quot;, &amp;quot;bar&amp;quot; },
+                    },
+                },
+            },
+        },
+        ListenerArn = frontEndListener.Arn,
+    });
+    var pool = new Aws.Cognito.UserPool(&amp;quot;pool&amp;quot;, new Aws.Cognito.UserPoolArgs
+    {
+    });
+    var client = new Aws.Cognito.UserPoolClient(&amp;quot;client&amp;quot;, new Aws.Cognito.UserPoolClientArgs
+    {
+    });
+    var domain = new Aws.Cognito.UserPoolDomain(&amp;quot;domain&amp;quot;, new Aws.Cognito.UserPoolDomainArgs
+    {
+    });
+    var admin = new Aws.LB.ListenerRule(&amp;quot;admin&amp;quot;, new Aws.LB.ListenerRuleArgs
+    {
+        Actions = 
+        {
+            new Aws.LB.Inputs.ListenerRuleActionArgs
+            {
+                AuthenticateOidc = new Aws.LB.Inputs.ListenerRuleActionAuthenticateOidcArgs
+                {
+                    AuthorizationEndpoint = &amp;quot;https://example.com/authorization_endpoint&amp;quot;,
+                    ClientId = &amp;quot;client_id&amp;quot;,
+                    ClientSecret = &amp;quot;client_secret&amp;quot;,
+                    Issuer = &amp;quot;https://example.com&amp;quot;,
+                    TokenEndpoint = &amp;quot;https://example.com/token_endpoint&amp;quot;,
+                    UserInfoEndpoint = &amp;quot;https://example.com/user_info_endpoint&amp;quot;,
+                },
+                Type = &amp;quot;authenticate-oidc&amp;quot;,
+            },
+            new Aws.LB.Inputs.ListenerRuleActionArgs
+            {
+                TargetGroupArn = aws_lb_target_group.Static.Arn,
+                Type = &amp;quot;forward&amp;quot;,
+            },
+        },
+        ListenerArn = frontEndListener.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApplicationLoadBalancing.ListenerRuleArgs.html">ListenerRuleArgs</a></h4>
       <section></section>
@@ -130,6 +535,100 @@
 <blockquote>
 <p><strong>Note:</strong> <code>aws.alb.LoadBalancer</code> is known as <code>aws.lb.LoadBalancer</code>. The functionality is identical.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="application-load-balancer">Application Load Balancer</h3>
+<pre><code class="lang-csharp">using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Aws.LB.LoadBalancer(&amp;quot;test&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+        AccessLogs = new Aws.LB.Inputs.LoadBalancerAccessLogsArgs
+        {
+            Bucket = aws_s3_bucket.Lb_logs.Bucket,
+            Enabled = true,
+            Prefix = &amp;quot;test-lb&amp;quot;,
+        },
+        EnableDeletionProtection = true,
+        Internal = false,
+        LoadBalancerType = &amp;quot;application&amp;quot;,
+        SecurityGroups = 
+        {
+            aws_security_group.Lb_sg.Id,
+        },
+        Subnets = 
+        {
+            aws_subnet.Public.Select(__item =&gt; __item.Id).ToList(),
+        },
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="network-load-balancer">Network Load Balancer</h3>
+<pre><code class="lang-csharp">using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Aws.LB.LoadBalancer(&amp;quot;test&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+        EnableDeletionProtection = true,
+        Internal = false,
+        LoadBalancerType = &amp;quot;network&amp;quot;,
+        Subnets = 
+        {
+            aws_subnet.Public.Select(__item =&gt; __item.Id).ToList(),
+        },
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="specifying-elastic-ips">Specifying Elastic IPs</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.LB.LoadBalancer(&amp;quot;example&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+        LoadBalancerType = &amp;quot;network&amp;quot;,
+        SubnetMappings = 
+        {
+            new Aws.LB.Inputs.LoadBalancerSubnetMappingArgs
+            {
+                AllocationId = aws_eip.Example1.Id,
+                SubnetId = aws_subnet.Example1.Id,
+            },
+            new Aws.LB.Inputs.LoadBalancerSubnetMappingArgs
+            {
+                AllocationId = aws_eip.Example2.Id,
+                SubnetId = aws_subnet.Example2.Id,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApplicationLoadBalancing.LoadBalancerArgs.html">LoadBalancerArgs</a></h4>
       <section></section>
@@ -140,6 +639,68 @@
 <blockquote>
 <p><strong>Note:</strong> <code>aws.alb.TargetGroup</code> is known as <code>aws.lb.TargetGroup</code>. The functionality is identical.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="instance-target-group">Instance Target Group</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var main = new Aws.Ec2.Vpc(&amp;quot;main&amp;quot;, new Aws.Ec2.VpcArgs
+    {
+        CidrBlock = &amp;quot;10.0.0.0/16&amp;quot;,
+    });
+    var test = new Aws.LB.TargetGroup(&amp;quot;test&amp;quot;, new Aws.LB.TargetGroupArgs
+    {
+        Port = 80,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+        VpcId = main.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="ip-target-group">IP Target Group</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var main = new Aws.Ec2.Vpc(&amp;quot;main&amp;quot;, new Aws.Ec2.VpcArgs
+    {
+        CidrBlock = &amp;quot;10.0.0.0/16&amp;quot;,
+    });
+    var ip_example = new Aws.LB.TargetGroup(&amp;quot;ip-example&amp;quot;, new Aws.LB.TargetGroupArgs
+    {
+        Port = 80,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+        TargetType = &amp;quot;ip&amp;quot;,
+        VpcId = main.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="lambda-target-group">Lambda Target Group</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var lambda_example = new Aws.LB.TargetGroup(&amp;quot;lambda-example&amp;quot;, new Aws.LB.TargetGroupArgs
+    {
+        TargetType = &amp;quot;lambda&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApplicationLoadBalancing.TargetGroupArgs.html">TargetGroupArgs</a></h4>
       <section></section>
@@ -148,6 +709,61 @@
 <blockquote>
 <p><strong>Note:</strong> <code>aws.alb.TargetGroupAttachment</code> is known as <code>aws.lb.TargetGroupAttachment</code>. The functionality is identical.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testTargetGroup = new Aws.LB.TargetGroup(&amp;quot;testTargetGroup&amp;quot;, new Aws.LB.TargetGroupArgs
+    {
+    });
+    var testInstance = new Aws.Ec2.Instance(&amp;quot;testInstance&amp;quot;, new Aws.Ec2.InstanceArgs
+    {
+    });
+    var testTargetGroupAttachment = new Aws.LB.TargetGroupAttachment(&amp;quot;testTargetGroupAttachment&amp;quot;, new Aws.LB.TargetGroupAttachmentArgs
+    {
+        Port = 80,
+        TargetGroupArn = testTargetGroup.Arn,
+        TargetId = testInstance.Id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="usage-with-lambda">Usage with lambda</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testTargetGroup = new Aws.LB.TargetGroup(&amp;quot;testTargetGroup&amp;quot;, new Aws.LB.TargetGroupArgs
+    {
+        TargetType = &amp;quot;lambda&amp;quot;,
+    });
+    var testFunction = new Aws.Lambda.Function(&amp;quot;testFunction&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+    });
+    var withLb = new Aws.Lambda.Permission(&amp;quot;withLb&amp;quot;, new Aws.Lambda.PermissionArgs
+    {
+        Action = &amp;quot;lambda:InvokeFunction&amp;quot;,
+        Function = testFunction.Arn,
+        Principal = &amp;quot;elasticloadbalancing.amazonaws.com&amp;quot;,
+        SourceArn = testTargetGroup.Arn,
+    });
+    var testTargetGroupAttachment = new Aws.LB.TargetGroupAttachment(&amp;quot;testTargetGroupAttachment&amp;quot;, new Aws.LB.TargetGroupAttachmentArgs
+    {
+        TargetGroupArn = testTargetGroup.Arn,
+        TargetId = testFunction.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApplicationLoadBalancing.TargetGroupAttachmentArgs.html">TargetGroupAttachmentArgs</a></h4>
       <section></section>

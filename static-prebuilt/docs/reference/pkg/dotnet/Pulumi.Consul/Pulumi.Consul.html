@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Consul
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,32 @@
       <h4><a class="xref" href="Pulumi.Consul.AclAuthMethod.html">AclAuthMethod</a></h4>
       <section><p>Starting with Consul 1.5.0, the consul..AclAuthMethod resource can be used to
 managed Consul ACL auth methods.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var minikube = new Consul.AclAuthMethod(&amp;quot;minikube&amp;quot;, new Consul.AclAuthMethodArgs
+    {
+        Config = 
+        {
+            { &amp;quot;CACert&amp;quot;, @&amp;quot;-----BEGIN CERTIFICATE-----
+...-----END CERTIFICATE-----
+
+&amp;quot; },
+            { &amp;quot;Host&amp;quot;, &amp;quot;https://192.0.2.42:8443&amp;quot; },
+            { &amp;quot;ServiceAccountJWT&amp;quot;, &amp;quot;eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9...&amp;quot; },
+        },
+        Description = &amp;quot;dev minikube cluster&amp;quot;,
+        Type = &amp;quot;kubernetes&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.AclAuthMethodArgs.html">AclAuthMethodArgs</a></h4>
       <section></section>
@@ -87,6 +113,40 @@ managed Consul ACL auth methods.</p>
       <h4><a class="xref" href="Pulumi.Consul.AclBindingRule.html">AclBindingRule</a></h4>
       <section><p>Starting with Consul 1.5.0, the consul..AclBindingRule resource can be used to
 managed Consul ACL binding rules.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var minikube = new Consul.AclAuthMethod(&amp;quot;minikube&amp;quot;, new Consul.AclAuthMethodArgs
+    {
+        Config = 
+        {
+            { &amp;quot;CACert&amp;quot;, @&amp;quot;-----BEGIN CERTIFICATE-----
+...-----END CERTIFICATE-----
+
+&amp;quot; },
+            { &amp;quot;Host&amp;quot;, &amp;quot;https://192.0.2.42:8443&amp;quot; },
+            { &amp;quot;ServiceAccountJWT&amp;quot;, &amp;quot;eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9...&amp;quot; },
+        },
+        Description = &amp;quot;dev minikube cluster&amp;quot;,
+        Type = &amp;quot;kubernetes&amp;quot;,
+    });
+    var test = new Consul.AclBindingRule(&amp;quot;test&amp;quot;, new Consul.AclBindingRuleArgs
+    {
+        AuthMethod = minikube.Name,
+        BindName = &amp;quot;minikube&amp;quot;,
+        BindType = &amp;quot;service&amp;quot;,
+        Description = &amp;quot;foobar&amp;quot;,
+        Selector = &amp;quot;serviceaccount.namespace==default&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.AclBindingRuleArgs.html">AclBindingRuleArgs</a></h4>
       <section></section>
@@ -94,6 +154,30 @@ managed Consul ACL binding rules.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Consul.AclPolicy.html">AclPolicy</a></h4>
       <section><p>Starting with Consul 1.4.0, the consul..AclPolicy can be used to managed Consul ACL policies.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Consul.AclPolicy(&amp;quot;test&amp;quot;, new Consul.AclPolicyArgs
+    {
+        Datacenters = 
+        {
+            &amp;quot;dc1&amp;quot;,
+        },
+        Rules = @&amp;quot;node_prefix &amp;quot;&amp;quot;&amp;quot;&amp;quot; {
+policy = &amp;quot;&amp;quot;read&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.AclPolicyArgs.html">AclPolicyArgs</a></h4>
       <section></section>
@@ -101,6 +185,41 @@ managed Consul ACL binding rules.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Consul.AclRole.html">AclRole</a></h4>
       <section><p>Starting with Consul 1.5.0, the consul..AclRole can be used to managed Consul ACL roles.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var read_policy = new Consul.AclPolicy(&amp;quot;read-policy&amp;quot;, new Consul.AclPolicyArgs
+    {
+        Datacenters = 
+        {
+            &amp;quot;dc1&amp;quot;,
+        },
+        Rules = &amp;quot;node \&amp;quot;\&amp;quot; { policy = \&amp;quot;read\&amp;quot; }&amp;quot;,
+    });
+    var read = new Consul.AclRole(&amp;quot;read&amp;quot;, new Consul.AclRoleArgs
+    {
+        Description = &amp;quot;bar&amp;quot;,
+        Policies = 
+        {
+            read_policy.Id,
+        },
+        ServiceIdentities = 
+        {
+            new Consul.Inputs.AclRoleServiceIdentityArgs
+            {
+                ServiceName = &amp;quot;foo&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.AclRoleArgs.html">AclRoleArgs</a></h4>
       <section></section>
@@ -108,6 +227,36 @@ managed Consul ACL binding rules.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Consul.AclToken.html">AclToken</a></h4>
       <section><p>The <code>consul..AclToken</code> resource writes an ACL token into Consul.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-usage">Basic usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var agent = new Consul.AclPolicy(&amp;quot;agent&amp;quot;, new Consul.AclPolicyArgs
+    {
+        Rules = @&amp;quot;node_prefix &amp;quot;&amp;quot;&amp;quot;&amp;quot; {
+policy = &amp;quot;&amp;quot;read&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+    });
+    var test = new Consul.AclToken(&amp;quot;test&amp;quot;, new Consul.AclTokenArgs
+    {
+        Description = &amp;quot;my test token&amp;quot;,
+        Local = true,
+        Policies = 
+        {
+            agent.Name,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.AclTokenArgs.html">AclTokenArgs</a></h4>
       <section></section>
@@ -126,6 +275,28 @@ for more information.</p>
 <p>Provides access to the agent service data in Consul. This can be used to
 define a service associated with a particular agent. Currently, defining
 health checks for an agent service is not supported.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Consul.AgentService(&amp;quot;app&amp;quot;, new Consul.AgentServiceArgs
+    {
+        Address = &amp;quot;www.google.com&amp;quot;,
+        Port = 80,
+        Tags = 
+        {
+            &amp;quot;tag0&amp;quot;,
+            &amp;quot;tag1&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.AgentServiceArgs.html">AgentServiceArgs</a></h4>
       <section></section>
@@ -136,6 +307,24 @@ health checks for an agent service is not supported.</p>
 of Consul to automatically manage Consul servers.</p>
 <p>It includes to automatically cleanup dead servers, monitor the status of the Raft
 cluster and stable server introduction.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Consul.AutopilotConfig(&amp;quot;config&amp;quot;, new Consul.AutopilotConfigArgs
+    {
+        CleanupDeadServers = false,
+        LastContactThreshold = &amp;quot;1s&amp;quot;,
+        MaxTrailingLogs = 500,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.AutopilotConfigArgs.html">AutopilotConfigArgs</a></h4>
       <section></section>
@@ -147,6 +336,38 @@ and will be removed in a future release. Please read the <a href="https://www.te
 for more information.</p>
 <p>Registers a node or service with the <a href="https://www.consul.io/docs/agent/http/catalog.html#catalog_register">Consul Catalog</a>.
 Currently, defining health checks is not supported.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Consul.CatalogEntry(&amp;quot;app&amp;quot;, new Consul.CatalogEntryArgs
+    {
+        Address = &amp;quot;192.168.10.10&amp;quot;,
+        Node = &amp;quot;foobar&amp;quot;,
+        Services = 
+        {
+            new Consul.Inputs.CatalogEntryServiceArgs
+            {
+                Address = &amp;quot;127.0.0.1&amp;quot;,
+                Id = &amp;quot;redis1&amp;quot;,
+                Name = &amp;quot;redis&amp;quot;,
+                Port = 8000,
+                Tags = 
+                {
+                    &amp;quot;master&amp;quot;,
+                    &amp;quot;v1&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.CatalogEntryArgs.html">CatalogEntryArgs</a></h4>
       <section></section>
@@ -158,6 +379,113 @@ Currently, defining health checks is not supported.</p>
       <section><p>The <a href="https://www.consul.io/docs/agent/config_entries.html">Configuration Entry</a>
 resource can be used to provide cluster-wide defaults for various aspects of
 Consul.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var proxyDefaults = new Consul.ConfigEntry(&amp;quot;proxyDefaults&amp;quot;, new Consul.ConfigEntryArgs
+    {
+        Kind = &amp;quot;proxy-defaults&amp;quot;,
+        ConfigJson = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;Config&amp;quot;, new Dictionary&amp;lt;string, object?&gt;
+            {
+                { &amp;quot;local_connect_timeout_ms&amp;quot;, 1000 },
+                { &amp;quot;handshake_timeout_ms&amp;quot;, 10000 },
+            } },
+        }),
+    });
+    var web = new Consul.ConfigEntry(&amp;quot;web&amp;quot;, new Consul.ConfigEntryArgs
+    {
+        Kind = &amp;quot;service-defaults&amp;quot;,
+        ConfigJson = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;Protocol&amp;quot;, &amp;quot;http&amp;quot; },
+        }),
+    });
+    var admin = new Consul.ConfigEntry(&amp;quot;admin&amp;quot;, new Consul.ConfigEntryArgs
+    {
+        Kind = &amp;quot;service-defaults&amp;quot;,
+        ConfigJson = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;Protocol&amp;quot;, &amp;quot;http&amp;quot; },
+        }),
+    });
+    var serviceResolver = new Consul.ConfigEntry(&amp;quot;serviceResolver&amp;quot;, new Consul.ConfigEntryArgs
+    {
+        Kind = &amp;quot;service-resolver&amp;quot;,
+        ConfigJson = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;DefaultSubset&amp;quot;, &amp;quot;v1&amp;quot; },
+            { &amp;quot;Subsets&amp;quot;, new Dictionary&amp;lt;string, object?&gt;
+            {
+                { &amp;quot;v1&amp;quot;, new Dictionary&amp;lt;string, object?&gt;
+                {
+                    { &amp;quot;Filter&amp;quot;, &amp;quot;Service.Meta.version == v1&amp;quot; },
+                } },
+                { &amp;quot;v2&amp;quot;, new Dictionary&amp;lt;string, object?&gt;
+                {
+                    { &amp;quot;Filter&amp;quot;, &amp;quot;Service.Meta.version == v2&amp;quot; },
+                } },
+            } },
+        }),
+    });
+    var serviceSplitter = new Consul.ConfigEntry(&amp;quot;serviceSplitter&amp;quot;, new Consul.ConfigEntryArgs
+    {
+        Kind = &amp;quot;service-splitter&amp;quot;,
+        ConfigJson = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;Splits&amp;quot;, new[]
+                {
+                    new Dictionary&amp;lt;string, object?&gt;
+                    {
+                        { &amp;quot;Weight&amp;quot;, 90 },
+                        { &amp;quot;ServiceSubset&amp;quot;, &amp;quot;v1&amp;quot; },
+                    },
+                    new Dictionary&amp;lt;string, object?&gt;
+                    {
+                        { &amp;quot;Weight&amp;quot;, 10 },
+                        { &amp;quot;ServiceSubset&amp;quot;, &amp;quot;v2&amp;quot; },
+                    },
+                }
+             },
+        }),
+    });
+    var serviceRouter = new Consul.ConfigEntry(&amp;quot;serviceRouter&amp;quot;, new Consul.ConfigEntryArgs
+    {
+        Kind = &amp;quot;service-router&amp;quot;,
+        ConfigJson = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;Routes&amp;quot;, new[]
+                {
+                    new Dictionary&amp;lt;string, object?&gt;
+                    {
+                        { &amp;quot;Match&amp;quot;, new Dictionary&amp;lt;string, object?&gt;
+                        {
+                            { &amp;quot;HTTP&amp;quot;, new Dictionary&amp;lt;string, object?&gt;
+                            {
+                                { &amp;quot;PathPrefix&amp;quot;, &amp;quot;/admin&amp;quot; },
+                            } },
+                        } },
+                        { &amp;quot;Destination&amp;quot;, new Dictionary&amp;lt;string, object?&gt;
+                        {
+                            { &amp;quot;Service&amp;quot;, &amp;quot;admin&amp;quot; },
+                        } },
+                    },
+                }
+             },
+        }),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.ConfigEntryArgs.html">ConfigEntryArgs</a></h4>
       <section></section>
@@ -237,6 +565,18 @@ Consul.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Consul.GetKeysResult.html">GetKeysResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.GetNetworkAreaMembers.html">GetNetworkAreaMembers</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.GetNetworkAreaMembersArgs.html">GetNetworkAreaMembersArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.GetNetworkAreaMembersResult.html">GetNetworkAreaMembersResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.GetNetworkSegments.html">GetNetworkSegments</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.GetNetworkSegmentsArgs.html">GetNetworkSegmentsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.GetNetworkSegmentsResult.html">GetNetworkSegmentsResult</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Consul.GetNodes.html">GetNodes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Consul.GetNodesArgs.html">GetNodesArgs</a></h4>
@@ -268,6 +608,24 @@ rules for which services may connect to one another when using <a href="https://
 that will be created in the future when creating intentions. This resource can be used
 in conjunction with the <code>consul..Service</code> datasource when referencing services
 registered on nodes that have a running Consul agent.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var database = new Consul.Intention(&amp;quot;database&amp;quot;, new Consul.IntentionArgs
+    {
+        Action = &amp;quot;allow&amp;quot;,
+        DestinationName = &amp;quot;db&amp;quot;,
+        SourceName = &amp;quot;api&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.IntentionArgs.html">IntentionArgs</a></h4>
       <section></section>
@@ -285,9 +643,120 @@ registered on nodes that have a running Consul agent.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Consul.KeysState.html">KeysState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.License.html">License</a></h4>
+      <section><blockquote>
+<p><strong>NOTE:</strong> This feature requires <a href="https://www.consul.io/docs/enterprise/index.html">Consul Enterprise</a>.</p>
+</blockquote>
+<p>The <code>consul..License</code> resource provides datacenter-level management of
+the Consul Enterprise license. If ACLs are enabled then a token with operator
+privileges may be required in order to use this command.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var license = new Consul.License(&amp;quot;license&amp;quot;, new Consul.LicenseArgs
+    {
+        License = File.ReadAllText(&amp;quot;license.hclic&amp;quot;),
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Consul.LicenseArgs.html">LicenseArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.LicenseState.html">LicenseState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.Namespace.html">Namespace</a></h4>
+      <section><blockquote>
+<p><strong>NOTE:</strong> This feature requires Consul Enterprise.</p>
+</blockquote>
+<p>The <code>consul..Namespace</code> resource provides isolated <a href="https://www.consul.io/docs/enterprise/namespaces/index.html">Consul Enterprise Namespaces</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var production = new Consul.Namespace(&amp;quot;production&amp;quot;, new Consul.NamespaceArgs
+    {
+        Description = &amp;quot;Production namespace&amp;quot;,
+        Meta = 
+        {
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Consul.NamespaceArgs.html">NamespaceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.NamespaceState.html">NamespaceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.NetworkArea.html">NetworkArea</a></h4>
+      <section><blockquote>
+<p><strong>NOTE:</strong> This feature requires <a href="https://www.consul.io/docs/enterprise/index.html">Consul Enterprise</a>.</p>
+</blockquote>
+<p>The <code>consul..NetworkArea</code> resource manages a relationship between servers in two
+different Consul datacenters.</p>
+<p>Unlike Consul's WAN feature, network areas use just the server RPC port for
+communication, and relationships can be made between independent pairs of
+datacenters, so not all servers need to be fully connected. This allows for
+complex topologies among Consul datacenters like hub/spoke and more general trees.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dc2 = new Consul.NetworkArea(&amp;quot;dc2&amp;quot;, new Consul.NetworkAreaArgs
+    {
+        PeerDatacenter = &amp;quot;dc2&amp;quot;,
+        RetryJoins = 
+        {
+            &amp;quot;1.2.3.4&amp;quot;,
+        },
+        UseTls = true,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Consul.NetworkAreaArgs.html">NetworkAreaArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Consul.NetworkAreaState.html">NetworkAreaState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Consul.Node.html">Node</a></h4>
       <section><p>Provides access to Node data in Consul. This can be used to define a
 node. Currently, defining health checks is not supported.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new Consul.Node(&amp;quot;foobar&amp;quot;, new Consul.NodeArgs
+    {
+        Address = &amp;quot;192.168.10.10&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.NodeArgs.html">NodeArgs</a></h4>
       <section></section>
@@ -314,6 +783,31 @@ can be used to create services addressable by Consul that cannot be registered
 with a <a href="https://www.consul.io/docs/agent/basics.html">local agent</a>.</p>
 <p>If the Consul agent is running on the node where this service is registered, it is
 not recommended to use this resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var compute = new Consul.Node(&amp;quot;compute&amp;quot;, new Consul.NodeArgs
+    {
+        Address = &amp;quot;www.google.com&amp;quot;,
+    });
+    var google = new Consul.Service(&amp;quot;google&amp;quot;, new Consul.ServiceArgs
+    {
+        Node = compute.Name,
+        Port = 80,
+        Tags = 
+        {
+            &amp;quot;tag0&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Consul.ServiceArgs.html">ServiceArgs</a></h4>
       <section></section>

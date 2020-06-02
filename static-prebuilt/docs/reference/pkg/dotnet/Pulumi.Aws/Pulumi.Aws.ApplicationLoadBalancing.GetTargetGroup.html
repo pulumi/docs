@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetTargetGroup
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,19 +78,44 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetTargetGroup</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ApplicationLoadBalancing.html">Pulumi.Aws.ApplicationLoadBalancing</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_ApplicationLoadBalancing_GetTargetGroup_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetTargetGroup : object</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;aws.applicationloadbalancing.getTargetGroup has been deprecated in favor of aws.alb.getTargetGroup&quot;)]
+public static class GetTargetGroup</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApplicationLoadBalancing/GetTargetGroup.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApplicationLoadBalancing/GetTargetGroup.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApplicationLoadBalancing_GetTargetGroup_InvokeAsync_" data-uid="Pulumi.Aws.ApplicationLoadBalancing.GetTargetGroup.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_ApplicationLoadBalancing_GetTargetGroup_InvokeAsync_Pulumi_Aws_ApplicationLoadBalancing_GetTargetGroupArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.ApplicationLoadBalancing.GetTargetGroup.InvokeAsync(Pulumi.Aws.ApplicationLoadBalancing.GetTargetGroupArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetTargetGroupArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ApplicationLoadBalancing_GetTargetGroup_InvokeAsync_Pulumi_Aws_ApplicationLoadBalancing_GetTargetGroupArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.ApplicationLoadBalancing.GetTargetGroup.InvokeAsync(Pulumi.Aws.ApplicationLoadBalancing.GetTargetGroupArgs,Pulumi.InvokeOptions)">InvokeAsync(GetTargetGroupArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><blockquote>
 <p><strong>Note:</strong> <code>aws.alb.TargetGroup</code> is known as <code>aws.lb.TargetGroup</code>. The functionality is identical.</p>
 </blockquote>
@@ -98,13 +123,35 @@
 <p>This data source can prove useful when a module accepts an LB Target Group as an
 input variable and needs to know its attributes. It can also be used to get the ARN of
 an LB Target Group for use in other resources, given LB Target Group name.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var lbTgArn = config.Get(&amp;quot;lbTgArn&amp;quot;) ?? &amp;quot;&amp;quot;;
+    var lbTgName = config.Get(&amp;quot;lbTgName&amp;quot;) ?? &amp;quot;&amp;quot;;
+    var test = Output.Create(Aws.LB.GetTargetGroup.InvokeAsync(new Aws.LB.GetTargetGroupArgs
+    {
+        Arn = lbTgArn,
+        Name = lbTgName,
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetTargetGroupResult&gt; InvokeAsync(GetTargetGroupArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetTargetGroupResult&gt; InvokeAsync(GetTargetGroupArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +169,7 @@ an LB Target Group for use in other resources, given LB Target Group name.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -138,7 +185,7 @@ an LB Target Group for use in other resources, given LB Target Group name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.ApplicationLoadBalancing.GetTargetGroupResult.html">GetTargetGroupResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.ApplicationLoadBalancing.GetTargetGroupResult.html">GetTargetGroupResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -150,7 +197,7 @@ an LB Target Group for use in other resources, given LB Target Group name.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApplicationLoadBalancing/GetTargetGroup.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApplicationLoadBalancing/GetTargetGroup.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

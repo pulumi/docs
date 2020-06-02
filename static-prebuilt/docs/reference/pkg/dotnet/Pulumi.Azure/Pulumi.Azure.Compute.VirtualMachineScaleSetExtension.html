@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VirtualMachineScaleSetExtension
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,79 @@
 <blockquote>
 <p><strong>NOTE:</strong> This resource is not intended to be used with the <code>azure.compute.ScaleSet</code> resource - instead it's intended for this to be used with the <code>azure.compute.LinuxVirtualMachineScaleSet</code> and <code>azure.compute.WindowsVirtualMachineScaleSet</code> resources.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleLinuxVirtualMachineScaleSet = new Azure.Compute.LinuxVirtualMachineScaleSet(&amp;quot;exampleLinuxVirtualMachineScaleSet&amp;quot;, new Azure.Compute.LinuxVirtualMachineScaleSetArgs
+    {
+    });
+    //...
+    var exampleVirtualMachineScaleSetExtension = new Azure.Compute.VirtualMachineScaleSetExtension(&amp;quot;exampleVirtualMachineScaleSetExtension&amp;quot;, new Azure.Compute.VirtualMachineScaleSetExtensionArgs
+    {
+        VirtualMachineScaleSetId = exampleLinuxVirtualMachineScaleSet.Id,
+        Publisher = &amp;quot;Microsoft.Azure.Extensions&amp;quot;,
+        Type = &amp;quot;CustomScript&amp;quot;,
+        TypeHandlerVersion = &amp;quot;2.0&amp;quot;,
+        Settings = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;commandToExecute&amp;quot;, &amp;quot;echo $HOSTNAME&amp;quot; },
+        }),
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">VirtualMachineScaleSetExtension</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">VirtualMachineScaleSetExtension</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.html">Pulumi.Azure.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -91,16 +158,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension__ctor_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension__ctor_System_String_Pulumi_Azure_Compute_VirtualMachineScaleSetExtensionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.#ctor(System.String,Pulumi.Azure.Compute.VirtualMachineScaleSetExtensionArgs,System.Nullable{CustomResourceOptions})">VirtualMachineScaleSetExtension(String, VirtualMachineScaleSetExtensionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension__ctor_System_String_Pulumi_Azure_Compute_VirtualMachineScaleSetExtensionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.#ctor(System.String,Pulumi.Azure.Compute.VirtualMachineScaleSetExtensionArgs,Pulumi.CustomResourceOptions)">VirtualMachineScaleSetExtension(String, VirtualMachineScaleSetExtensionArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a VirtualMachineScaleSetExtension resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VirtualMachineScaleSetExtension(string name, VirtualMachineScaleSetExtensionArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public VirtualMachineScaleSetExtension(string name, VirtualMachineScaleSetExtensionArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +192,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +202,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_AutoUpgradeMinorVersion_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.AutoUpgradeMinorVersion*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_AutoUpgradeMinorVersion" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.AutoUpgradeMinorVersion">AutoUpgradeMinorVersion</h4>
@@ -156,13 +223,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_ForceUpdateTag_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.ForceUpdateTag*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_ForceUpdateTag" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.ForceUpdateTag">ForceUpdateTag</h4>
@@ -171,7 +238,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ForceUpdateTag { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ForceUpdateTag { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +250,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_Name_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.Name*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_Name" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.Name">Name</h4>
@@ -210,13 +277,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_ProtectedSettings_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.ProtectedSettings*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_ProtectedSettings" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.ProtectedSettings">ProtectedSettings</h4>
@@ -225,7 +292,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProtectedSettings { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProtectedSettings { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +304,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_ProvisionAfterExtensions_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.ProvisionAfterExtensions*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_ProvisionAfterExtensions" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.ProvisionAfterExtensions">ProvisionAfterExtensions</h4>
@@ -264,13 +331,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_Publisher_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.Publisher*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_Publisher" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.Publisher">Publisher</h4>
@@ -291,13 +358,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_Settings_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.Settings*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_Settings" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.Settings">Settings</h4>
@@ -306,7 +373,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Settings { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Settings { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,13 +385,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_Type_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.Type*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_Type" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.Type">Type</h4>
@@ -345,13 +412,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_TypeHandlerVersion_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.TypeHandlerVersion*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_TypeHandlerVersion" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.TypeHandlerVersion">TypeHandlerVersion</h4>
@@ -372,13 +439,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_VirtualMachineScaleSetId_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.VirtualMachineScaleSetId*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_VirtualMachineScaleSetId" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.VirtualMachineScaleSetId">VirtualMachineScaleSetId</h4>
@@ -399,7 +466,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -407,17 +474,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_Get_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.Get*"></a>
-  <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_Get_System_String_Input_System_String__Pulumi_Azure_Compute_VirtualMachineScaleSetExtensionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.Get(System.String,Input{System.String},Pulumi.Azure.Compute.VirtualMachineScaleSetExtensionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VirtualMachineScaleSetExtensionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Compute_VirtualMachineScaleSetExtension_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Compute_VirtualMachineScaleSetExtensionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Compute.VirtualMachineScaleSetExtensionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VirtualMachineScaleSetExtensionState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing VirtualMachineScaleSetExtension resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static VirtualMachineScaleSetExtension Get(string name, Input&lt;string&gt; id, VirtualMachineScaleSetExtensionState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static VirtualMachineScaleSetExtension Get(string name, Input&lt;string&gt; id, VirtualMachineScaleSetExtensionState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,7 +503,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -448,7 +515,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -477,7 +544,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachineScaleSetExtension.cs/#L51" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

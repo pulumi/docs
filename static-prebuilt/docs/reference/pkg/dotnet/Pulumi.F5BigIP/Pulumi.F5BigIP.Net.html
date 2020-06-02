@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.F5BigIP.Net
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,24 @@
       <h4><a class="xref" href="Pulumi.F5BigIP.Net.Route.html">Route</a></h4>
       <section><p><code>f5bigip.net.Route</code> Manages a route configuration</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var route2 = new F5BigIP.Net.Route(&amp;quot;route2&amp;quot;, new F5BigIP.Net.RouteArgs
+    {
+        Gw = &amp;quot;1.1.1.2&amp;quot;,
+        Name = &amp;quot;external-route&amp;quot;,
+        Network = &amp;quot;10.10.10.0/24&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Net.RouteArgs.html">RouteArgs</a></h4>
       <section></section>
@@ -87,6 +105,25 @@
       <h4><a class="xref" href="Pulumi.F5BigIP.Net.SelfIp.html">SelfIp</a></h4>
       <section><p><code>f5bigip.net.SelfIp</code> Manages a selfip configuration</p>
 <p>Resource should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource, for example /Common/my-selfip.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var selfip1 = new F5BigIP.Net.SelfIp(&amp;quot;selfip1&amp;quot;, new F5BigIP.Net.SelfIpArgs
+    {
+        Name = &amp;quot;/Common/internalselfIP&amp;quot;,
+        Ip = &amp;quot;11.1.1.1/24&amp;quot;,
+        Vlan = &amp;quot;/Common/internal&amp;quot;,
+        TrafficGroup = &amp;quot;traffic-group-1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Net.SelfIpArgs.html">SelfIpArgs</a></h4>
       <section></section>
@@ -95,6 +132,31 @@
       <h4><a class="xref" href="Pulumi.F5BigIP.Net.Vlan.html">Vlan</a></h4>
       <section><p><code>f5bigip.net.Vlan</code> Manages a vlan configuration</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var vlan1 = new F5BigIP.Net.Vlan(&amp;quot;vlan1&amp;quot;, new F5BigIP.Net.VlanArgs
+    {
+        Interfaces = 
+        {
+            new F5BigIP.Net.Inputs.VlanInterfaceArgs
+            {
+                Tagged = false,
+                Vlanport = 1.2,
+            },
+        },
+        Name = &amp;quot;/Common/Internal&amp;quot;,
+        Tag = 101,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Net.VlanArgs.html">VlanArgs</a></h4>
       <section></section>

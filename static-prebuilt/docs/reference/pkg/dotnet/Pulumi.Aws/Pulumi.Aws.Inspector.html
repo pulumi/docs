@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Inspector
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,30 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Inspector.AssessmentTarget.html">AssessmentTarget</a></h4>
       <section><p>Provides a Inspector assessment target</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bar = new Aws.Inspector.ResourceGroup(&amp;quot;bar&amp;quot;, new Aws.Inspector.ResourceGroupArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;Env&amp;quot;, &amp;quot;bar&amp;quot; },
+            { &amp;quot;Name&amp;quot;, &amp;quot;foo&amp;quot; },
+        },
+    });
+    var foo = new Aws.Inspector.AssessmentTarget(&amp;quot;foo&amp;quot;, new Aws.Inspector.AssessmentTargetArgs
+    {
+        ResourceGroupArn = bar.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Inspector.AssessmentTargetArgs.html">AssessmentTargetArgs</a></h4>
       <section></section>
@@ -85,6 +109,30 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Inspector.AssessmentTemplate.html">AssessmentTemplate</a></h4>
       <section><p>Provides a Inspector assessment template</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Inspector.AssessmentTemplate(&amp;quot;example&amp;quot;, new Aws.Inspector.AssessmentTemplateArgs
+    {
+        Duration = 3600,
+        RulesPackageArns = 
+        {
+            &amp;quot;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-9hgA516p&amp;quot;,
+            &amp;quot;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-H5hpSawc&amp;quot;,
+            &amp;quot;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-JJOtZiqQ&amp;quot;,
+            &amp;quot;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-vg5GGHSD&amp;quot;,
+        },
+        TargetArn = aws_inspector_assessment_target.Example.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Inspector.AssessmentTemplateArgs.html">AssessmentTemplateArgs</a></h4>
       <section></section>
@@ -96,6 +144,26 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Inspector.ResourceGroup.html">ResourceGroup</a></h4>
       <section><p>Provides an Amazon Inspector resource group resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Inspector.ResourceGroup(&amp;quot;example&amp;quot;, new Aws.Inspector.ResourceGroupArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;Env&amp;quot;, &amp;quot;bar&amp;quot; },
+            { &amp;quot;Name&amp;quot;, &amp;quot;foo&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Inspector.ResourceGroupArgs.html">ResourceGroupArgs</a></h4>
       <section></section>

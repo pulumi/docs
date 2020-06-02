@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StandardAppVersionState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StandardAppVersionState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">StandardAppVersionState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.AppEngine.html">Pulumi.Gcp.AppEngine</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L394">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L452">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState__ctor_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState__ctor" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.#ctor">StandardAppVersionState()</h4>
@@ -100,7 +129,61 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L284">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L323">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_AutomaticScaling_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.AutomaticScaling*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_AutomaticScaling" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.AutomaticScaling">AutomaticScaling</h4>
+  <div class="markdown level1 summary"><p>Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;StandardAppVersionAutomaticScalingGetArgs&gt; AutomaticScaling { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionAutomaticScalingGetArgs.html">StandardAppVersionAutomaticScalingGetArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L329">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_BasicScaling_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.BasicScaling*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_BasicScaling" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.BasicScaling">BasicScaling</h4>
+  <div class="markdown level1 summary"><p>Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;StandardAppVersionBasicScalingGetArgs&gt; BasicScaling { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionBasicScalingGetArgs.html">StandardAppVersionBasicScalingGetArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L335">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_DeleteServiceOnDestroy_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.DeleteServiceOnDestroy*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_DeleteServiceOnDestroy" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.DeleteServiceOnDestroy">DeleteServiceOnDestroy</h4>
@@ -109,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DeleteServiceOnDestroy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DeleteServiceOnDestroy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,22 +204,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L290">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L341">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Deployment_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Deployment*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Deployment" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Deployment">Deployment</h4>
-  <div class="markdown level1 summary"><p>Code and application artifacts that make up this version.</p>
+  <div class="markdown level1 summary"><p>Code and application artifacts that make up this version.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;StandardAppVersionDeploymentGetArgs&gt;? Deployment { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;StandardAppVersionDeploymentGetArgs&gt; Deployment { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,22 +231,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionDeploymentGetArgs.html">StandardAppVersionDeploymentGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionDeploymentGetArgs.html">StandardAppVersionDeploymentGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L296">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L347">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Entrypoint_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Entrypoint*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Entrypoint" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Entrypoint">Entrypoint</h4>
-  <div class="markdown level1 summary"><p>The entrypoint for the application.</p>
+  <div class="markdown level1 summary"><p>The entrypoint for the application.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;StandardAppVersionEntrypointGetArgs&gt;? Entrypoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;StandardAppVersionEntrypointGetArgs&gt; Entrypoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +258,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionEntrypointGetArgs.html">StandardAppVersionEntrypointGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionEntrypointGetArgs.html">StandardAppVersionEntrypointGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L305">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L356">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_EnvVariables_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.EnvVariables*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_EnvVariables" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.EnvVariables">EnvVariables</h4>
@@ -202,18 +285,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L369">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Handlers_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Handlers*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Handlers" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Handlers">Handlers</h4>
-  <div class="markdown level1 summary"><p>An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
-request and other request handlers are not attempted.</p>
+  <div class="markdown level1 summary"><p>An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -230,23 +313,25 @@ request and other request handlers are not attempted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionHandlerGetArgs.html">StandardAppVersionHandlerGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionHandlerGetArgs.html">StandardAppVersionHandlerGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L328">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L381">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_InstanceClass_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.InstanceClass*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_InstanceClass" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.InstanceClass">InstanceClass</h4>
-  <div class="markdown level1 summary"><p>Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
-AutomaticScaling is supported at the moment)</p>
+  <div class="markdown level1 summary"><p>Instance class that is used to run this version. Valid values are
+AutomaticScaling: F1, F2, F4, F4_1G
+BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
+Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceClass { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceClass { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,17 +343,17 @@ AutomaticScaling is supported at the moment)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L337">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L390">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Libraries_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Libraries*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Libraries" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Libraries">Libraries</h4>
-  <div class="markdown level1 summary"><p>Configuration for third-party Python runtime libraries that are required by the application.</p>
+  <div class="markdown level1 summary"><p>Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -285,22 +370,22 @@ AutomaticScaling is supported at the moment)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionLibraryGetArgs.html">StandardAppVersionLibraryGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionLibraryGetArgs.html">StandardAppVersionLibraryGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L346">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L399">View Source</a>
   </span>
-  <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Name_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Name*"></a>
-  <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Name" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The identifier for this object. Format specified above.</p>
+  <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_ManualScaling_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.ManualScaling*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_ManualScaling" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.ManualScaling">ManualScaling</h4>
+  <div class="markdown level1 summary"><p>A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;StandardAppVersionManualScalingGetArgs&gt; ManualScaling { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,13 +397,40 @@ AutomaticScaling is supported at the moment)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionManualScalingGetArgs.html">StandardAppVersionManualScalingGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L352">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L405">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Name_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Name*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Name" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the library. Example &quot;django&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L411">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_NoopOnDestroy_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.NoopOnDestroy*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_NoopOnDestroy" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.NoopOnDestroy">NoopOnDestroy</h4>
@@ -327,7 +439,7 @@ AutomaticScaling is supported at the moment)</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? NoopOnDestroy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; NoopOnDestroy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,13 +451,13 @@ AutomaticScaling is supported at the moment)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L359">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L418">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Project_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Project*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Project" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Project">Project</h4>
@@ -355,7 +467,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,13 +479,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L365">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L424">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Runtime_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Runtime*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Runtime" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Runtime">Runtime</h4>
@@ -382,7 +494,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Runtime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Runtime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -394,23 +506,23 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L372">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L431">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_RuntimeApiVersion_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.RuntimeApiVersion*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_RuntimeApiVersion" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.RuntimeApiVersion">RuntimeApiVersion</h4>
-  <div class="markdown level1 summary"><p>The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
-<a href="https://cloud.google.com/appengine/docs/standard//config/appref">https://cloud.google.com/appengine/docs/standard//config/appref</a></p>
+  <div class="markdown level1 summary"><p>The version of the API in the given runtime environment.
+Please see the app.yaml reference for valid values at <a href="https://cloud.google.com/appengine/docs/standard//config/appref">https://cloud.google.com/appengine/docs/standard//config/appref</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RuntimeApiVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RuntimeApiVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -422,13 +534,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L378">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L437">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Service_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Service*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Service" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Service">Service</h4>
@@ -437,7 +549,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Service { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Service { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -449,13 +561,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L384">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L443">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Threadsafe_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Threadsafe*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_Threadsafe" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.Threadsafe">Threadsafe</h4>
@@ -464,7 +576,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Threadsafe { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Threadsafe { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -476,23 +588,22 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L391">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L449">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_StandardAppVersionState_VersionId_" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.VersionId*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_StandardAppVersionState_VersionId" data-uid="Pulumi.Gcp.AppEngine.StandardAppVersionState.VersionId">VersionId</h4>
-  <div class="markdown level1 summary"><p>Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters,
-numbers, or hyphens. Reserved names,&quot;default&quot;, &quot;latest&quot;, and any name with the prefix &quot;ah-&quot;.</p>
+  <div class="markdown level1 summary"><p>Relative name of the version within the service. For example, <code>v1</code>. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,&quot;default&quot;, &quot;latest&quot;, and any name with the prefix &quot;ah-&quot;.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VersionId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VersionId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -504,7 +615,7 @@ numbers, or hyphens. Reserved names,&quot;default&quot;, &quot;latest&quot;, and
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -516,7 +627,7 @@ numbers, or hyphens. Reserved names,&quot;default&quot;, &quot;latest&quot;, and
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L279" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/StandardAppVersion.cs/#L318" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

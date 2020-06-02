@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Subscription
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,78 @@
   <h1 id="Pulumi_SpotInst_Subscription" data-uid="Pulumi.SpotInst.Subscription" class="text-break">Class Subscription
   </h1>
   <div class="markdown level0 summary"><p>Provides a Spotinst subscription resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a Subscription
+    var default_subscription = new SpotInst.Subscription(&amp;quot;default-subscription&amp;quot;, new SpotInst.SubscriptionArgs
+    {
+        Endpoint = &amp;quot;http://endpoint.com&amp;quot;,
+        EventType = &amp;quot;AWS_EC2_INSTANCE_LAUNCH&amp;quot;,
+        Format = 
+        {
+            { &amp;quot;event&amp;quot;, &amp;quot;%event%&amp;quot; },
+            { &amp;quot;instance_id&amp;quot;, &amp;quot;%instance-id%&amp;quot; },
+            { &amp;quot;resource_id&amp;quot;, &amp;quot;%resource-id%&amp;quot; },
+            { &amp;quot;resource_name&amp;quot;, &amp;quot;%resource-name%&amp;quot; },
+            { &amp;quot;tags&amp;quot;, &amp;quot;foo,baz,baz&amp;quot; },
+        },
+        Protocol = &amp;quot;http&amp;quot;,
+        ResourceId = spotinst_elastigroup_aws.My_eg.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Subscription</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Subscription</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.SpotInst.html">Pulumi.SpotInst</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.SpotInst.dll</h6>
@@ -88,16 +154,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Subscription.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Subscription.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Subscription__ctor_" data-uid="Pulumi.SpotInst.Subscription.#ctor*"></a>
-  <h4 id="Pulumi_SpotInst_Subscription__ctor_System_String_Pulumi_SpotInst_SubscriptionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SpotInst.Subscription.#ctor(System.String,Pulumi.SpotInst.SubscriptionArgs,System.Nullable{CustomResourceOptions})">Subscription(String, SubscriptionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_SpotInst_Subscription__ctor_System_String_Pulumi_SpotInst_SubscriptionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.SpotInst.Subscription.#ctor(System.String,Pulumi.SpotInst.SubscriptionArgs,Pulumi.CustomResourceOptions)">Subscription(String, SubscriptionArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Subscription resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Subscription(string name, SubscriptionArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Subscription(string name, SubscriptionArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +188,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,11 +198,11 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Subscription.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Subscription.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Subscription_Endpoint_" data-uid="Pulumi.SpotInst.Subscription.Endpoint*"></a>
   <h4 id="Pulumi_SpotInst_Subscription_Endpoint" data-uid="Pulumi.SpotInst.Subscription.Endpoint">Endpoint</h4>
-  <div class="markdown level1 summary"><p>The endpoint the notification will be sent to: url in case of <code>&amp;quot;http&amp;quot;</code>/<code>&amp;quot;https&amp;quot;</code>, email address in case of <code>&amp;quot;email&amp;quot;</code>/<code>&amp;quot;email-json&amp;quot;</code>, sns-topic-arn in case of <code>&amp;quot;aws-sns&amp;quot;</code>.</p>
+  <div class="markdown level1 summary"><p>The endpoint the notification will be sent to. url in case of <code>&amp;quot;http&amp;quot;</code>/<code>&amp;quot;https&amp;quot;</code>/<code>&amp;quot;web&amp;quot;</code>, email address in case of <code>&amp;quot;email&amp;quot;</code>/<code>&amp;quot;email-json&amp;quot;</code> and sns-topic-arn in case of <code>&amp;quot;aws-sns&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -153,17 +219,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Subscription.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Subscription.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Subscription_EventType_" data-uid="Pulumi.SpotInst.Subscription.EventType*"></a>
   <h4 id="Pulumi_SpotInst_Subscription_EventType" data-uid="Pulumi.SpotInst.Subscription.EventType">EventType</h4>
-  <div class="markdown level1 summary"><p>The event to send the notification when triggered. Valid values: <code>&amp;quot;AWS_EC2_INSTANCE_TERMINATE&amp;quot;</code>, <code>&amp;quot;AWS_EC2_INSTANCE_TERMINATED&amp;quot;</code>, <code>&amp;quot;AWS_EC2_INSTANCE_LAUNCH&amp;quot;</code>, <code>&amp;quot;AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB&amp;quot;</code>, <code>&amp;quot;GROUP_ROLL_FAILED&amp;quot;</code>, <code>&amp;quot;GROUP_ROLL_FINISHED&amp;quot;</code>, <code>&amp;quot;CANT_SCALE_UP_GROUP_MAX_CAPACITY&amp;quot;</code>, <code>&amp;quot;GROUP_UPDATED&amp;quot;</code>, <code>&amp;quot;AWS_EC2_CANT_SPIN_OD&amp;quot;</code>, <code>&amp;quot;AWS_EMR_PROVISION_TIMEOUT&amp;quot;</code>, <code>&amp;quot;AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT&amp;quot;</code>.</p>
+  <div class="markdown level1 summary"><p>The event to send the notification when triggered. Valid values: <code>&amp;quot;AWS_EC2_INSTANCE_TERMINATE&amp;quot;</code>, <code>&amp;quot;AWS_EC2_INSTANCE_TERMINATED&amp;quot;</code>, <code>&amp;quot;AWS_EC2_INSTANCE_LAUNCH&amp;quot;</code>, <code>&amp;quot;AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT&amp;quot;</code>, <code>&amp;quot;AWS_EC2_CANT_SPIN_OD&amp;quot;</code>, <code>&amp;quot;AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB&amp;quot;</code>, <code>&amp;quot;GROUP_ROLL_FAILED&amp;quot;</code>, <code>&amp;quot;GROUP_ROLL_FINISHED&amp;quot;</code>,
+<code>&amp;quot;CANT_SCALE_UP_GROUP_MAX_CAPACITY&amp;quot;</code>,
+<code>&amp;quot;GROUP_UPDATED&amp;quot;</code>,
+<code>&amp;quot;AWS_EMR_PROVISION_TIMEOUT&amp;quot;</code>,
+<code>&amp;quot;GROUP_BEANSTALK_INIT_READY&amp;quot;</code>,
+<code>&amp;quot;AZURE_VM_TERMINATED&amp;quot;</code>,
+<code>&amp;quot;AZURE_VM_TERMINATE&amp;quot;</code>,
+<code>&amp;quot;AWS_EC2_MANAGED_INSTANCE_PAUSING&amp;quot;</code>,
+<code>&amp;quot;AWS_EC2_MANAGED_INSTANCE_RESUMING&amp;quot;</code>,
+<code>&amp;quot;AWS_EC2_MANAGED_INSTANCE_RECYCLING&amp;quot;</code>,<code>&amp;quot;AWS_EC2_MANAGED_INSTANCE_DELETING&amp;quot;</code>.
+Ocean Events:<code>&amp;quot;CLUSTER_ROLL_FINISHED&amp;quot;</code>,<code>&amp;quot;GROUP_ROLL_FAILED&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -180,22 +256,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Subscription.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Subscription.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Subscription_Format_" data-uid="Pulumi.SpotInst.Subscription.Format*"></a>
   <h4 id="Pulumi_SpotInst_Subscription_Format" data-uid="Pulumi.SpotInst.Subscription.Format">Format</h4>
-  <div class="markdown level1 summary"><p>The format of the notification content (JSON Format - Key+Value). Valid values: <code>&amp;quot;%instance-id%&amp;quot;</code>, <code>&amp;quot;%event%&amp;quot;</code>, <code>&amp;quot;%resource-id%&amp;quot;</code>, <code>&amp;quot;%resource-name%&amp;quot;</code>.</p>
+  <div class="markdown level1 summary"><p>The format of the notification content (JSON Format - Key+Value). Valid Values : <code>&amp;quot;instance-id&amp;quot;</code>, <code>&amp;quot;event&amp;quot;</code>, <code>&amp;quot;resource-id&amp;quot;</code>, <code>&amp;quot;resource-name&amp;quot;</code>, <code>&amp;quot;subnet-id&amp;quot;</code>, <code>&amp;quot;availability-zone&amp;quot;</code>, <code>&amp;quot;reason&amp;quot;</code>, <code>&amp;quot;private-ip&amp;quot;</code>, <code>&amp;quot;launchspec-id&amp;quot;</code>
+Example: {&quot;event&quot;: <code>&amp;quot;event&amp;quot;</code>, <code>&amp;quot;resourceId&amp;quot;</code>: <code>&amp;quot;resource-id&amp;quot;</code>, <code>&amp;quot;resourceName&amp;quot;</code>: <code>&amp;quot;resource-name&amp;quot;</code>&quot;, <code>&amp;quot;myCustomKey&amp;quot;</code>: <code>&amp;quot;My content is set here&amp;quot;</code> }
+Default: {<code>&amp;quot;event&amp;quot;</code>: <code>&amp;quot;&amp;lt;event&gt;&amp;quot;</code>, <code>&amp;quot;instanceId&amp;quot;</code>: <code>&amp;quot;&amp;lt;instance-id&gt;&amp;quot;</code>, <code>&amp;quot;resourceId&amp;quot;</code>: <code>&amp;quot;&amp;lt;resource-id&gt;&amp;quot;</code>, <code>&amp;quot;resourceName&amp;quot;</code>: <code>&amp;quot;&amp;lt;resource-name&gt;&amp;quot;</code> }.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Format { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Format { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,17 +285,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Subscription.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Subscription.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Subscription_Protocol_" data-uid="Pulumi.SpotInst.Subscription.Protocol*"></a>
   <h4 id="Pulumi_SpotInst_Subscription_Protocol" data-uid="Pulumi.SpotInst.Subscription.Protocol">Protocol</h4>
-  <div class="markdown level1 summary"><p>The protocol to send the notification. Valid values: <code>&amp;quot;http&amp;quot;</code>, <code>&amp;quot;https&amp;quot;</code>, <code>&amp;quot;email&amp;quot;</code>, <code>&amp;quot;email-json&amp;quot;</code>, <code>&amp;quot;aws-sns&amp;quot;</code>, <code>&amp;quot;web&amp;quot;</code>.</p>
+  <div class="markdown level1 summary"><p>The protocol to send the notification. Valid values: <code>&amp;quot;email&amp;quot;</code>, <code>&amp;quot;email-json&amp;quot;</code>, <code>&amp;quot;aws-sns&amp;quot;</code>, <code>&amp;quot;web&amp;quot;</code>.
+The following values are deprecated: <code>&amp;quot;http&amp;quot;</code> , <code>&amp;quot;https&amp;quot;</code>
+You can use the generic <code>&amp;quot;web&amp;quot;</code> protocol instead.
+<code>&amp;quot;aws-sns&amp;quot;</code> is only supported with AWS provider</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -234,17 +315,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Subscription.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Subscription.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Subscription_ResourceId_" data-uid="Pulumi.SpotInst.Subscription.ResourceId*"></a>
   <h4 id="Pulumi_SpotInst_Subscription_ResourceId" data-uid="Pulumi.SpotInst.Subscription.ResourceId">ResourceId</h4>
-  <div class="markdown level1 summary"><p>Spotinst Resource ID (Elastigroup ID).</p>
+  <div class="markdown level1 summary"><p>Spotinst Resource id (Elastigroup or Ocean ID).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -261,7 +342,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -269,17 +350,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Subscription.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Subscription.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Subscription_Get_" data-uid="Pulumi.SpotInst.Subscription.Get*"></a>
-  <h4 id="Pulumi_SpotInst_Subscription_Get_System_String_Input_System_String__Pulumi_SpotInst_SubscriptionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SpotInst.Subscription.Get(System.String,Input{System.String},Pulumi.SpotInst.SubscriptionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SubscriptionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_SpotInst_Subscription_Get_System_String_Pulumi_Input_System_String__Pulumi_SpotInst_SubscriptionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.SpotInst.Subscription.Get(System.String,Pulumi.Input{System.String},Pulumi.SpotInst.SubscriptionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SubscriptionState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Subscription resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Subscription Get(string name, Input&lt;string&gt; id, SubscriptionState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Subscription Get(string name, Input&lt;string&gt; id, SubscriptionState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -298,7 +379,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -310,7 +391,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -339,7 +420,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Subscription.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Subscription.cs/#L48" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

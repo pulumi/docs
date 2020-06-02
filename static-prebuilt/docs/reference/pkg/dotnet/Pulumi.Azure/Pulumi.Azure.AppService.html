@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.AppService
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,45 @@
 <blockquote>
 <p><strong>Note:</strong> When using Slots - the <code>app_settings</code>, <code>connection_string</code> and <code>site_config</code> blocks on the <code>azure.appservice.AppService</code> resource will be overwritten when promoting a Slot using the <code>azure.appservice.ActiveSlot</code> resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var server = new Random.RandomId(&amp;quot;server&amp;quot;, new Random.RandomIdArgs
+    {
+    });
+    // ...
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+    });
+    // ...
+    var examplePlan = new Azure.AppService.Plan(&amp;quot;examplePlan&amp;quot;, new Azure.AppService.PlanArgs
+    {
+    });
+    // ...
+    var exampleAppService = new Azure.AppService.AppService(&amp;quot;exampleAppService&amp;quot;, new Azure.AppService.AppServiceArgs
+    {
+    });
+    // ...
+    var exampleSlot = new Azure.AppService.Slot(&amp;quot;exampleSlot&amp;quot;, new Azure.AppService.SlotArgs
+    {
+    });
+    // ...
+    var exampleActiveSlot = new Azure.AppService.ActiveSlot(&amp;quot;exampleActiveSlot&amp;quot;, new Azure.AppService.ActiveSlotArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        AppServiceName = exampleAppService.Name,
+        AppServiceSlotName = exampleSlot.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.ActiveSlotArgs.html">ActiveSlotArgs</a></h4>
       <section></section>
@@ -103,6 +142,29 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.CertificateOrder.html">CertificateOrder</a></h4>
       <section><p>Manages an App Service Certificate Order.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleCertificateOrder = new Azure.AppService.CertificateOrder(&amp;quot;exampleCertificateOrder&amp;quot;, new Azure.AppService.CertificateOrderArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = &amp;quot;global&amp;quot;,
+        DistinguishedName = &amp;quot;CN=example.com&amp;quot;,
+        ProductType = &amp;quot;Standard&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.CertificateOrderArgs.html">CertificateOrderArgs</a></h4>
       <section></section>
@@ -112,6 +174,53 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.CustomHostnameBinding.html">CustomHostnameBinding</a></h4>
       <section><p>Manages a Hostname Binding within an App Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var server = new Random.RandomId(&amp;quot;server&amp;quot;, new Random.RandomIdArgs
+    {
+        Keepers = 
+        {
+            { &amp;quot;azi_id&amp;quot;, 1 },
+        },
+        ByteLength = 8,
+    });
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var examplePlan = new Azure.AppService.Plan(&amp;quot;examplePlan&amp;quot;, new Azure.AppService.PlanArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = new Azure.AppService.Inputs.PlanSkuArgs
+        {
+            Tier = &amp;quot;Standard&amp;quot;,
+            Size = &amp;quot;S1&amp;quot;,
+        },
+    });
+    var exampleAppService = new Azure.AppService.AppService(&amp;quot;exampleAppService&amp;quot;, new Azure.AppService.AppServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AppServicePlanId = examplePlan.Id,
+    });
+    var exampleCustomHostnameBinding = new Azure.AppService.CustomHostnameBinding(&amp;quot;exampleCustomHostnameBinding&amp;quot;, new Azure.AppService.CustomHostnameBindingArgs
+    {
+        Hostname = &amp;quot;www.mywebsite.com&amp;quot;,
+        AppServiceName = exampleAppService.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.CustomHostnameBindingArgs.html">CustomHostnameBindingArgs</a></h4>
       <section></section>
@@ -119,6 +228,49 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.Environment.html">Environment</a></h4>
       <section><p>Manages an App Service Environment.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;westeurope&amp;quot;,
+    });
+    var exampleVirtualNetwork = new Azure.Network.VirtualNetwork(&amp;quot;exampleVirtualNetwork&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AddressSpaces = 
+        {
+            &amp;quot;10.0.0.0/16&amp;quot;,
+        },
+    });
+    var ase = new Azure.Network.Subnet(&amp;quot;ase&amp;quot;, new Azure.Network.SubnetArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        VirtualNetworkName = exampleVirtualNetwork.Name,
+        AddressPrefix = &amp;quot;10.0.1.0/24&amp;quot;,
+    });
+    var gateway = new Azure.Network.Subnet(&amp;quot;gateway&amp;quot;, new Azure.Network.SubnetArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        VirtualNetworkName = exampleVirtualNetwork.Name,
+        AddressPrefix = &amp;quot;10.0.2.0/24&amp;quot;,
+    });
+    var exampleEnvironment = new Azure.AppService.Environment(&amp;quot;exampleEnvironment&amp;quot;, new Azure.AppService.EnvironmentArgs
+    {
+        SubnetId = ase.Id,
+        PricingTier = &amp;quot;I2&amp;quot;,
+        FrontEndScaleFactor = 10,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.EnvironmentArgs.html">EnvironmentArgs</a></h4>
       <section></section>
@@ -126,8 +278,146 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.FunctionApp.html">FunctionApp</a></h4>
       <section><p>Manages a Function App.</p>
+<h2 id="example-usage-with-app-service-plan">Example Usage (with App Service Plan)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;westus2&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var examplePlan = new Azure.AppService.Plan(&amp;quot;examplePlan&amp;quot;, new Azure.AppService.PlanArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = new Azure.AppService.Inputs.PlanSkuArgs
+        {
+            Tier = &amp;quot;Standard&amp;quot;,
+            Size = &amp;quot;S1&amp;quot;,
+        },
+    });
+    var exampleFunctionApp = new Azure.AppService.FunctionApp(&amp;quot;exampleFunctionApp&amp;quot;, new Azure.AppService.FunctionAppArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AppServicePlanId = examplePlan.Id,
+        StorageConnectionString = exampleAccount.PrimaryConnectionString,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-in-a-consumption-plan">Example Usage (in a Consumption Plan)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;westus2&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var examplePlan = new Azure.AppService.Plan(&amp;quot;examplePlan&amp;quot;, new Azure.AppService.PlanArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Kind = &amp;quot;FunctionApp&amp;quot;,
+        Sku = new Azure.AppService.Inputs.PlanSkuArgs
+        {
+            Tier = &amp;quot;Dynamic&amp;quot;,
+            Size = &amp;quot;Y1&amp;quot;,
+        },
+    });
+    var exampleFunctionApp = new Azure.AppService.FunctionApp(&amp;quot;exampleFunctionApp&amp;quot;, new Azure.AppService.FunctionAppArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AppServicePlanId = examplePlan.Id,
+        StorageConnectionString = exampleAccount.PrimaryConnectionString,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.FunctionAppArgs.html">FunctionAppArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.AppService.FunctionAppSlot.html">FunctionAppSlot</a></h4>
+      <section><p>Manages a Function App deployment Slot.</p>
+<h2 id="example-usage-with-app-service-plan">Example Usage (with App Service Plan)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;westus2&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var examplePlan = new Azure.AppService.Plan(&amp;quot;examplePlan&amp;quot;, new Azure.AppService.PlanArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = new Azure.AppService.Inputs.PlanSkuArgs
+        {
+            Tier = &amp;quot;Standard&amp;quot;,
+            Size = &amp;quot;S1&amp;quot;,
+        },
+    });
+    var exampleFunctionApp = new Azure.AppService.FunctionApp(&amp;quot;exampleFunctionApp&amp;quot;, new Azure.AppService.FunctionAppArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AppServicePlanId = examplePlan.Id,
+        StorageAccountName = exampleAccount.Name,
+        StorageAccountAccessKey = exampleAccount.PrimaryAccessKey,
+    });
+    var exampleFunctionAppSlot = new Azure.AppService.FunctionAppSlot(&amp;quot;exampleFunctionAppSlot&amp;quot;, new Azure.AppService.FunctionAppSlotArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AppServicePlanId = examplePlan.Id,
+        FunctionAppName = exampleFunctionApp.Name,
+        StorageAccountName = exampleAccount.Name,
+        StorageAccountAccessKey = exampleAccount.PrimaryAccessKey,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.AppService.FunctionAppSlotArgs.html">FunctionAppSlotArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.AppService.FunctionAppSlotState.html">FunctionAppSlotState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.FunctionAppState.html">FunctionAppState</a></h4>
       <section></section>
@@ -169,6 +459,115 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.Plan.html">Plan</a></h4>
       <section><p>Manages an App Service Plan component.</p>
+<h2 id="example-usage-dedicated">Example Usage (Dedicated)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var examplePlan = new Azure.AppService.Plan(&amp;quot;examplePlan&amp;quot;, new Azure.AppService.PlanArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = new Azure.AppService.Inputs.PlanSkuArgs
+        {
+            Tier = &amp;quot;Standard&amp;quot;,
+            Size = &amp;quot;S1&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-shared--consumption-plan">Example Usage (Shared / Consumption Plan)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var examplePlan = new Azure.AppService.Plan(&amp;quot;examplePlan&amp;quot;, new Azure.AppService.PlanArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Kind = &amp;quot;FunctionApp&amp;quot;,
+        Sku = new Azure.AppService.Inputs.PlanSkuArgs
+        {
+            Tier = &amp;quot;Dynamic&amp;quot;,
+            Size = &amp;quot;Y1&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-linux">Example Usage (Linux)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var examplePlan = new Azure.AppService.Plan(&amp;quot;examplePlan&amp;quot;, new Azure.AppService.PlanArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Kind = &amp;quot;Linux&amp;quot;,
+        Reserved = true,
+        Sku = new Azure.AppService.Inputs.PlanSkuArgs
+        {
+            Tier = &amp;quot;Standard&amp;quot;,
+            Size = &amp;quot;S1&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-windows-container">Example Usage (Windows Container)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var examplePlan = new Azure.AppService.Plan(&amp;quot;examplePlan&amp;quot;, new Azure.AppService.PlanArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Kind = &amp;quot;xenon&amp;quot;,
+        IsXenon = true,
+        Sku = new Azure.AppService.Inputs.PlanSkuArgs
+        {
+            Tier = &amp;quot;PremiumContainer&amp;quot;,
+            Size = &amp;quot;PC2&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.PlanArgs.html">PlanArgs</a></h4>
       <section></section>
@@ -189,6 +588,23 @@
 <blockquote>
 <p><strong>NOTE:</strong> Source Control Tokens are configured at the subscription level, not on each App Service - as such this can only be configured Subscription-wide</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.AppService.SourceCodeToken(&amp;quot;example&amp;quot;, new Azure.AppService.SourceCodeTokenArgs
+    {
+        Token = &amp;quot;7e57735e77e577e57&amp;quot;,
+        Type = &amp;quot;GitHub&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.AppService.SourceCodeTokenArgs.html">SourceCodeTokenArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Ingress
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,8 +71,8 @@
   
   <h1 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_Ingress" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.Ingress" class="text-break">Class Ingress
   </h1>
-  <div class="markdown level0 summary"><p>DEPRECATED - extensions/v1beta1/Ingress is deprecated by networking/v1beta1/Ingress and not
-supported by Kubernetes v1.20+ clusters.</p>
+  <div class="markdown level0 summary"><p>DEPRECATED - extensions/v1beta1/Ingress is deprecated by networking.k8s.io/v1beta1/Ingress
+and not supported by Kubernetes v1.20+ clusters.</p>
 <p>Ingress is a collection of rules that allow inbound connections to reach the endpoints
 defined by a backend. An Ingress can be configured to give services externally-reachable
 urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.</p>
@@ -83,16 +83,40 @@ urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Ingress</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.html">Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_Ingress_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Ingress : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Ingress</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24635">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Output.cs/#L24635">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_Ingress_ApiVersion" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.Ingress.ApiVersion">ApiVersion</h4>
   <div class="markdown level1 summary"><p>APIVersion defines the versioned schema of this representation of an object. Servers
@@ -121,7 +145,7 @@ unrecognized values. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24643">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Output.cs/#L24643">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_Ingress_Kind" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.Ingress.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>Kind is a string value representing the REST resource this object represents. Servers
@@ -150,7 +174,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24649">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Output.cs/#L24649">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_Ingress_Metadata" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.Ingress.Metadata">Metadata</h4>
   <div class="markdown level1 summary"><p>Standard object's metadata. More info:
@@ -177,7 +201,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24655">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Output.cs/#L24655">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_Ingress_Spec" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.Ingress.Spec">Spec</h4>
   <div class="markdown level1 summary"><p>Spec is the desired state of the Ingress. More info:
@@ -204,7 +228,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24661">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Output.cs/#L24661">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_Ingress_Status" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.Ingress.Status">Status</h4>
   <div class="markdown level1 summary"><p>Status is the current state of the Ingress. More info:
@@ -237,7 +261,7 @@ CamelCase. More info:
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24626" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Output.cs/#L24626" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

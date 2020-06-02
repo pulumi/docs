@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CustomAttribute
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,43 +71,50 @@
   
   <h1 id="Pulumi_VSphere_CustomAttribute" data-uid="Pulumi.VSphere.CustomAttribute" class="text-break">Class CustomAttribute
   </h1>
-  <div class="markdown level0 summary"><p>The <code>vsphere..CustomAttribute</code> resource can be used to create and manage custom
-attributes, which allow users to associate user-specific meta-information with
-vSphere managed objects. Custom attribute values must be strings and are stored
-on the vCenter Server and not the managed object.</p>
-<p>For more information about custom attributes, click <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-73606C4C-763C-4E27-A1DA-032E4C46219D.html">here</a>.</p>
-<blockquote>
-<p><strong>NOTE:</strong> Custom attributes are unsupported on direct ESXi connections
-and require vCenter.</p>
-</blockquote>
-<h2 id="managed-object-types">Managed Object Types</h2>
-<p>The following table will help you determine what value you need to enter for
-the managed object type you want the attribute to apply to.</p>
-<p>Note that if you want a attribute to apply to all objects, leave the type
-unspecified.</p>
-<p>&lt;table&gt;
-&lt;tr&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Folders&lt;/td&gt;&lt;td&gt;<code>Folder</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Clusters&lt;/td&gt;&lt;td&gt;<code>ClusterComputeResource</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Datacenters&lt;/td&gt;&lt;td&gt;<code>Datacenter</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Datastores&lt;/td&gt;&lt;td&gt;<code>Datastore</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Datastore Clusters&lt;/td&gt;&lt;td&gt;<code>StoragePod</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;DVS Portgroups&lt;/td&gt;&lt;td&gt;<code>DistributedVirtualPortgroup</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Distributed vSwitches&lt;/td&gt;&lt;td&gt;<code>DistributedVirtualSwitch</code>&lt;br&gt;<code>VmwareDistributedVirtualSwitch</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Hosts&lt;/td&gt;&lt;td&gt;<code>HostSystem</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Content Libraries&lt;/td&gt;&lt;td&gt;<code>com.vmware.content.Library</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Content Library Items&lt;/td&gt;&lt;td&gt;<code>com.vmware.content.library.Item</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Networks&lt;/td&gt;&lt;td&gt;<code>HostNetwork</code>&lt;br&gt;<code>Network</code>&lt;br&gt;<code>OpaqueNetwork</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Resource Pools&lt;/td&gt;&lt;td&gt;<code>ResourcePool</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;vApps&lt;/td&gt;&lt;td&gt;<code>VirtualApp</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Virtual Machines&lt;/td&gt;&lt;td&gt;<code>VirtualMachine</code>&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CustomAttribute</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">CustomAttribute</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -118,16 +125,16 @@ unspecified.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/CustomAttribute.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/CustomAttribute.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_VSphere_CustomAttribute__ctor_" data-uid="Pulumi.VSphere.CustomAttribute.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_CustomAttribute__ctor_System_String_Pulumi_VSphere_CustomAttributeArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.CustomAttribute.#ctor(System.String,Pulumi.VSphere.CustomAttributeArgs,System.Nullable{CustomResourceOptions})">CustomAttribute(String, CustomAttributeArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_CustomAttribute__ctor_System_String_Pulumi_VSphere_CustomAttributeArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.CustomAttribute.#ctor(System.String,Pulumi.VSphere.CustomAttributeArgs,Pulumi.CustomResourceOptions)">CustomAttribute(String, CustomAttributeArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a CustomAttribute resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CustomAttribute(string name, CustomAttributeArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public CustomAttribute(string name, CustomAttributeArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,7 +159,7 @@ unspecified.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -162,7 +169,7 @@ unspecified.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/CustomAttribute.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/CustomAttribute.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_VSphere_CustomAttribute_ManagedObjectType_" data-uid="Pulumi.VSphere.CustomAttribute.ManagedObjectType*"></a>
   <h4 id="Pulumi_VSphere_CustomAttribute_ManagedObjectType" data-uid="Pulumi.VSphere.CustomAttribute.ManagedObjectType">ManagedObjectType</h4>
@@ -174,7 +181,7 @@ resource if changed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ManagedObjectType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ManagedObjectType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,13 +193,13 @@ resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/CustomAttribute.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/CustomAttribute.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_VSphere_CustomAttribute_Name_" data-uid="Pulumi.VSphere.CustomAttribute.Name*"></a>
   <h4 id="Pulumi_VSphere_CustomAttribute_Name" data-uid="Pulumi.VSphere.CustomAttribute.Name">Name</h4>
@@ -213,7 +220,7 @@ resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -221,17 +228,17 @@ resource if changed.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/CustomAttribute.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/CustomAttribute.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_VSphere_CustomAttribute_Get_" data-uid="Pulumi.VSphere.CustomAttribute.Get*"></a>
-  <h4 id="Pulumi_VSphere_CustomAttribute_Get_System_String_Input_System_String__Pulumi_VSphere_CustomAttributeState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.CustomAttribute.Get(System.String,Input{System.String},Pulumi.VSphere.CustomAttributeState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, CustomAttributeState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_CustomAttribute_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_CustomAttributeState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.CustomAttribute.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.CustomAttributeState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, CustomAttributeState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing CustomAttribute resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CustomAttribute Get(string name, Input&lt;string&gt; id, CustomAttributeState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CustomAttribute Get(string name, Input&lt;string&gt; id, CustomAttributeState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,7 +257,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -262,7 +269,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -291,7 +298,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/CustomAttribute.cs/#L52" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/CustomAttribute.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

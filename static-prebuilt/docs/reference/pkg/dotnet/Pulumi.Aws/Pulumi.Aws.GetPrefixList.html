@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetPrefixList
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,32 +78,122 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetPrefixList</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.html">Pulumi.Aws</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_GetPrefixList_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetPrefixList : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetPrefixList</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetPrefixList.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GetPrefixList.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Aws_GetPrefixList_InvokeAsync_" data-uid="Pulumi.Aws.GetPrefixList.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_GetPrefixList_InvokeAsync_Pulumi_Aws_GetPrefixListArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.GetPrefixList.InvokeAsync(Pulumi.Aws.GetPrefixListArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetPrefixListArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_GetPrefixList_InvokeAsync_Pulumi_Aws_GetPrefixListArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.GetPrefixList.InvokeAsync(Pulumi.Aws.GetPrefixListArgs,Pulumi.InvokeOptions)">InvokeAsync(GetPrefixListArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p><code>aws..getPrefixList</code> provides details about a specific prefix list (PL)
 in the current region.</p>
 <p>This can be used both to validate a prefix list given in a variable
 and to obtain the CIDR blocks (IP address ranges) for the associated
 AWS service. The latter may be useful e.g. for adding network ACL
 rules.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var privateS3VpcEndpoint = new Aws.Ec2.VpcEndpoint(&amp;quot;privateS3VpcEndpoint&amp;quot;, new Aws.Ec2.VpcEndpointArgs
+    {
+        ServiceName = &amp;quot;com.amazonaws.us-west-2.s3&amp;quot;,
+        VpcId = aws_vpc.Foo.Id,
+    });
+    var privateS3PrefixList = privateS3VpcEndpoint.PrefixListId.Apply(prefixListId =&gt; Aws.GetPrefixList.InvokeAsync(new Aws.GetPrefixListArgs
+    {
+        PrefixListId = prefixListId,
+    }));
+    var bar = new Aws.Ec2.NetworkAcl(&amp;quot;bar&amp;quot;, new Aws.Ec2.NetworkAclArgs
+    {
+        VpcId = aws_vpc.Foo.Id,
+    });
+    var privateS3NetworkAclRule = new Aws.Ec2.NetworkAclRule(&amp;quot;privateS3NetworkAclRule&amp;quot;, new Aws.Ec2.NetworkAclRuleArgs
+    {
+        CidrBlock = privateS3PrefixList.Apply(privateS3PrefixList =&gt; privateS3PrefixList.CidrBlocks[0]),
+        Egress = false,
+        FromPort = 443,
+        NetworkAclId = bar.Id,
+        Protocol = &amp;quot;tcp&amp;quot;,
+        RuleAction = &amp;quot;allow&amp;quot;,
+        RuleNumber = 200,
+        ToPort = 443,
+    });
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
+{{% example %}}</p>
+<h3 id="filter">Filter</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = Output.Create(Aws.GetPrefixList.InvokeAsync(new Aws.GetPrefixListArgs
+    {
+        Filters = 
+        {
+            new Aws.Inputs.GetPrefixListFilterArgs
+            {
+                Name = &amp;quot;prefix-list-id&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;pl-68a54001&amp;quot;,
+                },
+            },
+        },
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetPrefixListResult&gt; InvokeAsync(GetPrefixListArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetPrefixListResult&gt; InvokeAsync(GetPrefixListArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +211,7 @@ rules.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -137,7 +227,7 @@ rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.GetPrefixListResult.html">GetPrefixListResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.GetPrefixListResult.html">GetPrefixListResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -149,7 +239,7 @@ rules.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetPrefixList.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GetPrefixList.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.LoadBalancer
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,52 @@
   </h3>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.L7PolicyV2.html">L7PolicyV2</a></h4>
       <section><p>Manages a Load Balancer L7 Policy resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.199.0/24&amp;quot;,
+        IpVersion = 4,
+        NetworkId = network1.Id,
+    });
+    var loadbalancer1 = new OpenStack.LoadBalancer.LoadBalancer(&amp;quot;loadbalancer1&amp;quot;, new OpenStack.LoadBalancer.LoadBalancerArgs
+    {
+        VipSubnetId = subnet1.Id,
+    });
+    var listener1 = new OpenStack.LoadBalancer.Listener(&amp;quot;listener1&amp;quot;, new OpenStack.LoadBalancer.ListenerArgs
+    {
+        LoadbalancerId = loadbalancer1.Id,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+        ProtocolPort = 8080,
+    });
+    var pool1 = new OpenStack.LoadBalancer.Pool(&amp;quot;pool1&amp;quot;, new OpenStack.LoadBalancer.PoolArgs
+    {
+        LbMethod = &amp;quot;ROUND_ROBIN&amp;quot;,
+        LoadbalancerId = loadbalancer1.Id,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+    var l7policy1 = new OpenStack.LoadBalancer.L7PolicyV2(&amp;quot;l7policy1&amp;quot;, new OpenStack.LoadBalancer.L7PolicyV2Args
+    {
+        Action = &amp;quot;REDIRECT_TO_POOL&amp;quot;,
+        Description = &amp;quot;test l7 policy&amp;quot;,
+        ListenerId = listener1.Id,
+        Position = 1,
+        RedirectPoolId = pool1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.L7PolicyV2Args.html">L7PolicyV2Args</a></h4>
       <section></section>
@@ -85,6 +131,59 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.L7RuleV2.html">L7RuleV2</a></h4>
       <section><p>Manages a V2 L7 Rule resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.199.0/24&amp;quot;,
+        IpVersion = 4,
+        NetworkId = network1.Id,
+    });
+    var loadbalancer1 = new OpenStack.LoadBalancer.LoadBalancer(&amp;quot;loadbalancer1&amp;quot;, new OpenStack.LoadBalancer.LoadBalancerArgs
+    {
+        VipSubnetId = subnet1.Id,
+    });
+    var listener1 = new OpenStack.LoadBalancer.Listener(&amp;quot;listener1&amp;quot;, new OpenStack.LoadBalancer.ListenerArgs
+    {
+        LoadbalancerId = loadbalancer1.Id,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+        ProtocolPort = 8080,
+    });
+    var pool1 = new OpenStack.LoadBalancer.Pool(&amp;quot;pool1&amp;quot;, new OpenStack.LoadBalancer.PoolArgs
+    {
+        LbMethod = &amp;quot;ROUND_ROBIN&amp;quot;,
+        LoadbalancerId = loadbalancer1.Id,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+    var l7policy1 = new OpenStack.LoadBalancer.L7PolicyV2(&amp;quot;l7policy1&amp;quot;, new OpenStack.LoadBalancer.L7PolicyV2Args
+    {
+        Action = &amp;quot;REDIRECT_TO_URL&amp;quot;,
+        Description = &amp;quot;test description&amp;quot;,
+        ListenerId = listener1.Id,
+        Position = 1,
+        RedirectUrl = &amp;quot;http://www.example.com&amp;quot;,
+    });
+    var l7rule1 = new OpenStack.LoadBalancer.L7RuleV2(&amp;quot;l7rule1&amp;quot;, new OpenStack.LoadBalancer.L7RuleV2Args
+    {
+        CompareType = &amp;quot;EQUAL_TO&amp;quot;,
+        L7policyId = l7policy1.Id,
+        Type = &amp;quot;PATH&amp;quot;,
+        Value = &amp;quot;/api&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.L7RuleV2Args.html">L7RuleV2Args</a></h4>
       <section></section>
@@ -92,6 +191,28 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.Listener.html">Listener</a></h4>
       <section><p>Manages a V2 listener resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var listener1 = new OpenStack.LoadBalancer.Listener(&amp;quot;listener1&amp;quot;, new OpenStack.LoadBalancer.ListenerArgs
+    {
+        InsertHeaders = 
+        {
+            { &amp;quot;X-Forwarded-For&amp;quot;, &amp;quot;true&amp;quot; },
+        },
+        LoadbalancerId = &amp;quot;d9415786-5f1a-428b-b35f-2f1523e146d2&amp;quot;,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+        ProtocolPort = 8080,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.ListenerArgs.html">ListenerArgs</a></h4>
       <section></section>
@@ -99,6 +220,22 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.LoadBalancer.html">LoadBalancer</a></h4>
       <section><p>Manages a V2 loadbalancer resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var lb1 = new OpenStack.LoadBalancer.LoadBalancer(&amp;quot;lb1&amp;quot;, new OpenStack.LoadBalancer.LoadBalancerArgs
+    {
+        VipSubnetId = &amp;quot;d9415786-5f1a-428b-b35f-2f1523e146d2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.LoadBalancerArgs.html">LoadBalancerArgs</a></h4>
       <section></section>
@@ -106,13 +243,90 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.Member.html">Member</a></h4>
       <section><p>Manages a V2 member resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member1 = new OpenStack.LoadBalancer.Member(&amp;quot;member1&amp;quot;, new OpenStack.LoadBalancer.MemberArgs
+    {
+        Address = &amp;quot;192.168.199.23&amp;quot;,
+        PoolId = &amp;quot;935685fb-a896-40f9-9ff4-ae531a3a00fe&amp;quot;,
+        ProtocolPort = 8080,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.MemberArgs.html">MemberArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.Members.html">Members</a></h4>
+      <section><p>Manages a V2 members resource within OpenStack (batch members update).</p>
+<blockquote>
+<p><strong>Note:</strong> This resource works only within Octavia API. For
+legacy Neutron LBaaS v2 extension please use
+openstack.loadbalancer.Member resource.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var members1 = new OpenStack.LoadBalancer.Members(&amp;quot;members1&amp;quot;, new OpenStack.LoadBalancer.MembersArgs
+    {
+        Members = 
+        {
+            new OpenStack.LoadBalancer.Inputs.MembersMemberArgs
+            {
+                Address = &amp;quot;192.168.199.23&amp;quot;,
+                ProtocolPort = 8080,
+            },
+            new OpenStack.LoadBalancer.Inputs.MembersMemberArgs
+            {
+                Address = &amp;quot;192.168.199.24&amp;quot;,
+                ProtocolPort = 8080,
+            },
+        },
+        PoolId = &amp;quot;935685fb-a896-40f9-9ff4-ae531a3a00fe&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.MembersArgs.html">MembersArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.MembersState.html">MembersState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.MemberState.html">MemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.MemberV1.html">MemberV1</a></h4>
       <section><p>Manages a V1 load balancer member resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member1 = new OpenStack.LoadBalancer.MemberV1(&amp;quot;member1&amp;quot;, new OpenStack.LoadBalancer.MemberV1Args
+    {
+        Address = &amp;quot;192.168.0.10&amp;quot;,
+        PoolId = &amp;quot;d9415786-5f1a-428b-b35f-2f1523e146d2&amp;quot;,
+        Port = 80,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.MemberV1Args.html">MemberV1Args</a></h4>
       <section></section>
@@ -120,6 +334,26 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.Monitor.html">Monitor</a></h4>
       <section><p>Manages a V2 monitor resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var monitor1 = new OpenStack.LoadBalancer.Monitor(&amp;quot;monitor1&amp;quot;, new OpenStack.LoadBalancer.MonitorArgs
+    {
+        Delay = 20,
+        MaxRetries = 5,
+        PoolId = openstack_lb_pool_v2.Pool_1.Id,
+        Timeout = 10,
+        Type = &amp;quot;PING&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.MonitorArgs.html">MonitorArgs</a></h4>
       <section></section>
@@ -127,6 +361,26 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.MonitorV1.html">MonitorV1</a></h4>
       <section><p>Manages a V1 load balancer monitor resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var monitor1 = new OpenStack.LoadBalancer.MonitorV1(&amp;quot;monitor1&amp;quot;, new OpenStack.LoadBalancer.MonitorV1Args
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+        Delay = 30,
+        MaxRetries = 3,
+        Timeout = 5,
+        Type = &amp;quot;PING&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.MonitorV1Args.html">MonitorV1Args</a></h4>
       <section></section>
@@ -134,6 +388,29 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.Pool.html">Pool</a></h4>
       <section><p>Manages a V2 pool resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var pool1 = new OpenStack.LoadBalancer.Pool(&amp;quot;pool1&amp;quot;, new OpenStack.LoadBalancer.PoolArgs
+    {
+        LbMethod = &amp;quot;ROUND_ROBIN&amp;quot;,
+        ListenerId = &amp;quot;d9415786-5f1a-428b-b35f-2f1523e146d2&amp;quot;,
+        Persistence = new OpenStack.LoadBalancer.Inputs.PoolPersistenceArgs
+        {
+            CookieName = &amp;quot;testCookie&amp;quot;,
+            Type = &amp;quot;APP_COOKIE&amp;quot;,
+        },
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.PoolArgs.html">PoolArgs</a></h4>
       <section></section>
@@ -141,6 +418,139 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.PoolV1.html">PoolV1</a></h4>
       <section><p>Manages a V1 load balancer pool resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var pool1 = new OpenStack.LoadBalancer.PoolV1(&amp;quot;pool1&amp;quot;, new OpenStack.LoadBalancer.PoolV1Args
+    {
+        LbMethod = &amp;quot;ROUND_ROBIN&amp;quot;,
+        LbProvider = &amp;quot;haproxy&amp;quot;,
+        MonitorIds = 
+        {
+            &amp;quot;67890&amp;quot;,
+        },
+        Protocol = &amp;quot;HTTP&amp;quot;,
+        SubnetId = &amp;quot;12345&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="complete-load-balancing-stack-example">Complete Load Balancing Stack Example</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.199.0/24&amp;quot;,
+        IpVersion = 4,
+        NetworkId = network1.Id,
+    });
+    var secgroup1 = new OpenStack.Compute.SecGroup(&amp;quot;secgroup1&amp;quot;, new OpenStack.Compute.SecGroupArgs
+    {
+        Description = &amp;quot;Rules for secgroup_1&amp;quot;,
+        Rules = 
+        {
+            new OpenStack.Compute.Inputs.SecGroupRuleArgs
+            {
+                Cidr = &amp;quot;0.0.0.0/0&amp;quot;,
+                FromPort = -1,
+                IpProtocol = &amp;quot;icmp&amp;quot;,
+                ToPort = -1,
+            },
+            new OpenStack.Compute.Inputs.SecGroupRuleArgs
+            {
+                Cidr = &amp;quot;0.0.0.0/0&amp;quot;,
+                FromPort = 80,
+                IpProtocol = &amp;quot;tcp&amp;quot;,
+                ToPort = 80,
+            },
+        },
+    });
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        Networks = 
+        {
+            new OpenStack.Compute.Inputs.InstanceNetworkArgs
+            {
+                Uuid = network1.Id,
+            },
+        },
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+            secgroup1.Name,
+        },
+    });
+    var instance2 = new OpenStack.Compute.Instance(&amp;quot;instance2&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        Networks = 
+        {
+            new OpenStack.Compute.Inputs.InstanceNetworkArgs
+            {
+                Uuid = network1.Id,
+            },
+        },
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+            secgroup1.Name,
+        },
+    });
+    var monitor1 = new OpenStack.LoadBalancer.MonitorV1(&amp;quot;monitor1&amp;quot;, new OpenStack.LoadBalancer.MonitorV1Args
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+        Delay = 30,
+        MaxRetries = 3,
+        Timeout = 5,
+        Type = &amp;quot;TCP&amp;quot;,
+    });
+    var pool1 = new OpenStack.LoadBalancer.PoolV1(&amp;quot;pool1&amp;quot;, new OpenStack.LoadBalancer.PoolV1Args
+    {
+        LbMethod = &amp;quot;ROUND_ROBIN&amp;quot;,
+        MonitorIds = 
+        {
+            monitor1.Id,
+        },
+        Protocol = &amp;quot;TCP&amp;quot;,
+        SubnetId = subnet1.Id,
+    });
+    var member1 = new OpenStack.LoadBalancer.MemberV1(&amp;quot;member1&amp;quot;, new OpenStack.LoadBalancer.MemberV1Args
+    {
+        Address = instance1.AccessIpV4,
+        PoolId = pool1.Id,
+        Port = 80,
+    });
+    var member2 = new OpenStack.LoadBalancer.MemberV1(&amp;quot;member2&amp;quot;, new OpenStack.LoadBalancer.MemberV1Args
+    {
+        Address = instance2.AccessIpV4,
+        PoolId = pool1.Id,
+        Port = 80,
+    });
+    var vip1 = new OpenStack.LoadBalancer.Vip(&amp;quot;vip1&amp;quot;, new OpenStack.LoadBalancer.VipArgs
+    {
+        PoolId = pool1.Id,
+        Port = 80,
+        Protocol = &amp;quot;TCP&amp;quot;,
+        SubnetId = subnet1.Id,
+    });
+}
+
+}
+</code></pre>
 <h2 id="notes">Notes</h2>
 <p>The <code>member</code> block is deprecated in favor of the <code>openstack.loadbalancer.MemberV1</code> resource.</p>
 </section>
@@ -150,6 +560,25 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.Vip.html">Vip</a></h4>
       <section><p>Manages a V1 load balancer vip resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var vip1 = new OpenStack.LoadBalancer.Vip(&amp;quot;vip1&amp;quot;, new OpenStack.LoadBalancer.VipArgs
+    {
+        PoolId = &amp;quot;67890&amp;quot;,
+        Port = 80,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+        SubnetId = &amp;quot;12345&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.LoadBalancer.VipArgs.html">VipArgs</a></h4>
       <section></section>

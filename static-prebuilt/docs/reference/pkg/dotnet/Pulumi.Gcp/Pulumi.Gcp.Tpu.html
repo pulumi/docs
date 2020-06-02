@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Tpu
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,6 +90,26 @@
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/tpu/docs/">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---tpu-node-basic">Example Usage - TPU Node Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var available = Output.Create(Gcp.Tpu.GetTensorflowVersions.InvokeAsync());
+    var tpu = new Gcp.Tpu.Node(&amp;quot;tpu&amp;quot;, new Gcp.Tpu.NodeArgs
+    {
+        Zone = &amp;quot;us-central1-b&amp;quot;,
+        AcceleratorType = &amp;quot;v3-8&amp;quot;,
+        TensorflowVersion = available.Apply(available =&gt; available.Versions[0]),
+        CidrBlock = &amp;quot;10.2.0.0/29&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Tpu.NodeArgs.html">NodeArgs</a></h4>
       <section></section>

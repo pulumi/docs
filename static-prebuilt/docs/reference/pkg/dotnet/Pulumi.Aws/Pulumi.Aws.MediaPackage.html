@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.MediaPackage
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,23 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.MediaPackage.Channel.html">Channel</a></h4>
       <section><p>Provides an AWS Elemental MediaPackage Channel.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var kittens = new Aws.MediaPackage.Channel(&amp;quot;kittens&amp;quot;, new Aws.MediaPackage.ChannelArgs
+    {
+        ChannelId = &amp;quot;kitten-channel&amp;quot;,
+        Description = &amp;quot;A channel dedicated to amusing videos of kittens.&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.MediaPackage.ChannelArgs.html">ChannelArgs</a></h4>
       <section></section>

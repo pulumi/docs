@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Cas
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,6 +87,25 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.35.0+ .</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Add a new Certificate.
+    var cert = new AliCloud.Cas.Certificate(&amp;quot;cert&amp;quot;, new AliCloud.Cas.CertificateArgs
+    {
+        Cert = File.ReadAllText($&amp;quot;{path.Module}/test.crt&amp;quot;),
+        Key = File.ReadAllText($&amp;quot;{path.Module}/test.key&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cas.CertificateArgs.html">CertificateArgs</a></h4>
       <section></section>

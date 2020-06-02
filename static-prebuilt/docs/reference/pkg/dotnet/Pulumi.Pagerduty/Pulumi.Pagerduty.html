@@ -1,0 +1,823 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Pagerduty
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Pagerduty
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Pagerduty">
+  
+  <h1 id="Pulumi_Pagerduty" data-uid="Pulumi.Pagerduty" class="text-break">Namespace Pulumi.Pagerduty
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Pagerduty.Addon.html">Addon</a></h4>
+      <section><p>With <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Add-ons/get_addons">add-ons</a>, third-party developers can write their own add-ons to PagerDuty's UI. Given a configuration containing a src parameter, that URL will be embedded in an iframe on a page that's available to users from a drop-down menu.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Pagerduty.Addon(&amp;quot;example&amp;quot;, new Pagerduty.AddonArgs
+    {
+        Src = &amp;quot;https://intranet.example.com/status&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.AddonArgs.html">AddonArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.AddonState.html">AddonState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.BusinessService.html">BusinessService</a></h4>
+      <section><p>A <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Business_Services/get_business_services">business service</a> allows you to model capabilities that span multiple technical services and that may be owned by several different teams.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Pagerduty.BusinessService(&amp;quot;example&amp;quot;, new Pagerduty.BusinessServiceArgs
+    {
+        Description = &amp;quot;A very descriptive description of this business service&amp;quot;,
+        PointOfContact = &amp;quot;PagerDuty Admin&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.BusinessServiceArgs.html">BusinessServiceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.BusinessServiceState.html">BusinessServiceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.Config.html">Config</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.EscalationPolicy.html">EscalationPolicy</a></h4>
+      <section><p>An <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Escalation_Policies/get_escalation_policies">escalation policy</a> determines what user or schedule will be notified first, second, and so on when an incident is triggered. Escalation policies are used by one or more services.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleTeam = new Pagerduty.Team(&amp;quot;exampleTeam&amp;quot;, new Pagerduty.TeamArgs
+    {
+        Description = &amp;quot;All engineering&amp;quot;,
+    });
+    var exampleUser = new Pagerduty.User(&amp;quot;exampleUser&amp;quot;, new Pagerduty.UserArgs
+    {
+        Email = &amp;quot;125.greenholt.earline@graham.name&amp;quot;,
+        Teams = 
+        {
+            exampleTeam.Id,
+        },
+    });
+    var exampleEscalationPolicy = new Pagerduty.EscalationPolicy(&amp;quot;exampleEscalationPolicy&amp;quot;, new Pagerduty.EscalationPolicyArgs
+    {
+        NumLoops = 2,
+        Rules = 
+        {
+            new Pagerduty.Inputs.EscalationPolicyRuleArgs
+            {
+                EscalationDelayInMinutes = 10,
+                Target = 
+                {
+
+                    {
+                        { &amp;quot;id&amp;quot;, exampleUser.Id },
+                        { &amp;quot;type&amp;quot;, &amp;quot;user&amp;quot; },
+                    },
+                },
+            },
+        },
+        Teams = 
+        {
+            exampleTeam.Id,
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.EscalationPolicyArgs.html">EscalationPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.EscalationPolicyState.html">EscalationPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.EventRule.html">EventRule</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.EventRuleArgs.html">EventRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.EventRuleState.html">EventRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.Extension.html">Extension</a></h4>
+      <section><p>An <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Extensions/post_extensions">extension</a> can be associated with a service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var webhook = Output.Create(Pagerduty.GetExtensionSchema.InvokeAsync(new Pagerduty.GetExtensionSchemaArgs
+    {
+        Name = &amp;quot;Generic V2 Webhook&amp;quot;,
+    }));
+    var exampleUser = new Pagerduty.User(&amp;quot;exampleUser&amp;quot;, new Pagerduty.UserArgs
+    {
+        Email = &amp;quot;howard.james@example.domain&amp;quot;,
+        Teams = 
+        {
+            pagerduty_team.Example.Id,
+        },
+    });
+    var foo = new Pagerduty.EscalationPolicy(&amp;quot;foo&amp;quot;, new Pagerduty.EscalationPolicyArgs
+    {
+        NumLoops = 2,
+        Rules = 
+        {
+            new Pagerduty.Inputs.EscalationPolicyRuleArgs
+            {
+                EscalationDelayInMinutes = 10,
+                Target = 
+                {
+
+                    {
+                        { &amp;quot;id&amp;quot;, exampleUser.Id },
+                        { &amp;quot;type&amp;quot;, &amp;quot;user&amp;quot; },
+                    },
+                },
+            },
+        },
+    });
+    var exampleService = new Pagerduty.Service(&amp;quot;exampleService&amp;quot;, new Pagerduty.ServiceArgs
+    {
+        AcknowledgementTimeout = 600,
+        AutoResolveTimeout = 14400,
+        EscalationPolicy = pagerduty_escalation_policy.Example.Id,
+    });
+    var slack = new Pagerduty.Extension(&amp;quot;slack&amp;quot;, new Pagerduty.ExtensionArgs
+    {
+        Config = @&amp;quot;{
+&amp;quot;&amp;quot;restrict&amp;quot;&amp;quot;: &amp;quot;&amp;quot;any&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;notify_types&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;resolve&amp;quot;&amp;quot;: false,
+&amp;quot;&amp;quot;acknowledge&amp;quot;&amp;quot;: false,
+&amp;quot;&amp;quot;assignments&amp;quot;&amp;quot;: false
+},
+&amp;quot;&amp;quot;access_token&amp;quot;&amp;quot;: &amp;quot;&amp;quot;XXX&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+        EndpointUrl = &amp;quot;https://generic_webhook_url/XXXXXX/BBBBBB&amp;quot;,
+        ExtensionObjects = 
+        {
+            exampleService.Id,
+        },
+        ExtensionSchema = webhook.Apply(webhook =&gt; webhook.Id),
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ExtensionArgs.html">ExtensionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ExtensionState.html">ExtensionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetBusinessService.html">GetBusinessService</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetBusinessServiceArgs.html">GetBusinessServiceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetBusinessServiceResult.html">GetBusinessServiceResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetEscalationPolicy.html">GetEscalationPolicy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetEscalationPolicyArgs.html">GetEscalationPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetEscalationPolicyResult.html">GetEscalationPolicyResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetExtensionSchema.html">GetExtensionSchema</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetExtensionSchemaArgs.html">GetExtensionSchemaArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetExtensionSchemaResult.html">GetExtensionSchemaResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetPriority.html">GetPriority</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetPriorityArgs.html">GetPriorityArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetPriorityResult.html">GetPriorityResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetSchedule.html">GetSchedule</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetScheduleArgs.html">GetScheduleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetScheduleResult.html">GetScheduleResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetService.html">GetService</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetServiceArgs.html">GetServiceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetServiceResult.html">GetServiceResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetTeam.html">GetTeam</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetTeamArgs.html">GetTeamArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetTeamResult.html">GetTeamResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetUser.html">GetUser</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetUserArgs.html">GetUserArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetUserResult.html">GetUserResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetVendor.html">GetVendor</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetVendorArgs.html">GetVendorArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.GetVendorResult.html">GetVendorResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.MaintenanceWindow.html">MaintenanceWindow</a></h4>
+      <section><p>A <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Maintenance_Windows/get_maintenance_windows">maintenance window</a> is used to temporarily disable one or more services for a set period of time. No incidents will be triggered and no notifications will be received while a service is disabled by a maintenance window.</p>
+<p>Maintenance windows are specified to start at a certain time and end after they have begun. Once started, a maintenance window cannot be deleted; it can only be ended immediately to re-enable the service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Pagerduty.MaintenanceWindow(&amp;quot;example&amp;quot;, new Pagerduty.MaintenanceWindowArgs
+    {
+        EndTime = &amp;quot;2015-11-09T22:00:00-05:00&amp;quot;,
+        Services = 
+        {
+            pagerduty_service.Example.Id,
+        },
+        StartTime = &amp;quot;2015-11-09T20:00:00-05:00&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.MaintenanceWindowArgs.html">MaintenanceWindowArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.MaintenanceWindowState.html">MaintenanceWindowState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.Provider.html">Provider</a></h4>
+      <section><p>The provider type for the pagerduty package. By default, resources use package-wide configuration
+settings, however an explicit <code>Provider</code> instance may be created and passed during resource
+construction to achieve fine-grained programmatic control over provider settings. See the
+<a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ProviderArgs.html">ProviderArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.Ruleset.html">Ruleset</a></h4>
+      <section><p><a href="https://support.pagerduty.com/docs/rulesets">Rulesets</a> allow you to route events to an endpoint and create collections of event rules, which define sets of actions to take based on event content.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fooTeam = new Pagerduty.Team(&amp;quot;fooTeam&amp;quot;, new Pagerduty.TeamArgs
+    {
+    });
+    var fooRuleset = new Pagerduty.Ruleset(&amp;quot;fooRuleset&amp;quot;, new Pagerduty.RulesetArgs
+    {
+        Team = new Pagerduty.Inputs.RulesetTeamArgs
+        {
+            Id = fooTeam.Id,
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.RulesetArgs.html">RulesetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.RulesetRule.html">RulesetRule</a></h4>
+      <section><p>An <a href="https://support.pagerduty.com/docs/rulesets#section-create-event-rules">event rule</a> allows you to set actions that should be taken on events that meet your designated rule criteria.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.RulesetRuleArgs.html">RulesetRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.RulesetRuleState.html">RulesetRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.RulesetState.html">RulesetState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.Schedule.html">Schedule</a></h4>
+      <section><p>A <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Schedules/get_schedules">schedule</a> determines the time periods that users are on call. Only on-call users are eligible to receive notifications from incidents.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Pagerduty.User(&amp;quot;example&amp;quot;, new Pagerduty.UserArgs
+    {
+        Email = &amp;quot;125.greenholt.earline@graham.name&amp;quot;,
+        Teams = 
+        {
+            pagerduty_team.Example.Id,
+        },
+    });
+    var foo = new Pagerduty.Schedule(&amp;quot;foo&amp;quot;, new Pagerduty.ScheduleArgs
+    {
+        Layers = 
+        {
+            new Pagerduty.Inputs.ScheduleLayerArgs
+            {
+                Name = &amp;quot;Night Shift&amp;quot;,
+                Restriction = 
+                {
+
+                    {
+                        { &amp;quot;durationSeconds&amp;quot;, 32400 },
+                        { &amp;quot;startTimeOfDay&amp;quot;, &amp;quot;08:00:00&amp;quot; },
+                        { &amp;quot;type&amp;quot;, &amp;quot;daily_restriction&amp;quot; },
+                    },
+                },
+                RotationTurnLengthSeconds = 86400,
+                RotationVirtualStart = &amp;quot;2015-11-06T20:00:00-05:00&amp;quot;,
+                Start = &amp;quot;2015-11-06T20:00:00-05:00&amp;quot;,
+                Users = 
+                {
+                    pagerduty_user.Foo.Id,
+                },
+            },
+        },
+        TimeZone = &amp;quot;America/New_York&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ScheduleArgs.html">ScheduleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ScheduleState.html">ScheduleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.Service.html">Service</a></h4>
+      <section><p>A <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/get_services">service</a> represents something you monitor (like a web service, email service, or database service). It is a container for related incidents that associates them with escalation policies.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleUser = new Pagerduty.User(&amp;quot;exampleUser&amp;quot;, new Pagerduty.UserArgs
+    {
+        Email = &amp;quot;125.greenholt.earline@graham.name&amp;quot;,
+        Teams = 
+        {
+            pagerduty_team.Example.Id,
+        },
+    });
+    var foo = new Pagerduty.EscalationPolicy(&amp;quot;foo&amp;quot;, new Pagerduty.EscalationPolicyArgs
+    {
+        NumLoops = 2,
+        Rules = 
+        {
+            new Pagerduty.Inputs.EscalationPolicyRuleArgs
+            {
+                EscalationDelayInMinutes = 10,
+                Target = 
+                {
+
+                    {
+                        { &amp;quot;id&amp;quot;, exampleUser.Id },
+                        { &amp;quot;type&amp;quot;, &amp;quot;user&amp;quot; },
+                    },
+                },
+            },
+        },
+    });
+    var exampleService = new Pagerduty.Service(&amp;quot;exampleService&amp;quot;, new Pagerduty.ServiceArgs
+    {
+        AcknowledgementTimeout = 600,
+        AlertCreation = &amp;quot;create_incidents&amp;quot;,
+        AutoResolveTimeout = 14400,
+        EscalationPolicy = pagerduty_escalation_policy.Example.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ServiceArgs.html">ServiceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ServiceDependency.html">ServiceDependency</a></h4>
+      <section><p>A <a href="https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/%7E1service_dependencies%7E1associate/post">service dependency</a> is a relationship between a business service and technical and business services that this service uses, or that are used by this service, and are critical for successful operation.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ServiceDependencyArgs.html">ServiceDependencyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ServiceDependencyState.html">ServiceDependencyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ServiceIntegration.html">ServiceIntegration</a></h4>
+      <section><p>A <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/post_services_id_integrations">service integration</a> is an integration that belongs to a service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleUser = new Pagerduty.User(&amp;quot;exampleUser&amp;quot;, new Pagerduty.UserArgs
+    {
+        Email = &amp;quot;125.greenholt.earline@graham.name&amp;quot;,
+        Teams = 
+        {
+            pagerduty_team.Example.Id,
+        },
+    });
+    var foo = new Pagerduty.EscalationPolicy(&amp;quot;foo&amp;quot;, new Pagerduty.EscalationPolicyArgs
+    {
+        NumLoops = 2,
+        Rules = 
+        {
+            new Pagerduty.Inputs.EscalationPolicyRuleArgs
+            {
+                EscalationDelayInMinutes = 10,
+                Target = 
+                {
+
+                    {
+                        { &amp;quot;id&amp;quot;, exampleUser.Id },
+                        { &amp;quot;type&amp;quot;, &amp;quot;user&amp;quot; },
+                    },
+                },
+            },
+        },
+    });
+    var exampleService = new Pagerduty.Service(&amp;quot;exampleService&amp;quot;, new Pagerduty.ServiceArgs
+    {
+        AcknowledgementTimeout = 600,
+        AutoResolveTimeout = 14400,
+        EscalationPolicy = pagerduty_escalation_policy.Example.Id,
+    });
+    var exampleServiceIntegration = new Pagerduty.ServiceIntegration(&amp;quot;exampleServiceIntegration&amp;quot;, new Pagerduty.ServiceIntegrationArgs
+    {
+        Service = exampleService.Id,
+        Type = &amp;quot;generic_events_api_inbound_integration&amp;quot;,
+    });
+    var datadogVendor = Output.Create(Pagerduty.GetVendor.InvokeAsync(new Pagerduty.GetVendorArgs
+    {
+        Name = &amp;quot;Datadog&amp;quot;,
+    }));
+    var datadogServiceIntegration = new Pagerduty.ServiceIntegration(&amp;quot;datadogServiceIntegration&amp;quot;, new Pagerduty.ServiceIntegrationArgs
+    {
+        Service = exampleService.Id,
+        Vendor = datadogVendor.Apply(datadogVendor =&gt; datadogVendor.Id),
+    });
+    var cloudwatchVendor = Output.Create(Pagerduty.GetVendor.InvokeAsync(new Pagerduty.GetVendorArgs
+    {
+        Name = &amp;quot;Cloudwatch&amp;quot;,
+    }));
+    var cloudwatchServiceIntegration = new Pagerduty.ServiceIntegration(&amp;quot;cloudwatchServiceIntegration&amp;quot;, new Pagerduty.ServiceIntegrationArgs
+    {
+        Service = exampleService.Id,
+        Vendor = cloudwatchVendor.Apply(cloudwatchVendor =&gt; cloudwatchVendor.Id),
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ServiceIntegrationArgs.html">ServiceIntegrationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ServiceIntegrationState.html">ServiceIntegrationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.ServiceState.html">ServiceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.Team.html">Team</a></h4>
+      <section><p>A <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Teams/get_teams">team</a> is a collection of users and escalation policies that represent a group of people within an organization.</p>
+<p>The account must have the <code>teams</code> ability to use the following resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Pagerduty.Team(&amp;quot;example&amp;quot;, new Pagerduty.TeamArgs
+    {
+        Description = &amp;quot;All engineering&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.TeamArgs.html">TeamArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.TeamMembership.html">TeamMembership</a></h4>
+      <section><p>A <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Teams/put_teams_id_users_user_id">team membership</a> manages memberships within a team.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fooUser = new Pagerduty.User(&amp;quot;fooUser&amp;quot;, new Pagerduty.UserArgs
+    {
+        Email = &amp;quot;foo@bar.com&amp;quot;,
+    });
+    var fooTeam = new Pagerduty.Team(&amp;quot;fooTeam&amp;quot;, new Pagerduty.TeamArgs
+    {
+        Description = &amp;quot;foo&amp;quot;,
+    });
+    var fooTeamMembership = new Pagerduty.TeamMembership(&amp;quot;fooTeamMembership&amp;quot;, new Pagerduty.TeamMembershipArgs
+    {
+        Role = &amp;quot;manager&amp;quot;,
+        TeamId = fooTeam.Id,
+        UserId = fooUser.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.TeamMembershipArgs.html">TeamMembershipArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.TeamMembershipState.html">TeamMembershipState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.TeamState.html">TeamState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.User.html">User</a></h4>
+      <section><p>A <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users">user</a> is a member of a PagerDuty account that have the ability to interact with incidents and other data on the account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Pagerduty.User(&amp;quot;example&amp;quot;, new Pagerduty.UserArgs
+    {
+        Email = &amp;quot;125.greenholt.earline@graham.name&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.UserArgs.html">UserArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.UserContactMethod.html">UserContactMethod</a></h4>
+      <section><p>A <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_contact_methods">contact method</a> is a contact method for a PagerDuty user (email, phone or SMS).</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Pagerduty.User(&amp;quot;example&amp;quot;, new Pagerduty.UserArgs
+    {
+        Email = &amp;quot;125.greenholt.earline@graham.name&amp;quot;,
+        Teams = 
+        {
+            pagerduty_team.Example.Id,
+        },
+    });
+    var email = new Pagerduty.UserContactMethod(&amp;quot;email&amp;quot;, new Pagerduty.UserContactMethodArgs
+    {
+        Address = &amp;quot;foo@bar.com&amp;quot;,
+        Label = &amp;quot;Work&amp;quot;,
+        Type = &amp;quot;email_contact_method&amp;quot;,
+        UserId = example.Id,
+    });
+    var phone = new Pagerduty.UserContactMethod(&amp;quot;phone&amp;quot;, new Pagerduty.UserContactMethodArgs
+    {
+        Address = &amp;quot;2025550199&amp;quot;,
+        CountryCode = &amp;quot;+1&amp;quot;,
+        Label = &amp;quot;Work&amp;quot;,
+        Type = &amp;quot;phone_contact_method&amp;quot;,
+        UserId = example.Id,
+    });
+    var sms = new Pagerduty.UserContactMethod(&amp;quot;sms&amp;quot;, new Pagerduty.UserContactMethodArgs
+    {
+        Address = &amp;quot;2025550199&amp;quot;,
+        CountryCode = &amp;quot;+1&amp;quot;,
+        Label = &amp;quot;Work&amp;quot;,
+        Type = &amp;quot;sms_contact_method&amp;quot;,
+        UserId = example.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.UserContactMethodArgs.html">UserContactMethodArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.UserContactMethodState.html">UserContactMethodState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.UserNotificationRule.html">UserNotificationRule</a></h4>
+      <section><p>A <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_notification_rules_notification_rule_id">notification rule</a> configures where and when a PagerDuty user is notified when a triggered incident is assigned to him. Unique notification rules can be created for both high and low-urgency incidents.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Pagerduty.User(&amp;quot;example&amp;quot;, new Pagerduty.UserArgs
+    {
+        Email = &amp;quot;125.greenholt.earline@graham.name&amp;quot;,
+    });
+    var email = new Pagerduty.UserContactMethod(&amp;quot;email&amp;quot;, new Pagerduty.UserContactMethodArgs
+    {
+        UserId = example.Id,
+        Type = &amp;quot;email_contact_method&amp;quot;,
+        Address = &amp;quot;foo@bar.com&amp;quot;,
+        Label = &amp;quot;Work&amp;quot;,
+    });
+    var phone = new Pagerduty.UserContactMethod(&amp;quot;phone&amp;quot;, new Pagerduty.UserContactMethodArgs
+    {
+        UserId = example.Id,
+        Type = &amp;quot;phone_contact_method&amp;quot;,
+        CountryCode = &amp;quot;+1&amp;quot;,
+        Address = &amp;quot;2025550199&amp;quot;,
+        Label = &amp;quot;Work&amp;quot;,
+    });
+    var sms = new Pagerduty.UserContactMethod(&amp;quot;sms&amp;quot;, new Pagerduty.UserContactMethodArgs
+    {
+        UserId = example.Id,
+        Type = &amp;quot;sms_contact_method&amp;quot;,
+        CountryCode = &amp;quot;+1&amp;quot;,
+        Address = &amp;quot;2025550199&amp;quot;,
+        Label = &amp;quot;Work&amp;quot;,
+    });
+    var highUrgencyPhone = new Pagerduty.UserNotificationRule(&amp;quot;highUrgencyPhone&amp;quot;, new Pagerduty.UserNotificationRuleArgs
+    {
+        UserId = example.Id,
+        StartDelayInMinutes = 1,
+        Urgency = &amp;quot;high&amp;quot;,
+        ContactMethod = new Pagerduty.Inputs.UserNotificationRuleContactMethodArgs
+        {
+            Type = &amp;quot;phone_contact_method&amp;quot;,
+            Id = phone.Id,
+        },
+    });
+    var lowUrgencyEmail = new Pagerduty.UserNotificationRule(&amp;quot;lowUrgencyEmail&amp;quot;, new Pagerduty.UserNotificationRuleArgs
+    {
+        UserId = example.Id,
+        StartDelayInMinutes = 1,
+        Urgency = &amp;quot;low&amp;quot;,
+        ContactMethod = new Pagerduty.Inputs.UserNotificationRuleContactMethodArgs
+        {
+            Type = &amp;quot;email_contact_method&amp;quot;,
+            Id = email.Id,
+        },
+    });
+    var lowUrgencySms = new Pagerduty.UserNotificationRule(&amp;quot;lowUrgencySms&amp;quot;, new Pagerduty.UserNotificationRuleArgs
+    {
+        UserId = example.Id,
+        StartDelayInMinutes = 10,
+        Urgency = &amp;quot;low&amp;quot;,
+        ContactMethod = new Pagerduty.Inputs.UserNotificationRuleContactMethodArgs
+        {
+            Type = &amp;quot;sms_contact_method&amp;quot;,
+            Id = sms.Id,
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.UserNotificationRuleArgs.html">UserNotificationRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.UserNotificationRuleState.html">UserNotificationRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Pagerduty.UserState.html">UserState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

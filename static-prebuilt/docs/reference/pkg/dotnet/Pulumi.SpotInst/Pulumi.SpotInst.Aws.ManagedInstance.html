@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ManagedInstance
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,6 +72,48 @@
   <h1 id="Pulumi_SpotInst_Aws_ManagedInstance" data-uid="Pulumi.SpotInst.Aws.ManagedInstance" class="text-break">Class ManagedInstance
   </h1>
   <div class="markdown level0 summary"><p>Provides a Spotinst AWS ManagedInstance resource.</p>
+<h2 id="network-interface---optional-list-of-network-interfaces-in-an-ec2-instance">Network Interface - (Optional) List of network interfaces in an EC2 instance.</h2>
+<ul>
+<li><code>device_index</code> - (Optional) The position of the network interface in the attachment order. A primary network interface has a device index of 0. If you specify a network interface when launching an instance, you must specify the device index.</li>
+<li><code>associate_public_ip_address</code> - (Optional) Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one. You cannot specify more than one network interface in the request. If launching into a default subnet, the default value is true.</li>
+<li><code>associate_ipv6_address</code> - (Optional) Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet.
+Default: false</li>
+</ul>
+<p>Usage:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;scheduled-task&quot;&gt;&lt;/a&gt;</p>
+<h2 id="scheduled-tasks">Scheduled Tasks</h2>
+<p>Each <code>scheduled_task</code> supports the following:</p>
+<ul>
+<li><code>is_enabled</code> - (Optional) Describes whether the task is enabled. When true the task should run when false it should not run.</li>
+<li><code>frequency</code> - (Optional) Set frequency for the task. Valid values: &quot;hourly&quot;, &quot;daily&quot;, &quot;weekly&quot;, &quot;continuous&quot;.</li>
+<li><code>start_time</code> - (Optional) DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If &quot;frequency&quot; or &quot;cronExpression&quot; are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
+Example: 2019-05-23T10:55:09Z</li>
+<li><code>cron_expression</code> - (Optional) A valid cron expression. For example : &quot; * * * * * &quot;. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
+Example: 0 1 * * *</li>
+<li><code>task_type</code>- (Required) The task type to run. Valid Values: &quot;pause&quot;, &quot;resume&quot;, &quot;recycle&quot;.</li>
+</ul>
+<p>Usage:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;load-balancers&quot;&gt;&lt;/a&gt;</p>
 <h2 id="load-balancers">Load Balancers</h2>
 <ul>
 <li><code>loadBalancersConfig</code> - (Optional) LB integration object.
@@ -105,7 +147,45 @@ Default: ts-123456
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ManagedInstance</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ManagedInstance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.SpotInst.Aws.html">Pulumi.SpotInst.Aws</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.SpotInst.dll</h6>
@@ -116,16 +196,16 @@ Default: ts-123456
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L283">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L332">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance__ctor_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.#ctor*"></a>
-  <h4 id="Pulumi_SpotInst_Aws_ManagedInstance__ctor_System_String_Pulumi_SpotInst_Aws_ManagedInstanceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.#ctor(System.String,Pulumi.SpotInst.Aws.ManagedInstanceArgs,System.Nullable{CustomResourceOptions})">ManagedInstance(String, ManagedInstanceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_SpotInst_Aws_ManagedInstance__ctor_System_String_Pulumi_SpotInst_Aws_ManagedInstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.#ctor(System.String,Pulumi.SpotInst.Aws.ManagedInstanceArgs,Pulumi.CustomResourceOptions)">ManagedInstance(String, ManagedInstanceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ManagedInstance resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManagedInstance(string name, ManagedInstanceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ManagedInstance(string name, ManagedInstanceArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,7 +230,7 @@ Default: ts-123456
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -160,7 +240,7 @@ Default: ts-123456
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_AutoHealing_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.AutoHealing*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_AutoHealing" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.AutoHealing">AutoHealing</h4>
@@ -181,13 +261,13 @@ Default: ts-123456
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_BlockDevicesMode_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.BlockDevicesMode*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_BlockDevicesMode" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.BlockDevicesMode">BlockDevicesMode</h4>
@@ -197,7 +277,7 @@ Default: <code>&amp;quot;onLaunch&amp;quot;</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BlockDevicesMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; BlockDevicesMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +289,13 @@ Default: <code>&amp;quot;onLaunch&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_CpuCredits_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.CpuCredits*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_CpuCredits" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.CpuCredits">CpuCredits</h4>
@@ -225,7 +305,7 @@ Default: unlimited</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CpuCredits { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CpuCredits { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +317,13 @@ Default: unlimited</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_Description_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Description*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_Description" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Description">Description</h4>
@@ -252,7 +332,7 @@ Default: unlimited</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,13 +344,13 @@ Default: unlimited</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_DrainingTimeout_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.DrainingTimeout*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_DrainingTimeout" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.DrainingTimeout">DrainingTimeout</h4>
@@ -291,13 +371,13 @@ Default: unlimited</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_EbsOptimized_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.EbsOptimized*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_EbsOptimized" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.EbsOptimized">EbsOptimized</h4>
@@ -319,13 +399,13 @@ Default: false</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_ElasticIp_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.ElasticIp*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_ElasticIp" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.ElasticIp">ElasticIp</h4>
@@ -334,7 +414,7 @@ Default: false</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ElasticIp { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ElasticIp { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -346,13 +426,13 @@ Default: false</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_EnableMonitoring_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.EnableMonitoring*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_EnableMonitoring" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.EnableMonitoring">EnableMonitoring</h4>
@@ -374,13 +454,13 @@ Default: false</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L148">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_FallBackToOd_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.FallBackToOd*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_FallBackToOd" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.FallBackToOd">FallBackToOd</h4>
@@ -400,13 +480,13 @@ Default: false</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_GracePeriod_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.GracePeriod*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_GracePeriod" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.GracePeriod">GracePeriod</h4>
@@ -427,13 +507,13 @@ Default: false</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_HealthCheckType_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.HealthCheckType*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_HealthCheckType" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.HealthCheckType">HealthCheckType</h4>
@@ -443,7 +523,7 @@ Default: <code>“EC2”</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HealthCheckType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthCheckType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -455,13 +535,13 @@ Default: <code>“EC2”</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_IamInstanceProfile_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.IamInstanceProfile*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_IamInstanceProfile" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.IamInstanceProfile">IamInstanceProfile</h4>
@@ -470,7 +550,7 @@ Default: <code>“EC2”</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IamInstanceProfile { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IamInstanceProfile { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -482,13 +562,13 @@ Default: <code>“EC2”</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_ImageId_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.ImageId*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_ImageId" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.ImageId">ImageId</h4>
@@ -509,13 +589,13 @@ Default: <code>“EC2”</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_InstanceTypes_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.InstanceTypes*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_InstanceTypes" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.InstanceTypes">InstanceTypes</h4>
@@ -536,13 +616,13 @@ Default: <code>“EC2”</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_IntegrationRoute53_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.IntegrationRoute53*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_IntegrationRoute53" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.IntegrationRoute53">IntegrationRoute53</h4>
@@ -562,13 +642,13 @@ Default: <code>“EC2”</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceIntegrationRoute53.html">ManagedInstanceIntegrationRoute53</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceIntegrationRoute53.html">ManagedInstanceIntegrationRoute53</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_KeyPair_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.KeyPair*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_KeyPair" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.KeyPair">KeyPair</h4>
@@ -577,7 +657,7 @@ Default: <code>“EC2”</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KeyPair { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KeyPair { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -589,13 +669,13 @@ Default: <code>“EC2”</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_LifeCycle_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.LifeCycle*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_LifeCycle" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.LifeCycle">LifeCycle</h4>
@@ -605,7 +685,7 @@ Default <code>&amp;quot;spot&amp;quot;</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LifeCycle { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LifeCycle { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -617,13 +697,13 @@ Default <code>&amp;quot;spot&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L198">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_LoadBalancers_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.LoadBalancers*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_LoadBalancers" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.LoadBalancers">LoadBalancers</h4>
@@ -643,13 +723,13 @@ Default <code>&amp;quot;spot&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceLoadBalancer.html">ManagedInstanceLoadBalancer</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceLoadBalancer.html">ManagedInstanceLoadBalancer</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_Name_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Name*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_Name" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Name">Name</h4>
@@ -670,13 +750,13 @@ Default <code>&amp;quot;spot&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_NetworkInterfaces_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.NetworkInterfaces*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_NetworkInterfaces" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.NetworkInterfaces">NetworkInterfaces</h4>
@@ -696,13 +776,13 @@ Default <code>&amp;quot;spot&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceNetworkInterface.html">ManagedInstanceNetworkInterface</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceNetworkInterface.html">ManagedInstanceNetworkInterface</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_OptimizationWindows_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.OptimizationWindows*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_OptimizationWindows" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.OptimizationWindows">OptimizationWindows</h4>
@@ -723,13 +803,13 @@ Default <code>&amp;quot;spot&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L220">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_Orientation_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Orientation*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_Orientation" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Orientation">Orientation</h4>
@@ -739,7 +819,7 @@ Default: <code>&amp;quot;availabilityOriented&amp;quot;</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Orientation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Orientation { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -751,13 +831,13 @@ Default: <code>&amp;quot;availabilityOriented&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L226">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_PersistBlockDevices_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PersistBlockDevices*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_PersistBlockDevices" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PersistBlockDevices">PersistBlockDevices</h4>
@@ -778,13 +858,13 @@ Default: <code>&amp;quot;availabilityOriented&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L183">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_PersistPrivateIp_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PersistPrivateIp*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_PersistPrivateIp" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PersistPrivateIp">PersistPrivateIp</h4>
@@ -805,13 +885,13 @@ Default: <code>&amp;quot;availabilityOriented&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L238">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_PersistRootDevice_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PersistRootDevice*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_PersistRootDevice" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PersistRootDevice">PersistRootDevice</h4>
@@ -832,13 +912,13 @@ Default: <code>&amp;quot;availabilityOriented&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L245">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_PlacementTenancy_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PlacementTenancy*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_PlacementTenancy" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PlacementTenancy">PlacementTenancy</h4>
@@ -848,7 +928,7 @@ Default: default</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PlacementTenancy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PlacementTenancy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -860,13 +940,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L202">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L251">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_PreferredType_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PreferredType*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_PreferredType" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PreferredType">PreferredType</h4>
@@ -875,7 +955,7 @@ Default: default</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PreferredType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PreferredType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -887,13 +967,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L208">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L257">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_PrivateIp_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PrivateIp*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_PrivateIp" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.PrivateIp">PrivateIp</h4>
@@ -902,7 +982,7 @@ Default: default</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PrivateIp { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrivateIp { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -914,13 +994,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L214">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L263">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_Product_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Product*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_Product" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Product">Product</h4>
@@ -941,13 +1021,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L220">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L269">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_Region_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Region*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_Region" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Region">Region</h4>
@@ -956,7 +1036,7 @@ Default: default</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Region { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -968,13 +1048,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L272">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_RevertToSpot_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.RevertToSpot*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_RevertToSpot" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.RevertToSpot">RevertToSpot</h4>
@@ -994,13 +1074,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceRevertToSpot.html">ManagedInstanceRevertToSpot</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceRevertToSpot.html">ManagedInstanceRevertToSpot</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L226">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L275">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_ScheduledTasks_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.ScheduledTasks*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_ScheduledTasks" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.ScheduledTasks">ScheduledTasks</h4>
@@ -1020,13 +1100,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceScheduledTask.html">ManagedInstanceScheduledTask</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceScheduledTask.html">ManagedInstanceScheduledTask</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L232">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L281">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_SecurityGroupIds_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.SecurityGroupIds*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_SecurityGroupIds" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.SecurityGroupIds">SecurityGroupIds</h4>
@@ -1047,13 +1127,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L238">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L287">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_ShutdownScript_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.ShutdownScript*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_ShutdownScript" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.ShutdownScript">ShutdownScript</h4>
@@ -1062,7 +1142,7 @@ Default: default</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ShutdownScript { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ShutdownScript { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1074,13 +1154,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L244">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L293">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_SubnetIds_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.SubnetIds*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_SubnetIds" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.SubnetIds">SubnetIds</h4>
@@ -1101,13 +1181,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L250">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L299">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_Tags_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Tags*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_Tags" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Tags">Tags</h4>
@@ -1128,13 +1208,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceTag.html">ManagedInstanceTag</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.ManagedInstanceTag.html">ManagedInstanceTag</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L305">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_UnhealthyDuration_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.UnhealthyDuration*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_UnhealthyDuration" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.UnhealthyDuration">UnhealthyDuration</h4>
@@ -1155,13 +1235,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L262">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L311">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_UserData_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.UserData*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_UserData" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.UserData">UserData</h4>
@@ -1170,7 +1250,7 @@ Default: default</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserData { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1182,13 +1262,13 @@ Default: default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L269">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L318">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_UtilizeReservedInstances_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.UtilizeReservedInstances*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_UtilizeReservedInstances" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.UtilizeReservedInstances">UtilizeReservedInstances</h4>
@@ -1210,13 +1290,13 @@ Default: <code>&amp;quot;false&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L272">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L321">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_VpcId_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.VpcId*"></a>
   <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_VpcId" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.VpcId">VpcId</h4>
@@ -1236,7 +1316,7 @@ Default: <code>&amp;quot;false&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1244,17 +1324,17 @@ Default: <code>&amp;quot;false&amp;quot;</code>.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L313">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L362">View Source</a>
   </span>
   <a id="Pulumi_SpotInst_Aws_ManagedInstance_Get_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Get*"></a>
-  <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_Get_System_String_Input_System_String__Pulumi_SpotInst_Aws_ManagedInstanceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Get(System.String,Input{System.String},Pulumi.SpotInst.Aws.ManagedInstanceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ManagedInstanceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_SpotInst_Aws_ManagedInstance_Get_System_String_Pulumi_Input_System_String__Pulumi_SpotInst_Aws_ManagedInstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.SpotInst.Aws.ManagedInstance.Get(System.String,Pulumi.Input{System.String},Pulumi.SpotInst.Aws.ManagedInstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ManagedInstanceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ManagedInstance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ManagedInstance Get(string name, Input&lt;string&gt; id, ManagedInstanceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ManagedInstance Get(string name, Input&lt;string&gt; id, ManagedInstanceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1273,7 +1353,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1285,7 +1365,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1314,7 +1394,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-spotinst/blob/bbd2964daa900852c619723f84aac76589fabcbf/sdk/dotnet/Aws/ManagedInstance.cs/#L45" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/ManagedInstance.cs/#L94" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

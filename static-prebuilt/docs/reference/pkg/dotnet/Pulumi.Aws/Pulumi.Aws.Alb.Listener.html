@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Listener
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,249 @@
 <blockquote>
 <p><strong>Note:</strong> <code>aws.alb.Listener</code> is known as <code>aws.lb.Listener</code>. The functionality is identical.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="forward-action">Forward Action</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndTargetGroup = new Aws.LB.TargetGroup(&amp;quot;frontEndTargetGroup&amp;quot;, new Aws.LB.TargetGroupArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        CertificateArn = &amp;quot;arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4&amp;quot;,
+        DefaultActions = 
+        {
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                TargetGroupArn = frontEndTargetGroup.Arn,
+                Type = &amp;quot;forward&amp;quot;,
+            },
+        },
+        LoadBalancerArn = frontEndLoadBalancer.Arn,
+        Port = &amp;quot;443&amp;quot;,
+        Protocol = &amp;quot;HTTPS&amp;quot;,
+        SslPolicy = &amp;quot;ELBSecurityPolicy-2016-08&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="redirect-action">Redirect Action</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        DefaultActions = 
+        {
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                Redirect = new Aws.LB.Inputs.ListenerDefaultActionRedirectArgs
+                {
+                    Port = &amp;quot;443&amp;quot;,
+                    Protocol = &amp;quot;HTTPS&amp;quot;,
+                    StatusCode = &amp;quot;HTTP_301&amp;quot;,
+                },
+                Type = &amp;quot;redirect&amp;quot;,
+            },
+        },
+        LoadBalancerArn = frontEndLoadBalancer.Arn,
+        Port = &amp;quot;80&amp;quot;,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="fixed-response-action">Fixed-response Action</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        DefaultActions = 
+        {
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                FixedResponse = new Aws.LB.Inputs.ListenerDefaultActionFixedResponseArgs
+                {
+                    ContentType = &amp;quot;text/plain&amp;quot;,
+                    MessageBody = &amp;quot;Fixed response content&amp;quot;,
+                    StatusCode = &amp;quot;200&amp;quot;,
+                },
+                Type = &amp;quot;fixed-response&amp;quot;,
+            },
+        },
+        LoadBalancerArn = frontEndLoadBalancer.Arn,
+        Port = &amp;quot;80&amp;quot;,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="authenticate-cognito-action">Authenticate-cognito Action</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndTargetGroup = new Aws.LB.TargetGroup(&amp;quot;frontEndTargetGroup&amp;quot;, new Aws.LB.TargetGroupArgs
+    {
+    });
+    var pool = new Aws.Cognito.UserPool(&amp;quot;pool&amp;quot;, new Aws.Cognito.UserPoolArgs
+    {
+    });
+    var client = new Aws.Cognito.UserPoolClient(&amp;quot;client&amp;quot;, new Aws.Cognito.UserPoolClientArgs
+    {
+    });
+    var domain = new Aws.Cognito.UserPoolDomain(&amp;quot;domain&amp;quot;, new Aws.Cognito.UserPoolDomainArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        DefaultActions = 
+        {
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                AuthenticateCognito = new Aws.LB.Inputs.ListenerDefaultActionAuthenticateCognitoArgs
+                {
+                    UserPoolArn = pool.Arn,
+                    UserPoolClientId = client.Id,
+                    UserPoolDomain = domain.Domain,
+                },
+                Type = &amp;quot;authenticate-cognito&amp;quot;,
+            },
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                TargetGroupArn = frontEndTargetGroup.Arn,
+                Type = &amp;quot;forward&amp;quot;,
+            },
+        },
+        LoadBalancerArn = frontEndLoadBalancer.Arn,
+        Port = &amp;quot;80&amp;quot;,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="authenticate-oidc-action">Authenticate-oidc Action</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var frontEndLoadBalancer = new Aws.LB.LoadBalancer(&amp;quot;frontEndLoadBalancer&amp;quot;, new Aws.LB.LoadBalancerArgs
+    {
+    });
+    var frontEndTargetGroup = new Aws.LB.TargetGroup(&amp;quot;frontEndTargetGroup&amp;quot;, new Aws.LB.TargetGroupArgs
+    {
+    });
+    var frontEndListener = new Aws.LB.Listener(&amp;quot;frontEndListener&amp;quot;, new Aws.LB.ListenerArgs
+    {
+        DefaultActions = 
+        {
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                AuthenticateOidc = new Aws.LB.Inputs.ListenerDefaultActionAuthenticateOidcArgs
+                {
+                    AuthorizationEndpoint = &amp;quot;https://example.com/authorization_endpoint&amp;quot;,
+                    ClientId = &amp;quot;client_id&amp;quot;,
+                    ClientSecret = &amp;quot;client_secret&amp;quot;,
+                    Issuer = &amp;quot;https://example.com&amp;quot;,
+                    TokenEndpoint = &amp;quot;https://example.com/token_endpoint&amp;quot;,
+                    UserInfoEndpoint = &amp;quot;https://example.com/user_info_endpoint&amp;quot;,
+                },
+                Type = &amp;quot;authenticate-oidc&amp;quot;,
+            },
+            new Aws.LB.Inputs.ListenerDefaultActionArgs
+            {
+                TargetGroupArn = frontEndTargetGroup.Arn,
+                Type = &amp;quot;forward&amp;quot;,
+            },
+        },
+        LoadBalancerArn = frontEndLoadBalancer.Arn,
+        Port = &amp;quot;80&amp;quot;,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Listener</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Listener</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Alb.html">Pulumi.Aws.Alb</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -91,16 +328,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Listener.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Alb/Listener.cs/#L284">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Listener__ctor_" data-uid="Pulumi.Aws.Alb.Listener.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Alb_Listener__ctor_System_String_Pulumi_Aws_Alb_ListenerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Alb.Listener.#ctor(System.String,Pulumi.Aws.Alb.ListenerArgs,System.Nullable{CustomResourceOptions})">Listener(String, ListenerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Alb_Listener__ctor_System_String_Pulumi_Aws_Alb_ListenerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Alb.Listener.#ctor(System.String,Pulumi.Aws.Alb.ListenerArgs,Pulumi.CustomResourceOptions)">Listener(String, ListenerArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Listener resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Listener(string name, ListenerArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Listener(string name, ListenerArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +362,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +372,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Listener.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Alb/Listener.cs/#L237">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Listener_Arn_" data-uid="Pulumi.Aws.Alb.Listener.Arn*"></a>
   <h4 id="Pulumi_Aws_Alb_Listener_Arn" data-uid="Pulumi.Aws.Alb.Listener.Arn">Arn</h4>
@@ -156,13 +393,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Listener.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Alb/Listener.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Listener_CertificateArn_" data-uid="Pulumi.Aws.Alb.Listener.CertificateArn*"></a>
   <h4 id="Pulumi_Aws_Alb_Listener_CertificateArn" data-uid="Pulumi.Aws.Alb.Listener.CertificateArn">CertificateArn</h4>
@@ -171,7 +408,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CertificateArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificateArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +420,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Listener.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Alb/Listener.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Listener_DefaultActions_" data-uid="Pulumi.Aws.Alb.Listener.DefaultActions*"></a>
   <h4 id="Pulumi_Aws_Alb_Listener_DefaultActions" data-uid="Pulumi.Aws.Alb.Listener.DefaultActions">DefaultActions</h4>
@@ -210,13 +447,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Alb.Outputs.ListenerDefaultAction.html">ListenerDefaultAction</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Alb.Outputs.ListenerDefaultAction.html">ListenerDefaultAction</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Listener.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Alb/Listener.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Listener_LoadBalancerArn_" data-uid="Pulumi.Aws.Alb.Listener.LoadBalancerArn*"></a>
   <h4 id="Pulumi_Aws_Alb_Listener_LoadBalancerArn" data-uid="Pulumi.Aws.Alb.Listener.LoadBalancerArn">LoadBalancerArn</h4>
@@ -237,13 +474,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Listener.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Alb/Listener.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Listener_Port_" data-uid="Pulumi.Aws.Alb.Listener.Port*"></a>
   <h4 id="Pulumi_Aws_Alb_Listener_Port" data-uid="Pulumi.Aws.Alb.Listener.Port">Port</h4>
@@ -264,13 +501,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Listener.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Alb/Listener.cs/#L267">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Listener_Protocol_" data-uid="Pulumi.Aws.Alb.Listener.Protocol*"></a>
   <h4 id="Pulumi_Aws_Alb_Listener_Protocol" data-uid="Pulumi.Aws.Alb.Listener.Protocol">Protocol</h4>
@@ -279,7 +516,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Protocol { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Protocol { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,13 +528,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Listener.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Alb/Listener.cs/#L273">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Listener_SslPolicy_" data-uid="Pulumi.Aws.Alb.Listener.SslPolicy*"></a>
   <h4 id="Pulumi_Aws_Alb_Listener_SslPolicy" data-uid="Pulumi.Aws.Alb.Listener.SslPolicy">SslPolicy</h4>
@@ -318,7 +555,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -326,17 +563,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Listener.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Alb/Listener.cs/#L318">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Listener_Get_" data-uid="Pulumi.Aws.Alb.Listener.Get*"></a>
-  <h4 id="Pulumi_Aws_Alb_Listener_Get_System_String_Input_System_String__Pulumi_Aws_Alb_ListenerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Alb.Listener.Get(System.String,Input{System.String},Pulumi.Aws.Alb.ListenerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ListenerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Alb_Listener_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Alb_ListenerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Alb.Listener.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Alb.ListenerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ListenerState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Listener resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Listener Get(string name, Input&lt;string&gt; id, ListenerState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Listener Get(string name, Input&lt;string&gt; id, ListenerState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,7 +592,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -367,7 +604,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -396,7 +633,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Listener.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Alb/Listener.cs/#L232" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.Kubernetes
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,6 +80,33 @@
       <section><p>Manages an Kubernetes auth backend config in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/kubernetes.html">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var kubernetes = new Vault.AuthBackend(&amp;quot;kubernetes&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Type = &amp;quot;kubernetes&amp;quot;,
+    });
+    var example = new Vault.Kubernetes.AuthBackendConfig(&amp;quot;example&amp;quot;, new Vault.Kubernetes.AuthBackendConfigArgs
+    {
+        Backend = kubernetes.Path,
+        Issuer = &amp;quot;api&amp;quot;,
+        KubernetesCaCert = @&amp;quot;-----BEGIN CERTIFICATE-----
+example
+-----END CERTIFICATE-----
+&amp;quot;,
+        KubernetesHost = &amp;quot;http://example.com:443&amp;quot;,
+        TokenReviewerJwt = &amp;quot;ZXhhbXBsZQo=&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Kubernetes.AuthBackendConfigArgs.html">AuthBackendConfigArgs</a></h4>
       <section></section>
@@ -89,6 +116,43 @@ information.</p>
       <section><p>Manages an Kubernetes auth backend role in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/kubernetes.html">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var kubernetes = new Vault.AuthBackend(&amp;quot;kubernetes&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Type = &amp;quot;kubernetes&amp;quot;,
+    });
+    var example = new Vault.Kubernetes.AuthBackendRole(&amp;quot;example&amp;quot;, new Vault.Kubernetes.AuthBackendRoleArgs
+    {
+        Backend = kubernetes.Path,
+        RoleName = &amp;quot;example-role&amp;quot;,
+        BoundServiceAccountNames = 
+        {
+            &amp;quot;example&amp;quot;,
+        },
+        BoundServiceAccountNamespaces = 
+        {
+            &amp;quot;example&amp;quot;,
+        },
+        TokenTtl = 3600,
+        TokenPolicies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;dev&amp;quot;,
+            &amp;quot;prod&amp;quot;,
+        },
+        Audience = &amp;quot;vault&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Kubernetes.AuthBackendRoleArgs.html">AuthBackendRoleArgs</a></h4>
       <section></section>

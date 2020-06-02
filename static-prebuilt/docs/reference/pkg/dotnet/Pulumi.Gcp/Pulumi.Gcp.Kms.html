@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Kms
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -93,6 +93,27 @@ to the resource to prevent accidental destruction.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/kms/docs/creating-keys#create_a_key">Creating a key</a></li>
 </ul>
+<h2 id="example-usage---kms-crypto-key-basic">Example Usage - Kms Crypto Key Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyring = new Gcp.Kms.KeyRing(&amp;quot;keyring&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+    var example_key = new Gcp.Kms.CryptoKey(&amp;quot;example-key&amp;quot;, new Gcp.Kms.CryptoKeyArgs
+    {
+        KeyRing = keyring.Id,
+        RotationPeriod = &amp;quot;100000s&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyArgs.html">CryptoKeyArgs</a></h4>
       <section></section>
@@ -109,9 +130,165 @@ to the resource to prevent accidental destruction.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.kms.CryptoKeyIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.CryptoKeyIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyring = new Gcp.Kms.KeyRing(&amp;quot;keyring&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+    var key = new Gcp.Kms.CryptoKey(&amp;quot;key&amp;quot;, new Gcp.Kms.CryptoKeyArgs
+    {
+        KeyRing = keyring.Id,
+        RotationPeriod = &amp;quot;100000s&amp;quot;,
+    });
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMPolicy(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMPolicyArgs
+    {
+        CryptoKeyId = key.Id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
 <p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Bindings = 
+        {
+            new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+            {
+                Condition = new Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs
+                {
+                    Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+                    Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+                    Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+                },
+                Members = 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                },
+                Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+            },
+        },
+    }));
+}
+
+}
+</code></pre>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMBinding(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMBindingArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 <p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMBinding(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMBindingArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Kms.Inputs.CryptoKeyIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMMember(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMMemberArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMMember(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMMemberArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Kms.Inputs.CryptoKeyIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMBindingArgs.html">CryptoKeyIAMBindingArgs</a></h4>
       <section></section>
@@ -130,9 +307,165 @@ to the resource to prevent accidental destruction.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.kms.CryptoKeyIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.CryptoKeyIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyring = new Gcp.Kms.KeyRing(&amp;quot;keyring&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+    var key = new Gcp.Kms.CryptoKey(&amp;quot;key&amp;quot;, new Gcp.Kms.CryptoKeyArgs
+    {
+        KeyRing = keyring.Id,
+        RotationPeriod = &amp;quot;100000s&amp;quot;,
+    });
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMPolicy(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMPolicyArgs
+    {
+        CryptoKeyId = key.Id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
 <p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Bindings = 
+        {
+            new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+            {
+                Condition = new Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs
+                {
+                    Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+                    Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+                    Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+                },
+                Members = 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                },
+                Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+            },
+        },
+    }));
+}
+
+}
+</code></pre>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMBinding(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMBindingArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 <p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMBinding(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMBindingArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Kms.Inputs.CryptoKeyIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMMember(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMMemberArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMMember(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMMemberArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Kms.Inputs.CryptoKeyIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMMemberArgs.html">CryptoKeyIAMMemberArgs</a></h4>
       <section></section>
@@ -151,9 +484,165 @@ to the resource to prevent accidental destruction.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.kms.CryptoKeyIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.CryptoKeyIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyring = new Gcp.Kms.KeyRing(&amp;quot;keyring&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+    var key = new Gcp.Kms.CryptoKey(&amp;quot;key&amp;quot;, new Gcp.Kms.CryptoKeyArgs
+    {
+        KeyRing = keyring.Id,
+        RotationPeriod = &amp;quot;100000s&amp;quot;,
+    });
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMPolicy(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMPolicyArgs
+    {
+        CryptoKeyId = key.Id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
 <p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Bindings = 
+        {
+            new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+            {
+                Condition = new Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs
+                {
+                    Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+                    Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+                    Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+                },
+                Members = 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                },
+                Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+            },
+        },
+    }));
+}
+
+}
+</code></pre>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMBinding(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMBindingArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 <p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMBinding(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMBindingArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Kms.Inputs.CryptoKeyIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMMember(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMMemberArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cryptoKey = new Gcp.Kms.CryptoKeyIAMMember(&amp;quot;cryptoKey&amp;quot;, new Gcp.Kms.CryptoKeyIAMMemberArgs
+    {
+        CryptoKeyId = google_kms_crypto_key.Key.Id,
+        Role = &amp;quot;roles/cloudkms.cryptoKeyEncrypter&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Kms.Inputs.CryptoKeyIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMPolicyArgs.html">CryptoKeyIAMPolicyArgs</a></h4>
       <section></section>
@@ -204,6 +693,22 @@ Destroying a provider-managed KeyRing will remove it from state but
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/kms/docs/creating-keys#create_a_key_ring">Creating a key ring</a></li>
 </ul>
+<h2 id="example-usage---kms-key-ring-basic">Example Usage - Kms Key Ring Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example_keyring = new Gcp.Kms.KeyRing(&amp;quot;example-keyring&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.KeyRingArgs.html">KeyRingArgs</a></h4>
       <section></section>
@@ -220,6 +725,172 @@ Destroying a provider-managed KeyRing will remove it from state but
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.kms.KeyRingIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.KeyRingIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_kms_key_ring_iam_policy">google_kms_key_ring_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyring = new Gcp.Kms.KeyRing(&amp;quot;keyring&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var keyRing = new Gcp.Kms.KeyRingIAMPolicy(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMPolicyArgs
+    {
+        KeyRingId = keyring.Id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyring = new Gcp.Kms.KeyRing(&amp;quot;keyring&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var keyRing = new Gcp.Kms.KeyRingIAMPolicy(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMPolicyArgs
+    {
+        KeyRingId = keyring.Id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_kms_key_ring_iam_binding">google_kms_key_ring_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMBinding(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMBindingArgs
+    {
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMBinding(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMBindingArgs
+    {
+        Condition = new Gcp.Kms.Inputs.KeyRingIAMBindingConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_kms_key_ring_iam_member">google_kms_key_ring_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMMember(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMMemberArgs
+    {
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMMember(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMMemberArgs
+    {
+        Condition = new Gcp.Kms.Inputs.KeyRingIAMMemberConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.KeyRingIAMBindingArgs.html">KeyRingIAMBindingArgs</a></h4>
       <section></section>
@@ -238,6 +909,172 @@ Destroying a provider-managed KeyRing will remove it from state but
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.kms.KeyRingIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.KeyRingIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_kms_key_ring_iam_policy">google_kms_key_ring_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyring = new Gcp.Kms.KeyRing(&amp;quot;keyring&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var keyRing = new Gcp.Kms.KeyRingIAMPolicy(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMPolicyArgs
+    {
+        KeyRingId = keyring.Id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyring = new Gcp.Kms.KeyRing(&amp;quot;keyring&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var keyRing = new Gcp.Kms.KeyRingIAMPolicy(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMPolicyArgs
+    {
+        KeyRingId = keyring.Id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_kms_key_ring_iam_binding">google_kms_key_ring_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMBinding(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMBindingArgs
+    {
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMBinding(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMBindingArgs
+    {
+        Condition = new Gcp.Kms.Inputs.KeyRingIAMBindingConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_kms_key_ring_iam_member">google_kms_key_ring_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMMember(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMMemberArgs
+    {
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMMember(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMMemberArgs
+    {
+        Condition = new Gcp.Kms.Inputs.KeyRingIAMMemberConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.KeyRingIAMMemberArgs.html">KeyRingIAMMemberArgs</a></h4>
       <section></section>
@@ -256,6 +1093,172 @@ Destroying a provider-managed KeyRing will remove it from state but
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.kms.KeyRingIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.KeyRingIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_kms_key_ring_iam_policy">google_kms_key_ring_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyring = new Gcp.Kms.KeyRing(&amp;quot;keyring&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var keyRing = new Gcp.Kms.KeyRingIAMPolicy(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMPolicyArgs
+    {
+        KeyRingId = keyring.Id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyring = new Gcp.Kms.KeyRing(&amp;quot;keyring&amp;quot;, new Gcp.Kms.KeyRingArgs
+    {
+        Location = &amp;quot;global&amp;quot;,
+    });
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var keyRing = new Gcp.Kms.KeyRingIAMPolicy(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMPolicyArgs
+    {
+        KeyRingId = keyring.Id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_kms_key_ring_iam_binding">google_kms_key_ring_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMBinding(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMBindingArgs
+    {
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMBinding(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMBindingArgs
+    {
+        Condition = new Gcp.Kms.Inputs.KeyRingIAMBindingConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_kms_key_ring_iam_member">google_kms_key_ring_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMMember(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMMemberArgs
+    {
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var keyRing = new Gcp.Kms.KeyRingIAMMember(&amp;quot;keyRing&amp;quot;, new Gcp.Kms.KeyRingIAMMemberArgs
+    {
+        Condition = new Gcp.Kms.Inputs.KeyRingIAMMemberConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        KeyRingId = &amp;quot;your-key-ring-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.KeyRingIAMPolicyArgs.html">KeyRingIAMPolicyArgs</a></h4>
       <section></section>
@@ -264,9 +1267,28 @@ Destroying a provider-managed KeyRing will remove it from state but
       <h4><a class="xref" href="Pulumi.Gcp.Kms.KeyRingState.html">KeyRingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.Registry.html">Registry</a></h4>
-      <section><p>Creates a device registry in Google's Cloud IoT Core platform. For more information see
-<a href="https://cloud.google.com/iot/docs/">the official documentation</a> and
-<a href="https://cloud.google.com/iot/docs/reference/cloudiot/rest/v1/projects.locations.registries">API</a>.</p>
+      <section><p>A Google Cloud IoT Core device registry.</p>
+<p>To get more information about DeviceRegistry, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/iot/docs/reference/cloudiot/rest/">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/iot/docs/">Official Documentation</a></li>
+</ul>
+<h2 id="example-usage---cloudiot-device-registry-basic">Example Usage - Cloudiot Device Registry Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test_registry = new Gcp.Iot.Registry(&amp;quot;test-registry&amp;quot;, new Gcp.Iot.RegistryArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.RegistryArgs.html">RegistryArgs</a></h4>
       <section></section>
@@ -286,6 +1308,10 @@ data outside of resource definitions.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/kms/docs/encrypt-decrypt">Encrypting and decrypting data with a symmetric key</a></li>
 </ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>plaintext</code> and <code>additional_authenticated_data</code> will be stored in the raw
+state as plain-text. <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
+</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.SecretCiphertextArgs.html">SecretCiphertextArgs</a></h4>
       <section></section>

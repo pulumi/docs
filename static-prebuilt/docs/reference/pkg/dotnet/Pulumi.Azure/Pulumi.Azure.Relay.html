@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Relay
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,39 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.Relay.HybridConnection.html">HybridConnection</a></h4>
       <section><p>Manages an Azure Relay Hybrid Connection.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleNamespace = new Azure.Relay.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.Relay.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        SkuName = &amp;quot;Standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;source&amp;quot;, &amp;quot;managed&amp;quot; },
+        },
+    });
+    var exampleHybridConnection = new Azure.Relay.HybridConnection(&amp;quot;exampleHybridConnection&amp;quot;, new Azure.Relay.HybridConnectionArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        RelayNamespaceName = exampleNamespace.Name,
+        RequiresClientAuthorization = false,
+        UserMetadata = &amp;quot;testmetadata&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Relay.HybridConnectionArgs.html">HybridConnectionArgs</a></h4>
       <section></section>
@@ -85,6 +118,32 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Relay.Namespace.html">Namespace</a></h4>
       <section><p>Manages an Azure Relay Namespace.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleNamespace = new Azure.Relay.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.Relay.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        SkuName = &amp;quot;Standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;source&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Relay.NamespaceArgs.html">NamespaceArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.ServiceCatalog
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,23 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.ServiceCatalog.Portfolio.html">Portfolio</a></h4>
       <section><p>Provides a resource to create a Service Catalog Portfolio.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var portfolio = new Aws.ServiceCatalog.Portfolio(&amp;quot;portfolio&amp;quot;, new Aws.ServiceCatalog.PortfolioArgs
+    {
+        Description = &amp;quot;List of my organizations apps&amp;quot;,
+        ProviderName = &amp;quot;Brett&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ServiceCatalog.PortfolioArgs.html">PortfolioArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Datadog.Aws
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,38 @@
       <h4><a class="xref" href="Pulumi.Datadog.Aws.Integration.html">Integration</a></h4>
       <section><p>Provides a Datadog - Amazon Web Services integration resource. This can be used to create and manage Datadog - Amazon Web Services integration.</p>
 <p>Update operations are currently not supported with datadog API so any change forces a new resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Datadog = Pulumi.Datadog;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Datadog - Amazon Web Services integration
+    var sandbox = new Datadog.Aws.Integration(&amp;quot;sandbox&amp;quot;, new Datadog.Aws.IntegrationArgs
+    {
+        AccountId = &amp;quot;1234567890&amp;quot;,
+        AccountSpecificNamespaceRules = 
+        {
+            { &amp;quot;auto_scaling&amp;quot;, false },
+            { &amp;quot;opsworks&amp;quot;, false },
+        },
+        FilterTags = 
+        {
+            &amp;quot;key:value&amp;quot;,
+        },
+        HostTags = 
+        {
+            &amp;quot;key:value&amp;quot;,
+            &amp;quot;key2:value2&amp;quot;,
+        },
+        RoleName = &amp;quot;DatadogAWSIntegrationRole&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.Aws.IntegrationArgs.html">IntegrationArgs</a></h4>
       <section></section>

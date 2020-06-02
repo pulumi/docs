@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.NotificationHub
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,44 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.NotificationHub.AuthorizationRule.html">AuthorizationRule</a></h4>
       <section><p>Manages an Authorization Rule associated with a Notification Hub within a Notification Hub Namespace.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;Australia East&amp;quot;,
+    });
+    var exampleNamespace = new Azure.NotificationHub.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.NotificationHub.NamespaceArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        NamespaceType = &amp;quot;NotificationHub&amp;quot;,
+        SkuName = &amp;quot;Free&amp;quot;,
+    });
+    var exampleHub = new Azure.NotificationHub.Hub(&amp;quot;exampleHub&amp;quot;, new Azure.NotificationHub.HubArgs
+    {
+        NamespaceName = exampleNamespace.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+    var exampleAuthorizationRule = new Azure.NotificationHub.AuthorizationRule(&amp;quot;exampleAuthorizationRule&amp;quot;, new Azure.NotificationHub.AuthorizationRuleArgs
+    {
+        NotificationHubName = exampleHub.Name,
+        NamespaceName = exampleNamespace.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Manage = true,
+        Send = true,
+        Listen = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.NotificationHub.AuthorizationRuleArgs.html">AuthorizationRuleArgs</a></h4>
       <section></section>
@@ -97,6 +135,35 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.NotificationHub.Hub.html">Hub</a></h4>
       <section><p>Manages a Notification Hub within a Notification Hub Namespace.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;Australia East&amp;quot;,
+    });
+    var exampleNamespace = new Azure.NotificationHub.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.NotificationHub.NamespaceArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        NamespaceType = &amp;quot;NotificationHub&amp;quot;,
+        SkuName = &amp;quot;Free&amp;quot;,
+    });
+    var exampleHub = new Azure.NotificationHub.Hub(&amp;quot;exampleHub&amp;quot;, new Azure.NotificationHub.HubArgs
+    {
+        NamespaceName = exampleNamespace.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.NotificationHub.HubArgs.html">HubArgs</a></h4>
       <section></section>
@@ -104,6 +171,29 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.NotificationHub.Namespace.html">Namespace</a></h4>
       <section><p>Manages a Notification Hub Namespace.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;Australia East&amp;quot;,
+    });
+    var exampleNamespace = new Azure.NotificationHub.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.NotificationHub.NamespaceArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        NamespaceType = &amp;quot;NotificationHub&amp;quot;,
+        SkuName = &amp;quot;Free&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.NotificationHub.NamespaceArgs.html">NamespaceArgs</a></h4>
       <section></section>

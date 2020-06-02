@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetAppServiceResult
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetAppServiceResult</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.AppService.html">Pulumi.Azure.AppService</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_AppService_GetAppServiceResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetAppServiceResult : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetAppServiceResult</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L76">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_AppServicePlanId" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.AppServicePlanId">AppServicePlanId</h4>
   <div class="markdown level1 summary"><p>The ID of the App Service Plan within which the App Service exists.</p>
@@ -113,7 +137,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L80">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_AppSettings" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.AppSettings">AppSettings</h4>
   <div class="markdown level1 summary"><p>A key-value pair of App Settings for the App Service.</p>
@@ -133,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L84">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_ClientAffinityEnabled" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.ClientAffinityEnabled">ClientAffinityEnabled</h4>
   <div class="markdown level1 summary"><p>Does the App Service send session affinity cookies, which route client requests in the same session to the same instance?</p>
@@ -165,7 +189,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L88">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_ClientCertEnabled" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.ClientCertEnabled">ClientCertEnabled</h4>
   <div class="markdown level1 summary"><p>Does the App Service require client certificates for incoming requests?</p>
@@ -191,7 +215,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L92">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_ConnectionStrings" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.ConnectionStrings">ConnectionStrings</h4>
   <div class="markdown level1 summary"><p>An <code>connection_string</code> block as defined below.</p>
@@ -211,13 +235,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.GetAppServiceConnectionStringResult.html">GetAppServiceConnectionStringResult</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.GetAppServiceConnectionStringResult.html">GetAppServiceConnectionStringResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L96">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_DefaultSiteHostname" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.DefaultSiteHostname">DefaultSiteHostname</h4>
   <div class="markdown level1 summary"><p>The Default Hostname associated with the App Service - such as <code>mysite.azurewebsites.net</code></p>
@@ -243,7 +267,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L100">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_Enabled" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.Enabled">Enabled</h4>
   <div class="markdown level1 summary"><p>Is the App Service Enabled?</p>
@@ -269,7 +293,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L104">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_HttpsOnly" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.HttpsOnly">HttpsOnly</h4>
   <div class="markdown level1 summary"><p>Can the App Service only be accessed via HTTPS?</p>
@@ -295,10 +319,10 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L108">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_Id" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.Id">Id</h4>
-  <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
+  <div class="markdown level1 summary"><p>The provider-assigned unique ID for this managed resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -321,7 +345,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L112">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_Location" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.Location">Location</h4>
   <div class="markdown level1 summary"><p>The Azure location where the App Service exists.</p>
@@ -347,10 +371,10 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L116">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_Name" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the Connection String.</p>
+  <div class="markdown level1 summary"><p>The name for this IP Restriction.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -373,7 +397,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L120">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_OutboundIpAddresses" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.OutboundIpAddresses">OutboundIpAddresses</h4>
   <div class="markdown level1 summary"><p>A comma separated list of outbound IP addresses - such as <code>52.23.25.3,52.143.43.12</code></p>
@@ -399,7 +423,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L124">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_PossibleOutboundIpAddresses" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.PossibleOutboundIpAddresses">PossibleOutboundIpAddresses</h4>
   <div class="markdown level1 summary"><p>A comma separated list of outbound IP addresses - such as <code>52.23.25.3,52.143.43.12,52.143.43.17</code> - not all of which are necessarily in use. Superset of <code>outbound_ip_addresses</code>.</p>
@@ -425,7 +449,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L125">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_ResourceGroupName" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.ResourceGroupName">ResourceGroupName</h4>
   <div class="markdown level1 summary"></div>
@@ -450,7 +474,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L129">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_SiteConfigs" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.SiteConfigs">SiteConfigs</h4>
   <div class="markdown level1 summary"><p>A <code>site_config</code> block as defined below.</p>
@@ -470,13 +494,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.GetAppServiceSiteConfigResult.html">GetAppServiceSiteConfigResult</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.GetAppServiceSiteConfigResult.html">GetAppServiceSiteConfigResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L130">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_SiteCredentials" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.SiteCredentials">SiteCredentials</h4>
   <div class="markdown level1 summary"></div>
@@ -495,13 +519,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.GetAppServiceSiteCredentialResult.html">GetAppServiceSiteCredentialResult</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.GetAppServiceSiteCredentialResult.html">GetAppServiceSiteCredentialResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L131">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_SourceControls" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.SourceControls">SourceControls</h4>
   <div class="markdown level1 summary"></div>
@@ -520,13 +544,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.GetAppServiceSourceControlResult.html">GetAppServiceSourceControlResult</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.GetAppServiceSourceControlResult.html">GetAppServiceSourceControlResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L135">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_AppService_GetAppServiceResult_Tags" data-uid="Pulumi.Azure.AppService.GetAppServiceResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
@@ -546,7 +570,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -558,7 +582,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/GetAppService.cs/#L45" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/GetAppService.cs/#L70" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

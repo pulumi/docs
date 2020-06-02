@@ -1,0 +1,1175 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RouteMap
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RouteMap
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.AliCloud.Cen.RouteMap">
+  
+  <h1 id="Pulumi_AliCloud_Cen_RouteMap" data-uid="Pulumi.AliCloud.Cen.RouteMap" class="text-break">Class RouteMap
+  </h1>
+  <div class="markdown level0 summary"><p>This topic provides an overview of the route map function of Cloud Enterprise Networks (CENs).
+You can use the route map function to filter routes and modify route attributes.
+By doing so, you can manage the communication between networks attached to a CEN.</p>
+<p>For information about CEN Route Map and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/124157.htm">Manage CEN Route Map</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.82.0+</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultInstance = new AliCloud.Cen.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.Cen.InstanceArgs
+    {
+    });
+    var vpc00Region = new AliCloud.Provider(&amp;quot;vpc00Region&amp;quot;, new AliCloud.ProviderArgs
+    {
+        Region = &amp;quot;cn-hangzhou&amp;quot;,
+    });
+    var vpc01Region = new AliCloud.Provider(&amp;quot;vpc01Region&amp;quot;, new AliCloud.ProviderArgs
+    {
+        Region = &amp;quot;cn-shanghai&amp;quot;,
+    });
+    var vpc00 = new AliCloud.Vpc.Network(&amp;quot;vpc00&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var vpc01 = new AliCloud.Vpc.Network(&amp;quot;vpc01&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var default00 = new AliCloud.Cen.InstanceAttachment(&amp;quot;default00&amp;quot;, new AliCloud.Cen.InstanceAttachmentArgs
+    {
+        ChildInstanceId = vpc00.Id,
+        ChildInstanceRegionId = &amp;quot;cn-hangzhou&amp;quot;,
+        InstanceId = defaultInstance.Id,
+    });
+    var default01 = new AliCloud.Cen.InstanceAttachment(&amp;quot;default01&amp;quot;, new AliCloud.Cen.InstanceAttachmentArgs
+    {
+        ChildInstanceId = vpc01.Id,
+        ChildInstanceRegionId = &amp;quot;cn-shanghai&amp;quot;,
+        InstanceId = defaultInstance.Id,
+    });
+    var defaultRouteMap = new AliCloud.Cen.RouteMap(&amp;quot;defaultRouteMap&amp;quot;, new AliCloud.Cen.RouteMapArgs
+    {
+        AsPathMatchMode = &amp;quot;Include&amp;quot;,
+        CenId = alicloud_cen_instance.Cen.Id,
+        CenRegionId = &amp;quot;cn-hangzhou&amp;quot;,
+        CidrMatchMode = &amp;quot;Include&amp;quot;,
+        CommunityMatchMode = &amp;quot;Include&amp;quot;,
+        CommunityOperateMode = &amp;quot;Additive&amp;quot;,
+        Description = &amp;quot;test-desc&amp;quot;,
+        DestinationChildInstanceTypes = 
+        {
+            &amp;quot;VPC&amp;quot;,
+        },
+        DestinationCidrBlocks = 
+        {
+            vpc01.CidrBlock,
+        },
+        DestinationInstanceIds = 
+        {
+            vpc01.Id,
+        },
+        DestinationInstanceIdsReverseMatch = &amp;quot;false&amp;quot;,
+        DestinationRouteTableIds = 
+        {
+            vpc01.RouteTableId,
+        },
+        MapResult = &amp;quot;Permit&amp;quot;,
+        MatchAsns = 
+        {
+            &amp;quot;65501&amp;quot;,
+        },
+        MatchCommunitySets = 
+        {
+            &amp;quot;65501:1&amp;quot;,
+        },
+        NextPriority = &amp;quot;1&amp;quot;,
+        OperateCommunitySets = 
+        {
+            &amp;quot;65501:1&amp;quot;,
+        },
+        Preference = &amp;quot;20&amp;quot;,
+        PrependAsPaths = 
+        {
+            &amp;quot;65501&amp;quot;,
+        },
+        Priority = &amp;quot;1&amp;quot;,
+        RouteTypes = 
+        {
+            &amp;quot;System&amp;quot;,
+        },
+        SourceChildInstanceTypes = 
+        {
+            &amp;quot;VPC&amp;quot;,
+        },
+        SourceInstanceIds = 
+        {
+            vpc00.Id,
+        },
+        SourceInstanceIdsReverseMatch = &amp;quot;false&amp;quot;,
+        SourceRegionIds = 
+        {
+            &amp;quot;cn-hangzhou&amp;quot;,
+        },
+        SourceRouteTableIds = 
+        {
+            vpc00.RouteTableId,
+        },
+        TransmitDirection = &amp;quot;RegionIn&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">RouteMap</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Cen.html">Pulumi.AliCloud.Cen</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
+  <h5 id="Pulumi_AliCloud_Cen_RouteMap_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RouteMap : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L319">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap__ctor_" data-uid="Pulumi.AliCloud.Cen.RouteMap.#ctor*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap__ctor_System_String_Pulumi_AliCloud_Cen_RouteMapArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Cen.RouteMap.#ctor(System.String,Pulumi.AliCloud.Cen.RouteMapArgs,Pulumi.CustomResourceOptions)">RouteMap(String, RouteMapArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a RouteMap resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RouteMap(string name, RouteMapArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Cen.RouteMapArgs.html">RouteMapArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_AsPathMatchMode_" data-uid="Pulumi.AliCloud.Cen.RouteMap.AsPathMatchMode*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_AsPathMatchMode" data-uid="Pulumi.AliCloud.Cen.RouteMap.AsPathMatchMode">AsPathMatchMode</h4>
+  <div class="markdown level1 summary"><p>A match statement. It indicates the mode in which the AS path attribute is matched. Valid values: [&quot;Include&quot;, &quot;Complete&quot;].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AsPathMatchMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_CenId_" data-uid="Pulumi.AliCloud.Cen.RouteMap.CenId*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_CenId" data-uid="Pulumi.AliCloud.Cen.RouteMap.CenId">CenId</h4>
+  <div class="markdown level1 summary"><p>The ID of the CEN instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CenId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_CenRegionId_" data-uid="Pulumi.AliCloud.Cen.RouteMap.CenRegionId*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_CenRegionId" data-uid="Pulumi.AliCloud.Cen.RouteMap.CenRegionId">CenRegionId</h4>
+  <div class="markdown level1 summary"><p>The ID of the region to which the CEN instance belongs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CenRegionId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_CidrMatchMode_" data-uid="Pulumi.AliCloud.Cen.RouteMap.CidrMatchMode*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_CidrMatchMode" data-uid="Pulumi.AliCloud.Cen.RouteMap.CidrMatchMode">CidrMatchMode</h4>
+  <div class="markdown level1 summary"><p>A match statement. It indicates the mode in which the prefix attribute is matched. Valid values: [&quot;Include&quot;, &quot;Complete&quot;].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CidrMatchMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_CommunityMatchMode_" data-uid="Pulumi.AliCloud.Cen.RouteMap.CommunityMatchMode*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_CommunityMatchMode" data-uid="Pulumi.AliCloud.Cen.RouteMap.CommunityMatchMode">CommunityMatchMode</h4>
+  <div class="markdown level1 summary"><p>A match statement. It indicates the mode in which the community attribute is matched. Valid values: [&quot;Include&quot;, &quot;Complete&quot;].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CommunityMatchMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_CommunityOperateMode_" data-uid="Pulumi.AliCloud.Cen.RouteMap.CommunityOperateMode*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_CommunityOperateMode" data-uid="Pulumi.AliCloud.Cen.RouteMap.CommunityOperateMode">CommunityOperateMode</h4>
+  <div class="markdown level1 summary"><p>An action statement. It indicates the mode in which the community attribute is operated. Valid values: [&quot;Additive&quot;, &quot;Replace&quot;].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CommunityOperateMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L179">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_Description_" data-uid="Pulumi.AliCloud.Cen.RouteMap.Description*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_Description" data-uid="Pulumi.AliCloud.Cen.RouteMap.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The description of the route map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L185">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_DestinationChildInstanceTypes_" data-uid="Pulumi.AliCloud.Cen.RouteMap.DestinationChildInstanceTypes*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_DestinationChildInstanceTypes" data-uid="Pulumi.AliCloud.Cen.RouteMap.DestinationChildInstanceTypes">DestinationChildInstanceTypes</h4>
+  <div class="markdown level1 summary"><p>A match statement that indicates the list of destination instance types. Valid values: [&quot;VPC&quot;, &quot;VBR&quot;, &quot;CCN&quot;].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; DestinationChildInstanceTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_DestinationCidrBlocks_" data-uid="Pulumi.AliCloud.Cen.RouteMap.DestinationCidrBlocks*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_DestinationCidrBlocks" data-uid="Pulumi.AliCloud.Cen.RouteMap.DestinationCidrBlocks">DestinationCidrBlocks</h4>
+  <div class="markdown level1 summary"><p>A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; DestinationCidrBlocks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L197">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_DestinationInstanceIds_" data-uid="Pulumi.AliCloud.Cen.RouteMap.DestinationInstanceIds*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_DestinationInstanceIds" data-uid="Pulumi.AliCloud.Cen.RouteMap.DestinationInstanceIds">DestinationInstanceIds</h4>
+  <div class="markdown level1 summary"><p>A match statement that indicates the list of IDs of the destination instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; DestinationInstanceIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L203">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_DestinationInstanceIdsReverseMatch_" data-uid="Pulumi.AliCloud.Cen.RouteMap.DestinationInstanceIdsReverseMatch*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_DestinationInstanceIdsReverseMatch" data-uid="Pulumi.AliCloud.Cen.RouteMap.DestinationInstanceIdsReverseMatch">DestinationInstanceIdsReverseMatch</h4>
+  <div class="markdown level1 summary"><p>Indicates whether to enable the reverse match method for the DestinationInstanceIds match condition. Valid values: [&quot;false&quot;, &quot;true&quot;]. Default to &quot;false&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; DestinationInstanceIdsReverseMatch { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L209">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_DestinationRouteTableIds_" data-uid="Pulumi.AliCloud.Cen.RouteMap.DestinationRouteTableIds*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_DestinationRouteTableIds" data-uid="Pulumi.AliCloud.Cen.RouteMap.DestinationRouteTableIds">DestinationRouteTableIds</h4>
+  <div class="markdown level1 summary"><p>A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; DestinationRouteTableIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L215">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_MapResult_" data-uid="Pulumi.AliCloud.Cen.RouteMap.MapResult*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_MapResult" data-uid="Pulumi.AliCloud.Cen.RouteMap.MapResult">MapResult</h4>
+  <div class="markdown level1 summary"><p>The action that is performed to a route if the route matches all the match conditions. Valid values: [&quot;Permit&quot;, &quot;Deny&quot;].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MapResult { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L221">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_MatchAsns_" data-uid="Pulumi.AliCloud.Cen.RouteMap.MatchAsns*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_MatchAsns" data-uid="Pulumi.AliCloud.Cen.RouteMap.MatchAsns">MatchAsns</h4>
+  <div class="markdown level1 summary"><p>A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; MatchAsns { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L227">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_MatchCommunitySets_" data-uid="Pulumi.AliCloud.Cen.RouteMap.MatchCommunitySets*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_MatchCommunitySets" data-uid="Pulumi.AliCloud.Cen.RouteMap.MatchCommunitySets">MatchCommunitySets</h4>
+  <div class="markdown level1 summary"><p>A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; MatchCommunitySets { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L233">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_NextPriority_" data-uid="Pulumi.AliCloud.Cen.RouteMap.NextPriority*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_NextPriority" data-uid="Pulumi.AliCloud.Cen.RouteMap.NextPriority">NextPriority</h4>
+  <div class="markdown level1 summary"><p>The priority of the next route map that is associated with the current route map. Value range: 1 to 100.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; NextPriority { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L239">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_OperateCommunitySets_" data-uid="Pulumi.AliCloud.Cen.RouteMap.OperateCommunitySets*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_OperateCommunitySets" data-uid="Pulumi.AliCloud.Cen.RouteMap.OperateCommunitySets">OperateCommunitySets</h4>
+  <div class="markdown level1 summary"><p>An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; OperateCommunitySets { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L245">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_Preference_" data-uid="Pulumi.AliCloud.Cen.RouteMap.Preference*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_Preference" data-uid="Pulumi.AliCloud.Cen.RouteMap.Preference">Preference</h4>
+  <div class="markdown level1 summary"><p>An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Preference { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L251">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_PrependAsPaths_" data-uid="Pulumi.AliCloud.Cen.RouteMap.PrependAsPaths*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_PrependAsPaths" data-uid="Pulumi.AliCloud.Cen.RouteMap.PrependAsPaths">PrependAsPaths</h4>
+  <div class="markdown level1 summary"><p>An action statement that indicates an AS path is prepended when the regional gateway receives or advertises a route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; PrependAsPaths { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L257">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_Priority_" data-uid="Pulumi.AliCloud.Cen.RouteMap.Priority*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_Priority" data-uid="Pulumi.AliCloud.Cen.RouteMap.Priority">Priority</h4>
+  <div class="markdown level1 summary"><p>The priority of the route map. Value range: 1 to 100. A lower value indicates a higher priority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Priority { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L260">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_RouteMapId_" data-uid="Pulumi.AliCloud.Cen.RouteMap.RouteMapId*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_RouteMapId" data-uid="Pulumi.AliCloud.Cen.RouteMap.RouteMapId">RouteMapId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RouteMapId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L266">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_RouteTypes_" data-uid="Pulumi.AliCloud.Cen.RouteMap.RouteTypes*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_RouteTypes" data-uid="Pulumi.AliCloud.Cen.RouteMap.RouteTypes">RouteTypes</h4>
+  <div class="markdown level1 summary"><p>A match statement that indicates the list of route types. Valid values: [&quot;System&quot;, &quot;Custom&quot;, &quot;BGP&quot;].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; RouteTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L272">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_SourceChildInstanceTypes_" data-uid="Pulumi.AliCloud.Cen.RouteMap.SourceChildInstanceTypes*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_SourceChildInstanceTypes" data-uid="Pulumi.AliCloud.Cen.RouteMap.SourceChildInstanceTypes">SourceChildInstanceTypes</h4>
+  <div class="markdown level1 summary"><p>A match statement that indicates the list of source instance types. Valid values: [&quot;VPC&quot;, &quot;VBR&quot;, &quot;CCN&quot;].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SourceChildInstanceTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L278">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_SourceInstanceIds_" data-uid="Pulumi.AliCloud.Cen.RouteMap.SourceInstanceIds*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_SourceInstanceIds" data-uid="Pulumi.AliCloud.Cen.RouteMap.SourceInstanceIds">SourceInstanceIds</h4>
+  <div class="markdown level1 summary"><p>A match statement that indicates the list of IDs of the source instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SourceInstanceIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L284">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_SourceInstanceIdsReverseMatch_" data-uid="Pulumi.AliCloud.Cen.RouteMap.SourceInstanceIdsReverseMatch*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_SourceInstanceIdsReverseMatch" data-uid="Pulumi.AliCloud.Cen.RouteMap.SourceInstanceIdsReverseMatch">SourceInstanceIdsReverseMatch</h4>
+  <div class="markdown level1 summary"><p>Indicates whether to enable the reverse match method for the SourceInstanceIds match condition. Valid values: [&quot;false&quot;, &quot;true&quot;]. Default to &quot;false&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SourceInstanceIdsReverseMatch { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L290">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_SourceRegionIds_" data-uid="Pulumi.AliCloud.Cen.RouteMap.SourceRegionIds*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_SourceRegionIds" data-uid="Pulumi.AliCloud.Cen.RouteMap.SourceRegionIds">SourceRegionIds</h4>
+  <div class="markdown level1 summary"><p>A match statement that indicates the list of IDs of the source regions. You can enter a maximum of 32 region IDs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SourceRegionIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L296">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_SourceRouteTableIds_" data-uid="Pulumi.AliCloud.Cen.RouteMap.SourceRouteTableIds*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_SourceRouteTableIds" data-uid="Pulumi.AliCloud.Cen.RouteMap.SourceRouteTableIds">SourceRouteTableIds</h4>
+  <div class="markdown level1 summary"><p>A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SourceRouteTableIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L302">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_Status_" data-uid="Pulumi.AliCloud.Cen.RouteMap.Status*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_Status" data-uid="Pulumi.AliCloud.Cen.RouteMap.Status">Status</h4>
+  <div class="markdown level1 summary"><p>(Computed) The status of route map. Valid values: [&quot;Creating&quot;, &quot;Active&quot;, &quot;Deleting&quot;].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L308">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_TransmitDirection_" data-uid="Pulumi.AliCloud.Cen.RouteMap.TransmitDirection*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_TransmitDirection" data-uid="Pulumi.AliCloud.Cen.RouteMap.TransmitDirection">TransmitDirection</h4>
+  <div class="markdown level1 summary"><p>The direction in which the route map is applied. Valid values: [&quot;RegionIn&quot;, &quot;RegionOut&quot;].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TransmitDirection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L349">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Cen_RouteMap_Get_" data-uid="Pulumi.AliCloud.Cen.RouteMap.Get*"></a>
+  <h4 id="Pulumi_AliCloud_Cen_RouteMap_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Cen_RouteMapState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Cen.RouteMap.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Cen.RouteMapState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RouteMapState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing RouteMap resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RouteMap Get(string name, Input&lt;string&gt; id, RouteMapState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Cen.RouteMapState.html">RouteMapState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Cen.RouteMap.html">RouteMap</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Cen/RouteMap.cs/#L138" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Database
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,12 +80,65 @@ consider setting
 <a href="https://www.terraform.io/docs/configuration/resources.html#prevent_destroy"><code>prevent_destroy</code></a>
 on your database resources as an extra safety measure.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new MySql.Database(&amp;quot;app&amp;quot;, new MySql.DatabaseArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Database</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Database</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.MySql.html">Pulumi.MySql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.MySql.dll</h6>
@@ -96,16 +149,16 @@ on your database resources as an extra safety measure.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Database.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Database.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_MySql_Database__ctor_" data-uid="Pulumi.MySql.Database.#ctor*"></a>
-  <h4 id="Pulumi_MySql_Database__ctor_System_String_Pulumi_MySql_DatabaseArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.MySql.Database.#ctor(System.String,Pulumi.MySql.DatabaseArgs,System.Nullable{CustomResourceOptions})">Database(String, DatabaseArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_MySql_Database__ctor_System_String_Pulumi_MySql_DatabaseArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.MySql.Database.#ctor(System.String,Pulumi.MySql.DatabaseArgs,Pulumi.CustomResourceOptions)">Database(String, DatabaseArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Database resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Database(string name, DatabaseArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Database(string name, DatabaseArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,7 +183,7 @@ on your database resources as an extra safety measure.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -140,7 +193,7 @@ on your database resources as an extra safety measure.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Database.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Database.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_MySql_Database_DefaultCharacterSet_" data-uid="Pulumi.MySql.Database.DefaultCharacterSet*"></a>
   <h4 id="Pulumi_MySql_Database_DefaultCharacterSet" data-uid="Pulumi.MySql.Database.DefaultCharacterSet">DefaultCharacterSet</h4>
@@ -151,7 +204,7 @@ to &quot;utf8&quot;.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultCharacterSet { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultCharacterSet { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,13 +216,13 @@ to &quot;utf8&quot;.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Database.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Database.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_MySql_Database_DefaultCollation_" data-uid="Pulumi.MySql.Database.DefaultCollation*"></a>
   <h4 id="Pulumi_MySql_Database_DefaultCollation" data-uid="Pulumi.MySql.Database.DefaultCollation">DefaultCollation</h4>
@@ -181,7 +234,7 @@ changing the character set requires also changing the collation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultCollation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultCollation { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,13 +246,13 @@ changing the character set requires also changing the collation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Database.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Database.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_MySql_Database_Name_" data-uid="Pulumi.MySql.Database.Name*"></a>
   <h4 id="Pulumi_MySql_Database_Name" data-uid="Pulumi.MySql.Database.Name">Name</h4>
@@ -222,7 +275,7 @@ the operating system on which the MySQL server is running.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -230,17 +283,17 @@ the operating system on which the MySQL server is running.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Database.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Database.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_MySql_Database_Get_" data-uid="Pulumi.MySql.Database.Get*"></a>
-  <h4 id="Pulumi_MySql_Database_Get_System_String_Input_System_String__Pulumi_MySql_DatabaseState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.MySql.Database.Get(System.String,Input{System.String},Pulumi.MySql.DatabaseState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DatabaseState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_MySql_Database_Get_System_String_Pulumi_Input_System_String__Pulumi_MySql_DatabaseState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.MySql.Database.Get(System.String,Pulumi.Input{System.String},Pulumi.MySql.DatabaseState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DatabaseState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Database resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Database Get(string name, Input&lt;string&gt; id, DatabaseState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Database Get(string name, Input&lt;string&gt; id, DatabaseState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,7 +312,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -271,7 +324,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -300,7 +353,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Database.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Database.cs/#L42" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

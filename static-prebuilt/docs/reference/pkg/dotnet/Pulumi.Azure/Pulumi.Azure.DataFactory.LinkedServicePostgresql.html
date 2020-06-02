@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LinkedServicePostgresql
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,77 @@
   <h1 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql" class="text-break">Class LinkedServicePostgresql
   </h1>
   <div class="markdown level0 summary"><p>Manages a Linked Service (connection) between PostgreSQL and Azure Data Factory.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleLinkedServicePostgresql = new Azure.DataFactory.LinkedServicePostgresql(&amp;quot;exampleLinkedServicePostgresql&amp;quot;, new Azure.DataFactory.LinkedServicePostgresqlArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+        ConnectionString = &amp;quot;Host=example;Port=5432;Database=example;UID=example;EncryptionMethod=0;Password=example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">LinkedServicePostgresql</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">LinkedServicePostgresql</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.DataFactory.html">Pulumi.Azure.DataFactory</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -88,16 +153,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_LinkedServicePostgresql__ctor_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.#ctor*"></a>
-  <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql__ctor_System_String_Pulumi_Azure_DataFactory_LinkedServicePostgresqlArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.#ctor(System.String,Pulumi.Azure.DataFactory.LinkedServicePostgresqlArgs,System.Nullable{CustomResourceOptions})">LinkedServicePostgresql(String, LinkedServicePostgresqlArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql__ctor_System_String_Pulumi_Azure_DataFactory_LinkedServicePostgresqlArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.#ctor(System.String,Pulumi.Azure.DataFactory.LinkedServicePostgresqlArgs,Pulumi.CustomResourceOptions)">LinkedServicePostgresql(String, LinkedServicePostgresqlArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a LinkedServicePostgresql resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LinkedServicePostgresql(string name, LinkedServicePostgresqlArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public LinkedServicePostgresql(string name, LinkedServicePostgresqlArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +187,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +197,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_AdditionalProperties_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.AdditionalProperties*"></a>
   <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_AdditionalProperties" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.AdditionalProperties">AdditionalProperties</h4>
@@ -141,7 +206,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; AdditionalProperties { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; AdditionalProperties { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +218,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_Annotations_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.Annotations*"></a>
   <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_Annotations" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.Annotations">Annotations</h4>
@@ -180,13 +245,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_ConnectionString_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.ConnectionString*"></a>
   <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_ConnectionString" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.ConnectionString">ConnectionString</h4>
@@ -207,13 +272,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_DataFactoryName_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.DataFactoryName*"></a>
   <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_DataFactoryName" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.DataFactoryName">DataFactoryName</h4>
@@ -234,13 +299,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_Description_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.Description*"></a>
   <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_Description" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.Description">Description</h4>
@@ -249,7 +314,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +326,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_IntegrationRuntimeName_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.IntegrationRuntimeName*"></a>
   <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_IntegrationRuntimeName" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.IntegrationRuntimeName">IntegrationRuntimeName</h4>
@@ -276,7 +341,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IntegrationRuntimeName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IntegrationRuntimeName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -288,13 +353,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_Name_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.Name*"></a>
   <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_Name" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.Name">Name</h4>
@@ -315,13 +380,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_Parameters_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.Parameters*"></a>
   <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_Parameters" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.Parameters">Parameters</h4>
@@ -330,7 +395,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Parameters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Parameters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,13 +407,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_ResourceGroupName_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_ResourceGroupName" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.ResourceGroupName">ResourceGroupName</h4>
@@ -369,7 +434,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -377,17 +442,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_Get_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.Get*"></a>
-  <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_Get_System_String_Input_System_String__Pulumi_Azure_DataFactory_LinkedServicePostgresqlState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.Get(System.String,Input{System.String},Pulumi.Azure.DataFactory.LinkedServicePostgresqlState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, LinkedServicePostgresqlState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServicePostgresql_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_DataFactory_LinkedServicePostgresqlState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.DataFactory.LinkedServicePostgresql.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.DataFactory.LinkedServicePostgresqlState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, LinkedServicePostgresqlState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing LinkedServicePostgresql resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static LinkedServicePostgresql Get(string name, Input&lt;string&gt; id, LinkedServicePostgresqlState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static LinkedServicePostgresql Get(string name, Input&lt;string&gt; id, LinkedServicePostgresqlState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -406,7 +471,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -418,7 +483,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -447,7 +512,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/LinkedServicePostgresql.cs/#L47" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

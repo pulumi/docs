@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NodeBalancerConfig
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,7 +71,51 @@
   
   <h1 id="Pulumi_Linode_NodeBalancerConfig" data-uid="Pulumi.Linode.NodeBalancerConfig" class="text-break">Class NodeBalancerConfig
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides a Linode NodeBalancer Config resource.  This can be used to create, modify, and delete Linodes NodeBalancer Configs.
+For more information, see <a href="https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/">Getting Started with NodeBalancers</a> and the <a href="https://developers.linode.com/api/v4#operation/createNodeBalancerConfig">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new Linode.NodeBalancer(&amp;quot;foobar&amp;quot;, new Linode.NodeBalancerArgs
+    {
+        ClientConnThrottle = 20,
+        Label = &amp;quot;mynodebalancer&amp;quot;,
+        Region = &amp;quot;us-east&amp;quot;,
+    });
+    var foofig = new Linode.NodeBalancerConfig(&amp;quot;foofig&amp;quot;, new Linode.NodeBalancerConfigArgs
+    {
+        Algorithm = &amp;quot;source&amp;quot;,
+        Check = &amp;quot;http&amp;quot;,
+        CheckAttempts = 3,
+        CheckPath = &amp;quot;/foo&amp;quot;,
+        CheckTimeout = 30,
+        NodebalancerId = foobar.Id,
+        Port = 8088,
+        Protocol = &amp;quot;http&amp;quot;,
+        Stickiness = &amp;quot;http_cookie&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This resource exports the following attributes:</p>
+<ul>
+<li><p><code>ssl_commonname</code> - The common name for the SSL certification this port is serving if this port is not configured to use SSL.</p>
+</li>
+<li><p><code>ssl_fingerprint</code> - The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.</p>
+</li>
+<li><p><code>node_status_up</code> - The number of backends considered to be 'UP' and healthy, and that are serving requests.</p>
+</li>
+<li><p><code>node_status_down</code> - The number of backends considered to be 'DOWN' and unhealthy. These are not in rotation, and not serving requests.</p>
+</li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -125,7 +169,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig__ctor_" data-uid="Pulumi.Linode.NodeBalancerConfig.#ctor*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig__ctor_System_String_Pulumi_Linode_NodeBalancerConfigArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.NodeBalancerConfig.#ctor(System.String,Pulumi.Linode.NodeBalancerConfigArgs,Pulumi.CustomResourceOptions)">NodeBalancerConfig(String, NodeBalancerConfigArgs, CustomResourceOptions)</h4>
@@ -169,7 +213,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_Algorithm_" data-uid="Pulumi.Linode.NodeBalancerConfig.Algorithm*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_Algorithm" data-uid="Pulumi.Linode.NodeBalancerConfig.Algorithm">Algorithm</h4>
@@ -196,7 +240,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_Check_" data-uid="Pulumi.Linode.NodeBalancerConfig.Check*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_Check" data-uid="Pulumi.Linode.NodeBalancerConfig.Check">Check</h4>
@@ -223,7 +267,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_CheckAttempts_" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckAttempts*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_CheckAttempts" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckAttempts">CheckAttempts</h4>
@@ -250,7 +294,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_CheckBody_" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckBody*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_CheckBody" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckBody">CheckBody</h4>
@@ -278,7 +322,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_CheckInterval_" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckInterval*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_CheckInterval" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckInterval">CheckInterval</h4>
@@ -305,7 +349,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_CheckPassive_" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckPassive*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_CheckPassive" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckPassive">CheckPassive</h4>
@@ -332,7 +376,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_CheckPath_" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckPath*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_CheckPath" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckPath">CheckPath</h4>
@@ -359,7 +403,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_CheckTimeout_" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckTimeout*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_CheckTimeout" data-uid="Pulumi.Linode.NodeBalancerConfig.CheckTimeout">CheckTimeout</h4>
@@ -386,7 +430,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_CipherSuite_" data-uid="Pulumi.Linode.NodeBalancerConfig.CipherSuite*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_CipherSuite" data-uid="Pulumi.Linode.NodeBalancerConfig.CipherSuite">CipherSuite</h4>
@@ -413,7 +457,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_NodebalancerId_" data-uid="Pulumi.Linode.NodeBalancerConfig.NodebalancerId*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_NodebalancerId" data-uid="Pulumi.Linode.NodeBalancerConfig.NodebalancerId">NodebalancerId</h4>
@@ -440,7 +484,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_NodeStatus_" data-uid="Pulumi.Linode.NodeBalancerConfig.NodeStatus*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_NodeStatus" data-uid="Pulumi.Linode.NodeBalancerConfig.NodeStatus">NodeStatus</h4>
@@ -466,7 +510,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_Port_" data-uid="Pulumi.Linode.NodeBalancerConfig.Port*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_Port" data-uid="Pulumi.Linode.NodeBalancerConfig.Port">Port</h4>
@@ -493,7 +537,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_Protocol_" data-uid="Pulumi.Linode.NodeBalancerConfig.Protocol*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_Protocol" data-uid="Pulumi.Linode.NodeBalancerConfig.Protocol">Protocol</h4>
@@ -520,7 +564,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_SslCert_" data-uid="Pulumi.Linode.NodeBalancerConfig.SslCert*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_SslCert" data-uid="Pulumi.Linode.NodeBalancerConfig.SslCert">SslCert</h4>
@@ -547,7 +591,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_SslCommonname_" data-uid="Pulumi.Linode.NodeBalancerConfig.SslCommonname*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_SslCommonname" data-uid="Pulumi.Linode.NodeBalancerConfig.SslCommonname">SslCommonname</h4>
@@ -574,7 +618,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_SslFingerprint_" data-uid="Pulumi.Linode.NodeBalancerConfig.SslFingerprint*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_SslFingerprint" data-uid="Pulumi.Linode.NodeBalancerConfig.SslFingerprint">SslFingerprint</h4>
@@ -601,7 +645,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_SslKey_" data-uid="Pulumi.Linode.NodeBalancerConfig.SslKey*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_SslKey" data-uid="Pulumi.Linode.NodeBalancerConfig.SslKey">SslKey</h4>
@@ -628,7 +672,7 @@ the response body of a check request, the backend is considered to be down</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_Stickiness_" data-uid="Pulumi.Linode.NodeBalancerConfig.Stickiness*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_Stickiness" data-uid="Pulumi.Linode.NodeBalancerConfig.Stickiness">Stickiness</h4>
@@ -657,7 +701,7 @@ the response body of a check request, the backend is considered to be down</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancerConfig_Get_" data-uid="Pulumi.Linode.NodeBalancerConfig.Get*"></a>
   <h4 id="Pulumi_Linode_NodeBalancerConfig_Get_System_String_Pulumi_Input_System_String__Pulumi_Linode_NodeBalancerConfigState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.NodeBalancerConfig.Get(System.String,Pulumi.Input{System.String},Pulumi.Linode.NodeBalancerConfigState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NodeBalancerConfigState, CustomResourceOptions)</h4>
@@ -727,7 +771,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancerConfig.cs/#L63" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

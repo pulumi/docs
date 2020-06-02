@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UserPoolClient
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,166 @@
   <h1 id="Pulumi_Aws_Cognito_UserPoolClient" data-uid="Pulumi.Aws.Cognito.UserPoolClient" class="text-break">Class UserPoolClient
   </h1>
   <div class="markdown level0 summary"><p>Provides a Cognito User Pool Client resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-basic-user-pool-client">Create a basic user pool client</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var pool = new Aws.Cognito.UserPool(&amp;quot;pool&amp;quot;, new Aws.Cognito.UserPoolArgs
+    {
+    });
+    var client = new Aws.Cognito.UserPoolClient(&amp;quot;client&amp;quot;, new Aws.Cognito.UserPoolClientArgs
+    {
+        UserPoolId = pool.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="create-a-user-pool-client-with-no-srp-authentication">Create a user pool client with no SRP authentication</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var pool = new Aws.Cognito.UserPool(&amp;quot;pool&amp;quot;, new Aws.Cognito.UserPoolArgs
+    {
+    });
+    var client = new Aws.Cognito.UserPoolClient(&amp;quot;client&amp;quot;, new Aws.Cognito.UserPoolClientArgs
+    {
+        ExplicitAuthFlows = 
+        {
+            &amp;quot;ADMIN_NO_SRP_AUTH&amp;quot;,
+        },
+        GenerateSecret = true,
+        UserPoolId = pool.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="create-a-user-pool-client-with-pinpoint-analytics">Create a user pool client with pinpoint analytics</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+    var testUserPool = new Aws.Cognito.UserPool(&amp;quot;testUserPool&amp;quot;, new Aws.Cognito.UserPoolArgs
+    {
+    });
+    var testApp = new Aws.Pinpoint.App(&amp;quot;testApp&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var testRole = new Aws.Iam.Role(&amp;quot;testRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;cognito-idp.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var testRolePolicy = new Aws.Iam.RolePolicy(&amp;quot;testRolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = Output.Tuple(current, testApp.ApplicationId).Apply(values =&gt;
+        {
+            var current = values.Item1;
+            var applicationId = values.Item2;
+            return @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;mobiletargeting:UpdateEndpoint&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;mobiletargeting:PutItems&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:mobiletargeting:*:{current.AccountId}:apps/{applicationId}*&amp;quot;&amp;quot;
+}}
+]
+}}
+
+&amp;quot;;
+        }),
+        Role = testRole.Id,
+    });
+    var testUserPoolClient = new Aws.Cognito.UserPoolClient(&amp;quot;testUserPoolClient&amp;quot;, new Aws.Cognito.UserPoolClientArgs
+    {
+        AnalyticsConfiguration = new Aws.Cognito.Inputs.UserPoolClientAnalyticsConfigurationArgs
+        {
+            ApplicationId = testApp.ApplicationId,
+            ExternalId = &amp;quot;some_id&amp;quot;,
+            RoleArn = testRole.Arn,
+            UserDataShared = true,
+        },
+        UserPoolId = testUserPool.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UserPoolClient</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">UserPoolClient</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Cognito.html">Pulumi.Aws.Cognito</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +242,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L253">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient__ctor_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Cognito_UserPoolClient__ctor_System_String_Pulumi_Aws_Cognito_UserPoolClientArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Cognito.UserPoolClient.#ctor(System.String,Pulumi.Aws.Cognito.UserPoolClientArgs,System.Nullable{CustomResourceOptions})">UserPoolClient(String, UserPoolClientArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Cognito_UserPoolClient__ctor_System_String_Pulumi_Aws_Cognito_UserPoolClientArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.#ctor(System.String,Pulumi.Aws.Cognito.UserPoolClientArgs,Pulumi.CustomResourceOptions)">UserPoolClient(String, UserPoolClientArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a UserPoolClient resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UserPoolClient(string name, UserPoolClientArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public UserPoolClient(string name, UserPoolClientArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +276,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +286,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_AllowedOauthFlows_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.AllowedOauthFlows*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_AllowedOauthFlows" data-uid="Pulumi.Aws.Cognito.UserPoolClient.AllowedOauthFlows">AllowedOauthFlows</h4>
@@ -153,13 +307,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_AllowedOauthFlowsUserPoolClient_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.AllowedOauthFlowsUserPoolClient*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_AllowedOauthFlowsUserPoolClient" data-uid="Pulumi.Aws.Cognito.UserPoolClient.AllowedOauthFlowsUserPoolClient">AllowedOauthFlowsUserPoolClient</h4>
@@ -180,13 +334,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_AllowedOauthScopes_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.AllowedOauthScopes*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_AllowedOauthScopes" data-uid="Pulumi.Aws.Cognito.UserPoolClient.AllowedOauthScopes">AllowedOauthScopes</h4>
@@ -207,13 +361,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_AnalyticsConfiguration_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.AnalyticsConfiguration*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_AnalyticsConfiguration" data-uid="Pulumi.Aws.Cognito.UserPoolClient.AnalyticsConfiguration">AnalyticsConfiguration</h4>
@@ -234,13 +388,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Cognito.Outputs.UserPoolClientAnalyticsConfiguration.html">UserPoolClientAnalyticsConfiguration</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Cognito.Outputs.UserPoolClientAnalyticsConfiguration.html">UserPoolClientAnalyticsConfiguration</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_CallbackUrls_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.CallbackUrls*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_CallbackUrls" data-uid="Pulumi.Aws.Cognito.UserPoolClient.CallbackUrls">CallbackUrls</h4>
@@ -261,13 +415,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_ClientSecret_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.ClientSecret*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_ClientSecret" data-uid="Pulumi.Aws.Cognito.UserPoolClient.ClientSecret">ClientSecret</h4>
@@ -288,13 +442,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_DefaultRedirectUri_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.DefaultRedirectUri*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_DefaultRedirectUri" data-uid="Pulumi.Aws.Cognito.UserPoolClient.DefaultRedirectUri">DefaultRedirectUri</h4>
@@ -303,7 +457,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultRedirectUri { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultRedirectUri { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,13 +469,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_ExplicitAuthFlows_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.ExplicitAuthFlows*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_ExplicitAuthFlows" data-uid="Pulumi.Aws.Cognito.UserPoolClient.ExplicitAuthFlows">ExplicitAuthFlows</h4>
@@ -342,13 +496,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_GenerateSecret_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.GenerateSecret*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_GenerateSecret" data-uid="Pulumi.Aws.Cognito.UserPoolClient.GenerateSecret">GenerateSecret</h4>
@@ -369,13 +523,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_LogoutUrls_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.LogoutUrls*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_LogoutUrls" data-uid="Pulumi.Aws.Cognito.UserPoolClient.LogoutUrls">LogoutUrls</h4>
@@ -396,13 +550,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_Name_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.Name*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_Name" data-uid="Pulumi.Aws.Cognito.UserPoolClient.Name">Name</h4>
@@ -423,13 +577,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_PreventUserExistenceErrors_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.PreventUserExistenceErrors*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_PreventUserExistenceErrors" data-uid="Pulumi.Aws.Cognito.UserPoolClient.PreventUserExistenceErrors">PreventUserExistenceErrors</h4>
@@ -450,13 +604,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L218">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_ReadAttributes_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.ReadAttributes*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_ReadAttributes" data-uid="Pulumi.Aws.Cognito.UserPoolClient.ReadAttributes">ReadAttributes</h4>
@@ -477,13 +631,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_RefreshTokenValidity_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.RefreshTokenValidity*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_RefreshTokenValidity" data-uid="Pulumi.Aws.Cognito.UserPoolClient.RefreshTokenValidity">RefreshTokenValidity</h4>
@@ -504,13 +658,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_SupportedIdentityProviders_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.SupportedIdentityProviders*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_SupportedIdentityProviders" data-uid="Pulumi.Aws.Cognito.UserPoolClient.SupportedIdentityProviders">SupportedIdentityProviders</h4>
@@ -531,13 +685,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_UserPoolId_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.UserPoolId*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_UserPoolId" data-uid="Pulumi.Aws.Cognito.UserPoolClient.UserPoolId">UserPoolId</h4>
@@ -558,13 +712,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_WriteAttributes_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.WriteAttributes*"></a>
   <h4 id="Pulumi_Aws_Cognito_UserPoolClient_WriteAttributes" data-uid="Pulumi.Aws.Cognito.UserPoolClient.WriteAttributes">WriteAttributes</h4>
@@ -585,7 +739,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -593,17 +747,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L283">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_UserPoolClient_Get_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.Get*"></a>
-  <h4 id="Pulumi_Aws_Cognito_UserPoolClient_Get_System_String_Input_System_String__Pulumi_Aws_Cognito_UserPoolClientState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Cognito.UserPoolClient.Get(System.String,Input{System.String},Pulumi.Aws.Cognito.UserPoolClientState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, UserPoolClientState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Cognito_UserPoolClient_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Cognito_UserPoolClientState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Cognito.UserPoolClient.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Cognito.UserPoolClientState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, UserPoolClientState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing UserPoolClient resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static UserPoolClient Get(string name, Input&lt;string&gt; id, UserPoolClientState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static UserPoolClient Get(string name, Input&lt;string&gt; id, UserPoolClientState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -622,7 +776,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -634,7 +788,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -663,7 +817,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/UserPoolClient.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/UserPoolClient.cs/#L141" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

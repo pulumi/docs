@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PoolCertificate
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PoolCertificate</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Batch.Outputs.html">Pulumi.Azure.Batch.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Batch_Outputs_PoolCertificate_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class PoolCertificate : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PoolCertificate</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolCertificate.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolCertificate.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolCertificate_Id" data-uid="Pulumi.Azure.Batch.Outputs.PoolCertificate.Id">Id</h4>
   <div class="markdown level1 summary"><p>The ID of the Batch Certificate to install on the Batch Pool, which must be inside the same Batch Account.</p>
@@ -113,7 +137,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolCertificate.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolCertificate.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolCertificate_StoreLocation" data-uid="Pulumi.Azure.Batch.Outputs.PoolCertificate.StoreLocation">StoreLocation</h4>
   <div class="markdown level1 summary"><p>The location of the certificate store on the compute node into which to install the certificate. Possible values are <code>CurrentUser</code> or <code>LocalMachine</code>.</p>
@@ -139,7 +163,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolCertificate.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolCertificate.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolCertificate_StoreName" data-uid="Pulumi.Azure.Batch.Outputs.PoolCertificate.StoreName">StoreName</h4>
   <div class="markdown level1 summary"><p>The name of the certificate store on the compute node into which to install the certificate. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: <code>My</code>, <code>Root</code>, <code>CA</code>, <code>Trust</code>, <code>Disallowed</code>, <code>TrustedPeople</code>, <code>TrustedPublisher</code>, <code>AuthRoot</code>, <code>AddressBook</code>, but any custom store name can also be used. The default value is <code>My</code>.</p>
@@ -147,7 +171,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? StoreName</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string StoreName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolCertificate.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolCertificate.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolCertificate_Visibilities" data-uid="Pulumi.Azure.Batch.Outputs.PoolCertificate.Visibilities">Visibilities</h4>
   <div class="markdown level1 summary"><p>Which user accounts on the compute node should have access to the private data of the certificate.</p>
@@ -185,7 +209,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -197,7 +221,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolCertificate.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Outputs/PoolCertificate.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

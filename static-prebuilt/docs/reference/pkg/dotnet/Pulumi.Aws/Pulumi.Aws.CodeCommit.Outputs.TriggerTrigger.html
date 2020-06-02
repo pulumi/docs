@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TriggerTrigger
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TriggerTrigger</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CodeCommit.Outputs.html">Pulumi.Aws.CodeCommit.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_CodeCommit_Outputs_TriggerTrigger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class TriggerTrigger : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class TriggerTrigger</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeCommit_Outputs_TriggerTrigger_Branches" data-uid="Pulumi.Aws.CodeCommit.Outputs.TriggerTrigger.Branches">Branches</h4>
   <div class="markdown level1 summary"><p>The branches that will be included in the trigger configuration. If no branches are specified, the trigger will apply to all branches.</p>
@@ -107,13 +131,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeCommit_Outputs_TriggerTrigger_CustomData" data-uid="Pulumi.Aws.CodeCommit.Outputs.TriggerTrigger.CustomData">CustomData</h4>
   <div class="markdown level1 summary"><p>Any custom data associated with the trigger that will be included in the information sent to the target of the trigger.</p>
@@ -121,7 +145,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? CustomData</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string CustomData</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeCommit_Outputs_TriggerTrigger_DestinationArn" data-uid="Pulumi.Aws.CodeCommit.Outputs.TriggerTrigger.DestinationArn">DestinationArn</h4>
   <div class="markdown level1 summary"><p>The ARN of the resource that is the target for a trigger. For example, the ARN of a topic in Amazon Simple Notification Service (SNS).</p>
@@ -165,7 +189,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeCommit_Outputs_TriggerTrigger_Events" data-uid="Pulumi.Aws.CodeCommit.Outputs.TriggerTrigger.Events">Events</h4>
   <div class="markdown level1 summary"><p>The repository events that will cause the trigger to run actions in another service, such as sending a notification through Amazon Simple Notification Service (SNS). If no events are specified, the trigger will run for all repository events. Event types include: <code>all</code>, <code>updateReference</code>, <code>createReference</code>, <code>deleteReference</code>.</p>
@@ -185,13 +209,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeCommit_Outputs_TriggerTrigger_Name" data-uid="Pulumi.Aws.CodeCommit.Outputs.TriggerTrigger.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of the trigger.</p>
@@ -223,7 +247,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeCommit/Outputs/TriggerTrigger.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

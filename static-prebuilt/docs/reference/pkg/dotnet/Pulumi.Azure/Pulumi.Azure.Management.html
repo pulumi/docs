@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Management
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Management.Group.html">Group</a></h4>
       <section><p>Manages a Management Group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+    var exampleParent = new Azure.Management.Group(&amp;quot;exampleParent&amp;quot;, new Azure.Management.GroupArgs
+    {
+        DisplayName = &amp;quot;ParentGroup&amp;quot;,
+        SubscriptionIds = 
+        {
+            current.Apply(current =&gt; current.SubscriptionId),
+        },
+    });
+    var exampleChild = new Azure.Management.Group(&amp;quot;exampleChild&amp;quot;, new Azure.Management.GroupArgs
+    {
+        DisplayName = &amp;quot;ChildGroup&amp;quot;,
+        ParentManagementGroupId = exampleParent.Id,
+        SubscriptionIds = 
+        {
+            current.Apply(current =&gt; current.SubscriptionId),
+        },
+    });
+    // other subscription IDs can go here
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Management.GroupArgs.html">GroupArgs</a></h4>
       <section></section>
@@ -91,6 +122,76 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Management.Lock.html">Lock</a></h4>
       <section><p>Manages a Management Lock which is scoped to a Subscription, Resource Group or Resource.</p>
+<h2 id="example-usage-subscription-level-lock">Example Usage (Subscription Level Lock)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+    var subscription_level = new Azure.Management.Lock(&amp;quot;subscription-level&amp;quot;, new Azure.Management.LockArgs
+    {
+        Scope = current.Apply(current =&gt; current.Id),
+        LockLevel = &amp;quot;CanNotDelete&amp;quot;,
+        Notes = &amp;quot;Items can&amp;apos;t be deleted in this subscription!&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>## Example Usage (Resource Group Level Lock)</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Core.ResourceGroup(&amp;quot;example&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var resource_group_level = new Azure.Management.Lock(&amp;quot;resource-group-level&amp;quot;, new Azure.Management.LockArgs
+    {
+        Scope = example.Id,
+        LockLevel = &amp;quot;ReadOnly&amp;quot;,
+        Notes = &amp;quot;This Resource Group is Read-Only&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-resource-level-lock">Example Usage (Resource Level Lock)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var examplePublicIp = new Azure.Network.PublicIp(&amp;quot;examplePublicIp&amp;quot;, new Azure.Network.PublicIpArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AllocationMethod = &amp;quot;Static&amp;quot;,
+        IdleTimeoutInMinutes = 30,
+    });
+    var public_ip = new Azure.Management.Lock(&amp;quot;public-ip&amp;quot;, new Azure.Management.LockArgs
+    {
+        Scope = examplePublicIp.Id,
+        LockLevel = &amp;quot;CanNotDelete&amp;quot;,
+        Notes = &amp;quot;Locked because it&amp;apos;s needed by a third-party&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Management.LockArgs.html">LockArgs</a></h4>
       <section></section>

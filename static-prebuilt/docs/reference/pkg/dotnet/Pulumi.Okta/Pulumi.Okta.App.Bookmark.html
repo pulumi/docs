@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Bookmark
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,67 @@
   </h1>
   <div class="markdown level0 summary"><p>Creates a Bookmark Application.</p>
 <p>This resource allows you to create and configure a Bookmark Application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.Bookmark(&amp;quot;example&amp;quot;, new Okta.App.BookmarkArgs
+    {
+        Label = &amp;quot;Example&amp;quot;,
+        Url = &amp;quot;https://example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Bookmark</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Bookmark</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Okta.App.html">Pulumi.Okta.App</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Okta.dll</h6>
@@ -89,16 +144,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark__ctor_" data-uid="Pulumi.Okta.App.Bookmark.#ctor*"></a>
-  <h4 id="Pulumi_Okta_App_Bookmark__ctor_System_String_Pulumi_Okta_App_BookmarkArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.App.Bookmark.#ctor(System.String,Pulumi.Okta.App.BookmarkArgs,System.Nullable{CustomResourceOptions})">Bookmark(String, BookmarkArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_App_Bookmark__ctor_System_String_Pulumi_Okta_App_BookmarkArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.App.Bookmark.#ctor(System.String,Pulumi.Okta.App.BookmarkArgs,Pulumi.CustomResourceOptions)">Bookmark(String, BookmarkArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Bookmark resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Bookmark(string name, BookmarkArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Bookmark(string name, BookmarkArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +178,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +188,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_AutoSubmitToolbar_" data-uid="Pulumi.Okta.App.Bookmark.AutoSubmitToolbar*"></a>
   <h4 id="Pulumi_Okta_App_Bookmark_AutoSubmitToolbar" data-uid="Pulumi.Okta.App.Bookmark.AutoSubmitToolbar">AutoSubmitToolbar</h4>
@@ -154,13 +209,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_Groups_" data-uid="Pulumi.Okta.App.Bookmark.Groups*"></a>
   <h4 id="Pulumi_Okta_App_Bookmark_Groups" data-uid="Pulumi.Okta.App.Bookmark.Groups">Groups</h4>
@@ -181,13 +236,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_HideIos_" data-uid="Pulumi.Okta.App.Bookmark.HideIos*"></a>
   <h4 id="Pulumi_Okta_App_Bookmark_HideIos" data-uid="Pulumi.Okta.App.Bookmark.HideIos">HideIos</h4>
@@ -208,13 +263,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_HideWeb_" data-uid="Pulumi.Okta.App.Bookmark.HideWeb*"></a>
   <h4 id="Pulumi_Okta_App_Bookmark_HideWeb" data-uid="Pulumi.Okta.App.Bookmark.HideWeb">HideWeb</h4>
@@ -235,13 +290,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_Label_" data-uid="Pulumi.Okta.App.Bookmark.Label*"></a>
   <h4 id="Pulumi_Okta_App_Bookmark_Label" data-uid="Pulumi.Okta.App.Bookmark.Label">Label</h4>
@@ -262,13 +317,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_Name_" data-uid="Pulumi.Okta.App.Bookmark.Name*"></a>
   <h4 id="Pulumi_Okta_App_Bookmark_Name" data-uid="Pulumi.Okta.App.Bookmark.Name">Name</h4>
@@ -289,13 +344,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_RequestIntegration_" data-uid="Pulumi.Okta.App.Bookmark.RequestIntegration*"></a>
   <h4 id="Pulumi_Okta_App_Bookmark_RequestIntegration" data-uid="Pulumi.Okta.App.Bookmark.RequestIntegration">RequestIntegration</h4>
@@ -316,13 +371,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_SignOnMode_" data-uid="Pulumi.Okta.App.Bookmark.SignOnMode*"></a>
   <h4 id="Pulumi_Okta_App_Bookmark_SignOnMode" data-uid="Pulumi.Okta.App.Bookmark.SignOnMode">SignOnMode</h4>
@@ -343,13 +398,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_Status_" data-uid="Pulumi.Okta.App.Bookmark.Status*"></a>
   <h4 id="Pulumi_Okta_App_Bookmark_Status" data-uid="Pulumi.Okta.App.Bookmark.Status">Status</h4>
@@ -358,7 +413,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Status { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -370,13 +425,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_Url_" data-uid="Pulumi.Okta.App.Bookmark.Url*"></a>
   <h4 id="Pulumi_Okta_App_Bookmark_Url" data-uid="Pulumi.Okta.App.Bookmark.Url">Url</h4>
@@ -397,13 +452,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_Users_" data-uid="Pulumi.Okta.App.Bookmark.Users*"></a>
   <h4 id="Pulumi_Okta_App_Bookmark_Users" data-uid="Pulumi.Okta.App.Bookmark.Users">Users</h4>
@@ -424,7 +479,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.App.Outputs.BookmarkUser.html">BookmarkUser</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.App.Outputs.BookmarkUser.html">BookmarkUser</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -432,17 +487,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_Bookmark_Get_" data-uid="Pulumi.Okta.App.Bookmark.Get*"></a>
-  <h4 id="Pulumi_Okta_App_Bookmark_Get_System_String_Input_System_String__Pulumi_Okta_App_BookmarkState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.App.Bookmark.Get(System.String,Input{System.String},Pulumi.Okta.App.BookmarkState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BookmarkState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_App_Bookmark_Get_System_String_Pulumi_Input_System_String__Pulumi_Okta_App_BookmarkState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.App.Bookmark.Get(System.String,Pulumi.Input{System.String},Pulumi.Okta.App.BookmarkState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BookmarkState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Bookmark resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Bookmark Get(string name, Input&lt;string&gt; id, BookmarkState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Bookmark Get(string name, Input&lt;string&gt; id, BookmarkState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -461,7 +516,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -473,7 +528,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -502,7 +557,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/Bookmark.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/Bookmark.cs/#L39" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

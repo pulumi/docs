@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.ElasticTranscoder
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,33 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.ElasticTranscoder.Pipeline.html">Pipeline</a></h4>
       <section><p>Provides an Elastic Transcoder pipeline resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bar = new Aws.ElasticTranscoder.Pipeline(&amp;quot;bar&amp;quot;, new Aws.ElasticTranscoder.PipelineArgs
+    {
+        ContentConfig = new Aws.ElasticTranscoder.Inputs.PipelineContentConfigArgs
+        {
+            Bucket = aws_s3_bucket.Content_bucket.Bucket,
+            StorageClass = &amp;quot;Standard&amp;quot;,
+        },
+        InputBucket = aws_s3_bucket.Input_bucket.Bucket,
+        Role = aws_iam_role.Test_role.Arn,
+        ThumbnailConfig = new Aws.ElasticTranscoder.Inputs.PipelineThumbnailConfigArgs
+        {
+            Bucket = aws_s3_bucket.Thumb_bucket.Bucket,
+            StorageClass = &amp;quot;Standard&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ElasticTranscoder.PipelineArgs.html">PipelineArgs</a></h4>
       <section></section>
@@ -85,6 +112,82 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ElasticTranscoder.Preset.html">Preset</a></h4>
       <section><p>Provides an Elastic Transcoder preset resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bar = new Aws.ElasticTranscoder.Preset(&amp;quot;bar&amp;quot;, new Aws.ElasticTranscoder.PresetArgs
+    {
+        Audio = new Aws.ElasticTranscoder.Inputs.PresetAudioArgs
+        {
+            AudioPackingMode = &amp;quot;SingleTrack&amp;quot;,
+            BitRate = 96,
+            Channels = 2,
+            Codec = &amp;quot;AAC&amp;quot;,
+            SampleRate = 44100,
+        },
+        AudioCodecOptions = new Aws.ElasticTranscoder.Inputs.PresetAudioCodecOptionsArgs
+        {
+            Profile = &amp;quot;AAC-LC&amp;quot;,
+        },
+        Container = &amp;quot;mp4&amp;quot;,
+        Description = &amp;quot;Sample Preset&amp;quot;,
+        Thumbnails = new Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs
+        {
+            Format = &amp;quot;png&amp;quot;,
+            Interval = 120,
+            MaxHeight = &amp;quot;auto&amp;quot;,
+            MaxWidth = &amp;quot;auto&amp;quot;,
+            PaddingPolicy = &amp;quot;Pad&amp;quot;,
+            SizingPolicy = &amp;quot;Fit&amp;quot;,
+        },
+        Video = new Aws.ElasticTranscoder.Inputs.PresetVideoArgs
+        {
+            BitRate = &amp;quot;1600&amp;quot;,
+            Codec = &amp;quot;H.264&amp;quot;,
+            DisplayAspectRatio = &amp;quot;16:9&amp;quot;,
+            FixedGop = &amp;quot;false&amp;quot;,
+            FrameRate = &amp;quot;auto&amp;quot;,
+            KeyframesMaxDist = 240,
+            MaxFrameRate = &amp;quot;60&amp;quot;,
+            MaxHeight = &amp;quot;auto&amp;quot;,
+            MaxWidth = &amp;quot;auto&amp;quot;,
+            PaddingPolicy = &amp;quot;Pad&amp;quot;,
+            SizingPolicy = &amp;quot;Fit&amp;quot;,
+        },
+        VideoCodecOptions = 
+        {
+            { &amp;quot;ColorSpaceConversionMode&amp;quot;, &amp;quot;None&amp;quot; },
+            { &amp;quot;InterlacedMode&amp;quot;, &amp;quot;Progressive&amp;quot; },
+            { &amp;quot;Level&amp;quot;, &amp;quot;2.2&amp;quot; },
+            { &amp;quot;MaxReferenceFrames&amp;quot;, 3 },
+            { &amp;quot;Profile&amp;quot;, &amp;quot;main&amp;quot; },
+        },
+        VideoWatermarks = 
+        {
+            new Aws.ElasticTranscoder.Inputs.PresetVideoWatermarkArgs
+            {
+                HorizontalAlign = &amp;quot;Right&amp;quot;,
+                HorizontalOffset = &amp;quot;10px&amp;quot;,
+                Id = &amp;quot;Test&amp;quot;,
+                MaxHeight = &amp;quot;20%&amp;quot;,
+                MaxWidth = &amp;quot;20%&amp;quot;,
+                Opacity = &amp;quot;55.5&amp;quot;,
+                SizingPolicy = &amp;quot;ShrinkToFit&amp;quot;,
+                Target = &amp;quot;Content&amp;quot;,
+                VerticalAlign = &amp;quot;Bottom&amp;quot;,
+                VerticalOffset = &amp;quot;10px&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ElasticTranscoder.PresetArgs.html">PresetArgs</a></h4>
       <section></section>

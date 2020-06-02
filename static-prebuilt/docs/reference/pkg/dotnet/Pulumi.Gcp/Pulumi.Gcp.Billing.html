@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Billing
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,6 +89,27 @@ what your policy should be.</p>
 Use <code>pulumi import</code> and inspect the output to ensure
 your existing members are preserved.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Billing.AccountIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Billing.AccountIamBindingArgs
+    {
+        BillingAccountId = &amp;quot;00AA00-000AAA-00AA0A&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:alice@gmail.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/billing.viewer&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Billing.AccountIamBindingArgs.html">AccountIamBindingArgs</a></h4>
       <section></section>
@@ -102,6 +123,24 @@ the IAM policy for an existing Google Cloud Platform Billing Account.</p>
 <code>gcp.billing.AccountIamBinding</code> for the <strong>same role</strong> or they will fight over
 what your policy should be.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Billing.AccountIamMember(&amp;quot;binding&amp;quot;, new Gcp.Billing.AccountIamMemberArgs
+    {
+        BillingAccountId = &amp;quot;00AA00-000AAA-00AA0A&amp;quot;,
+        Member = &amp;quot;user:alice@gmail.com&amp;quot;,
+        Role = &amp;quot;roles/billing.viewer&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Billing.AccountIamMemberArgs.html">AccountIamMemberArgs</a></h4>
       <section></section>
@@ -121,6 +160,37 @@ and examining the diff very closely.</p>
 <code>gcp.billing.AccountIamMember</code> or <code>gcp.billing.AccountIamBinding</code>
 or they will fight over what your policy should be.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/billing.viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Billing.AccountIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Billing.AccountIamPolicyArgs
+    {
+        BillingAccountId = &amp;quot;00AA00-000AAA-00AA0A&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Billing.AccountIamPolicyArgs.html">AccountIamPolicyArgs</a></h4>
       <section></section>

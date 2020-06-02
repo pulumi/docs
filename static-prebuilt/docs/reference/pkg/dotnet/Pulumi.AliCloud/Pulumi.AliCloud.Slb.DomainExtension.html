@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DomainExtension
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,12 +79,148 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
 <blockquote>
 <p><strong>NOTE:</strong> The instance with shared loadBalancerSpec doesn't support domainExtension.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new AliCloud.Slb.LoadBalancer(&amp;quot;instance&amp;quot;, new AliCloud.Slb.LoadBalancerArgs
+    {
+        Internet = &amp;quot;true&amp;quot;,
+        InternetChargeType = &amp;quot;PayByTraffic&amp;quot;,
+    });
+    var foo = new AliCloud.Slb.ServerCertificate(&amp;quot;foo&amp;quot;, new AliCloud.Slb.ServerCertificateArgs
+    {
+        PrivateKey = @&amp;quot;-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEAyjCheapjf7qDI3R9w/Gj0XFDgNLPK2aWIRvM25BdY/IB2KAf
+xQ7zOxu3X1bMo2zMCzsSrwIVrxx0qRM/7e4AfkHcKwDIjCcBprQp164dhFol4GpT
+HtcuGv0+Ue6vpuE9cxQE3/pG5x1n5EhheFu2+lAaGh/vUrUPeQp6szX/9qfzn+/k
+tF8wsRV8PBiFc2ZNMRXupRyc2qtOn95r86w/uK6TuerU1L64E2P5+tYLBWT+39Ai
+diUIenjURThFEn8Srvw8v/iLEMaKwiWNkOfWQH96166gzddOI8PT5cJy5an2c90T
+DgzegVo8RPK70bU9KjH7gH79YIwXVmTdIVGAUQIDAQABAoIBAE1J4a/8biR5S3/W
+G+03BYQeY8tuyjqw8FqfoeOcf9agwAvqybouSNQjeCk9qOQfxq/UWQQFK/zQR9gJ
+v7pX7GBXFK5rkj3g+0SaQhRsPmRFgY0Tl8qGPt2aSKRRNVv5ZeADmwlzRn86QmiF
+Mp0rkfqFfDTYWEepZszCML0ouzuxsW/9tq7rvtSjsgATNt31B3vFa3D3JBi31jUh
+5nfR9A3bATze7mQw3byEDiVl5ASRDgYyur403P1fDnMy9DBHZ8NaPOsFF6OBpJal
+BJsG5z00hll5PFN2jfmBQKlvAeU7wfwqdaSnGHOfqf2DeTTaFjIQ4gUhRn/m6pLo
+6kXttLECgYEA9sng0Qz/TcPFfM4tQ1gyvB1cKnnGIwg1FP8sfUjbbEgjaHhA224S
+k3BxtX2Kq6fhTXuwusAFc6OVMAZ76FgrQ5K4Ci7+DTsrF28z4b8td+p+lO/DxgP9
+lTgN+ddsiTOV4fUef9Z3yY0Zr0CnBUMbQYRaV2UIbCdiB0G4V/bt9TsCgYEA0bya
+Oo9wGI0RJV0bYP7qwO74Ra1/i1viWbRlS7jU37Q+AZstrlKcQ5CTPzOjKFKMiUzl
+4miWacZ0/q2n+Mvd7NbXGXTLijahnyOYKaHJYyh4oBymfkgAifRstE0Ki9gdvArb
+/I+emC0GvLSyfGN8UUeDJs4NmqdEXGqjo2JOV+MCgYALFv1MR5o9Y1u/hQBRs2fs
+PiGDIx+9OUQxYloccyaxEfjNXAIGGkcpavchIbgWiJ++PJ2vdquIC8TLeK8evL+M
+9M3iX0Q5UfxYvD2HmnCvn9D6Xl/cyRcfGnq+TGjrLW9BzSMGuZt+aiHKV0xqFx7l
+bc4leTvMqGRmURS4lzcQOwKBgQCDzA/i4sYfN25h21tcHXSpnsG3D2rJyQi5NCo/
+ZjunA92/JqOTGuiFcLGHEszhhtY3ZXJET1LNz18vtzKJnpqrvOnYXlOVW/U+SqDQ
+8JDb1c/PVZGuY1KrXkR9HLiW3kz5IJ3S3PFdUVYdeTN8BQxXCyg4V12nJJtJs912
+y0zN3wKBgGDS6YttCN6aI4EOABYE8fI1EYQ7vhfiYsaWGWSR1l6bQey7KR6M1ACz
+ZzMASNyytVt12yXE4/Emv6/pYqigbDLfL1zQJSLJ3EHJYTh2RxjR+AaGDudYFG/T
+liQ9YXhV5Iu2x1pNwrtFnssDdaaGpfA7l3xC00BL7Z+SAJyI4QKA
+-----END RSA PRIVATE KEY-----
+&amp;quot;,
+        ServerCertificate = @&amp;quot;-----BEGIN CERTIFICATE-----
+MIIDdjCCAl4CCQCcm+erkcKN7DANBgkqhkiG9w0BAQsFADB9MQswCQYDVQQGEwJj
+bjELMAkGA1UECAwCYmoxEDAOBgNVBAcMB2JlaWppbmcxDzANBgNVBAoMBmFsaXl1
+bjELMAkGA1UECwwCc2MxFTATBgNVBAMMDHd3dy50ZXN0LmNvbTEaMBgGCSqGSIb3
+DQEJARYLMTIzQDEyMy5jb20wHhcNMTkwNDI2MDM0ODAxWhcNMjQwNDI1MDM0ODAx
+WjB9MQswCQYDVQQGEwJjbjELMAkGA1UECAwCYmoxEDAOBgNVBAcMB2JlaWppbmcx
+DzANBgNVBAoMBmFsaXl1bjELMAkGA1UECwwCc2MxFTATBgNVBAMMDHd3dy50ZXN0
+LmNvbTEaMBgGCSqGSIb3DQEJARYLMTIzQDEyMy5jb20wggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQDKMKF5qmN/uoMjdH3D8aPRcUOA0s8rZpYhG8zbkF1j
+8gHYoB/FDvM7G7dfVsyjbMwLOxKvAhWvHHSpEz/t7gB+QdwrAMiMJwGmtCnXrh2E
+WiXgalMe1y4a/T5R7q+m4T1zFATf+kbnHWfkSGF4W7b6UBoaH+9StQ95CnqzNf/2
+p/Of7+S0XzCxFXw8GIVzZk0xFe6lHJzaq06f3mvzrD+4rpO56tTUvrgTY/n61gsF
+ZP7f0CJ2JQh6eNRFOEUSfxKu/Dy/+IsQxorCJY2Q59ZAf3rXrqDN104jw9PlwnLl
+qfZz3RMODN6BWjxE8rvRtT0qMfuAfv1gjBdWZN0hUYBRAgMBAAEwDQYJKoZIhvcN
+AQELBQADggEBAABzo82TxGp5poVkd5pLWj5ACgcBv8Cs6oH9D+4Jz9BmyuBUsQXh
+2aG0hQAe1mU61C9konsl/GTW8umJQ4M4lYEztXXwMf5PlBMGwebM0ZbSGg6jKtZg
+WCgJ3eP/FMmyXGL5Jji5+e09eObhUDVle4tdi0On97zBoz85W02rgWFAqZJwiEAP
+t+c7jX7uOSBq2/38iGStlrX5yB1at/gJXXiA5CL5OtlR3Okvb0/QH37efO1Nu39m
+lFi0ODPAVyXjVypAiLguDxPn6AtDTdk9Iw9B19OD4NrzNRWgSSX5vuxo/VcRcgWk
+3gEe9Ca0ZKN20q9XgthAiFFjl1S9ZgdA6Zc=
+-----END CERTIFICATE-----
+&amp;quot;,
+    });
+    var https = new AliCloud.Slb.Listener(&amp;quot;https&amp;quot;, new AliCloud.Slb.ListenerArgs
+    {
+        BackendPort = 80,
+        Bandwidth = 10,
+        Cookie = &amp;quot;testslblistenercookie&amp;quot;,
+        CookieTimeout = 86400,
+        FrontendPort = 443,
+        HealthCheck = &amp;quot;on&amp;quot;,
+        HealthCheckConnectPort = 20,
+        HealthCheckHttpCode = &amp;quot;http_2xx,http_3xx&amp;quot;,
+        HealthCheckInterval = 5,
+        HealthCheckTimeout = 8,
+        HealthCheckUri = &amp;quot;/cons&amp;quot;,
+        HealthyThreshold = 8,
+        LoadBalancerId = instance.Id,
+        Protocol = &amp;quot;https&amp;quot;,
+        SslCertificateId = foo.Id,
+        StickySession = &amp;quot;on&amp;quot;,
+        StickySessionType = &amp;quot;insert&amp;quot;,
+        UnhealthyThreshold = 8,
+    });
+    var example1 = new AliCloud.Slb.DomainExtension(&amp;quot;example1&amp;quot;, new AliCloud.Slb.DomainExtensionArgs
+    {
+        Domain = &amp;quot;www.test.com&amp;quot;,
+        FrontendPort = https.FrontendPort,
+        LoadBalancerId = instance.Id,
+        ServerCertificateId = foo.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DomainExtension</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">DomainExtension</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Slb.html">Pulumi.AliCloud.Slb</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -95,16 +231,16 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/DomainExtension.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/DomainExtension.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_DomainExtension__ctor_" data-uid="Pulumi.AliCloud.Slb.DomainExtension.#ctor*"></a>
-  <h4 id="Pulumi_AliCloud_Slb_DomainExtension__ctor_System_String_Pulumi_AliCloud_Slb_DomainExtensionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Slb.DomainExtension.#ctor(System.String,Pulumi.AliCloud.Slb.DomainExtensionArgs,System.Nullable{CustomResourceOptions})">DomainExtension(String, DomainExtensionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Slb_DomainExtension__ctor_System_String_Pulumi_AliCloud_Slb_DomainExtensionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Slb.DomainExtension.#ctor(System.String,Pulumi.AliCloud.Slb.DomainExtensionArgs,Pulumi.CustomResourceOptions)">DomainExtension(String, DomainExtensionArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a DomainExtension resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DomainExtension(string name, DomainExtensionArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public DomainExtension(string name, DomainExtensionArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,7 +265,7 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -139,7 +275,7 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/DomainExtension.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/DomainExtension.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_DomainExtension_DeleteProtectionValidation_" data-uid="Pulumi.AliCloud.Slb.DomainExtension.DeleteProtectionValidation*"></a>
   <h4 id="Pulumi_AliCloud_Slb_DomainExtension_DeleteProtectionValidation" data-uid="Pulumi.AliCloud.Slb.DomainExtension.DeleteProtectionValidation">DeleteProtectionValidation</h4>
@@ -160,13 +296,13 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/DomainExtension.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/DomainExtension.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_DomainExtension_Domain_" data-uid="Pulumi.AliCloud.Slb.DomainExtension.Domain*"></a>
   <h4 id="Pulumi_AliCloud_Slb_DomainExtension_Domain" data-uid="Pulumi.AliCloud.Slb.DomainExtension.Domain">Domain</h4>
@@ -187,13 +323,13 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/DomainExtension.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/DomainExtension.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_DomainExtension_FrontendPort_" data-uid="Pulumi.AliCloud.Slb.DomainExtension.FrontendPort*"></a>
   <h4 id="Pulumi_AliCloud_Slb_DomainExtension_FrontendPort" data-uid="Pulumi.AliCloud.Slb.DomainExtension.FrontendPort">FrontendPort</h4>
@@ -214,13 +350,13 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/DomainExtension.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/DomainExtension.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_DomainExtension_LoadBalancerId_" data-uid="Pulumi.AliCloud.Slb.DomainExtension.LoadBalancerId*"></a>
   <h4 id="Pulumi_AliCloud_Slb_DomainExtension_LoadBalancerId" data-uid="Pulumi.AliCloud.Slb.DomainExtension.LoadBalancerId">LoadBalancerId</h4>
@@ -241,13 +377,13 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/DomainExtension.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/DomainExtension.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_DomainExtension_ServerCertificateId_" data-uid="Pulumi.AliCloud.Slb.DomainExtension.ServerCertificateId*"></a>
   <h4 id="Pulumi_AliCloud_Slb_DomainExtension_ServerCertificateId" data-uid="Pulumi.AliCloud.Slb.DomainExtension.ServerCertificateId">ServerCertificateId</h4>
@@ -268,7 +404,7 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -276,17 +412,17 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/DomainExtension.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/DomainExtension.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_DomainExtension_Get_" data-uid="Pulumi.AliCloud.Slb.DomainExtension.Get*"></a>
-  <h4 id="Pulumi_AliCloud_Slb_DomainExtension_Get_System_String_Input_System_String__Pulumi_AliCloud_Slb_DomainExtensionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Slb.DomainExtension.Get(System.String,Input{System.String},Pulumi.AliCloud.Slb.DomainExtensionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DomainExtensionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Slb_DomainExtension_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Slb_DomainExtensionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Slb.DomainExtension.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Slb.DomainExtensionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DomainExtensionState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing DomainExtension resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DomainExtension Get(string name, Input&lt;string&gt; id, DomainExtensionState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static DomainExtension Get(string name, Input&lt;string&gt; id, DomainExtensionState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,7 +441,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -317,7 +453,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -346,7 +482,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/DomainExtension.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/DomainExtension.cs/#L123" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

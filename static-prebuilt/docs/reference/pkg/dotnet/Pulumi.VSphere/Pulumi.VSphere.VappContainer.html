@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VappContainer
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,139 @@
 vApps.</p>
 <p>For more information on vSphere vApps, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html">this
 page</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var datacenter = config.Get(&amp;quot;datacenter&amp;quot;) ?? &amp;quot;dc1&amp;quot;;
+    var cluster = config.Get(&amp;quot;cluster&amp;quot;) ?? &amp;quot;cluster1&amp;quot;;
+    var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+    {
+        Name = datacenter,
+    }));
+    var computeCluster = dc.Apply(dc =&gt; Output.Create(VSphere.GetComputeCluster.InvokeAsync(new VSphere.GetComputeClusterArgs
+    {
+        DatacenterId = dc.Id,
+        Name = cluster,
+    })));
+    var vappContainer = new VSphere.VappContainer(&amp;quot;vappContainer&amp;quot;, new VSphere.VappContainerArgs
+    {
+        ParentResourcePoolId = computeCluster.Apply(computeCluster =&gt; computeCluster.Id),
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-with-virtual-machine">Example with virtual machine</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var datacenter = config.Get(&amp;quot;datacenter&amp;quot;) ?? &amp;quot;dc1&amp;quot;;
+    var cluster = config.Get(&amp;quot;cluster&amp;quot;) ?? &amp;quot;cluster1&amp;quot;;
+    var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+    {
+        Name = datacenter,
+    }));
+    var computeCluster = dc.Apply(dc =&gt; Output.Create(VSphere.GetComputeCluster.InvokeAsync(new VSphere.GetComputeClusterArgs
+    {
+        DatacenterId = dc.Id,
+        Name = cluster,
+    })));
+    var network = dc.Apply(dc =&gt; Output.Create(VSphere.GetNetwork.InvokeAsync(new VSphere.GetNetworkArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;network1&amp;quot;,
+    })));
+    var datastore = dc.Apply(dc =&gt; Output.Create(VSphere.GetDatastore.InvokeAsync(new VSphere.GetDatastoreArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;datastore1&amp;quot;,
+    })));
+    var vappContainer = new VSphere.VappContainer(&amp;quot;vappContainer&amp;quot;, new VSphere.VappContainerArgs
+    {
+        ParentResourcePoolId = computeCluster.Apply(computeCluster =&gt; computeCluster.Id),
+    });
+    var vm = new VSphere.VirtualMachine(&amp;quot;vm&amp;quot;, new VSphere.VirtualMachineArgs
+    {
+        DatastoreId = datastore.Apply(datastore =&gt; datastore.Id),
+        Disks = 
+        {
+            new VSphere.Inputs.VirtualMachineDiskArgs
+            {
+                Label = &amp;quot;disk0&amp;quot;,
+                Size = 1,
+            },
+        },
+        GuestId = &amp;quot;ubuntu64Guest&amp;quot;,
+        Memory = 1024,
+        NetworkInterfaces = 
+        {
+            new VSphere.Inputs.VirtualMachineNetworkInterfaceArgs
+            {
+                NetworkId = network.Apply(network =&gt; network.Id),
+            },
+        },
+        NumCpus = 2,
+        ResourcePoolId = vappContainer.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">VappContainer</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">VappContainer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -91,16 +218,16 @@ page</a>.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L151">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L247">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer__ctor_" data-uid="Pulumi.VSphere.VappContainer.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_VappContainer__ctor_System_String_Pulumi_VSphere_VappContainerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.VappContainer.#ctor(System.String,Pulumi.VSphere.VappContainerArgs,System.Nullable{CustomResourceOptions})">VappContainer(String, VappContainerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_VappContainer__ctor_System_String_Pulumi_VSphere_VappContainerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.VappContainer.#ctor(System.String,Pulumi.VSphere.VappContainerArgs,Pulumi.CustomResourceOptions)">VappContainer(String, VappContainerArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a VappContainer resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VappContainer(string name, VappContainerArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public VappContainer(string name, VappContainerArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +252,7 @@ page</a>.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +262,7 @@ page</a>.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_CpuExpandable_" data-uid="Pulumi.VSphere.VappContainer.CpuExpandable*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_CpuExpandable" data-uid="Pulumi.VSphere.VappContainer.CpuExpandable">CpuExpandable</h4>
@@ -158,13 +285,13 @@ unreserved resources. Default: <code>true</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_CpuLimit_" data-uid="Pulumi.VSphere.VappContainer.CpuLimit*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_CpuLimit" data-uid="Pulumi.VSphere.VappContainer.CpuLimit">CpuLimit</h4>
@@ -188,13 +315,13 @@ Default: <code>-1</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_CpuReservation_" data-uid="Pulumi.VSphere.VappContainer.CpuReservation*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_CpuReservation" data-uid="Pulumi.VSphere.VappContainer.CpuReservation">CpuReservation</h4>
@@ -216,13 +343,13 @@ available to the vApp container. Default: <code>0</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_CpuShareLevel_" data-uid="Pulumi.VSphere.VappContainer.CpuShareLevel*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_CpuShareLevel" data-uid="Pulumi.VSphere.VappContainer.CpuShareLevel">CpuShareLevel</h4>
@@ -235,7 +362,7 @@ ignored.  Default: <code>normal</code></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CpuShareLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CpuShareLevel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,13 +374,13 @@ ignored.  Default: <code>normal</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_CpuShares_" data-uid="Pulumi.VSphere.VappContainer.CpuShares*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_CpuShares" data-uid="Pulumi.VSphere.VappContainer.CpuShares">CpuShares</h4>
@@ -276,13 +403,13 @@ determine resource allocation in case of resource contention. If this is set,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_CustomAttributes_" data-uid="Pulumi.VSphere.VappContainer.CustomAttributes*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_CustomAttributes" data-uid="Pulumi.VSphere.VappContainer.CustomAttributes">CustomAttributes</h4>
@@ -291,7 +418,7 @@ determine resource allocation in case of resource contention. If this is set,
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; CustomAttributes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; CustomAttributes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,13 +430,13 @@ determine resource allocation in case of resource contention. If this is set,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_MemoryExpandable_" data-uid="Pulumi.VSphere.VappContainer.MemoryExpandable*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_MemoryExpandable" data-uid="Pulumi.VSphere.VappContainer.MemoryExpandable">MemoryExpandable</h4>
@@ -332,13 +459,13 @@ unreserved resources. Default: <code>true</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_MemoryLimit_" data-uid="Pulumi.VSphere.VappContainer.MemoryLimit*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_MemoryLimit" data-uid="Pulumi.VSphere.VappContainer.MemoryLimit">MemoryLimit</h4>
@@ -362,13 +489,13 @@ Default: <code>-1</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_MemoryReservation_" data-uid="Pulumi.VSphere.VappContainer.MemoryReservation*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_MemoryReservation" data-uid="Pulumi.VSphere.VappContainer.MemoryReservation">MemoryReservation</h4>
@@ -390,13 +517,13 @@ available to the vApp container. Default: <code>0</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L199">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_MemoryShareLevel_" data-uid="Pulumi.VSphere.VappContainer.MemoryShareLevel*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_MemoryShareLevel" data-uid="Pulumi.VSphere.VappContainer.MemoryShareLevel">MemoryShareLevel</h4>
@@ -409,7 +536,7 @@ ignored.  Default: <code>normal</code></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MemoryShareLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MemoryShareLevel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -421,13 +548,13 @@ ignored.  Default: <code>normal</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_MemoryShares_" data-uid="Pulumi.VSphere.VappContainer.MemoryShares*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_MemoryShares" data-uid="Pulumi.VSphere.VappContainer.MemoryShares">MemoryShares</h4>
@@ -450,13 +577,13 @@ determine resource allocation in case of resource contention. If this is set,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_Name_" data-uid="Pulumi.VSphere.VappContainer.Name*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_Name" data-uid="Pulumi.VSphere.VappContainer.Name">Name</h4>
@@ -477,23 +604,23 @@ determine resource allocation in case of resource contention. If this is set,
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L220">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_ParentFolderId_" data-uid="Pulumi.VSphere.VappContainer.ParentFolderId*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_ParentFolderId" data-uid="Pulumi.VSphere.VappContainer.ParentFolderId">ParentFolderId</h4>
-  <div class="markdown level1 summary"><p>The [managed object ID][docs-about-morefs] of
+  <div class="markdown level1 summary"><p>The managed object ID of
 the vApp container's parent folder.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ParentFolderId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ParentFolderId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -505,17 +632,17 @@ the vApp container's parent folder.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_ParentResourcePoolId_" data-uid="Pulumi.VSphere.VappContainer.ParentResourcePoolId*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_ParentResourcePoolId" data-uid="Pulumi.VSphere.VappContainer.ParentResourcePoolId">ParentResourcePoolId</h4>
-  <div class="markdown level1 summary"><p>The [managed object ID][docs-about-morefs]
+  <div class="markdown level1 summary"><p>The managed object ID
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a vApp container
 from one parent resource pool to another, both must share a common root
@@ -536,18 +663,17 @@ resource pool or the move will fail.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_Tags_" data-uid="Pulumi.VSphere.VappContainer.Tags*"></a>
   <h4 id="Pulumi_VSphere_VappContainer_Tags" data-uid="Pulumi.VSphere.VappContainer.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.</p>
+  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -564,7 +690,7 @@ resource pool or the move will fail.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -572,17 +698,17 @@ resource pool or the move will fail.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L277">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VappContainer_Get_" data-uid="Pulumi.VSphere.VappContainer.Get*"></a>
-  <h4 id="Pulumi_VSphere_VappContainer_Get_System_String_Input_System_String__Pulumi_VSphere_VappContainerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.VappContainer.Get(System.String,Input{System.String},Pulumi.VSphere.VappContainerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VappContainerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_VappContainer_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_VappContainerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.VappContainer.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.VappContainerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VappContainerState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing VappContainer resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static VappContainer Get(string name, Input&lt;string&gt; id, VappContainerState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static VappContainer Get(string name, Input&lt;string&gt; id, VappContainerState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -601,7 +727,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -613,7 +739,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -642,7 +768,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VappContainer.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VappContainer.cs/#L118" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

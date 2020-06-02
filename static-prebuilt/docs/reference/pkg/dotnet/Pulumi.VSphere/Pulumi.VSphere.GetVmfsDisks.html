@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetVmfsDisks
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,30 +78,83 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetVmfsDisks</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
   <h5 id="Pulumi_VSphere_GetVmfsDisks_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetVmfsDisks : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetVmfsDisks</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/GetVmfsDisks.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/GetVmfsDisks.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_VSphere_GetVmfsDisks_InvokeAsync_" data-uid="Pulumi.VSphere.GetVmfsDisks.InvokeAsync*"></a>
-  <h4 id="Pulumi_VSphere_GetVmfsDisks_InvokeAsync_Pulumi_VSphere_GetVmfsDisksArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.VSphere.GetVmfsDisks.InvokeAsync(Pulumi.VSphere.GetVmfsDisksArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetVmfsDisksArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_GetVmfsDisks_InvokeAsync_Pulumi_VSphere_GetVmfsDisksArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.VSphere.GetVmfsDisks.InvokeAsync(Pulumi.VSphere.GetVmfsDisksArgs,Pulumi.InvokeOptions)">InvokeAsync(GetVmfsDisksArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>The <code>vsphere..getVmfsDisks</code> data source can be used to discover the storage
 devices available on an ESXi host. This data source can be combined with the
-<a href="/docs/providers/vsphere/r/vmfs_datastore.html"><code>vsphere..VmfsDatastore</code></a> resource to create VMFS
+<code>vsphere..VmfsDatastore</code> resource to create VMFS
 datastores based off a set of discovered disks.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var datacenter = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+    {
+        Name = &amp;quot;dc1&amp;quot;,
+    }));
+    var host = datacenter.Apply(datacenter =&gt; Output.Create(VSphere.GetHost.InvokeAsync(new VSphere.GetHostArgs
+    {
+        DatacenterId = datacenter.Id,
+        Name = &amp;quot;esxi1&amp;quot;,
+    })));
+    var available = host.Apply(host =&gt; Output.Create(VSphere.GetVmfsDisks.InvokeAsync(new VSphere.GetVmfsDisksArgs
+    {
+        Filter = &amp;quot;mpx.vmhba1:C0:T[12]:L0&amp;quot;,
+        HostSystemId = host.Id,
+        Rescan = true,
+    })));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetVmfsDisksResult&gt; InvokeAsync(GetVmfsDisksArgs args, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetVmfsDisksResult&gt; InvokeAsync(GetVmfsDisksArgs args, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +172,7 @@ datastores based off a set of discovered disks.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -135,7 +188,7 @@ datastores based off a set of discovered disks.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.VSphere.GetVmfsDisksResult.html">GetVmfsDisksResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.VSphere.GetVmfsDisksResult.html">GetVmfsDisksResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -147,7 +200,7 @@ datastores based off a set of discovered disks.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/GetVmfsDisks.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/GetVmfsDisks.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetFunctionsArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GetFunctionsArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html">InvokeArgs</a></div>
+    <div class="level3"><span class="xref">GetFunctionsArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs_Empty">InvokeArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.FC.html">Pulumi.AliCloud.FC</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/FC/GetFunctions.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_FC_GetFunctionsArgs__ctor_" data-uid="Pulumi.AliCloud.FC.GetFunctionsArgs.#ctor*"></a>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsArgs__ctor" data-uid="Pulumi.AliCloud.FC.GetFunctionsArgs.#ctor">GetFunctionsArgs()</h4>
@@ -100,11 +129,13 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/FC/GetFunctions.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_FC_GetFunctionsArgs_Ids_" data-uid="Pulumi.AliCloud.FC.GetFunctionsArgs.Ids*"></a>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsArgs_Ids" data-uid="Pulumi.AliCloud.FC.GetFunctionsArgs.Ids">Ids</h4>
-  <div class="markdown level1 summary"><p>A list of functions ids.</p>
+  <div class="markdown level1 summary"><ul>
+<li>A list of functions ids.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -121,25 +152,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/FC/GetFunctions.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_FC_GetFunctionsArgs_NameRegex_" data-uid="Pulumi.AliCloud.FC.GetFunctionsArgs.NameRegex*"></a>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsArgs_NameRegex" data-uid="Pulumi.AliCloud.FC.GetFunctionsArgs.NameRegex">NameRegex</h4>
   <div class="markdown level1 summary"><p>A regex string to filter results by function name.</p>
-<ul>
-<li><code>ids</code> (Optional, Available in 1.53.0+) - A list of functions ids.</li>
-</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? NameRegex { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string NameRegex { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +179,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/FC/GetFunctions.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_FC_GetFunctionsArgs_OutputFile_" data-uid="Pulumi.AliCloud.FC.GetFunctionsArgs.OutputFile*"></a>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsArgs_OutputFile" data-uid="Pulumi.AliCloud.FC.GetFunctionsArgs.OutputFile">OutputFile</h4>
@@ -165,7 +193,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? OutputFile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string OutputFile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +205,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/FC/GetFunctions.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_FC_GetFunctionsArgs_ServiceName_" data-uid="Pulumi.AliCloud.FC.GetFunctionsArgs.ServiceName*"></a>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsArgs_ServiceName" data-uid="Pulumi.AliCloud.FC.GetFunctionsArgs.ServiceName">ServiceName</h4>
@@ -216,7 +244,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/FC/GetFunctions.cs/#L50" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Database
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,74 @@
   </h1>
   <div class="markdown level0 summary"><p>Represents a SQL database inside the Cloud SQL instance, hosted in
 Google's cloud.</p>
+<h2 id="example-usage---sql-database-basic">Example Usage - Sql Database Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new Gcp.Sql.DatabaseInstance(&amp;quot;instance&amp;quot;, new Gcp.Sql.DatabaseInstanceArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+        {
+            Tier = &amp;quot;db-f1-micro&amp;quot;,
+        },
+    });
+    var database = new Gcp.Sql.Database(&amp;quot;database&amp;quot;, new Gcp.Sql.DatabaseArgs
+    {
+        Instance = instance.Name,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Database</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Database</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Sql.html">Pulumi.Gcp.Sql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -89,16 +151,16 @@ Google's cloud.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Database.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Sql/Database.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Database__ctor_" data-uid="Pulumi.Gcp.Sql.Database.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Sql_Database__ctor_System_String_Pulumi_Gcp_Sql_DatabaseArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Sql.Database.#ctor(System.String,Pulumi.Gcp.Sql.DatabaseArgs,System.Nullable{CustomResourceOptions})">Database(String, DatabaseArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Sql_Database__ctor_System_String_Pulumi_Gcp_Sql_DatabaseArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Sql.Database.#ctor(System.String,Pulumi.Gcp.Sql.DatabaseArgs,Pulumi.CustomResourceOptions)">Database(String, DatabaseArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Database resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Database(string name, DatabaseArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Database(string name, DatabaseArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +185,7 @@ Google's cloud.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,14 +195,15 @@ Google's cloud.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Database.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Sql/Database.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Database_Charset_" data-uid="Pulumi.Gcp.Sql.Database.Charset*"></a>
   <h4 id="Pulumi_Gcp_Sql_Database_Charset" data-uid="Pulumi.Gcp.Sql.Database.Charset">Charset</h4>
-  <div class="markdown level1 summary"><p>The charset value. See MySQL's <a href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and
-Collations</a> and Postgres' <a href="https://www.postgresql.org/docs/9.6/static/multibyte.html">Character Set
-Support</a> for more details and supported values. Postgres
-databases only support a value of 'UTF8' at creation time.</p>
+  <div class="markdown level1 summary"><p>The charset value. See MySQL's
+<a href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and Collations</a>
+and Postgres' <a href="https://www.postgresql.org/docs/9.6/static/multibyte.html">Character Set Support</a>
+for more details and supported values. Postgres databases only support
+a value of <code>UTF8</code> at creation time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -157,20 +220,21 @@ databases only support a value of 'UTF8' at creation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Database.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Sql/Database.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Database_Collation_" data-uid="Pulumi.Gcp.Sql.Database.Collation*"></a>
   <h4 id="Pulumi_Gcp_Sql_Database_Collation" data-uid="Pulumi.Gcp.Sql.Database.Collation">Collation</h4>
-  <div class="markdown level1 summary"><p>The collation value. See MySQL's <a href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and
-Collations</a> and Postgres' <a href="https://www.postgresql.org/docs/9.6/static/collation.html">Collation
-Support</a> for more details and supported values. Postgres
-databases only support a value of 'en_US.UTF8' at creation time.</p>
+  <div class="markdown level1 summary"><p>The collation value. See MySQL's
+<a href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and Collations</a>
+and Postgres' <a href="https://www.postgresql.org/docs/9.6/static/collation.html">Collation Support</a>
+for more details and supported values. Postgres databases only support
+a value of <code>en_US.UTF8</code> at creation time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -187,17 +251,18 @@ databases only support a value of 'en_US.UTF8' at creation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Database.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Sql/Database.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Database_Instance_" data-uid="Pulumi.Gcp.Sql.Database.Instance*"></a>
   <h4 id="Pulumi_Gcp_Sql_Database_Instance" data-uid="Pulumi.Gcp.Sql.Database.Instance">Instance</h4>
-  <div class="markdown level1 summary"><p>The name of the Cloud SQL instance. This does not include the project ID.</p>
+  <div class="markdown level1 summary"><p>The name of the Cloud SQL instance. This does not include the project
+ID.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -214,17 +279,18 @@ databases only support a value of 'en_US.UTF8' at creation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Database.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Sql/Database.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Database_Name_" data-uid="Pulumi.Gcp.Sql.Database.Name*"></a>
   <h4 id="Pulumi_Gcp_Sql_Database_Name" data-uid="Pulumi.Gcp.Sql.Database.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.</p>
+  <div class="markdown level1 summary"><p>The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -241,13 +307,13 @@ databases only support a value of 'en_US.UTF8' at creation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Database.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Sql/Database.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Database_Project_" data-uid="Pulumi.Gcp.Sql.Database.Project*"></a>
   <h4 id="Pulumi_Gcp_Sql_Database_Project" data-uid="Pulumi.Gcp.Sql.Database.Project">Project</h4>
@@ -269,13 +335,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Database.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Sql/Database.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Database_SelfLink_" data-uid="Pulumi.Gcp.Sql.Database.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Sql_Database_SelfLink" data-uid="Pulumi.Gcp.Sql.Database.SelfLink">SelfLink</h4>
@@ -296,7 +362,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -304,17 +370,17 @@ If it is not provided, the provider project is used.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Database.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Sql/Database.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Database_Get_" data-uid="Pulumi.Gcp.Sql.Database.Get*"></a>
-  <h4 id="Pulumi_Gcp_Sql_Database_Get_System_String_Input_System_String__Pulumi_Gcp_Sql_DatabaseState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Sql.Database.Get(System.String,Input{System.String},Pulumi.Gcp.Sql.DatabaseState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DatabaseState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Sql_Database_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Sql_DatabaseState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Sql.Database.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Sql.DatabaseState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DatabaseState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Database resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Database Get(string name, Input&lt;string&gt; id, DatabaseState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Database Get(string name, Input&lt;string&gt; id, DatabaseState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -333,7 +399,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -345,7 +411,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -374,7 +440,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Database.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Sql/Database.cs/#L46" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.DataBricks
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,32 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.DataBricks.Workspace.html">Workspace</a></h4>
       <section><p>Manages a Databricks Workspace</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleWorkspace = new Azure.DataBricks.Workspace(&amp;quot;exampleWorkspace&amp;quot;, new Azure.DataBricks.WorkspaceArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Sku = &amp;quot;standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataBricks.WorkspaceArgs.html">WorkspaceArgs</a></h4>
       <section></section>

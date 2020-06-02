@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TaskDefinitionVolumeDockerVolumeConfiguration
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TaskDefinitionVolumeDockerVolumeConfiguration</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ecs.Outputs.html">Pulumi.Aws.Ecs.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ecs_Outputs_TaskDefinitionVolumeDockerVolumeConfiguration_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class TaskDefinitionVolumeDockerVolumeConfiguration : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class TaskDefinitionVolumeDockerVolumeConfiguration</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ecs_Outputs_TaskDefinitionVolumeDockerVolumeConfiguration_Autoprovision" data-uid="Pulumi.Aws.Ecs.Outputs.TaskDefinitionVolumeDockerVolumeConfiguration.Autoprovision">Autoprovision</h4>
   <div class="markdown level1 summary"><p>If this value is <code>true</code>, the Docker volume is created if it does not already exist. <em>Note</em>: This field is only used if the scope is <code>shared</code>.</p>
@@ -113,7 +137,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ecs_Outputs_TaskDefinitionVolumeDockerVolumeConfiguration_Driver" data-uid="Pulumi.Aws.Ecs.Outputs.TaskDefinitionVolumeDockerVolumeConfiguration.Driver">Driver</h4>
   <div class="markdown level1 summary"><p>The Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.</p>
@@ -121,7 +145,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Driver</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Driver</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ecs_Outputs_TaskDefinitionVolumeDockerVolumeConfiguration_DriverOpts" data-uid="Pulumi.Aws.Ecs.Outputs.TaskDefinitionVolumeDockerVolumeConfiguration.DriverOpts">DriverOpts</h4>
   <div class="markdown level1 summary"><p>A map of Docker driver specific options.</p>
@@ -147,7 +171,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt;? DriverOpts</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; DriverOpts</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ecs_Outputs_TaskDefinitionVolumeDockerVolumeConfiguration_Labels" data-uid="Pulumi.Aws.Ecs.Outputs.TaskDefinitionVolumeDockerVolumeConfiguration.Labels">Labels</h4>
   <div class="markdown level1 summary"><p>A map of custom metadata to add to your Docker volume.</p>
@@ -173,7 +197,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt;? Labels</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; Labels</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,13 +209,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ecs_Outputs_TaskDefinitionVolumeDockerVolumeConfiguration_Scope" data-uid="Pulumi.Aws.Ecs.Outputs.TaskDefinitionVolumeDockerVolumeConfiguration.Scope">Scope</h4>
   <div class="markdown level1 summary"><p>The scope for the Docker volume, which determines its lifecycle, either <code>task</code> or <code>shared</code>.  Docker volumes that are scoped to a <code>task</code> are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are <code>scoped</code> as shared persist after the task stops.</p>
@@ -199,7 +223,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Scope</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Scope</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,7 +235,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -223,7 +247,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Outputs/TaskDefinitionVolumeDockerVolumeConfiguration.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

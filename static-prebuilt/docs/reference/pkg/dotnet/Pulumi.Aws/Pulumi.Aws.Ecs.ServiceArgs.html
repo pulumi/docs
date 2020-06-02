@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ServiceArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ServiceArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">ServiceArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ecs.html">Pulumi.Aws.Ecs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L431">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L396">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs__ctor_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs__ctor" data-uid="Pulumi.Aws.Ecs.ServiceArgs.#ctor">ServiceArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L274">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_CapacityProviderStrategies_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.CapacityProviderStrategies*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_CapacityProviderStrategies" data-uid="Pulumi.Aws.Ecs.ServiceArgs.CapacityProviderStrategies">CapacityProviderStrategies</h4>
@@ -121,13 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceCapacityProviderStrategyArgs.html">ServiceCapacityProviderStrategyArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceCapacityProviderStrategyArgs.html">ServiceCapacityProviderStrategyArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L283">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_Cluster_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.Cluster*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_Cluster" data-uid="Pulumi.Aws.Ecs.ServiceArgs.Cluster">Cluster</h4>
@@ -136,7 +165,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Cluster { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Cluster { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +177,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L289">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_DeploymentController_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.DeploymentController*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_DeploymentController" data-uid="Pulumi.Aws.Ecs.ServiceArgs.DeploymentController">DeploymentController</h4>
@@ -163,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ServiceDeploymentControllerArgs&gt;? DeploymentController { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ServiceDeploymentControllerArgs&gt; DeploymentController { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +204,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceDeploymentControllerArgs.html">ServiceDeploymentControllerArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceDeploymentControllerArgs.html">ServiceDeploymentControllerArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L295">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_DeploymentMaximumPercent_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.DeploymentMaximumPercent*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_DeploymentMaximumPercent" data-uid="Pulumi.Aws.Ecs.ServiceArgs.DeploymentMaximumPercent">DeploymentMaximumPercent</h4>
@@ -190,7 +219,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DeploymentMaximumPercent { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DeploymentMaximumPercent { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,13 +231,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L301">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_DeploymentMinimumHealthyPercent_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.DeploymentMinimumHealthyPercent*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_DeploymentMinimumHealthyPercent" data-uid="Pulumi.Aws.Ecs.ServiceArgs.DeploymentMinimumHealthyPercent">DeploymentMinimumHealthyPercent</h4>
@@ -217,7 +246,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DeploymentMinimumHealthyPercent { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DeploymentMinimumHealthyPercent { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,13 +258,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L307">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L267">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_DesiredCount_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.DesiredCount*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_DesiredCount" data-uid="Pulumi.Aws.Ecs.ServiceArgs.DesiredCount">DesiredCount</h4>
@@ -244,7 +273,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DesiredCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DesiredCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,13 +285,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L313">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L273">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_EnableEcsManagedTags_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.EnableEcsManagedTags*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_EnableEcsManagedTags" data-uid="Pulumi.Aws.Ecs.ServiceArgs.EnableEcsManagedTags">EnableEcsManagedTags</h4>
@@ -271,7 +300,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableEcsManagedTags { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableEcsManagedTags { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,13 +312,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L319">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L279">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_ServiceArgs_ForceNewDeployment_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.ForceNewDeployment*"></a>
+  <h4 id="Pulumi_Aws_Ecs_ServiceArgs_ForceNewDeployment" data-uid="Pulumi.Aws.Ecs.ServiceArgs.ForceNewDeployment">ForceNewDeployment</h4>
+  <div class="markdown level1 summary"><p>Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. <code>myimage:latest</code>), roll Fargate tasks onto a newer platform version, or immediately deploy <code>ordered_placement_strategy</code> and <code>placement_constraints</code> updates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; ForceNewDeployment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L285">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_HealthCheckGracePeriodSeconds_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.HealthCheckGracePeriodSeconds*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_HealthCheckGracePeriodSeconds" data-uid="Pulumi.Aws.Ecs.ServiceArgs.HealthCheckGracePeriodSeconds">HealthCheckGracePeriodSeconds</h4>
@@ -298,7 +354,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? HealthCheckGracePeriodSeconds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; HealthCheckGracePeriodSeconds { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,13 +366,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L325">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L291">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_IamRole_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.IamRole*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_IamRole" data-uid="Pulumi.Aws.Ecs.ServiceArgs.IamRole">IamRole</h4>
@@ -325,7 +381,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IamRole { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IamRole { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,13 +393,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L331">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L297">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_LaunchType_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.LaunchType*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_LaunchType" data-uid="Pulumi.Aws.Ecs.ServiceArgs.LaunchType">LaunchType</h4>
@@ -352,7 +408,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LaunchType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LaunchType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -364,13 +420,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L340">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L306">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_LoadBalancers_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.LoadBalancers*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_LoadBalancers" data-uid="Pulumi.Aws.Ecs.ServiceArgs.LoadBalancers">LoadBalancers</h4>
@@ -391,13 +447,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceLoadBalancerArgs.html">ServiceLoadBalancerArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceLoadBalancerArgs.html">ServiceLoadBalancerArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L349">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L315">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_Name_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.Name*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_Name" data-uid="Pulumi.Aws.Ecs.ServiceArgs.Name">Name</h4>
@@ -406,7 +462,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -418,13 +474,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L355">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L321">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_NetworkConfiguration_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.NetworkConfiguration*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_NetworkConfiguration" data-uid="Pulumi.Aws.Ecs.ServiceArgs.NetworkConfiguration">NetworkConfiguration</h4>
@@ -433,7 +489,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ServiceNetworkConfigurationArgs&gt;? NetworkConfiguration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ServiceNetworkConfigurationArgs&gt; NetworkConfiguration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -445,17 +501,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceNetworkConfigurationArgs.html">ServiceNetworkConfigurationArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceNetworkConfigurationArgs.html">ServiceNetworkConfigurationArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L364">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L330">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_OrderedPlacementStrategies_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.OrderedPlacementStrategies*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_OrderedPlacementStrategies" data-uid="Pulumi.Aws.Ecs.ServiceArgs.OrderedPlacementStrategies">OrderedPlacementStrategies</h4>
-  <div class="markdown level1 summary"><p>Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of <code>ordered_placement_strategy</code> blocks is <code>5</code>. Defined below.</p>
+  <div class="markdown level1 summary"><p>Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless <code>force_new_deployment</code> is enabled. The maximum number of <code>ordered_placement_strategy</code> blocks is <code>5</code>. Defined below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -472,18 +528,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceOrderedPlacementStrategyArgs.html">ServiceOrderedPlacementStrategyArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceOrderedPlacementStrategyArgs.html">ServiceOrderedPlacementStrategyArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L377">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L342">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_PlacementConstraints_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.PlacementConstraints*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_PlacementConstraints" data-uid="Pulumi.Aws.Ecs.ServiceArgs.PlacementConstraints">PlacementConstraints</h4>
-  <div class="markdown level1 summary"><p>rules that are taken into consideration during task placement. Maximum number of
-<code>placement_constraints</code> is <code>10</code>. Defined below.</p>
+  <div class="markdown level1 summary"><p>rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless <code>force_new_deployment</code> is enabled. Maximum number of <code>placement_constraints</code> is <code>10</code>. Defined below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -500,13 +555,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServicePlacementConstraintArgs.html">ServicePlacementConstraintArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServicePlacementConstraintArgs.html">ServicePlacementConstraintArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L386">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L351">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_PlatformVersion_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.PlatformVersion*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_PlatformVersion" data-uid="Pulumi.Aws.Ecs.ServiceArgs.PlatformVersion">PlatformVersion</h4>
@@ -515,7 +570,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PlatformVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PlatformVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -527,13 +582,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L392">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L357">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_PropagateTags_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.PropagateTags*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_PropagateTags" data-uid="Pulumi.Aws.Ecs.ServiceArgs.PropagateTags">PropagateTags</h4>
@@ -542,7 +597,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PropagateTags { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PropagateTags { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -554,13 +609,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L398">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L363">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_SchedulingStrategy_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.SchedulingStrategy*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_SchedulingStrategy" data-uid="Pulumi.Aws.Ecs.ServiceArgs.SchedulingStrategy">SchedulingStrategy</h4>
@@ -569,7 +624,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SchedulingStrategy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SchedulingStrategy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -581,13 +636,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L404">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L369">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_ServiceRegistries_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.ServiceRegistries*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_ServiceRegistries" data-uid="Pulumi.Aws.Ecs.ServiceArgs.ServiceRegistries">ServiceRegistries</h4>
@@ -596,7 +651,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ServiceServiceRegistriesArgs&gt;? ServiceRegistries { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ServiceServiceRegistriesArgs&gt; ServiceRegistries { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -608,13 +663,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceServiceRegistriesArgs.html">ServiceServiceRegistriesArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Inputs.ServiceServiceRegistriesArgs.html">ServiceServiceRegistriesArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L413">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L378">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_Tags_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.Tags*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_Tags" data-uid="Pulumi.Aws.Ecs.ServiceArgs.Tags">Tags</h4>
@@ -635,13 +690,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L422">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L387">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_TaskDefinition_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.TaskDefinition*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_TaskDefinition" data-uid="Pulumi.Aws.Ecs.ServiceArgs.TaskDefinition">TaskDefinition</h4>
@@ -662,13 +717,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L428">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L393">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_ServiceArgs_WaitForSteadyState_" data-uid="Pulumi.Aws.Ecs.ServiceArgs.WaitForSteadyState*"></a>
   <h4 id="Pulumi_Aws_Ecs_ServiceArgs_WaitForSteadyState" data-uid="Pulumi.Aws.Ecs.ServiceArgs.WaitForSteadyState">WaitForSteadyState</h4>
@@ -677,7 +732,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? WaitForSteadyState { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; WaitForSteadyState { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -689,7 +744,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -701,7 +756,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/Service.cs/#L266" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ecs/Service.cs/#L226" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

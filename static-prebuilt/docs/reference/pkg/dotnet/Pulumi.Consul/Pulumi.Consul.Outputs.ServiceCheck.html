@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ServiceCheck
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ServiceCheck</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Consul.Outputs.html">Pulumi.Consul.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Consul.dll</h6>
   <h5 id="Pulumi_Consul_Outputs_ServiceCheck_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ServiceCheck : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ServiceCheck</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L20">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_CheckId" data-uid="Pulumi.Consul.Outputs.ServiceCheck.CheckId">CheckId</h4>
   <div class="markdown level1 summary"><p>An ID, <em>unique per agent</em>. Will default to <em>name</em>
@@ -114,7 +138,7 @@ if not set.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L26">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_DeregisterCriticalServiceAfter" data-uid="Pulumi.Consul.Outputs.ServiceCheck.DeregisterCriticalServiceAfter">DeregisterCriticalServiceAfter</h4>
   <div class="markdown level1 summary"><p>The time after which
@@ -124,7 +148,7 @@ Defaults to <code>30s</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DeregisterCriticalServiceAfter</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DeregisterCriticalServiceAfter</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -136,13 +160,13 @@ Defaults to <code>30s</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_Headers" data-uid="Pulumi.Consul.Outputs.ServiceCheck.Headers">Headers</h4>
   <div class="markdown level1 summary"><p>The headers to send for an HTTP check.
@@ -163,13 +187,13 @@ The attributes of each header is given below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Consul.Outputs.ServiceCheckHeader.html">ServiceCheckHeader</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Consul.Outputs.ServiceCheckHeader.html">ServiceCheckHeader</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_Http" data-uid="Pulumi.Consul.Outputs.ServiceCheck.Http">Http</h4>
   <div class="markdown level1 summary"><p>The HTTP endpoint to call for an HTTP check.</p>
@@ -177,7 +201,7 @@ The attributes of each header is given below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Http</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Http</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,13 +213,13 @@ The attributes of each header is given below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L40">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_Interval" data-uid="Pulumi.Consul.Outputs.ServiceCheck.Interval">Interval</h4>
   <div class="markdown level1 summary"><p>The interval to wait between each health-check
@@ -222,7 +246,7 @@ invocation.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L45">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_Method" data-uid="Pulumi.Consul.Outputs.ServiceCheck.Method">Method</h4>
   <div class="markdown level1 summary"><p>The method to use for HTTP health-checks. Defaults
@@ -231,7 +255,7 @@ to <code>GET</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Method</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Method</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -243,13 +267,13 @@ to <code>GET</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_Name" data-uid="Pulumi.Consul.Outputs.ServiceCheck.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of the health-check.</p>
@@ -275,7 +299,7 @@ to <code>GET</code>.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_Notes" data-uid="Pulumi.Consul.Outputs.ServiceCheck.Notes">Notes</h4>
   <div class="markdown level1 summary"><p>An opaque field meant to hold human readable text.</p>
@@ -283,7 +307,7 @@ to <code>GET</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Notes</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Notes</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -295,13 +319,13 @@ to <code>GET</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L57">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_Status" data-uid="Pulumi.Consul.Outputs.ServiceCheck.Status">Status</h4>
   <div class="markdown level1 summary"><p>The initial health-check status.</p>
@@ -309,7 +333,7 @@ to <code>GET</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Status</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Status</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -321,13 +345,13 @@ to <code>GET</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L61">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_Tcp" data-uid="Pulumi.Consul.Outputs.ServiceCheck.Tcp">Tcp</h4>
   <div class="markdown level1 summary"><p>The TCP address and port to connect to for a TCP check.</p>
@@ -335,7 +359,7 @@ to <code>GET</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Tcp</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Tcp</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,13 +371,13 @@ to <code>GET</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_Timeout" data-uid="Pulumi.Consul.Outputs.ServiceCheck.Timeout">Timeout</h4>
   <div class="markdown level1 summary"><p>The timeout value for HTTP checks.</p>
@@ -379,7 +403,7 @@ to <code>GET</code>.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L70">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_Outputs_ServiceCheck_TlsSkipVerify" data-uid="Pulumi.Consul.Outputs.ServiceCheck.TlsSkipVerify">TlsSkipVerify</h4>
   <div class="markdown level1 summary"><p>Whether to deactivate certificate
@@ -412,7 +436,7 @@ verification for HTTP health-checks. Defaults to <code>false</code>.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Outputs/ServiceCheck.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Outputs/ServiceCheck.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

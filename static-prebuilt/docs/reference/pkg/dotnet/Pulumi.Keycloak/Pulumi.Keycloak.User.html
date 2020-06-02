@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class User
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,6 +76,46 @@
 <p>This resource was created primarily to enable the acceptance tests for the <code>keycloak..Group</code> resource.
 Creating users within Keycloak is not recommended. Instead, users should be federated from external sources
 by configuring user federation providers or identity providers.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var user = new Keycloak.User(&amp;quot;user&amp;quot;, new Keycloak.UserArgs
+    {
+        Email = &amp;quot;bob@domain.com&amp;quot;,
+        Enabled = true,
+        FirstName = &amp;quot;Bob&amp;quot;,
+        LastName = &amp;quot;Bobson&amp;quot;,
+        RealmId = realm.Id,
+        Username = &amp;quot;bob&amp;quot;,
+    });
+    var userWithInitialPassword = new Keycloak.User(&amp;quot;userWithInitialPassword&amp;quot;, new Keycloak.UserArgs
+    {
+        Email = &amp;quot;alice@domain.com&amp;quot;,
+        Enabled = true,
+        FirstName = &amp;quot;Alice&amp;quot;,
+        InitialPassword = new Keycloak.Inputs.UserInitialPasswordArgs
+        {
+            Temporary = true,
+            Value = &amp;quot;some password&amp;quot;,
+        },
+        LastName = &amp;quot;Aliceberg&amp;quot;,
+        RealmId = realm.Id,
+        Username = &amp;quot;alice&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -95,7 +135,45 @@ This attribute is only respected during initial user creation.</li>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">User</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">User</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.html">Pulumi.Keycloak</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
@@ -106,16 +184,16 @@ This attribute is only respected during initial user creation.</li>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User__ctor_" data-uid="Pulumi.Keycloak.User.#ctor*"></a>
-  <h4 id="Pulumi_Keycloak_User__ctor_System_String_Pulumi_Keycloak_UserArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.User.#ctor(System.String,Pulumi.Keycloak.UserArgs,System.Nullable{CustomResourceOptions})">User(String, UserArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_User__ctor_System_String_Pulumi_Keycloak_UserArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.User.#ctor(System.String,Pulumi.Keycloak.UserArgs,Pulumi.CustomResourceOptions)">User(String, UserArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a User resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public User(string name, UserArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public User(string name, UserArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,7 +218,7 @@ This attribute is only respected during initial user creation.</li>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -150,7 +228,7 @@ This attribute is only respected during initial user creation.</li>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User_Attributes_" data-uid="Pulumi.Keycloak.User.Attributes*"></a>
   <h4 id="Pulumi_Keycloak_User_Attributes" data-uid="Pulumi.Keycloak.User.Attributes">Attributes</h4>
@@ -158,7 +236,7 @@ This attribute is only respected during initial user creation.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Attributes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Attributes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,13 +248,13 @@ This attribute is only respected during initial user creation.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User_Email_" data-uid="Pulumi.Keycloak.User.Email*"></a>
   <h4 id="Pulumi_Keycloak_User_Email" data-uid="Pulumi.Keycloak.User.Email">Email</h4>
@@ -184,7 +262,7 @@ This attribute is only respected during initial user creation.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Email { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Email { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,13 +274,13 @@ This attribute is only respected during initial user creation.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User_EmailVerified_" data-uid="Pulumi.Keycloak.User.EmailVerified*"></a>
   <h4 id="Pulumi_Keycloak_User_EmailVerified" data-uid="Pulumi.Keycloak.User.EmailVerified">EmailVerified</h4>
@@ -222,13 +300,13 @@ This attribute is only respected during initial user creation.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User_Enabled_" data-uid="Pulumi.Keycloak.User.Enabled*"></a>
   <h4 id="Pulumi_Keycloak_User_Enabled" data-uid="Pulumi.Keycloak.User.Enabled">Enabled</h4>
@@ -248,13 +326,13 @@ This attribute is only respected during initial user creation.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User_FederatedIdentities_" data-uid="Pulumi.Keycloak.User.FederatedIdentities*"></a>
   <h4 id="Pulumi_Keycloak_User_FederatedIdentities" data-uid="Pulumi.Keycloak.User.FederatedIdentities">FederatedIdentities</h4>
@@ -274,13 +352,13 @@ This attribute is only respected during initial user creation.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Keycloak.Outputs.UserFederatedIdentity.html">UserFederatedIdentity</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Keycloak.Outputs.UserFederatedIdentity.html">UserFederatedIdentity</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User_FirstName_" data-uid="Pulumi.Keycloak.User.FirstName*"></a>
   <h4 id="Pulumi_Keycloak_User_FirstName" data-uid="Pulumi.Keycloak.User.FirstName">FirstName</h4>
@@ -288,7 +366,7 @@ This attribute is only respected during initial user creation.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; FirstName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FirstName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -300,13 +378,13 @@ This attribute is only respected during initial user creation.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User_InitialPassword_" data-uid="Pulumi.Keycloak.User.InitialPassword*"></a>
   <h4 id="Pulumi_Keycloak_User_InitialPassword" data-uid="Pulumi.Keycloak.User.InitialPassword">InitialPassword</h4>
@@ -326,13 +404,13 @@ This attribute is only respected during initial user creation.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Keycloak.Outputs.UserInitialPassword.html">UserInitialPassword</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Keycloak.Outputs.UserInitialPassword.html">UserInitialPassword</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User_LastName_" data-uid="Pulumi.Keycloak.User.LastName*"></a>
   <h4 id="Pulumi_Keycloak_User_LastName" data-uid="Pulumi.Keycloak.User.LastName">LastName</h4>
@@ -340,7 +418,7 @@ This attribute is only respected during initial user creation.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LastName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LastName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -352,13 +430,13 @@ This attribute is only respected during initial user creation.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User_RealmId_" data-uid="Pulumi.Keycloak.User.RealmId*"></a>
   <h4 id="Pulumi_Keycloak_User_RealmId" data-uid="Pulumi.Keycloak.User.RealmId">RealmId</h4>
@@ -378,13 +456,13 @@ This attribute is only respected during initial user creation.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User_Username_" data-uid="Pulumi.Keycloak.User.Username*"></a>
   <h4 id="Pulumi_Keycloak_User_Username" data-uid="Pulumi.Keycloak.User.Username">Username</h4>
@@ -404,7 +482,7 @@ This attribute is only respected during initial user creation.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -412,17 +490,17 @@ This attribute is only respected during initial user creation.</li>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_User_Get_" data-uid="Pulumi.Keycloak.User.Get*"></a>
-  <h4 id="Pulumi_Keycloak_User_Get_System_String_Input_System_String__Pulumi_Keycloak_UserState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.User.Get(System.String,Input{System.String},Pulumi.Keycloak.UserState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, UserState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_User_Get_System_String_Pulumi_Input_System_String__Pulumi_Keycloak_UserState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.User.Get(System.String,Pulumi.Input{System.String},Pulumi.Keycloak.UserState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, UserState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing User resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static User Get(string name, Input&lt;string&gt; id, UserState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static User Get(string name, Input&lt;string&gt; id, UserState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -441,7 +519,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -453,7 +531,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -482,7 +560,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L36" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/User.cs/#L79" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

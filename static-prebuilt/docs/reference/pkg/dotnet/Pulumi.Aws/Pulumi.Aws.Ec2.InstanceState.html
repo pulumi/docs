@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class InstanceState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">InstanceState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">InstanceState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L921">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L992">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState__ctor_" data-uid="Pulumi.Aws.Ec2.InstanceState.#ctor*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState__ctor" data-uid="Pulumi.Aws.Ec2.InstanceState.#ctor">InstanceState()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L608">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L671">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_Ami_" data-uid="Pulumi.Aws.Ec2.InstanceState.Ami*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_Ami" data-uid="Pulumi.Aws.Ec2.InstanceState.Ami">Ami</h4>
@@ -109,7 +138,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Ami { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Ami { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,13 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L614">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L677">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_Arn_" data-uid="Pulumi.Aws.Ec2.InstanceState.Arn*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_Arn" data-uid="Pulumi.Aws.Ec2.InstanceState.Arn">Arn</h4>
@@ -136,7 +165,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +177,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L620">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L683">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_AssociatePublicIpAddress_" data-uid="Pulumi.Aws.Ec2.InstanceState.AssociatePublicIpAddress*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_AssociatePublicIpAddress" data-uid="Pulumi.Aws.Ec2.InstanceState.AssociatePublicIpAddress">AssociatePublicIpAddress</h4>
@@ -163,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AssociatePublicIpAddress { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AssociatePublicIpAddress { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +204,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L626">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L689">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_AvailabilityZone_" data-uid="Pulumi.Aws.Ec2.InstanceState.AvailabilityZone*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_AvailabilityZone" data-uid="Pulumi.Aws.Ec2.InstanceState.AvailabilityZone">AvailabilityZone</h4>
@@ -190,7 +219,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AvailabilityZone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AvailabilityZone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,13 +231,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L634">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L697">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_CpuCoreCount_" data-uid="Pulumi.Aws.Ec2.InstanceState.CpuCoreCount*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_CpuCoreCount" data-uid="Pulumi.Aws.Ec2.InstanceState.CpuCoreCount">CpuCoreCount</h4>
@@ -219,7 +248,7 @@ only supported on creation of instance type that support CPU Options
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? CpuCoreCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; CpuCoreCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +260,13 @@ only supported on creation of instance type that support CPU Options
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L640">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L703">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_CpuThreadsPerCore_" data-uid="Pulumi.Aws.Ec2.InstanceState.CpuThreadsPerCore*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_CpuThreadsPerCore" data-uid="Pulumi.Aws.Ec2.InstanceState.CpuThreadsPerCore">CpuThreadsPerCore</h4>
@@ -246,7 +275,7 @@ only supported on creation of instance type that support CPU Options
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? CpuThreadsPerCore { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; CpuThreadsPerCore { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,13 +287,13 @@ only supported on creation of instance type that support CPU Options
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L646">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L709">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_CreditSpecification_" data-uid="Pulumi.Aws.Ec2.InstanceState.CreditSpecification*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_CreditSpecification" data-uid="Pulumi.Aws.Ec2.InstanceState.CreditSpecification">CreditSpecification</h4>
@@ -273,7 +302,7 @@ only supported on creation of instance type that support CPU Options
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InstanceCreditSpecificationGetArgs&gt;? CreditSpecification { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InstanceCreditSpecificationGetArgs&gt; CreditSpecification { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,13 +314,13 @@ only supported on creation of instance type that support CPU Options
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceCreditSpecificationGetArgs.html">InstanceCreditSpecificationGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceCreditSpecificationGetArgs.html">InstanceCreditSpecificationGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L653">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L716">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_DisableApiTermination_" data-uid="Pulumi.Aws.Ec2.InstanceState.DisableApiTermination*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_DisableApiTermination" data-uid="Pulumi.Aws.Ec2.InstanceState.DisableApiTermination">DisableApiTermination</h4>
@@ -301,7 +330,7 @@ Termination Protection</a></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DisableApiTermination { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DisableApiTermination { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,13 +342,13 @@ Termination Protection</a></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L663">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L726">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_EbsBlockDevices_" data-uid="Pulumi.Aws.Ec2.InstanceState.EbsBlockDevices*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_EbsBlockDevices" data-uid="Pulumi.Aws.Ec2.InstanceState.EbsBlockDevices">EbsBlockDevices</h4>
@@ -341,13 +370,13 @@ instance.  Block device configurations only apply on resource creation. See Bloc
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceEbsBlockDeviceGetArgs.html">InstanceEbsBlockDeviceGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceEbsBlockDeviceGetArgs.html">InstanceEbsBlockDeviceGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L676">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L739">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_EbsOptimized_" data-uid="Pulumi.Aws.Ec2.InstanceState.EbsOptimized*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_EbsOptimized" data-uid="Pulumi.Aws.Ec2.InstanceState.EbsOptimized">EbsOptimized</h4>
@@ -360,7 +389,7 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EbsOptimized { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EbsOptimized { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -372,13 +401,13 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L686">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L749">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_EphemeralBlockDevices_" data-uid="Pulumi.Aws.Ec2.InstanceState.EphemeralBlockDevices*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_EphemeralBlockDevices" data-uid="Pulumi.Aws.Ec2.InstanceState.EphemeralBlockDevices">EphemeralBlockDevices</h4>
@@ -400,13 +429,13 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceEphemeralBlockDeviceGetArgs.html">InstanceEphemeralBlockDeviceGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceEphemeralBlockDeviceGetArgs.html">InstanceEphemeralBlockDeviceGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L695">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L758">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_GetPasswordData_" data-uid="Pulumi.Aws.Ec2.InstanceState.GetPasswordData*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_GetPasswordData" data-uid="Pulumi.Aws.Ec2.InstanceState.GetPasswordData">GetPasswordData</h4>
@@ -415,7 +444,7 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? GetPasswordData { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; GetPasswordData { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -427,13 +456,13 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L701">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L764">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_Hibernation_" data-uid="Pulumi.Aws.Ec2.InstanceState.Hibernation*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_Hibernation" data-uid="Pulumi.Aws.Ec2.InstanceState.Hibernation">Hibernation</h4>
@@ -442,7 +471,7 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Hibernation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Hibernation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -454,13 +483,13 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L707">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L770">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_HostId_" data-uid="Pulumi.Aws.Ec2.InstanceState.HostId*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_HostId" data-uid="Pulumi.Aws.Ec2.InstanceState.HostId">HostId</h4>
@@ -469,7 +498,7 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HostId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HostId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -481,26 +510,23 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L715">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L777">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_IamInstanceProfile_" data-uid="Pulumi.Aws.Ec2.InstanceState.IamInstanceProfile*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_IamInstanceProfile" data-uid="Pulumi.Aws.Ec2.InstanceState.IamInstanceProfile">IamInstanceProfile</h4>
   <div class="markdown level1 summary"><p>The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code>iam:PassRole</code>.</p>
-<ul>
-<li><code>ipv6_address_count</code>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</li>
-</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IamInstanceProfile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IamInstanceProfile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -512,13 +538,13 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L724">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L786">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_InstanceInitiatedShutdownBehavior_" data-uid="Pulumi.Aws.Ec2.InstanceState.InstanceInitiatedShutdownBehavior*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_InstanceInitiatedShutdownBehavior" data-uid="Pulumi.Aws.Ec2.InstanceState.InstanceInitiatedShutdownBehavior">InstanceInitiatedShutdownBehavior</h4>
@@ -530,7 +556,7 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceInitiatedShutdownBehavior { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceInitiatedShutdownBehavior { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -542,13 +568,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L736">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L798">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_InstanceType_" data-uid="Pulumi.Aws.Ec2.InstanceState.InstanceType*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_InstanceType" data-uid="Pulumi.Aws.Ec2.InstanceState.InstanceType">InstanceType</h4>
@@ -557,7 +583,7 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -569,21 +595,22 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L739">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L804">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_Ipv6AddressCount_" data-uid="Pulumi.Aws.Ec2.InstanceState.Ipv6AddressCount*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_Ipv6AddressCount" data-uid="Pulumi.Aws.Ec2.InstanceState.Ipv6AddressCount">Ipv6AddressCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Ipv6AddressCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Ipv6AddressCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -595,13 +622,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L748">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L813">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_Ipv6Addresses_" data-uid="Pulumi.Aws.Ec2.InstanceState.Ipv6Addresses*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_Ipv6Addresses" data-uid="Pulumi.Aws.Ec2.InstanceState.Ipv6Addresses">Ipv6Addresses</h4>
@@ -622,13 +649,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L757">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L822">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_KeyName_" data-uid="Pulumi.Aws.Ec2.InstanceState.KeyName*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_KeyName" data-uid="Pulumi.Aws.Ec2.InstanceState.KeyName">KeyName</h4>
@@ -637,7 +664,7 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KeyName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KeyName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -649,13 +676,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L763">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L828">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_MetadataOptions_" data-uid="Pulumi.Aws.Ec2.InstanceState.MetadataOptions*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_MetadataOptions" data-uid="Pulumi.Aws.Ec2.InstanceState.MetadataOptions">MetadataOptions</h4>
@@ -664,7 +691,7 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InstanceMetadataOptionsGetArgs&gt;? MetadataOptions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InstanceMetadataOptionsGetArgs&gt; MetadataOptions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -676,13 +703,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceMetadataOptionsGetArgs.html">InstanceMetadataOptionsGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceMetadataOptionsGetArgs.html">InstanceMetadataOptionsGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L769">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L834">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_Monitoring_" data-uid="Pulumi.Aws.Ec2.InstanceState.Monitoring*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_Monitoring" data-uid="Pulumi.Aws.Ec2.InstanceState.Monitoring">Monitoring</h4>
@@ -691,7 +718,7 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Monitoring { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Monitoring { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -703,13 +730,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L778">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L843">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_NetworkInterfaces_" data-uid="Pulumi.Aws.Ec2.InstanceState.NetworkInterfaces*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_NetworkInterfaces" data-uid="Pulumi.Aws.Ec2.InstanceState.NetworkInterfaces">NetworkInterfaces</h4>
@@ -730,13 +757,40 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceNetworkInterfaceGetArgs.html">InstanceNetworkInterfaceGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceNetworkInterfaceGetArgs.html">InstanceNetworkInterfaceGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L791">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L852">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_InstanceState_OutpostArn_" data-uid="Pulumi.Aws.Ec2.InstanceState.OutpostArn*"></a>
+  <h4 id="Pulumi_Aws_Ec2_InstanceState_OutpostArn" data-uid="Pulumi.Aws.Ec2.InstanceState.OutpostArn">OutpostArn</h4>
+  <div class="markdown level1 summary"><p>The ARN of the Outpost the instance is assigned to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OutpostArn { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L862">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_PasswordData_" data-uid="Pulumi.Aws.Ec2.InstanceState.PasswordData*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_PasswordData" data-uid="Pulumi.Aws.Ec2.InstanceState.PasswordData">PasswordData</h4>
@@ -749,7 +803,7 @@ See <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPassw
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PasswordData { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PasswordData { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -761,13 +815,13 @@ See <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPassw
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L797">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L868">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_PlacementGroup_" data-uid="Pulumi.Aws.Ec2.InstanceState.PlacementGroup*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_PlacementGroup" data-uid="Pulumi.Aws.Ec2.InstanceState.PlacementGroup">PlacementGroup</h4>
@@ -776,7 +830,7 @@ See <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPassw
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PlacementGroup { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PlacementGroup { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -788,13 +842,13 @@ See <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPassw
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L803">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L874">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_PrimaryNetworkInterfaceId_" data-uid="Pulumi.Aws.Ec2.InstanceState.PrimaryNetworkInterfaceId*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_PrimaryNetworkInterfaceId" data-uid="Pulumi.Aws.Ec2.InstanceState.PrimaryNetworkInterfaceId">PrimaryNetworkInterfaceId</h4>
@@ -803,7 +857,7 @@ See <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPassw
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PrimaryNetworkInterfaceId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PrimaryNetworkInterfaceId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -815,13 +869,13 @@ See <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPassw
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L811">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L882">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_PrivateDns_" data-uid="Pulumi.Aws.Ec2.InstanceState.PrivateDns*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_PrivateDns" data-uid="Pulumi.Aws.Ec2.InstanceState.PrivateDns">PrivateDns</h4>
@@ -832,7 +886,7 @@ for your VPC</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PrivateDns { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PrivateDns { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -844,13 +898,13 @@ for your VPC</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L818">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L889">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_PrivateIp_" data-uid="Pulumi.Aws.Ec2.InstanceState.PrivateIp*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_PrivateIp" data-uid="Pulumi.Aws.Ec2.InstanceState.PrivateIp">PrivateIp</h4>
@@ -860,7 +914,7 @@ instance in a VPC.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PrivateIp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PrivateIp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -872,13 +926,13 @@ instance in a VPC.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L825">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L896">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_PublicDns_" data-uid="Pulumi.Aws.Ec2.InstanceState.PublicDns*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_PublicDns" data-uid="Pulumi.Aws.Ec2.InstanceState.PublicDns">PublicDns</h4>
@@ -888,7 +942,7 @@ is only available if you've enabled DNS hostnames for your VPC</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PublicDns { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PublicDns { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -900,13 +954,13 @@ is only available if you've enabled DNS hostnames for your VPC</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L831">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L902">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_PublicIp_" data-uid="Pulumi.Aws.Ec2.InstanceState.PublicIp*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_PublicIp" data-uid="Pulumi.Aws.Ec2.InstanceState.PublicIp">PublicIp</h4>
@@ -915,7 +969,7 @@ is only available if you've enabled DNS hostnames for your VPC</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PublicIp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PublicIp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -927,13 +981,13 @@ is only available if you've enabled DNS hostnames for your VPC</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L838">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L909">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_RootBlockDevice_" data-uid="Pulumi.Aws.Ec2.InstanceState.RootBlockDevice*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_RootBlockDevice" data-uid="Pulumi.Aws.Ec2.InstanceState.RootBlockDevice">RootBlockDevice</h4>
@@ -943,7 +997,7 @@ device of the instance. See Block Devices below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InstanceRootBlockDeviceGetArgs&gt;? RootBlockDevice { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InstanceRootBlockDeviceGetArgs&gt; RootBlockDevice { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -955,13 +1009,13 @@ device of the instance. See Block Devices below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceRootBlockDeviceGetArgs.html">InstanceRootBlockDeviceGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.InstanceRootBlockDeviceGetArgs.html">InstanceRootBlockDeviceGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L847">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L918">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_SecurityGroups_" data-uid="Pulumi.Aws.Ec2.InstanceState.SecurityGroups*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_SecurityGroups" data-uid="Pulumi.Aws.Ec2.InstanceState.SecurityGroups">SecurityGroups</h4>
@@ -970,7 +1024,8 @@ device of the instance. See Block Devices below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; SecurityGroups { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.&quot;)]
+public InputList&lt;string&gt; SecurityGroups { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -982,13 +1037,13 @@ device of the instance. See Block Devices below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L858">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L929">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_SourceDestCheck_" data-uid="Pulumi.Aws.Ec2.InstanceState.SourceDestCheck*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_SourceDestCheck" data-uid="Pulumi.Aws.Ec2.InstanceState.SourceDestCheck">SourceDestCheck</h4>
@@ -998,7 +1053,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SourceDestCheck { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SourceDestCheck { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1010,13 +1065,13 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L730">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L792">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_State_" data-uid="Pulumi.Aws.Ec2.InstanceState.State*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_State" data-uid="Pulumi.Aws.Ec2.InstanceState.State">State</h4>
@@ -1025,7 +1080,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? State { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; State { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1037,13 +1092,13 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L864">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L935">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_SubnetId_" data-uid="Pulumi.Aws.Ec2.InstanceState.SubnetId*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_SubnetId" data-uid="Pulumi.Aws.Ec2.InstanceState.SubnetId">SubnetId</h4>
@@ -1052,7 +1107,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SubnetId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SubnetId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1064,17 +1119,17 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L873">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L944">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_Tags_" data-uid="Pulumi.Aws.Ec2.InstanceState.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_Tags" data-uid="Pulumi.Aws.Ec2.InstanceState.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1091,13 +1146,13 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L882">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L953">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_Tenancy_" data-uid="Pulumi.Aws.Ec2.InstanceState.Tenancy*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_Tenancy" data-uid="Pulumi.Aws.Ec2.InstanceState.Tenancy">Tenancy</h4>
@@ -1106,7 +1161,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Tenancy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Tenancy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1118,13 +1173,13 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L888">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L959">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_UserData_" data-uid="Pulumi.Aws.Ec2.InstanceState.UserData*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_UserData" data-uid="Pulumi.Aws.Ec2.InstanceState.UserData">UserData</h4>
@@ -1133,7 +1188,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserData { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; UserData { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1145,13 +1200,13 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L894">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L965">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_UserDataBase64_" data-uid="Pulumi.Aws.Ec2.InstanceState.UserDataBase64*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_UserDataBase64" data-uid="Pulumi.Aws.Ec2.InstanceState.UserDataBase64">UserDataBase64</h4>
@@ -1160,7 +1215,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserDataBase64 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; UserDataBase64 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1172,17 +1227,17 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L903">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L974">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_VolumeTags_" data-uid="Pulumi.Aws.Ec2.InstanceState.VolumeTags*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_VolumeTags" data-uid="Pulumi.Aws.Ec2.InstanceState.VolumeTags">VolumeTags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the devices created by the instance at launch time.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the devices created by the instance at launch time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1199,13 +1254,13 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L915">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L986">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_InstanceState_VpcSecurityGroupIds_" data-uid="Pulumi.Aws.Ec2.InstanceState.VpcSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_Ec2_InstanceState_VpcSecurityGroupIds" data-uid="Pulumi.Aws.Ec2.InstanceState.VpcSecurityGroupIds">VpcSecurityGroupIds</h4>
@@ -1226,7 +1281,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1238,7 +1293,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Instance.cs/#L603" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Instance.cs/#L666" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

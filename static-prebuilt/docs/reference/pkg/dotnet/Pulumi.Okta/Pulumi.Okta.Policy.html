@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Okta.Policy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -91,6 +91,31 @@
       <h4><a class="xref" href="Pulumi.Okta.Policy.Mfa.html">Mfa</a></h4>
       <section><p>Creates an MFA Policy.</p>
 <p>This resource allows you to create and configure an MFA Policy.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Policy.Mfa(&amp;quot;example&amp;quot;, new Okta.Policy.MfaArgs
+    {
+        Description = &amp;quot;Example&amp;quot;,
+        GroupsIncludeds = 
+        {
+            data.Okta_group.Everyone.Id,
+        },
+        OktaOtp = new Okta.Policy.Inputs.MfaOktaOtpArgs
+        {
+            Enroll = &amp;quot;REQUIRED&amp;quot;,
+        },
+        Status = &amp;quot;ACTIVE&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Policy.MfaArgs.html">MfaArgs</a></h4>
       <section></section>
@@ -99,6 +124,28 @@
       <h4><a class="xref" href="Pulumi.Okta.Policy.Password.html">Password</a></h4>
       <section><p>Creates a Password Policy.</p>
 <p>This resource allows you to create and configure a Password Policy.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Policy.Password(&amp;quot;example&amp;quot;, new Okta.Policy.PasswordArgs
+    {
+        Description = &amp;quot;Example&amp;quot;,
+        GroupsIncludeds = 
+        {
+            data.Okta_group.Everyone.Id,
+        },
+        PasswordHistoryCount = 4,
+        Status = &amp;quot;ACTIVE&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Policy.PasswordArgs.html">PasswordArgs</a></h4>
       <section></section>
@@ -107,6 +154,35 @@
       <h4><a class="xref" href="Pulumi.Okta.Policy.RuleIdpDiscovery.html">RuleIdpDiscovery</a></h4>
       <section><p>Creates an IdP Discovery Policy Rule.</p>
 <p>This resource allows you to create and configure an IdP Discovery Policy Rule.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Policy.RuleIdpDiscovery(&amp;quot;example&amp;quot;, new Okta.Policy.RuleIdpDiscoveryArgs
+    {
+        IdpId = &amp;quot;&amp;lt;idp id&gt;&amp;quot;,
+        IdpType = &amp;quot;SAML2&amp;quot;,
+        Policyid = &amp;quot;&amp;lt;policy id&gt;&amp;quot;,
+        Priority = 1,
+        UserIdentifierAttribute = &amp;quot;company&amp;quot;,
+        UserIdentifierPatterns = 
+        {
+            new Okta.Policy.Inputs.RuleIdpDiscoveryUserIdentifierPatternArgs
+            {
+                MatchType = &amp;quot;EQUALS&amp;quot;,
+                Value = &amp;quot;Articulate&amp;quot;,
+            },
+        },
+        UserIdentifierType = &amp;quot;ATTRIBUTE&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Policy.RuleIdpDiscoveryArgs.html">RuleIdpDiscoveryArgs</a></h4>
       <section></section>
@@ -138,6 +214,27 @@
       <h4><a class="xref" href="Pulumi.Okta.Policy.Signon.html">Signon</a></h4>
       <section><p>Creates a Sign On Policy.</p>
 <p>This resource allows you to create and configure a Sign On Policy.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Policy.Signon(&amp;quot;example&amp;quot;, new Okta.Policy.SignonArgs
+    {
+        Description = &amp;quot;Example&amp;quot;,
+        GroupsIncludeds = 
+        {
+            data.Okta_group.Everyone.Id,
+        },
+        Status = &amp;quot;ACTIVE&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Policy.SignonArgs.html">SignonArgs</a></h4>
       <section></section>

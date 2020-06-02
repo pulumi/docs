@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AuthConfigAdfs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,74 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides a Rancher v2 Auth Config ADFS resource. This can be used to configure and enable Auth Config ADFS for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Auth Config ADFS
+    var adfs = new Rancher2.AuthConfigAdfs(&amp;quot;adfs&amp;quot;, new Rancher2.AuthConfigAdfsArgs
+    {
+        DisplayNameField = &amp;quot;&amp;lt;DISPLAY_NAME_FIELD&gt;&amp;quot;,
+        GroupsField = &amp;quot;&amp;lt;GROUPS_FIELD&gt;&amp;quot;,
+        IdpMetadataContent = &amp;quot;&amp;lt;IDP_METADATA_CONTENT&gt;&amp;quot;,
+        RancherApiHost = &amp;quot;https://&amp;lt;RANCHER_API_HOST&gt;&amp;quot;,
+        SpCert = &amp;quot;&amp;lt;SP_CERT&gt;&amp;quot;,
+        SpKey = &amp;quot;&amp;lt;SP_KEY&gt;&amp;quot;,
+        UidField = &amp;quot;&amp;lt;UID_FIELD&gt;&amp;quot;,
+        UserNameField = &amp;quot;&amp;lt;USER_NAME_FIELD&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AuthConfigAdfs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AuthConfigAdfs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
@@ -89,16 +151,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs__ctor_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.#ctor*"></a>
-  <h4 id="Pulumi_Rancher2_AuthConfigAdfs__ctor_System_String_Pulumi_Rancher2_AuthConfigAdfsArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.AuthConfigAdfs.#ctor(System.String,Pulumi.Rancher2.AuthConfigAdfsArgs,System.Nullable{CustomResourceOptions})">AuthConfigAdfs(String, AuthConfigAdfsArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Rancher2_AuthConfigAdfs__ctor_System_String_Pulumi_Rancher2_AuthConfigAdfsArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.#ctor(System.String,Pulumi.Rancher2.AuthConfigAdfsArgs,Pulumi.CustomResourceOptions)">AuthConfigAdfs(String, AuthConfigAdfsArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a AuthConfigAdfs resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AuthConfigAdfs(string name, AuthConfigAdfsArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AuthConfigAdfs(string name, AuthConfigAdfsArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +185,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +195,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_AccessMode_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.AccessMode*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_AccessMode" data-uid="Pulumi.Rancher2.AuthConfigAdfs.AccessMode">AccessMode</h4>
@@ -142,7 +204,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccessMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,13 +216,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_AllowedPrincipalIds_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.AllowedPrincipalIds*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_AllowedPrincipalIds" data-uid="Pulumi.Rancher2.AuthConfigAdfs.AllowedPrincipalIds">AllowedPrincipalIds</h4>
@@ -181,13 +243,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_Annotations_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Annotations*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_Annotations" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Annotations">Annotations</h4>
@@ -208,13 +270,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_DisplayNameField_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.DisplayNameField*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_DisplayNameField" data-uid="Pulumi.Rancher2.AuthConfigAdfs.DisplayNameField">DisplayNameField</h4>
@@ -235,13 +297,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_Enabled_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Enabled*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_Enabled" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Enabled">Enabled</h4>
@@ -262,13 +324,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_GroupsField_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.GroupsField*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_GroupsField" data-uid="Pulumi.Rancher2.AuthConfigAdfs.GroupsField">GroupsField</h4>
@@ -289,13 +351,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_IdpMetadataContent_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.IdpMetadataContent*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_IdpMetadataContent" data-uid="Pulumi.Rancher2.AuthConfigAdfs.IdpMetadataContent">IdpMetadataContent</h4>
@@ -316,13 +378,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_Labels_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Labels*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_Labels" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Labels">Labels</h4>
@@ -343,13 +405,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_Name_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Name*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_Name" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Name">Name</h4>
@@ -370,13 +432,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_RancherApiHost_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.RancherApiHost*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_RancherApiHost" data-uid="Pulumi.Rancher2.AuthConfigAdfs.RancherApiHost">RancherApiHost</h4>
@@ -397,13 +459,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_SpCert_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.SpCert*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_SpCert" data-uid="Pulumi.Rancher2.AuthConfigAdfs.SpCert">SpCert</h4>
@@ -424,13 +486,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_SpKey_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.SpKey*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_SpKey" data-uid="Pulumi.Rancher2.AuthConfigAdfs.SpKey">SpKey</h4>
@@ -451,13 +513,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_Type_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Type*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_Type" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Type">Type</h4>
@@ -478,13 +540,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_UidField_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.UidField*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_UidField" data-uid="Pulumi.Rancher2.AuthConfigAdfs.UidField">UidField</h4>
@@ -505,13 +567,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_UserNameField_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.UserNameField*"></a>
   <h4 id="Pulumi_Rancher2_AuthConfigAdfs_UserNameField" data-uid="Pulumi.Rancher2.AuthConfigAdfs.UserNameField">UserNameField</h4>
@@ -532,7 +594,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -540,17 +602,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_AuthConfigAdfs_Get_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Get*"></a>
-  <h4 id="Pulumi_Rancher2_AuthConfigAdfs_Get_System_String_Input_System_String__Pulumi_Rancher2_AuthConfigAdfsState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Get(System.String,Input{System.String},Pulumi.Rancher2.AuthConfigAdfsState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AuthConfigAdfsState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Rancher2_AuthConfigAdfs_Get_System_String_Pulumi_Input_System_String__Pulumi_Rancher2_AuthConfigAdfsState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Rancher2.AuthConfigAdfs.Get(System.String,Pulumi.Input{System.String},Pulumi.Rancher2.AuthConfigAdfsState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AuthConfigAdfsState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing AuthConfigAdfs resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AuthConfigAdfs Get(string name, Input&lt;string&gt; id, AuthConfigAdfsState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AuthConfigAdfs Get(string name, Input&lt;string&gt; id, AuthConfigAdfsState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -569,7 +631,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -581,7 +643,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -610,7 +672,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/AuthConfigAdfs.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigAdfs.cs/#L46" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

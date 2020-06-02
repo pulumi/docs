@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.AppAutoScaling
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,29 +78,120 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.AppAutoScaling.Policy.html">Policy</a></h4>
       <section><p>Provides an Application AutoScaling Policy resource.</p>
-<h2 id="nested-fields">Nested fields</h2>
-<h3 id="target_tracking_scaling_policy_configuration"><code>target_tracking_scaling_policy_configuration</code></h3>
-<ul>
-<li><code>target_value</code> - (Required) The target value for the metric.</li>
-<li><code>disable_scale_in</code> - (Optional) Indicates whether scale in by the target tracking policy is disabled. If the value is true, scale in is disabled and the target tracking policy won't remove capacity from the scalable resource. Otherwise, scale in is enabled and the target tracking policy can remove capacity from the scalable resource. The default value is <code>false</code>.</li>
-<li><code>scale_in_cooldown</code> - (Optional) The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.</li>
-<li><code>scale_out_cooldown</code> - (Optional) The amount of time, in seconds, after a scale out activity completes before another scale out activity can start.</li>
-<li><code>customized_metric_specification</code> - (Optional) A custom CloudWatch metric. Documentation can be found  at: <a href="https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html">AWS Customized Metric Specification</a>. See supported fields below.</li>
-<li><code>predefined_metric_specification</code> - (Optional) A predefined metric. See supported fields below.</li>
-</ul>
-<h3 id="customized_metric_specification"><code>customized_metric_specification</code></h3>
-<ul>
-<li><code>dimensions</code> - (Optional) The dimensions of the metric.</li>
-<li><code>metric_name</code> - (Required) The name of the metric.</li>
-<li><code>namespace</code> - (Required) The namespace of the metric.</li>
-<li><code>statistic</code> - (Required) The statistic of the metric.</li>
-<li><code>unit</code> - (Optional) The unit of the metric.</li>
-</ul>
-<h3 id="predefined_metric_specification"><code>predefined_metric_specification</code></h3>
-<ul>
-<li><code>predefined_metric_type</code> - (Required) The metric type.</li>
-<li><code>resource_label</code> - (Optional) Reserved for future use.</li>
-</ul>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="dynamodb-table-autoscaling">DynamoDB Table Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dynamodbTableReadTarget = new Aws.AppAutoScaling.Target(&amp;quot;dynamodbTableReadTarget&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 100,
+        MinCapacity = 5,
+        ResourceId = &amp;quot;table/tableName&amp;quot;,
+        ScalableDimension = &amp;quot;dynamodb:table:ReadCapacityUnits&amp;quot;,
+        ServiceNamespace = &amp;quot;dynamodb&amp;quot;,
+    });
+    var dynamodbTableReadPolicy = new Aws.AppAutoScaling.Policy(&amp;quot;dynamodbTableReadPolicy&amp;quot;, new Aws.AppAutoScaling.PolicyArgs
+    {
+        PolicyType = &amp;quot;TargetTrackingScaling&amp;quot;,
+        ResourceId = dynamodbTableReadTarget.ResourceId,
+        ScalableDimension = dynamodbTableReadTarget.ScalableDimension,
+        ServiceNamespace = dynamodbTableReadTarget.ServiceNamespace,
+        TargetTrackingScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs
+        {
+            PredefinedMetricSpecification = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs
+            {
+                PredefinedMetricType = &amp;quot;DynamoDBReadCapacityUtilization&amp;quot;,
+            },
+            TargetValue = 70,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="ecs-service-autoscaling">ECS Service Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ecsTarget = new Aws.AppAutoScaling.Target(&amp;quot;ecsTarget&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 4,
+        MinCapacity = 1,
+        ResourceId = &amp;quot;service/clusterName/serviceName&amp;quot;,
+        ScalableDimension = &amp;quot;ecs:service:DesiredCount&amp;quot;,
+        ServiceNamespace = &amp;quot;ecs&amp;quot;,
+    });
+    var ecsPolicy = new Aws.AppAutoScaling.Policy(&amp;quot;ecsPolicy&amp;quot;, new Aws.AppAutoScaling.PolicyArgs
+    {
+        PolicyType = &amp;quot;StepScaling&amp;quot;,
+        ResourceId = ecsTarget.ResourceId,
+        ScalableDimension = ecsTarget.ScalableDimension,
+        ServiceNamespace = ecsTarget.ServiceNamespace,
+        StepScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyStepScalingPolicyConfigurationArgs
+        {
+            AdjustmentType = &amp;quot;ChangeInCapacity&amp;quot;,
+            Cooldown = 60,
+            MetricAggregationType = &amp;quot;Maximum&amp;quot;,
+            StepAdjustment = 
+            {
+
+                {
+                    { &amp;quot;metricIntervalUpperBound&amp;quot;, 0 },
+                    { &amp;quot;scalingAdjustment&amp;quot;, -1 },
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="aurora-read-replica-autoscaling">Aurora Read Replica Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var replicasTarget = new Aws.AppAutoScaling.Target(&amp;quot;replicasTarget&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 15,
+        MinCapacity = 1,
+        ResourceId = $&amp;quot;cluster:{aws_rds_cluster.Example.Id}&amp;quot;,
+        ScalableDimension = &amp;quot;rds:cluster:ReadReplicaCount&amp;quot;,
+        ServiceNamespace = &amp;quot;rds&amp;quot;,
+    });
+    var replicasPolicy = new Aws.AppAutoScaling.Policy(&amp;quot;replicasPolicy&amp;quot;, new Aws.AppAutoScaling.PolicyArgs
+    {
+        PolicyType = &amp;quot;TargetTrackingScaling&amp;quot;,
+        ResourceId = replicasTarget.ResourceId,
+        ScalableDimension = replicasTarget.ScalableDimension,
+        ServiceNamespace = replicasTarget.ServiceNamespace,
+        TargetTrackingScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs
+        {
+            PredefinedMetricSpecification = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs
+            {
+                PredefinedMetricType = &amp;quot;RDSReaderAverageCPUUtilization&amp;quot;,
+            },
+            ScaleInCooldown = 300,
+            ScaleOutCooldown = 300,
+            TargetValue = 75,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppAutoScaling.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
@@ -108,6 +199,71 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AppAutoScaling.ScheduledAction.html">ScheduledAction</a></h4>
       <section><p>Provides an Application AutoScaling ScheduledAction resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="dynamodb-table-autoscaling">DynamoDB Table Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dynamodbTarget = new Aws.AppAutoScaling.Target(&amp;quot;dynamodbTarget&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 100,
+        MinCapacity = 5,
+        ResourceId = &amp;quot;table/tableName&amp;quot;,
+        ScalableDimension = &amp;quot;dynamodb:table:ReadCapacityUnits&amp;quot;,
+        ServiceNamespace = &amp;quot;dynamodb&amp;quot;,
+    });
+    var dynamodbScheduledAction = new Aws.AppAutoScaling.ScheduledAction(&amp;quot;dynamodbScheduledAction&amp;quot;, new Aws.AppAutoScaling.ScheduledActionArgs
+    {
+        ResourceId = dynamodbTarget.ResourceId,
+        ScalableDimension = dynamodbTarget.ScalableDimension,
+        ScalableTargetAction = new Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs
+        {
+            MaxCapacity = 200,
+            MinCapacity = 1,
+        },
+        Schedule = &amp;quot;at(2006-01-02T15:04:05)&amp;quot;,
+        ServiceNamespace = dynamodbTarget.ServiceNamespace,
+    });
+}
+
+}
+</code></pre>
+<h3 id="ecs-service-autoscaling">ECS Service Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ecsTarget = new Aws.AppAutoScaling.Target(&amp;quot;ecsTarget&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 4,
+        MinCapacity = 1,
+        ResourceId = &amp;quot;service/clusterName/serviceName&amp;quot;,
+        ScalableDimension = &amp;quot;ecs:service:DesiredCount&amp;quot;,
+        ServiceNamespace = &amp;quot;ecs&amp;quot;,
+    });
+    var ecsScheduledAction = new Aws.AppAutoScaling.ScheduledAction(&amp;quot;ecsScheduledAction&amp;quot;, new Aws.AppAutoScaling.ScheduledActionArgs
+    {
+        ResourceId = ecsTarget.ResourceId,
+        ScalableDimension = ecsTarget.ScalableDimension,
+        ScalableTargetAction = new Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs
+        {
+            MaxCapacity = 10,
+            MinCapacity = 1,
+        },
+        Schedule = &amp;quot;at(2006-01-02T15:04:05)&amp;quot;,
+        ServiceNamespace = ecsTarget.ServiceNamespace,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppAutoScaling.ScheduledActionArgs.html">ScheduledActionArgs</a></h4>
       <section></section>
@@ -115,6 +271,90 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AppAutoScaling.Target.html">Target</a></h4>
       <section><p>Provides an Application AutoScaling ScalableTarget resource. To manage policies which get attached to the target, see the <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html"><code>aws.appautoscaling.Policy</code> resource</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> The <a href="https://docs.aws.amazon.com/autoscaling/application/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-roles">Application Auto Scaling service automatically attempts to manage IAM Service-Linked Roles</a> when registering certain service namespaces for the first time. To manually manage this role, see the <a href="https://www.terraform.io/docs/providers/aws/r/iam_service_linked_role.html"><code>aws.iam.ServiceLinkedRole</code> resource</a>.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="dynamodb-table-autoscaling">DynamoDB Table Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dynamodbTableReadTarget = new Aws.AppAutoScaling.Target(&amp;quot;dynamodbTableReadTarget&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 100,
+        MinCapacity = 5,
+        ResourceId = $&amp;quot;table/{aws_dynamodb_table.Example.Name}&amp;quot;,
+        ScalableDimension = &amp;quot;dynamodb:table:ReadCapacityUnits&amp;quot;,
+        ServiceNamespace = &amp;quot;dynamodb&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="dynamodb-index-autoscaling">DynamoDB Index Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dynamodbIndexReadTarget = new Aws.AppAutoScaling.Target(&amp;quot;dynamodbIndexReadTarget&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 100,
+        MinCapacity = 5,
+        ResourceId = $&amp;quot;table/{aws_dynamodb_table.Example.Name}/index/{@var.Index_name}&amp;quot;,
+        ScalableDimension = &amp;quot;dynamodb:index:ReadCapacityUnits&amp;quot;,
+        ServiceNamespace = &amp;quot;dynamodb&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="ecs-service-autoscaling">ECS Service Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ecsTarget = new Aws.AppAutoScaling.Target(&amp;quot;ecsTarget&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 4,
+        MinCapacity = 1,
+        ResourceId = $&amp;quot;service/{aws_ecs_cluster.Example.Name}/{aws_ecs_service.Example.Name}&amp;quot;,
+        ScalableDimension = &amp;quot;ecs:service:DesiredCount&amp;quot;,
+        ServiceNamespace = &amp;quot;ecs&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="aurora-read-replica-autoscaling">Aurora Read Replica Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var replicas = new Aws.AppAutoScaling.Target(&amp;quot;replicas&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 15,
+        MinCapacity = 1,
+        ResourceId = $&amp;quot;cluster:{aws_rds_cluster.Example.Id}&amp;quot;,
+        ScalableDimension = &amp;quot;rds:cluster:ReadReplicaCount&amp;quot;,
+        ServiceNamespace = &amp;quot;rds&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppAutoScaling.TargetArgs.html">TargetArgs</a></h4>
       <section></section>

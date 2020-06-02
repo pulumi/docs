@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Permission
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,177 @@
   </h1>
   <div class="markdown level0 summary"><p>Creates a Lambda permission to allow external sources invoking the Lambda function
 (e.g. CloudWatch Event Rule, SNS or S3).</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var iamForLambda = new Aws.Iam.Role(&amp;quot;iamForLambda&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;lambda.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var testLambda = new Aws.Lambda.Function(&amp;quot;testLambda&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+        Code = new FileArchive(&amp;quot;lambdatest.zip&amp;quot;),
+        Handler = &amp;quot;exports.handler&amp;quot;,
+        Role = iamForLambda.Arn,
+        Runtime = &amp;quot;nodejs8.10&amp;quot;,
+    });
+    var testAlias = new Aws.Lambda.Alias(&amp;quot;testAlias&amp;quot;, new Aws.Lambda.AliasArgs
+    {
+        Description = &amp;quot;a sample description&amp;quot;,
+        FunctionName = testLambda.Name,
+        FunctionVersion = &amp;quot;$$LATEST&amp;quot;,
+    });
+    var allowCloudwatch = new Aws.Lambda.Permission(&amp;quot;allowCloudwatch&amp;quot;, new Aws.Lambda.PermissionArgs
+    {
+        Action = &amp;quot;lambda:InvokeFunction&amp;quot;,
+        Function = testLambda.Name,
+        Principal = &amp;quot;events.amazonaws.com&amp;quot;,
+        Qualifier = testAlias.Name,
+        SourceArn = &amp;quot;arn:aws:events:eu-west-1:111122223333:rule/RunDaily&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="usage-with-sns">Usage with SNS</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultTopic = new Aws.Sns.Topic(&amp;quot;defaultTopic&amp;quot;, new Aws.Sns.TopicArgs
+    {
+    });
+    var defaultRole = new Aws.Iam.Role(&amp;quot;defaultRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;lambda.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var func = new Aws.Lambda.Function(&amp;quot;func&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+        Code = new FileArchive(&amp;quot;lambdatest.zip&amp;quot;),
+        Handler = &amp;quot;exports.handler&amp;quot;,
+        Role = defaultRole.Arn,
+        Runtime = &amp;quot;python2.7&amp;quot;,
+    });
+    var withSns = new Aws.Lambda.Permission(&amp;quot;withSns&amp;quot;, new Aws.Lambda.PermissionArgs
+    {
+        Action = &amp;quot;lambda:InvokeFunction&amp;quot;,
+        Function = func.Name,
+        Principal = &amp;quot;sns.amazonaws.com&amp;quot;,
+        SourceArn = defaultTopic.Arn,
+    });
+    var lambda = new Aws.Sns.TopicSubscription(&amp;quot;lambda&amp;quot;, new Aws.Sns.TopicSubscriptionArgs
+    {
+        Endpoint = func.Arn,
+        Protocol = &amp;quot;lambda&amp;quot;,
+        Topic = defaultTopic.Arn,
+    });
+}
+
+}
+</code></pre>
+<h2 id="specify-lambda-permissions-for-api-gateway-rest-api">Specify Lambda permissions for API Gateway REST API</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myDemoAPI = new Aws.ApiGateway.RestApi(&amp;quot;myDemoAPI&amp;quot;, new Aws.ApiGateway.RestApiArgs
+    {
+        Description = &amp;quot;This is my API for demonstration purposes&amp;quot;,
+    });
+    var lambdaPermission = new Aws.Lambda.Permission(&amp;quot;lambdaPermission&amp;quot;, new Aws.Lambda.PermissionArgs
+    {
+        Action = &amp;quot;lambda:InvokeFunction&amp;quot;,
+        Function = &amp;quot;MyDemoFunction&amp;quot;,
+        Principal = &amp;quot;apigateway.amazonaws.com&amp;quot;,
+        SourceArn = myDemoAPI.ExecutionArn.Apply(executionArn =&gt; $&amp;quot;{executionArn}/*/*/*&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Permission</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Permission</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Lambda.html">Pulumi.Aws.Lambda</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -89,16 +254,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L227">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Permission__ctor_" data-uid="Pulumi.Aws.Lambda.Permission.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Lambda_Permission__ctor_System_String_Pulumi_Aws_Lambda_PermissionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Lambda.Permission.#ctor(System.String,Pulumi.Aws.Lambda.PermissionArgs,System.Nullable{CustomResourceOptions})">Permission(String, PermissionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Lambda_Permission__ctor_System_String_Pulumi_Aws_Lambda_PermissionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Lambda.Permission.#ctor(System.String,Pulumi.Aws.Lambda.PermissionArgs,Pulumi.CustomResourceOptions)">Permission(String, PermissionArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Permission resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Permission(string name, PermissionArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Permission(string name, PermissionArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +288,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +298,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Permission_Action_" data-uid="Pulumi.Aws.Lambda.Permission.Action*"></a>
   <h4 id="Pulumi_Aws_Lambda_Permission_Action" data-uid="Pulumi.Aws.Lambda.Permission.Action">Action</h4>
@@ -154,22 +319,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Permission_EventSourceToken_" data-uid="Pulumi.Aws.Lambda.Permission.EventSourceToken*"></a>
   <h4 id="Pulumi_Aws_Lambda_Permission_EventSourceToken" data-uid="Pulumi.Aws.Lambda.Permission.EventSourceToken">EventSourceToken</h4>
-  <div class="markdown level1 summary"><p>The Event Source Token to validate.  Used with [Alexa Skills][1].</p>
+  <div class="markdown level1 summary"><p>The Event Source Token to validate.  Used with <a href="https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli">Alexa Skills</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EventSourceToken { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EventSourceToken { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,13 +346,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Permission_Function_" data-uid="Pulumi.Aws.Lambda.Permission.Function*"></a>
   <h4 id="Pulumi_Aws_Lambda_Permission_Function" data-uid="Pulumi.Aws.Lambda.Permission.Function">Function</h4>
@@ -208,13 +373,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Permission_Principal_" data-uid="Pulumi.Aws.Lambda.Permission.Principal*"></a>
   <h4 id="Pulumi_Aws_Lambda_Permission_Principal" data-uid="Pulumi.Aws.Lambda.Permission.Principal">Principal</h4>
@@ -237,13 +402,13 @@ such as <code>events.amazonaws.com</code> or <code>sns.amazonaws.com</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Permission_Qualifier_" data-uid="Pulumi.Aws.Lambda.Permission.Qualifier*"></a>
   <h4 id="Pulumi_Aws_Lambda_Permission_Qualifier" data-uid="Pulumi.Aws.Lambda.Permission.Qualifier">Qualifier</h4>
@@ -254,7 +419,7 @@ e.g. <code>arn:aws:lambda:aws-region:acct-id:function:function-name:2</code></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Qualifier { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Qualifier { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -266,13 +431,13 @@ e.g. <code>arn:aws:lambda:aws-region:acct-id:function:function-name:2</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Permission_SourceAccount_" data-uid="Pulumi.Aws.Lambda.Permission.SourceAccount*"></a>
   <h4 id="Pulumi_Aws_Lambda_Permission_SourceAccount" data-uid="Pulumi.Aws.Lambda.Permission.SourceAccount">SourceAccount</h4>
@@ -281,7 +446,7 @@ e.g. <code>arn:aws:lambda:aws-region:acct-id:function:function-name:2</code></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceAccount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceAccount { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -293,13 +458,13 @@ e.g. <code>arn:aws:lambda:aws-region:acct-id:function:function-name:2</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Permission_SourceArn_" data-uid="Pulumi.Aws.Lambda.Permission.SourceArn*"></a>
   <h4 id="Pulumi_Aws_Lambda_Permission_SourceArn" data-uid="Pulumi.Aws.Lambda.Permission.SourceArn">SourceArn</h4>
@@ -313,7 +478,7 @@ API Gateway ARNs have a unique structure described
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -325,13 +490,13 @@ API Gateway ARNs have a unique structure described
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L210">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Permission_StatementId_" data-uid="Pulumi.Aws.Lambda.Permission.StatementId*"></a>
   <h4 id="Pulumi_Aws_Lambda_Permission_StatementId" data-uid="Pulumi.Aws.Lambda.Permission.StatementId">StatementId</h4>
@@ -352,13 +517,13 @@ API Gateway ARNs have a unique structure described
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Permission_StatementIdPrefix_" data-uid="Pulumi.Aws.Lambda.Permission.StatementIdPrefix*"></a>
   <h4 id="Pulumi_Aws_Lambda_Permission_StatementIdPrefix" data-uid="Pulumi.Aws.Lambda.Permission.StatementIdPrefix">StatementIdPrefix</h4>
@@ -367,7 +532,7 @@ API Gateway ARNs have a unique structure described
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; StatementIdPrefix { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StatementIdPrefix { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -379,7 +544,7 @@ API Gateway ARNs have a unique structure described
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -387,17 +552,17 @@ API Gateway ARNs have a unique structure described
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L257">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Permission_Get_" data-uid="Pulumi.Aws.Lambda.Permission.Get*"></a>
-  <h4 id="Pulumi_Aws_Lambda_Permission_Get_System_String_Input_System_String__Pulumi_Aws_Lambda_PermissionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Lambda.Permission.Get(System.String,Input{System.String},Pulumi.Aws.Lambda.PermissionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, PermissionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Lambda_Permission_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Lambda_PermissionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Lambda.Permission.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Lambda.PermissionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, PermissionState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Permission resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Permission Get(string name, Input&lt;string&gt; id, PermissionState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Permission Get(string name, Input&lt;string&gt; id, PermissionState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -416,7 +581,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -428,7 +593,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -457,7 +622,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Permission.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Permission.cs/#L154" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

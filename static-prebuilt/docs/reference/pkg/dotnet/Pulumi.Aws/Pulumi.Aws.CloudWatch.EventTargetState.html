@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EventTargetState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">EventTargetState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">EventTargetState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CloudWatch.html">Pulumi.Aws.CloudWatch</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L301">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L535">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState__ctor_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.#ctor*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState__ctor" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.#ctor">EventTargetState()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L459">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_Arn_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.Arn*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_Arn" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.Arn">Arn</h4>
@@ -109,7 +138,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,13 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L231">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L465">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_BatchTarget_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.BatchTarget*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_BatchTarget" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.BatchTarget">BatchTarget</h4>
@@ -136,7 +165,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventTargetBatchTargetGetArgs&gt;? BatchTarget { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventTargetBatchTargetGetArgs&gt; BatchTarget { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +177,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetBatchTargetGetArgs.html">EventTargetBatchTargetGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetBatchTargetGetArgs.html">EventTargetBatchTargetGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L237">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L471">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_EcsTarget_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.EcsTarget*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_EcsTarget" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.EcsTarget">EcsTarget</h4>
@@ -163,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventTargetEcsTargetGetArgs&gt;? EcsTarget { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventTargetEcsTargetGetArgs&gt; EcsTarget { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +204,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetEcsTargetGetArgs.html">EventTargetEcsTargetGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetEcsTargetGetArgs.html">EventTargetEcsTargetGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L243">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L477">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_Input_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.Input*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_Input" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.Input">Input</h4>
@@ -190,7 +219,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Input { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Input { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,13 +231,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L250">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L484">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_InputPath_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.InputPath*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_InputPath" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.InputPath">InputPath</h4>
@@ -218,7 +247,7 @@ that is used for extracting part of the matched event when passing it to the tar
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InputPath { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InputPath { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,13 +259,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L490">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_InputTransformer_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.InputTransformer*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_InputTransformer" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.InputTransformer">InputTransformer</h4>
@@ -245,7 +274,7 @@ that is used for extracting part of the matched event when passing it to the tar
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventTargetInputTransformerGetArgs&gt;? InputTransformer { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventTargetInputTransformerGetArgs&gt; InputTransformer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,13 +286,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetInputTransformerGetArgs.html">EventTargetInputTransformerGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetInputTransformerGetArgs.html">EventTargetInputTransformerGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L262">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L496">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_KinesisTarget_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.KinesisTarget*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_KinesisTarget" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.KinesisTarget">KinesisTarget</h4>
@@ -272,7 +301,7 @@ that is used for extracting part of the matched event when passing it to the tar
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventTargetKinesisTargetGetArgs&gt;? KinesisTarget { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventTargetKinesisTargetGetArgs&gt; KinesisTarget { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,13 +313,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetKinesisTargetGetArgs.html">EventTargetKinesisTargetGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetKinesisTargetGetArgs.html">EventTargetKinesisTargetGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L268">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L502">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_RoleArn_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.RoleArn*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_RoleArn" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.RoleArn">RoleArn</h4>
@@ -299,7 +328,7 @@ that is used for extracting part of the matched event when passing it to the tar
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RoleArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RoleArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,13 +340,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L274">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L508">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_Rule_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.Rule*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_Rule" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.Rule">Rule</h4>
@@ -326,7 +355,7 @@ that is used for extracting part of the matched event when passing it to the tar
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Rule { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Rule { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,13 +367,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L283">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L517">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_RunCommandTargets_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.RunCommandTargets*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_RunCommandTargets" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.RunCommandTargets">RunCommandTargets</h4>
@@ -365,13 +394,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetRunCommandTargetGetArgs.html">EventTargetRunCommandTargetGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetRunCommandTargetGetArgs.html">EventTargetRunCommandTargetGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L292">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L526">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_SqsTarget_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.SqsTarget*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_SqsTarget" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.SqsTarget">SqsTarget</h4>
@@ -380,7 +409,7 @@ that is used for extracting part of the matched event when passing it to the tar
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EventTargetSqsTargetGetArgs&gt;? SqsTarget { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EventTargetSqsTargetGetArgs&gt; SqsTarget { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,13 +421,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetSqsTargetGetArgs.html">EventTargetSqsTargetGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.EventTargetSqsTargetGetArgs.html">EventTargetSqsTargetGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L298">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L532">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTargetState_TargetId_" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.TargetId*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTargetState_TargetId" data-uid="Pulumi.Aws.CloudWatch.EventTargetState.TargetId">TargetId</h4>
@@ -407,7 +436,7 @@ that is used for extracting part of the matched event when passing it to the tar
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TargetId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TargetId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,7 +448,7 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -431,7 +460,7 @@ that is used for extracting part of the matched event when passing it to the tar
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L220" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L454" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

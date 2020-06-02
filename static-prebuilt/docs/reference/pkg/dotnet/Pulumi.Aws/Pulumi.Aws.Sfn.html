@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Sfn
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,21 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Sfn.Activity.html">Activity</a></h4>
       <section><p>Provides a Step Function Activity resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var sfnActivity = new Aws.Sfn.Activity(&amp;quot;sfnActivity&amp;quot;, new Aws.Sfn.ActivityArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sfn.ActivityArgs.html">ActivityArgs</a></h4>
       <section></section>
@@ -97,6 +112,35 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Sfn.StateMachine.html">StateMachine</a></h4>
       <section><p>Provides a Step Function State Machine resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var sfnStateMachine = new Aws.Sfn.StateMachine(&amp;quot;sfnStateMachine&amp;quot;, new Aws.Sfn.StateMachineArgs
+    {
+        Definition = @$&amp;quot;{{
+&amp;quot;&amp;quot;Comment&amp;quot;&amp;quot;: &amp;quot;&amp;quot;A Hello World example of the Amazon States Language using an AWS Lambda Function&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;StartAt&amp;quot;&amp;quot;: &amp;quot;&amp;quot;HelloWorld&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;States&amp;quot;&amp;quot;: {{
+&amp;quot;&amp;quot;HelloWorld&amp;quot;&amp;quot;: {{
+  &amp;quot;&amp;quot;Type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Task&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;{aws_lambda_function.Lambda.Arn}&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;End&amp;quot;&amp;quot;: true
+}}
+}}
+}}
+
+&amp;quot;,
+        RoleArn = aws_iam_role.Iam_for_sfn.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sfn.StateMachineArgs.html">StateMachineArgs</a></h4>
       <section></section>

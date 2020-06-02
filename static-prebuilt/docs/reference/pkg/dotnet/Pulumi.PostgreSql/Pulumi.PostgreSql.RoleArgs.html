@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RoleArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">RoleArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">RoleArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.PostgreSql.html">Pulumi.PostgreSql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.PostgreSql.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L375">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L402">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs__ctor_" data-uid="Pulumi.PostgreSql.RoleArgs.#ctor*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs__ctor" data-uid="Pulumi.PostgreSql.RoleArgs.#ctor">RoleArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L224">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L251">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_BypassRowLevelSecurity_" data-uid="Pulumi.PostgreSql.RoleArgs.BypassRowLevelSecurity*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_BypassRowLevelSecurity" data-uid="Pulumi.PostgreSql.RoleArgs.BypassRowLevelSecurity">BypassRowLevelSecurity</h4>
@@ -110,7 +139,7 @@ row-level security (RLS) policy.  Default value is <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? BypassRowLevelSecurity { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; BypassRowLevelSecurity { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,13 +151,13 @@ row-level security (RLS) policy.  Default value is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L232">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L259">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_ConnectionLimit_" data-uid="Pulumi.PostgreSql.RoleArgs.ConnectionLimit*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_ConnectionLimit" data-uid="Pulumi.PostgreSql.RoleArgs.ConnectionLimit">ConnectionLimit</h4>
@@ -139,7 +168,7 @@ limit.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? ConnectionLimit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; ConnectionLimit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +180,13 @@ limit.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L239">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L266">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_CreateDatabase_" data-uid="Pulumi.PostgreSql.RoleArgs.CreateDatabase*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_CreateDatabase" data-uid="Pulumi.PostgreSql.RoleArgs.CreateDatabase">CreateDatabase</h4>
@@ -166,7 +195,7 @@ limit.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? CreateDatabase { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; CreateDatabase { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,13 +207,13 @@ limit.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L274">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_CreateRole_" data-uid="Pulumi.PostgreSql.RoleArgs.CreateRole*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_CreateRole" data-uid="Pulumi.PostgreSql.RoleArgs.CreateRole">CreateRole</h4>
@@ -195,7 +224,7 @@ is <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? CreateRole { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; CreateRole { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +236,13 @@ is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L250">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L277">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_Encrypted_" data-uid="Pulumi.PostgreSql.RoleArgs.Encrypted*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_Encrypted" data-uid="Pulumi.PostgreSql.RoleArgs.Encrypted">Encrypted</h4>
@@ -221,7 +250,7 @@ is <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Encrypted { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Encrypted { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,13 +262,13 @@ is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L260">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L287">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_EncryptedPassword_" data-uid="Pulumi.PostgreSql.RoleArgs.EncryptedPassword*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_EncryptedPassword" data-uid="Pulumi.PostgreSql.RoleArgs.EncryptedPassword">EncryptedPassword</h4>
@@ -252,7 +281,7 @@ behavior of
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EncryptedPassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EncryptedPassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,13 +293,13 @@ behavior of
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L267">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L294">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_Inherit_" data-uid="Pulumi.PostgreSql.RoleArgs.Inherit*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_Inherit" data-uid="Pulumi.PostgreSql.RoleArgs.Inherit">Inherit</h4>
@@ -280,7 +309,7 @@ roles it is a member of.  Default value is <code>true</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Inherit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Inherit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,13 +321,13 @@ roles it is a member of.  Default value is <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L275">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L302">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_Login_" data-uid="Pulumi.PostgreSql.RoleArgs.Login*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_Login" data-uid="Pulumi.PostgreSql.RoleArgs.Login">Login</h4>
@@ -309,7 +338,7 @@ in the usual sense of the word.  Default value is <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Login { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Login { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -321,13 +350,13 @@ in the usual sense of the word.  Default value is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L282">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L309">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_Name_" data-uid="Pulumi.PostgreSql.RoleArgs.Name*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_Name" data-uid="Pulumi.PostgreSql.RoleArgs.Name">Name</h4>
@@ -337,7 +366,7 @@ server instance where it is configured.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -349,13 +378,13 @@ server instance where it is configured.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L289">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L316">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_Password_" data-uid="Pulumi.PostgreSql.RoleArgs.Password*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_Password" data-uid="Pulumi.PostgreSql.RoleArgs.Password">Password</h4>
@@ -365,7 +394,7 @@ for roles having the <code>login</code> attribute set to true.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Password { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Password { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -377,13 +406,13 @@ for roles having the <code>login</code> attribute set to true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L297">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L324">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_Replication_" data-uid="Pulumi.PostgreSql.RoleArgs.Replication*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_Replication" data-uid="Pulumi.PostgreSql.RoleArgs.Replication">Replication</h4>
@@ -394,7 +423,7 @@ value is <code>false</code></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Replication { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Replication { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -406,13 +435,13 @@ value is <code>false</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L306">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L333">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_Roles_" data-uid="Pulumi.PostgreSql.RoleArgs.Roles*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_Roles" data-uid="Pulumi.PostgreSql.RoleArgs.Roles">Roles</h4>
@@ -433,13 +462,13 @@ value is <code>false</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L320">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L347">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_SearchPaths_" data-uid="Pulumi.PostgreSql.RoleArgs.SearchPaths*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_SearchPaths" data-uid="Pulumi.PostgreSql.RoleArgs.SearchPaths">SearchPaths</h4>
@@ -462,13 +491,13 @@ due to limitations in the implementation, values cannot contain the substring
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L335">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L362">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_SkipDropRole_" data-uid="Pulumi.PostgreSql.RoleArgs.SkipDropRole*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_SkipDropRole" data-uid="Pulumi.PostgreSql.RoleArgs.SkipDropRole">SkipDropRole</h4>
@@ -483,7 +512,7 @@ This is the third and final step taken when removing a ROLE from a database.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SkipDropRole { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SkipDropRole { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -495,13 +524,13 @@ This is the third and final step taken when removing a ROLE from a database.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L348">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L375">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_SkipReassignOwned_" data-uid="Pulumi.PostgreSql.RoleArgs.SkipReassignOwned*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_SkipReassignOwned" data-uid="Pulumi.PostgreSql.RoleArgs.SkipReassignOwned">SkipReassignOwned</h4>
@@ -517,7 +546,7 @@ an implicit
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SkipReassignOwned { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SkipReassignOwned { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -529,13 +558,13 @@ an implicit
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L354">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L381">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_StatementTimeout_" data-uid="Pulumi.PostgreSql.RoleArgs.StatementTimeout*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_StatementTimeout" data-uid="Pulumi.PostgreSql.RoleArgs.StatementTimeout">StatementTimeout</h4>
@@ -544,7 +573,7 @@ an implicit
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? StatementTimeout { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; StatementTimeout { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -556,13 +585,13 @@ an implicit
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L362">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L389">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_Superuser_" data-uid="Pulumi.PostgreSql.RoleArgs.Superuser*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_Superuser" data-uid="Pulumi.PostgreSql.RoleArgs.Superuser">Superuser</h4>
@@ -573,7 +602,7 @@ value is <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Superuser { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Superuser { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -585,13 +614,13 @@ value is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L372">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L399">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_RoleArgs_ValidUntil_" data-uid="Pulumi.PostgreSql.RoleArgs.ValidUntil*"></a>
   <h4 id="Pulumi_PostgreSql_RoleArgs_ValidUntil" data-uid="Pulumi.PostgreSql.RoleArgs.ValidUntil">ValidUntil</h4>
@@ -604,7 +633,7 @@ set to <code>infinity</code>.  Default is <code>NULL</code>, therefore <code>inf
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ValidUntil { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ValidUntil { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -616,7 +645,7 @@ set to <code>infinity</code>.  Default is <code>NULL</code>, therefore <code>inf
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -628,7 +657,7 @@ set to <code>infinity</code>.  Default is <code>NULL</code>, therefore <code>inf
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Role.cs/#L218" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L245" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

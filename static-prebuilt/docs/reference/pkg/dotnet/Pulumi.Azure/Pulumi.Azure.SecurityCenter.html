@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.SecurityCenter
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,38 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.SecurityCenter.AdvancedThreatProtection.html">AdvancedThreatProtection</a></h4>
       <section><p>Manages a resources Advanced Threat Protection setting.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rg = new Azure.Core.ResourceGroup(&amp;quot;rg&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = azurerm_resource_group.Example.Name,
+        Location = azurerm_resource_group.Example.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleAdvancedThreatProtection = new Azure.SecurityCenter.AdvancedThreatProtection(&amp;quot;exampleAdvancedThreatProtection&amp;quot;, new Azure.SecurityCenter.AdvancedThreatProtectionArgs
+    {
+        TargetResourceId = exampleAccount.Id,
+        Enabled = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.SecurityCenter.AdvancedThreatProtectionArgs.html">AdvancedThreatProtectionArgs</a></h4>
       <section></section>
@@ -88,6 +120,25 @@
 <blockquote>
 <p><strong>NOTE:</strong> Owner access permission is required.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.SecurityCenter.Contact(&amp;quot;example&amp;quot;, new Azure.SecurityCenter.ContactArgs
+    {
+        AlertNotifications = true,
+        AlertsToAdmins = true,
+        Email = &amp;quot;contact@example.com&amp;quot;,
+        Phone = &amp;quot;+1-555-555-5555&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.SecurityCenter.ContactArgs.html">ContactArgs</a></h4>
       <section></section>
@@ -101,6 +152,22 @@
 <blockquote>
 <p><strong>NOTE:</strong> Deletion of this resource does not change or reset the pricing tier to <code>Free</code></p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.SecurityCenter.SubscriptionPricing(&amp;quot;example&amp;quot;, new Azure.SecurityCenter.SubscriptionPricingArgs
+    {
+        Tier = &amp;quot;Standard&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.SecurityCenter.SubscriptionPricingArgs.html">SubscriptionPricingArgs</a></h4>
       <section></section>
@@ -114,6 +181,33 @@
 <blockquote>
 <p><strong>NOTE:</strong> The subscription's pricing model can not be <code>Free</code> for this to have any affect.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;westus&amp;quot;,
+    });
+    var exampleAnalyticsWorkspace = new Azure.OperationalInsights.AnalyticsWorkspace(&amp;quot;exampleAnalyticsWorkspace&amp;quot;, new Azure.OperationalInsights.AnalyticsWorkspaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;PerGB2018&amp;quot;,
+    });
+    var exampleWorkspace = new Azure.SecurityCenter.Workspace(&amp;quot;exampleWorkspace&amp;quot;, new Azure.SecurityCenter.WorkspaceArgs
+    {
+        Scope = &amp;quot;/subscriptions/00000000-0000-0000-0000-000000000000&amp;quot;,
+        WorkspaceId = exampleAnalyticsWorkspace.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.SecurityCenter.WorkspaceArgs.html">WorkspaceArgs</a></h4>
       <section></section>

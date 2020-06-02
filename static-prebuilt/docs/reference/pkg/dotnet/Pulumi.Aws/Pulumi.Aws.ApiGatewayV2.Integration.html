@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Integration
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,98 @@
   </h1>
   <div class="markdown level0 summary"><p>Manages an Amazon API Gateway Version 2 integration.
 More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.Integration(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.IntegrationArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        IntegrationType = &amp;quot;MOCK&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="lambda-integration">Lambda Integration</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleFunction = new Aws.Lambda.Function(&amp;quot;exampleFunction&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+        Code = new FileArchive(&amp;quot;example.zip&amp;quot;),
+        Handler = &amp;quot;index.handler&amp;quot;,
+        Role = aws_iam_role.Example.Arn,
+        Runtime = &amp;quot;nodejs10.x&amp;quot;,
+    });
+    var exampleIntegration = new Aws.ApiGatewayV2.Integration(&amp;quot;exampleIntegration&amp;quot;, new Aws.ApiGatewayV2.IntegrationArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        ConnectionType = &amp;quot;INTERNET&amp;quot;,
+        ContentHandlingStrategy = &amp;quot;CONVERT_TO_TEXT&amp;quot;,
+        Description = &amp;quot;Lambda example&amp;quot;,
+        IntegrationMethod = &amp;quot;POST&amp;quot;,
+        IntegrationType = &amp;quot;AWS&amp;quot;,
+        IntegrationUri = exampleFunction.InvokeArn,
+        PassthroughBehavior = &amp;quot;WHEN_NO_MATCH&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Integration</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Integration</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ApiGatewayV2.html">Pulumi.Aws.ApiGatewayV2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -89,16 +175,16 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration__ctor_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.#ctor*"></a>
-  <h4 id="Pulumi_Aws_ApiGatewayV2_Integration__ctor_System_String_Pulumi_Aws_ApiGatewayV2_IntegrationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.#ctor(System.String,Pulumi.Aws.ApiGatewayV2.IntegrationArgs,System.Nullable{CustomResourceOptions})">Integration(String, IntegrationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ApiGatewayV2_Integration__ctor_System_String_Pulumi_Aws_ApiGatewayV2_IntegrationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.#ctor(System.String,Pulumi.Aws.ApiGatewayV2.IntegrationArgs,Pulumi.CustomResourceOptions)">Integration(String, IntegrationArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Integration resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Integration(string name, IntegrationArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Integration(string name, IntegrationArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +209,7 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +219,7 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_ApiId_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.ApiId*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_ApiId" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.ApiId">ApiId</h4>
@@ -154,13 +240,13 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_ConnectionId_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.ConnectionId*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_ConnectionId" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.ConnectionId">ConnectionId</h4>
@@ -169,7 +255,7 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ConnectionId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ConnectionId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,13 +267,13 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_ConnectionType_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.ConnectionType*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_ConnectionType" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.ConnectionType">ConnectionType</h4>
@@ -196,7 +282,7 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ConnectionType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ConnectionType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +294,13 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_ContentHandlingStrategy_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.ContentHandlingStrategy*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_ContentHandlingStrategy" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.ContentHandlingStrategy">ContentHandlingStrategy</h4>
@@ -223,7 +309,7 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContentHandlingStrategy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContentHandlingStrategy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +321,13 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_CredentialsArn_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.CredentialsArn*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_CredentialsArn" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.CredentialsArn">CredentialsArn</h4>
@@ -250,7 +336,7 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CredentialsArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CredentialsArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +348,13 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_Description_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.Description*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_Description" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.Description">Description</h4>
@@ -277,7 +363,7 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,13 +375,13 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_IntegrationMethod_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.IntegrationMethod*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_IntegrationMethod" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.IntegrationMethod">IntegrationMethod</h4>
@@ -304,7 +390,7 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IntegrationMethod { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IntegrationMethod { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,13 +402,13 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_IntegrationResponseSelectionExpression_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.IntegrationResponseSelectionExpression*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_IntegrationResponseSelectionExpression" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.IntegrationResponseSelectionExpression">IntegrationResponseSelectionExpression</h4>
@@ -343,13 +429,13 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_IntegrationType_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.IntegrationType*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_IntegrationType" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.IntegrationType">IntegrationType</h4>
@@ -371,13 +457,13 @@ Valid values: <code>AWS</code>, <code>AWS_PROXY</code>, <code>HTTP</code>, <code
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_IntegrationUri_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.IntegrationUri*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_IntegrationUri" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.IntegrationUri">IntegrationUri</h4>
@@ -387,7 +473,7 @@ For an <code>HTTP</code> integration, specify a fully-qualified URL. For an HTTP
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IntegrationUri { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IntegrationUri { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -399,13 +485,13 @@ For an <code>HTTP</code> integration, specify a fully-qualified URL. For an HTTP
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_PassthroughBehavior_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.PassthroughBehavior*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_PassthroughBehavior" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.PassthroughBehavior">PassthroughBehavior</h4>
@@ -415,7 +501,7 @@ Valid values: <code>WHEN_NO_MATCH</code>, <code>WHEN_NO_TEMPLATES</code>, <code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PassthroughBehavior { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PassthroughBehavior { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -427,13 +513,13 @@ Valid values: <code>WHEN_NO_MATCH</code>, <code>WHEN_NO_TEMPLATES</code>, <code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_PayloadFormatVersion_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.PayloadFormatVersion*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_PayloadFormatVersion" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.PayloadFormatVersion">PayloadFormatVersion</h4>
@@ -442,7 +528,7 @@ Valid values: <code>WHEN_NO_MATCH</code>, <code>WHEN_NO_TEMPLATES</code>, <code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PayloadFormatVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PayloadFormatVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -454,13 +540,13 @@ Valid values: <code>WHEN_NO_MATCH</code>, <code>WHEN_NO_TEMPLATES</code>, <code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_RequestTemplates_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.RequestTemplates*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_RequestTemplates" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.RequestTemplates">RequestTemplates</h4>
@@ -469,7 +555,7 @@ Valid values: <code>WHEN_NO_MATCH</code>, <code>WHEN_NO_TEMPLATES</code>, <code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; RequestTemplates { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; RequestTemplates { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -481,13 +567,13 @@ Valid values: <code>WHEN_NO_MATCH</code>, <code>WHEN_NO_TEMPLATES</code>, <code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_TemplateSelectionExpression_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.TemplateSelectionExpression*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_TemplateSelectionExpression" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.TemplateSelectionExpression">TemplateSelectionExpression</h4>
@@ -496,7 +582,7 @@ Valid values: <code>WHEN_NO_MATCH</code>, <code>WHEN_NO_TEMPLATES</code>, <code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TemplateSelectionExpression { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TemplateSelectionExpression { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -508,13 +594,13 @@ Valid values: <code>WHEN_NO_MATCH</code>, <code>WHEN_NO_TEMPLATES</code>, <code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_TimeoutMilliseconds_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.TimeoutMilliseconds*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_TimeoutMilliseconds" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.TimeoutMilliseconds">TimeoutMilliseconds</h4>
@@ -535,7 +621,7 @@ Valid values: <code>WHEN_NO_MATCH</code>, <code>WHEN_NO_TEMPLATES</code>, <code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -543,17 +629,17 @@ Valid values: <code>WHEN_NO_MATCH</code>, <code>WHEN_NO_TEMPLATES</code>, <code>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Integration_Get_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.Get*"></a>
-  <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_Get_System_String_Input_System_String__Pulumi_Aws_ApiGatewayV2_IntegrationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.Get(System.String,Input{System.String},Pulumi.Aws.ApiGatewayV2.IntegrationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IntegrationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ApiGatewayV2_Integration_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_ApiGatewayV2_IntegrationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGatewayV2.Integration.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.ApiGatewayV2.IntegrationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, IntegrationState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Integration resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Integration Get(string name, Input&lt;string&gt; id, IntegrationState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Integration Get(string name, Input&lt;string&gt; id, IntegrationState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -572,7 +658,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -584,7 +670,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -613,7 +699,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Integration.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Integration.cs/#L71" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

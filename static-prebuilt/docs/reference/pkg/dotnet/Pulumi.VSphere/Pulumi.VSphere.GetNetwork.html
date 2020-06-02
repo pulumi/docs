@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetNetwork
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,31 +78,78 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetNetwork</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
   <h5 id="Pulumi_VSphere_GetNetwork_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetNetwork : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetNetwork</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/GetNetwork.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/GetNetwork.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_VSphere_GetNetwork_InvokeAsync_" data-uid="Pulumi.VSphere.GetNetwork.InvokeAsync*"></a>
-  <h4 id="Pulumi_VSphere_GetNetwork_InvokeAsync_Pulumi_VSphere_GetNetworkArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.VSphere.GetNetwork.InvokeAsync(Pulumi.VSphere.GetNetworkArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetNetworkArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_GetNetwork_InvokeAsync_Pulumi_VSphere_GetNetworkArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.VSphere.GetNetwork.InvokeAsync(Pulumi.VSphere.GetNetworkArgs,Pulumi.InvokeOptions)">InvokeAsync(GetNetworkArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>The <code>vsphere..getNetwork</code> data source can be used to discover the ID of a network
 in vSphere. This can be any network that can be used as the backing for a
 network interface for <code>vsphere..VirtualMachine</code> or any other vSphere resource
 that requires a network. This includes standard (host-based) port groups, DVS
 port groups, or opaque networks such as those managed by NSX.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var datacenter = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+    {
+        Name = &amp;quot;dc1&amp;quot;,
+    }));
+    var net = datacenter.Apply(datacenter =&gt; Output.Create(VSphere.GetNetwork.InvokeAsync(new VSphere.GetNetworkArgs
+    {
+        DatacenterId = datacenter.Id,
+        Name = &amp;quot;test-net&amp;quot;,
+    })));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetNetworkResult&gt; InvokeAsync(GetNetworkArgs args, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetNetworkResult&gt; InvokeAsync(GetNetworkArgs args, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,7 +167,7 @@ port groups, or opaque networks such as those managed by NSX.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -136,7 +183,7 @@ port groups, or opaque networks such as those managed by NSX.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.VSphere.GetNetworkResult.html">GetNetworkResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.VSphere.GetNetworkResult.html">GetNetworkResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -148,7 +195,7 @@ port groups, or opaque networks such as those managed by NSX.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/GetNetwork.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/GetNetwork.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

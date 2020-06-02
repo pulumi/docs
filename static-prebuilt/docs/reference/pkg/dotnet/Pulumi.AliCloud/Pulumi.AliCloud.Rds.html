@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Rds
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,12 +78,54 @@
   </h3>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.Account.html">Account</a></h4>
       <section><p>Provides an RDS account resource and used to manage databases.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;Rds&amp;quot;;
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;dbaccountmysql&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var instance = new AliCloud.Rds.Instance(&amp;quot;instance&amp;quot;, new AliCloud.Rds.InstanceArgs
+    {
+        Engine = &amp;quot;MySQL&amp;quot;,
+        EngineVersion = &amp;quot;5.6&amp;quot;,
+        InstanceName = name,
+        InstanceStorage = &amp;quot;10&amp;quot;,
+        InstanceType = &amp;quot;rds.mysql.s1.small&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var account = new AliCloud.Rds.Account(&amp;quot;account&amp;quot;, new AliCloud.Rds.AccountArgs
+    {
+        InstanceId = instance.Id,
+        Password = &amp;quot;Test12345&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.AccountArgs.html">AccountArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.AccountPrivilege.html">AccountPrivilege</a></h4>
-      <section><p>Provides an RDS account privilege resource and used to grant several database some access privilege. A database can be granted by multiple account.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.AccountPrivilegeArgs.html">AccountPrivilegeArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.AccountPrivilegeState.html">AccountPrivilegeState</a></h4>
@@ -95,6 +137,48 @@
 <blockquote>
 <p><strong>NOTE:</strong> Each DB instance has a backup policy and it will be set default values when destroying the resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;Rds&amp;quot;;
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;dbbackuppolicybasic&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var instance = new AliCloud.Rds.Instance(&amp;quot;instance&amp;quot;, new AliCloud.Rds.InstanceArgs
+    {
+        Engine = &amp;quot;MySQL&amp;quot;,
+        EngineVersion = &amp;quot;5.6&amp;quot;,
+        InstanceName = name,
+        InstanceStorage = &amp;quot;10&amp;quot;,
+        InstanceType = &amp;quot;rds.mysql.s1.small&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var policy = new AliCloud.Rds.BackupPolicy(&amp;quot;policy&amp;quot;, new AliCloud.Rds.BackupPolicyArgs
+    {
+        InstanceId = instance.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.BackupPolicyArgs.html">BackupPolicyArgs</a></h4>
       <section></section>
@@ -106,6 +190,49 @@
 <p><strong>NOTE:</strong> Each RDS instance will allocate a intranet connnection string automatically and its prifix is RDS instance ID.
 To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;Rds&amp;quot;;
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;dbconnectionbasic&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var instance = new AliCloud.Rds.Instance(&amp;quot;instance&amp;quot;, new AliCloud.Rds.InstanceArgs
+    {
+        Engine = &amp;quot;MySQL&amp;quot;,
+        EngineVersion = &amp;quot;5.6&amp;quot;,
+        InstanceName = name,
+        InstanceStorage = &amp;quot;10&amp;quot;,
+        InstanceType = &amp;quot;rds.mysql.t1.small&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var foo = new AliCloud.Rds.Connection(&amp;quot;foo&amp;quot;, new AliCloud.Rds.ConnectionArgs
+    {
+        ConnectionPrefix = &amp;quot;testabc&amp;quot;,
+        InstanceId = instance.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.ConnectionArgs.html">ConnectionArgs</a></h4>
       <section></section>
@@ -116,6 +243,48 @@ To avoid unnecessary conflict, please specified a internet connection prefix bef
 <blockquote>
 <p><strong>NOTE:</strong> This resource does not support creating 'PPAS' database. You have to login RDS instance to create manually.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;Rds&amp;quot;;
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;dbdatabasebasic&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var instance = new AliCloud.Rds.Instance(&amp;quot;instance&amp;quot;, new AliCloud.Rds.InstanceArgs
+    {
+        Engine = &amp;quot;MySQL&amp;quot;,
+        EngineVersion = &amp;quot;5.6&amp;quot;,
+        InstanceName = name,
+        InstanceStorage = &amp;quot;10&amp;quot;,
+        InstanceType = &amp;quot;rds.mysql.s1.small&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultDatabase = new AliCloud.Rds.Database(&amp;quot;defaultDatabase&amp;quot;, new AliCloud.Rds.DatabaseArgs
+    {
+        InstanceId = instance.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.DatabaseArgs.html">DatabaseArgs</a></h4>
       <section></section>
@@ -149,6 +318,47 @@ To avoid unnecessary conflict, please specified a internet connection prefix bef
       <section><p>Provides an RDS instance resource. A DB instance is an isolated database
 environment in the cloud. A DB instance can contain multiple user-created
 databases.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-rds-mysql-instance">Create a RDS MySQL instance</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;dbInstanceconfig&amp;quot;;
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;Rds&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new AliCloud.Rds.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.Rds.InstanceArgs
+    {
+        Engine = &amp;quot;MySQL&amp;quot;,
+        EngineVersion = &amp;quot;5.6&amp;quot;,
+        InstanceChargeType = &amp;quot;Postpaid&amp;quot;,
+        InstanceName = name,
+        InstanceStorage = &amp;quot;30&amp;quot;,
+        InstanceType = &amp;quot;rds.mysql.s2.large&amp;quot;,
+        MonitoringPeriod = &amp;quot;60&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
@@ -156,6 +366,60 @@ databases.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.ReadOnlyInstance.html">ReadOnlyInstance</a></h4>
       <section><p>Provides an RDS readonly instance resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;Rds&amp;quot;;
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;dbInstancevpc&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new AliCloud.Rds.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.Rds.InstanceArgs
+    {
+        Engine = &amp;quot;MySQL&amp;quot;,
+        EngineVersion = &amp;quot;5.6&amp;quot;,
+        InstanceChargeType = &amp;quot;Postpaid&amp;quot;,
+        InstanceName = name,
+        InstanceStorage = &amp;quot;20&amp;quot;,
+        InstanceType = &amp;quot;rds.mysql.t1.small&amp;quot;,
+        SecurityIps = 
+        {
+            &amp;quot;10.168.1.12&amp;quot;,
+            &amp;quot;100.69.7.112&amp;quot;,
+        },
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultReadOnlyInstance = new AliCloud.Rds.ReadOnlyInstance(&amp;quot;defaultReadOnlyInstance&amp;quot;, new AliCloud.Rds.ReadOnlyInstanceArgs
+    {
+        EngineVersion = defaultInstance.EngineVersion,
+        InstanceName = $&amp;quot;{name}ro&amp;quot;,
+        InstanceStorage = &amp;quot;30&amp;quot;,
+        InstanceType = defaultInstance.InstanceType,
+        MasterDbInstanceId = defaultInstance.Id,
+        VswitchId = defaultSwitch.Id,
+        ZoneId = defaultInstance.ZoneId,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.ReadOnlyInstanceArgs.html">ReadOnlyInstanceArgs</a></h4>
       <section></section>
@@ -163,6 +427,66 @@ databases.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.ReadWriteSplittingConnection.html">ReadWriteSplittingConnection</a></h4>
       <section><p>Provides an RDS read write splitting connection resource to allocate an Intranet connection string for RDS instance.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;Rds&amp;quot;;
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;dbInstancevpc&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new AliCloud.Rds.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.Rds.InstanceArgs
+    {
+        Engine = &amp;quot;MySQL&amp;quot;,
+        EngineVersion = &amp;quot;5.6&amp;quot;,
+        InstanceChargeType = &amp;quot;Postpaid&amp;quot;,
+        InstanceName = name,
+        InstanceStorage = &amp;quot;20&amp;quot;,
+        InstanceType = &amp;quot;rds.mysql.t1.small&amp;quot;,
+        SecurityIps = 
+        {
+            &amp;quot;10.168.1.12&amp;quot;,
+            &amp;quot;100.69.7.112&amp;quot;,
+        },
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultReadOnlyInstance = new AliCloud.Rds.ReadOnlyInstance(&amp;quot;defaultReadOnlyInstance&amp;quot;, new AliCloud.Rds.ReadOnlyInstanceArgs
+    {
+        EngineVersion = defaultInstance.EngineVersion,
+        InstanceName = $&amp;quot;{name}ro&amp;quot;,
+        InstanceStorage = &amp;quot;30&amp;quot;,
+        InstanceType = defaultInstance.InstanceType,
+        MasterDbInstanceId = defaultInstance.Id,
+        VswitchId = defaultSwitch.Id,
+        ZoneId = defaultInstance.ZoneId,
+    });
+    var defaultReadWriteSplittingConnection = new AliCloud.Rds.ReadWriteSplittingConnection(&amp;quot;defaultReadWriteSplittingConnection&amp;quot;, new AliCloud.Rds.ReadWriteSplittingConnectionArgs
+    {
+        ConnectionPrefix = &amp;quot;t-con-123&amp;quot;,
+        DistributionType = &amp;quot;Standard&amp;quot;,
+        InstanceId = defaultInstance.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Rds.ReadWriteSplittingConnectionArgs.html">ReadWriteSplittingConnectionArgs</a></h4>
       <section></section>

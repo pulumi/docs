@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Image
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,6 +72,28 @@
   <h1 id="Pulumi_OpenStack_Images_Image" data-uid="Pulumi.OpenStack.Images.Image" class="text-break">Class Image
   </h1>
   <div class="markdown level0 summary"><p>Manages a V2 Image resource within OpenStack Glance.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rancheros = new OpenStack.Images.Image(&amp;quot;rancheros&amp;quot;, new OpenStack.Images.ImageArgs
+    {
+        ContainerFormat = &amp;quot;bare&amp;quot;,
+        DiskFormat = &amp;quot;qcow2&amp;quot;,
+        ImageSourceUrl = &amp;quot;https://releases.rancher.com/os/latest/rancheros-openstack.img&amp;quot;,
+        Properties = 
+        {
+            { &amp;quot;key&amp;quot;, &amp;quot;value&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="notes">Notes</h2>
 <h3 id="properties">Properties</h3>
 <p>This resource supports the ability to add properties to a resource during
@@ -88,7 +110,45 @@ Image Service set it.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Image</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Image</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Images.html">Pulumi.OpenStack.Images</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -99,16 +159,16 @@ Image Service set it.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L208">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image__ctor_" data-uid="Pulumi.OpenStack.Images.Image.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_Images_Image__ctor_System_String_Pulumi_OpenStack_Images_ImageArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Images.Image.#ctor(System.String,Pulumi.OpenStack.Images.ImageArgs,System.Nullable{CustomResourceOptions})">Image(String, ImageArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Images_Image__ctor_System_String_Pulumi_OpenStack_Images_ImageArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Images.Image.#ctor(System.String,Pulumi.OpenStack.Images.ImageArgs,Pulumi.CustomResourceOptions)">Image(String, ImageArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Image resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Image(string name, ImageArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Image(string name, ImageArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,7 +193,7 @@ Image Service set it.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -143,7 +203,7 @@ Image Service set it.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Checksum_" data-uid="Pulumi.OpenStack.Images.Image.Checksum*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_Checksum" data-uid="Pulumi.OpenStack.Images.Image.Checksum">Checksum</h4>
@@ -164,13 +224,13 @@ Image Service set it.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_ContainerFormat_" data-uid="Pulumi.OpenStack.Images.Image.ContainerFormat*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_ContainerFormat" data-uid="Pulumi.OpenStack.Images.Image.ContainerFormat">ContainerFormat</h4>
@@ -192,13 +252,13 @@ Image Service set it.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_CreatedAt_" data-uid="Pulumi.OpenStack.Images.Image.CreatedAt*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_CreatedAt" data-uid="Pulumi.OpenStack.Images.Image.CreatedAt">CreatedAt</h4>
@@ -219,13 +279,13 @@ Image Service set it.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_DiskFormat_" data-uid="Pulumi.OpenStack.Images.Image.DiskFormat*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_DiskFormat" data-uid="Pulumi.OpenStack.Images.Image.DiskFormat">DiskFormat</h4>
@@ -247,13 +307,13 @@ Image Service set it.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_File_" data-uid="Pulumi.OpenStack.Images.Image.File*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_File" data-uid="Pulumi.OpenStack.Images.Image.File">File</h4>
@@ -276,13 +336,13 @@ or the path to retrieve it.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_ImageCachePath_" data-uid="Pulumi.OpenStack.Images.Image.ImageCachePath*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_ImageCachePath" data-uid="Pulumi.OpenStack.Images.Image.ImageCachePath">ImageCachePath</h4>
@@ -290,7 +350,7 @@ or the path to retrieve it.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ImageCachePath { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ImageCachePath { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,26 +362,25 @@ or the path to retrieve it.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_ImageSourceUrl_" data-uid="Pulumi.OpenStack.Images.Image.ImageSourceUrl*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_ImageSourceUrl" data-uid="Pulumi.OpenStack.Images.Image.ImageSourceUrl">ImageSourceUrl</h4>
-  <div class="markdown level1 summary"><p>This is the url of the raw image that will
-be downloaded in the <code>image_cache_path</code> before being uploaded to Glance.
-Glance is able to download image from internet but the <code>gophercloud</code> library
-does not yet provide a way to do so.
+  <div class="markdown level1 summary"><p>This is the url of the raw image. If <code>web_download</code>
+is not used, then the image will be downloaded in the <code>image_cache_path</code> before
+being uploaded to Glance.
 Conflicts with <code>local_file_path</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ImageSourceUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ImageSourceUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -333,23 +392,24 @@ Conflicts with <code>local_file_path</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_LocalFilePath_" data-uid="Pulumi.OpenStack.Images.Image.LocalFilePath*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_LocalFilePath" data-uid="Pulumi.OpenStack.Images.Image.LocalFilePath">LocalFilePath</h4>
   <div class="markdown level1 summary"><p>This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with <code>image_source_url</code>.</p>
+that will be uploaded to Glance. Conflicts with <code>image_source_url</code> and
+<code>web_download</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LocalFilePath { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LocalFilePath { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -361,13 +421,13 @@ that will be uploaded to Glance. Conflicts with <code>image_source_url</code>.</
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Metadata_" data-uid="Pulumi.OpenStack.Images.Image.Metadata*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_Metadata" data-uid="Pulumi.OpenStack.Images.Image.Metadata">Metadata</h4>
@@ -390,13 +450,13 @@ and tags. See <a href="https://docs.openstack.org/glance/latest/user/metadefs-co
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_MinDiskGb_" data-uid="Pulumi.OpenStack.Images.Image.MinDiskGb*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_MinDiskGb" data-uid="Pulumi.OpenStack.Images.Image.MinDiskGb">MinDiskGb</h4>
@@ -418,13 +478,13 @@ Defaults to 0.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_MinRamMb_" data-uid="Pulumi.OpenStack.Images.Image.MinRamMb*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_MinRamMb" data-uid="Pulumi.OpenStack.Images.Image.MinRamMb">MinRamMb</h4>
@@ -446,13 +506,13 @@ Defauts to 0.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Name_" data-uid="Pulumi.OpenStack.Images.Image.Name*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_Name" data-uid="Pulumi.OpenStack.Images.Image.Name">Name</h4>
@@ -473,13 +533,13 @@ Defauts to 0.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Owner_" data-uid="Pulumi.OpenStack.Images.Image.Owner*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_Owner" data-uid="Pulumi.OpenStack.Images.Image.Owner">Owner</h4>
@@ -500,13 +560,13 @@ Defauts to 0.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Properties_" data-uid="Pulumi.OpenStack.Images.Image.Properties*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_Properties" data-uid="Pulumi.OpenStack.Images.Image.Properties">Properties</h4>
@@ -529,13 +589,13 @@ information about properties.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Protected_" data-uid="Pulumi.OpenStack.Images.Image.Protected*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_Protected" data-uid="Pulumi.OpenStack.Images.Image.Protected">Protected</h4>
@@ -557,13 +617,13 @@ Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Region_" data-uid="Pulumi.OpenStack.Images.Image.Region*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_Region" data-uid="Pulumi.OpenStack.Images.Image.Region">Region</h4>
@@ -587,13 +647,13 @@ is used. Changing this creates a new Image.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Schema_" data-uid="Pulumi.OpenStack.Images.Image.Schema*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_Schema" data-uid="Pulumi.OpenStack.Images.Image.Schema">Schema</h4>
@@ -615,13 +675,13 @@ the image or image</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_SizeBytes_" data-uid="Pulumi.OpenStack.Images.Image.SizeBytes*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_SizeBytes" data-uid="Pulumi.OpenStack.Images.Image.SizeBytes">SizeBytes</h4>
@@ -642,13 +702,13 @@ the image or image</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Status_" data-uid="Pulumi.OpenStack.Images.Image.Status*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_Status" data-uid="Pulumi.OpenStack.Images.Image.Status">Status</h4>
@@ -670,13 +730,13 @@ or &quot;saving&quot;.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Tags_" data-uid="Pulumi.OpenStack.Images.Image.Tags*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_Tags" data-uid="Pulumi.OpenStack.Images.Image.Tags">Tags</h4>
@@ -698,13 +758,13 @@ At this time, it is not possible to delete all tags of an image.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_UpdateAt_" data-uid="Pulumi.OpenStack.Images.Image.UpdateAt*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_UpdateAt" data-uid="Pulumi.OpenStack.Images.Image.UpdateAt">UpdateAt</h4>
@@ -725,13 +785,13 @@ At this time, it is not possible to delete all tags of an image.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_UpdatedAt_" data-uid="Pulumi.OpenStack.Images.Image.UpdatedAt*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_UpdatedAt" data-uid="Pulumi.OpenStack.Images.Image.UpdatedAt">UpdatedAt</h4>
@@ -752,18 +812,19 @@ At this time, it is not possible to delete all tags of an image.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_VerifyChecksum_" data-uid="Pulumi.OpenStack.Images.Image.VerifyChecksum*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_VerifyChecksum" data-uid="Pulumi.OpenStack.Images.Image.VerifyChecksum">VerifyChecksum</h4>
   <div class="markdown level1 summary"><p>If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.</p>
+once the image is finished uploading. Conflicts with <code>web_download</code>.
+Defaults to true when not using <code>web_download</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -780,13 +841,13 @@ once the image is finished uploading. Defaults to true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Visibility_" data-uid="Pulumi.OpenStack.Images.Image.Visibility*"></a>
   <h4 id="Pulumi_OpenStack_Images_Image_Visibility" data-uid="Pulumi.OpenStack.Images.Image.Visibility">Visibility</h4>
@@ -797,7 +858,7 @@ visibility depends upon the configuration of the OpenStack cloud.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Visibility { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Visibility { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -809,7 +870,36 @@ visibility depends upon the configuration of the OpenStack cloud.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L232">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_WebDownload_" data-uid="Pulumi.OpenStack.Images.Image.WebDownload*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_WebDownload" data-uid="Pulumi.OpenStack.Images.Image.WebDownload">WebDownload</h4>
+  <div class="markdown level1 summary"><p>If true, the &quot;web-download&quot; import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with <code>local_file_path</code>. Defaults to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; WebDownload { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -817,17 +907,17 @@ visibility depends upon the configuration of the OpenStack cloud.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L238">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L273">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Images_Image_Get_" data-uid="Pulumi.OpenStack.Images.Image.Get*"></a>
-  <h4 id="Pulumi_OpenStack_Images_Image_Get_System_String_Input_System_String__Pulumi_OpenStack_Images_ImageState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Images.Image.Get(System.String,Input{System.String},Pulumi.OpenStack.Images.ImageState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ImageState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Images_Image_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_Images_ImageState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Images.Image.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.Images.ImageState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ImageState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Image resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Image Get(string name, Input&lt;string&gt; id, ImageState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Image Get(string name, Input&lt;string&gt; id, ImageState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -846,7 +936,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -858,7 +948,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -887,7 +977,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Images/Image.cs/#L32" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L58" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

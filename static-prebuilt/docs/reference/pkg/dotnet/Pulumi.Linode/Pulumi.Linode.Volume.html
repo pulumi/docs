@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Volume
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,6 +73,34 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides a Linode Volume resource.  This can be used to create, modify, and delete Linodes Block Storage Volumes.  Block Storage Volumes are removable storage disks that persist outside the life-cycle of Linode Instances. These volumes can be attached to and detached from Linode instances throughout a region.</p>
 <p>For more information, see <a href="https://www.linode.com/docs/platform/block-storage/how-to-use-block-storage-with-your-linode/">How to Use Block Storage with Your Linode</a> and the <a href="https://developers.linode.com/api/v4#operation/createVolume">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobaz = new Linode.Instance(&amp;quot;foobaz&amp;quot;, new Linode.InstanceArgs
+    {
+        Region = &amp;quot;us-west&amp;quot;,
+        RootPass = &amp;quot;3X4mp13&amp;quot;,
+        Tags = 
+        {
+            &amp;quot;foobaz&amp;quot;,
+        },
+        Type = &amp;quot;g6-nanode-1&amp;quot;,
+    });
+    var foobar = new Linode.Volume(&amp;quot;foobar&amp;quot;, new Linode.VolumeArgs
+    {
+        Label = &amp;quot;foo-volume&amp;quot;,
+        LinodeId = foobaz.Id,
+        Region = foobaz.Region,
+    });
+}
+
+}
+</code></pre>
 <h2 id="attributes">Attributes</h2>
 <p>This resource exports the following attributes:</p>
 <ul>
@@ -135,7 +163,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Linode_Volume__ctor_" data-uid="Pulumi.Linode.Volume.#ctor*"></a>
   <h4 id="Pulumi_Linode_Volume__ctor_System_String_Pulumi_Linode_VolumeArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.Volume.#ctor(System.String,Pulumi.Linode.VolumeArgs,Pulumi.CustomResourceOptions)">Volume(String, VolumeArgs, CustomResourceOptions)</h4>
@@ -179,7 +207,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Linode_Volume_FilesystemPath_" data-uid="Pulumi.Linode.Volume.FilesystemPath*"></a>
   <h4 id="Pulumi_Linode_Volume_FilesystemPath" data-uid="Pulumi.Linode.Volume.FilesystemPath">FilesystemPath</h4>
@@ -207,7 +235,7 @@ Volume label.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Linode_Volume_Label_" data-uid="Pulumi.Linode.Volume.Label*"></a>
   <h4 id="Pulumi_Linode_Volume_Label" data-uid="Pulumi.Linode.Volume.Label">Label</h4>
@@ -234,7 +262,7 @@ Volume label.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Linode_Volume_LinodeId_" data-uid="Pulumi.Linode.Volume.LinodeId*"></a>
   <h4 id="Pulumi_Linode_Volume_LinodeId" data-uid="Pulumi.Linode.Volume.LinodeId">LinodeId</h4>
@@ -261,7 +289,7 @@ Volume label.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Linode_Volume_Region_" data-uid="Pulumi.Linode.Volume.Region*"></a>
   <h4 id="Pulumi_Linode_Volume_Region" data-uid="Pulumi.Linode.Volume.Region">Region</h4>
@@ -288,7 +316,7 @@ Volume label.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Linode_Volume_Size_" data-uid="Pulumi.Linode.Volume.Size*"></a>
   <h4 id="Pulumi_Linode_Volume_Size" data-uid="Pulumi.Linode.Volume.Size">Size</h4>
@@ -315,7 +343,7 @@ Volume label.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Linode_Volume_Status_" data-uid="Pulumi.Linode.Volume.Status*"></a>
   <h4 id="Pulumi_Linode_Volume_Status" data-uid="Pulumi.Linode.Volume.Status">Status</h4>
@@ -342,7 +370,7 @@ Volume label.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Linode_Volume_Tags_" data-uid="Pulumi.Linode.Volume.Tags*"></a>
   <h4 id="Pulumi_Linode_Volume_Tags" data-uid="Pulumi.Linode.Volume.Tags">Tags</h4>
@@ -371,7 +399,7 @@ Volume label.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Linode_Volume_Get_" data-uid="Pulumi.Linode.Volume.Get*"></a>
   <h4 id="Pulumi_Linode_Volume_Get_System_String_Pulumi_Input_System_String__Pulumi_Linode_VolumeState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.Volume.Get(System.String,Pulumi.Input{System.String},Pulumi.Linode.VolumeState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VolumeState, CustomResourceOptions)</h4>
@@ -441,7 +469,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L26" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Volume.cs/#L58" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

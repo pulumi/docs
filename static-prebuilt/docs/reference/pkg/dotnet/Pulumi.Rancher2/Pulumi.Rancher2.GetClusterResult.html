@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetClusterResult
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetClusterResult</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
   <h5 id="Pulumi_Rancher2_GetClusterResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetClusterResult : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetClusterResult</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L66">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_AksConfig" data-uid="Pulumi.Rancher2.GetClusterResult.AksConfig">AksConfig</h4>
   <div class="markdown level1 summary"><p>(Computed) The Azure aks configuration for <code>aks</code> Clusters. Conflicts with <code>eks_config</code>, <code>gke_config</code> and <code>rke_config</code> (list maxitems:1)</p>
@@ -113,7 +137,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L70">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_Annotations" data-uid="Pulumi.Rancher2.GetClusterResult.Annotations">Annotations</h4>
   <div class="markdown level1 summary"><p>(Computed) Annotations for Node Pool object (map)</p>
@@ -133,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L74">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_ClusterAuthEndpoint" data-uid="Pulumi.Rancher2.GetClusterResult.ClusterAuthEndpoint">ClusterAuthEndpoint</h4>
   <div class="markdown level1 summary"><p>(Computed) Enabling the <a href="https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#local-cluster-auth-endpoint">local cluster authorized endpoint</a> allows direct communication with the cluster, bypassing the Rancher API proxy. (list maxitems:1)</p>
@@ -165,7 +189,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L78">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_ClusterMonitoringInput" data-uid="Pulumi.Rancher2.GetClusterResult.ClusterMonitoringInput">ClusterMonitoringInput</h4>
   <div class="markdown level1 summary"><p>(Computed) Cluster monitoring config (list maxitems:1)</p>
@@ -191,7 +215,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L82">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_ClusterRegistrationToken" data-uid="Pulumi.Rancher2.GetClusterResult.ClusterRegistrationToken">ClusterRegistrationToken</h4>
   <div class="markdown level1 summary"><p>(Computed) Cluster Registration Token generated for the cluster (list maxitems:1)</p>
@@ -217,7 +241,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_ClusterTemplateAnswers" data-uid="Pulumi.Rancher2.GetClusterResult.ClusterTemplateAnswers">ClusterTemplateAnswers</h4>
   <div class="markdown level1 summary"><p>(Computed) Cluster template answers (list maxitems:1)</p>
@@ -243,7 +267,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L90">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_ClusterTemplateId" data-uid="Pulumi.Rancher2.GetClusterResult.ClusterTemplateId">ClusterTemplateId</h4>
   <div class="markdown level1 summary"><p>(Computed) Cluster template ID (string)</p>
@@ -269,7 +293,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L94">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_ClusterTemplateQuestions" data-uid="Pulumi.Rancher2.GetClusterResult.ClusterTemplateQuestions">ClusterTemplateQuestions</h4>
   <div class="markdown level1 summary"><p>(Computed) Cluster template questions (list)</p>
@@ -289,13 +313,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.GetClusterClusterTemplateQuestionResult.html">GetClusterClusterTemplateQuestionResult</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.GetClusterClusterTemplateQuestionResult.html">GetClusterClusterTemplateQuestionResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L98">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_ClusterTemplateRevisionId" data-uid="Pulumi.Rancher2.GetClusterResult.ClusterTemplateRevisionId">ClusterTemplateRevisionId</h4>
   <div class="markdown level1 summary"><p>(Computed) Cluster template revision ID (string)</p>
@@ -321,7 +345,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L102">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_DefaultPodSecurityPolicyTemplateId" data-uid="Pulumi.Rancher2.GetClusterResult.DefaultPodSecurityPolicyTemplateId">DefaultPodSecurityPolicyTemplateId</h4>
   <div class="markdown level1 summary"><p>(Optional/Computed) <a href="https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#pod-security-policy-support">Default pod security policy template id</a> (string)</p>
@@ -347,7 +371,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L106">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_DefaultProjectId" data-uid="Pulumi.Rancher2.GetClusterResult.DefaultProjectId">DefaultProjectId</h4>
   <div class="markdown level1 summary"><p>(Computed) Default project ID for the cluster (string)</p>
@@ -373,7 +397,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L110">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_Description" data-uid="Pulumi.Rancher2.GetClusterResult.Description">Description</h4>
   <div class="markdown level1 summary"><p>(Computed) The description for Cluster (string)</p>
@@ -399,7 +423,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L114">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_Driver" data-uid="Pulumi.Rancher2.GetClusterResult.Driver">Driver</h4>
   <div class="markdown level1 summary"><p>(Computed) The driver used for the Cluster. <code>imported</code>, <code>azurekubernetesservice</code>, <code>amazonelasticcontainerservice</code>, <code>googlekubernetesengine</code> and <code>rancherKubernetesEngine</code> are supported (string)</p>
@@ -425,7 +449,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L118">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_EksConfig" data-uid="Pulumi.Rancher2.GetClusterResult.EksConfig">EksConfig</h4>
   <div class="markdown level1 summary"><p>(Computed) The Amazon eks configuration for <code>eks</code> Clusters. Conflicts with <code>aks_config</code>, <code>gke_config</code> and <code>rke_config</code> (list maxitems:1)</p>
@@ -451,7 +475,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L119">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_EnableClusterAlerting" data-uid="Pulumi.Rancher2.GetClusterResult.EnableClusterAlerting">EnableClusterAlerting</h4>
   <div class="markdown level1 summary"></div>
@@ -476,7 +500,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L123">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_EnableClusterMonitoring" data-uid="Pulumi.Rancher2.GetClusterResult.EnableClusterMonitoring">EnableClusterMonitoring</h4>
   <div class="markdown level1 summary"><p>(Computed) Enable built-in cluster monitoring. Default <code>false</code> (bool)</p>
@@ -502,7 +526,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L127">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_EnableNetworkPolicy" data-uid="Pulumi.Rancher2.GetClusterResult.EnableNetworkPolicy">EnableNetworkPolicy</h4>
   <div class="markdown level1 summary"><p>(Computed) Enable project network isolation. Default <code>false</code> (bool)</p>
@@ -528,7 +552,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L131">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_GkeConfig" data-uid="Pulumi.Rancher2.GetClusterResult.GkeConfig">GkeConfig</h4>
   <div class="markdown level1 summary"><p>(Computed) The Google gke configuration for <code>gke</code> Clusters. Conflicts with <code>aks_config</code>, <code>eks_config</code> and <code>rke_config</code> (list maxitems:1)</p>
@@ -554,10 +578,10 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L135">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_Id" data-uid="Pulumi.Rancher2.GetClusterResult.Id">Id</h4>
-  <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
+  <div class="markdown level1 summary"><p>The provider-assigned unique ID for this managed resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -580,7 +604,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L139">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_K3sConfig" data-uid="Pulumi.Rancher2.GetClusterResult.K3sConfig">K3sConfig</h4>
   <div class="markdown level1 summary"><p>(Computed) The K3S configuration for <code>k3s</code> imported Clusters. Conflicts with <code>aks_config</code>, <code>eks_config</code>, <code>gke_config</code> and <code>rke_config</code> (list maxitems:1)</p>
@@ -606,7 +630,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L143">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_KubeConfig" data-uid="Pulumi.Rancher2.GetClusterResult.KubeConfig">KubeConfig</h4>
   <div class="markdown level1 summary"><p>(Computed) Kube Config generated for the cluster (string)</p>
@@ -632,7 +656,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L147">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_Labels" data-uid="Pulumi.Rancher2.GetClusterResult.Labels">Labels</h4>
   <div class="markdown level1 summary"><p>(Computed) Labels for Node Pool object (map)</p>
@@ -652,13 +676,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L148">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_Name" data-uid="Pulumi.Rancher2.GetClusterResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
@@ -683,7 +707,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L152">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_RkeConfig" data-uid="Pulumi.Rancher2.GetClusterResult.RkeConfig">RkeConfig</h4>
   <div class="markdown level1 summary"><p>(Computed) The RKE configuration for <code>rke</code> Clusters. Conflicts with <code>aks_config</code>, <code>eks_config</code> and <code>gke_config</code> (list maxitems:1)</p>
@@ -709,7 +733,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L153">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_ScheduledClusterScans" data-uid="Pulumi.Rancher2.GetClusterResult.ScheduledClusterScans">ScheduledClusterScans</h4>
   <div class="markdown level1 summary"></div>
@@ -728,13 +752,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.GetClusterScheduledClusterScanResult.html">GetClusterScheduledClusterScanResult</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.GetClusterScheduledClusterScanResult.html">GetClusterScheduledClusterScanResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L157">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_GetClusterResult_SystemProjectId" data-uid="Pulumi.Rancher2.GetClusterResult.SystemProjectId">SystemProjectId</h4>
   <div class="markdown level1 summary"><p>(Computed) System project ID for the cluster (string)</p>
@@ -766,7 +790,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/GetCluster.cs/#L39" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/GetCluster.cs/#L60" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

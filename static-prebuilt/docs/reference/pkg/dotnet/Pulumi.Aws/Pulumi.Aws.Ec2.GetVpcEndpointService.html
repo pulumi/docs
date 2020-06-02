@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetVpcEndpointService
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,28 +78,128 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetVpcEndpointService</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2_GetVpcEndpointService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetVpcEndpointService : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetVpcEndpointService</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_GetVpcEndpointService_InvokeAsync_" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointService.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointService_InvokeAsync_Pulumi_Aws_Ec2_GetVpcEndpointServiceArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointService.InvokeAsync(Pulumi.Aws.Ec2.GetVpcEndpointServiceArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetVpcEndpointServiceArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointService_InvokeAsync_Pulumi_Aws_Ec2_GetVpcEndpointServiceArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointService.InvokeAsync(Pulumi.Aws.Ec2.GetVpcEndpointServiceArgs,Pulumi.InvokeOptions)">InvokeAsync(GetVpcEndpointServiceArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>The VPC Endpoint Service data source details about a specific service that
 can be specified when creating a VPC endpoint within the region configured in the provider.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<h3 id="aws-service">AWS Service</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var s3 = Output.Create(Aws.Ec2.GetVpcEndpointService.InvokeAsync(new Aws.Ec2.GetVpcEndpointServiceArgs
+    {
+        Service = &amp;quot;s3&amp;quot;,
+    }));
+    // Create a VPC
+    var foo = new Aws.Ec2.Vpc(&amp;quot;foo&amp;quot;, new Aws.Ec2.VpcArgs
+    {
+        CidrBlock = &amp;quot;10.0.0.0/16&amp;quot;,
+    });
+    // Create a VPC endpoint
+    var ep = new Aws.Ec2.VpcEndpoint(&amp;quot;ep&amp;quot;, new Aws.Ec2.VpcEndpointArgs
+    {
+        ServiceName = s3.Apply(s3 =&gt; s3.ServiceName),
+        VpcId = foo.Id,
+    });
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
+{{% example %}}</p>
+<h3 id="non-aws-service">Non-AWS Service</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var custome = Output.Create(Aws.Ec2.GetVpcEndpointService.InvokeAsync(new Aws.Ec2.GetVpcEndpointServiceArgs
+    {
+        ServiceName = &amp;quot;com.amazonaws.vpce.us-west-2.vpce-svc-0e87519c997c63cd8&amp;quot;,
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
+{{% example %}}</p>
+<h3 id="filter">Filter</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = Output.Create(Aws.Ec2.GetVpcEndpointService.InvokeAsync(new Aws.Ec2.GetVpcEndpointServiceArgs
+    {
+        Filters = 
+        {
+            new Aws.Ec2.Inputs.GetVpcEndpointServiceFilterArgs
+            {
+                Name = &amp;quot;service-name&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;some-service&amp;quot;,
+                },
+            },
+        },
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetVpcEndpointServiceResult&gt; InvokeAsync(GetVpcEndpointServiceArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetVpcEndpointServiceResult&gt; InvokeAsync(GetVpcEndpointServiceArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,7 +217,7 @@ can be specified when creating a VPC endpoint within the region configured in th
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -133,7 +233,7 @@ can be specified when creating a VPC endpoint within the region configured in th
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.html">GetVpcEndpointServiceResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.html">GetVpcEndpointServiceResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -145,7 +245,7 @@ can be specified when creating a VPC endpoint within the region configured in th
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

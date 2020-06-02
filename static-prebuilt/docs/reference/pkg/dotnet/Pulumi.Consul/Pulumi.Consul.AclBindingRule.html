@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AclBindingRule
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,84 @@
   </h1>
   <div class="markdown level0 summary"><p>Starting with Consul 1.5.0, the consul..AclBindingRule resource can be used to
 managed Consul ACL binding rules.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var minikube = new Consul.AclAuthMethod(&amp;quot;minikube&amp;quot;, new Consul.AclAuthMethodArgs
+    {
+        Config = 
+        {
+            { &amp;quot;CACert&amp;quot;, @&amp;quot;-----BEGIN CERTIFICATE-----
+...-----END CERTIFICATE-----
+
+&amp;quot; },
+            { &amp;quot;Host&amp;quot;, &amp;quot;https://192.0.2.42:8443&amp;quot; },
+            { &amp;quot;ServiceAccountJWT&amp;quot;, &amp;quot;eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9...&amp;quot; },
+        },
+        Description = &amp;quot;dev minikube cluster&amp;quot;,
+        Type = &amp;quot;kubernetes&amp;quot;,
+    });
+    var test = new Consul.AclBindingRule(&amp;quot;test&amp;quot;, new Consul.AclBindingRuleArgs
+    {
+        AuthMethod = minikube.Name,
+        BindName = &amp;quot;minikube&amp;quot;,
+        BindType = &amp;quot;service&amp;quot;,
+        Description = &amp;quot;foobar&amp;quot;,
+        Selector = &amp;quot;serviceaccount.namespace==default&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AclBindingRule</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AclBindingRule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Consul.html">Pulumi.Consul</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Consul.dll</h6>
@@ -89,16 +161,16 @@ managed Consul ACL binding rules.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule__ctor_" data-uid="Pulumi.Consul.AclBindingRule.#ctor*"></a>
-  <h4 id="Pulumi_Consul_AclBindingRule__ctor_System_String_Pulumi_Consul_AclBindingRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.AclBindingRule.#ctor(System.String,Pulumi.Consul.AclBindingRuleArgs,System.Nullable{CustomResourceOptions})">AclBindingRule(String, AclBindingRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Consul_AclBindingRule__ctor_System_String_Pulumi_Consul_AclBindingRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Consul.AclBindingRule.#ctor(System.String,Pulumi.Consul.AclBindingRuleArgs,Pulumi.CustomResourceOptions)">AclBindingRule(String, AclBindingRuleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a AclBindingRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AclBindingRule(string name, AclBindingRuleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AclBindingRule(string name, AclBindingRuleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +195,7 @@ managed Consul ACL binding rules.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +205,7 @@ managed Consul ACL binding rules.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_AuthMethod_" data-uid="Pulumi.Consul.AclBindingRule.AuthMethod*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_AuthMethod" data-uid="Pulumi.Consul.AclBindingRule.AuthMethod">AuthMethod</h4>
@@ -154,13 +226,13 @@ managed Consul ACL binding rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_BindName_" data-uid="Pulumi.Consul.AclBindingRule.BindName*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_BindName" data-uid="Pulumi.Consul.AclBindingRule.BindName">BindName</h4>
@@ -181,13 +253,13 @@ managed Consul ACL binding rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_BindType_" data-uid="Pulumi.Consul.AclBindingRule.BindType*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_BindType" data-uid="Pulumi.Consul.AclBindingRule.BindType">BindType</h4>
@@ -209,13 +281,13 @@ created at login.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_Description_" data-uid="Pulumi.Consul.AclBindingRule.Description*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_Description" data-uid="Pulumi.Consul.AclBindingRule.Description">Description</h4>
@@ -225,7 +297,7 @@ binding rule.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +309,13 @@ binding rule.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_Namespace_" data-uid="Pulumi.Consul.AclBindingRule.Namespace*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_Namespace" data-uid="Pulumi.Consul.AclBindingRule.Namespace">Namespace</h4>
@@ -253,7 +325,7 @@ rule within.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Namespace { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Namespace { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -265,13 +337,13 @@ rule within.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_Selector_" data-uid="Pulumi.Consul.AclBindingRule.Selector*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_Selector" data-uid="Pulumi.Consul.AclBindingRule.Selector">Selector</h4>
@@ -281,7 +353,7 @@ identities returned from an auth method validation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Selector { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Selector { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -293,7 +365,7 @@ identities returned from an auth method validation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -301,17 +373,17 @@ identities returned from an auth method validation.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_Get_" data-uid="Pulumi.Consul.AclBindingRule.Get*"></a>
-  <h4 id="Pulumi_Consul_AclBindingRule_Get_System_String_Input_System_String__Pulumi_Consul_AclBindingRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.AclBindingRule.Get(System.String,Input{System.String},Pulumi.Consul.AclBindingRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AclBindingRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Consul_AclBindingRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Consul_AclBindingRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Consul.AclBindingRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Consul.AclBindingRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AclBindingRuleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing AclBindingRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AclBindingRule Get(string name, Input&lt;string&gt; id, AclBindingRuleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AclBindingRule Get(string name, Input&lt;string&gt; id, AclBindingRuleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -330,7 +402,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -342,7 +414,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -371,7 +443,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L56" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

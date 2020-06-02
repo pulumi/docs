@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.GitHub
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,27 +77,66 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Vault.GitHub.AuthBackend.html">AuthBackend</a></h4>
-      <section><p>Manages a Github Auth mount in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/github.html">Vault
+      <section><p>Manages a Github Auth mount in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/github/">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Vault.GitHub.AuthBackend(&amp;quot;example&amp;quot;, new Vault.GitHub.AuthBackendArgs
+    {
+        Organization = &amp;quot;myorg&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.GitHub.AuthBackendArgs.html">AuthBackendArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.GitHub.AuthBackendState.html">AuthBackendState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.GitHub.Team.html">Team</a></h4>
-      <section><p>Manages policy mappings for Github Teams authenticated via Github. See the <a href="https://www.vaultproject.io/docs/auth/github.html">Vault
-documentation</a> for more
-information.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Vault.GitHub.TeamArgs.html">TeamArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.GitHub.TeamState.html">TeamState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.GitHub.User.html">User</a></h4>
-      <section><p>Manages policy mappings for Github Users authenticated via Github. See the <a href="https://www.vaultproject.io/docs/auth/github.html">Vault
+      <section><p>Manages policy mappings for Github Users authenticated via Github. See the <a href="https://www.vaultproject.io/docs/auth/github/">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Vault.GitHub.AuthBackend(&amp;quot;example&amp;quot;, new Vault.GitHub.AuthBackendArgs
+    {
+        Organization = &amp;quot;myorg&amp;quot;,
+    });
+    var tfUser = new Vault.GitHub.User(&amp;quot;tfUser&amp;quot;, new Vault.GitHub.UserArgs
+    {
+        Backend = example.Id,
+        User = &amp;quot;john.doe&amp;quot;,
+        TokenPolicies = 
+        {
+            &amp;quot;developer&amp;quot;,
+            &amp;quot;read-only&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.GitHub.UserArgs.html">UserArgs</a></h4>
       <section></section>

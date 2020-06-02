@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VirtualNetworkRule
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,99 @@
   <h1 id="Pulumi_Azure_Sql_VirtualNetworkRule" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule" class="text-break">Class VirtualNetworkRule
   </h1>
   <div class="markdown level0 summary"><p>Allows you to add, update, or remove an Azure SQL server to a subnet of a virtual network.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Core.ResourceGroup(&amp;quot;example&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var vnet = new Azure.Network.VirtualNetwork(&amp;quot;vnet&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        AddressSpaces = 
+        {
+            &amp;quot;10.7.29.0/29&amp;quot;,
+        },
+        Location = example.Location,
+        ResourceGroupName = example.Name,
+    });
+    var subnet = new Azure.Network.Subnet(&amp;quot;subnet&amp;quot;, new Azure.Network.SubnetArgs
+    {
+        ResourceGroupName = example.Name,
+        VirtualNetworkName = vnet.Name,
+        AddressPrefix = &amp;quot;10.7.29.0/29&amp;quot;,
+        ServiceEndpoints = 
+        {
+            &amp;quot;Microsoft.Sql&amp;quot;,
+        },
+    });
+    var sqlserver = new Azure.Sql.SqlServer(&amp;quot;sqlserver&amp;quot;, new Azure.Sql.SqlServerArgs
+    {
+        ResourceGroupName = example.Name,
+        Location = example.Location,
+        Version = &amp;quot;12.0&amp;quot;,
+        AdministratorLogin = &amp;quot;4dm1n157r470r&amp;quot;,
+        AdministratorLoginPassword = &amp;quot;4-v3ry-53cr37-p455w0rd&amp;quot;,
+    });
+    var sqlvnetrule = new Azure.Sql.VirtualNetworkRule(&amp;quot;sqlvnetrule&amp;quot;, new Azure.Sql.VirtualNetworkRuleArgs
+    {
+        ResourceGroupName = example.Name,
+        ServerName = sqlserver.Name,
+        SubnetId = subnet.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">VirtualNetworkRule</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">VirtualNetworkRule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Sql.html">Pulumi.Azure.Sql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -88,16 +175,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_VirtualNetworkRule__ctor_" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Sql_VirtualNetworkRule__ctor_System_String_Pulumi_Azure_Sql_VirtualNetworkRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.#ctor(System.String,Pulumi.Azure.Sql.VirtualNetworkRuleArgs,System.Nullable{CustomResourceOptions})">VirtualNetworkRule(String, VirtualNetworkRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Sql_VirtualNetworkRule__ctor_System_String_Pulumi_Azure_Sql_VirtualNetworkRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.#ctor(System.String,Pulumi.Azure.Sql.VirtualNetworkRuleArgs,Pulumi.CustomResourceOptions)">VirtualNetworkRule(String, VirtualNetworkRuleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a VirtualNetworkRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VirtualNetworkRule(string name, VirtualNetworkRuleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public VirtualNetworkRule(string name, VirtualNetworkRuleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +209,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +219,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_VirtualNetworkRule_IgnoreMissingVnetServiceEndpoint_" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.IgnoreMissingVnetServiceEndpoint*"></a>
   <h4 id="Pulumi_Azure_Sql_VirtualNetworkRule_IgnoreMissingVnetServiceEndpoint" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.IgnoreMissingVnetServiceEndpoint">IgnoreMissingVnetServiceEndpoint</h4>
@@ -153,13 +240,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_VirtualNetworkRule_Name_" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.Name*"></a>
   <h4 id="Pulumi_Azure_Sql_VirtualNetworkRule_Name" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.Name">Name</h4>
@@ -180,13 +267,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_VirtualNetworkRule_ResourceGroupName_" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Sql_VirtualNetworkRule_ResourceGroupName" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.ResourceGroupName">ResourceGroupName</h4>
@@ -207,13 +294,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_VirtualNetworkRule_ServerName_" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.ServerName*"></a>
   <h4 id="Pulumi_Azure_Sql_VirtualNetworkRule_ServerName" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.ServerName">ServerName</h4>
@@ -234,13 +321,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_VirtualNetworkRule_SubnetId_" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.SubnetId*"></a>
   <h4 id="Pulumi_Azure_Sql_VirtualNetworkRule_SubnetId" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.SubnetId">SubnetId</h4>
@@ -261,7 +348,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -269,17 +356,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_VirtualNetworkRule_Get_" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.Get*"></a>
-  <h4 id="Pulumi_Azure_Sql_VirtualNetworkRule_Get_System_String_Input_System_String__Pulumi_Azure_Sql_VirtualNetworkRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.Get(System.String,Input{System.String},Pulumi.Azure.Sql.VirtualNetworkRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VirtualNetworkRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Sql_VirtualNetworkRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Sql_VirtualNetworkRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Sql.VirtualNetworkRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Sql.VirtualNetworkRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VirtualNetworkRuleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing VirtualNetworkRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static VirtualNetworkRule Get(string name, Input&lt;string&gt; id, VirtualNetworkRuleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static VirtualNetworkRule Get(string name, Input&lt;string&gt; id, VirtualNetworkRuleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -298,7 +385,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -310,7 +397,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -339,7 +426,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/VirtualNetworkRule.cs/#L69" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

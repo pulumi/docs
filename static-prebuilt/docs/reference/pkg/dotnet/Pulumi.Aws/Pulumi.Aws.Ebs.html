@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Ebs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,6 +86,22 @@ By using the <code>aws.ebs.DefaultKmsKey</code> resource, you can specify a cust
 <blockquote>
 <p><strong>NOTE:</strong> Destroying this resource will reset the default CMK to the account's AWS-managed default CMK for EBS.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ebs.DefaultKmsKey(&amp;quot;example&amp;quot;, new Aws.Ebs.DefaultKmsKeyArgs
+    {
+        KeyArn = aws_kms_key.Example.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ebs.DefaultKmsKeyArgs.html">DefaultKmsKeyArgs</a></h4>
       <section></section>
@@ -96,6 +112,22 @@ By using the <code>aws.ebs.DefaultKmsKey</code> resource, you can specify a cust
 <blockquote>
 <p><strong>NOTE:</strong> Removing this resource disables default EBS encryption.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ebs.EncryptionByDefault(&amp;quot;example&amp;quot;, new Aws.Ebs.EncryptionByDefaultArgs
+    {
+        Enabled = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ebs.EncryptionByDefaultArgs.html">EncryptionByDefaultArgs</a></h4>
       <section></section>
@@ -129,11 +161,78 @@ By using the <code>aws.ebs.DefaultKmsKey</code> resource, you can specify a cust
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ebs.Snapshot.html">Snapshot</a></h4>
       <section><p>Creates a Snapshot of an EBS Volume.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ebs.Volume(&amp;quot;example&amp;quot;, new Aws.Ebs.VolumeArgs
+    {
+        AvailabilityZone = &amp;quot;us-west-2a&amp;quot;,
+        Size = 40,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;HelloWorld&amp;quot; },
+        },
+    });
+    var exampleSnapshot = new Aws.Ebs.Snapshot(&amp;quot;exampleSnapshot&amp;quot;, new Aws.Ebs.SnapshotArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;HelloWorld_snap&amp;quot; },
+        },
+        VolumeId = example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ebs.SnapshotArgs.html">SnapshotArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ebs.SnapshotCopy.html">SnapshotCopy</a></h4>
       <section><p>Creates a Snapshot of a snapshot.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ebs.Volume(&amp;quot;example&amp;quot;, new Aws.Ebs.VolumeArgs
+    {
+        AvailabilityZone = &amp;quot;us-west-2a&amp;quot;,
+        Size = 40,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;HelloWorld&amp;quot; },
+        },
+    });
+    var exampleSnapshot = new Aws.Ebs.Snapshot(&amp;quot;exampleSnapshot&amp;quot;, new Aws.Ebs.SnapshotArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;HelloWorld_snap&amp;quot; },
+        },
+        VolumeId = example.Id,
+    });
+    var exampleCopy = new Aws.Ebs.SnapshotCopy(&amp;quot;exampleCopy&amp;quot;, new Aws.Ebs.SnapshotCopyArgs
+    {
+        SourceRegion = &amp;quot;us-west-2&amp;quot;,
+        SourceSnapshotId = exampleSnapshot.Id,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;HelloWorld_copy_snap&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ebs.SnapshotCopyArgs.html">SnapshotCopyArgs</a></h4>
       <section></section>
@@ -143,6 +242,27 @@ By using the <code>aws.ebs.DefaultKmsKey</code> resource, you can specify a cust
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ebs.Volume.html">Volume</a></h4>
       <section><p>Manages a single EBS volume.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ebs.Volume(&amp;quot;example&amp;quot;, new Aws.Ebs.VolumeArgs
+    {
+        AvailabilityZone = &amp;quot;us-west-2a&amp;quot;,
+        Size = 40,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;HelloWorld&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ebs.VolumeArgs.html">VolumeArgs</a></h4>
       <section></section>

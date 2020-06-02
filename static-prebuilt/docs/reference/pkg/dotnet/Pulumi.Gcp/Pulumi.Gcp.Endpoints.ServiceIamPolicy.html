@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ServiceIamPolicy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,7 +71,7 @@
   
   <h1 id="Pulumi_Gcp_Endpoints_ServiceIamPolicy" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy" class="text-break">Class ServiceIamPolicy
   </h1>
-  <div class="markdown level0 summary"><p>Three different resources help you manage your IAM policy for Service Management Service. Each of these resources serves a different use case:</p>
+  <div class="markdown level0 summary"><p>Three different resources help you manage your IAM policy for Cloud Endpoints Service. Each of these resources serves a different use case:</p>
 <ul>
 <li><code>gcp.endpoints.ServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</li>
 <li><code>gcp.endpoints.ServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</li>
@@ -83,12 +83,120 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.endpoints.ServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.endpoints.ServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_endpoints_service_iam_policy">google_endpoints_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Endpoints.ServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Endpoints.ServiceIamPolicyArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_endpoints_service_iam_binding">google_endpoints_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Endpoints.ServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Endpoints.ServiceIamBindingArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_endpoints_service_iam_member">google_endpoints_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Endpoints.ServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Endpoints.ServiceIamMemberArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ServiceIamPolicy</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ServiceIamPolicy</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Endpoints.html">Pulumi.Gcp.Endpoints</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -99,16 +207,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceIamPolicy__ctor_" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Endpoints_ServiceIamPolicy__ctor_System_String_Pulumi_Gcp_Endpoints_ServiceIamPolicyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.#ctor(System.String,Pulumi.Gcp.Endpoints.ServiceIamPolicyArgs,System.Nullable{CustomResourceOptions})">ServiceIamPolicy(String, ServiceIamPolicyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Endpoints_ServiceIamPolicy__ctor_System_String_Pulumi_Gcp_Endpoints_ServiceIamPolicyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.#ctor(System.String,Pulumi.Gcp.Endpoints.ServiceIamPolicyArgs,Pulumi.CustomResourceOptions)">ServiceIamPolicy(String, ServiceIamPolicyArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ServiceIamPolicy resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ServiceIamPolicy(string name, ServiceIamPolicyArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ServiceIamPolicy(string name, ServiceIamPolicyArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,7 +241,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -143,7 +251,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceIamPolicy_Etag_" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.Etag*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceIamPolicy_Etag" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.Etag">Etag</h4>
@@ -164,13 +272,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceIamPolicy_PolicyData_" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.PolicyData*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceIamPolicy_PolicyData" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.PolicyData">PolicyData</h4>
@@ -192,13 +300,13 @@ a <code>gcp.organizations.getIAMPolicy</code> data source.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceIamPolicy_ServiceName_" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.ServiceName*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceIamPolicy_ServiceName" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.ServiceName">ServiceName</h4>
@@ -219,7 +327,7 @@ a <code>gcp.organizations.getIAMPolicy</code> data source.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -227,17 +335,17 @@ a <code>gcp.organizations.getIAMPolicy</code> data source.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceIamPolicy_Get_" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.Get*"></a>
-  <h4 id="Pulumi_Gcp_Endpoints_ServiceIamPolicy_Get_System_String_Input_System_String__Pulumi_Gcp_Endpoints_ServiceIamPolicyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.Get(System.String,Input{System.String},Pulumi.Gcp.Endpoints.ServiceIamPolicyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ServiceIamPolicyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Endpoints_ServiceIamPolicy_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Endpoints_ServiceIamPolicyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Endpoints.ServiceIamPolicy.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Endpoints.ServiceIamPolicyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ServiceIamPolicyState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ServiceIamPolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ServiceIamPolicy Get(string name, Input&lt;string&gt; id, ServiceIamPolicyState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ServiceIamPolicy Get(string name, Input&lt;string&gt; id, ServiceIamPolicyState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,7 +364,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -268,7 +376,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -297,7 +405,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Endpoints/ServiceIamPolicy.cs/#L104" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Deployment
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,15 +73,100 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides an API Gateway REST Deployment.</p>
 <blockquote>
-<p><strong>Note:</strong> Depends on having <code>aws.apigateway.Integration</code> inside your rest api (which in turn depends on <code>aws.apigateway.Method</code>). To avoid race conditions
-you might need to add an explicit <code>depends_on = [&amp;quot;${aws_api_gateway_integration.name}&amp;quot;]</code>.</p>
+<p><strong>Note:</strong> This resource depends on having at least one <code>aws.apigateway.Integration</code> created in the REST API, which
+itself has other dependencies. To avoid race conditions when all resources are being created together, you need to add
+implicit resource references via the <code>triggers</code> argument or explicit resource references using the
+<a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson">resource <code>dependsOn</code> meta-argument</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myDemoAPI = new Aws.ApiGateway.RestApi(&amp;quot;myDemoAPI&amp;quot;, new Aws.ApiGateway.RestApiArgs
+    {
+        Description = &amp;quot;This is my API for demonstration purposes&amp;quot;,
+    });
+    var myDemoResource = new Aws.ApiGateway.Resource(&amp;quot;myDemoResource&amp;quot;, new Aws.ApiGateway.ResourceArgs
+    {
+        RestApi = myDemoAPI.Id,
+        ParentId = myDemoAPI.RootResourceId,
+        PathPart = &amp;quot;test&amp;quot;,
+    });
+    var myDemoMethod = new Aws.ApiGateway.Method(&amp;quot;myDemoMethod&amp;quot;, new Aws.ApiGateway.MethodArgs
+    {
+        RestApi = myDemoAPI.Id,
+        ResourceId = myDemoResource.Id,
+        HttpMethod = &amp;quot;GET&amp;quot;,
+        Authorization = &amp;quot;NONE&amp;quot;,
+    });
+    var myDemoIntegration = new Aws.ApiGateway.Integration(&amp;quot;myDemoIntegration&amp;quot;, new Aws.ApiGateway.IntegrationArgs
+    {
+        RestApi = myDemoAPI.Id,
+        ResourceId = myDemoResource.Id,
+        HttpMethod = myDemoMethod.HttpMethod,
+        Type = &amp;quot;MOCK&amp;quot;,
+    });
+    var myDemoDeployment = new Aws.ApiGateway.Deployment(&amp;quot;myDemoDeployment&amp;quot;, new Aws.ApiGateway.DeploymentArgs
+    {
+        RestApi = myDemoAPI.Id,
+        StageName = &amp;quot;test&amp;quot;,
+        Variables = 
+        {
+            { &amp;quot;answer&amp;quot;, &amp;quot;42&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Deployment</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Deployment</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ApiGateway.html">Pulumi.Aws.ApiGateway</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -92,16 +177,16 @@ you might need to add an explicit <code>depends_on = [&amp;quot;${aws_api_gatewa
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Deployment.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Deployment__ctor_" data-uid="Pulumi.Aws.ApiGateway.Deployment.#ctor*"></a>
-  <h4 id="Pulumi_Aws_ApiGateway_Deployment__ctor_System_String_Pulumi_Aws_ApiGateway_DeploymentArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ApiGateway.Deployment.#ctor(System.String,Pulumi.Aws.ApiGateway.DeploymentArgs,System.Nullable{CustomResourceOptions})">Deployment(String, DeploymentArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ApiGateway_Deployment__ctor_System_String_Pulumi_Aws_ApiGateway_DeploymentArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGateway.Deployment.#ctor(System.String,Pulumi.Aws.ApiGateway.DeploymentArgs,Pulumi.CustomResourceOptions)">Deployment(String, DeploymentArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Deployment resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Deployment(string name, DeploymentArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Deployment(string name, DeploymentArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,7 +211,7 @@ you might need to add an explicit <code>depends_on = [&amp;quot;${aws_api_gatewa
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -136,7 +221,7 @@ you might need to add an explicit <code>depends_on = [&amp;quot;${aws_api_gatewa
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Deployment.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Deployment_CreatedDate_" data-uid="Pulumi.Aws.ApiGateway.Deployment.CreatedDate*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Deployment_CreatedDate" data-uid="Pulumi.Aws.ApiGateway.Deployment.CreatedDate">CreatedDate</h4>
@@ -157,13 +242,13 @@ you might need to add an explicit <code>depends_on = [&amp;quot;${aws_api_gatewa
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Deployment.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Deployment_Description_" data-uid="Pulumi.Aws.ApiGateway.Deployment.Description*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Deployment_Description" data-uid="Pulumi.Aws.ApiGateway.Deployment.Description">Description</h4>
@@ -172,7 +257,7 @@ you might need to add an explicit <code>depends_on = [&amp;quot;${aws_api_gatewa
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,17 +269,17 @@ you might need to add an explicit <code>depends_on = [&amp;quot;${aws_api_gatewa
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Deployment.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Deployment_ExecutionArn_" data-uid="Pulumi.Aws.ApiGateway.Deployment.ExecutionArn*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Deployment_ExecutionArn" data-uid="Pulumi.Aws.ApiGateway.Deployment.ExecutionArn">ExecutionArn</h4>
-  <div class="markdown level1 summary"><p>The execution ARN to be used in <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html"><code>lambda_permission</code></a>'s <code>source_arn</code>
+  <div class="markdown level1 summary"><p>The execution ARN to be used in <code>lambda_permission</code> resource's <code>source_arn</code>
 when allowing API Gateway to invoke a Lambda function,
 e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod</code></p>
 </div>
@@ -213,13 +298,13 @@ e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Deployment.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Deployment_InvokeUrl_" data-uid="Pulumi.Aws.ApiGateway.Deployment.InvokeUrl*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Deployment_InvokeUrl" data-uid="Pulumi.Aws.ApiGateway.Deployment.InvokeUrl">InvokeUrl</h4>
@@ -241,13 +326,13 @@ e.g. <code>https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</code></p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Deployment.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Deployment_RestApi_" data-uid="Pulumi.Aws.ApiGateway.Deployment.RestApi*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Deployment_RestApi" data-uid="Pulumi.Aws.ApiGateway.Deployment.RestApi">RestApi</h4>
@@ -268,13 +353,13 @@ e.g. <code>https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</code></p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Deployment.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Deployment_StageDescription_" data-uid="Pulumi.Aws.ApiGateway.Deployment.StageDescription*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Deployment_StageDescription" data-uid="Pulumi.Aws.ApiGateway.Deployment.StageDescription">StageDescription</h4>
@@ -283,7 +368,7 @@ e.g. <code>https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</code></p
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; StageDescription { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StageDescription { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -295,13 +380,13 @@ e.g. <code>https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</code></p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Deployment.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Deployment_StageName_" data-uid="Pulumi.Aws.ApiGateway.Deployment.StageName*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Deployment_StageName" data-uid="Pulumi.Aws.ApiGateway.Deployment.StageName">StageName</h4>
@@ -310,7 +395,7 @@ e.g. <code>https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</code></p
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; StageName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StageName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -322,13 +407,40 @@ e.g. <code>https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</code></p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Deployment.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_Deployment_Triggers_" data-uid="Pulumi.Aws.ApiGateway.Deployment.Triggers*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_Deployment_Triggers" data-uid="Pulumi.Aws.ApiGateway.Deployment.Triggers">Triggers</h4>
+  <div class="markdown level1 summary"><p>A map of arbitrary keys and values that, when changed, will trigger a redeployment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Triggers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Deployment_Variables_" data-uid="Pulumi.Aws.ApiGateway.Deployment.Variables*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Deployment_Variables" data-uid="Pulumi.Aws.ApiGateway.Deployment.Variables">Variables</h4>
@@ -337,7 +449,7 @@ e.g. <code>https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</code></p
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Variables { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Variables { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -349,7 +461,7 @@ e.g. <code>https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</code></p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -357,17 +469,17 @@ e.g. <code>https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</code></p
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Deployment.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Deployment_Get_" data-uid="Pulumi.Aws.ApiGateway.Deployment.Get*"></a>
-  <h4 id="Pulumi_Aws_ApiGateway_Deployment_Get_System_String_Input_System_String__Pulumi_Aws_ApiGateway_DeploymentState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ApiGateway.Deployment.Get(System.String,Input{System.String},Pulumi.Aws.ApiGateway.DeploymentState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DeploymentState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ApiGateway_Deployment_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_ApiGateway_DeploymentState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGateway.Deployment.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.ApiGateway.DeploymentState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DeploymentState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Deployment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Deployment Get(string name, Input&lt;string&gt; id, DeploymentState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Deployment Get(string name, Input&lt;string&gt; id, DeploymentState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -386,7 +498,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -398,7 +510,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -427,7 +539,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Deployment.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Deployment.cs/#L70" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

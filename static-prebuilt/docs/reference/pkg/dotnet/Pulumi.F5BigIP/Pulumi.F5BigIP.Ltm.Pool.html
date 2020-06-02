@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Pool
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,14 +71,50 @@
   
   <h1 id="Pulumi_F5BigIP_Ltm_Pool" data-uid="Pulumi.F5BigIP.Ltm.Pool" class="text-break">Class Pool
   </h1>
-  <div class="markdown level0 summary"><p><code>f5bigip.ltm.Pool</code> Manages a pool configuration.</p>
-<p>Resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Pool</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Pool</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.F5BigIP.Ltm.html">Pulumi.F5BigIP.Ltm</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.F5BigIP.dll</h6>
@@ -89,16 +125,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Pool__ctor_" data-uid="Pulumi.F5BigIP.Ltm.Pool.#ctor*"></a>
-  <h4 id="Pulumi_F5BigIP_Ltm_Pool__ctor_System_String_Pulumi_F5BigIP_Ltm_PoolArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Ltm.Pool.#ctor(System.String,Pulumi.F5BigIP.Ltm.PoolArgs,System.Nullable{CustomResourceOptions})">Pool(String, PoolArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_F5BigIP_Ltm_Pool__ctor_System_String_Pulumi_F5BigIP_Ltm_PoolArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.F5BigIP.Ltm.Pool.#ctor(System.String,Pulumi.F5BigIP.Ltm.PoolArgs,Pulumi.CustomResourceOptions)">Pool(String, PoolArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Pool resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Pool(string name, PoolArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Pool(string name, PoolArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +159,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +169,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Pool_AllowNat_" data-uid="Pulumi.F5BigIP.Ltm.Pool.AllowNat*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Pool_AllowNat" data-uid="Pulumi.F5BigIP.Ltm.Pool.AllowNat">AllowNat</h4>
@@ -154,13 +190,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Pool_AllowSnat_" data-uid="Pulumi.F5BigIP.Ltm.Pool.AllowSnat*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Pool_AllowSnat" data-uid="Pulumi.F5BigIP.Ltm.Pool.AllowSnat">AllowSnat</h4>
@@ -181,13 +217,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Pool_Description_" data-uid="Pulumi.F5BigIP.Ltm.Pool.Description*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Pool_Description" data-uid="Pulumi.F5BigIP.Ltm.Pool.Description">Description</h4>
@@ -196,7 +232,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +244,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Pool_LoadBalancingMode_" data-uid="Pulumi.F5BigIP.Ltm.Pool.LoadBalancingMode*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Pool_LoadBalancingMode" data-uid="Pulumi.F5BigIP.Ltm.Pool.LoadBalancingMode">LoadBalancingMode</h4>
@@ -235,13 +271,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Pool_Monitors_" data-uid="Pulumi.F5BigIP.Ltm.Pool.Monitors*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Pool_Monitors" data-uid="Pulumi.F5BigIP.Ltm.Pool.Monitors">Monitors</h4>
@@ -262,13 +298,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Pool_Name_" data-uid="Pulumi.F5BigIP.Ltm.Pool.Name*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Pool_Name" data-uid="Pulumi.F5BigIP.Ltm.Pool.Name">Name</h4>
@@ -289,13 +325,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Pool_ReselectTries_" data-uid="Pulumi.F5BigIP.Ltm.Pool.ReselectTries*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Pool_ReselectTries" data-uid="Pulumi.F5BigIP.Ltm.Pool.ReselectTries">ReselectTries</h4>
@@ -316,13 +352,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Pool_ServiceDownAction_" data-uid="Pulumi.F5BigIP.Ltm.Pool.ServiceDownAction*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Pool_ServiceDownAction" data-uid="Pulumi.F5BigIP.Ltm.Pool.ServiceDownAction">ServiceDownAction</h4>
@@ -343,13 +379,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Pool_SlowRampTime_" data-uid="Pulumi.F5BigIP.Ltm.Pool.SlowRampTime*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Pool_SlowRampTime" data-uid="Pulumi.F5BigIP.Ltm.Pool.SlowRampTime">SlowRampTime</h4>
@@ -370,7 +406,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -378,17 +414,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Pool_Get_" data-uid="Pulumi.F5BigIP.Ltm.Pool.Get*"></a>
-  <h4 id="Pulumi_F5BigIP_Ltm_Pool_Get_System_String_Input_System_String__Pulumi_F5BigIP_Ltm_PoolState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Ltm.Pool.Get(System.String,Input{System.String},Pulumi.F5BigIP.Ltm.PoolState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, PoolState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_F5BigIP_Ltm_Pool_Get_System_String_Pulumi_Input_System_String__Pulumi_F5BigIP_Ltm_PoolState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.F5BigIP.Ltm.Pool.Get(System.String,Pulumi.Input{System.String},Pulumi.F5BigIP.Ltm.PoolState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, PoolState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Pool resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Pool Get(string name, Input&lt;string&gt; id, PoolState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Pool Get(string name, Input&lt;string&gt; id, PoolState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -407,7 +443,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -419,7 +455,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -448,7 +484,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Pool.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Pool.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

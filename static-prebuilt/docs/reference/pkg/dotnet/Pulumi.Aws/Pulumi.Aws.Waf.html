@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Waf
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,35 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Waf.ByteMatchSet.html">ByteMatchSet</a></h4>
       <section><p>Provides a WAF Byte Match Set Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var byteSet = new Aws.Waf.ByteMatchSet(&amp;quot;byteSet&amp;quot;, new Aws.Waf.ByteMatchSetArgs
+    {
+        ByteMatchTuples = 
+        {
+            new Aws.Waf.Inputs.ByteMatchSetByteMatchTupleArgs
+            {
+                FieldToMatch = new Aws.Waf.Inputs.ByteMatchSetByteMatchTupleFieldToMatchArgs
+                {
+                    Data = &amp;quot;referer&amp;quot;,
+                    Type = &amp;quot;HEADER&amp;quot;,
+                },
+                PositionalConstraint = &amp;quot;CONTAINS&amp;quot;,
+                TargetString = &amp;quot;badrefer1&amp;quot;,
+                TextTransformation = &amp;quot;NONE&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.ByteMatchSetArgs.html">ByteMatchSetArgs</a></h4>
       <section></section>
@@ -85,6 +114,34 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.GeoMatchSet.html">GeoMatchSet</a></h4>
       <section><p>Provides a WAF Geo Match Set Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var geoMatchSet = new Aws.Waf.GeoMatchSet(&amp;quot;geoMatchSet&amp;quot;, new Aws.Waf.GeoMatchSetArgs
+    {
+        GeoMatchConstraints = 
+        {
+            new Aws.Waf.Inputs.GeoMatchSetGeoMatchConstraintArgs
+            {
+                Type = &amp;quot;Country&amp;quot;,
+                Value = &amp;quot;US&amp;quot;,
+            },
+            new Aws.Waf.Inputs.GeoMatchSetGeoMatchConstraintArgs
+            {
+                Type = &amp;quot;Country&amp;quot;,
+                Value = &amp;quot;CA&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.GeoMatchSetArgs.html">GeoMatchSetArgs</a></h4>
       <section></section>
@@ -116,6 +173,34 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.IpSet.html">IpSet</a></h4>
       <section><p>Provides a WAF IPSet Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ipset = new Aws.Waf.IpSet(&amp;quot;ipset&amp;quot;, new Aws.Waf.IpSetArgs
+    {
+        IpSetDescriptors = 
+        {
+            new Aws.Waf.Inputs.IpSetIpSetDescriptorArgs
+            {
+                Type = &amp;quot;IPV4&amp;quot;,
+                Value = &amp;quot;192.0.7.0/24&amp;quot;,
+            },
+            new Aws.Waf.Inputs.IpSetIpSetDescriptorArgs
+            {
+                Type = &amp;quot;IPV4&amp;quot;,
+                Value = &amp;quot;10.16.16.0/16&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.IpSetArgs.html">IpSetArgs</a></h4>
       <section></section>
@@ -123,6 +208,44 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.RateBasedRule.html">RateBasedRule</a></h4>
       <section><p>Provides a WAF Rate Based Rule Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ipset = new Aws.Waf.IpSet(&amp;quot;ipset&amp;quot;, new Aws.Waf.IpSetArgs
+    {
+        IpSetDescriptors = 
+        {
+            new Aws.Waf.Inputs.IpSetIpSetDescriptorArgs
+            {
+                Type = &amp;quot;IPV4&amp;quot;,
+                Value = &amp;quot;192.0.7.0/24&amp;quot;,
+            },
+        },
+    });
+    var wafrule = new Aws.Waf.RateBasedRule(&amp;quot;wafrule&amp;quot;, new Aws.Waf.RateBasedRuleArgs
+    {
+        MetricName = &amp;quot;tfWAFRule&amp;quot;,
+        Predicates = 
+        {
+            new Aws.Waf.Inputs.RateBasedRulePredicateArgs
+            {
+                DataId = ipset.Id,
+                Negated = false,
+                Type = &amp;quot;IPMatch&amp;quot;,
+            },
+        },
+        RateKey = &amp;quot;IP&amp;quot;,
+        RateLimit = 100,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.RateBasedRuleArgs.html">RateBasedRuleArgs</a></h4>
       <section></section>
@@ -130,6 +253,42 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.RegexMatchSet.html">RegexMatchSet</a></h4>
       <section><p>Provides a WAF Regex Match Set Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleRegexPatternSet = new Aws.Waf.RegexPatternSet(&amp;quot;exampleRegexPatternSet&amp;quot;, new Aws.Waf.RegexPatternSetArgs
+    {
+        RegexPatternStrings = 
+        {
+            &amp;quot;one&amp;quot;,
+            &amp;quot;two&amp;quot;,
+        },
+    });
+    var exampleRegexMatchSet = new Aws.Waf.RegexMatchSet(&amp;quot;exampleRegexMatchSet&amp;quot;, new Aws.Waf.RegexMatchSetArgs
+    {
+        RegexMatchTuples = 
+        {
+            new Aws.Waf.Inputs.RegexMatchSetRegexMatchTupleArgs
+            {
+                FieldToMatch = new Aws.Waf.Inputs.RegexMatchSetRegexMatchTupleFieldToMatchArgs
+                {
+                    Data = &amp;quot;User-Agent&amp;quot;,
+                    Type = &amp;quot;HEADER&amp;quot;,
+                },
+                RegexPatternSetId = exampleRegexPatternSet.Id,
+                TextTransformation = &amp;quot;NONE&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.RegexMatchSetArgs.html">RegexMatchSetArgs</a></h4>
       <section></section>
@@ -137,6 +296,26 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.RegexPatternSet.html">RegexPatternSet</a></h4>
       <section><p>Provides a WAF Regex Pattern Set Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Waf.RegexPatternSet(&amp;quot;example&amp;quot;, new Aws.Waf.RegexPatternSetArgs
+    {
+        RegexPatternStrings = 
+        {
+            &amp;quot;one&amp;quot;,
+            &amp;quot;two&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.RegexPatternSetArgs.html">RegexPatternSetArgs</a></h4>
       <section></section>
@@ -144,11 +323,79 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.Rule.html">Rule</a></h4>
       <section><p>Provides a WAF Rule Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ipset = new Aws.Waf.IpSet(&amp;quot;ipset&amp;quot;, new Aws.Waf.IpSetArgs
+    {
+        IpSetDescriptors = 
+        {
+            new Aws.Waf.Inputs.IpSetIpSetDescriptorArgs
+            {
+                Type = &amp;quot;IPV4&amp;quot;,
+                Value = &amp;quot;192.0.7.0/24&amp;quot;,
+            },
+        },
+    });
+    var wafrule = new Aws.Waf.Rule(&amp;quot;wafrule&amp;quot;, new Aws.Waf.RuleArgs
+    {
+        MetricName = &amp;quot;tfWAFRule&amp;quot;,
+        Predicates = 
+        {
+            new Aws.Waf.Inputs.RulePredicateArgs
+            {
+                DataId = ipset.Id,
+                Negated = false,
+                Type = &amp;quot;IPMatch&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.RuleArgs.html">RuleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.RuleGroup.html">RuleGroup</a></h4>
       <section><p>Provides a WAF Rule Group Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleRule = new Aws.Waf.Rule(&amp;quot;exampleRule&amp;quot;, new Aws.Waf.RuleArgs
+    {
+        MetricName = &amp;quot;example&amp;quot;,
+    });
+    var exampleRuleGroup = new Aws.Waf.RuleGroup(&amp;quot;exampleRuleGroup&amp;quot;, new Aws.Waf.RuleGroupArgs
+    {
+        ActivatedRules = 
+        {
+            new Aws.Waf.Inputs.RuleGroupActivatedRuleArgs
+            {
+                Action = new Aws.Waf.Inputs.RuleGroupActivatedRuleActionArgs
+                {
+                    Type = &amp;quot;COUNT&amp;quot;,
+                },
+                Priority = 50,
+                RuleId = exampleRule.Id,
+            },
+        },
+        MetricName = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.RuleGroupArgs.html">RuleGroupArgs</a></h4>
       <section></section>
@@ -158,6 +405,34 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.SizeConstraintSet.html">SizeConstraintSet</a></h4>
       <section><p>Provides a WAF Size Constraint Set Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var sizeConstraintSet = new Aws.Waf.SizeConstraintSet(&amp;quot;sizeConstraintSet&amp;quot;, new Aws.Waf.SizeConstraintSetArgs
+    {
+        SizeConstraints = 
+        {
+            new Aws.Waf.Inputs.SizeConstraintSetSizeConstraintArgs
+            {
+                ComparisonOperator = &amp;quot;EQ&amp;quot;,
+                FieldToMatch = new Aws.Waf.Inputs.SizeConstraintSetSizeConstraintFieldToMatchArgs
+                {
+                    Type = &amp;quot;BODY&amp;quot;,
+                },
+                Size = &amp;quot;4096&amp;quot;,
+                TextTransformation = &amp;quot;NONE&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.SizeConstraintSetArgs.html">SizeConstraintSetArgs</a></h4>
       <section></section>
@@ -165,6 +440,32 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.SqlInjectionMatchSet.html">SqlInjectionMatchSet</a></h4>
       <section><p>Provides a WAF SQL Injection Match Set Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var sqlInjectionMatchSet = new Aws.Waf.SqlInjectionMatchSet(&amp;quot;sqlInjectionMatchSet&amp;quot;, new Aws.Waf.SqlInjectionMatchSetArgs
+    {
+        SqlInjectionMatchTuples = 
+        {
+            new Aws.Waf.Inputs.SqlInjectionMatchSetSqlInjectionMatchTupleArgs
+            {
+                FieldToMatch = new Aws.Waf.Inputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs
+                {
+                    Type = &amp;quot;QUERY_STRING&amp;quot;,
+                },
+                TextTransformation = &amp;quot;URL_DECODE&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.SqlInjectionMatchSetArgs.html">SqlInjectionMatchSetArgs</a></h4>
       <section></section>
@@ -172,6 +473,97 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.WebAcl.html">WebAcl</a></h4>
       <section><p>Provides a WAF Web ACL Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ipset = new Aws.Waf.IpSet(&amp;quot;ipset&amp;quot;, new Aws.Waf.IpSetArgs
+    {
+        IpSetDescriptors = 
+        {
+            new Aws.Waf.Inputs.IpSetIpSetDescriptorArgs
+            {
+                Type = &amp;quot;IPV4&amp;quot;,
+                Value = &amp;quot;192.0.7.0/24&amp;quot;,
+            },
+        },
+    });
+    var wafrule = new Aws.Waf.Rule(&amp;quot;wafrule&amp;quot;, new Aws.Waf.RuleArgs
+    {
+        MetricName = &amp;quot;tfWAFRule&amp;quot;,
+        Predicates = 
+        {
+            new Aws.Waf.Inputs.RulePredicateArgs
+            {
+                DataId = ipset.Id,
+                Negated = false,
+                Type = &amp;quot;IPMatch&amp;quot;,
+            },
+        },
+    });
+    var wafAcl = new Aws.Waf.WebAcl(&amp;quot;wafAcl&amp;quot;, new Aws.Waf.WebAclArgs
+    {
+        DefaultAction = new Aws.Waf.Inputs.WebAclDefaultActionArgs
+        {
+            Type = &amp;quot;ALLOW&amp;quot;,
+        },
+        MetricName = &amp;quot;tfWebACL&amp;quot;,
+        Rules = 
+        {
+            new Aws.Waf.Inputs.WebAclRuleArgs
+            {
+                Action = new Aws.Waf.Inputs.WebAclRuleActionArgs
+                {
+                    Type = &amp;quot;BLOCK&amp;quot;,
+                },
+                Priority = 1,
+                RuleId = wafrule.Id,
+                Type = &amp;quot;REGULAR&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="logging">Logging</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Waf.WebAcl(&amp;quot;example&amp;quot;, new Aws.Waf.WebAclArgs
+    {
+        LoggingConfiguration = new Aws.Waf.Inputs.WebAclLoggingConfigurationArgs
+        {
+            LogDestination = aws_kinesis_firehose_delivery_stream.Example.Arn,
+            RedactedFields = new Aws.Waf.Inputs.WebAclLoggingConfigurationRedactedFieldsArgs
+            {
+                FieldToMatch = 
+                {
+
+                    {
+                        { &amp;quot;type&amp;quot;, &amp;quot;URI&amp;quot; },
+                    },
+
+                    {
+                        { &amp;quot;data&amp;quot;, &amp;quot;referer&amp;quot; },
+                        { &amp;quot;type&amp;quot;, &amp;quot;HEADER&amp;quot; },
+                    },
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.WebAclArgs.html">WebAclArgs</a></h4>
       <section></section>
@@ -179,6 +571,40 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.XssMatchSet.html">XssMatchSet</a></h4>
       <section><p>Provides a WAF XSS Match Set Resource</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var xssMatchSet = new Aws.Waf.XssMatchSet(&amp;quot;xssMatchSet&amp;quot;, new Aws.Waf.XssMatchSetArgs
+    {
+        XssMatchTuples = 
+        {
+            new Aws.Waf.Inputs.XssMatchSetXssMatchTupleArgs
+            {
+                FieldToMatch = new Aws.Waf.Inputs.XssMatchSetXssMatchTupleFieldToMatchArgs
+                {
+                    Type = &amp;quot;URI&amp;quot;,
+                },
+                TextTransformation = &amp;quot;NONE&amp;quot;,
+            },
+            new Aws.Waf.Inputs.XssMatchSetXssMatchTupleArgs
+            {
+                FieldToMatch = new Aws.Waf.Inputs.XssMatchSetXssMatchTupleFieldToMatchArgs
+                {
+                    Type = &amp;quot;QUERY_STRING&amp;quot;,
+                },
+                TextTransformation = &amp;quot;NONE&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Waf.XssMatchSetArgs.html">XssMatchSetArgs</a></h4>
       <section></section>

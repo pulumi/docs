@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Distribution
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,8 +73,8 @@
   </h1>
   <div class="markdown level0 summary"><p>Creates an Amazon CloudFront web distribution.</p>
 <p>For information about CloudFront distributions, see the
-[Amazon CloudFront Developer Guide][1]. For specific information about creating
-CloudFront web distributions, see the [POST Distribution][2] page in the Amazon
+<a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html">Amazon CloudFront Developer Guide</a>. For specific information about creating
+CloudFront web distributions, see the <a href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html">POST Distribution</a> page in the Amazon
 CloudFront API Reference.</p>
 <blockquote>
 <p><strong>NOTE:</strong> CloudFront distributions take about 15 minutes to a deployed state
@@ -82,12 +82,221 @@ after creation or modification. During this time, deletes to resources will be
 blocked. If you need to delete a distribution that is enabled and you do not
 want to wait, you need to use the <code>retain_on_delete</code> flag.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;My bucket&amp;quot; },
+        },
+    });
+    var s3OriginId = &amp;quot;myS3Origin&amp;quot;;
+    var s3Distribution = new Aws.CloudFront.Distribution(&amp;quot;s3Distribution&amp;quot;, new Aws.CloudFront.DistributionArgs
+    {
+        Aliases = 
+        {
+            &amp;quot;mysite.example.com&amp;quot;,
+            &amp;quot;yoursite.example.com&amp;quot;,
+        },
+        Comment = &amp;quot;Some comment&amp;quot;,
+        DefaultCacheBehavior = new Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorArgs
+        {
+            AllowedMethods = 
+            {
+                &amp;quot;DELETE&amp;quot;,
+                &amp;quot;GET&amp;quot;,
+                &amp;quot;HEAD&amp;quot;,
+                &amp;quot;OPTIONS&amp;quot;,
+                &amp;quot;PATCH&amp;quot;,
+                &amp;quot;POST&amp;quot;,
+                &amp;quot;PUT&amp;quot;,
+            },
+            CachedMethods = 
+            {
+                &amp;quot;GET&amp;quot;,
+                &amp;quot;HEAD&amp;quot;,
+            },
+            DefaultTtl = 3600,
+            ForwardedValues = new Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorForwardedValuesArgs
+            {
+                Cookies = new Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs
+                {
+                    Forward = &amp;quot;none&amp;quot;,
+                },
+                QueryString = false,
+            },
+            MaxTtl = 86400,
+            MinTtl = 0,
+            TargetOriginId = s3OriginId,
+            ViewerProtocolPolicy = &amp;quot;allow-all&amp;quot;,
+        },
+        DefaultRootObject = &amp;quot;index.html&amp;quot;,
+        Enabled = true,
+        IsIpv6Enabled = true,
+        LoggingConfig = new Aws.CloudFront.Inputs.DistributionLoggingConfigArgs
+        {
+            Bucket = &amp;quot;mylogs.s3.amazonaws.com&amp;quot;,
+            IncludeCookies = false,
+            Prefix = &amp;quot;myprefix&amp;quot;,
+        },
+        OrderedCacheBehaviors = 
+        {
+            new Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorArgs
+            {
+                AllowedMethods = 
+                {
+                    &amp;quot;GET&amp;quot;,
+                    &amp;quot;HEAD&amp;quot;,
+                    &amp;quot;OPTIONS&amp;quot;,
+                },
+                CachedMethods = 
+                {
+                    &amp;quot;GET&amp;quot;,
+                    &amp;quot;HEAD&amp;quot;,
+                    &amp;quot;OPTIONS&amp;quot;,
+                },
+                Compress = true,
+                DefaultTtl = 86400,
+                ForwardedValues = new Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorForwardedValuesArgs
+                {
+                    Cookies = new Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs
+                    {
+                        Forward = &amp;quot;none&amp;quot;,
+                    },
+                    Headers = 
+                    {
+                        &amp;quot;Origin&amp;quot;,
+                    },
+                    QueryString = false,
+                },
+                MaxTtl = 31536000,
+                MinTtl = 0,
+                PathPattern = &amp;quot;/content/immutable/*&amp;quot;,
+                TargetOriginId = s3OriginId,
+                ViewerProtocolPolicy = &amp;quot;redirect-to-https&amp;quot;,
+            },
+            new Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorArgs
+            {
+                AllowedMethods = 
+                {
+                    &amp;quot;GET&amp;quot;,
+                    &amp;quot;HEAD&amp;quot;,
+                    &amp;quot;OPTIONS&amp;quot;,
+                },
+                CachedMethods = 
+                {
+                    &amp;quot;GET&amp;quot;,
+                    &amp;quot;HEAD&amp;quot;,
+                },
+                Compress = true,
+                DefaultTtl = 3600,
+                ForwardedValues = new Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorForwardedValuesArgs
+                {
+                    Cookies = new Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs
+                    {
+                        Forward = &amp;quot;none&amp;quot;,
+                    },
+                    QueryString = false,
+                },
+                MaxTtl = 86400,
+                MinTtl = 0,
+                PathPattern = &amp;quot;/content/*&amp;quot;,
+                TargetOriginId = s3OriginId,
+                ViewerProtocolPolicy = &amp;quot;redirect-to-https&amp;quot;,
+            },
+        },
+        Origins = 
+        {
+            new Aws.CloudFront.Inputs.DistributionOriginArgs
+            {
+                DomainName = bucket.BucketRegionalDomainName,
+                OriginId = s3OriginId,
+                S3OriginConfig = new Aws.CloudFront.Inputs.DistributionOriginS3OriginConfigArgs
+                {
+                    OriginAccessIdentity = &amp;quot;origin-access-identity/cloudfront/ABCDEFG1234567&amp;quot;,
+                },
+            },
+        },
+        PriceClass = &amp;quot;PriceClass_200&amp;quot;,
+        Restrictions = new Aws.CloudFront.Inputs.DistributionRestrictionsArgs
+        {
+            GeoRestriction = new Aws.CloudFront.Inputs.DistributionRestrictionsGeoRestrictionArgs
+            {
+                Locations = 
+                {
+                    &amp;quot;US&amp;quot;,
+                    &amp;quot;CA&amp;quot;,
+                    &amp;quot;GB&amp;quot;,
+                    &amp;quot;DE&amp;quot;,
+                },
+                RestrictionType = &amp;quot;whitelist&amp;quot;,
+            },
+        },
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;production&amp;quot; },
+        },
+        ViewerCertificate = new Aws.CloudFront.Inputs.DistributionViewerCertificateArgs
+        {
+            CloudfrontDefaultCertificate = true,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Distribution</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Distribution</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CloudFront.html">Pulumi.Aws.CloudFront</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -98,16 +307,16 @@ want to wait, you need to use the <code>retain_on_delete</code> flag.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L238">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L414">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution__ctor_" data-uid="Pulumi.Aws.CloudFront.Distribution.#ctor*"></a>
-  <h4 id="Pulumi_Aws_CloudFront_Distribution__ctor_System_String_Pulumi_Aws_CloudFront_DistributionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.CloudFront.Distribution.#ctor(System.String,Pulumi.Aws.CloudFront.DistributionArgs,System.Nullable{CustomResourceOptions})">Distribution(String, DistributionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_CloudFront_Distribution__ctor_System_String_Pulumi_Aws_CloudFront_DistributionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.CloudFront.Distribution.#ctor(System.String,Pulumi.Aws.CloudFront.DistributionArgs,Pulumi.CustomResourceOptions)">Distribution(String, DistributionArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Distribution resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Distribution(string name, DistributionArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Distribution(string name, DistributionArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +341,7 @@ want to wait, you need to use the <code>retain_on_delete</code> flag.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -142,7 +351,7 @@ want to wait, you need to use the <code>retain_on_delete</code> flag.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_ActiveTrustedSigners_" data-uid="Pulumi.Aws.CloudFront.Distribution.ActiveTrustedSigners*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_ActiveTrustedSigners" data-uid="Pulumi.Aws.CloudFront.Distribution.ActiveTrustedSigners">ActiveTrustedSigners</h4>
@@ -165,13 +374,13 @@ with signed URLs.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_Aliases_" data-uid="Pulumi.Aws.CloudFront.Distribution.Aliases*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_Aliases" data-uid="Pulumi.Aws.CloudFront.Distribution.Aliases">Aliases</h4>
@@ -193,17 +402,17 @@ this distribution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L221">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_Arn_" data-uid="Pulumi.Aws.CloudFront.Distribution.Arn*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_Arn" data-uid="Pulumi.Aws.CloudFront.Distribution.Arn">Arn</h4>
-  <div class="markdown level1 summary"><p>The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.</p>
+  <div class="markdown level1 summary"><p>The ARN (Amazon Resource Name) for the distribution. For example: <code>arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5</code>, where <code>123456789012</code> is your AWS account ID.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -220,13 +429,13 @@ this distribution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_CallerReference_" data-uid="Pulumi.Aws.CloudFront.Distribution.CallerReference*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_CallerReference" data-uid="Pulumi.Aws.CloudFront.Distribution.CallerReference">CallerReference</h4>
@@ -248,13 +457,13 @@ updates to the distribution configuration.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L235">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_Comment_" data-uid="Pulumi.Aws.CloudFront.Distribution.Comment*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_Comment" data-uid="Pulumi.Aws.CloudFront.Distribution.Comment">Comment</h4>
@@ -264,7 +473,7 @@ distribution.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Comment { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Comment { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,13 +485,13 @@ distribution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L241">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_CustomErrorResponses_" data-uid="Pulumi.Aws.CloudFront.Distribution.CustomErrorResponses*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_CustomErrorResponses" data-uid="Pulumi.Aws.CloudFront.Distribution.CustomErrorResponses">CustomErrorResponses</h4>
@@ -303,13 +512,13 @@ distribution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionCustomErrorResponse.html">DistributionCustomErrorResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionCustomErrorResponse.html">DistributionCustomErrorResponse</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_DefaultCacheBehavior_" data-uid="Pulumi.Aws.CloudFront.Distribution.DefaultCacheBehavior*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_DefaultCacheBehavior" data-uid="Pulumi.Aws.CloudFront.Distribution.DefaultCacheBehavior">DefaultCacheBehavior</h4>
@@ -331,13 +540,13 @@ one).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehavior.html">DistributionDefaultCacheBehavior</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehavior.html">DistributionDefaultCacheBehavior</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_DefaultRootObject_" data-uid="Pulumi.Aws.CloudFront.Distribution.DefaultRootObject*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_DefaultRootObject" data-uid="Pulumi.Aws.CloudFront.Distribution.DefaultRootObject">DefaultRootObject</h4>
@@ -347,7 +556,7 @@ return (for example, index.html) when an end user requests the root URL.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultRootObject { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultRootObject { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -359,13 +568,13 @@ return (for example, index.html) when an end user requests the root URL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L262">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_DomainName_" data-uid="Pulumi.Aws.CloudFront.Distribution.DomainName*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_DomainName" data-uid="Pulumi.Aws.CloudFront.Distribution.DomainName">DomainName</h4>
@@ -387,13 +596,13 @@ web site of your custom origin.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L269">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_Enabled_" data-uid="Pulumi.Aws.CloudFront.Distribution.Enabled*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_Enabled" data-uid="Pulumi.Aws.CloudFront.Distribution.Enabled">Enabled</h4>
@@ -415,13 +624,13 @@ user requests for content.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L276">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_Etag_" data-uid="Pulumi.Aws.CloudFront.Distribution.Etag*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_Etag" data-uid="Pulumi.Aws.CloudFront.Distribution.Etag">Etag</h4>
@@ -443,18 +652,18 @@ user requests for content.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L284">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_HostedZoneId_" data-uid="Pulumi.Aws.CloudFront.Distribution.HostedZoneId*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_HostedZoneId" data-uid="Pulumi.Aws.CloudFront.Distribution.HostedZoneId">HostedZoneId</h4>
   <div class="markdown level1 summary"><p>The CloudFront Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][7] to. This attribute is simply an
+route an <a href="http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html">Alias Resource Record Set</a> to. This attribute is simply an
 alias for the zone ID <code>Z2FDTNDATAQYW2</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -472,13 +681,13 @@ alias for the zone ID <code>Z2FDTNDATAQYW2</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L292">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_HttpVersion_" data-uid="Pulumi.Aws.CloudFront.Distribution.HttpVersion*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_HttpVersion" data-uid="Pulumi.Aws.CloudFront.Distribution.HttpVersion">HttpVersion</h4>
@@ -489,7 +698,7 @@ distribution. Allowed values are <code>http1.1</code> and <code>http2</code>. Th
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HttpVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HttpVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -501,13 +710,13 @@ distribution. Allowed values are <code>http1.1</code> and <code>http2</code>. Th
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L299">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_InProgressValidationBatches_" data-uid="Pulumi.Aws.CloudFront.Distribution.InProgressValidationBatches*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_InProgressValidationBatches" data-uid="Pulumi.Aws.CloudFront.Distribution.InProgressValidationBatches">InProgressValidationBatches</h4>
@@ -529,13 +738,13 @@ currently in progress.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L305">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_IsIpv6Enabled_" data-uid="Pulumi.Aws.CloudFront.Distribution.IsIpv6Enabled*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_IsIpv6Enabled" data-uid="Pulumi.Aws.CloudFront.Distribution.IsIpv6Enabled">IsIpv6Enabled</h4>
@@ -556,13 +765,13 @@ currently in progress.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L311">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_LastModifiedTime_" data-uid="Pulumi.Aws.CloudFront.Distribution.LastModifiedTime*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_LastModifiedTime" data-uid="Pulumi.Aws.CloudFront.Distribution.LastModifiedTime">LastModifiedTime</h4>
@@ -583,13 +792,13 @@ currently in progress.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L319">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_LoggingConfig_" data-uid="Pulumi.Aws.CloudFront.Distribution.LoggingConfig*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_LoggingConfig" data-uid="Pulumi.Aws.CloudFront.Distribution.LoggingConfig">LoggingConfig</h4>
@@ -612,13 +821,13 @@ to your distribution (maximum one).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionLoggingConfig.html">DistributionLoggingConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionLoggingConfig.html">DistributionLoggingConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L151">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L327">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_OrderedCacheBehaviors_" data-uid="Pulumi.Aws.CloudFront.Distribution.OrderedCacheBehaviors*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_OrderedCacheBehaviors" data-uid="Pulumi.Aws.CloudFront.Distribution.OrderedCacheBehaviors">OrderedCacheBehaviors</h4>
@@ -641,13 +850,13 @@ in order of precedence. The topmost cache behavior will have precedence 0.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehavior.html">DistributionOrderedCacheBehavior</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehavior.html">DistributionOrderedCacheBehavior</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L334">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_OriginGroups_" data-uid="Pulumi.Aws.CloudFront.Distribution.OriginGroups*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_OriginGroups" data-uid="Pulumi.Aws.CloudFront.Distribution.OriginGroups">OriginGroups</h4>
@@ -669,13 +878,13 @@ distribution (multiples allowed).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionOriginGroup.html">DistributionOriginGroup</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionOriginGroup.html">DistributionOriginGroup</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L341">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_Origins_" data-uid="Pulumi.Aws.CloudFront.Distribution.Origins*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_Origins" data-uid="Pulumi.Aws.CloudFront.Distribution.Origins">Origins</h4>
@@ -697,13 +906,13 @@ distribution (multiples allowed).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionOrigin.html">DistributionOrigin</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionOrigin.html">DistributionOrigin</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L348">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_PriceClass_" data-uid="Pulumi.Aws.CloudFront.Distribution.PriceClass*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_PriceClass" data-uid="Pulumi.Aws.CloudFront.Distribution.PriceClass">PriceClass</h4>
@@ -713,7 +922,7 @@ distribution (multiples allowed).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PriceClass { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PriceClass { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -725,13 +934,13 @@ distribution (multiples allowed).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L179">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L355">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_Restrictions_" data-uid="Pulumi.Aws.CloudFront.Distribution.Restrictions*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_Restrictions" data-uid="Pulumi.Aws.CloudFront.Distribution.Restrictions">Restrictions</h4>
@@ -753,13 +962,13 @@ configuration for this distribution (maximum one).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionRestrictions.html">DistributionRestrictions</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionRestrictions.html">DistributionRestrictions</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L187">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L363">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_RetainOnDelete_" data-uid="Pulumi.Aws.CloudFront.Distribution.RetainOnDelete*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_RetainOnDelete" data-uid="Pulumi.Aws.CloudFront.Distribution.RetainOnDelete">RetainOnDelete</h4>
@@ -782,13 +991,13 @@ the distribution needs to be deleted manually afterwards. Default: <code>false</
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L195">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L371">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_Status_" data-uid="Pulumi.Aws.CloudFront.Distribution.Status*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_Status" data-uid="Pulumi.Aws.CloudFront.Distribution.Status">Status</h4>
@@ -811,22 +1020,22 @@ CloudFront system.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L201">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L377">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_Tags_" data-uid="Pulumi.Aws.CloudFront.Distribution.Tags*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_Tags" data-uid="Pulumi.Aws.CloudFront.Distribution.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -838,13 +1047,13 @@ CloudFront system.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L385">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_ViewerCertificate_" data-uid="Pulumi.Aws.CloudFront.Distribution.ViewerCertificate*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_ViewerCertificate" data-uid="Pulumi.Aws.CloudFront.Distribution.ViewerCertificate">ViewerCertificate</h4>
@@ -867,13 +1076,13 @@ one).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionViewerCertificate.html">DistributionViewerCertificate</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CloudFront.Outputs.DistributionViewerCertificate.html">DistributionViewerCertificate</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L393">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_WaitForDeployment_" data-uid="Pulumi.Aws.CloudFront.Distribution.WaitForDeployment*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_WaitForDeployment" data-uid="Pulumi.Aws.CloudFront.Distribution.WaitForDeployment">WaitForDeployment</h4>
@@ -896,13 +1105,13 @@ this to<code>false</code> will skip the process. Default: <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L227">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L403">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_WebAclId_" data-uid="Pulumi.Aws.CloudFront.Distribution.WebAclId*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Distribution_WebAclId" data-uid="Pulumi.Aws.CloudFront.Distribution.WebAclId">WebAclId</h4>
@@ -915,7 +1124,7 @@ region and the credentials configuring this argument must have
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; WebAclId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; WebAclId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -927,7 +1136,7 @@ region and the credentials configuring this argument must have
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -935,17 +1144,17 @@ region and the credentials configuring this argument must have
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L268">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L444">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Distribution_Get_" data-uid="Pulumi.Aws.CloudFront.Distribution.Get*"></a>
-  <h4 id="Pulumi_Aws_CloudFront_Distribution_Get_System_String_Input_System_String__Pulumi_Aws_CloudFront_DistributionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.CloudFront.Distribution.Get(System.String,Input{System.String},Pulumi.Aws.CloudFront.DistributionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DistributionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_CloudFront_Distribution_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_CloudFront_DistributionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.CloudFront.Distribution.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.CloudFront.DistributionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DistributionState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Distribution resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Distribution Get(string name, Input&lt;string&gt; id, DistributionState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Distribution Get(string name, Input&lt;string&gt; id, DistributionState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -964,7 +1173,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -976,7 +1185,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1005,7 +1214,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Distribution.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudFront/Distribution.cs/#L201" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

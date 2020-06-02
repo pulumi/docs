@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VmfsDatastore
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,12 +71,138 @@
   
   <h1 id="Pulumi_VSphere_VmfsDatastore" data-uid="Pulumi.VSphere.VmfsDatastore" class="text-break">Class VmfsDatastore
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The <code>vsphere..VmfsDatastore</code> resource can be used to create and manage VMFS
+datastores on an ESXi host or a set of hosts. The resource supports using any
+SCSI device that can generally be used in a datastore, such as local disks, or
+disks presented to a host or multiple hosts over Fibre Channel or iSCSI.
+Devices can be specified manually, or discovered using the
+<a href="/docs/providers/vsphere/d/vmfs_disks.html"><code>vsphere..getVmfsDisks</code></a> data source.</p>
+<h2 id="auto-mounting-of-datastores-within-vcenter">Auto-Mounting of Datastores Within vCenter</h2>
+<p>Note that the current behaviour of this resource will auto-mount any created
+datastores to any other host within vCenter that has access to the same disk.</p>
+<p>Example: You want to create a datastore with a iSCSI LUN that is visible on 3
+hosts in a single vSphere cluster (<code>esxi1</code>, <code>esxi2</code> and <code>esxi3</code>). When you
+create the datastore on <code>esxi1</code>, the datastore will be automatically mounted on
+<code>esxi2</code> and <code>esxi3</code>, without the need to configure the resource on either of
+those two hosts.</p>
+<p>Future versions of this resource may allow you to control the hosts that a
+datastore is mounted to, but currently, this automatic behaviour cannot be
+changed, so keep this in mind when writing your configurations and deploying
+your disks.</p>
+<h2 id="increasing-datastore-size">Increasing Datastore Size</h2>
+<p>To increase the size of a datastore, you must add additional disks to the
+<code>disks</code> attribute. Expanding the size of a datastore by increasing the size of
+an already provisioned disk is currently not supported (but may be in future
+versions of this resource).</p>
+<blockquote>
+<p><strong>NOTE:</strong> You cannot decrease the size of a datastore. If the resource
+detects disks removed from the configuration, the provider will give an error.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="addition-of-local-disks-on-a-single-host">Addition of local disks on a single host</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var datacenter = Output.Create(VSphere.GetDatacenter.InvokeAsync());
+    var esxiHost = datacenter.Apply(datacenter =&gt; Output.Create(VSphere.GetHost.InvokeAsync(new VSphere.GetHostArgs
+    {
+        DatacenterId = datacenter.Id,
+    })));
+    var datastore = new VSphere.VmfsDatastore(&amp;quot;datastore&amp;quot;, new VSphere.VmfsDatastoreArgs
+    {
+        Disks = 
+        {
+            &amp;quot;mpx.vmhba1:C0:T1:L0&amp;quot;,
+            &amp;quot;mpx.vmhba1:C0:T2:L0&amp;quot;,
+            &amp;quot;mpx.vmhba1:C0:T2:L0&amp;quot;,
+        },
+        HostSystemId = esxiHost.Apply(esxiHost =&gt; esxiHost.Id),
+    });
+}
+
+}
+</code></pre>
+<h3 id="auto-detection-of-disks-via-vspheregetvmfsdisks">Auto-detection of disks via <code>vsphere..getVmfsDisks</code></h3>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var datacenter = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+    {
+        Name = &amp;quot;dc1&amp;quot;,
+    }));
+    var esxiHost = datacenter.Apply(datacenter =&gt; Output.Create(VSphere.GetHost.InvokeAsync(new VSphere.GetHostArgs
+    {
+        DatacenterId = datacenter.Id,
+        Name = &amp;quot;esxi1&amp;quot;,
+    })));
+    var available = esxiHost.Apply(esxiHost =&gt; Output.Create(VSphere.GetVmfsDisks.InvokeAsync(new VSphere.GetVmfsDisksArgs
+    {
+        Filter = &amp;quot;naa.60a98000&amp;quot;,
+        HostSystemId = esxiHost.Id,
+        Rescan = true,
+    })));
+    var datastore = new VSphere.VmfsDatastore(&amp;quot;datastore&amp;quot;, new VSphere.VmfsDatastoreArgs
+    {
+        Disks = available.Apply(available =&gt; available.Disks),
+        Folder = &amp;quot;datastore-folder&amp;quot;,
+        HostSystemId = esxiHost.Apply(esxiHost =&gt; esxiHost.Id),
+    });
+}
+
+}
+</code></pre>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">VmfsDatastore</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">VmfsDatastore</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -87,16 +213,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L229">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore__ctor_" data-uid="Pulumi.VSphere.VmfsDatastore.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_VmfsDatastore__ctor_System_String_Pulumi_VSphere_VmfsDatastoreArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.VmfsDatastore.#ctor(System.String,Pulumi.VSphere.VmfsDatastoreArgs,System.Nullable{CustomResourceOptions})">VmfsDatastore(String, VmfsDatastoreArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_VmfsDatastore__ctor_System_String_Pulumi_VSphere_VmfsDatastoreArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.VmfsDatastore.#ctor(System.String,Pulumi.VSphere.VmfsDatastoreArgs,Pulumi.CustomResourceOptions)">VmfsDatastore(String, VmfsDatastoreArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a VmfsDatastore resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VmfsDatastore(string name, VmfsDatastoreArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public VmfsDatastore(string name, VmfsDatastoreArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +247,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -131,7 +257,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_Accessible_" data-uid="Pulumi.VSphere.VmfsDatastore.Accessible*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_Accessible" data-uid="Pulumi.VSphere.VmfsDatastore.Accessible">Accessible</h4>
@@ -153,13 +279,13 @@ some other computed attributes may be out of date.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_Capacity_" data-uid="Pulumi.VSphere.VmfsDatastore.Capacity*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_Capacity" data-uid="Pulumi.VSphere.VmfsDatastore.Capacity">Capacity</h4>
@@ -180,25 +306,23 @@ some other computed attributes may be out of date.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_CustomAttributes_" data-uid="Pulumi.VSphere.VmfsDatastore.CustomAttributes*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_CustomAttributes" data-uid="Pulumi.VSphere.VmfsDatastore.CustomAttributes">CustomAttributes</h4>
   <div class="markdown level1 summary"><p>Map of custom attribute ids to attribute
-value string to set on datastore resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.</p>
+value string to set on datastore resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; CustomAttributes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; CustomAttributes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,24 +334,24 @@ for custom attributes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_DatastoreClusterId_" data-uid="Pulumi.VSphere.VmfsDatastore.DatastoreClusterId*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_DatastoreClusterId" data-uid="Pulumi.VSphere.VmfsDatastore.DatastoreClusterId">DatastoreClusterId</h4>
-  <div class="markdown level1 summary"><p>The [managed object
-ID][docs-about-morefs] of a datastore cluster to put this datastore in.
+  <div class="markdown level1 summary"><p>The managed object
+ID of a datastore cluster to put this datastore in.
 Conflicts with <code>folder</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DatastoreClusterId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DatastoreClusterId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,13 +363,13 @@ Conflicts with <code>folder</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_Disks_" data-uid="Pulumi.VSphere.VmfsDatastore.Disks*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_Disks" data-uid="Pulumi.VSphere.VmfsDatastore.Disks">Disks</h4>
@@ -266,22 +390,28 @@ Conflicts with <code>folder</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_Folder_" data-uid="Pulumi.VSphere.VmfsDatastore.Folder*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_Folder" data-uid="Pulumi.VSphere.VmfsDatastore.Folder">Folder</h4>
-  <div class="markdown level1 summary"><p>The path to the datastore folder to put the datastore in.</p>
+  <div class="markdown level1 summary"><p>The relative path to a folder to put this datastore in.
+This is a path relative to the datacenter you are deploying the datastore to.
+Example: for the <code>dc1</code> datacenter, and a provided <code>folder</code> of <code>foo/bar</code>,
+The provider will place a datastore named <code>test</code> in a datastore folder
+located at <code>/dc1/datastore/foo/bar</code>, with the final inventory path being
+<code>/dc1/datastore/foo/bar/test</code>. Conflicts with
+<code>datastore_cluster_id</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Folder { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Folder { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -293,13 +423,13 @@ Conflicts with <code>folder</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_FreeSpace_" data-uid="Pulumi.VSphere.VmfsDatastore.FreeSpace*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_FreeSpace" data-uid="Pulumi.VSphere.VmfsDatastore.FreeSpace">FreeSpace</h4>
@@ -320,17 +450,17 @@ Conflicts with <code>folder</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_HostSystemId_" data-uid="Pulumi.VSphere.VmfsDatastore.HostSystemId*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_HostSystemId" data-uid="Pulumi.VSphere.VmfsDatastore.HostSystemId">HostSystemId</h4>
-  <div class="markdown level1 summary"><p>The [managed object ID][docs-about-morefs] of
+  <div class="markdown level1 summary"><p>The managed object ID of
 the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
 here for more info. Forces a
@@ -351,13 +481,13 @@ new resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_MaintenanceMode_" data-uid="Pulumi.VSphere.VmfsDatastore.MaintenanceMode*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_MaintenanceMode" data-uid="Pulumi.VSphere.VmfsDatastore.MaintenanceMode">MaintenanceMode</h4>
@@ -378,13 +508,13 @@ new resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L192">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_MultipleHostAccess_" data-uid="Pulumi.VSphere.VmfsDatastore.MultipleHostAccess*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_MultipleHostAccess" data-uid="Pulumi.VSphere.VmfsDatastore.MultipleHostAccess">MultipleHostAccess</h4>
@@ -406,13 +536,13 @@ been configured with access to the datastore.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L199">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_Name_" data-uid="Pulumi.VSphere.VmfsDatastore.Name*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_Name" data-uid="Pulumi.VSphere.VmfsDatastore.Name">Name</h4>
@@ -434,18 +564,17 @@ changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_Tags_" data-uid="Pulumi.VSphere.VmfsDatastore.Tags*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_Tags" data-uid="Pulumi.VSphere.VmfsDatastore.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.</p>
+  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -462,13 +591,13 @@ changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_UncommittedSpace_" data-uid="Pulumi.VSphere.VmfsDatastore.UncommittedSpace*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_UncommittedSpace" data-uid="Pulumi.VSphere.VmfsDatastore.UncommittedSpace">UncommittedSpace</h4>
@@ -490,13 +619,13 @@ potentially used by all virtual machines on this datastore.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L218">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_Url_" data-uid="Pulumi.VSphere.VmfsDatastore.Url*"></a>
   <h4 id="Pulumi_VSphere_VmfsDatastore_Url" data-uid="Pulumi.VSphere.VmfsDatastore.Url">Url</h4>
@@ -517,7 +646,7 @@ potentially used by all virtual machines on this datastore.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -525,17 +654,17 @@ potentially used by all virtual machines on this datastore.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L259">View Source</a>
   </span>
   <a id="Pulumi_VSphere_VmfsDatastore_Get_" data-uid="Pulumi.VSphere.VmfsDatastore.Get*"></a>
-  <h4 id="Pulumi_VSphere_VmfsDatastore_Get_System_String_Input_System_String__Pulumi_VSphere_VmfsDatastoreState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.VmfsDatastore.Get(System.String,Input{System.String},Pulumi.VSphere.VmfsDatastoreState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VmfsDatastoreState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_VmfsDatastore_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_VmfsDatastoreState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.VmfsDatastore.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.VmfsDatastoreState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VmfsDatastoreState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing VmfsDatastore resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static VmfsDatastore Get(string name, Input&lt;string&gt; id, VmfsDatastoreState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static VmfsDatastore Get(string name, Input&lt;string&gt; id, VmfsDatastoreState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -554,7 +683,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -566,7 +695,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -595,7 +724,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/VmfsDatastore.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/VmfsDatastore.cs/#L118" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

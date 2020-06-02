@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Pinpoint
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,6 +82,28 @@
 <p><strong>Note:</strong> All arguments including the Client ID and Client Secret will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.Pinpoint.App(&amp;quot;app&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var channel = new Aws.Pinpoint.AdmChannel(&amp;quot;channel&amp;quot;, new Aws.Pinpoint.AdmChannelArgs
+    {
+        ApplicationId = app.ApplicationId,
+        ClientId = &amp;quot;&amp;quot;,
+        ClientSecret = &amp;quot;&amp;quot;,
+        Enabled = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.AdmChannelArgs.html">AdmChannelArgs</a></h4>
       <section></section>
@@ -93,6 +115,28 @@
 <p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.Pinpoint.App(&amp;quot;app&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var apns = new Aws.Pinpoint.ApnsChannel(&amp;quot;apns&amp;quot;, new Aws.Pinpoint.ApnsChannelArgs
+    {
+        ApplicationId = app.ApplicationId,
+        Certificate = File.ReadAllText(&amp;quot;./certificate.pem&amp;quot;),
+        PrivateKey = File.ReadAllText(&amp;quot;./private_key.key&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.ApnsChannelArgs.html">ApnsChannelArgs</a></h4>
       <section></section>
@@ -104,6 +148,28 @@
 <p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.Pinpoint.App(&amp;quot;app&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var apnsSandbox = new Aws.Pinpoint.ApnsSandboxChannel(&amp;quot;apnsSandbox&amp;quot;, new Aws.Pinpoint.ApnsSandboxChannelArgs
+    {
+        ApplicationId = app.ApplicationId,
+        Certificate = File.ReadAllText(&amp;quot;./certificate.pem&amp;quot;),
+        PrivateKey = File.ReadAllText(&amp;quot;./private_key.key&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.ApnsSandboxChannelArgs.html">ApnsSandboxChannelArgs</a></h4>
       <section></section>
@@ -115,6 +181,28 @@
 <p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.Pinpoint.App(&amp;quot;app&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var apnsVoip = new Aws.Pinpoint.ApnsVoipChannel(&amp;quot;apnsVoip&amp;quot;, new Aws.Pinpoint.ApnsVoipChannelArgs
+    {
+        ApplicationId = app.ApplicationId,
+        Certificate = File.ReadAllText(&amp;quot;./certificate.pem&amp;quot;),
+        PrivateKey = File.ReadAllText(&amp;quot;./private_key.key&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.ApnsVoipChannelArgs.html">ApnsVoipChannelArgs</a></h4>
       <section></section>
@@ -126,6 +214,28 @@
 <p><strong>Note:</strong> All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.Pinpoint.App(&amp;quot;app&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var apnsVoipSandbox = new Aws.Pinpoint.ApnsVoipSandboxChannel(&amp;quot;apnsVoipSandbox&amp;quot;, new Aws.Pinpoint.ApnsVoipSandboxChannelArgs
+    {
+        ApplicationId = app.ApplicationId,
+        Certificate = File.ReadAllText(&amp;quot;./certificate.pem&amp;quot;),
+        PrivateKey = File.ReadAllText(&amp;quot;./private_key.key&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.ApnsVoipSandboxChannelArgs.html">ApnsVoipSandboxChannelArgs</a></h4>
       <section></section>
@@ -133,6 +243,30 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.App.html">App</a></h4>
       <section><p>Provides a Pinpoint App resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Pinpoint.App(&amp;quot;example&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+        Limits = new Aws.Pinpoint.Inputs.AppLimitsArgs
+        {
+            MaximumDuration = 600,
+        },
+        QuietTime = new Aws.Pinpoint.Inputs.AppQuietTimeArgs
+        {
+            End = &amp;quot;06:00&amp;quot;,
+            Start = &amp;quot;00:00&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.AppArgs.html">AppArgs</a></h4>
       <section></section>
@@ -144,6 +278,27 @@
 <p><strong>Note:</strong> All arguments including the Api Key and Secret Key will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.Pinpoint.App(&amp;quot;app&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var channel = new Aws.Pinpoint.BaiduChannel(&amp;quot;channel&amp;quot;, new Aws.Pinpoint.BaiduChannelArgs
+    {
+        ApiKey = &amp;quot;&amp;quot;,
+        ApplicationId = app.ApplicationId,
+        SecretKey = &amp;quot;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.BaiduChannelArgs.html">BaiduChannelArgs</a></h4>
       <section></section>
@@ -151,6 +306,69 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.EmailChannel.html">EmailChannel</a></h4>
       <section><p>Provides a Pinpoint Email Channel resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.Pinpoint.App(&amp;quot;app&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var identity = new Aws.Ses.DomainIdentity(&amp;quot;identity&amp;quot;, new Aws.Ses.DomainIdentityArgs
+    {
+        Domain = &amp;quot;example.com&amp;quot;,
+    });
+    var role = new Aws.Iam.Role(&amp;quot;role&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;pinpoint.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var email = new Aws.Pinpoint.EmailChannel(&amp;quot;email&amp;quot;, new Aws.Pinpoint.EmailChannelArgs
+    {
+        ApplicationId = app.ApplicationId,
+        FromAddress = &amp;quot;user@example.com&amp;quot;,
+        Identity = identity.Arn,
+        RoleArn = role.Arn,
+    });
+    var rolePolicy = new Aws.Iam.RolePolicy(&amp;quot;rolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+  &amp;quot;&amp;quot;mobileanalytics:PutEvents&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;mobileanalytics:PutItems&amp;quot;&amp;quot;
+],
+&amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+  &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+]
+}
+}
+
+&amp;quot;,
+        Role = role.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.EmailChannelArgs.html">EmailChannelArgs</a></h4>
       <section></section>
@@ -158,6 +376,68 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.EventStream.html">EventStream</a></h4>
       <section><p>Provides a Pinpoint Event Stream resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.Pinpoint.App(&amp;quot;app&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var testStream = new Aws.Kinesis.Stream(&amp;quot;testStream&amp;quot;, new Aws.Kinesis.StreamArgs
+    {
+        ShardCount = 1,
+    });
+    var testRole = new Aws.Iam.Role(&amp;quot;testRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;pinpoint.us-east-1.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var stream = new Aws.Pinpoint.EventStream(&amp;quot;stream&amp;quot;, new Aws.Pinpoint.EventStreamArgs
+    {
+        ApplicationId = app.ApplicationId,
+        DestinationStreamArn = testStream.Arn,
+        RoleArn = testRole.Arn,
+    });
+    var testRolePolicy = new Aws.Iam.RolePolicy(&amp;quot;testRolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+  &amp;quot;&amp;quot;kinesis:PutRecords&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;kinesis:DescribeStream&amp;quot;&amp;quot;
+],
+&amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+  &amp;quot;&amp;quot;arn:aws:kinesis:us-east-1:*:*/*&amp;quot;&amp;quot;
+]
+}
+}
+
+&amp;quot;,
+        Role = testRole.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.EventStreamArgs.html">EventStreamArgs</a></h4>
       <section></section>
@@ -169,6 +449,26 @@
 <p><strong>Note:</strong> Api Key argument will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.Pinpoint.App(&amp;quot;app&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var gcm = new Aws.Pinpoint.GcmChannel(&amp;quot;gcm&amp;quot;, new Aws.Pinpoint.GcmChannelArgs
+    {
+        ApiKey = &amp;quot;api_key&amp;quot;,
+        ApplicationId = app.ApplicationId,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.GcmChannelArgs.html">GcmChannelArgs</a></h4>
       <section></section>
@@ -176,6 +476,25 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.SmsChannel.html">SmsChannel</a></h4>
       <section><p>Provides a Pinpoint SMS Channel resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.Pinpoint.App(&amp;quot;app&amp;quot;, new Aws.Pinpoint.AppArgs
+    {
+    });
+    var sms = new Aws.Pinpoint.SmsChannel(&amp;quot;sms&amp;quot;, new Aws.Pinpoint.SmsChannelArgs
+    {
+        ApplicationId = app.ApplicationId,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Pinpoint.SmsChannelArgs.html">SmsChannelArgs</a></h4>
       <section></section>

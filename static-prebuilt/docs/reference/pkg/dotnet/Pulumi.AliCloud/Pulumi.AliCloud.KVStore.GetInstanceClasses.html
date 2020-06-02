@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetInstanceClasses
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,30 +78,83 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetInstanceClasses</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.KVStore.html">Pulumi.AliCloud.KVStore</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_KVStore_GetInstanceClasses_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetInstanceClasses : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetInstanceClasses</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_GetInstanceClasses_InvokeAsync_" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClasses.InvokeAsync*"></a>
-  <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClasses_InvokeAsync_Pulumi_AliCloud_KVStore_GetInstanceClassesArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClasses.InvokeAsync(Pulumi.AliCloud.KVStore.GetInstanceClassesArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetInstanceClassesArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClasses_InvokeAsync_Pulumi_AliCloud_KVStore_GetInstanceClassesArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClasses.InvokeAsync(Pulumi.AliCloud.KVStore.GetInstanceClassesArgs,Pulumi.InvokeOptions)">InvokeAsync(GetInstanceClassesArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>This data source provides the KVStore instance classes resource available info of Alibaba Cloud.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Available in v1.49.0+</p>
 </blockquote>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var resourcesZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;KVStore&amp;quot;,
+    }));
+    var resourcesInstanceClasses = resourcesZones.Apply(resourcesZones =&gt; Output.Create(AliCloud.KVStore.GetInstanceClasses.InvokeAsync(new AliCloud.KVStore.GetInstanceClassesArgs
+    {
+        Engine = &amp;quot;Redis&amp;quot;,
+        EngineVersion = &amp;quot;5.0&amp;quot;,
+        InstanceChargeType = &amp;quot;PrePaid&amp;quot;,
+        OutputFile = &amp;quot;./classes.txt&amp;quot;,
+        ZoneId = resourcesZones.Zones[0].Id,
+    })));
+    this.FirstKvstoreInstanceClass = resourcesInstanceClasses.Apply(resourcesInstanceClasses =&gt; resourcesInstanceClasses.InstanceClasses);
+}
+
+[Output(&amp;quot;firstKvstoreInstanceClass&amp;quot;)]
+public Output&amp;lt;string&gt; FirstKvstoreInstanceClass { get; set; }
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetInstanceClassesResult&gt; InvokeAsync(GetInstanceClassesArgs args, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetInstanceClassesResult&gt; InvokeAsync(GetInstanceClassesArgs args, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +172,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -135,7 +188,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.html">GetInstanceClassesResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.html">GetInstanceClassesResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -147,7 +200,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Instance
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,22 +71,50 @@
   
   <h1 id="Pulumi_OpenStack_Compute_Instance" data-uid="Pulumi.OpenStack.Compute.Instance" class="text-break">Class Instance
   </h1>
-  <div class="markdown level0 summary"><p>Manages a V2 VM instance resource within OpenStack.</p>
-<h2 id="importing-instances">Importing instances</h2>
-<p>Importing instances can be tricky, since the nova api does not offer all
-information provided at creation time for later retrieval.
-Network interface attachment order, and number and sizes of ephemeral
-disks are examples of this.</p>
-<h3 id="importing-an-instance-with-multiple-emphemeral-disks">Importing an instance with multiple emphemeral disks</h3>
-<p>The importer cannot read the emphemeral disk configuration
-of an instance, so just specify image_id as in the configuration
-of the basic instance example.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Instance</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Instance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Compute.html">Pulumi.OpenStack.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -97,16 +125,16 @@ of the basic instance example.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L232">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L227">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance__ctor_" data-uid="Pulumi.OpenStack.Compute.Instance.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_Compute_Instance__ctor_System_String_Pulumi_OpenStack_Compute_InstanceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Compute.Instance.#ctor(System.String,Pulumi.OpenStack.Compute.InstanceArgs,System.Nullable{CustomResourceOptions})">Instance(String, InstanceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Compute_Instance__ctor_System_String_Pulumi_OpenStack_Compute_InstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Compute.Instance.#ctor(System.String,Pulumi.OpenStack.Compute.InstanceArgs,Pulumi.CustomResourceOptions)">Instance(String, InstanceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Instance resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,7 +159,7 @@ of the basic instance example.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -141,7 +169,7 @@ of the basic instance example.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_AccessIpV4_" data-uid="Pulumi.OpenStack.Compute.Instance.AccessIpV4*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_AccessIpV4" data-uid="Pulumi.OpenStack.Compute.Instance.AccessIpV4">AccessIpV4</h4>
@@ -162,13 +190,13 @@ of the basic instance example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_AccessIpV6_" data-uid="Pulumi.OpenStack.Compute.Instance.AccessIpV6*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_AccessIpV6" data-uid="Pulumi.OpenStack.Compute.Instance.AccessIpV6">AccessIpV6</h4>
@@ -189,13 +217,13 @@ of the basic instance example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_AdminPass_" data-uid="Pulumi.OpenStack.Compute.Instance.AdminPass*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_AdminPass" data-uid="Pulumi.OpenStack.Compute.Instance.AdminPass">AdminPass</h4>
@@ -205,7 +233,7 @@ Changing this changes the root password on the existing server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AdminPass { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AdminPass { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,13 +245,13 @@ Changing this changes the root password on the existing server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_AllMetadata_" data-uid="Pulumi.OpenStack.Compute.Instance.AllMetadata*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_AllMetadata" data-uid="Pulumi.OpenStack.Compute.Instance.AllMetadata">AllMetadata</h4>
@@ -243,13 +271,13 @@ Changing this changes the root password on the existing server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_AllTags_" data-uid="Pulumi.OpenStack.Compute.Instance.AllTags*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_AllTags" data-uid="Pulumi.OpenStack.Compute.Instance.AllTags">AllTags</h4>
@@ -271,18 +299,19 @@ been explicitly and implicitly added.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_AvailabilityZone_" data-uid="Pulumi.OpenStack.Compute.Instance.AvailabilityZone*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_AvailabilityZone" data-uid="Pulumi.OpenStack.Compute.Instance.AvailabilityZone">AvailabilityZone</h4>
   <div class="markdown level1 summary"><p>The availability zone in which to create
-the server. Changing this creates a new server.</p>
+the server. Conflicts with <code>availability_zone_hints</code>. Changing this creates
+a new server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -299,13 +328,45 @@ the server. Changing this creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_AvailabilityZoneHints_" data-uid="Pulumi.OpenStack.Compute.Instance.AvailabilityZoneHints*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_AvailabilityZoneHints" data-uid="Pulumi.OpenStack.Compute.Instance.AvailabilityZoneHints">AvailabilityZoneHints</h4>
+  <div class="markdown level1 summary"><p>The availability zone in which to
+create the server. This argument is preferred to <code>availability_zone</code>, when
+scheduling the server on a
+<a href="https://docs.openstack.org/nova/latest/admin/availability-zones.html">particular</a>
+host or node. Conflicts with <code>availability_zone</code>. Changing this creates a
+new server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AvailabilityZoneHints { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_BlockDevices_" data-uid="Pulumi.OpenStack.Compute.Instance.BlockDevices*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_BlockDevices" data-uid="Pulumi.OpenStack.Compute.Instance.BlockDevices">BlockDevices</h4>
@@ -331,13 +392,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.html">InstanceBlockDevice</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.html">InstanceBlockDevice</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_ConfigDrive_" data-uid="Pulumi.OpenStack.Compute.Instance.ConfigDrive*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_ConfigDrive" data-uid="Pulumi.OpenStack.Compute.Instance.ConfigDrive">ConfigDrive</h4>
@@ -359,13 +420,13 @@ configure the instance. Changing this creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_FlavorId_" data-uid="Pulumi.OpenStack.Compute.Instance.FlavorId*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_FlavorId" data-uid="Pulumi.OpenStack.Compute.Instance.FlavorId">FlavorId</h4>
@@ -387,13 +448,13 @@ the desired flavor for the server. Changing this resizes the existing server.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_FlavorName_" data-uid="Pulumi.OpenStack.Compute.Instance.FlavorName*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_FlavorName" data-uid="Pulumi.OpenStack.Compute.Instance.FlavorName">FlavorName</h4>
@@ -415,13 +476,13 @@ desired flavor for the server. Changing this resizes the existing server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_ForceDelete_" data-uid="Pulumi.OpenStack.Compute.Instance.ForceDelete*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_ForceDelete" data-uid="Pulumi.OpenStack.Compute.Instance.ForceDelete">ForceDelete</h4>
@@ -444,13 +505,13 @@ deletion enabled.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_ImageId_" data-uid="Pulumi.OpenStack.Compute.Instance.ImageId*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_ImageId" data-uid="Pulumi.OpenStack.Compute.Instance.ImageId">ImageId</h4>
@@ -473,13 +534,13 @@ the desired image for the server. Changing this creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_ImageName_" data-uid="Pulumi.OpenStack.Compute.Instance.ImageName*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_ImageName" data-uid="Pulumi.OpenStack.Compute.Instance.ImageName">ImageName</h4>
@@ -502,13 +563,13 @@ desired image for the server. Changing this creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_KeyPair_" data-uid="Pulumi.OpenStack.Compute.Instance.KeyPair*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_KeyPair" data-uid="Pulumi.OpenStack.Compute.Instance.KeyPair">KeyPair</h4>
@@ -519,7 +580,7 @@ Changing this creates a new server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KeyPair { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KeyPair { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -531,13 +592,13 @@ Changing this creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_Metadata_" data-uid="Pulumi.OpenStack.Compute.Instance.Metadata*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_Metadata" data-uid="Pulumi.OpenStack.Compute.Instance.Metadata">Metadata</h4>
@@ -547,7 +608,7 @@ within the instance. Changing this updates the existing server metadata.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Metadata { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Metadata { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -559,13 +620,13 @@ within the instance. Changing this updates the existing server metadata.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_Name_" data-uid="Pulumi.OpenStack.Compute.Instance.Name*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_Name" data-uid="Pulumi.OpenStack.Compute.Instance.Name">Name</h4>
@@ -587,13 +648,13 @@ name of the network. Changing this creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_Networks_" data-uid="Pulumi.OpenStack.Compute.Instance.Networks*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_Networks" data-uid="Pulumi.OpenStack.Compute.Instance.Networks">Networks</h4>
@@ -616,13 +677,13 @@ creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceNetwork.html">InstanceNetwork</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceNetwork.html">InstanceNetwork</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_Personalities_" data-uid="Pulumi.OpenStack.Compute.Instance.Personalities*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_Personalities" data-uid="Pulumi.OpenStack.Compute.Instance.Personalities">Personalities</h4>
@@ -645,13 +706,13 @@ is described below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstancePersonality.html">InstancePersonality</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstancePersonality.html">InstancePersonality</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_PowerState_" data-uid="Pulumi.OpenStack.Compute.Instance.PowerState*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_PowerState" data-uid="Pulumi.OpenStack.Compute.Instance.PowerState">PowerState</h4>
@@ -663,7 +724,7 @@ remote-exec or files are not supported.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PowerState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PowerState { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -675,13 +736,13 @@ remote-exec or files are not supported.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_Region_" data-uid="Pulumi.OpenStack.Compute.Instance.Region*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_Region" data-uid="Pulumi.OpenStack.Compute.Instance.Region">Region</h4>
@@ -704,13 +765,13 @@ creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_SchedulerHints_" data-uid="Pulumi.OpenStack.Compute.Instance.SchedulerHints*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_SchedulerHints" data-uid="Pulumi.OpenStack.Compute.Instance.SchedulerHints">SchedulerHints</h4>
@@ -732,13 +793,13 @@ the instance should be launched. The available hints are described below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceSchedulerHint.html">InstanceSchedulerHint</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceSchedulerHint.html">InstanceSchedulerHint</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L192">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_SecurityGroups_" data-uid="Pulumi.OpenStack.Compute.Instance.SecurityGroups*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_SecurityGroups" data-uid="Pulumi.OpenStack.Compute.Instance.SecurityGroups">SecurityGroups</h4>
@@ -763,13 +824,13 @@ and not the instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_StopBeforeDestroy_" data-uid="Pulumi.OpenStack.Compute.Instance.StopBeforeDestroy*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_StopBeforeDestroy" data-uid="Pulumi.OpenStack.Compute.Instance.StopBeforeDestroy">StopBeforeDestroy</h4>
@@ -792,13 +853,13 @@ If instance doesn't stop within timeout, it will be destroyed anyway.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_Tags_" data-uid="Pulumi.OpenStack.Compute.Instance.Tags*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_Tags" data-uid="Pulumi.OpenStack.Compute.Instance.Tags">Tags</h4>
@@ -820,13 +881,13 @@ updates the existing instance tags.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L214">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_UserData_" data-uid="Pulumi.OpenStack.Compute.Instance.UserData*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_UserData" data-uid="Pulumi.OpenStack.Compute.Instance.UserData">UserData</h4>
@@ -836,7 +897,7 @@ Changing this creates a new server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserData { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -848,13 +909,13 @@ Changing this creates a new server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L221">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_VendorOptions_" data-uid="Pulumi.OpenStack.Compute.Instance.VendorOptions*"></a>
   <h4 id="Pulumi_OpenStack_Compute_Instance_VendorOptions" data-uid="Pulumi.OpenStack.Compute.Instance.VendorOptions">VendorOptions</h4>
@@ -876,7 +937,7 @@ Supported options are described below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceVendorOptions.html">InstanceVendorOptions</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceVendorOptions.html">InstanceVendorOptions</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -884,17 +945,17 @@ Supported options are described below.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L262">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L257">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_Instance_Get_" data-uid="Pulumi.OpenStack.Compute.Instance.Get*"></a>
-  <h4 id="Pulumi_OpenStack_Compute_Instance_Get_System_String_Input_System_String__Pulumi_OpenStack_Compute_InstanceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Compute.Instance.Get(System.String,Input{System.String},Pulumi.OpenStack.Compute.InstanceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, InstanceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_Compute_InstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Compute.Instance.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.Compute.InstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, InstanceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Instance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -913,7 +974,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -925,7 +986,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -954,7 +1015,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/Instance.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class URLMapPathMatcherPathRuleRouteActionCorsPolicy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,19 +78,46 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">URLMapPathMatcherPathRuleRouteActionCorsPolicy</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionCorsPolicy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class URLMapPathMatcherPathRuleRouteActionCorsPolicy : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class URLMapPathMatcherPathRuleRouteActionCorsPolicy</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L21">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionCorsPolicy_AllowCredentials" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRuleRouteActionCorsPolicy.AllowCredentials">AllowCredentials</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>In response to a preflight request, setting this to true indicates that the
+actual request can include user credentials. This translates to the Access-
+Control-Allow-Credentials header. Defaults to false.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -112,10 +139,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L25">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionCorsPolicy_AllowHeaders" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRuleRouteActionCorsPolicy.AllowHeaders">AllowHeaders</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the content for the Access-Control-Allow-Headers header.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -131,16 +159,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L29">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionCorsPolicy_AllowMethods" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRuleRouteActionCorsPolicy.AllowMethods">AllowMethods</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the content for the Access-Control-Allow-Methods header.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -156,16 +185,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionCorsPolicy_AllowOriginRegexes" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRuleRouteActionCorsPolicy.AllowOriginRegexes">AllowOriginRegexes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the regualar expression patterns that match allowed origins. For
+regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either allow_origins or allow_origin_regex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -181,16 +213,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L40">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionCorsPolicy_AllowOrigins" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRuleRouteActionCorsPolicy.AllowOrigins">AllowOrigins</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the list of origins that will be allowed to do CORS requests. An
+origin is allowed if it matches either allow_origins or allow_origin_regex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -206,16 +240,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L45">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionCorsPolicy_Disabled" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRuleRouteActionCorsPolicy.Disabled">Disabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If true, specifies the CORS policy is disabled.
+which indicates that the CORS policy is in effect. Defaults to false.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -237,10 +273,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionCorsPolicy_ExposeHeaders" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRuleRouteActionCorsPolicy.ExposeHeaders">ExposeHeaders</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the content for the Access-Control-Expose-Headers header.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -256,16 +293,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L54">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionCorsPolicy_MaxAge" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRuleRouteActionCorsPolicy.MaxAge">MaxAge</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies how long the results of a preflight request can be cached. This
+translates to the content for the Access-Control-Max-Age header.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -293,7 +332,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionCorsPolicy.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Route
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,12 +79,95 @@ defined in-line. At this time you cannot use a Route Table with in-line routes
 in conjunction with any Route resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var route = new Aws.Ec2.Route(&amp;quot;route&amp;quot;, new Aws.Ec2.RouteArgs
+    {
+        RouteTableId = &amp;quot;rtb-4fbb3ac4&amp;quot;,
+        DestinationCidrBlock = &amp;quot;10.0.1.0/22&amp;quot;,
+        VpcPeeringConnectionId = &amp;quot;pcx-45ff3dc1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-ipv6-usage">Example IPv6 Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var vpc = new Aws.Ec2.Vpc(&amp;quot;vpc&amp;quot;, new Aws.Ec2.VpcArgs
+    {
+        AssignGeneratedIpv6CidrBlock = true,
+        CidrBlock = &amp;quot;10.1.0.0/16&amp;quot;,
+    });
+    var egress = new Aws.Ec2.EgressOnlyInternetGateway(&amp;quot;egress&amp;quot;, new Aws.Ec2.EgressOnlyInternetGatewayArgs
+    {
+        VpcId = vpc.Id,
+    });
+    var route = new Aws.Ec2.Route(&amp;quot;route&amp;quot;, new Aws.Ec2.RouteArgs
+    {
+        DestinationIpv6CidrBlock = &amp;quot;::/0&amp;quot;,
+        EgressOnlyGatewayId = egress.Id,
+        RouteTableId = &amp;quot;rtb-4fbb3ac4&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Route</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Route</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -95,16 +178,16 @@ a conflict of rule settings and will overwrite rules.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route__ctor_" data-uid="Pulumi.Aws.Ec2.Route.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_Route__ctor_System_String_Pulumi_Aws_Ec2_RouteArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.Route.#ctor(System.String,Pulumi.Aws.Ec2.RouteArgs,System.Nullable{CustomResourceOptions})">Route(String, RouteArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2_Route__ctor_System_String_Pulumi_Aws_Ec2_RouteArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.Route.#ctor(System.String,Pulumi.Aws.Ec2.RouteArgs,Pulumi.CustomResourceOptions)">Route(String, RouteArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Route resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Route(string name, RouteArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Route(string name, RouteArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,7 +212,7 @@ a conflict of rule settings and will overwrite rules.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -139,7 +222,7 @@ a conflict of rule settings and will overwrite rules.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_DestinationCidrBlock_" data-uid="Pulumi.Aws.Ec2.Route.DestinationCidrBlock*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_DestinationCidrBlock" data-uid="Pulumi.Aws.Ec2.Route.DestinationCidrBlock">DestinationCidrBlock</h4>
@@ -148,7 +231,7 @@ a conflict of rule settings and will overwrite rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DestinationCidrBlock { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DestinationCidrBlock { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,13 +243,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_DestinationIpv6CidrBlock_" data-uid="Pulumi.Aws.Ec2.Route.DestinationIpv6CidrBlock*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_DestinationIpv6CidrBlock" data-uid="Pulumi.Aws.Ec2.Route.DestinationIpv6CidrBlock">DestinationIpv6CidrBlock</h4>
@@ -175,7 +258,7 @@ a conflict of rule settings and will overwrite rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DestinationIpv6CidrBlock { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DestinationIpv6CidrBlock { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,13 +270,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_DestinationPrefixListId_" data-uid="Pulumi.Aws.Ec2.Route.DestinationPrefixListId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_DestinationPrefixListId" data-uid="Pulumi.Aws.Ec2.Route.DestinationPrefixListId">DestinationPrefixListId</h4>
@@ -213,13 +296,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_EgressOnlyGatewayId_" data-uid="Pulumi.Aws.Ec2.Route.EgressOnlyGatewayId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_EgressOnlyGatewayId" data-uid="Pulumi.Aws.Ec2.Route.EgressOnlyGatewayId">EgressOnlyGatewayId</h4>
@@ -240,13 +323,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_GatewayId_" data-uid="Pulumi.Aws.Ec2.Route.GatewayId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_GatewayId" data-uid="Pulumi.Aws.Ec2.Route.GatewayId">GatewayId</h4>
@@ -267,13 +350,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_InstanceId_" data-uid="Pulumi.Aws.Ec2.Route.InstanceId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_InstanceId" data-uid="Pulumi.Aws.Ec2.Route.InstanceId">InstanceId</h4>
@@ -294,13 +377,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_InstanceOwnerId_" data-uid="Pulumi.Aws.Ec2.Route.InstanceOwnerId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_InstanceOwnerId" data-uid="Pulumi.Aws.Ec2.Route.InstanceOwnerId">InstanceOwnerId</h4>
@@ -320,13 +403,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_NatGatewayId_" data-uid="Pulumi.Aws.Ec2.Route.NatGatewayId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_NatGatewayId" data-uid="Pulumi.Aws.Ec2.Route.NatGatewayId">NatGatewayId</h4>
@@ -347,13 +430,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_NetworkInterfaceId_" data-uid="Pulumi.Aws.Ec2.Route.NetworkInterfaceId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_NetworkInterfaceId" data-uid="Pulumi.Aws.Ec2.Route.NetworkInterfaceId">NetworkInterfaceId</h4>
@@ -374,13 +457,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_Origin_" data-uid="Pulumi.Aws.Ec2.Route.Origin*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_Origin" data-uid="Pulumi.Aws.Ec2.Route.Origin">Origin</h4>
@@ -400,13 +483,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_RouteTableId_" data-uid="Pulumi.Aws.Ec2.Route.RouteTableId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_RouteTableId" data-uid="Pulumi.Aws.Ec2.Route.RouteTableId">RouteTableId</h4>
@@ -427,13 +510,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_State_" data-uid="Pulumi.Aws.Ec2.Route.State*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_State" data-uid="Pulumi.Aws.Ec2.Route.State">State</h4>
@@ -453,13 +536,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_TransitGatewayId_" data-uid="Pulumi.Aws.Ec2.Route.TransitGatewayId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_TransitGatewayId" data-uid="Pulumi.Aws.Ec2.Route.TransitGatewayId">TransitGatewayId</h4>
@@ -468,7 +551,7 @@ a conflict of rule settings and will overwrite rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TransitGatewayId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TransitGatewayId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -480,13 +563,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_VpcPeeringConnectionId_" data-uid="Pulumi.Aws.Ec2.Route.VpcPeeringConnectionId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Route_VpcPeeringConnectionId" data-uid="Pulumi.Aws.Ec2.Route.VpcPeeringConnectionId">VpcPeeringConnectionId</h4>
@@ -495,7 +578,7 @@ a conflict of rule settings and will overwrite rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VpcPeeringConnectionId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VpcPeeringConnectionId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -507,7 +590,7 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -515,17 +598,17 @@ a conflict of rule settings and will overwrite rules.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Route_Get_" data-uid="Pulumi.Aws.Ec2.Route.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_Route_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_RouteState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.Route.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.RouteState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RouteState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2_Route_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_RouteState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.Route.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.RouteState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RouteState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Route resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Route Get(string name, Input&lt;string&gt; id, RouteState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Route Get(string name, Input&lt;string&gt; id, RouteState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -544,7 +627,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -556,7 +639,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -585,7 +668,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Route.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/Route.cs/#L74" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

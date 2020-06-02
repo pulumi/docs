@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetAliases
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,30 +78,79 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetAliases</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Kms.html">Pulumi.AliCloud.Kms</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_Kms_GetAliases_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetAliases : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetAliases</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Kms/GetAliases.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/GetAliases.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Kms_GetAliases_InvokeAsync_" data-uid="Pulumi.AliCloud.Kms.GetAliases.InvokeAsync*"></a>
-  <h4 id="Pulumi_AliCloud_Kms_GetAliases_InvokeAsync_Pulumi_AliCloud_Kms_GetAliasesArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.AliCloud.Kms.GetAliases.InvokeAsync(Pulumi.AliCloud.Kms.GetAliasesArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetAliasesArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Kms_GetAliases_InvokeAsync_Pulumi_AliCloud_Kms_GetAliasesArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Kms.GetAliases.InvokeAsync(Pulumi.AliCloud.Kms.GetAliasesArgs,Pulumi.InvokeOptions)">InvokeAsync(GetAliasesArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>This data source provides a list of KMS aliases in an Alibaba Cloud account according to the specified filters.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Available in v1.79.0+.</p>
 </blockquote>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var kmsAliases = Output.Create(AliCloud.Kms.GetAliases.InvokeAsync(new AliCloud.Kms.GetAliasesArgs
+    {
+        Ids = 
+        {
+            &amp;quot;d89e8a53-b708-41aa-8c67-6873axxx&amp;quot;,
+        },
+        NameRegex = &amp;quot;alias/tf-testKmsAlias_123&amp;quot;,
+    }));
+    this.FirstKeyId = data.Alicloud_kms_keys.Kms_keys_ds.Keys[0].Id;
+}
+
+[Output(&amp;quot;firstKeyId&amp;quot;)]
+public Output&amp;lt;string&gt; FirstKeyId { get; set; }
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetAliasesResult&gt; InvokeAsync(GetAliasesArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetAliasesResult&gt; InvokeAsync(GetAliasesArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +168,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -135,7 +184,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Kms.GetAliasesResult.html">GetAliasesResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Kms.GetAliasesResult.html">GetAliasesResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -147,7 +196,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Kms/GetAliases.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/GetAliases.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

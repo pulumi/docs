@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetUsersArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GetUsersArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html">InvokeArgs</a></div>
+    <div class="level3"><span class="xref">GetUsersArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs_Empty">InvokeArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Ram.html">Pulumi.AliCloud.Ram</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/GetUsers.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/GetUsers.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_GetUsersArgs__ctor_" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.#ctor*"></a>
   <h4 id="Pulumi_AliCloud_Ram_GetUsersArgs__ctor" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.#ctor">GetUsersArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/GetUsers.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/GetUsers.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_GetUsersArgs_GroupName_" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.GroupName*"></a>
   <h4 id="Pulumi_AliCloud_Ram_GetUsersArgs_GroupName" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.GroupName">GroupName</h4>
@@ -109,7 +138,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? GroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string GroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,17 +150,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/GetUsers.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/GetUsers.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_GetUsersArgs_Ids_" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.Ids*"></a>
   <h4 id="Pulumi_AliCloud_Ram_GetUsersArgs_Ids" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.Ids">Ids</h4>
-  <div class="markdown level1 summary"><p>A list of ram user IDs.</p>
+  <div class="markdown level1 summary"><ul>
+<li>A list of ram user IDs.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -148,25 +179,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/GetUsers.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/GetUsers.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_GetUsersArgs_NameRegex_" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.NameRegex*"></a>
   <h4 id="Pulumi_AliCloud_Ram_GetUsersArgs_NameRegex" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.NameRegex">NameRegex</h4>
   <div class="markdown level1 summary"><p>A regex string to filter resulting users by their names.</p>
-<ul>
-<li><code>ids</code> (Optional, Available 1.53.0+) - A list of ram user IDs.</li>
-</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? NameRegex { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string NameRegex { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,13 +206,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/GetUsers.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/GetUsers.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_GetUsersArgs_OutputFile_" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.OutputFile*"></a>
   <h4 id="Pulumi_AliCloud_Ram_GetUsersArgs_OutputFile" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.OutputFile">OutputFile</h4>
@@ -192,7 +220,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? OutputFile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string OutputFile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +232,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/GetUsers.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/GetUsers.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_GetUsersArgs_PolicyName_" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.PolicyName*"></a>
   <h4 id="Pulumi_AliCloud_Ram_GetUsersArgs_PolicyName" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.PolicyName">PolicyName</h4>
@@ -219,7 +247,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? PolicyName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string PolicyName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +259,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/GetUsers.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/GetUsers.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_GetUsersArgs_PolicyType_" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.PolicyType*"></a>
   <h4 id="Pulumi_AliCloud_Ram_GetUsersArgs_PolicyType" data-uid="Pulumi.AliCloud.Ram.GetUsersArgs.PolicyType">PolicyType</h4>
@@ -246,7 +274,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? PolicyType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string PolicyType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,7 +286,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -270,7 +298,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/GetUsers.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/GetUsers.cs/#L53" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

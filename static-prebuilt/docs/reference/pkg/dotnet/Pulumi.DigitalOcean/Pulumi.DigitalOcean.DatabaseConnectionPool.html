@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatabaseConnectionPool
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,79 @@
   <h1 id="Pulumi_DigitalOcean_DatabaseConnectionPool" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool" class="text-break">Class DatabaseConnectionPool
   </h1>
   <div class="markdown level0 summary"><p>Provides a DigitalOcean database connection pool resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-new-postgresql-database-connection-pool">Create a new PostgreSQL database connection pool</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var postgres_example = new DigitalOcean.DatabaseCluster(&amp;quot;postgres-example&amp;quot;, new DigitalOcean.DatabaseClusterArgs
+    {
+        Engine = &amp;quot;pg&amp;quot;,
+        Version = &amp;quot;11&amp;quot;,
+        Size = &amp;quot;db-s-1vcpu-1gb&amp;quot;,
+        Region = &amp;quot;nyc1&amp;quot;,
+        NodeCount = 1,
+    });
+    var pool_01 = new DigitalOcean.DatabaseConnectionPool(&amp;quot;pool-01&amp;quot;, new DigitalOcean.DatabaseConnectionPoolArgs
+    {
+        ClusterId = postgres_example.Id,
+        Mode = &amp;quot;transaction&amp;quot;,
+        Size = 20,
+        DbName = &amp;quot;defaultdb&amp;quot;,
+        User = &amp;quot;doadmin&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DatabaseConnectionPool</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">DatabaseConnectionPool</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
@@ -88,16 +155,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool__ctor_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.#ctor*"></a>
-  <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool__ctor_System_String_Pulumi_DigitalOcean_DatabaseConnectionPoolArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.#ctor(System.String,Pulumi.DigitalOcean.DatabaseConnectionPoolArgs,System.Nullable{CustomResourceOptions})">DatabaseConnectionPool(String, DatabaseConnectionPoolArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool__ctor_System_String_Pulumi_DigitalOcean_DatabaseConnectionPoolArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.#ctor(System.String,Pulumi.DigitalOcean.DatabaseConnectionPoolArgs,Pulumi.CustomResourceOptions)">DatabaseConnectionPool(String, DatabaseConnectionPoolArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a DatabaseConnectionPool resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DatabaseConnectionPool(string name, DatabaseConnectionPoolArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public DatabaseConnectionPool(string name, DatabaseConnectionPoolArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +189,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +199,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_ClusterId_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.ClusterId*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_ClusterId" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.ClusterId">ClusterId</h4>
@@ -153,13 +220,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_DbName_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.DbName*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_DbName" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.DbName">DbName</h4>
@@ -180,13 +247,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_Host_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Host*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_Host" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Host">Host</h4>
@@ -207,13 +274,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_Mode_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Mode*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_Mode" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Mode">Mode</h4>
@@ -234,13 +301,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_Name_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Name*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_Name" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Name">Name</h4>
@@ -261,13 +328,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_Password_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Password*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_Password" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Password">Password</h4>
@@ -288,13 +355,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_Port_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Port*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_Port" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Port">Port</h4>
@@ -315,13 +382,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_PrivateHost_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.PrivateHost*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_PrivateHost" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.PrivateHost">PrivateHost</h4>
@@ -342,13 +409,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_PrivateUri_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.PrivateUri*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_PrivateUri" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.PrivateUri">PrivateUri</h4>
@@ -369,13 +436,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_Size_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Size*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_Size" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Size">Size</h4>
@@ -396,13 +463,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_Uri_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Uri*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_Uri" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Uri">Uri</h4>
@@ -423,13 +490,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_User_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.User*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_User" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.User">User</h4>
@@ -450,7 +517,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -458,17 +525,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseConnectionPool_Get_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Get*"></a>
-  <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_Get_System_String_Input_System_String__Pulumi_DigitalOcean_DatabaseConnectionPoolState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Get(System.String,Input{System.String},Pulumi.DigitalOcean.DatabaseConnectionPoolState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DatabaseConnectionPoolState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_DigitalOcean_DatabaseConnectionPool_Get_System_String_Pulumi_Input_System_String__Pulumi_DigitalOcean_DatabaseConnectionPoolState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.DigitalOcean.DatabaseConnectionPool.Get(System.String,Pulumi.Input{System.String},Pulumi.DigitalOcean.DatabaseConnectionPoolState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DatabaseConnectionPoolState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing DatabaseConnectionPool resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DatabaseConnectionPool Get(string name, Input&lt;string&gt; id, DatabaseConnectionPoolState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static DatabaseConnectionPool Get(string name, Input&lt;string&gt; id, DatabaseConnectionPoolState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -487,7 +554,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -499,7 +566,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -528,7 +595,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseConnectionPool.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseConnectionPool.cs/#L48" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

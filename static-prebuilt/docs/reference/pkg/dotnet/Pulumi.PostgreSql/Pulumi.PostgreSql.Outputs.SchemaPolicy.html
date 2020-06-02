@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SchemaPolicy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SchemaPolicy</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.PostgreSql.Outputs.html">Pulumi.PostgreSql.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.PostgreSql.dll</h6>
   <h5 id="Pulumi_PostgreSql_Outputs_SchemaPolicy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class SchemaPolicy : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class SchemaPolicy</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Outputs/SchemaPolicy.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Outputs/SchemaPolicy.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_PostgreSql_Outputs_SchemaPolicy_Create" data-uid="Pulumi.PostgreSql.Outputs.SchemaPolicy.Create">Create</h4>
   <div class="markdown level1 summary"><p>Should the specified ROLE have CREATE privileges to the specified SCHEMA.</p>
@@ -113,7 +137,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Outputs/SchemaPolicy.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Outputs/SchemaPolicy.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_PostgreSql_Outputs_SchemaPolicy_CreateWithGrant" data-uid="Pulumi.PostgreSql.Outputs.SchemaPolicy.CreateWithGrant">CreateWithGrant</h4>
   <div class="markdown level1 summary"><p>Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.</p>
@@ -139,7 +163,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Outputs/SchemaPolicy.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Outputs/SchemaPolicy.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_PostgreSql_Outputs_SchemaPolicy_Role" data-uid="Pulumi.PostgreSql.Outputs.SchemaPolicy.Role">Role</h4>
   <div class="markdown level1 summary"><p>The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the <a href="https://www.postgresql.org/docs/current/static/sql-grant.html"><code>PUBLIC</code> role</a>.</p>
@@ -147,7 +171,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Role</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Role</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Outputs/SchemaPolicy.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Outputs/SchemaPolicy.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_PostgreSql_Outputs_SchemaPolicy_Usage" data-uid="Pulumi.PostgreSql.Outputs.SchemaPolicy.Usage">Usage</h4>
   <div class="markdown level1 summary"><p>Should the specified ROLE have USAGE privileges to the specified SCHEMA.</p>
@@ -191,7 +215,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Outputs/SchemaPolicy.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Outputs/SchemaPolicy.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_PostgreSql_Outputs_SchemaPolicy_UsageWithGrant" data-uid="Pulumi.PostgreSql.Outputs.SchemaPolicy.UsageWithGrant">UsageWithGrant</h4>
   <div class="markdown level1 summary"><p>Should the specified ROLE have USAGE privileges to the specified SCHEMA and the ability to GRANT the USAGE privilege to other ROLEs.</p>
@@ -223,7 +247,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Outputs/SchemaPolicy.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Outputs/SchemaPolicy.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

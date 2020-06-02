@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Firestore
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,6 +86,41 @@ field indexes.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/firestore/docs/query-data/indexing">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---firestore-index-basic">Example Usage - Firestore Index Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_index = new Gcp.Firestore.Index(&amp;quot;my-index&amp;quot;, new Gcp.Firestore.IndexArgs
+    {
+        Collection = &amp;quot;chatrooms&amp;quot;,
+        Fields = 
+        {
+            new Gcp.Firestore.Inputs.IndexFieldArgs
+            {
+                FieldPath = &amp;quot;name&amp;quot;,
+                Order = &amp;quot;ASCENDING&amp;quot;,
+            },
+            new Gcp.Firestore.Inputs.IndexFieldArgs
+            {
+                FieldPath = &amp;quot;description&amp;quot;,
+                Order = &amp;quot;DESCENDING&amp;quot;,
+            },
+            new Gcp.Firestore.Inputs.IndexFieldArgs
+            {
+                FieldPath = &amp;quot;__name__&amp;quot;,
+                Order = &amp;quot;DESCENDING&amp;quot;,
+            },
+        },
+        Project = &amp;quot;my-project-name&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Firestore.IndexArgs.html">IndexArgs</a></h4>
       <section></section>

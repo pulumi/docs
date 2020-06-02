@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SubnetPoolArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SubnetPoolArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">SubnetPoolArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Networking.html">Pulumi.OpenStack.Networking</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L338">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L396">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs__ctor_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs__ctor" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.#ctor">SubnetPoolArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L267">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_AddressScopeId_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.AddressScopeId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_AddressScopeId" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.AddressScopeId">AddressScopeId</h4>
@@ -111,7 +140,7 @@ subnetpool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AddressScopeId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AddressScopeId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,13 +152,13 @@ subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L218">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L276">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_DefaultPrefixlen_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.DefaultPrefixlen*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_DefaultPrefixlen" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.DefaultPrefixlen">DefaultPrefixlen</h4>
@@ -141,7 +170,7 @@ subnetpool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DefaultPrefixlen { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DefaultPrefixlen { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +182,13 @@ subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L226">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L284">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_DefaultQuota_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.DefaultQuota*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_DefaultQuota" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.DefaultQuota">DefaultQuota</h4>
@@ -170,7 +199,7 @@ default quota of the existing subnetpool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DefaultQuota { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DefaultQuota { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,13 +211,13 @@ default quota of the existing subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L233">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L291">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Description_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Description*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Description" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Description">Description</h4>
@@ -198,7 +227,7 @@ Changing this updates the description of the existing subnetpool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,13 +239,13 @@ Changing this updates the description of the existing subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L239">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L297">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_IpVersion_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.IpVersion*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_IpVersion" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.IpVersion">IpVersion</h4>
@@ -225,7 +254,7 @@ Changing this updates the description of the existing subnetpool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? IpVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; IpVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +266,13 @@ Changing this updates the description of the existing subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L305">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_IsDefault_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.IsDefault*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_IsDefault" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.IsDefault">IsDefault</h4>
@@ -254,7 +283,7 @@ subnetpool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IsDefault { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IsDefault { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -266,13 +295,13 @@ subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L314">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_MaxPrefixlen_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.MaxPrefixlen*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_MaxPrefixlen" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.MaxPrefixlen">MaxPrefixlen</h4>
@@ -284,7 +313,7 @@ subnetpool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxPrefixlen { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxPrefixlen { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -296,13 +325,13 @@ subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L264">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L322">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_MinPrefixlen_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.MinPrefixlen*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_MinPrefixlen" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.MinPrefixlen">MinPrefixlen</h4>
@@ -313,7 +342,7 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MinPrefixlen { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MinPrefixlen { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -325,13 +354,13 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L271">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L329">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Name_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Name*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Name" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Name">Name</h4>
@@ -341,7 +370,7 @@ the existing subnetpool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -353,13 +382,13 @@ the existing subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L284">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L342">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Prefixes_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Prefixes*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Prefixes" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Prefixes">Prefixes</h4>
@@ -384,13 +413,13 @@ of the existing subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L294">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L352">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_ProjectId_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.ProjectId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_ProjectId" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.ProjectId">ProjectId</h4>
@@ -400,7 +429,7 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProjectId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ProjectId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -412,13 +441,13 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L303">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L361">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Region_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Region*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Region" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Region">Region</h4>
@@ -430,7 +459,7 @@ subnetpool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -442,13 +471,13 @@ subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L311">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L369">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Shared_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Shared*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Shared" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Shared">Shared</h4>
@@ -459,7 +488,7 @@ subnetpool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Shared { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Shared { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -471,13 +500,13 @@ subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L320">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L378">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Tags_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Tags*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_Tags" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.Tags">Tags</h4>
@@ -498,13 +527,13 @@ subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L332">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L390">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_SubnetPoolArgs_ValueSpecs_" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.ValueSpecs*"></a>
   <h4 id="Pulumi_OpenStack_Networking_SubnetPoolArgs_ValueSpecs" data-uid="Pulumi.OpenStack.Networking.SubnetPoolArgs.ValueSpecs">ValueSpecs</h4>
@@ -525,7 +554,7 @@ subnetpool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -537,7 +566,7 @@ subnetpool.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/SubnetPool.cs/#L202" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/SubnetPool.cs/#L260" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

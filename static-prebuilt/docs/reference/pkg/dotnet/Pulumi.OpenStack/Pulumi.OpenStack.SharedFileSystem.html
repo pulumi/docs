@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.SharedFileSystem
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -101,19 +101,48 @@
       <h4><a class="xref" href="Pulumi.OpenStack.SharedFileSystem.GetSnapshotResult.html">GetSnapshotResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.SharedFileSystem.SecurityService.html">SecurityService</a></h4>
-      <section><p>Use this resource to configure a security service.</p>
-<p>A security service stores configuration information for clients for
-authentication and authorization (AuthN/AuthZ). For example, a share server
-will be the client for an existing service such as LDAP, Kerberos, or
-Microsoft Active Directory.</p>
-<p>Minimum supported Manila microversion is 2.7.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.SharedFileSystem.SecurityServiceArgs.html">SecurityServiceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.SharedFileSystem.SecurityServiceState.html">SecurityServiceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.SharedFileSystem.Share.html">Share</a></h4>
       <section><p>Use this resource to configure a share.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.199.0/24&amp;quot;,
+        IpVersion = 4,
+        NetworkId = network1.Id,
+    });
+    var sharenetwork1 = new OpenStack.SharedFileSystem.ShareNetwork(&amp;quot;sharenetwork1&amp;quot;, new OpenStack.SharedFileSystem.ShareNetworkArgs
+    {
+        Description = &amp;quot;test share network with security services&amp;quot;,
+        NeutronNetId = network1.Id,
+        NeutronSubnetId = subnet1.Id,
+    });
+    var share1 = new OpenStack.SharedFileSystem.Share(&amp;quot;share1&amp;quot;, new OpenStack.SharedFileSystem.ShareArgs
+    {
+        Description = &amp;quot;test share description&amp;quot;,
+        ShareNetworkId = sharenetwork1.Id,
+        ShareProto = &amp;quot;NFS&amp;quot;,
+        Size = 1,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.SharedFileSystem.ShareAccess.html">ShareAccess</a></h4>
       <section></section>
@@ -124,10 +153,7 @@ Microsoft Active Directory.</p>
       <h4><a class="xref" href="Pulumi.OpenStack.SharedFileSystem.ShareArgs.html">ShareArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.SharedFileSystem.ShareNetwork.html">ShareNetwork</a></h4>
-      <section><p>Use this resource to configure a share network.</p>
-<p>A share network stores network information that share servers can use when
-shares are created.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.SharedFileSystem.ShareNetworkArgs.html">ShareNetworkArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.SharedFileSystem.ShareNetworkState.html">ShareNetworkState</a></h4>

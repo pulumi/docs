@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Project
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -74,12 +74,66 @@
   <div class="markdown level0 summary"><p>Manages a V3 Project resource within OpenStack Keystone.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var project1 = new OpenStack.Identity.Project(&amp;quot;project1&amp;quot;, new OpenStack.Identity.ProjectArgs
+    {
+        Description = &amp;quot;A project&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Project</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Project</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Identity.html">Pulumi.OpenStack.Identity</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -90,16 +144,16 @@ this resource.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/Project.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/Project.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_Project__ctor_" data-uid="Pulumi.OpenStack.Identity.Project.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_Identity_Project__ctor_System_String_Pulumi_OpenStack_Identity_ProjectArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Identity.Project.#ctor(System.String,Pulumi.OpenStack.Identity.ProjectArgs,System.Nullable{CustomResourceOptions})">Project(String, ProjectArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Identity_Project__ctor_System_String_Pulumi_OpenStack_Identity_ProjectArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Identity.Project.#ctor(System.String,Pulumi.OpenStack.Identity.ProjectArgs,Pulumi.CustomResourceOptions)">Project(String, ProjectArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Project resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Project(string name, ProjectArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Project(string name, ProjectArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +178,7 @@ this resource.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -134,7 +188,7 @@ this resource.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/Project.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/Project.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_Project_Description_" data-uid="Pulumi.OpenStack.Identity.Project.Description*"></a>
   <h4 id="Pulumi_OpenStack_Identity_Project_Description" data-uid="Pulumi.OpenStack.Identity.Project.Description">Description</h4>
@@ -143,7 +197,7 @@ this resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,13 +209,13 @@ this resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/Project.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/Project.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_Project_DomainId_" data-uid="Pulumi.OpenStack.Identity.Project.DomainId*"></a>
   <h4 id="Pulumi_OpenStack_Identity_Project_DomainId" data-uid="Pulumi.OpenStack.Identity.Project.DomainId">DomainId</h4>
@@ -182,13 +236,13 @@ this resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/Project.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/Project.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_Project_Enabled_" data-uid="Pulumi.OpenStack.Identity.Project.Enabled*"></a>
   <h4 id="Pulumi_OpenStack_Identity_Project_Enabled" data-uid="Pulumi.OpenStack.Identity.Project.Enabled">Enabled</h4>
@@ -210,13 +264,13 @@ values are <code>true</code> and <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/Project.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/Project.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_Project_IsDomain_" data-uid="Pulumi.OpenStack.Identity.Project.IsDomain*"></a>
   <h4 id="Pulumi_OpenStack_Identity_Project_IsDomain" data-uid="Pulumi.OpenStack.Identity.Project.IsDomain">IsDomain</h4>
@@ -238,13 +292,13 @@ are <code>true</code> and <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/Project.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/Project.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_Project_Name_" data-uid="Pulumi.OpenStack.Identity.Project.Name*"></a>
   <h4 id="Pulumi_OpenStack_Identity_Project_Name" data-uid="Pulumi.OpenStack.Identity.Project.Name">Name</h4>
@@ -265,13 +319,13 @@ are <code>true</code> and <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/Project.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/Project.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_Project_ParentId_" data-uid="Pulumi.OpenStack.Identity.Project.ParentId*"></a>
   <h4 id="Pulumi_OpenStack_Identity_Project_ParentId" data-uid="Pulumi.OpenStack.Identity.Project.ParentId">ParentId</h4>
@@ -292,19 +346,19 @@ are <code>true</code> and <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/Project.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/Project.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_Project_Region_" data-uid="Pulumi.OpenStack.Identity.Project.Region*"></a>
   <h4 id="Pulumi_OpenStack_Identity_Project_Region" data-uid="Pulumi.OpenStack.Identity.Project.Region">Region</h4>
   <div class="markdown level1 summary"><p>The region in which to obtain the V3 Keystone client.
 If omitted, the <code>region</code> argument of the provider is used. Changing this
-creates a new User.</p>
+creates a new project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -321,7 +375,35 @@ creates a new User.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/Project.cs/#L91">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Identity_Project_Tags_" data-uid="Pulumi.OpenStack.Identity.Project.Tags*"></a>
+  <h4 id="Pulumi_OpenStack_Identity_Project_Tags" data-uid="Pulumi.OpenStack.Identity.Project.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>Tags for the project. Changing this updates the existing
+project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -329,17 +411,17 @@ creates a new User.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/Project.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/Project.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_Project_Get_" data-uid="Pulumi.OpenStack.Identity.Project.Get*"></a>
-  <h4 id="Pulumi_OpenStack_Identity_Project_Get_System_String_Input_System_String__Pulumi_OpenStack_Identity_ProjectState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Identity.Project.Get(System.String,Input{System.String},Pulumi.OpenStack.Identity.ProjectState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ProjectState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Identity_Project_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_Identity_ProjectState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Identity.Project.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.Identity.ProjectState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ProjectState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Project resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Project Get(string name, Input&lt;string&gt; id, ProjectState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Project Get(string name, Input&lt;string&gt; id, ProjectState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -358,7 +440,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -370,7 +452,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -399,7 +481,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/Project.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/Project.cs/#L39" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

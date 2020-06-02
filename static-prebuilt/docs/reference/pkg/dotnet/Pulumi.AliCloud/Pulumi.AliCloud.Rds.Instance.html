@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Instance
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -74,12 +74,91 @@
   <div class="markdown level0 summary"><p>Provides an RDS instance resource. A DB instance is an isolated database
 environment in the cloud. A DB instance can contain multiple user-created
 databases.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-rds-mysql-instance">Create a RDS MySQL instance</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;dbInstanceconfig&amp;quot;;
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;Rds&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new AliCloud.Rds.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.Rds.InstanceArgs
+    {
+        Engine = &amp;quot;MySQL&amp;quot;,
+        EngineVersion = &amp;quot;5.6&amp;quot;,
+        InstanceChargeType = &amp;quot;Postpaid&amp;quot;,
+        InstanceName = name,
+        InstanceStorage = &amp;quot;30&amp;quot;,
+        InstanceType = &amp;quot;rds.mysql.s2.large&amp;quot;,
+        MonitoringPeriod = &amp;quot;60&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Instance</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Instance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Rds.html">Pulumi.AliCloud.Rds</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -90,16 +169,16 @@ databases.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L245">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance__ctor_" data-uid="Pulumi.AliCloud.Rds.Instance.#ctor*"></a>
-  <h4 id="Pulumi_AliCloud_Rds_Instance__ctor_System_String_Pulumi_AliCloud_Rds_InstanceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Rds.Instance.#ctor(System.String,Pulumi.AliCloud.Rds.InstanceArgs,System.Nullable{CustomResourceOptions})">Instance(String, InstanceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Rds_Instance__ctor_System_String_Pulumi_AliCloud_Rds_InstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Rds.Instance.#ctor(System.String,Pulumi.AliCloud.Rds.InstanceArgs,Pulumi.CustomResourceOptions)">Instance(String, InstanceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Instance resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +203,7 @@ databases.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -134,7 +213,7 @@ databases.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_AutoRenew_" data-uid="Pulumi.AliCloud.Rds.Instance.AutoRenew*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_AutoRenew" data-uid="Pulumi.AliCloud.Rds.Instance.AutoRenew">AutoRenew</h4>
@@ -155,13 +234,13 @@ databases.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_AutoRenewPeriod_" data-uid="Pulumi.AliCloud.Rds.Instance.AutoRenewPeriod*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_AutoRenewPeriod" data-uid="Pulumi.AliCloud.Rds.Instance.AutoRenewPeriod">AutoRenewPeriod</h4>
@@ -182,13 +261,13 @@ databases.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_AutoUpgradeMinorVersion_" data-uid="Pulumi.AliCloud.Rds.Instance.AutoUpgradeMinorVersion*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_AutoUpgradeMinorVersion" data-uid="Pulumi.AliCloud.Rds.Instance.AutoUpgradeMinorVersion">AutoUpgradeMinorVersion</h4>
@@ -213,13 +292,13 @@ databases.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_ConnectionString_" data-uid="Pulumi.AliCloud.Rds.Instance.ConnectionString*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_ConnectionString" data-uid="Pulumi.AliCloud.Rds.Instance.ConnectionString">ConnectionString</h4>
@@ -240,13 +319,13 @@ databases.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_DbInstanceStorageType_" data-uid="Pulumi.AliCloud.Rds.Instance.DbInstanceStorageType*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_DbInstanceStorageType" data-uid="Pulumi.AliCloud.Rds.Instance.DbInstanceStorageType">DbInstanceStorageType</h4>
@@ -274,13 +353,13 @@ databases.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_Engine_" data-uid="Pulumi.AliCloud.Rds.Instance.Engine*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_Engine" data-uid="Pulumi.AliCloud.Rds.Instance.Engine">Engine</h4>
@@ -301,13 +380,13 @@ databases.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_EngineVersion_" data-uid="Pulumi.AliCloud.Rds.Instance.EngineVersion*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_EngineVersion" data-uid="Pulumi.AliCloud.Rds.Instance.EngineVersion">EngineVersion</h4>
@@ -328,13 +407,13 @@ databases.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_ForceRestart_" data-uid="Pulumi.AliCloud.Rds.Instance.ForceRestart*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_ForceRestart" data-uid="Pulumi.AliCloud.Rds.Instance.ForceRestart">ForceRestart</h4>
@@ -355,13 +434,13 @@ databases.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_InstanceChargeType_" data-uid="Pulumi.AliCloud.Rds.Instance.InstanceChargeType*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_InstanceChargeType" data-uid="Pulumi.AliCloud.Rds.Instance.InstanceChargeType">InstanceChargeType</h4>
@@ -370,7 +449,7 @@ databases.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InstanceChargeType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceChargeType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -382,13 +461,13 @@ databases.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_InstanceName_" data-uid="Pulumi.AliCloud.Rds.Instance.InstanceName*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_InstanceName" data-uid="Pulumi.AliCloud.Rds.Instance.InstanceName">InstanceName</h4>
@@ -397,7 +476,7 @@ databases.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InstanceName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -409,13 +488,13 @@ databases.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_InstanceStorage_" data-uid="Pulumi.AliCloud.Rds.Instance.InstanceStorage*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_InstanceStorage" data-uid="Pulumi.AliCloud.Rds.Instance.InstanceStorage">InstanceStorage</h4>
@@ -444,13 +523,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_InstanceType_" data-uid="Pulumi.AliCloud.Rds.Instance.InstanceType*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_InstanceType" data-uid="Pulumi.AliCloud.Rds.Instance.InstanceType">InstanceType</h4>
@@ -471,13 +550,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_MaintainTime_" data-uid="Pulumi.AliCloud.Rds.Instance.MaintainTime*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_MaintainTime" data-uid="Pulumi.AliCloud.Rds.Instance.MaintainTime">MaintainTime</h4>
@@ -498,13 +577,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_MonitoringPeriod_" data-uid="Pulumi.AliCloud.Rds.Instance.MonitoringPeriod*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_MonitoringPeriod" data-uid="Pulumi.AliCloud.Rds.Instance.MonitoringPeriod">MonitoringPeriod</h4>
@@ -525,13 +604,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_Parameters_" data-uid="Pulumi.AliCloud.Rds.Instance.Parameters*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_Parameters" data-uid="Pulumi.AliCloud.Rds.Instance.Parameters">Parameters</h4>
@@ -552,13 +631,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Rds.Outputs.InstanceParameter.html">InstanceParameter</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Rds.Outputs.InstanceParameter.html">InstanceParameter</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_Period_" data-uid="Pulumi.AliCloud.Rds.Instance.Period*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_Period" data-uid="Pulumi.AliCloud.Rds.Instance.Period">Period</h4>
@@ -579,13 +658,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_Port_" data-uid="Pulumi.AliCloud.Rds.Instance.Port*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_Port" data-uid="Pulumi.AliCloud.Rds.Instance.Port">Port</h4>
@@ -606,13 +685,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_SecurityGroupId_" data-uid="Pulumi.AliCloud.Rds.Instance.SecurityGroupId*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_SecurityGroupId" data-uid="Pulumi.AliCloud.Rds.Instance.SecurityGroupId">SecurityGroupId</h4>
@@ -633,13 +712,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_SecurityGroupIds_" data-uid="Pulumi.AliCloud.Rds.Instance.SecurityGroupIds*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_SecurityGroupIds" data-uid="Pulumi.AliCloud.Rds.Instance.SecurityGroupIds">SecurityGroupIds</h4>
@@ -660,13 +739,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_SecurityIpMode_" data-uid="Pulumi.AliCloud.Rds.Instance.SecurityIpMode*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_SecurityIpMode" data-uid="Pulumi.AliCloud.Rds.Instance.SecurityIpMode">SecurityIpMode</h4>
@@ -675,7 +754,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SecurityIpMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecurityIpMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -687,13 +766,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_SecurityIps_" data-uid="Pulumi.AliCloud.Rds.Instance.SecurityIps*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_SecurityIps" data-uid="Pulumi.AliCloud.Rds.Instance.SecurityIps">SecurityIps</h4>
@@ -714,13 +793,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_SqlCollectorConfigValue_" data-uid="Pulumi.AliCloud.Rds.Instance.SqlCollectorConfigValue*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_SqlCollectorConfigValue" data-uid="Pulumi.AliCloud.Rds.Instance.SqlCollectorConfigValue">SqlCollectorConfigValue</h4>
@@ -741,13 +820,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_SqlCollectorStatus_" data-uid="Pulumi.AliCloud.Rds.Instance.SqlCollectorStatus*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_SqlCollectorStatus" data-uid="Pulumi.AliCloud.Rds.Instance.SqlCollectorStatus">SqlCollectorStatus</h4>
@@ -756,7 +835,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SqlCollectorStatus { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SqlCollectorStatus { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -768,13 +847,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L220">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_Tags_" data-uid="Pulumi.AliCloud.Rds.Instance.Tags*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_Tags" data-uid="Pulumi.AliCloud.Rds.Instance.Tags">Tags</h4>
@@ -787,7 +866,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -799,13 +878,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L226">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_VswitchId_" data-uid="Pulumi.AliCloud.Rds.Instance.VswitchId*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_VswitchId" data-uid="Pulumi.AliCloud.Rds.Instance.VswitchId">VswitchId</h4>
@@ -814,7 +893,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VswitchId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VswitchId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -826,13 +905,13 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_ZoneId_" data-uid="Pulumi.AliCloud.Rds.Instance.ZoneId*"></a>
   <h4 id="Pulumi_AliCloud_Rds_Instance_ZoneId" data-uid="Pulumi.AliCloud.Rds.Instance.ZoneId">ZoneId</h4>
@@ -855,7 +934,7 @@ The multiple zone ID can be retrieved by setting <code>multi</code> to &quot;tru
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -863,17 +942,17 @@ The multiple zone ID can be retrieved by setting <code>multi</code> to &quot;tru
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L230">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L275">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_Instance_Get_" data-uid="Pulumi.AliCloud.Rds.Instance.Get*"></a>
-  <h4 id="Pulumi_AliCloud_Rds_Instance_Get_System_String_Input_System_String__Pulumi_AliCloud_Rds_InstanceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Rds.Instance.Get(System.String,Input{System.String},Pulumi.AliCloud.Rds.InstanceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, InstanceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Rds_Instance_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Rds_InstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Rds.Instance.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Rds.InstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, InstanceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Instance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -892,7 +971,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -904,7 +983,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -933,7 +1012,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/Instance.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Rds/Instance.cs/#L62" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

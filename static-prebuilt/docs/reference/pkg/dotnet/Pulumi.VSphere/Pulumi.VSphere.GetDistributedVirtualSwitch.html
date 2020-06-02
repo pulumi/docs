@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetDistributedVirtualSwitch
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,35 +78,98 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetDistributedVirtualSwitch</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
   <h5 id="Pulumi_VSphere_GetDistributedVirtualSwitch_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetDistributedVirtualSwitch : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetDistributedVirtualSwitch</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/GetDistributedVirtualSwitch.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/GetDistributedVirtualSwitch.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_VSphere_GetDistributedVirtualSwitch_InvokeAsync_" data-uid="Pulumi.VSphere.GetDistributedVirtualSwitch.InvokeAsync*"></a>
-  <h4 id="Pulumi_VSphere_GetDistributedVirtualSwitch_InvokeAsync_Pulumi_VSphere_GetDistributedVirtualSwitchArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.VSphere.GetDistributedVirtualSwitch.InvokeAsync(Pulumi.VSphere.GetDistributedVirtualSwitchArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetDistributedVirtualSwitchArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_GetDistributedVirtualSwitch_InvokeAsync_Pulumi_VSphere_GetDistributedVirtualSwitchArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.VSphere.GetDistributedVirtualSwitch.InvokeAsync(Pulumi.VSphere.GetDistributedVirtualSwitchArgs,Pulumi.InvokeOptions)">InvokeAsync(GetDistributedVirtualSwitchArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>The <code>vsphere..DistributedVirtualSwitch</code> data source can be used to discover
 the ID and uplink data of a of a vSphere distributed virtual switch (DVS). This
 can then be used with resources or data sources that require a DVS, such as the
-<a href="/docs/providers/vsphere/r/distributed_port_group.html"><code>vsphere..DistributedPortGroup</code></a> resource, for which
+<code>vsphere..DistributedPortGroup</code> resource, for which
 an example is shown below.</p>
 <blockquote>
 <p><strong>NOTE:</strong> This data source requires vCenter and is not available on direct
 ESXi connections.</p>
 </blockquote>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<p>The following example locates a DVS that is named <code>test-dvs</code>, in the
+datacenter <code>dc1</code>. It then uses this DVS to set up a
+<code>vsphere..DistributedPortGroup</code> resource that uses the first uplink as a
+primary uplink and the second uplink as a secondary.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var datacenter = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+    {
+        Name = &amp;quot;dc1&amp;quot;,
+    }));
+    var dvs = datacenter.Apply(datacenter =&gt; Output.Create(VSphere.GetDistributedVirtualSwitch.InvokeAsync(new VSphere.GetDistributedVirtualSwitchArgs
+    {
+        DatacenterId = datacenter.Id,
+        Name = &amp;quot;test-dvs&amp;quot;,
+    })));
+    var pg = new VSphere.DistributedPortGroup(&amp;quot;pg&amp;quot;, new VSphere.DistributedPortGroupArgs
+    {
+        ActiveUplinks = 
+        {
+            dvs.Apply(dvs =&gt; dvs.Uplinks[0]),
+        },
+        DistributedVirtualSwitchUuid = dvs.Apply(dvs =&gt; dvs.Id),
+        StandbyUplinks = 
+        {
+            dvs.Apply(dvs =&gt; dvs.Uplinks[1]),
+        },
+    });
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetDistributedVirtualSwitchResult&gt; InvokeAsync(GetDistributedVirtualSwitchArgs args, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetDistributedVirtualSwitchResult&gt; InvokeAsync(GetDistributedVirtualSwitchArgs args, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +187,7 @@ ESXi connections.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -140,7 +203,7 @@ ESXi connections.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.VSphere.GetDistributedVirtualSwitchResult.html">GetDistributedVirtualSwitchResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.VSphere.GetDistributedVirtualSwitchResult.html">GetDistributedVirtualSwitchResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -152,7 +215,7 @@ ESXi connections.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/GetDistributedVirtualSwitch.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/GetDistributedVirtualSwitch.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

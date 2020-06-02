@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.ElasticSearch
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,11 +78,269 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.ElasticSearch.Domain.html">Domain</a></h4>
       <section><p>Manages an AWS Elasticsearch Domain.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-usage">Basic Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ElasticSearch.Domain(&amp;quot;example&amp;quot;, new Aws.ElasticSearch.DomainArgs
+    {
+        ClusterConfig = new Aws.ElasticSearch.Inputs.DomainClusterConfigArgs
+        {
+            ClusterConfig = &amp;quot;r4.large.elasticsearch&amp;quot;,
+        },
+        ElasticsearchVersion = &amp;quot;1.5&amp;quot;,
+        SnapshotOptions = new Aws.ElasticSearch.Inputs.DomainSnapshotOptionsArgs
+        {
+            SnapshotOptions = 23,
+        },
+        Tags = 
+        {
+            { &amp;quot;Domain&amp;quot;, &amp;quot;TestDomain&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="access-policy">Access Policy</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var domain = config.Get(&amp;quot;domain&amp;quot;) ?? &amp;quot;tf-test&amp;quot;;
+    var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+    var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+    var example = new Aws.ElasticSearch.Domain(&amp;quot;example&amp;quot;, new Aws.ElasticSearch.DomainArgs
+    {
+        AccessPolicies = Output.Tuple(currentRegion, currentCallerIdentity).Apply(values =&gt;
+        {
+            var currentRegion = values.Item1;
+            var currentCallerIdentity = values.Item2;
+            return @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;es:*&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:es:{currentRegion.Name}:{currentCallerIdentity.AccountId}:domain/{domain}/*&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {{
+    &amp;quot;&amp;quot;IpAddress&amp;quot;&amp;quot;: {{&amp;quot;&amp;quot;aws:SourceIp&amp;quot;&amp;quot;: [&amp;quot;&amp;quot;66.193.100.22/32&amp;quot;&amp;quot;]}}
+  }}
+}}
+]
+}}
+
+&amp;quot;;
+        }),
+    });
+}
+
+}
+</code></pre>
+<h3 id="log-publishing-to-cloudwatch-logs">Log Publishing to CloudWatch Logs</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleLogGroup = new Aws.CloudWatch.LogGroup(&amp;quot;exampleLogGroup&amp;quot;, new Aws.CloudWatch.LogGroupArgs
+    {
+    });
+    var exampleLogResourcePolicy = new Aws.CloudWatch.LogResourcePolicy(&amp;quot;exampleLogResourcePolicy&amp;quot;, new Aws.CloudWatch.LogResourcePolicyArgs
+    {
+        PolicyDocument = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;es.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;logs:PutLogEvents&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;logs:PutLogEventsBatch&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;logs:CreateLogStream&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:logs:*&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+        PolicyName = &amp;quot;example&amp;quot;,
+    });
+    var exampleDomain = new Aws.ElasticSearch.Domain(&amp;quot;exampleDomain&amp;quot;, new Aws.ElasticSearch.DomainArgs
+    {
+        LogPublishingOptions = 
+        {
+            new Aws.ElasticSearch.Inputs.DomainLogPublishingOptionArgs
+            {
+                CloudwatchLogGroupArn = exampleLogGroup.Arn,
+                LogType = &amp;quot;INDEX_SLOW_LOGS&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="vpc-based-es">VPC based ES</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var vpc = config.RequireObject&amp;lt;dynamic&gt;(&amp;quot;vpc&amp;quot;);
+    var domain = config.Get(&amp;quot;domain&amp;quot;) ?? &amp;quot;tf-test&amp;quot;;
+    var selectedVpc = Output.Create(Aws.Ec2.GetVpc.InvokeAsync(new Aws.Ec2.GetVpcArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, vpc },
+        },
+    }));
+    var selectedSubnetIds = selectedVpc.Apply(selectedVpc =&gt; Output.Create(Aws.Ec2.GetSubnetIds.InvokeAsync(new Aws.Ec2.GetSubnetIdsArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;Tier&amp;quot;, &amp;quot;private&amp;quot; },
+        },
+        VpcId = selectedVpc.Id,
+    })));
+    var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+    var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+    var esSecurityGroup = new Aws.Ec2.SecurityGroup(&amp;quot;esSecurityGroup&amp;quot;, new Aws.Ec2.SecurityGroupArgs
+    {
+        Description = &amp;quot;Managed by Pulumi&amp;quot;,
+        Ingress = 
+        {
+            new Aws.Ec2.Inputs.SecurityGroupIngressArgs
+            {
+                CidrBlocks = 
+                {
+                    selectedVpc.Apply(selectedVpc =&gt; selectedVpc.CidrBlock),
+                },
+                FromPort = 443,
+                Protocol = &amp;quot;tcp&amp;quot;,
+                ToPort = 443,
+            },
+        },
+        VpcId = selectedVpc.Apply(selectedVpc =&gt; selectedVpc.Id),
+    });
+    var esServiceLinkedRole = new Aws.Iam.ServiceLinkedRole(&amp;quot;esServiceLinkedRole&amp;quot;, new Aws.Iam.ServiceLinkedRoleArgs
+    {
+        AwsServiceName = &amp;quot;es.amazonaws.com&amp;quot;,
+    });
+    var esDomain = new Aws.ElasticSearch.Domain(&amp;quot;esDomain&amp;quot;, new Aws.ElasticSearch.DomainArgs
+    {
+        AccessPolicies = Output.Tuple(currentRegion, currentCallerIdentity).Apply(values =&gt;
+        {
+            var currentRegion = values.Item1;
+            var currentCallerIdentity = values.Item2;
+            return @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+&amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;es:*&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:es:{currentRegion.Name}:{currentCallerIdentity.AccountId}:domain/{domain}/*&amp;quot;&amp;quot;
+}}
+]
+}}
+
+&amp;quot;;
+        }),
+        AdvancedOptions = 
+        {
+            { &amp;quot;rest.action.multi.allow_explicit_index&amp;quot;, &amp;quot;true&amp;quot; },
+        },
+        ClusterConfig = new Aws.ElasticSearch.Inputs.DomainClusterConfigArgs
+        {
+            ClusterConfig = &amp;quot;m4.large.elasticsearch&amp;quot;,
+        },
+        ElasticsearchVersion = &amp;quot;6.3&amp;quot;,
+        SnapshotOptions = new Aws.ElasticSearch.Inputs.DomainSnapshotOptionsArgs
+        {
+            SnapshotOptions = 23,
+        },
+        Tags = 
+        {
+            { &amp;quot;Domain&amp;quot;, &amp;quot;TestDomain&amp;quot; },
+        },
+        VpcOptions = new Aws.ElasticSearch.Inputs.DomainVpcOptionsArgs
+        {
+            SecurityGroupIds = 
+            {
+                esSecurityGroup.Id,
+            },
+            SubnetIds = 
+            {
+                selectedSubnetIds.Apply(selectedSubnetIds =&gt; selectedSubnetIds.Ids[0]),
+                selectedSubnetIds.Apply(selectedSubnetIds =&gt; selectedSubnetIds.Ids[1]),
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ElasticSearch.DomainArgs.html">DomainArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ElasticSearch.DomainPolicy.html">DomainPolicy</a></h4>
       <section><p>Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ElasticSearch.Domain(&amp;quot;example&amp;quot;, new Aws.ElasticSearch.DomainArgs
+    {
+        ElasticsearchVersion = &amp;quot;2.3&amp;quot;,
+    });
+    var main = new Aws.ElasticSearch.DomainPolicy(&amp;quot;main&amp;quot;, new Aws.ElasticSearch.DomainPolicyArgs
+    {
+        AccessPolicies = example.Arn.Apply(arn =&gt; @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+    {{
+        &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;es:*&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {{
+            &amp;quot;&amp;quot;IpAddress&amp;quot;&amp;quot;: {{&amp;quot;&amp;quot;aws:SourceIp&amp;quot;&amp;quot;: &amp;quot;&amp;quot;127.0.0.1/32&amp;quot;&amp;quot;}}
+        }},
+        &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;{arn}/*&amp;quot;&amp;quot;
+    }}
+]
+}}
+
+&amp;quot;),
+        DomainName = example.DomainName,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ElasticSearch.DomainPolicyArgs.html">DomainPolicyArgs</a></h4>
       <section></section>

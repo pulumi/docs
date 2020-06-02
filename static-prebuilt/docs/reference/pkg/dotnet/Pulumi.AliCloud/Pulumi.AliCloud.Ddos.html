@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Ddos
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,6 +76,75 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.AliCloud.Ddos.DdosBgpInstance.html">DdosBgpInstance</a></h4>
+      <section><p>Anti-DDoS Advanced instance resource. &quot;Ddosbgp&quot; is the short term of this product.</p>
+<blockquote>
+<p><strong>NOTE:</strong> The endpoint of bssopenapi used only support &quot;business.aliyuncs.com&quot; at present.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.57.0+ .</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new AliCloud.Ddos.DdosBgpInstance(&amp;quot;instance&amp;quot;, new AliCloud.Ddos.DdosBgpInstanceArgs
+    {
+        Bandwidth = &amp;quot;201&amp;quot;,
+        BaseBandwidth = &amp;quot;20&amp;quot;,
+        IpCount = &amp;quot;100&amp;quot;,
+        IpType = &amp;quot;IPv4&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Ddos.DdosBgpInstanceArgs.html">DdosBgpInstanceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Ddos.DdosBgpInstanceState.html">DdosBgpInstanceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Ddos.DdosCooInstance.html">DdosCooInstance</a></h4>
+      <section><p>BGP-Line Anti-DDoS instance resource. &quot;Ddoscoo&quot; is the short term of this product. See <a href="https://www.alibabacloud.com/help/doc-detail/69319.htm">What is Anti-DDoS Pro</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> The product region only support cn-hangzhou.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> The endpoint of bssopenapi used only support &quot;business.aliyuncs.com&quot; at present.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.37.0+ .</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var newInstance = new AliCloud.Ddos.DdosCooInstance(&amp;quot;newInstance&amp;quot;, new AliCloud.Ddos.DdosCooInstanceArgs
+    {
+        Bandwidth = &amp;quot;30&amp;quot;,
+        BaseBandwidth = &amp;quot;30&amp;quot;,
+        DomainCount = &amp;quot;50&amp;quot;,
+        Period = &amp;quot;1&amp;quot;,
+        PortCount = &amp;quot;50&amp;quot;,
+        ServiceBandwidth = &amp;quot;100&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Ddos.DdosCooInstanceArgs.html">DdosCooInstanceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Ddos.DdosCooInstanceState.html">DdosCooInstanceState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ddos.GetDdosBgpInstances.html">GetDdosBgpInstances</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ddos.GetDdosBgpInstancesArgs.html">GetDdosBgpInstancesArgs</a></h4>

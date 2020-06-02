@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class L7RuleV2
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,103 @@
   <h1 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2" class="text-break">Class L7RuleV2
   </h1>
   <div class="markdown level0 summary"><p>Manages a V2 L7 Rule resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.199.0/24&amp;quot;,
+        IpVersion = 4,
+        NetworkId = network1.Id,
+    });
+    var loadbalancer1 = new OpenStack.LoadBalancer.LoadBalancer(&amp;quot;loadbalancer1&amp;quot;, new OpenStack.LoadBalancer.LoadBalancerArgs
+    {
+        VipSubnetId = subnet1.Id,
+    });
+    var listener1 = new OpenStack.LoadBalancer.Listener(&amp;quot;listener1&amp;quot;, new OpenStack.LoadBalancer.ListenerArgs
+    {
+        LoadbalancerId = loadbalancer1.Id,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+        ProtocolPort = 8080,
+    });
+    var pool1 = new OpenStack.LoadBalancer.Pool(&amp;quot;pool1&amp;quot;, new OpenStack.LoadBalancer.PoolArgs
+    {
+        LbMethod = &amp;quot;ROUND_ROBIN&amp;quot;,
+        LoadbalancerId = loadbalancer1.Id,
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+    var l7policy1 = new OpenStack.LoadBalancer.L7PolicyV2(&amp;quot;l7policy1&amp;quot;, new OpenStack.LoadBalancer.L7PolicyV2Args
+    {
+        Action = &amp;quot;REDIRECT_TO_URL&amp;quot;,
+        Description = &amp;quot;test description&amp;quot;,
+        ListenerId = listener1.Id,
+        Position = 1,
+        RedirectUrl = &amp;quot;http://www.example.com&amp;quot;,
+    });
+    var l7rule1 = new OpenStack.LoadBalancer.L7RuleV2(&amp;quot;l7rule1&amp;quot;, new OpenStack.LoadBalancer.L7RuleV2Args
+    {
+        CompareType = &amp;quot;EQUAL_TO&amp;quot;,
+        L7policyId = l7policy1.Id,
+        Type = &amp;quot;PATH&amp;quot;,
+        Value = &amp;quot;/api&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">L7RuleV2</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">L7RuleV2</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.LoadBalancer.html">Pulumi.OpenStack.LoadBalancer</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -88,16 +179,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2__ctor_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2__ctor_System_String_Pulumi_OpenStack_LoadBalancer_L7RuleV2Args_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.#ctor(System.String,Pulumi.OpenStack.LoadBalancer.L7RuleV2Args,System.Nullable{CustomResourceOptions})">L7RuleV2(String, L7RuleV2Args, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2__ctor_System_String_Pulumi_OpenStack_LoadBalancer_L7RuleV2Args_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.#ctor(System.String,Pulumi.OpenStack.LoadBalancer.L7RuleV2Args,Pulumi.CustomResourceOptions)">L7RuleV2(String, L7RuleV2Args, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a L7RuleV2 resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public L7RuleV2(string name, L7RuleV2Args args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public L7RuleV2(string name, L7RuleV2Args args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +213,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +223,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_AdminStateUp_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.AdminStateUp*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_AdminStateUp" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.AdminStateUp">AdminStateUp</h4>
@@ -154,13 +245,13 @@ A valid value is true (UP) or false (DOWN).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_CompareType_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.CompareType*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_CompareType" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.CompareType">CompareType</h4>
@@ -182,13 +273,13 @@ CONTAINS, STARTS_WITH, ENDS_WITH, EQUAL_TO or REGEX</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Invert_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Invert*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Invert" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Invert">Invert</h4>
@@ -210,13 +301,13 @@ true, equal to would become not equal to. Default is false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Key_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Key*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Key" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Key">Key</h4>
@@ -226,7 +317,7 @@ evaluate. Valid when <code>type</code> is set to COOKIE or HEADER.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Key { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Key { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,13 +329,13 @@ evaluate. Valid when <code>type</code> is set to COOKIE or HEADER.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_L7policyId_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.L7policyId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_L7policyId" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.L7policyId">L7policyId</h4>
@@ -266,13 +357,13 @@ L7 Rule.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_ListenerId_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.ListenerId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_ListenerId" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.ListenerId">ListenerId</h4>
@@ -293,13 +384,13 @@ L7 Rule.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Region_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Region*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Region" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Region">Region</h4>
@@ -323,13 +414,13 @@ L7 Rule.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_TenantId_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.TenantId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_TenantId" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.TenantId">TenantId</h4>
@@ -352,13 +443,13 @@ other than their own. Changing this creates a new L7 Rule.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Type_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Type*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Type" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Type">Type</h4>
@@ -380,13 +471,13 @@ HOST_NAME or PATH.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Value_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Value*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Value" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Value">Value</h4>
@@ -408,7 +499,7 @@ compare.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -416,17 +507,17 @@ compare.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Get_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Get*"></a>
-  <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Get_System_String_Input_System_String__Pulumi_OpenStack_LoadBalancer_L7RuleV2State_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Get(System.String,Input{System.String},Pulumi.OpenStack.LoadBalancer.L7RuleV2State,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, L7RuleV2State, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_L7RuleV2_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_LoadBalancer_L7RuleV2State_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.LoadBalancer.L7RuleV2.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.LoadBalancer.L7RuleV2State,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, L7RuleV2State, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing L7RuleV2 resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static L7RuleV2 Get(string name, Input&lt;string&gt; id, L7RuleV2State state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static L7RuleV2 Get(string name, Input&lt;string&gt; id, L7RuleV2State state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -445,7 +536,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -457,7 +548,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -486,7 +577,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/L7RuleV2.cs/#L73" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

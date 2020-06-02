@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ManagedSslCertificate
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -100,7 +100,45 @@ certificates may entail some downtime while the certificate provisions.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ManagedSslCertificate</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ManagedSslCertificate</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -111,16 +149,16 @@ certificates may entail some downtime while the certificate provisions.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate__ctor_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate__ctor_System_String_Pulumi_Gcp_Compute_ManagedSslCertificateArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.#ctor(System.String,Pulumi.Gcp.Compute.ManagedSslCertificateArgs,System.Nullable{CustomResourceOptions})">ManagedSslCertificate(String, ManagedSslCertificateArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate__ctor_System_String_Pulumi_Gcp_Compute_ManagedSslCertificateArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.#ctor(System.String,Pulumi.Gcp.Compute.ManagedSslCertificateArgs,Pulumi.CustomResourceOptions)">ManagedSslCertificate(String, ManagedSslCertificateArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ManagedSslCertificate resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManagedSslCertificate(string name, ManagedSslCertificateArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ManagedSslCertificate(string name, ManagedSslCertificateArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -145,7 +183,7 @@ certificates may entail some downtime while the certificate provisions.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -155,7 +193,7 @@ certificates may entail some downtime while the certificate provisions.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate_CertificateId_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.CertificateId*"></a>
   <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_CertificateId" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.CertificateId">CertificateId</h4>
@@ -176,13 +214,13 @@ certificates may entail some downtime while the certificate provisions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.CreationTimestamp">CreationTimestamp</h4>
@@ -203,13 +241,13 @@ certificates may entail some downtime while the certificate provisions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate_Description_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_Description" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Description">Description</h4>
@@ -218,7 +256,7 @@ certificates may entail some downtime while the certificate provisions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,13 +268,13 @@ certificates may entail some downtime while the certificate provisions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate_ExpireTime_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.ExpireTime*"></a>
   <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_ExpireTime" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.ExpireTime">ExpireTime</h4>
@@ -257,18 +295,18 @@ certificates may entail some downtime while the certificate provisions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate_Managed_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Managed*"></a>
   <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_Managed" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Managed">Managed</h4>
-  <div class="markdown level1 summary"><p>Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-of 'MANAGED' in 'type').</p>
+  <div class="markdown level1 summary"><p>Properties relevant to a managed certificate.  These will be used if the
+certificate is managed (as indicated by a value of <code>MANAGED</code> in <code>type</code>).  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -285,21 +323,23 @@ of 'MANAGED' in 'type').</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.ManagedSslCertificateManaged.html">ManagedSslCertificateManaged</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.ManagedSslCertificateManaged.html">ManagedSslCertificateManaged</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate_Name_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_Name" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-namespace as the managed SSL certificates.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression <code>a-z?</code> which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -316,13 +356,13 @@ namespace as the managed SSL certificates.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate_Project_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_Project" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Project">Project</h4>
@@ -344,13 +384,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate_SelfLink_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_SelfLink" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.SelfLink">SelfLink</h4>
@@ -371,13 +411,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate_SubjectAlternativeNames_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.SubjectAlternativeNames*"></a>
   <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_SubjectAlternativeNames" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.SubjectAlternativeNames">SubjectAlternativeNames</h4>
@@ -398,22 +438,23 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate_Type_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Type*"></a>
   <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_Type" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Type">Type</h4>
-  <div class="markdown level1 summary"><p>Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.</p>
+  <div class="markdown level1 summary"><p>Enum field whose value is always <code>MANAGED</code> - used to signal to the API
+which type this is.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -425,7 +466,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -433,17 +474,17 @@ If it is not provided, the provider project is used.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ManagedSslCertificate_Get_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_ManagedSslCertificateState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.ManagedSslCertificateState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ManagedSslCertificateState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_ManagedSslCertificate_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_ManagedSslCertificateState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.ManagedSslCertificate.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.ManagedSslCertificateState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ManagedSslCertificateState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ManagedSslCertificate resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ManagedSslCertificate Get(string name, Input&lt;string&gt; id, ManagedSslCertificateState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ManagedSslCertificate Get(string name, Input&lt;string&gt; id, ManagedSslCertificateState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -462,7 +503,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -474,7 +515,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -503,7 +544,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L39" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/ManagedSslCertificate.cs/#L39" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

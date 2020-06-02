@@ -1,0 +1,777 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Tenant
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Tenant
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Auth0.Tenant">
+  
+  <h1 id="Pulumi_Auth0_Tenant" data-uid="Pulumi.Auth0.Tenant" class="text-break">Class Tenant
+  </h1>
+  <div class="markdown level0 summary"><p>With this resource, you can manage Auth0 tenants, including setting logos and support contact information, setting error pages, and configuring default tenant behaviors.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Auth0 = Pulumi.Auth0;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tenant = new Auth0.Tenant(&amp;quot;tenant&amp;quot;, new Auth0.TenantArgs
+    {
+        AllowedLogoutUrls = 
+        {
+            &amp;quot;http://mysite/logout&amp;quot;,
+        },
+        ChangePassword = new Auth0.Inputs.TenantChangePasswordArgs
+        {
+            Enabled = true,
+            Html = File.ReadAllText(&amp;quot;./password_reset.html&amp;quot;),
+        },
+        DefaultAudience = &amp;quot;&amp;lt;client_id&gt;&amp;quot;,
+        DefaultDirectory = &amp;quot;Connection-Name&amp;quot;,
+        ErrorPage = new Auth0.Inputs.TenantErrorPageArgs
+        {
+            Html = File.ReadAllText(&amp;quot;./error.html&amp;quot;),
+            ShowLogLink = true,
+            Url = &amp;quot;http://mysite/errors&amp;quot;,
+        },
+        FriendlyName = &amp;quot;Tenant Name&amp;quot;,
+        GuardianMfaPage = new Auth0.Inputs.TenantGuardianMfaPageArgs
+        {
+            Enabled = true,
+            Html = File.ReadAllText(&amp;quot;./guardian_multifactor.html&amp;quot;),
+        },
+        PictureUrl = &amp;quot;http://mysite/logo.png&amp;quot;,
+        SandboxVersion = &amp;quot;8&amp;quot;,
+        SessionLifetime = 46000,
+        SupportEmail = &amp;quot;support@mysite&amp;quot;,
+        SupportUrl = &amp;quot;http://mysite/support&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Pulumi.Resource</span></div>
+    <div class="level2"><span class="xref">Pulumi.CustomResource</span></div>
+    <div class="level3"><span class="xref">Tenant</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Pulumi.CustomResource.Id</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.GetResourceType()</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.GetResourceName()</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.Urn</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Auth0.html">Pulumi.Auth0</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Auth0.dll</h6>
+  <h5 id="Pulumi_Auth0_Tenant_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Tenant : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant__ctor_" data-uid="Pulumi.Auth0.Tenant.#ctor*"></a>
+  <h4 id="Pulumi_Auth0_Tenant__ctor_System_String_Pulumi_Auth0_TenantArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Auth0.Tenant.#ctor(System.String,Pulumi.Auth0.TenantArgs,Pulumi.CustomResourceOptions)">Tenant(String, TenantArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Tenant resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Tenant(string name, TenantArgs args = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Auth0.TenantArgs.html">TenantArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.CustomResourceOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_AllowedLogoutUrls_" data-uid="Pulumi.Auth0.Tenant.AllowedLogoutUrls*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_AllowedLogoutUrls" data-uid="Pulumi.Auth0.Tenant.AllowedLogoutUrls">AllowedLogoutUrls</h4>
+  <div class="markdown level1 summary"><p>List(String). URLs that Auth0 may redirect to after logout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AllowedLogoutUrls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_ChangePassword_" data-uid="Pulumi.Auth0.Tenant.ChangePassword*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_ChangePassword" data-uid="Pulumi.Auth0.Tenant.ChangePassword">ChangePassword</h4>
+  <div class="markdown level1 summary"><p>List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;TenantChangePassword&gt; ChangePassword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<a class="xref" href="Pulumi.Auth0.Outputs.TenantChangePassword.html">TenantChangePassword</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_DefaultAudience_" data-uid="Pulumi.Auth0.Tenant.DefaultAudience*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_DefaultAudience" data-uid="Pulumi.Auth0.Tenant.DefaultAudience">DefaultAudience</h4>
+  <div class="markdown level1 summary"><p>String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultAudience { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L87">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_DefaultDirectory_" data-uid="Pulumi.Auth0.Tenant.DefaultDirectory*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_DefaultDirectory" data-uid="Pulumi.Auth0.Tenant.DefaultDirectory">DefaultDirectory</h4>
+  <div class="markdown level1 summary"><p>String. Name of the connection to be used for Password Grant exchanges. Options include <code>auth0-adldap</code>, <code>ad</code>, <code>auth0</code>, <code>email</code>, <code>sms</code>, <code>waad</code>, and <code>adfs</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultDirectory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_DefaultRedirectionUri_" data-uid="Pulumi.Auth0.Tenant.DefaultRedirectionUri*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_DefaultRedirectionUri" data-uid="Pulumi.Auth0.Tenant.DefaultRedirectionUri">DefaultRedirectionUri</h4>
+  <div class="markdown level1 summary"><p>String. The default absolute redirection uri, must be https and cannot contain a fragment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultRedirectionUri { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_EnabledLocales_" data-uid="Pulumi.Auth0.Tenant.EnabledLocales*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_EnabledLocales" data-uid="Pulumi.Auth0.Tenant.EnabledLocales">EnabledLocales</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; EnabledLocales { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_ErrorPage_" data-uid="Pulumi.Auth0.Tenant.ErrorPage*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_ErrorPage" data-uid="Pulumi.Auth0.Tenant.ErrorPage">ErrorPage</h4>
+  <div class="markdown level1 summary"><p>List(Resource). Configuration settings for error pages. For details, see Error Page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;TenantErrorPage&gt; ErrorPage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<a class="xref" href="Pulumi.Auth0.Outputs.TenantErrorPage.html">TenantErrorPage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_Flags_" data-uid="Pulumi.Auth0.Tenant.Flags*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_Flags" data-uid="Pulumi.Auth0.Tenant.Flags">Flags</h4>
+  <div class="markdown level1 summary"><p>List(Resource). Configuration settings for tenant flags. For details, see Flags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;TenantFlags&gt; Flags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<a class="xref" href="Pulumi.Auth0.Outputs.TenantFlags.html">TenantFlags</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_FriendlyName_" data-uid="Pulumi.Auth0.Tenant.FriendlyName*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_FriendlyName" data-uid="Pulumi.Auth0.Tenant.FriendlyName">FriendlyName</h4>
+  <div class="markdown level1 summary"><p>String. Friendly name for the tenant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FriendlyName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_GuardianMfaPage_" data-uid="Pulumi.Auth0.Tenant.GuardianMfaPage*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_GuardianMfaPage" data-uid="Pulumi.Auth0.Tenant.GuardianMfaPage">GuardianMfaPage</h4>
+  <div class="markdown level1 summary"><p>List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;TenantGuardianMfaPage&gt; GuardianMfaPage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<a class="xref" href="Pulumi.Auth0.Outputs.TenantGuardianMfaPage.html">TenantGuardianMfaPage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_IdleSessionLifetime_" data-uid="Pulumi.Auth0.Tenant.IdleSessionLifetime*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_IdleSessionLifetime" data-uid="Pulumi.Auth0.Tenant.IdleSessionLifetime">IdleSessionLifetime</h4>
+  <div class="markdown level1 summary"><p>Integer. Number of hours during which a session can be inactive before the user must log in again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; IdleSessionLifetime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_PictureUrl_" data-uid="Pulumi.Auth0.Tenant.PictureUrl*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_PictureUrl" data-uid="Pulumi.Auth0.Tenant.PictureUrl">PictureUrl</h4>
+  <div class="markdown level1 summary"><p>. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PictureUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L138">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_SandboxVersion_" data-uid="Pulumi.Auth0.Tenant.SandboxVersion*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_SandboxVersion" data-uid="Pulumi.Auth0.Tenant.SandboxVersion">SandboxVersion</h4>
+  <div class="markdown level1 summary"><p>String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SandboxVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L144">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_SessionLifetime_" data-uid="Pulumi.Auth0.Tenant.SessionLifetime*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_SessionLifetime" data-uid="Pulumi.Auth0.Tenant.SessionLifetime">SessionLifetime</h4>
+  <div class="markdown level1 summary"><p>Integer. Number of hours during which a session will stay valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; SessionLifetime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L150">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_SupportEmail_" data-uid="Pulumi.Auth0.Tenant.SupportEmail*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_SupportEmail" data-uid="Pulumi.Auth0.Tenant.SupportEmail">SupportEmail</h4>
+  <div class="markdown level1 summary"><p>String. Support email address for authenticating users.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SupportEmail { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_SupportUrl_" data-uid="Pulumi.Auth0.Tenant.SupportUrl*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_SupportUrl" data-uid="Pulumi.Auth0.Tenant.SupportUrl">SupportUrl</h4>
+  <div class="markdown level1 summary"><p>String. Support URL for authenticating users.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SupportUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L162">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_UniversalLogin_" data-uid="Pulumi.Auth0.Tenant.UniversalLogin*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_UniversalLogin" data-uid="Pulumi.Auth0.Tenant.UniversalLogin">UniversalLogin</h4>
+  <div class="markdown level1 summary"><p>List(Resource). Configuration settings for Universal Login. For details, see Universal Login.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;TenantUniversalLogin&gt; UniversalLogin { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<a class="xref" href="Pulumi.Auth0.Outputs.TenantUniversalLogin.html">TenantUniversalLogin</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L203">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_Tenant_Get_" data-uid="Pulumi.Auth0.Tenant.Get*"></a>
+  <h4 id="Pulumi_Auth0_Tenant_Get_System_String_Pulumi_Input_System_String__Pulumi_Auth0_TenantState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Auth0.Tenant.Get(System.String,Pulumi.Input{System.String},Pulumi.Auth0.TenantState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TenantState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Tenant resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Tenant Get(string name, Input&lt;string&gt; id, TenantState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Auth0.TenantState.html">TenantState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.CustomResourceOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Auth0.Tenant.html">Tenant</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/Tenant.cs/#L64" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

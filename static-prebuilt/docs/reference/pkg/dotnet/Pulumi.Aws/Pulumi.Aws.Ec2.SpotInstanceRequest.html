@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SpotInstanceRequest
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -91,12 +91,73 @@ point in time. See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 documentation</a>
 for more information.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Request a spot instance at $0.03
+    var cheapWorker = new Aws.Ec2.SpotInstanceRequest(&amp;quot;cheapWorker&amp;quot;, new Aws.Ec2.SpotInstanceRequestArgs
+    {
+        Ami = &amp;quot;ami-1234&amp;quot;,
+        InstanceType = &amp;quot;c4.xlarge&amp;quot;,
+        SpotPrice = &amp;quot;0.03&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;CheapWorker&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SpotInstanceRequest</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">SpotInstanceRequest</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -107,16 +168,16 @@ for more information.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L372">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L406">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest__ctor_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest__ctor_System_String_Pulumi_Aws_Ec2_SpotInstanceRequestArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.#ctor(System.String,Pulumi.Aws.Ec2.SpotInstanceRequestArgs,System.Nullable{CustomResourceOptions})">SpotInstanceRequest(String, SpotInstanceRequestArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest__ctor_System_String_Pulumi_Aws_Ec2_SpotInstanceRequestArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.#ctor(System.String,Pulumi.Aws.Ec2.SpotInstanceRequestArgs,Pulumi.CustomResourceOptions)">SpotInstanceRequest(String, SpotInstanceRequestArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a SpotInstanceRequest resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpotInstanceRequest(string name, SpotInstanceRequestArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SpotInstanceRequest(string name, SpotInstanceRequestArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,7 +202,7 @@ for more information.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -151,7 +212,7 @@ for more information.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_Ami_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Ami*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_Ami" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Ami">Ami</h4>
@@ -172,13 +233,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_Arn_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Arn*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_Arn" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Arn">Arn</h4>
@@ -198,13 +259,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_AssociatePublicIpAddress_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.AssociatePublicIpAddress*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_AssociatePublicIpAddress" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.AssociatePublicIpAddress">AssociatePublicIpAddress</h4>
@@ -225,13 +286,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_AvailabilityZone_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.AvailabilityZone*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_AvailabilityZone" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.AvailabilityZone">AvailabilityZone</h4>
@@ -252,13 +313,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_BlockDurationMinutes_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.BlockDurationMinutes*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_BlockDurationMinutes" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.BlockDurationMinutes">BlockDurationMinutes</h4>
@@ -281,13 +342,13 @@ Note that you can't specify an Availability Zone group or a launch group if you 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_CpuCoreCount_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.CpuCoreCount*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_CpuCoreCount" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.CpuCoreCount">CpuCoreCount</h4>
@@ -310,13 +371,13 @@ only supported on creation of instance type that support CPU Options
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_CpuThreadsPerCore_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.CpuThreadsPerCore*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_CpuThreadsPerCore" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.CpuThreadsPerCore">CpuThreadsPerCore</h4>
@@ -337,13 +398,13 @@ only supported on creation of instance type that support CPU Options
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_CreditSpecification_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.CreditSpecification*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_CreditSpecification" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.CreditSpecification">CreditSpecification</h4>
@@ -364,13 +425,13 @@ only supported on creation of instance type that support CPU Options
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestCreditSpecification.html">SpotInstanceRequestCreditSpecification</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestCreditSpecification.html">SpotInstanceRequestCreditSpecification</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_DisableApiTermination_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.DisableApiTermination*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_DisableApiTermination" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.DisableApiTermination">DisableApiTermination</h4>
@@ -392,13 +453,13 @@ Termination Protection</a></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_EbsBlockDevices_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.EbsBlockDevices*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_EbsBlockDevices" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.EbsBlockDevices">EbsBlockDevices</h4>
@@ -420,13 +481,13 @@ instance.  Block device configurations only apply on resource creation. See Bloc
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestEbsBlockDevice.html">SpotInstanceRequestEbsBlockDevice</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestEbsBlockDevice.html">SpotInstanceRequestEbsBlockDevice</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_EbsOptimized_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.EbsOptimized*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_EbsOptimized" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.EbsOptimized">EbsOptimized</h4>
@@ -451,13 +512,13 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_EphemeralBlockDevices_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.EphemeralBlockDevices*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_EphemeralBlockDevices" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.EphemeralBlockDevices">EphemeralBlockDevices</h4>
@@ -479,13 +540,13 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestEphemeralBlockDevice.html">SpotInstanceRequestEphemeralBlockDevice</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestEphemeralBlockDevice.html">SpotInstanceRequestEphemeralBlockDevice</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_GetPasswordData_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.GetPasswordData*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_GetPasswordData" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.GetPasswordData">GetPasswordData</h4>
@@ -506,13 +567,13 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_Hibernation_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Hibernation*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_Hibernation" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Hibernation">Hibernation</h4>
@@ -533,13 +594,13 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_HostId_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.HostId*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_HostId" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.HostId">HostId</h4>
@@ -560,26 +621,23 @@ See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimize
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_IamInstanceProfile_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.IamInstanceProfile*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_IamInstanceProfile" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.IamInstanceProfile">IamInstanceProfile</h4>
   <div class="markdown level1 summary"><p>The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code>iam:PassRole</code>.</p>
-<ul>
-<li><code>ipv6_address_count</code>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</li>
-</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IamInstanceProfile { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IamInstanceProfile { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -591,13 +649,13 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_InstanceInitiatedShutdownBehavior_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.InstanceInitiatedShutdownBehavior*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_InstanceInitiatedShutdownBehavior" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.InstanceInitiatedShutdownBehavior">InstanceInitiatedShutdownBehavior</h4>
@@ -609,7 +667,7 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InstanceInitiatedShutdownBehavior { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceInitiatedShutdownBehavior { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -621,13 +679,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L184">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_InstanceInterruptionBehaviour_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.InstanceInterruptionBehaviour*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_InstanceInterruptionBehaviour" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.InstanceInterruptionBehaviour">InstanceInterruptionBehaviour</h4>
@@ -636,7 +694,7 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InstanceInterruptionBehaviour { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceInterruptionBehaviour { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -648,13 +706,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_InstanceState_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.InstanceState*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_InstanceState" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.InstanceState">InstanceState</h4>
@@ -674,13 +732,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_InstanceType_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.InstanceType*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_InstanceType" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.InstanceType">InstanceType</h4>
@@ -701,17 +759,18 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L199">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_Ipv6AddressCount_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Ipv6AddressCount*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_Ipv6AddressCount" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Ipv6AddressCount">Ipv6AddressCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -727,13 +786,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L174">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_Ipv6Addresses_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Ipv6Addresses*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_Ipv6Addresses" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Ipv6Addresses">Ipv6Addresses</h4>
@@ -754,13 +813,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L211">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_KeyName_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.KeyName*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_KeyName" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.KeyName">KeyName</h4>
@@ -781,13 +840,13 @@ instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L187">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L218">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_LaunchGroup_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.LaunchGroup*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_LaunchGroup" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.LaunchGroup">LaunchGroup</h4>
@@ -797,7 +856,7 @@ If left empty instances are launched and terminated individually.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LaunchGroup { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LaunchGroup { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -809,13 +868,13 @@ If left empty instances are launched and terminated individually.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L193">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_MetadataOptions_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.MetadataOptions*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_MetadataOptions" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.MetadataOptions">MetadataOptions</h4>
@@ -836,13 +895,13 @@ If left empty instances are launched and terminated individually.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestMetadataOptions.html">SpotInstanceRequestMetadataOptions</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestMetadataOptions.html">SpotInstanceRequestMetadataOptions</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L199">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_Monitoring_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Monitoring*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_Monitoring" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Monitoring">Monitoring</h4>
@@ -863,13 +922,13 @@ If left empty instances are launched and terminated individually.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L205">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_NetworkInterfaces_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.NetworkInterfaces*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_NetworkInterfaces" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.NetworkInterfaces">NetworkInterfaces</h4>
@@ -890,13 +949,39 @@ If left empty instances are launched and terminated individually.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestNetworkInterface.html">SpotInstanceRequestNetworkInterface</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestNetworkInterface.html">SpotInstanceRequestNetworkInterface</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L208">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L239">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_OutpostArn_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.OutpostArn*"></a>
+  <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_OutpostArn" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.OutpostArn">OutpostArn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OutpostArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_PasswordData_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PasswordData*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_PasswordData" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PasswordData">PasswordData</h4>
@@ -916,13 +1001,13 @@ If left empty instances are launched and terminated individually.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L214">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_PlacementGroup_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PlacementGroup*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_PlacementGroup" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PlacementGroup">PlacementGroup</h4>
@@ -943,13 +1028,13 @@ If left empty instances are launched and terminated individually.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L251">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_PrimaryNetworkInterfaceId_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PrimaryNetworkInterfaceId*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_PrimaryNetworkInterfaceId" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PrimaryNetworkInterfaceId">PrimaryNetworkInterfaceId</h4>
@@ -969,13 +1054,13 @@ If left empty instances are launched and terminated individually.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L259">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_PrivateDns_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PrivateDns*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_PrivateDns" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PrivateDns">PrivateDns</h4>
@@ -998,13 +1083,13 @@ for your VPC</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L232">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L266">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_PrivateIp_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PrivateIp*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_PrivateIp" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PrivateIp">PrivateIp</h4>
@@ -1026,13 +1111,13 @@ instance in a VPC.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L239">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L273">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_PublicDns_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PublicDns*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_PublicDns" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PublicDns">PublicDns</h4>
@@ -1054,13 +1139,13 @@ is only available if you've enabled DNS hostnames for your VPC</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L245">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_PublicIp_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PublicIp*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_PublicIp" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.PublicIp">PublicIp</h4>
@@ -1081,13 +1166,13 @@ is only available if you've enabled DNS hostnames for your VPC</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L252">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_RootBlockDevice_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.RootBlockDevice*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_RootBlockDevice" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.RootBlockDevice">RootBlockDevice</h4>
@@ -1109,13 +1194,13 @@ device of the instance. See Block Devices below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestRootBlockDevice.html">SpotInstanceRequestRootBlockDevice</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotInstanceRequestRootBlockDevice.html">SpotInstanceRequestRootBlockDevice</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L258">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L292">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_SecurityGroups_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SecurityGroups*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_SecurityGroups" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SecurityGroups">SecurityGroups</h4>
@@ -1136,13 +1221,13 @@ device of the instance. See Block Devices below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L265">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L299">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_SourceDestCheck_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SourceDestCheck*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_SourceDestCheck" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SourceDestCheck">SourceDestCheck</h4>
@@ -1164,13 +1249,13 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L276">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L310">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_SpotBidStatus_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SpotBidStatus*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_SpotBidStatus" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SpotBidStatus">SpotBidStatus</h4>
@@ -1198,13 +1283,13 @@ of the Spot Instance Request.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L283">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L317">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_SpotInstanceId_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SpotInstanceId*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_SpotInstanceId" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SpotInstanceId">SpotInstanceId</h4>
@@ -1226,13 +1311,13 @@ the Spot Instance request.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L289">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L323">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_SpotPrice_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SpotPrice*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_SpotPrice" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SpotPrice">SpotPrice</h4>
@@ -1241,7 +1326,7 @@ the Spot Instance request.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SpotPrice { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SpotPrice { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1253,13 +1338,13 @@ the Spot Instance request.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L292">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L326">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_SpotRequestState_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SpotRequestState*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_SpotRequestState" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SpotRequestState">SpotRequestState</h4>
@@ -1279,13 +1364,13 @@ the Spot Instance request.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L299">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L333">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_SpotType_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SpotType*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_SpotType" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SpotType">SpotType</h4>
@@ -1295,7 +1380,7 @@ the instance is terminated, the spot request will be closed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SpotType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SpotType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1307,13 +1392,13 @@ the instance is terminated, the spot request will be closed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L305">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L339">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_SubnetId_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SubnetId*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_SubnetId" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.SubnetId">SubnetId</h4>
@@ -1334,22 +1419,22 @@ the instance is terminated, the spot request will be closed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L311">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L345">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_Tags_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_Tags" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1361,13 +1446,13 @@ the instance is terminated, the spot request will be closed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L317">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L351">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_Tenancy_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Tenancy*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_Tenancy" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Tenancy">Tenancy</h4>
@@ -1388,13 +1473,13 @@ the instance is terminated, the spot request will be closed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L323">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L357">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_UserData_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.UserData*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_UserData" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.UserData">UserData</h4>
@@ -1403,7 +1488,7 @@ the instance is terminated, the spot request will be closed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserData { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1415,13 +1500,13 @@ the instance is terminated, the spot request will be closed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L329">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L363">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_UserDataBase64_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.UserDataBase64*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_UserDataBase64" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.UserDataBase64">UserDataBase64</h4>
@@ -1430,7 +1515,7 @@ the instance is terminated, the spot request will be closed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserDataBase64 { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserDataBase64 { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1442,13 +1527,13 @@ the instance is terminated, the spot request will be closed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L335">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L369">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_ValidFrom_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.ValidFrom*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_ValidFrom" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.ValidFrom">ValidFrom</h4>
@@ -1469,13 +1554,13 @@ the instance is terminated, the spot request will be closed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L341">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L375">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_ValidUntil_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.ValidUntil*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_ValidUntil" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.ValidUntil">ValidUntil</h4>
@@ -1496,22 +1581,22 @@ the instance is terminated, the spot request will be closed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L347">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L381">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_VolumeTags_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.VolumeTags*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_VolumeTags" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.VolumeTags">VolumeTags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the devices created by the instance at launch time.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the devices created by the instance at launch time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; VolumeTags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; VolumeTags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1523,13 +1608,13 @@ the instance is terminated, the spot request will be closed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L353">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L387">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_VpcSecurityGroupIds_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.VpcSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_VpcSecurityGroupIds" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.VpcSecurityGroupIds">VpcSecurityGroupIds</h4>
@@ -1550,13 +1635,13 @@ the instance is terminated, the spot request will be closed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L361">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L395">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_WaitForFulfillment_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.WaitForFulfillment*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_WaitForFulfillment" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.WaitForFulfillment">WaitForFulfillment</h4>
@@ -1579,7 +1664,7 @@ timeout of 10m is reached.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1587,17 +1672,17 @@ timeout of 10m is reached.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L402">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L436">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotInstanceRequest_Get_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_SpotInstanceRequestState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.SpotInstanceRequestState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SpotInstanceRequestState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2_SpotInstanceRequest_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_SpotInstanceRequestState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.SpotInstanceRequest.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.SpotInstanceRequestState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SpotInstanceRequestState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing SpotInstanceRequest resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SpotInstanceRequest Get(string name, Input&lt;string&gt; id, SpotInstanceRequestState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SpotInstanceRequest Get(string name, Input&lt;string&gt; id, SpotInstanceRequestState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1616,7 +1701,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1628,7 +1713,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1657,7 +1742,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L36" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L65" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

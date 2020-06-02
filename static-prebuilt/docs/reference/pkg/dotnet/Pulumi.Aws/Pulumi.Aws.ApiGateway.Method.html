@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Method
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,124 @@
   <h1 id="Pulumi_Aws_ApiGateway_Method" data-uid="Pulumi.Aws.ApiGateway.Method" class="text-break">Class Method
   </h1>
   <div class="markdown level0 summary"><p>Provides a HTTP Method for an API Gateway Resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myDemoAPI = new Aws.ApiGateway.RestApi(&amp;quot;myDemoAPI&amp;quot;, new Aws.ApiGateway.RestApiArgs
+    {
+        Description = &amp;quot;This is my API for demonstration purposes&amp;quot;,
+    });
+    var myDemoResource = new Aws.ApiGateway.Resource(&amp;quot;myDemoResource&amp;quot;, new Aws.ApiGateway.ResourceArgs
+    {
+        ParentId = myDemoAPI.RootResourceId,
+        PathPart = &amp;quot;mydemoresource&amp;quot;,
+        RestApi = myDemoAPI.Id,
+    });
+    var myDemoMethod = new Aws.ApiGateway.Method(&amp;quot;myDemoMethod&amp;quot;, new Aws.ApiGateway.MethodArgs
+    {
+        Authorization = &amp;quot;NONE&amp;quot;,
+        HttpMethod = &amp;quot;GET&amp;quot;,
+        ResourceId = myDemoResource.Id,
+        RestApi = myDemoAPI.Id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="usage-with-cognito-user-pool-authorizer">Usage with Cognito User Pool Authorizer</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var cognitoUserPoolName = config.RequireObject&amp;lt;dynamic&gt;(&amp;quot;cognitoUserPoolName&amp;quot;);
+    var thisUserPools = Output.Create(Aws.Cognito.GetUserPools.InvokeAsync(new Aws.Cognito.GetUserPoolsArgs
+    {
+        Name = cognitoUserPoolName,
+    }));
+    var thisRestApi = new Aws.ApiGateway.RestApi(&amp;quot;thisRestApi&amp;quot;, new Aws.ApiGateway.RestApiArgs
+    {
+    });
+    var thisResource = new Aws.ApiGateway.Resource(&amp;quot;thisResource&amp;quot;, new Aws.ApiGateway.ResourceArgs
+    {
+        ParentId = thisRestApi.RootResourceId,
+        PathPart = &amp;quot;{proxy+}&amp;quot;,
+        RestApi = thisRestApi.Id,
+    });
+    var thisAuthorizer = new Aws.ApiGateway.Authorizer(&amp;quot;thisAuthorizer&amp;quot;, new Aws.ApiGateway.AuthorizerArgs
+    {
+        ProviderArns = thisUserPools.Apply(thisUserPools =&gt; thisUserPools.Arns),
+        RestApi = thisRestApi.Id,
+        Type = &amp;quot;COGNITO_USER_POOLS&amp;quot;,
+    });
+    var any = new Aws.ApiGateway.Method(&amp;quot;any&amp;quot;, new Aws.ApiGateway.MethodArgs
+    {
+        Authorization = &amp;quot;COGNITO_USER_POOLS&amp;quot;,
+        AuthorizerId = thisAuthorizer.Id,
+        HttpMethod = &amp;quot;ANY&amp;quot;,
+        RequestParameters = 
+        {
+            { &amp;quot;method.request.path.proxy&amp;quot;, true },
+        },
+        ResourceId = thisResource.Id,
+        RestApi = thisRestApi.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Method</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Method</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ApiGateway.html">Pulumi.Aws.ApiGateway</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +200,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method__ctor_" data-uid="Pulumi.Aws.ApiGateway.Method.#ctor*"></a>
-  <h4 id="Pulumi_Aws_ApiGateway_Method__ctor_System_String_Pulumi_Aws_ApiGateway_MethodArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ApiGateway.Method.#ctor(System.String,Pulumi.Aws.ApiGateway.MethodArgs,System.Nullable{CustomResourceOptions})">Method(String, MethodArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ApiGateway_Method__ctor_System_String_Pulumi_Aws_ApiGateway_MethodArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGateway.Method.#ctor(System.String,Pulumi.Aws.ApiGateway.MethodArgs,Pulumi.CustomResourceOptions)">Method(String, MethodArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Method resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Method(string name, MethodArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Method(string name, MethodArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +234,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +244,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method_ApiKeyRequired_" data-uid="Pulumi.Aws.ApiGateway.Method.ApiKeyRequired*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Method_ApiKeyRequired" data-uid="Pulumi.Aws.ApiGateway.Method.ApiKeyRequired">ApiKeyRequired</h4>
@@ -153,13 +265,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method_Authorization_" data-uid="Pulumi.Aws.ApiGateway.Method.Authorization*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Method_Authorization" data-uid="Pulumi.Aws.ApiGateway.Method.Authorization">Authorization</h4>
@@ -180,13 +292,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method_AuthorizationScopes_" data-uid="Pulumi.Aws.ApiGateway.Method.AuthorizationScopes*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Method_AuthorizationScopes" data-uid="Pulumi.Aws.ApiGateway.Method.AuthorizationScopes">AuthorizationScopes</h4>
@@ -207,13 +319,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method_AuthorizerId_" data-uid="Pulumi.Aws.ApiGateway.Method.AuthorizerId*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Method_AuthorizerId" data-uid="Pulumi.Aws.ApiGateway.Method.AuthorizerId">AuthorizerId</h4>
@@ -222,7 +334,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AuthorizerId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AuthorizerId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +346,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method_HttpMethod_" data-uid="Pulumi.Aws.ApiGateway.Method.HttpMethod*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Method_HttpMethod" data-uid="Pulumi.Aws.ApiGateway.Method.HttpMethod">HttpMethod</h4>
@@ -261,13 +373,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method_RequestModels_" data-uid="Pulumi.Aws.ApiGateway.Method.RequestModels*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Method_RequestModels" data-uid="Pulumi.Aws.ApiGateway.Method.RequestModels">RequestModels</h4>
@@ -278,7 +390,7 @@ and value is either <code>Error</code>, <code>Empty</code> (built-in models) or 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; RequestModels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; RequestModels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,13 +402,13 @@ and value is either <code>Error</code>, <code>Empty</code> (built-in models) or 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method_RequestParameters_" data-uid="Pulumi.Aws.ApiGateway.Method.RequestParameters*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Method_RequestParameters" data-uid="Pulumi.Aws.ApiGateway.Method.RequestParameters">RequestParameters</h4>
@@ -306,7 +418,7 @@ For example: <code>request_parameters = {&amp;quot;method.request.header.X-Some-
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, bool&gt;?&gt; RequestParameters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, bool&gt;&gt; RequestParameters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,13 +430,13 @@ For example: <code>request_parameters = {&amp;quot;method.request.header.X-Some-
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Boolean</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method_RequestValidatorId_" data-uid="Pulumi.Aws.ApiGateway.Method.RequestValidatorId*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Method_RequestValidatorId" data-uid="Pulumi.Aws.ApiGateway.Method.RequestValidatorId">RequestValidatorId</h4>
@@ -333,7 +445,7 @@ For example: <code>request_parameters = {&amp;quot;method.request.header.X-Some-
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RequestValidatorId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RequestValidatorId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -345,13 +457,13 @@ For example: <code>request_parameters = {&amp;quot;method.request.header.X-Some-
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method_ResourceId_" data-uid="Pulumi.Aws.ApiGateway.Method.ResourceId*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Method_ResourceId" data-uid="Pulumi.Aws.ApiGateway.Method.ResourceId">ResourceId</h4>
@@ -372,13 +484,13 @@ For example: <code>request_parameters = {&amp;quot;method.request.header.X-Some-
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method_RestApi_" data-uid="Pulumi.Aws.ApiGateway.Method.RestApi*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_Method_RestApi" data-uid="Pulumi.Aws.ApiGateway.Method.RestApi">RestApi</h4>
@@ -399,7 +511,7 @@ For example: <code>request_parameters = {&amp;quot;method.request.header.X-Some-
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -407,17 +519,17 @@ For example: <code>request_parameters = {&amp;quot;method.request.header.X-Some-
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_Method_Get_" data-uid="Pulumi.Aws.ApiGateway.Method.Get*"></a>
-  <h4 id="Pulumi_Aws_ApiGateway_Method_Get_System_String_Input_System_String__Pulumi_Aws_ApiGateway_MethodState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ApiGateway.Method.Get(System.String,Input{System.String},Pulumi.Aws.ApiGateway.MethodState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, MethodState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ApiGateway_Method_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_ApiGateway_MethodState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGateway.Method.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.ApiGateway.MethodState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, MethodState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Method resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Method Get(string name, Input&lt;string&gt; id, MethodState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Method Get(string name, Input&lt;string&gt; id, MethodState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,7 +548,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -448,7 +560,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -477,7 +589,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Method.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGateway/Method.cs/#L97" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Integration
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,13 +79,53 @@
 <p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code>signalfx.aws.ExternalIntegration</code> or <code>signalfx.aws.TokenIntegration</code>.</p>
 </blockquote>
 <h2 id="service-names">Service Names</h2>
-<p>Fields that expect an AWS service/namespace will work with one of: &quot;AWS/ApiGateway&quot; &quot;AWS/AppStream&quot; &quot;AWS/AutoScaling&quot; &quot;AWS/Billing&quot; &quot;AWS/CloudFront&quot; &quot;AWS/CloudSearch&quot; &quot;AWS/Events&quot; &quot;AWS/Logs&quot; &quot;AWS/Connect&quot; &quot;AWS/DMS&quot; &quot;AWS/DX&quot; &quot;AWS/DynamoDB&quot; &quot;AWS/EC2&quot; &quot;AWS/EC2Spot&quot; &quot;AWS/ECS&quot; &quot;AWS/ElasticBeanstalk&quot; &quot;AWS/EBS&quot; &quot;AWS/EFS&quot; &quot;AWS/ELB&quot; &quot;AWS/ApplicationELB&quot; &quot;AWS/NetworkELB&quot; &quot;AWS/ElasticTranscoder&quot; &quot;AWS/ElastiCache&quot; &quot;AWS/ES&quot; &quot;AWS/ElasticMapReduce&quot; &quot;AWS/GameLift&quot; &quot;AWS/Inspector&quot; &quot;AWS/IoT&quot; &quot;AWS/KMS&quot; &quot;AWS/KinesisAnalytics&quot; &quot;AWS/Firehose&quot; &quot;AWS/Kinesis&quot; &quot;AWS/KinesisVideo&quot; &quot;AWS/Lambda&quot; &quot;AWS/Lex&quot; &quot;AWS/ML&quot; &quot;AWS/OpsWorks&quot; &quot;AWS/Polly&quot; &quot;AWS/Redshift&quot; &quot;AWS/RDS&quot; &quot;AWS/Route53&quot; &quot;AWS/SageMaker&quot; &quot;AWS/DDoSProtection&quot; &quot;AWS/SES&quot; &quot;AWS/SNS&quot; &quot;AWS/SQS&quot; &quot;AWS/S3&quot; &quot;AWS/SWF&quot; &quot;AWS/States&quot; &quot;AWS/StorageGateway&quot; &quot;AWS/Translate&quot; &quot;AWS/NATGateway&quot; &quot;AWS/VPN&quot; &quot;WAF&quot; &quot;AWS/WorkSpaces&quot;.</p>
+<blockquote>
+<p><strong>NOTE</strong> You can use the data source &quot;signalfx.aws.getServices&quot; to specify all services.</p>
+</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Integration</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Integration</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.SignalFx.Aws.html">Pulumi.SignalFx.Aws</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.SignalFx.dll</h6>
@@ -96,16 +136,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration__ctor_" data-uid="Pulumi.SignalFx.Aws.Integration.#ctor*"></a>
-  <h4 id="Pulumi_SignalFx_Aws_Integration__ctor_System_String_Pulumi_SignalFx_Aws_IntegrationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.Aws.Integration.#ctor(System.String,Pulumi.SignalFx.Aws.IntegrationArgs,System.Nullable{CustomResourceOptions})">Integration(String, IntegrationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_SignalFx_Aws_Integration__ctor_System_String_Pulumi_SignalFx_Aws_IntegrationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.SignalFx.Aws.Integration.#ctor(System.String,Pulumi.SignalFx.Aws.IntegrationArgs,Pulumi.CustomResourceOptions)">Integration(String, IntegrationArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Integration resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Integration(string name, IntegrationArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Integration(string name, IntegrationArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,7 +170,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -140,7 +180,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_CustomCloudwatchNamespaces_" data-uid="Pulumi.SignalFx.Aws.Integration.CustomCloudwatchNamespaces*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_CustomCloudwatchNamespaces" data-uid="Pulumi.SignalFx.Aws.Integration.CustomCloudwatchNamespaces">CustomCloudwatchNamespaces</h4>
@@ -161,13 +201,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_CustomNamespaceSyncRules_" data-uid="Pulumi.SignalFx.Aws.Integration.CustomNamespaceSyncRules*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_CustomNamespaceSyncRules" data-uid="Pulumi.SignalFx.Aws.Integration.CustomNamespaceSyncRules">CustomNamespaceSyncRules</h4>
@@ -188,13 +228,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Aws.Outputs.IntegrationCustomNamespaceSyncRule.html">IntegrationCustomNamespaceSyncRule</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Aws.Outputs.IntegrationCustomNamespaceSyncRule.html">IntegrationCustomNamespaceSyncRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_EnableAwsUsage_" data-uid="Pulumi.SignalFx.Aws.Integration.EnableAwsUsage*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_EnableAwsUsage" data-uid="Pulumi.SignalFx.Aws.Integration.EnableAwsUsage">EnableAwsUsage</h4>
@@ -215,13 +255,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Enabled_" data-uid="Pulumi.SignalFx.Aws.Integration.Enabled*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_Enabled" data-uid="Pulumi.SignalFx.Aws.Integration.Enabled">Enabled</h4>
@@ -242,13 +282,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_ExternalId_" data-uid="Pulumi.SignalFx.Aws.Integration.ExternalId*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_ExternalId" data-uid="Pulumi.SignalFx.Aws.Integration.ExternalId">ExternalId</h4>
@@ -257,7 +297,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ExternalId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ExternalId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -269,13 +309,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_ImportCloudWatch_" data-uid="Pulumi.SignalFx.Aws.Integration.ImportCloudWatch*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_ImportCloudWatch" data-uid="Pulumi.SignalFx.Aws.Integration.ImportCloudWatch">ImportCloudWatch</h4>
@@ -296,13 +336,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_IntegrationId_" data-uid="Pulumi.SignalFx.Aws.Integration.IntegrationId*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_IntegrationId" data-uid="Pulumi.SignalFx.Aws.Integration.IntegrationId">IntegrationId</h4>
@@ -323,13 +363,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Key_" data-uid="Pulumi.SignalFx.Aws.Integration.Key*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_Key" data-uid="Pulumi.SignalFx.Aws.Integration.Key">Key</h4>
@@ -338,7 +378,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Key { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Key { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -350,13 +390,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_NamespaceSyncRules_" data-uid="Pulumi.SignalFx.Aws.Integration.NamespaceSyncRules*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_NamespaceSyncRules" data-uid="Pulumi.SignalFx.Aws.Integration.NamespaceSyncRules">NamespaceSyncRules</h4>
@@ -377,13 +417,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Aws.Outputs.IntegrationNamespaceSyncRule.html">IntegrationNamespaceSyncRule</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Aws.Outputs.IntegrationNamespaceSyncRule.html">IntegrationNamespaceSyncRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_PollRate_" data-uid="Pulumi.SignalFx.Aws.Integration.PollRate*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_PollRate" data-uid="Pulumi.SignalFx.Aws.Integration.PollRate">PollRate</h4>
@@ -404,13 +444,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Regions_" data-uid="Pulumi.SignalFx.Aws.Integration.Regions*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_Regions" data-uid="Pulumi.SignalFx.Aws.Integration.Regions">Regions</h4>
@@ -431,13 +471,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_RoleArn_" data-uid="Pulumi.SignalFx.Aws.Integration.RoleArn*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_RoleArn" data-uid="Pulumi.SignalFx.Aws.Integration.RoleArn">RoleArn</h4>
@@ -446,7 +486,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -458,17 +498,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Services_" data-uid="Pulumi.SignalFx.Aws.Integration.Services*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_Services" data-uid="Pulumi.SignalFx.Aws.Integration.Services">Services</h4>
-  <div class="markdown level1 summary"><p>List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with <code>namespace_sync_rule</code>.</p>
+  <div class="markdown level1 summary"><p>List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with <code>namespace_sync_rule</code>. See the documentation for <a href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -485,13 +525,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Token_" data-uid="Pulumi.SignalFx.Aws.Integration.Token*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_Token" data-uid="Pulumi.SignalFx.Aws.Integration.Token">Token</h4>
@@ -500,7 +540,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Token { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Token { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -512,13 +552,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_UseGetMetricDataMethod_" data-uid="Pulumi.SignalFx.Aws.Integration.UseGetMetricDataMethod*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_UseGetMetricDataMethod" data-uid="Pulumi.SignalFx.Aws.Integration.UseGetMetricDataMethod">UseGetMetricDataMethod</h4>
@@ -539,7 +579,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -547,17 +587,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Get_" data-uid="Pulumi.SignalFx.Aws.Integration.Get*"></a>
-  <h4 id="Pulumi_SignalFx_Aws_Integration_Get_System_String_Input_System_String__Pulumi_SignalFx_Aws_IntegrationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.Aws.Integration.Get(System.String,Input{System.String},Pulumi.SignalFx.Aws.IntegrationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IntegrationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_SignalFx_Aws_Integration_Get_System_String_Pulumi_Input_System_String__Pulumi_SignalFx_Aws_IntegrationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.SignalFx.Aws.Integration.Get(System.String,Pulumi.Input{System.String},Pulumi.SignalFx.Aws.IntegrationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, IntegrationState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Integration resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Integration Get(string name, Input&lt;string&gt; id, IntegrationState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Integration Get(string name, Input&lt;string&gt; id, IntegrationState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -576,7 +616,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -588,7 +628,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -617,7 +657,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

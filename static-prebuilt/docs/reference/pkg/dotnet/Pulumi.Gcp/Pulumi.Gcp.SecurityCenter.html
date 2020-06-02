@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.SecurityCenter
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,6 +87,24 @@ monitor, etc.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/binary-authorization/">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---scc-source-basic">Example Usage - Scc Source Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var customSource = new Gcp.SecurityCenter.Source(&amp;quot;customSource&amp;quot;, new Gcp.SecurityCenter.SourceArgs
+    {
+        Description = &amp;quot;My custom Cloud Security Command Center Finding Source&amp;quot;,
+        DisplayName = &amp;quot;My Source&amp;quot;,
+        Organization = &amp;quot;123456789&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.SecurityCenter.SourceArgs.html">SourceArgs</a></h4>
       <section></section>

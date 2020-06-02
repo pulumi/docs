@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.OpsWorks
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,61 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.Application.html">Application</a></h4>
       <section><p>Provides an OpsWorks application resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo_app = new Aws.OpsWorks.Application(&amp;quot;foo-app&amp;quot;, new Aws.OpsWorks.ApplicationArgs
+    {
+        AppSources = 
+        {
+            new Aws.OpsWorks.Inputs.ApplicationAppSourceArgs
+            {
+                Revision = &amp;quot;master&amp;quot;,
+                Type = &amp;quot;git&amp;quot;,
+                Url = &amp;quot;https://github.com/example.git&amp;quot;,
+            },
+        },
+        AutoBundleOnDeploy = true,
+        Description = &amp;quot;This is a Rails application&amp;quot;,
+        DocumentRoot = &amp;quot;public&amp;quot;,
+        Domains = 
+        {
+            &amp;quot;example.com&amp;quot;,
+            &amp;quot;sub.example.com&amp;quot;,
+        },
+        EnableSsl = true,
+        Environments = 
+        {
+            new Aws.OpsWorks.Inputs.ApplicationEnvironmentArgs
+            {
+                Key = &amp;quot;key&amp;quot;,
+                Secure = false,
+                Value = &amp;quot;value&amp;quot;,
+            },
+        },
+        RailsEnv = &amp;quot;staging&amp;quot;,
+        ShortName = &amp;quot;foobar&amp;quot;,
+        SslConfigurations = 
+        {
+            new Aws.OpsWorks.Inputs.ApplicationSslConfigurationArgs
+            {
+                Certificate = File.ReadAllText(&amp;quot;./foobar.crt&amp;quot;),
+                PrivateKey = File.ReadAllText(&amp;quot;./foobar.key&amp;quot;),
+            },
+        },
+        StackId = aws_opsworks_stack.Main.Id,
+        Type = &amp;quot;rails&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.ApplicationArgs.html">ApplicationArgs</a></h4>
       <section></section>
@@ -85,6 +140,23 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.CustomLayer.html">CustomLayer</a></h4>
       <section><p>Provides an OpsWorks custom layer resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var custlayer = new Aws.OpsWorks.CustomLayer(&amp;quot;custlayer&amp;quot;, new Aws.OpsWorks.CustomLayerArgs
+    {
+        ShortName = &amp;quot;awesome&amp;quot;,
+        StackId = aws_opsworks_stack.Main.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.CustomLayerArgs.html">CustomLayerArgs</a></h4>
       <section></section>
@@ -92,6 +164,23 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.GangliaLayer.html">GangliaLayer</a></h4>
       <section><p>Provides an OpsWorks Ganglia layer resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var monitor = new Aws.OpsWorks.GangliaLayer(&amp;quot;monitor&amp;quot;, new Aws.OpsWorks.GangliaLayerArgs
+    {
+        Password = &amp;quot;foobarbaz&amp;quot;,
+        StackId = aws_opsworks_stack.Main.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.GangliaLayerArgs.html">GangliaLayerArgs</a></h4>
       <section></section>
@@ -99,6 +188,23 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.HaproxyLayer.html">HaproxyLayer</a></h4>
       <section><p>Provides an OpsWorks haproxy layer resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var lb = new Aws.OpsWorks.HaproxyLayer(&amp;quot;lb&amp;quot;, new Aws.OpsWorks.HaproxyLayerArgs
+    {
+        StackId = aws_opsworks_stack.Main.Id,
+        StatsPassword = &amp;quot;foobarbaz&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.HaproxyLayerArgs.html">HaproxyLayerArgs</a></h4>
       <section></section>
@@ -106,6 +212,29 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.Instance.html">Instance</a></h4>
       <section><p>Provides an OpsWorks instance resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_instance = new Aws.OpsWorks.Instance(&amp;quot;my-instance&amp;quot;, new Aws.OpsWorks.InstanceArgs
+    {
+        InstanceType = &amp;quot;t2.micro&amp;quot;,
+        LayerIds = 
+        {
+            aws_opsworks_custom_layer.My_layer.Id,
+        },
+        Os = &amp;quot;Amazon Linux 2015.09&amp;quot;,
+        StackId = aws_opsworks_stack.Main.Id,
+        State = &amp;quot;stopped&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h2 id="block-devices">Block devices</h2>
 <p>Each of the <code>*_block_device</code> attributes controls a portion of the AWS
 Instance's &quot;Block Device Mapping&quot;. It's a good idea to familiarize yourself with <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">AWS's Block Device
@@ -163,6 +292,22 @@ using the <a href="https://www.pulumi.com/docs/reference/cli/pulumi_up/"><code>u
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.JavaAppLayer.html">JavaAppLayer</a></h4>
       <section><p>Provides an OpsWorks Java application layer resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.OpsWorks.JavaAppLayer(&amp;quot;app&amp;quot;, new Aws.OpsWorks.JavaAppLayerArgs
+    {
+        StackId = aws_opsworks_stack.Main.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.JavaAppLayerArgs.html">JavaAppLayerArgs</a></h4>
       <section></section>
@@ -170,6 +315,22 @@ using the <a href="https://www.pulumi.com/docs/reference/cli/pulumi_up/"><code>u
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.MemcachedLayer.html">MemcachedLayer</a></h4>
       <section><p>Provides an OpsWorks memcached layer resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cache = new Aws.OpsWorks.MemcachedLayer(&amp;quot;cache&amp;quot;, new Aws.OpsWorks.MemcachedLayerArgs
+    {
+        StackId = aws_opsworks_stack.Main.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.MemcachedLayerArgs.html">MemcachedLayerArgs</a></h4>
       <section></section>
@@ -181,6 +342,22 @@ using the <a href="https://www.pulumi.com/docs/reference/cli/pulumi_up/"><code>u
 <p><strong>Note:</strong> All arguments including the root password will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var db = new Aws.OpsWorks.MysqlLayer(&amp;quot;db&amp;quot;, new Aws.OpsWorks.MysqlLayerArgs
+    {
+        StackId = aws_opsworks_stack.Main.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.MysqlLayerArgs.html">MysqlLayerArgs</a></h4>
       <section></section>
@@ -188,6 +365,22 @@ using the <a href="https://www.pulumi.com/docs/reference/cli/pulumi_up/"><code>u
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.NodejsAppLayer.html">NodejsAppLayer</a></h4>
       <section><p>Provides an OpsWorks NodeJS application layer resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.OpsWorks.NodejsAppLayer(&amp;quot;app&amp;quot;, new Aws.OpsWorks.NodejsAppLayerArgs
+    {
+        StackId = aws_opsworks_stack.Main.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.NodejsAppLayerArgs.html">NodejsAppLayerArgs</a></h4>
       <section></section>
@@ -195,6 +388,26 @@ using the <a href="https://www.pulumi.com/docs/reference/cli/pulumi_up/"><code>u
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.Permission.html">Permission</a></h4>
       <section><p>Provides an OpsWorks permission resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myStackPermission = new Aws.OpsWorks.Permission(&amp;quot;myStackPermission&amp;quot;, new Aws.OpsWorks.PermissionArgs
+    {
+        AllowSsh = true,
+        AllowSudo = true,
+        Level = &amp;quot;iam_only&amp;quot;,
+        StackId = aws_opsworks_stack.Stack.Id,
+        UserArn = aws_iam_user.User.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.PermissionArgs.html">PermissionArgs</a></h4>
       <section></section>
@@ -202,6 +415,22 @@ using the <a href="https://www.pulumi.com/docs/reference/cli/pulumi_up/"><code>u
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.PhpAppLayer.html">PhpAppLayer</a></h4>
       <section><p>Provides an OpsWorks PHP application layer resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.OpsWorks.PhpAppLayer(&amp;quot;app&amp;quot;, new Aws.OpsWorks.PhpAppLayerArgs
+    {
+        StackId = aws_opsworks_stack.Main.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.PhpAppLayerArgs.html">PhpAppLayerArgs</a></h4>
       <section></section>
@@ -209,6 +438,22 @@ using the <a href="https://www.pulumi.com/docs/reference/cli/pulumi_up/"><code>u
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.RailsAppLayer.html">RailsAppLayer</a></h4>
       <section><p>Provides an OpsWorks Ruby on Rails application layer resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new Aws.OpsWorks.RailsAppLayer(&amp;quot;app&amp;quot;, new Aws.OpsWorks.RailsAppLayerArgs
+    {
+        StackId = aws_opsworks_stack.Main.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.RailsAppLayerArgs.html">RailsAppLayerArgs</a></h4>
       <section></section>
@@ -220,6 +465,25 @@ using the <a href="https://www.pulumi.com/docs/reference/cli/pulumi_up/"><code>u
 <p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myInstance = new Aws.OpsWorks.RdsDbInstance(&amp;quot;myInstance&amp;quot;, new Aws.OpsWorks.RdsDbInstanceArgs
+    {
+        DbPassword = &amp;quot;somePass&amp;quot;,
+        DbUser = &amp;quot;someUser&amp;quot;,
+        RdsDbInstanceArn = aws_db_instance.My_instance.Arn,
+        StackId = aws_opsworks_stack.My_stack.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.RdsDbInstanceArgs.html">RdsDbInstanceArgs</a></h4>
       <section></section>
@@ -227,6 +491,35 @@ using the <a href="https://www.pulumi.com/docs/reference/cli/pulumi_up/"><code>u
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.Stack.html">Stack</a></h4>
       <section><p>Provides an OpsWorks stack resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var main = new Aws.OpsWorks.Stack(&amp;quot;main&amp;quot;, new Aws.OpsWorks.StackArgs
+    {
+        CustomJson = @&amp;quot;{
+&amp;quot;&amp;quot;foobar&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;1.0.0&amp;quot;&amp;quot;
+}
+}
+
+&amp;quot;,
+        DefaultInstanceProfileArn = aws_iam_instance_profile.Opsworks.Arn,
+        Region = &amp;quot;us-west-1&amp;quot;,
+        ServiceRoleArn = aws_iam_role.Opsworks.Arn,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;foobar-stack&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.StackArgs.html">StackArgs</a></h4>
       <section></section>
@@ -234,6 +527,22 @@ using the <a href="https://www.pulumi.com/docs/reference/cli/pulumi_up/"><code>u
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.StaticWebLayer.html">StaticWebLayer</a></h4>
       <section><p>Provides an OpsWorks static web server layer resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var web = new Aws.OpsWorks.StaticWebLayer(&amp;quot;web&amp;quot;, new Aws.OpsWorks.StaticWebLayerArgs
+    {
+        StackId = aws_opsworks_stack.Main.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.StaticWebLayerArgs.html">StaticWebLayerArgs</a></h4>
       <section></section>
@@ -241,6 +550,23 @@ using the <a href="https://www.pulumi.com/docs/reference/cli/pulumi_up/"><code>u
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.UserProfile.html">UserProfile</a></h4>
       <section><p>Provides an OpsWorks User Profile resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myProfile = new Aws.OpsWorks.UserProfile(&amp;quot;myProfile&amp;quot;, new Aws.OpsWorks.UserProfileArgs
+    {
+        SshUsername = &amp;quot;my_user&amp;quot;,
+        UserArn = aws_iam_user.User.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.OpsWorks.UserProfileArgs.html">UserProfileArgs</a></h4>
       <section></section>

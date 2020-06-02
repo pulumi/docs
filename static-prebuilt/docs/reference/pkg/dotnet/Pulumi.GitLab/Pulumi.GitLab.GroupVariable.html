@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GroupVariable
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -74,12 +74,70 @@
   <div class="markdown level0 summary"><p>This resource allows you to create and manage CI/CD variables for your GitLab groups.
 For further information on variables, consult the <a href="https://docs.gitlab.com/ce/ci/variables/README.html#variables">gitlab
 documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new GitLab.GroupVariable(&amp;quot;example&amp;quot;, new GitLab.GroupVariableArgs
+    {
+        Group = &amp;quot;12345&amp;quot;,
+        Key = &amp;quot;group_variable_key&amp;quot;,
+        Masked = false,
+        Protected = false,
+        Value = &amp;quot;group_variable_value&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GroupVariable</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">GroupVariable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.GitLab.html">Pulumi.GitLab</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.GitLab.dll</h6>
@@ -90,16 +148,16 @@ documentation</a>.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/GroupVariable.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupVariable.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_GitLab_GroupVariable__ctor_" data-uid="Pulumi.GitLab.GroupVariable.#ctor*"></a>
-  <h4 id="Pulumi_GitLab_GroupVariable__ctor_System_String_Pulumi_GitLab_GroupVariableArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.GitLab.GroupVariable.#ctor(System.String,Pulumi.GitLab.GroupVariableArgs,System.Nullable{CustomResourceOptions})">GroupVariable(String, GroupVariableArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_GitLab_GroupVariable__ctor_System_String_Pulumi_GitLab_GroupVariableArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.GitLab.GroupVariable.#ctor(System.String,Pulumi.GitLab.GroupVariableArgs,Pulumi.CustomResourceOptions)">GroupVariable(String, GroupVariableArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a GroupVariable resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GroupVariable(string name, GroupVariableArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public GroupVariable(string name, GroupVariableArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +182,7 @@ documentation</a>.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -134,7 +192,7 @@ documentation</a>.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/GroupVariable.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupVariable.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_GitLab_GroupVariable_Group_" data-uid="Pulumi.GitLab.GroupVariable.Group*"></a>
   <h4 id="Pulumi_GitLab_GroupVariable_Group" data-uid="Pulumi.GitLab.GroupVariable.Group">Group</h4>
@@ -155,13 +213,13 @@ documentation</a>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/GroupVariable.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupVariable.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_GitLab_GroupVariable_Key_" data-uid="Pulumi.GitLab.GroupVariable.Key*"></a>
   <h4 id="Pulumi_GitLab_GroupVariable_Key" data-uid="Pulumi.GitLab.GroupVariable.Key">Key</h4>
@@ -182,13 +240,39 @@ documentation</a>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/GroupVariable.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupVariable.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupVariable_Masked_" data-uid="Pulumi.GitLab.GroupVariable.Masked*"></a>
+  <h4 id="Pulumi_GitLab_GroupVariable_Masked" data-uid="Pulumi.GitLab.GroupVariable.Masked">Masked</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Masked { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupVariable.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_GitLab_GroupVariable_Protected_" data-uid="Pulumi.GitLab.GroupVariable.Protected*"></a>
   <h4 id="Pulumi_GitLab_GroupVariable_Protected" data-uid="Pulumi.GitLab.GroupVariable.Protected">Protected</h4>
@@ -209,13 +293,13 @@ documentation</a>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/GroupVariable.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupVariable.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_GitLab_GroupVariable_Value_" data-uid="Pulumi.GitLab.GroupVariable.Value*"></a>
   <h4 id="Pulumi_GitLab_GroupVariable_Value" data-uid="Pulumi.GitLab.GroupVariable.Value">Value</h4>
@@ -236,13 +320,13 @@ documentation</a>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/GroupVariable.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupVariable.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_GitLab_GroupVariable_VariableType_" data-uid="Pulumi.GitLab.GroupVariable.VariableType*"></a>
   <h4 id="Pulumi_GitLab_GroupVariable_VariableType" data-uid="Pulumi.GitLab.GroupVariable.VariableType">VariableType</h4>
@@ -251,7 +335,7 @@ documentation</a>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VariableType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VariableType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,7 +347,7 @@ documentation</a>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -271,17 +355,17 @@ documentation</a>.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/GroupVariable.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupVariable.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_GitLab_GroupVariable_Get_" data-uid="Pulumi.GitLab.GroupVariable.Get*"></a>
-  <h4 id="Pulumi_GitLab_GroupVariable_Get_System_String_Input_System_String__Pulumi_GitLab_GroupVariableState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.GitLab.GroupVariable.Get(System.String,Input{System.String},Pulumi.GitLab.GroupVariableState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GroupVariableState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_GitLab_GroupVariable_Get_System_String_Pulumi_Input_System_String__Pulumi_GitLab_GroupVariableState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.GitLab.GroupVariable.Get(System.String,Pulumi.Input{System.String},Pulumi.GitLab.GroupVariableState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, GroupVariableState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing GroupVariable resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static GroupVariable Get(string name, Input&lt;string&gt; id, GroupVariableState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static GroupVariable Get(string name, Input&lt;string&gt; id, GroupVariableState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -300,7 +384,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -312,7 +396,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -341,7 +425,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/GroupVariable.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupVariable.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.AppEngine
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,32 @@ entire project to delete the application. This provider will report the applicat
 successfully deleted; this is a limitation of the provider, and will go away in the future.
 This provider is not able to delete App Engine applications.</p>
 </blockquote>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>iap.oauth2_client_secret</code> will be stored in the raw
+state as plain-text. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myProject = new Gcp.Organizations.Project(&amp;quot;myProject&amp;quot;, new Gcp.Organizations.ProjectArgs
+    {
+        ProjectId = &amp;quot;your-project-id&amp;quot;,
+        OrgId = &amp;quot;1234567&amp;quot;,
+    });
+    var app = new Gcp.AppEngine.Application(&amp;quot;app&amp;quot;, new Gcp.AppEngine.ApplicationArgs
+    {
+        Project = myProject.ProjectId,
+        LocationId = &amp;quot;us-central&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.AppEngine.ApplicationArgs.html">ApplicationArgs</a></h4>
       <section></section>
@@ -108,6 +134,26 @@ This provider is not able to delete App Engine applications.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---app-engine-domain-mapping-basic">Example Usage - App Engine Domain Mapping Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var domainMapping = new Gcp.AppEngine.DomainMapping(&amp;quot;domainMapping&amp;quot;, new Gcp.AppEngine.DomainMappingArgs
+    {
+        DomainName = &amp;quot;verified-domain.com&amp;quot;,
+        SslSettings = new Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs
+        {
+            SslManagementType = &amp;quot;AUTOMATIC&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.AppEngine.DomainMappingArgs.html">DomainMappingArgs</a></h4>
       <section></section>
@@ -119,6 +165,99 @@ This provider is not able to delete App Engine applications.</p>
 <ul>
 <li><a href="https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services">API documentation</a></li>
 </ul>
+<h2 id="example-usage---app-engine-service-split-traffic">Example Usage - App Engine Service Split Traffic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Gcp.Storage.Bucket(&amp;quot;bucket&amp;quot;, new Gcp.Storage.BucketArgs
+    {
+    });
+    var @object = new Gcp.Storage.BucketObject(&amp;quot;object&amp;quot;, new Gcp.Storage.BucketObjectArgs
+    {
+        Bucket = bucket.Name,
+        Source = new FileAsset(&amp;quot;./test-fixtures/appengine/hello-world.zip&amp;quot;),
+    });
+    var liveappV1 = new Gcp.AppEngine.StandardAppVersion(&amp;quot;liveappV1&amp;quot;, new Gcp.AppEngine.StandardAppVersionArgs
+    {
+        VersionId = &amp;quot;v1&amp;quot;,
+        Service = &amp;quot;liveapp&amp;quot;,
+        DeleteServiceOnDestroy = true,
+        Runtime = &amp;quot;nodejs10&amp;quot;,
+        Entrypoint = new Gcp.AppEngine.Inputs.StandardAppVersionEntrypointArgs
+        {
+            Shell = &amp;quot;node ./app.js&amp;quot;,
+        },
+        Deployment = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentArgs
+        {
+            Zip = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentZipArgs
+            {
+                SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =&gt;
+                {
+                    var bucketName = values.Item1;
+                    var objectName = values.Item2;
+                    return $&amp;quot;https://storage.googleapis.com/{bucketName}/{objectName}&amp;quot;;
+                }),
+            },
+        },
+        EnvVariables = 
+        {
+            { &amp;quot;port&amp;quot;, &amp;quot;8080&amp;quot; },
+        },
+    });
+    var liveappV2 = new Gcp.AppEngine.StandardAppVersion(&amp;quot;liveappV2&amp;quot;, new Gcp.AppEngine.StandardAppVersionArgs
+    {
+        VersionId = &amp;quot;v2&amp;quot;,
+        Service = &amp;quot;liveapp&amp;quot;,
+        NoopOnDestroy = true,
+        Runtime = &amp;quot;nodejs10&amp;quot;,
+        Entrypoint = new Gcp.AppEngine.Inputs.StandardAppVersionEntrypointArgs
+        {
+            Shell = &amp;quot;node ./app.js&amp;quot;,
+        },
+        Deployment = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentArgs
+        {
+            Zip = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentZipArgs
+            {
+                SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =&gt;
+                {
+                    var bucketName = values.Item1;
+                    var objectName = values.Item2;
+                    return $&amp;quot;https://storage.googleapis.com/{bucketName}/{objectName}&amp;quot;;
+                }),
+            },
+        },
+        EnvVariables = 
+        {
+            { &amp;quot;port&amp;quot;, &amp;quot;8080&amp;quot; },
+        },
+    });
+    var liveapp = new Gcp.AppEngine.EngineSplitTraffic(&amp;quot;liveapp&amp;quot;, new Gcp.AppEngine.EngineSplitTrafficArgs
+    {
+        Service = liveappV2.Service,
+        MigrateTraffic = false,
+        Split = new Gcp.AppEngine.Inputs.EngineSplitTrafficSplitArgs
+        {
+            ShardBy = &amp;quot;IP&amp;quot;,
+            Allocations = Output.Tuple(liveappV1.VersionId, liveappV2.VersionId).Apply(values =&gt;
+            {
+                var liveappV1VersionId = values.Item1;
+                var liveappV2VersionId = values.Item2;
+                return 
+                {
+                    { liveappV1VersionId, 0.75 },
+                    { liveappV2VersionId, 0.25 },
+                };
+            }),
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.AppEngine.EngineSplitTrafficArgs.html">EngineSplitTrafficArgs</a></h4>
       <section></section>
@@ -133,6 +272,35 @@ and provides an action to take on matched requests.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/appengine/docs/standard/python/creating-firewalls#creating_firewall_rules">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---app-engine-firewall-rule-basic">Example Usage - App Engine Firewall Rule Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myProject = new Gcp.Organizations.Project(&amp;quot;myProject&amp;quot;, new Gcp.Organizations.ProjectArgs
+    {
+        ProjectId = &amp;quot;ae-project&amp;quot;,
+        OrgId = &amp;quot;123456789&amp;quot;,
+    });
+    var app = new Gcp.AppEngine.Application(&amp;quot;app&amp;quot;, new Gcp.AppEngine.ApplicationArgs
+    {
+        Project = myProject.ProjectId,
+        LocationId = &amp;quot;us-central&amp;quot;,
+    });
+    var rule = new Gcp.AppEngine.FirewallRule(&amp;quot;rule&amp;quot;, new Gcp.AppEngine.FirewallRuleArgs
+    {
+        Project = app.Project,
+        Priority = 1000,
+        Action = &amp;quot;ALLOW&amp;quot;,
+        SourceRange = &amp;quot;*&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.AppEngine.FirewallRuleArgs.html">FirewallRuleArgs</a></h4>
       <section></section>
@@ -160,8 +328,9 @@ It should have the App Engine Flexible Environment Service Agent role, which wil
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.AppEngine.StandardAppVersion.html">StandardAppVersion</a></h4>
       <section><p>Standard App Version resource to create a new version of standard GAE Application.
-Currently supporting Zip and File Containers.
-Currently does not support async operation checking.</p>
+Learn about the differences between the standard environment and the flexible environment
+at <a href="https://cloud.google.com/appengine/docs/the-appengine-environments">https://cloud.google.com/appengine/docs/the-appengine-environments</a>.
+Currently supporting Zip and File Containers.</p>
 <p>To get more information about StandardAppVersion, see:</p>
 <ul>
 <li><a href="https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions">API documentation</a></li>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.PrivateDns
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,37 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.AAAARecord.html">AAAARecord</a></h4>
       <section><p>Enables you to manage DNS AAAA Records within Azure Private DNS.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;testResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var testZone = new Azure.PrivateDns.Zone(&amp;quot;testZone&amp;quot;, new Azure.PrivateDns.ZoneArgs
+    {
+        ResourceGroupName = testResourceGroup.Name,
+    });
+    var testAAAARecord = new Azure.PrivateDns.AAAARecord(&amp;quot;testAAAARecord&amp;quot;, new Azure.PrivateDns.AAAARecordArgs
+    {
+        ZoneName = testZone.Name,
+        ResourceGroupName = testResourceGroup.Name,
+        Ttl = 300,
+        Records = 
+        {
+            &amp;quot;fd5d:70bc:930e:d008:0000:0000:0000:7334&amp;quot;,
+            &amp;quot;fd5d:70bc:930e:d008::7335&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.AAAARecordArgs.html">AAAARecordArgs</a></h4>
       <section></section>
@@ -85,6 +116,36 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.ARecord.html">ARecord</a></h4>
       <section><p>Enables you to manage DNS A Records within Azure Private DNS.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.PrivateDns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.PrivateDns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleARecord = new Azure.PrivateDns.ARecord(&amp;quot;exampleARecord&amp;quot;, new Azure.PrivateDns.ARecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+        Records = 
+        {
+            &amp;quot;10.0.180.17&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.ARecordArgs.html">ARecordArgs</a></h4>
       <section></section>
@@ -92,10 +153,43 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.CnameRecord.html">CnameRecord</a></h4>
       <section><p>Enables you to manage DNS CNAME Records within Azure Private DNS.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.PrivateDns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.PrivateDns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleCnameRecord = new Azure.PrivateDns.CnameRecord(&amp;quot;exampleCnameRecord&amp;quot;, new Azure.PrivateDns.CnameRecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+        Record = &amp;quot;contoso.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.CnameRecordArgs.html">CnameRecordArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.CnameRecordState.html">CnameRecordState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.PrivateDns.GetDnsZone.html">GetDnsZone</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.PrivateDns.GetDnsZoneArgs.html">GetDnsZoneArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.PrivateDns.GetDnsZoneResult.html">GetDnsZoneResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.LinkService.html">LinkService</a></h4>
       <section><p>Manages a Private Link Service.</p>
@@ -116,6 +210,36 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.PTRRecord.html">PTRRecord</a></h4>
       <section><p>Enables you to manage DNS PTR Records within Azure Private DNS.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.PrivateDns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.PrivateDns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var examplePTRRecord = new Azure.PrivateDns.PTRRecord(&amp;quot;examplePTRRecord&amp;quot;, new Azure.PrivateDns.PTRRecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+        Records = 
+        {
+            &amp;quot;test.example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.PTRRecordArgs.html">PTRRecordArgs</a></h4>
       <section></section>
@@ -137,6 +261,26 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.Zone.html">Zone</a></h4>
       <section><p>Enables you to manage Private DNS zones within Azure DNS. These zones are hosted on Azure's name servers.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.PrivateDns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.PrivateDns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.ZoneArgs.html">ZoneArgs</a></h4>
       <section></section>
@@ -144,6 +288,32 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.ZoneVirtualNetworkLink.html">ZoneVirtualNetworkLink</a></h4>
       <section><p>Enables you to manage Private DNS zone Virtual Network Links. These Links enable DNS resolution and registration inside Azure Virtual Networks using Azure Private DNS.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.PrivateDns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.PrivateDns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleZoneVirtualNetworkLink = new Azure.PrivateDns.ZoneVirtualNetworkLink(&amp;quot;exampleZoneVirtualNetworkLink&amp;quot;, new Azure.PrivateDns.ZoneVirtualNetworkLinkArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        PrivateDnsZoneName = exampleZone.Name,
+        VirtualNetworkId = azurerm_virtual_network.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.PrivateDns.ZoneVirtualNetworkLinkArgs.html">ZoneVirtualNetworkLinkArgs</a></h4>
       <section></section>

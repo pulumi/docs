@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.MySql
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -96,6 +96,60 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.MySql.FirewallRule.html">FirewallRule</a></h4>
       <section><p>Manages a Firewall Rule for a MySQL Server</p>
+<h2 id="example-usage-single-ip-address">Example Usage (Single IP Address)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleServer = new Azure.MySql.Server(&amp;quot;exampleServer&amp;quot;, new Azure.MySql.ServerArgs
+    {
+    });
+    // ...
+    var exampleFirewallRule = new Azure.MySql.FirewallRule(&amp;quot;exampleFirewallRule&amp;quot;, new Azure.MySql.FirewallRuleArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ServerName = exampleServer.Name,
+        StartIpAddress = &amp;quot;40.112.8.12&amp;quot;,
+        EndIpAddress = &amp;quot;40.112.8.12&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-ip-range">Example Usage (IP Range)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleServer = new Azure.MySql.Server(&amp;quot;exampleServer&amp;quot;, new Azure.MySql.ServerArgs
+    {
+    });
+    // ...
+    var exampleFirewallRule = new Azure.MySql.FirewallRule(&amp;quot;exampleFirewallRule&amp;quot;, new Azure.MySql.FirewallRuleArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ServerName = exampleServer.Name,
+        StartIpAddress = &amp;quot;40.112.0.0&amp;quot;,
+        EndIpAddress = &amp;quot;40.112.255.255&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.MySql.FirewallRuleArgs.html">FirewallRuleArgs</a></h4>
       <section></section>
@@ -103,6 +157,39 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.MySql.Server.html">Server</a></h4>
       <section><p>Manages a MySQL Server.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleServer = new Azure.MySql.Server(&amp;quot;exampleServer&amp;quot;, new Azure.MySql.ServerArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AdministratorLogin = &amp;quot;mysqladminun&amp;quot;,
+        AdministratorLoginPassword = &amp;quot;H@Sh1CoR3!&amp;quot;,
+        SkuName = &amp;quot;B_Gen5_2&amp;quot;,
+        StorageMb = 5120,
+        Version = &amp;quot;5.7&amp;quot;,
+        AutoGrowEnabled = true,
+        BackupRetentionDays = 7,
+        GeoRedundantBackupEnabled = true,
+        InfrastructureEncryptionEnabled = true,
+        PublicNetworkAccessEnabled = false,
+        SslEnforcementEnabled = true,
+        SslMinimalTlsVersionEnforced = &amp;quot;TLS1_2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.MySql.ServerArgs.html">ServerArgs</a></h4>
       <section></section>

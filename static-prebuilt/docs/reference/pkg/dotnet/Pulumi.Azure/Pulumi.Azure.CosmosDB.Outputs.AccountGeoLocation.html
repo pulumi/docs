@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AccountGeoLocation
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">AccountGeoLocation</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.html">Pulumi.Azure.CosmosDB.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_CosmosDB_Outputs_AccountGeoLocation_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class AccountGeoLocation : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class AccountGeoLocation</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/Outputs/AccountGeoLocation.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/CosmosDB/Outputs/AccountGeoLocation.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_Outputs_AccountGeoLocation_FailoverPriority" data-uid="Pulumi.Azure.CosmosDB.Outputs.AccountGeoLocation.FailoverPriority">FailoverPriority</h4>
   <div class="markdown level1 summary"><p>The failover priority of the region. A failover priority of <code>0</code> indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority <code>0</code>.</p>
@@ -113,7 +137,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/Outputs/AccountGeoLocation.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/CosmosDB/Outputs/AccountGeoLocation.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_Outputs_AccountGeoLocation_Id" data-uid="Pulumi.Azure.CosmosDB.Outputs.AccountGeoLocation.Id">Id</h4>
   <div class="markdown level1 summary"><p>The ID of the virtual network subnet.</p>
@@ -121,7 +145,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Id</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Id</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/Outputs/AccountGeoLocation.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/CosmosDB/Outputs/AccountGeoLocation.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_Outputs_AccountGeoLocation_Location" data-uid="Pulumi.Azure.CosmosDB.Outputs.AccountGeoLocation.Location">Location</h4>
   <div class="markdown level1 summary"><p>The name of the Azure region to host replicated data.</p>
@@ -165,7 +189,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/Outputs/AccountGeoLocation.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/CosmosDB/Outputs/AccountGeoLocation.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_Outputs_AccountGeoLocation_Prefix" data-uid="Pulumi.Azure.CosmosDB.Outputs.AccountGeoLocation.Prefix">Prefix</h4>
   <div class="markdown level1 summary"><p>The string used to generate the document endpoints for this region. If not specified it defaults to <code>${cosmosdb_account.name}-${location}</code>. Changing this causes the location to be deleted and re-provisioned and cannot be changed for the location with failover priority <code>0</code>.</p>
@@ -173,7 +197,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Prefix</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Prefix</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,7 +209,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -197,7 +221,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/Outputs/AccountGeoLocation.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/CosmosDB/Outputs/AccountGeoLocation.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

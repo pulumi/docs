@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Endpoint
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,82 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides an AWS Client VPN endpoint for OpenVPN clients. For more information on usage, please see the
 <a href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html">AWS Client VPN Administrator's Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ec2ClientVpn.Endpoint(&amp;quot;example&amp;quot;, new Aws.Ec2ClientVpn.EndpointArgs
+    {
+        AuthenticationOptions = 
+        {
+            new Aws.Ec2ClientVpn.Inputs.EndpointAuthenticationOptionArgs
+            {
+                RootCertificateChainArn = aws_acm_certificate.Root_cert.Arn,
+                Type = &amp;quot;certificate-authentication&amp;quot;,
+            },
+        },
+        ClientCidrBlock = &amp;quot;10.0.0.0/16&amp;quot;,
+        ConnectionLogOptions = new Aws.Ec2ClientVpn.Inputs.EndpointConnectionLogOptionsArgs
+        {
+            CloudwatchLogGroup = aws_cloudwatch_log_group.Lg.Name,
+            CloudwatchLogStream = aws_cloudwatch_log_stream.Ls.Name,
+            Enabled = true,
+        },
+        Description = &amp;quot;clientvpn-example&amp;quot;,
+        ServerCertificateArn = aws_acm_certificate.Cert.Arn,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Endpoint</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Endpoint</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2ClientVpn.html">Pulumi.Aws.Ec2ClientVpn</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -89,16 +159,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint__ctor_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint__ctor_System_String_Pulumi_Aws_Ec2ClientVpn_EndpointArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.#ctor(System.String,Pulumi.Aws.Ec2ClientVpn.EndpointArgs,System.Nullable{CustomResourceOptions})">Endpoint(String, EndpointArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint__ctor_System_String_Pulumi_Aws_Ec2ClientVpn_EndpointArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.#ctor(System.String,Pulumi.Aws.Ec2ClientVpn.EndpointArgs,Pulumi.CustomResourceOptions)">Endpoint(String, EndpointArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Endpoint resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Endpoint(string name, EndpointArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Endpoint(string name, EndpointArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +193,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +203,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_AuthenticationOptions_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.AuthenticationOptions*"></a>
   <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_AuthenticationOptions" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.AuthenticationOptions">AuthenticationOptions</h4>
@@ -154,13 +224,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2ClientVpn.Outputs.EndpointAuthenticationOption.html">EndpointAuthenticationOption</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2ClientVpn.Outputs.EndpointAuthenticationOption.html">EndpointAuthenticationOption</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_ClientCidrBlock_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.ClientCidrBlock*"></a>
   <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_ClientCidrBlock" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.ClientCidrBlock">ClientCidrBlock</h4>
@@ -181,13 +251,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_ConnectionLogOptions_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.ConnectionLogOptions*"></a>
   <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_ConnectionLogOptions" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.ConnectionLogOptions">ConnectionLogOptions</h4>
@@ -208,13 +278,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2ClientVpn.Outputs.EndpointConnectionLogOptions.html">EndpointConnectionLogOptions</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2ClientVpn.Outputs.EndpointConnectionLogOptions.html">EndpointConnectionLogOptions</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_Description_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.Description*"></a>
   <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_Description" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.Description">Description</h4>
@@ -223,7 +293,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +305,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_DnsName_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.DnsName*"></a>
   <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_DnsName" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.DnsName">DnsName</h4>
@@ -262,13 +332,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_DnsServers_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.DnsServers*"></a>
   <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_DnsServers" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.DnsServers">DnsServers</h4>
@@ -289,13 +359,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_ServerCertificateArn_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.ServerCertificateArn*"></a>
   <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_ServerCertificateArn" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.ServerCertificateArn">ServerCertificateArn</h4>
@@ -316,13 +386,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_SplitTunnel_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.SplitTunnel*"></a>
   <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_SplitTunnel" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.SplitTunnel">SplitTunnel</h4>
@@ -343,13 +413,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_Status_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.Status*"></a>
   <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_Status" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.Status">Status</h4>
@@ -370,22 +440,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_Tags_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_Tags" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -397,13 +467,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_TransportProtocol_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.TransportProtocol*"></a>
   <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_TransportProtocol" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.TransportProtocol">TransportProtocol</h4>
@@ -412,7 +482,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TransportProtocol { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TransportProtocol { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,7 +494,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -432,17 +502,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2ClientVpn_Endpoint_Get_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_Get_System_String_Input_System_String__Pulumi_Aws_Ec2ClientVpn_EndpointState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.Get(System.String,Input{System.String},Pulumi.Aws.Ec2ClientVpn.EndpointState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, EndpointState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2ClientVpn_Endpoint_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2ClientVpn_EndpointState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2ClientVpn.Endpoint.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2ClientVpn.EndpointState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, EndpointState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Endpoint resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Endpoint Get(string name, Input&lt;string&gt; id, EndpointState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Endpoint Get(string name, Input&lt;string&gt; id, EndpointState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -461,7 +531,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -473,7 +543,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -502,7 +572,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2ClientVpn/Endpoint.cs/#L53" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

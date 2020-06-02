@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NodeTemplateVsphereConfig
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">NodeTemplateVsphereConfig</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.Outputs.html">Pulumi.Rancher2.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
   <h5 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class NodeTemplateVsphereConfig : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class NodeTemplateVsphereConfig</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Boot2dockerUrl" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Boot2dockerUrl">Boot2dockerUrl</h4>
   <div class="markdown level1 summary"><p>vSphere URL for boot2docker iso image. Default <code>https://releases.rancher.com/os/latest/rancheros-vmware.iso</code> (string)</p>
@@ -95,7 +119,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Boot2dockerUrl</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Boot2dockerUrl</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -107,13 +131,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Cfgparams" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Cfgparams">Cfgparams</h4>
   <div class="markdown level1 summary"><p>vSphere vm configuration parameters (used for guestinfo) (list)</p>
@@ -133,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_CloneFrom" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.CloneFrom">CloneFrom</h4>
   <div class="markdown level1 summary"><p>If you choose creation type clone a name of what you want to clone is required. From Rancher v2.3.3 (string)</p>
@@ -147,7 +171,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? CloneFrom</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string CloneFrom</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_CloudConfig" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.CloudConfig">CloudConfig</h4>
   <div class="markdown level1 summary"><p>Filepath to a cloud-config yaml file to put into the ISO user-data. From Rancher v2.3.3 (string)</p>
@@ -173,7 +197,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? CloudConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string CloudConfig</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,13 +209,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Cloudinit" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Cloudinit">Cloudinit</h4>
   <div class="markdown level1 summary"><p>vSphere cloud-init file or url to set in the guestinfo (string)</p>
@@ -199,7 +223,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Cloudinit</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Cloudinit</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,13 +235,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_ContentLibrary" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.ContentLibrary">ContentLibrary</h4>
   <div class="markdown level1 summary"><p>If you choose to clone from a content library template specify the name of the library. From Rancher v2.3.3 (string)</p>
@@ -225,7 +249,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ContentLibrary</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ContentLibrary</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +261,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_CpuCount" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.CpuCount">CpuCount</h4>
   <div class="markdown level1 summary"><p>vSphere CPU number for docker VM. Default <code>2</code> (string)</p>
@@ -251,7 +275,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? CpuCount</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string CpuCount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +287,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_CreationType" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.CreationType">CreationType</h4>
   <div class="markdown level1 summary"><p>Creation type when creating a new virtual machine. Supported values: vm, template, library, legacy. Default <code>legacy</code>. From Rancher v2.3.3 (string)</p>
@@ -277,7 +301,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? CreationType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string CreationType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,13 +313,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_CustomAttributes" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.CustomAttributes">CustomAttributes</h4>
   <div class="markdown level1 summary"><p>vSphere custom attributes, format key/value e.g. <code>200=my custom value</code>. From Rancher v2.3.3 (List)</p>
@@ -315,13 +339,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L55">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Datacenter" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Datacenter">Datacenter</h4>
   <div class="markdown level1 summary"><p>vSphere datacenter for docker VM (string)</p>
@@ -329,7 +353,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Datacenter</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Datacenter</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -341,13 +365,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Datastore" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Datastore">Datastore</h4>
   <div class="markdown level1 summary"><p>vSphere datastore for docker VM (string)</p>
@@ -355,7 +379,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Datastore</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Datastore</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,13 +391,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L63">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_DatastoreCluster" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.DatastoreCluster">DatastoreCluster</h4>
   <div class="markdown level1 summary"><p>vSphere datastore cluster for virtual machine. From Rancher v2.3.3 (string)</p>
@@ -381,7 +405,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DatastoreCluster</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DatastoreCluster</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -393,13 +417,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_DiskSize" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.DiskSize">DiskSize</h4>
   <div class="markdown level1 summary"><p>vSphere size of disk for docker VM (in MB). Default <code>20480</code> (string)</p>
@@ -407,7 +431,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DiskSize</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DiskSize</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,13 +443,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L71">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Folder" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Folder">Folder</h4>
   <div class="markdown level1 summary"><p>vSphere folder for the docker VM. This folder must already exist in the datacenter (string)</p>
@@ -433,7 +457,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Folder</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Folder</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -445,13 +469,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L75">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Hostsystem" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Hostsystem">Hostsystem</h4>
   <div class="markdown level1 summary"><p>vSphere compute resource where the docker VM will be instantiated. This can be omitted if using a cluster with DRS (string)</p>
@@ -459,7 +483,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Hostsystem</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Hostsystem</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -471,13 +495,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L79">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_MemorySize" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.MemorySize">MemorySize</h4>
   <div class="markdown level1 summary"><p>vSphere size of memory for docker VM (in MB). Default <code>2048</code> (string)</p>
@@ -485,7 +509,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? MemorySize</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string MemorySize</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -497,13 +521,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L83">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Networks" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Networks">Networks</h4>
   <div class="markdown level1 summary"><p>vSphere network where the docker VM will be attached (list)</p>
@@ -523,13 +547,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L87">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Password" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Password">Password</h4>
   <div class="markdown level1 summary"><p>vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use <code>rancher2..CloudCredential</code> from Rancher v2.2.x (string)</p>
@@ -537,7 +561,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Password</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Password</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -549,13 +573,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L91">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Pool" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Pool">Pool</h4>
   <div class="markdown level1 summary"><p>vSphere resource pool for docker VM (string)</p>
@@ -563,7 +587,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Pool</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Pool</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -575,13 +599,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L95">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_SshPassword" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.SshPassword">SshPassword</h4>
   <div class="markdown level1 summary"><p>If using a non-B2D image you can specify the ssh password. Default <code>tcuser</code>. From Rancher v2.3.3 (string)</p>
@@ -589,7 +613,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? SshPassword</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string SshPassword</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -601,13 +625,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L99">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_SshPort" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.SshPort">SshPort</h4>
   <div class="markdown level1 summary"><p>If using a non-B2D image you can specify the ssh port. Default <code>22</code>. From Rancher v2.3.3 (string)</p>
@@ -615,7 +639,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? SshPort</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string SshPort</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -627,13 +651,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L103">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_SshUser" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.SshUser">SshUser</h4>
   <div class="markdown level1 summary"><p>If using a non-B2D image you can specify the ssh user. Default <code>docker</code>. From Rancher v2.3.3 (string)</p>
@@ -641,7 +665,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? SshUser</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string SshUser</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -653,13 +677,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L107">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_SshUserGroup" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.SshUserGroup">SshUserGroup</h4>
   <div class="markdown level1 summary"><p>If using a non-B2D image the uploaded keys will need chown'ed. Default <code>staff</code>. From Rancher v2.3.3 (string)</p>
@@ -667,7 +691,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? SshUserGroup</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string SshUserGroup</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -679,13 +703,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L111">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Tags" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>vSphere tags id e.g. <code>urn:xxx</code>. From Rancher v2.3.3 (list)</p>
@@ -705,13 +729,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L115">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Username" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Username">Username</h4>
   <div class="markdown level1 summary"><p>vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use <code>rancher2..CloudCredential</code> from Rancher v2.2.x (string)</p>
@@ -719,7 +743,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Username</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Username</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -731,13 +755,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L119">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_VappIpAllocationPolicy" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.VappIpAllocationPolicy">VappIpAllocationPolicy</h4>
   <div class="markdown level1 summary"><p>vSphere vApp IP allocation policy. Supported values are: <code>dhcp</code>, <code>fixed</code>, <code>transient</code> and <code>fixedAllocated</code> (string)</p>
@@ -745,7 +769,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? VappIpAllocationPolicy</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string VappIpAllocationPolicy</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -757,13 +781,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L123">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_VappIpProtocol" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.VappIpProtocol">VappIpProtocol</h4>
   <div class="markdown level1 summary"><p>vSphere vApp IP protocol for this deployment. Supported values are: <code>IPv4</code> and <code>IPv6</code> (string)</p>
@@ -771,7 +795,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? VappIpProtocol</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string VappIpProtocol</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -783,13 +807,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L127">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_VappProperties" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.VappProperties">VappProperties</h4>
   <div class="markdown level1 summary"><p>vSphere vApp properties (list)</p>
@@ -809,13 +833,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L131">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_VappTransport" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.VappTransport">VappTransport</h4>
   <div class="markdown level1 summary"><p>vSphere OVF environment transports to use for properties. Supported values are: <code>iso</code> and <code>com.vmware.guestInfo</code> (string)</p>
@@ -823,7 +847,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? VappTransport</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string VappTransport</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -835,13 +859,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L135">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_Vcenter" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.Vcenter">Vcenter</h4>
   <div class="markdown level1 summary"><p>vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use <code>rancher2..CloudCredential</code> from Rancher v2.2.x (string)</p>
@@ -849,7 +873,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Vcenter</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Vcenter</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -861,13 +885,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L139">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_NodeTemplateVsphereConfig_VcenterPort" data-uid="Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.VcenterPort">VcenterPort</h4>
   <div class="markdown level1 summary"><p>vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use <code>rancher2..CloudCredential</code> from Rancher v2.2.x. Default <code>443</code> (string)</p>
@@ -875,7 +899,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? VcenterPort</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string VcenterPort</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -887,7 +911,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -899,7 +923,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Outputs/NodeTemplateVsphereConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

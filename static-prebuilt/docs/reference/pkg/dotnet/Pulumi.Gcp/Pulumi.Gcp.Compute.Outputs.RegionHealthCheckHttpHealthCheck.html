@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RegionHealthCheckHttpHealthCheck
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,23 +78,50 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RegionHealthCheckHttpHealthCheck</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_RegionHealthCheckHttpHealthCheck_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RegionHealthCheckHttpHealthCheck : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RegionHealthCheckHttpHealthCheck</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L21">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionHealthCheckHttpHealthCheck_Host" data-uid="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpHealthCheck.Host">Host</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Host</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Host</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -106,16 +133,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L26">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionHealthCheckHttpHealthCheck_Port" data-uid="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpHealthCheck.Port">Port</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The TCP port number for the HTTP2 health check request.
+The default value is 443.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -137,14 +166,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionHealthCheckHttpHealthCheck_PortName" data-uid="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpHealthCheck.PortName">PortName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? PortName</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string PortName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,20 +187,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L44">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionHealthCheckHttpHealthCheck_PortSpecification" data-uid="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpHealthCheck.PortSpecification">PortSpecification</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies how port is selected for health checking, can be one of the
+following values:</p>
+<ul>
+<li><code>USE_FIXED_PORT</code>: The port number in <code>port</code> is used for health checking.</li>
+<li><code>USE_NAMED_PORT</code>: The <code>portName</code> is used for health checking.</li>
+<li><code>USE_SERVING_PORT</code>: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in <code>port</code> and
+<code>portName</code> fields.</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? PortSpecification</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string PortSpecification</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,20 +224,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionHealthCheckHttpHealthCheck_ProxyHeader" data-uid="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpHealthCheck.ProxyHeader">ProxyHeader</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the type of proxy header to append before sending data to the
+backend.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ProxyHeader</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ProxyHeader</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,20 +251,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L54">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionHealthCheckHttpHealthCheck_RequestPath" data-uid="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpHealthCheck.RequestPath">RequestPath</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The request path of the HTTP2 health check request.
+The default value is /.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? RequestPath</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string RequestPath</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,20 +278,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L60">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionHealthCheckHttpHealthCheck_Response" data-uid="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpHealthCheck.Response">Response</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Response</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Response</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,7 +306,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -268,7 +318,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionHealthCheckHttpHealthCheck.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

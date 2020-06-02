@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Job
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,86 @@
   <h1 id="Pulumi_Azure_StreamAnalytics_Job" data-uid="Pulumi.Azure.StreamAnalytics.Job" class="text-break">Class Job
   </h1>
   <div class="markdown level0 summary"><p>Manages a Stream Analytics Job.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleJob = new Azure.StreamAnalytics.Job(&amp;quot;exampleJob&amp;quot;, new Azure.StreamAnalytics.JobArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        CompatibilityLevel = &amp;quot;1.1&amp;quot;,
+        DataLocale = &amp;quot;en-GB&amp;quot;,
+        EventsLateArrivalMaxDelayInSeconds = 60,
+        EventsOutOfOrderMaxDelayInSeconds = 50,
+        EventsOutOfOrderPolicy = &amp;quot;Adjust&amp;quot;,
+        OutputErrorPolicy = &amp;quot;Drop&amp;quot;,
+        StreamingUnits = 3,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Example&amp;quot; },
+        },
+        TransformationQuery = @&amp;quot;    SELECT *
+INTO [YourOutputAlias]
+FROM [YourInputAlias]
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Job</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Job</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.StreamAnalytics.html">Pulumi.Azure.StreamAnalytics</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -88,16 +162,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job__ctor_" data-uid="Pulumi.Azure.StreamAnalytics.Job.#ctor*"></a>
-  <h4 id="Pulumi_Azure_StreamAnalytics_Job__ctor_System_String_Pulumi_Azure_StreamAnalytics_JobArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.StreamAnalytics.Job.#ctor(System.String,Pulumi.Azure.StreamAnalytics.JobArgs,System.Nullable{CustomResourceOptions})">Job(String, JobArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_StreamAnalytics_Job__ctor_System_String_Pulumi_Azure_StreamAnalytics_JobArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.StreamAnalytics.Job.#ctor(System.String,Pulumi.Azure.StreamAnalytics.JobArgs,Pulumi.CustomResourceOptions)">Job(String, JobArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Job resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Job(string name, JobArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Job(string name, JobArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +196,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +206,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_CompatibilityLevel_" data-uid="Pulumi.Azure.StreamAnalytics.Job.CompatibilityLevel*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_CompatibilityLevel" data-uid="Pulumi.Azure.StreamAnalytics.Job.CompatibilityLevel">CompatibilityLevel</h4>
@@ -153,13 +227,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_DataLocale_" data-uid="Pulumi.Azure.StreamAnalytics.Job.DataLocale*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_DataLocale" data-uid="Pulumi.Azure.StreamAnalytics.Job.DataLocale">DataLocale</h4>
@@ -180,13 +254,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_EventsLateArrivalMaxDelayInSeconds_" data-uid="Pulumi.Azure.StreamAnalytics.Job.EventsLateArrivalMaxDelayInSeconds*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_EventsLateArrivalMaxDelayInSeconds" data-uid="Pulumi.Azure.StreamAnalytics.Job.EventsLateArrivalMaxDelayInSeconds">EventsLateArrivalMaxDelayInSeconds</h4>
@@ -207,13 +281,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_EventsOutOfOrderMaxDelayInSeconds_" data-uid="Pulumi.Azure.StreamAnalytics.Job.EventsOutOfOrderMaxDelayInSeconds*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_EventsOutOfOrderMaxDelayInSeconds" data-uid="Pulumi.Azure.StreamAnalytics.Job.EventsOutOfOrderMaxDelayInSeconds">EventsOutOfOrderMaxDelayInSeconds</h4>
@@ -234,13 +308,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_EventsOutOfOrderPolicy_" data-uid="Pulumi.Azure.StreamAnalytics.Job.EventsOutOfOrderPolicy*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_EventsOutOfOrderPolicy" data-uid="Pulumi.Azure.StreamAnalytics.Job.EventsOutOfOrderPolicy">EventsOutOfOrderPolicy</h4>
@@ -249,7 +323,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EventsOutOfOrderPolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EventsOutOfOrderPolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +335,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_JobId_" data-uid="Pulumi.Azure.StreamAnalytics.Job.JobId*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_JobId" data-uid="Pulumi.Azure.StreamAnalytics.Job.JobId">JobId</h4>
@@ -288,13 +362,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_Location_" data-uid="Pulumi.Azure.StreamAnalytics.Job.Location*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_Location" data-uid="Pulumi.Azure.StreamAnalytics.Job.Location">Location</h4>
@@ -315,13 +389,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_Name_" data-uid="Pulumi.Azure.StreamAnalytics.Job.Name*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_Name" data-uid="Pulumi.Azure.StreamAnalytics.Job.Name">Name</h4>
@@ -342,13 +416,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_OutputErrorPolicy_" data-uid="Pulumi.Azure.StreamAnalytics.Job.OutputErrorPolicy*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_OutputErrorPolicy" data-uid="Pulumi.Azure.StreamAnalytics.Job.OutputErrorPolicy">OutputErrorPolicy</h4>
@@ -357,7 +431,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OutputErrorPolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OutputErrorPolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,13 +443,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_ResourceGroupName_" data-uid="Pulumi.Azure.StreamAnalytics.Job.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_ResourceGroupName" data-uid="Pulumi.Azure.StreamAnalytics.Job.ResourceGroupName">ResourceGroupName</h4>
@@ -396,13 +470,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_StreamingUnits_" data-uid="Pulumi.Azure.StreamAnalytics.Job.StreamingUnits*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_StreamingUnits" data-uid="Pulumi.Azure.StreamAnalytics.Job.StreamingUnits">StreamingUnits</h4>
@@ -423,13 +497,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_Tags_" data-uid="Pulumi.Azure.StreamAnalytics.Job.Tags*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_Tags" data-uid="Pulumi.Azure.StreamAnalytics.Job.Tags">Tags</h4>
@@ -438,7 +512,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,13 +524,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_TransformationQuery_" data-uid="Pulumi.Azure.StreamAnalytics.Job.TransformationQuery*"></a>
   <h4 id="Pulumi_Azure_StreamAnalytics_Job_TransformationQuery" data-uid="Pulumi.Azure.StreamAnalytics.Job.TransformationQuery">TransformationQuery</h4>
@@ -477,7 +551,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -485,17 +559,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_Azure_StreamAnalytics_Job_Get_" data-uid="Pulumi.Azure.StreamAnalytics.Job.Get*"></a>
-  <h4 id="Pulumi_Azure_StreamAnalytics_Job_Get_System_String_Input_System_String__Pulumi_Azure_StreamAnalytics_JobState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.StreamAnalytics.Job.Get(System.String,Input{System.String},Pulumi.Azure.StreamAnalytics.JobState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, JobState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_StreamAnalytics_Job_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_StreamAnalytics_JobState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.StreamAnalytics.Job.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.StreamAnalytics.JobState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, JobState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Job resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Job Get(string name, Input&lt;string&gt; id, JobState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Job Get(string name, Input&lt;string&gt; id, JobState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -514,7 +588,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -526,7 +600,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -555,7 +629,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/StreamAnalytics/Job.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/StreamAnalytics/Job.cs/#L56" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

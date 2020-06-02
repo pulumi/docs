@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Binding
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,103 @@
   </h1>
   <div class="markdown level0 summary"><p>The <code>rabbitmq..Binding</code> resource creates and manages a binding relationship
 between a queue an exchange.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testVHost = new RabbitMQ.VHost(&amp;quot;testVHost&amp;quot;, new RabbitMQ.VHostArgs
+    {
+    });
+    var guest = new RabbitMQ.Permissions(&amp;quot;guest&amp;quot;, new RabbitMQ.PermissionsArgs
+    {
+        Permissions = new RabbitMQ.Inputs.PermissionsPermissionsArgs
+        {
+            Configure = &amp;quot;.*&amp;quot;,
+            Read = &amp;quot;.*&amp;quot;,
+            Write = &amp;quot;.*&amp;quot;,
+        },
+        User = &amp;quot;guest&amp;quot;,
+        Vhost = testVHost.Name,
+    });
+    var testExchange = new RabbitMQ.Exchange(&amp;quot;testExchange&amp;quot;, new RabbitMQ.ExchangeArgs
+    {
+        Settings = new RabbitMQ.Inputs.ExchangeSettingsArgs
+        {
+            AutoDelete = true,
+            Durable = false,
+            Type = &amp;quot;fanout&amp;quot;,
+        },
+        Vhost = guest.Vhost,
+    });
+    var testQueue = new RabbitMQ.Queue(&amp;quot;testQueue&amp;quot;, new RabbitMQ.QueueArgs
+    {
+        Settings = new RabbitMQ.Inputs.QueueSettingsArgs
+        {
+            AutoDelete = false,
+            Durable = true,
+        },
+        Vhost = guest.Vhost,
+    });
+    var testBinding = new RabbitMQ.Binding(&amp;quot;testBinding&amp;quot;, new RabbitMQ.BindingArgs
+    {
+        Destination = testQueue.Name,
+        DestinationType = &amp;quot;queue&amp;quot;,
+        RoutingKey = &amp;quot;#&amp;quot;,
+        Source = testExchange.Name,
+        Vhost = testVHost.Name,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Binding</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Binding</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.RabbitMQ.html">Pulumi.RabbitMQ</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.RabbitMQ.dll</h6>
@@ -89,16 +180,16 @@ between a queue an exchange.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/d4b9aea0900dd330d9cf082799cc71fa22d78f54/sdk/dotnet/Binding.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/master/sdk/dotnet/Binding.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_RabbitMQ_Binding__ctor_" data-uid="Pulumi.RabbitMQ.Binding.#ctor*"></a>
-  <h4 id="Pulumi_RabbitMQ_Binding__ctor_System_String_Pulumi_RabbitMQ_BindingArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.RabbitMQ.Binding.#ctor(System.String,Pulumi.RabbitMQ.BindingArgs,System.Nullable{CustomResourceOptions})">Binding(String, BindingArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_RabbitMQ_Binding__ctor_System_String_Pulumi_RabbitMQ_BindingArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.RabbitMQ.Binding.#ctor(System.String,Pulumi.RabbitMQ.BindingArgs,Pulumi.CustomResourceOptions)">Binding(String, BindingArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Binding resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Binding(string name, BindingArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Binding(string name, BindingArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +214,7 @@ between a queue an exchange.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +224,7 @@ between a queue an exchange.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/d4b9aea0900dd330d9cf082799cc71fa22d78f54/sdk/dotnet/Binding.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/master/sdk/dotnet/Binding.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_RabbitMQ_Binding_Arguments_" data-uid="Pulumi.RabbitMQ.Binding.Arguments*"></a>
   <h4 id="Pulumi_RabbitMQ_Binding_Arguments" data-uid="Pulumi.RabbitMQ.Binding.Arguments">Arguments</h4>
@@ -142,7 +233,7 @@ between a queue an exchange.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Arguments { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Arguments { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,13 +245,13 @@ between a queue an exchange.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/d4b9aea0900dd330d9cf082799cc71fa22d78f54/sdk/dotnet/Binding.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/master/sdk/dotnet/Binding.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_RabbitMQ_Binding_Destination_" data-uid="Pulumi.RabbitMQ.Binding.Destination*"></a>
   <h4 id="Pulumi_RabbitMQ_Binding_Destination" data-uid="Pulumi.RabbitMQ.Binding.Destination">Destination</h4>
@@ -181,13 +272,13 @@ between a queue an exchange.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/d4b9aea0900dd330d9cf082799cc71fa22d78f54/sdk/dotnet/Binding.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/master/sdk/dotnet/Binding.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_RabbitMQ_Binding_DestinationType_" data-uid="Pulumi.RabbitMQ.Binding.DestinationType*"></a>
   <h4 id="Pulumi_RabbitMQ_Binding_DestinationType" data-uid="Pulumi.RabbitMQ.Binding.DestinationType">DestinationType</h4>
@@ -208,13 +299,13 @@ between a queue an exchange.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/d4b9aea0900dd330d9cf082799cc71fa22d78f54/sdk/dotnet/Binding.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/master/sdk/dotnet/Binding.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_RabbitMQ_Binding_PropertiesKey_" data-uid="Pulumi.RabbitMQ.Binding.PropertiesKey*"></a>
   <h4 id="Pulumi_RabbitMQ_Binding_PropertiesKey" data-uid="Pulumi.RabbitMQ.Binding.PropertiesKey">PropertiesKey</h4>
@@ -235,13 +326,13 @@ between a queue an exchange.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/d4b9aea0900dd330d9cf082799cc71fa22d78f54/sdk/dotnet/Binding.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/master/sdk/dotnet/Binding.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_RabbitMQ_Binding_RoutingKey_" data-uid="Pulumi.RabbitMQ.Binding.RoutingKey*"></a>
   <h4 id="Pulumi_RabbitMQ_Binding_RoutingKey" data-uid="Pulumi.RabbitMQ.Binding.RoutingKey">RoutingKey</h4>
@@ -250,7 +341,7 @@ between a queue an exchange.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RoutingKey { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RoutingKey { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +353,13 @@ between a queue an exchange.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/d4b9aea0900dd330d9cf082799cc71fa22d78f54/sdk/dotnet/Binding.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/master/sdk/dotnet/Binding.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_RabbitMQ_Binding_Source_" data-uid="Pulumi.RabbitMQ.Binding.Source*"></a>
   <h4 id="Pulumi_RabbitMQ_Binding_Source" data-uid="Pulumi.RabbitMQ.Binding.Source">Source</h4>
@@ -289,13 +380,13 @@ between a queue an exchange.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/d4b9aea0900dd330d9cf082799cc71fa22d78f54/sdk/dotnet/Binding.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/master/sdk/dotnet/Binding.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_RabbitMQ_Binding_Vhost_" data-uid="Pulumi.RabbitMQ.Binding.Vhost*"></a>
   <h4 id="Pulumi_RabbitMQ_Binding_Vhost" data-uid="Pulumi.RabbitMQ.Binding.Vhost">Vhost</h4>
@@ -316,7 +407,7 @@ between a queue an exchange.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -324,17 +415,17 @@ between a queue an exchange.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/d4b9aea0900dd330d9cf082799cc71fa22d78f54/sdk/dotnet/Binding.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/master/sdk/dotnet/Binding.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_RabbitMQ_Binding_Get_" data-uid="Pulumi.RabbitMQ.Binding.Get*"></a>
-  <h4 id="Pulumi_RabbitMQ_Binding_Get_System_String_Input_System_String__Pulumi_RabbitMQ_BindingState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.RabbitMQ.Binding.Get(System.String,Input{System.String},Pulumi.RabbitMQ.BindingState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BindingState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_RabbitMQ_Binding_Get_System_String_Pulumi_Input_System_String__Pulumi_RabbitMQ_BindingState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.RabbitMQ.Binding.Get(System.String,Pulumi.Input{System.String},Pulumi.RabbitMQ.BindingState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BindingState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Binding resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Binding Get(string name, Input&lt;string&gt; id, BindingState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Binding Get(string name, Input&lt;string&gt; id, BindingState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -353,7 +444,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -365,7 +456,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -394,7 +485,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/d4b9aea0900dd330d9cf082799cc71fa22d78f54/sdk/dotnet/Binding.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/master/sdk/dotnet/Binding.cs/#L74" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

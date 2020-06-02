@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Athena
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,26 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Athena.Database.html">Database</a></h4>
       <section><p>Provides an Athena database.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var hogeBucket = new Aws.S3.Bucket(&amp;quot;hogeBucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var hogeDatabase = new Aws.Athena.Database(&amp;quot;hogeDatabase&amp;quot;, new Aws.Athena.DatabaseArgs
+    {
+        Bucket = hogeBucket.BucketName,
+        Name = &amp;quot;database_name&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Athena.DatabaseArgs.html">DatabaseArgs</a></h4>
       <section></section>
@@ -85,6 +105,51 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Athena.NamedQuery.html">NamedQuery</a></h4>
       <section><p>Provides an Athena Named Query resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var hogeBucket = new Aws.S3.Bucket(&amp;quot;hogeBucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var testKey = new Aws.Kms.Key(&amp;quot;testKey&amp;quot;, new Aws.Kms.KeyArgs
+    {
+        DeletionWindowInDays = 7,
+        Description = &amp;quot;Athena KMS Key&amp;quot;,
+    });
+    var testWorkgroup = new Aws.Athena.Workgroup(&amp;quot;testWorkgroup&amp;quot;, new Aws.Athena.WorkgroupArgs
+    {
+        Configuration = new Aws.Athena.Inputs.WorkgroupConfigurationArgs
+        {
+            ResultConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationArgs
+            {
+                EncryptionConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs
+                {
+                    EncryptionOption = &amp;quot;SSE_KMS&amp;quot;,
+                    KmsKeyArn = testKey.Arn,
+                },
+            },
+        },
+    });
+    var hogeDatabase = new Aws.Athena.Database(&amp;quot;hogeDatabase&amp;quot;, new Aws.Athena.DatabaseArgs
+    {
+        Bucket = hogeBucket.Id,
+        Name = &amp;quot;users&amp;quot;,
+    });
+    var foo = new Aws.Athena.NamedQuery(&amp;quot;foo&amp;quot;, new Aws.Athena.NamedQueryArgs
+    {
+        Database = hogeDatabase.Name,
+        Query = hogeDatabase.Name.Apply(name =&gt; $&amp;quot;SELECT * FROM {name} limit 10;&amp;quot;),
+        Workgroup = testWorkgroup.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Athena.NamedQueryArgs.html">NamedQueryArgs</a></h4>
       <section></section>
@@ -92,6 +157,35 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Athena.Workgroup.html">Workgroup</a></h4>
       <section><p>Provides an Athena Workgroup.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Athena.Workgroup(&amp;quot;example&amp;quot;, new Aws.Athena.WorkgroupArgs
+    {
+        Configuration = new Aws.Athena.Inputs.WorkgroupConfigurationArgs
+        {
+            EnforceWorkgroupConfiguration = true,
+            PublishCloudwatchMetricsEnabled = true,
+            ResultConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationArgs
+            {
+                EncryptionConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs
+                {
+                    EncryptionOption = &amp;quot;SSE_KMS&amp;quot;,
+                    KmsKeyArn = aws_kms_key.Example.Arn,
+                },
+                OutputLocation = &amp;quot;s3://{aws_s3_bucket.example.bucket}/output/&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Athena.WorkgroupArgs.html">WorkgroupArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Packet
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -104,6 +104,12 @@ the raw state as plain-text.
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetDeviceArgs.html">GetDeviceArgs</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetDeviceBgpNeighbors.html">GetDeviceBgpNeighbors</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetDeviceBgpNeighborsArgs.html">GetDeviceBgpNeighborsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetDeviceBgpNeighborsResult.html">GetDeviceBgpNeighborsResult</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetDeviceResult.html">GetDeviceResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetIpBlockRanges.html">GetIpBlockRanges</a></h4>
@@ -169,6 +175,24 @@ with mask prefix length 32. More about the elastic IP subnets is <a href="https:
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.Organization.html">Organization</a></h4>
       <section><p>Provides a resource to manage organization resource in Packet.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Packet = Pulumi.Packet;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Project
+    var tfOrganization1 = new Packet.Organization(&amp;quot;tfOrganization1&amp;quot;, new Packet.OrganizationArgs
+    {
+        Description = &amp;quot;quux&amp;quot;,
+        Name = &amp;quot;foobar&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.OrganizationArgs.html">OrganizationArgs</a></h4>
       <section></section>
@@ -183,6 +207,83 @@ with mask prefix length 32. More about the elastic IP subnets is <a href="https:
 <li><a href="https://www.packet.com/resources/guides/layer-2-configurations/">https://www.packet.com/resources/guides/layer-2-configurations/</a></li>
 <li><a href="https://www.packet.com/developers/docs/network/advanced/layer-2/">https://www.packet.com/developers/docs/network/advanced/layer-2/</a></li>
 </ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Packet = Pulumi.Packet;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Hybrid network type
+    var testVlan = new Packet.Vlan(&amp;quot;testVlan&amp;quot;, new Packet.VlanArgs
+    {
+        Description = &amp;quot;VLAN in New Jersey&amp;quot;,
+        Facility = &amp;quot;ewr1&amp;quot;,
+        ProjectId = local.Project_id,
+    });
+    var testDevice = new Packet.Device(&amp;quot;testDevice&amp;quot;, new Packet.DeviceArgs
+    {
+        Hostname = &amp;quot;test&amp;quot;,
+        Plan = &amp;quot;m1.xlarge.x86&amp;quot;,
+        Facilities = 
+        {
+            &amp;quot;ewr1&amp;quot;,
+        },
+        OperatingSystem = &amp;quot;ubuntu_16_04&amp;quot;,
+        BillingCycle = &amp;quot;hourly&amp;quot;,
+        ProjectId = local.Project_id,
+        NetworkType = &amp;quot;hybrid&amp;quot;,
+    });
+    var testPortVlanAttachment = new Packet.PortVlanAttachment(&amp;quot;testPortVlanAttachment&amp;quot;, new Packet.PortVlanAttachmentArgs
+    {
+        DeviceId = testDevice.Id,
+        PortName = &amp;quot;eth1&amp;quot;,
+        VlanVnid = testVlan.Vxlan,
+    });
+    // Layer 2 network
+    var testIndex_deviceDevice = new Packet.Device(&amp;quot;testIndex/deviceDevice&amp;quot;, new Packet.DeviceArgs
+    {
+        Hostname = &amp;quot;test&amp;quot;,
+        Plan = &amp;quot;m1.xlarge.x86&amp;quot;,
+        Facilities = 
+        {
+            &amp;quot;ewr1&amp;quot;,
+        },
+        OperatingSystem = &amp;quot;ubuntu_16_04&amp;quot;,
+        BillingCycle = &amp;quot;hourly&amp;quot;,
+        ProjectId = local.Project_id,
+        NetworkType = &amp;quot;layer2-individual&amp;quot;,
+    });
+    var test1Vlan = new Packet.Vlan(&amp;quot;test1Vlan&amp;quot;, new Packet.VlanArgs
+    {
+        Description = &amp;quot;VLAN in New Jersey&amp;quot;,
+        Facility = &amp;quot;ewr1&amp;quot;,
+        ProjectId = local.Project_id,
+    });
+    var test2Vlan = new Packet.Vlan(&amp;quot;test2Vlan&amp;quot;, new Packet.VlanArgs
+    {
+        Description = &amp;quot;VLAN in New Jersey&amp;quot;,
+        Facility = &amp;quot;ewr1&amp;quot;,
+        ProjectId = local.Project_id,
+    });
+    var test1PortVlanAttachment = new Packet.PortVlanAttachment(&amp;quot;test1PortVlanAttachment&amp;quot;, new Packet.PortVlanAttachmentArgs
+    {
+        DeviceId = testDevice.Id,
+        VlanVnid = test1Vlan.Vxlan,
+        PortName = &amp;quot;eth1&amp;quot;,
+    });
+    var test2PortVlanAttachment = new Packet.PortVlanAttachment(&amp;quot;test2PortVlanAttachment&amp;quot;, new Packet.PortVlanAttachmentArgs
+    {
+        DeviceId = testDevice.Id,
+        VlanVnid = test2Vlan.Vxlan,
+        PortName = &amp;quot;eth1&amp;quot;,
+        Native = true,
+    });
+}
+
+}
+</code></pre>
 <h2 id="attribute-referece">Attribute Referece</h2>
 <ul>
 <li><code>id</code> - UUID of device port used in the assignment</li>
@@ -195,14 +296,47 @@ with mask prefix length 32. More about the elastic IP subnets is <a href="https:
       <h4><a class="xref" href="Pulumi.Packet.PortVlanAttachmentState.html">PortVlanAttachmentState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.Project.html">Project</a></h4>
-      <section><p>Provides a Packet project resource to allow you manage devices
-in your projects.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Packet.ProjectArgs.html">ProjectArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.ProjectSshKey.html">ProjectSshKey</a></h4>
       <section><p>Provides a Packet project SSH key resource to manage project-specific SSH keys.
 Project SSH keys will only be populated onto servers that belong to that project, in contrast to User SSH Keys.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Packet = Pulumi.Packet;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var projectId = &amp;quot;&amp;lt;UUID_of_your_project&gt;&amp;quot;;
+    var testProjectSshKey = new Packet.ProjectSshKey(&amp;quot;testProjectSshKey&amp;quot;, new Packet.ProjectSshKeyArgs
+    {
+        Name = &amp;quot;test&amp;quot;,
+        PublicKey = &amp;quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDM/unxJeFqxsTJcu6mhqsMHSaVlpu+Jj/P+44zrm6X/MAoHSX3X9oLgujEjjZ74yLfdfe0bJrbL2YgJzNaEkIQQ1VPMHB5EhTKUBGnzlPP0hHTnxsjAm9qDHgUPgvgFDQSAMzdJRJ0Cexo16Ph9VxCoLh3dxiE7s2gaM2FdVg7P8aSxKypsxAhYV3D0AwqzoOyT6WWhBoQ0xZ85XevOTnJCpImSemEGs6nVGEsWcEc1d1YvdxFjAK4SdsKUMkj4Dsy/leKsdi/DEAf356vbMT1UHsXXvy5TlHu/Pa6qF53v32Enz+nhKy7/8W2Yt2yWx8HnQcT2rug9lvCXagJO6oauqRTO77C4QZn13ZLMZgLT66S/tNh2EX0gi6vmIs5dth8uF+K6nxIyKJXbcA4ASg7F1OJrHKFZdTc5v1cPeq6PcbqGgc+8SrPYQmzvQqLoMBuxyos2hUkYOmw3aeWJj9nFa8Wu5WaN89mUeOqSkU4S5cgUzWUOmKey56B/j/s1sVys9rMhZapVs0wL4L9GBBM48N5jAQZnnpo85A8KsZq5ME22bTLqnxsDXqDYZvS7PSI6Dxi7eleOFE/NYYDkrgDLHTQri8ucDMVeVWHgoMY2bPXdn7KKy5jW5jKsf8EPARXg77A4gRYmgKrcwIKqJEUPqyxJBe0CPoGTqgXPRsUiQ== tomk@hp2&amp;quot;,
+        ProjectId = projectId,
+    });
+    var testDevice = new Packet.Device(&amp;quot;testDevice&amp;quot;, new Packet.DeviceArgs
+    {
+        Hostname = &amp;quot;test&amp;quot;,
+        Plan = &amp;quot;baremetal_0&amp;quot;,
+        Facilities = 
+        {
+            &amp;quot;ewr1&amp;quot;,
+        },
+        OperatingSystem = &amp;quot;ubuntu_16_04&amp;quot;,
+        BillingCycle = &amp;quot;hourly&amp;quot;,
+        ProjectSshKeyIds = 
+        {
+            testProjectSshKey.Id,
+        },
+        ProjectId = projectId,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.ProjectSshKeyArgs.html">ProjectSshKeyArgs</a></h4>
       <section></section>
@@ -234,16 +368,14 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.SpotMarketRequest.html">SpotMarketRequest</a></h4>
       <section><p>Provides a Packet Spot Market Request resource to allow you to
-manage spot market requests on your account. For more detail on Spot Market, see <a href="https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/">this article in Packing documentaion</a>.</p>
+manage spot market requests on your account. For more detail on Spot Market, see <a href="https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/">this article in Packet documentaion</a>.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.SpotMarketRequestArgs.html">SpotMarketRequestArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.SpotMarketRequestState.html">SpotMarketRequestState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.SshKey.html">SshKey</a></h4>
-      <section><p>Provides a resource to manage User SSH keys on your Packet user account. If you create a new device in a project, all the keys of the project's collaborators will be injected to the device.</p>
-<p>The link between User SSH key and device is implicit. If you want to make sure that a key will be copied to a device, you must ensure that the device resource <code>depends_on</code> the key resource.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Packet.SshKeyArgs.html">SshKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.SshKeyState.html">SshKeyState</a></h4>
@@ -255,6 +387,25 @@ manage spot market requests on your account. For more detail on Spot Market, see
 <li><a href="https://www.packet.com/resources/guides/layer-2-configurations/">https://www.packet.com/resources/guides/layer-2-configurations/</a></li>
 <li><a href="https://www.packet.com/developers/docs/network/advanced/layer-2/">https://www.packet.com/developers/docs/network/advanced/layer-2/</a></li>
 </ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Packet = Pulumi.Packet;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new VLAN in datacenter &amp;quot;ewr1&amp;quot;
+    var vlan1 = new Packet.Vlan(&amp;quot;vlan1&amp;quot;, new Packet.VlanArgs
+    {
+        Description = &amp;quot;VLAN in New Jersey&amp;quot;,
+        Facility = &amp;quot;ewr1&amp;quot;,
+        ProjectId = local.Project_id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.VlanArgs.html">VlanArgs</a></h4>
       <section></section>

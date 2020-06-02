@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Dns
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,6 +76,41 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.AlidnsRecord.html">AlidnsRecord</a></h4>
+      <section><p>Provides a Alidns Record resource. For information about Alidns Domain Record and how to use it, see <a href="https://www.alibabacloud.com/help/en/doc-detail/29772.htm">What is Resource Alidns Record</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in v1.85.0+.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> When the site is an international site, the <code>type</code> neither supports <code>REDIRECT_URL</code> nor <code>REDIRECT_URL</code></p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Domain Record
+    var record = new AliCloud.Dns.AlidnsRecord(&amp;quot;record&amp;quot;, new AliCloud.Dns.AlidnsRecordArgs
+    {
+        DomainName = &amp;quot;domainname&amp;quot;,
+        Remark = &amp;quot;Test new alidns record.&amp;quot;,
+        Rr = &amp;quot;@&amp;quot;,
+        Status = &amp;quot;ENABLE&amp;quot;,
+        Type = &amp;quot;A&amp;quot;,
+        Value = &amp;quot;192.168.99.99&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.AlidnsRecordArgs.html">AlidnsRecordArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.AlidnsRecordState.html">AlidnsRecordState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.DdosBgpInstance.html">DdosBgpInstance</a></h4>
       <section><p>Anti-DDoS Advanced instance resource. &quot;Ddosbgp&quot; is the short term of this product.</p>
 <blockquote>
@@ -84,6 +119,25 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.57.0+ .</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new AliCloud.Ddos.DdosBgpInstance(&amp;quot;instance&amp;quot;, new AliCloud.Ddos.DdosBgpInstanceArgs
+    {
+        Bandwidth = &amp;quot;201&amp;quot;,
+        BaseBandwidth = &amp;quot;20&amp;quot;,
+        IpCount = &amp;quot;100&amp;quot;,
+        IpType = &amp;quot;IPv4&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.DdosBgpInstanceArgs.html">DdosBgpInstanceArgs</a></h4>
       <section></section>
@@ -100,17 +154,40 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.37.0+ .</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var newInstance = new AliCloud.Ddos.DdosCooInstance(&amp;quot;newInstance&amp;quot;, new AliCloud.Ddos.DdosCooInstanceArgs
+    {
+        Bandwidth = &amp;quot;30&amp;quot;,
+        BaseBandwidth = &amp;quot;30&amp;quot;,
+        DomainCount = &amp;quot;50&amp;quot;,
+        Period = &amp;quot;1&amp;quot;,
+        PortCount = &amp;quot;50&amp;quot;,
+        ServiceBandwidth = &amp;quot;100&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.DdosCooInstanceArgs.html">DdosCooInstanceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.DdosCooInstanceState.html">DdosCooInstanceState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.DnsDomain.html">DnsDomain</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.DnsDomainArgs.html">DnsDomainArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.DnsDomainState.html">DnsDomainState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.Domain.html">Domain</a></h4>
-      <section><p>Provides a DNS resource.</p>
-<blockquote>
-<p><strong>NOTE:</strong> The domain name which you want to add must be already registered and had not added by another account. Every domain name can only exist in a unique group.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.DomainArgs.html">DomainArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.DomainAttachment.html">DomainAttachment</a></h4>
@@ -118,12 +195,66 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in v1.80.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dns = new AliCloud.Dns.DomainAttachment(&amp;quot;dns&amp;quot;, new AliCloud.Dns.DomainAttachmentArgs
+    {
+        DomainNames = 
+        {
+            &amp;quot;test111.abc&amp;quot;,
+            &amp;quot;test222.abc&amp;quot;,
+        },
+        InstanceId = &amp;quot;dns-cn-mp91lyq9xxxx&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.DomainAttachmentArgs.html">DomainAttachmentArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.DomainAttachmentState.html">DomainAttachmentState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.DomainGroup.html">DomainGroup</a></h4>
+      <section><p>Provides a Alidns Domain Group resource. For information about Alidns Domain Group and how to use it, see <a href="https://www.alibabacloud.com/help/en/doc-detail/29762.htm">What is Resource Alidns Domain Group</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in v1.84.0+.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Add a new Alinds Domain Group.
+    var example = new AliCloud.Dns.DomainGroup(&amp;quot;example&amp;quot;, new AliCloud.Dns.DomainGroupArgs
+    {
+        GroupName = &amp;quot;tf-testDG&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.DomainGroupArgs.html">DomainGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.DomainGroupState.html">DomainGroupState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.DomainState.html">DomainState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.GetAlidnsDomainGroups.html">GetAlidnsDomainGroups</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.GetAlidnsDomainGroupsArgs.html">GetAlidnsDomainGroupsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.GetAlidnsDomainGroupsResult.html">GetAlidnsDomainGroupsResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.GetDomainGroups.html">GetDomainGroups</a></h4>
       <section></section>
@@ -155,6 +286,12 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.GetGroupsResult.html">GetGroupsResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.GetInstances.html">GetInstances</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.GetInstancesArgs.html">GetInstancesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Dns.GetInstancesResult.html">GetInstancesResult</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.GetRecords.html">GetRecords</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.GetRecordsArgs.html">GetRecordsArgs</a></h4>
@@ -168,8 +305,7 @@
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.GetResolutionLinesResult.html">GetResolutionLinesResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.Group.html">Group</a></h4>
-      <section><p>Provides a DNS Group resource.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.GroupArgs.html">GroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.GroupState.html">GroupState</a></h4>
@@ -179,17 +315,34 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in v1.80.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @this = new AliCloud.Dns.Instance(&amp;quot;this&amp;quot;, new AliCloud.Dns.InstanceArgs
+    {
+        DnsSecurity = &amp;quot;no&amp;quot;,
+        DomainNumbers = &amp;quot;2&amp;quot;,
+        Period = 1,
+        RenewPeriod = 1,
+        RenewalStatus = &amp;quot;ManualRenewal&amp;quot;,
+        VersionCode = &amp;quot;version_personal&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.InstanceState.html">InstanceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.Record.html">Record</a></h4>
-      <section><p>Provides a DNS Record resource.</p>
-<blockquote>
-<p><strong>NOTE:</strong> When the site is an international site, the <code>type</code> neither supports <code>REDIRECT_URL</code> nor <code>REDIRECT_URL</code></p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.RecordArgs.html">RecordArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Dns.RecordState.html">RecordState</a></h4>

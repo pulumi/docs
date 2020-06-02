@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetVpcs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,28 +78,115 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetVpcs</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2_GetVpcs_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetVpcs : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetVpcs</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcs.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/GetVpcs.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_GetVpcs_InvokeAsync_" data-uid="Pulumi.Aws.Ec2.GetVpcs.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_Ec2_GetVpcs_InvokeAsync_Pulumi_Aws_Ec2_GetVpcsArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.Ec2.GetVpcs.InvokeAsync(Pulumi.Aws.Ec2.GetVpcsArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetVpcsArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2_GetVpcs_InvokeAsync_Pulumi_Aws_Ec2_GetVpcsArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.Ec2.GetVpcs.InvokeAsync(Pulumi.Aws.Ec2.GetVpcsArgs,Pulumi.InvokeOptions)">InvokeAsync(GetVpcsArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>This resource can be useful for getting back a list of VPC Ids for a region.</p>
 <p>The following example retrieves a list of VPC Ids with a custom tag of <code>service</code> set to a value of &quot;production&quot;.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<p>The following shows outputing all VPC Ids.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fooVpcs = Output.Create(Aws.Ec2.GetVpcs.InvokeAsync(new Aws.Ec2.GetVpcsArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;service&amp;quot;, &amp;quot;production&amp;quot; },
+        },
+    }));
+    this.Foo = fooVpcs.Apply(fooVpcs =&gt; fooVpcs.Ids);
+}
+
+[Output(&amp;quot;foo&amp;quot;)]
+public Output&amp;lt;string&gt; Foo { get; set; }
+}
+</code></pre>
+<p>An example use case would be interpolate the <code>aws.ec2.getVpcs</code> output into <code>count</code> of an aws.ec2.FlowLog resource.</p>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dict = Output.Create(Initialize());
+    this.Foo = dict.Apply(dict =&gt; dict[&amp;quot;foo&amp;quot;]);
+}
+
+private async Task&amp;lt;IDictionary&amp;lt;string, Output&amp;lt;string&gt;&gt;&gt; Initialize()
+{
+    var fooVpcs = await Aws.Ec2.GetVpcs.InvokeAsync();
+    var testFlowLog = new List&amp;lt;Aws.Ec2.FlowLog&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; fooVpcs.Ids.Length; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        testFlowLog.Add(new Aws.Ec2.FlowLog($&amp;quot;testFlowLog-{range.Value}&amp;quot;, new Aws.Ec2.FlowLogArgs
+        {
+            VpcId = fooVpcs.Ids[range.Value],
+        }));
+    }
+    var foo = fooVpcs.Ids;
+
+    return new Dictionary&amp;lt;string, Output&amp;lt;string&gt;&gt;
+    {
+        { &amp;quot;foo&amp;quot;, foo },
+    };
+}
+
+[Output(&amp;quot;foo&amp;quot;)]
+public Output&amp;lt;string&gt; Foo { get; set; }
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetVpcsResult&gt; InvokeAsync(GetVpcsArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetVpcsResult&gt; InvokeAsync(GetVpcsArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,7 +204,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -133,7 +220,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.GetVpcsResult.html">GetVpcsResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.GetVpcsResult.html">GetVpcsResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -145,7 +232,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcs.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/GetVpcs.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

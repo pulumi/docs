@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Cloudflare
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,6 +80,25 @@
       <section><p>Provides a Cloudflare Access Application resource. Access Applications
 are used to restrict access to a whole application using an
 authorisation gateway managed by Cloudflare.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var stagingApp = new Cloudflare.AccessApplication(&amp;quot;stagingApp&amp;quot;, new Cloudflare.AccessApplicationArgs
+    {
+        Domain = &amp;quot;staging.example.com&amp;quot;,
+        Name = &amp;quot;staging application&amp;quot;,
+        SessionDuration = &amp;quot;24h&amp;quot;,
+        ZoneId = &amp;quot;1d5fdc9e88c8a8c4518b068cd94331fe&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.AccessApplicationArgs.html">AccessApplicationArgs</a></h4>
       <section></section>
@@ -100,7 +119,7 @@ conditions which can be applied. The conditions are:</p>
 <li><code>email_domain</code> - (Optional) A list of email domains. Example:
 <code>email_domain = [&amp;quot;example.com&amp;quot;]</code></li>
 <li><code>service_token</code> - (Optional) A list of service token ids. Example:
-<code>service_token = cloudflare_access_service_token.demo.id</code></li>
+<code>service_token = [cloudflare_access_service_token.demo.id]</code></li>
 <li><code>any_valid_service_token</code> - (Optional) Boolean indicating if allow
 all tokens to be granted. Example: <code>any_valid_service_token = true</code></li>
 <li><code>group</code> - (Optional) A list of access group ids. Example:
@@ -173,6 +192,64 @@ saml {
       <h4><a class="xref" href="Pulumi.Cloudflare.AccessIdentityProvider.html">AccessIdentityProvider</a></h4>
       <section><p>Provides a Cloudflare Access Identity Provider resource. Identity Providers are
 used as an authentication or authorisation source within Access.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // one time pin
+    var pinLogin = new Cloudflare.AccessIdentityProvider(&amp;quot;pinLogin&amp;quot;, new Cloudflare.AccessIdentityProviderArgs
+    {
+        AccountId = &amp;quot;1d5fdc9e88c8a8c4518b068cd94331fe&amp;quot;,
+        Name = &amp;quot;PIN login&amp;quot;,
+        Type = &amp;quot;onetimepin&amp;quot;,
+    });
+    // oauth
+    var githubOauth = new Cloudflare.AccessIdentityProvider(&amp;quot;githubOauth&amp;quot;, new Cloudflare.AccessIdentityProviderArgs
+    {
+        AccountId = &amp;quot;1d5fdc9e88c8a8c4518b068cd94331fe&amp;quot;,
+        Configs = 
+        {
+            new Cloudflare.Inputs.AccessIdentityProviderConfigArgs
+            {
+                ClientId = &amp;quot;example&amp;quot;,
+                ClientSecret = &amp;quot;secret_key&amp;quot;,
+            },
+        },
+        Name = &amp;quot;GitHub OAuth&amp;quot;,
+        Type = &amp;quot;github&amp;quot;,
+    });
+    // saml
+    var jumpcloudSaml = new Cloudflare.AccessIdentityProvider(&amp;quot;jumpcloudSaml&amp;quot;, new Cloudflare.AccessIdentityProviderArgs
+    {
+        AccountId = &amp;quot;1d5fdc9e88c8a8c4518b068cd94331fe&amp;quot;,
+        Configs = 
+        {
+            new Cloudflare.Inputs.AccessIdentityProviderConfigArgs
+            {
+                Attributes = 
+                {
+                    &amp;quot;email&amp;quot;,
+                    &amp;quot;username&amp;quot;,
+                },
+                IdpPublicCert = @&amp;quot;MIIDpDCCAoygAwIBAgIGAV2ka+55MA0GCSqGSIb3DQEBCwUAMIGSMQswCQ...GF/Q2/MHadws97cZg
+uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o
+&amp;quot;,
+                IssuerUrl = &amp;quot;jumpcloud&amp;quot;,
+                SignRequest = false,
+                SsoTargetUrl = &amp;quot;https://sso.myexample.jumpcloud.com/saml2/cloudflareaccess&amp;quot;,
+            },
+        },
+        Name = &amp;quot;JumpCloud SAML&amp;quot;,
+        Type = &amp;quot;saml&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.AccessIdentityProviderArgs.html">AccessIdentityProviderArgs</a></h4>
       <section></section>
@@ -197,6 +274,23 @@ particular resource.</p>
       <h4><a class="xref" href="Pulumi.Cloudflare.AccessServiceToken.html">AccessServiceToken</a></h4>
       <section><p>Access Service Tokens are used for service-to-service communication
 when an application is behind Cloudflare Access.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myApp = new Cloudflare.AccessServiceToken(&amp;quot;myApp&amp;quot;, new Cloudflare.AccessServiceTokenArgs
+    {
+        AccountId = &amp;quot;d41d8cd98f00b204e9800998ecf8427e&amp;quot;,
+        Name = &amp;quot;CI/CD app&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.AccessServiceTokenArgs.html">AccessServiceTokenArgs</a></h4>
       <section></section>
@@ -204,6 +298,27 @@ when an application is behind Cloudflare Access.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.AccountMember.html">AccountMember</a></h4>
       <section><p>Provides a resource which manages Cloudflare account members.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleUser = new Cloudflare.AccountMember(&amp;quot;exampleUser&amp;quot;, new Cloudflare.AccountMemberArgs
+    {
+        EmailAddress = &amp;quot;user@example.com&amp;quot;,
+        RoleIds = 
+        {
+            &amp;quot;68b329da9893e34099c7d8ad5cb9c940&amp;quot;,
+            &amp;quot;d784fa8b6d98d27699781bd9a7cf19f0&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.AccountMemberArgs.html">AccountMemberArgs</a></h4>
       <section></section>
@@ -211,15 +326,77 @@ when an application is behind Cloudflare Access.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.Argo.html">Argo</a></h4>
       <section><p>Cloudflare Argo controls the routing to your origin and tiered caching options to speed up your website browsing experience.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Cloudflare.Argo(&amp;quot;example&amp;quot;, new Cloudflare.ArgoArgs
+    {
+        SmartRouting = &amp;quot;on&amp;quot;,
+        TieredCaching = &amp;quot;on&amp;quot;,
+        ZoneId = &amp;quot;d41d8cd98f00b204e9800998ecf8427e&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.ArgoArgs.html">ArgoArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.ArgoState.html">ArgoState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ByoIpPrefix.html">ByoIpPrefix</a></h4>
+      <section><p>Provides the ability to manage Bring-Your-Own-IP prefixes (BYOIP) which are used with or without Magic Transit.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Cloudflare.ByoIpPrefix(&amp;quot;example&amp;quot;, new Cloudflare.ByoIpPrefixArgs
+    {
+        Advertisement = &amp;quot;on&amp;quot;,
+        Description = &amp;quot;Example IP Prefix&amp;quot;,
+        PrefixId = &amp;quot;d41d8cd98f00b204e9800998ecf8427e&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ByoIpPrefixArgs.html">ByoIpPrefixArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ByoIpPrefixState.html">ByoIpPrefixState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.Config.html">Config</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.CustomPages.html">CustomPages</a></h4>
       <section><p>Provides a resource which manages Cloudflare custom error pages.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var basicChallenge = new Cloudflare.CustomPages(&amp;quot;basicChallenge&amp;quot;, new Cloudflare.CustomPagesArgs
+    {
+        State = &amp;quot;customized&amp;quot;,
+        Type = &amp;quot;basic_challenge&amp;quot;,
+        Url = &amp;quot;https://example.com/challenge.html&amp;quot;,
+        ZoneId = &amp;quot;d41d8cd98f00b204e9800998ecf8427e&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.CustomPagesArgs.html">CustomPagesArgs</a></h4>
       <section></section>
@@ -227,6 +404,33 @@ when an application is behind Cloudflare Access.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.CustomSsl.html">CustomSsl</a></h4>
       <section><p>Provides a Cloudflare custom ssl resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var cloudflareZoneId = config.Get(&amp;quot;cloudflareZoneId&amp;quot;) ?? &amp;quot;1d5fdc9e88c8a8c4518b068cd94331fe&amp;quot;;
+    // Add a custom ssl certificate to the domain
+    var foossl = new Cloudflare.CustomSsl(&amp;quot;foossl&amp;quot;, new Cloudflare.CustomSslArgs
+    {
+        CustomSslOptions = new Cloudflare.Inputs.CustomSslCustomSslOptionsArgs
+        {
+            Bundle_method = &amp;quot;ubiquitous&amp;quot;,
+            Certificate = &amp;quot;-----INSERT CERTIFICATE-----&amp;quot;,
+            Geo_restrictions = &amp;quot;us&amp;quot;,
+            Private_key = &amp;quot;-----INSERT PRIVATE KEY-----&amp;quot;,
+            Type = &amp;quot;legacy_custom&amp;quot;,
+        },
+        ZoneId = cloudflareZoneId,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.CustomSslArgs.html">CustomSslArgs</a></h4>
       <section></section>
@@ -234,6 +438,24 @@ when an application is behind Cloudflare Access.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.Filter.html">Filter</a></h4>
       <section><p>Filter expressions that can be referenced across multiple features, e.g. Firewall Rule. The expression format is similar to <a href="https://www.wireshark.org/docs/man-pages/wireshark-filter.html">Wireshark Display Filter</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var wordpress = new Cloudflare.Filter(&amp;quot;wordpress&amp;quot;, new Cloudflare.FilterArgs
+    {
+        Description = &amp;quot;Wordpress break-in attempts that are outside of the office&amp;quot;,
+        Expression = &amp;quot;(http.request.uri.path ~ \&amp;quot;.*wp-login.php\&amp;quot; or http.request.uri.path ~ \&amp;quot;.*xmlrpc.php\&amp;quot;) and ip.src ne 192.0.2.1&amp;quot;,
+        ZoneId = &amp;quot;d41d8cd98f00b204e9800998ecf8427e&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.FilterArgs.html">FilterArgs</a></h4>
       <section></section>
@@ -243,6 +465,31 @@ when an application is behind Cloudflare Access.</p>
       <section><p>Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
 A filter expression permits selecting traffic by multiple criteria allowing greater freedom in rule creation.</p>
 <p>Filter expressions needs to be created first before using Firewall Rule. See Filter.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var wordpressFilter = new Cloudflare.Filter(&amp;quot;wordpressFilter&amp;quot;, new Cloudflare.FilterArgs
+    {
+        ZoneId = &amp;quot;d41d8cd98f00b204e9800998ecf8427e&amp;quot;,
+        Description = &amp;quot;Wordpress break-in attempts that are outside of the office&amp;quot;,
+        Expression = &amp;quot;(http.request.uri.path ~ \&amp;quot;.*wp-login.php\&amp;quot; or http.request.uri.path ~ \&amp;quot;.*xmlrpc.php\&amp;quot;) and ip.src ne 192.0.2.1&amp;quot;,
+    });
+    var wordpressFirewallRule = new Cloudflare.FirewallRule(&amp;quot;wordpressFirewallRule&amp;quot;, new Cloudflare.FirewallRuleArgs
+    {
+        ZoneId = &amp;quot;d41d8cd98f00b204e9800998ecf8427e&amp;quot;,
+        Description = &amp;quot;Block wordpress break-in attempts&amp;quot;,
+        FilterId = wordpressFilter.Id,
+        Action = &amp;quot;block&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.FirewallRuleArgs.html">FirewallRuleArgs</a></h4>
       <section></section>
@@ -276,6 +523,52 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.GetZonesResult.html">GetZonesResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.Healthcheck.html">Healthcheck</a></h4>
+      <section><p>Standalone Health Checks provide a way to monitor origin servers without needing a Cloudflare Load Balancer.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="tcp-monitor">TCP Monitor</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tcpHealthCheck = new Cloudflare.Healthcheck(&amp;quot;tcpHealthCheck&amp;quot;, new Cloudflare.HealthcheckArgs
+    {
+        ZoneId = @var.Cloudflare_zone_id,
+        Name = &amp;quot;tcp-health-check&amp;quot;,
+        Description = &amp;quot;example tcp health check&amp;quot;,
+        Address = &amp;quot;example.com&amp;quot;,
+        Suspended = false,
+        CheckRegions = 
+        {
+            &amp;quot;WEU&amp;quot;,
+            &amp;quot;EEU&amp;quot;,
+        },
+        NotificationSuspended = false,
+        NotificationEmailAddresses = 
+        {
+            &amp;quot;hostmaster@example.com&amp;quot;,
+        },
+        Type = &amp;quot;TCP&amp;quot;,
+        Port = &amp;quot;22&amp;quot;,
+        Method = &amp;quot;connection_established&amp;quot;,
+        Timeout = 10,
+        Retries = 2,
+        Interval = 60,
+        ConsecutiveFails = 3,
+        ConsecutiveSuccesses = 2,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.HealthcheckArgs.html">HealthcheckArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.HealthcheckState.html">HealthcheckState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancer.html">LoadBalancer</a></h4>
       <section><p>Provides a Cloudflare Load Balancer resource. This sits in front of a number of defined pools of origins and provides various options for geographically-aware load balancing. Note that the load balancing feature must be enabled in your Cloudflare account before you can use this resource.</p>
 </section>
@@ -283,6 +576,65 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerMonitor.html">LoadBalancerMonitor</a></h4>
       <section><p>If you're using Cloudflare's Load Balancing to load-balance across multiple origin servers or data centers, you configure one of these Monitors to actively check the availability of those servers over HTTP(S) or TCP.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="http-monitor">HTTP Monitor</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var httpMonitor = new Cloudflare.LoadBalancerMonitor(&amp;quot;httpMonitor&amp;quot;, new Cloudflare.LoadBalancerMonitorArgs
+    {
+        AllowInsecure = false,
+        Description = &amp;quot;example http load balancer&amp;quot;,
+        ExpectedBody = &amp;quot;alive&amp;quot;,
+        ExpectedCodes = &amp;quot;2xx&amp;quot;,
+        FollowRedirects = true,
+        Headers = 
+        {
+            new Cloudflare.Inputs.LoadBalancerMonitorHeaderArgs
+            {
+                Header = &amp;quot;Host&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;example.com&amp;quot;,
+                },
+            },
+        },
+        Interval = 60,
+        Method = &amp;quot;GET&amp;quot;,
+        Path = &amp;quot;/health&amp;quot;,
+        Retries = 5,
+        Timeout = 7,
+        Type = &amp;quot;http&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="tcp-monitor">TCP Monitor</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tcpMonitor = new Cloudflare.LoadBalancerMonitor(&amp;quot;tcpMonitor&amp;quot;, new Cloudflare.LoadBalancerMonitorArgs
+    {
+        Description = &amp;quot;example tcp load balancer&amp;quot;,
+        Interval = 60,
+        Method = &amp;quot;connection_established&amp;quot;,
+        Retries = 5,
+        Timeout = 7,
+        Type = &amp;quot;tcp&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerMonitorArgs.html">LoadBalancerMonitorArgs</a></h4>
       <section></section>
@@ -290,6 +642,40 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerPool.html">LoadBalancerPool</a></h4>
       <section><p>Provides a Cloudflare Load Balancer pool resource. This provides a pool of origins that can be used by a Cloudflare Load Balancer. Note that the load balancing feature must be enabled in your Cloudflare account before you can use this resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Cloudflare.LoadBalancerPool(&amp;quot;foo&amp;quot;, new Cloudflare.LoadBalancerPoolArgs
+    {
+        Description = &amp;quot;example load balancer pool&amp;quot;,
+        Enabled = false,
+        MinimumOrigins = 1,
+        Name = &amp;quot;example-pool&amp;quot;,
+        NotificationEmail = &amp;quot;someone@example.com&amp;quot;,
+        Origins = 
+        {
+            new Cloudflare.Inputs.LoadBalancerPoolOriginArgs
+            {
+                Address = &amp;quot;192.0.2.1&amp;quot;,
+                Enabled = false,
+                Name = &amp;quot;example-1&amp;quot;,
+            },
+            new Cloudflare.Inputs.LoadBalancerPoolOriginArgs
+            {
+                Address = &amp;quot;192.0.2.2&amp;quot;,
+                Name = &amp;quot;example-2&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerPoolArgs.html">LoadBalancerPoolArgs</a></h4>
       <section></section>
@@ -297,9 +683,32 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerState.html">LoadBalancerState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Cloudflare.LogpushJob.html">LogpushJob</a></h4>
-      <section><p>Provides a resource which manages Cloudflare logpush jobs.</p>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LogpullRetention.html">LogpullRetention</a></h4>
+      <section><p>Allows management of the Logpull Retention settings used to control whether or not to retain HTTP request logs.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Cloudflare.LogpullRetention(&amp;quot;example&amp;quot;, new Cloudflare.LogpullRetentionArgs
+    {
+        Enabled = &amp;quot;true&amp;quot;,
+        ZoneId = &amp;quot;fb54f084ca7f7b732d3d3ecbd8ef7bf2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LogpullRetentionArgs.html">LogpullRetentionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LogpullRetentionState.html">LogpullRetentionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LogpushJob.html">LogpushJob</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.LogpushJobArgs.html">LogpushJobArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.LogpushJobState.html">LogpushJobState</a></h4>
@@ -314,6 +723,39 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.PageRule.html">PageRule</a></h4>
       <section><p>Provides a Cloudflare page rule resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Add a page rule to the domain
+    var foobar = new Cloudflare.PageRule(&amp;quot;foobar&amp;quot;, new Cloudflare.PageRuleArgs
+    {
+        ZoneId = @var.Cloudflare_zone_id,
+        Target = $&amp;quot;sub.{@var.Cloudflare_zone}/page&amp;quot;,
+        Priority = 1,
+        Actions = new Cloudflare.Inputs.PageRuleActionsArgs
+        {
+            Ssl = &amp;quot;flexible&amp;quot;,
+            EmailObfuscation = &amp;quot;on&amp;quot;,
+            Minify = 
+            {
+
+                {
+                    { &amp;quot;html&amp;quot;, &amp;quot;off&amp;quot; },
+                    { &amp;quot;css&amp;quot;, &amp;quot;on&amp;quot; },
+                    { &amp;quot;js&amp;quot;, &amp;quot;on&amp;quot; },
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.PageRuleArgs.html">PageRuleArgs</a></h4>
       <section></section>
@@ -329,20 +771,119 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.RateLimit.html">RateLimit</a></h4>
       <section><p>Provides a Cloudflare rate limit resource for a given zone. This can be used to limit the traffic you receive zone-wide, or matching more specific types of requests/responses.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Cloudflare.RateLimit(&amp;quot;example&amp;quot;, new Cloudflare.RateLimitArgs
+    {
+        ZoneId = @var.Cloudflare_zone_id,
+        Threshold = 2000,
+        Period = 2,
+        Match = new Cloudflare.Inputs.RateLimitMatchArgs
+        {
+            Request = new Cloudflare.Inputs.RateLimitMatchRequestArgs
+            {
+                UrlPattern = $&amp;quot;{@var.Cloudflare_zone}/*&amp;quot;,
+                Schemes = 
+                {
+                    &amp;quot;HTTP&amp;quot;,
+                    &amp;quot;HTTPS&amp;quot;,
+                },
+                Methods = 
+                {
+                    &amp;quot;GET&amp;quot;,
+                    &amp;quot;POST&amp;quot;,
+                    &amp;quot;PUT&amp;quot;,
+                    &amp;quot;DELETE&amp;quot;,
+                    &amp;quot;PATCH&amp;quot;,
+                    &amp;quot;HEAD&amp;quot;,
+                },
+            },
+            Response = new Cloudflare.Inputs.RateLimitMatchResponseArgs
+            {
+                Statuses = 
+                {
+                    200,
+                    201,
+                    202,
+                    301,
+                    429,
+                },
+                OriginTraffic = false,
+            },
+        },
+        Action = new Cloudflare.Inputs.RateLimitActionArgs
+        {
+            Mode = &amp;quot;simulate&amp;quot;,
+            Timeout = 43200,
+            Response = new Cloudflare.Inputs.RateLimitActionResponseArgs
+            {
+                ContentType = &amp;quot;text/plain&amp;quot;,
+                Body = &amp;quot;custom response body&amp;quot;,
+            },
+        },
+        Correlate = new Cloudflare.Inputs.RateLimitCorrelateArgs
+        {
+            By = &amp;quot;nat&amp;quot;,
+        },
+        Disabled = false,
+        Description = &amp;quot;example rate limit for a zone&amp;quot;,
+        BypassUrlPatterns = 
+        {
+            $&amp;quot;{@var.Cloudflare_zone}/bypass1&amp;quot;,
+            $&amp;quot;{@var.Cloudflare_zone}/bypass2&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.RateLimitArgs.html">RateLimitArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.RateLimitState.html">RateLimitState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.Record.html">Record</a></h4>
-      <section><p>Provides a Cloudflare record resource.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.RecordArgs.html">RecordArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.RecordState.html">RecordState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.SpectrumApplication.html">SpectrumApplication</a></h4>
       <section><p>Provides a Cloudflare Spectrum Application. You can extend the power of Cloudflare's DDoS, TLS, and IP Firewall to your other TCP-based services.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Define a spectrum application proxies ssh traffic
+    var sshProxy = new Cloudflare.SpectrumApplication(&amp;quot;sshProxy&amp;quot;, new Cloudflare.SpectrumApplicationArgs
+    {
+        ZoneId = @var.Cloudflare_zone_id,
+        Protocol = &amp;quot;tcp/22&amp;quot;,
+        TrafficType = &amp;quot;direct&amp;quot;,
+        Dns = new Cloudflare.Inputs.SpectrumApplicationDnsArgs
+        {
+            Type = &amp;quot;CNAME&amp;quot;,
+            Name = &amp;quot;ssh.example.com&amp;quot;,
+        },
+        OriginDirects = 
+        {
+            &amp;quot;tcp://109.151.40.129:22&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.SpectrumApplicationArgs.html">SpectrumApplicationArgs</a></h4>
       <section></section>
@@ -350,6 +891,24 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WafGroup.html">WafGroup</a></h4>
       <section><p>Provides a Cloudflare WAF rule group resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall groups.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var honeyPot = new Cloudflare.WafGroup(&amp;quot;honeyPot&amp;quot;, new Cloudflare.WafGroupArgs
+    {
+        GroupId = &amp;quot;de677e5818985db1285d0e80225f06e5&amp;quot;,
+        Mode = &amp;quot;on&amp;quot;,
+        ZoneId = &amp;quot;ae36f999674d196762efcc5abb06b345&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WafGroupArgs.html">WafGroupArgs</a></h4>
       <section></section>
@@ -357,6 +916,25 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WafPackage.html">WafPackage</a></h4>
       <section><p>Provides a Cloudflare WAF rule package resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall packages.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var owasp = new Cloudflare.WafPackage(&amp;quot;owasp&amp;quot;, new Cloudflare.WafPackageArgs
+    {
+        ActionMode = &amp;quot;simulate&amp;quot;,
+        PackageId = &amp;quot;a25a9a7e9c00afc1fb2e0245519d725b&amp;quot;,
+        Sensitivity = &amp;quot;medium&amp;quot;,
+        ZoneId = &amp;quot;ae36f999674d196762efcc5abb06b345&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WafPackageArgs.html">WafPackageArgs</a></h4>
       <section></section>
@@ -364,20 +942,61 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WafRule.html">WafRule</a></h4>
       <section><p>Provides a Cloudflare WAF rule resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall rules.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var _00000 = new Cloudflare.WafRule(&amp;quot;100000&amp;quot;, new Cloudflare.WafRuleArgs
+    {
+        Mode = &amp;quot;simulate&amp;quot;,
+        RuleId = &amp;quot;100000&amp;quot;,
+        ZoneId = &amp;quot;ae36f999674d196762efcc5abb06b345&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WafRuleArgs.html">WafRuleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WafRuleState.html">WafRuleState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WorkerRoute.html">WorkerRoute</a></h4>
-      <section><p>Provides a Cloudflare worker route resource. A route will also require a <code>cloudflare..WorkerScript</code>.</p>
+      <section><p>Provides a Cloudflare worker route resource. A route will also require a <code>cloudflare..WorkerScript</code>. <em>NOTE:</em>  This resource uses the Cloudflare account APIs. This requires setting the <code>CLOUDFLARE_ACCOUNT_ID</code> environment variable or <code>account_id</code> provider argument.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myScript = new Cloudflare.WorkerScript(&amp;quot;myScript&amp;quot;, new Cloudflare.WorkerScriptArgs
+    {
+    });
+    // see &amp;quot;cloudflare..WorkerScript&amp;quot; documentation ...
+    // Runs the specified worker script for all URLs that match `example.com/*`
+    var myRoute = new Cloudflare.WorkerRoute(&amp;quot;myRoute&amp;quot;, new Cloudflare.WorkerRouteArgs
+    {
+        ZoneId = &amp;quot;d41d8cd98f00b204e9800998ecf8427e&amp;quot;,
+        Pattern = &amp;quot;example.com/*&amp;quot;,
+        ScriptName = myScript.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WorkerRouteArgs.html">WorkerRouteArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WorkerRouteState.html">WorkerRouteState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WorkerScript.html">WorkerScript</a></h4>
-      <section><p>Provides a Cloudflare worker script resource. In order for a script to be active, you'll also need to setup a <code>cloudflare..WorkerRoute</code>.</p>
+      <section><p>Provides a Cloudflare worker script resource. In order for a script to be active, you'll also need to setup a <code>cloudflare..WorkerRoute</code>. <em>NOTE:</em>  This resource uses the Cloudflare account APIs. This requires setting the <code>CLOUDFLARE_ACCOUNT_ID</code> environment variable or <code>account_id</code> provider argument.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WorkerScriptArgs.html">WorkerScriptArgs</a></h4>
       <section></section>
@@ -385,11 +1004,49 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WorkersKv.html">WorkersKv</a></h4>
       <section><p>Provides a Workers KV Pair.  <em>NOTE:</em>  This resource uses the Cloudflare account APIs.  This requires setting the <code>CLOUDFLARE_ACCOUNT_ID</code> environment variable or <code>account_id</code> provider argument.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleNs = new Cloudflare.WorkersKvNamespace(&amp;quot;exampleNs&amp;quot;, new Cloudflare.WorkersKvNamespaceArgs
+    {
+        Title = &amp;quot;test-namespace&amp;quot;,
+    });
+    var example = new Cloudflare.WorkersKv(&amp;quot;example&amp;quot;, new Cloudflare.WorkersKvArgs
+    {
+        NamespaceId = exampleNs.Id,
+        Key = &amp;quot;test-key&amp;quot;,
+        Value = &amp;quot;test value&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WorkersKvArgs.html">WorkersKvArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WorkersKvNamespace.html">WorkersKvNamespace</a></h4>
       <section><p>Provides a Workers KV Namespace</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Cloudflare.WorkersKvNamespace(&amp;quot;example&amp;quot;, new Cloudflare.WorkersKvNamespaceArgs
+    {
+        Title = &amp;quot;test-namespace&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.WorkersKvNamespaceArgs.html">WorkersKvNamespaceArgs</a></h4>
       <section></section>
@@ -399,11 +1056,58 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.Zone.html">Zone</a></h4>
       <section><p>Provides a Cloudflare Zone resource. Zone is the basic resource for working with Cloudflare and is roughly equivalent to a domain name that the user purchases.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Cloudflare.Zone(&amp;quot;example&amp;quot;, new Cloudflare.ZoneArgs
+    {
+        Zone = &amp;quot;example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.ZoneArgs.html">ZoneArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.ZoneLockdown.html">ZoneLockdown</a></h4>
       <section><p>Provides a Cloudflare Zone Lockdown resource. Zone Lockdown allows you to define one or more URLs (with wildcard matching on the domain or path) that will only permit access if the request originates from an IP address that matches a safelist of one or more IP addresses and/or IP ranges.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Restrict access to these endpoints to requests from a known IP address.
+    var endpointLockdown = new Cloudflare.ZoneLockdown(&amp;quot;endpointLockdown&amp;quot;, new Cloudflare.ZoneLockdownArgs
+    {
+        Configurations = 
+        {
+            new Cloudflare.Inputs.ZoneLockdownConfigurationArgs
+            {
+                Target = &amp;quot;ip&amp;quot;,
+                Value = &amp;quot;198.51.100.4&amp;quot;,
+            },
+        },
+        Description = &amp;quot;Restrict access to these endpoints to requests from a known IP address&amp;quot;,
+        Paused = &amp;quot;false&amp;quot;,
+        Urls = 
+        {
+            &amp;quot;api.mysite.com/some/endpoint*&amp;quot;,
+        },
+        ZoneId = &amp;quot;d41d8cd98f00b204e9800998ecf8427e&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.ZoneLockdownArgs.html">ZoneLockdownArgs</a></h4>
       <section></section>
@@ -411,6 +1115,42 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.Cloudflare.ZoneSettingsOverride.html">ZoneSettingsOverride</a></h4>
       <section><p>Provides a resource which customizes Cloudflare zone settings. Note that after destroying this resource Zone Settings will be reset to their initial values.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Cloudflare.ZoneSettingsOverride(&amp;quot;test&amp;quot;, new Cloudflare.ZoneSettingsOverrideArgs
+    {
+        ZoneId = @var.Cloudflare_zone_id,
+        Settings = new Cloudflare.Inputs.ZoneSettingsOverrideSettingsArgs
+        {
+            Brotli = &amp;quot;on&amp;quot;,
+            ChallengeTtl = 2700,
+            SecurityLevel = &amp;quot;high&amp;quot;,
+            OpportunisticEncryption = &amp;quot;on&amp;quot;,
+            AutomaticHttpsRewrites = &amp;quot;on&amp;quot;,
+            Mirage = &amp;quot;on&amp;quot;,
+            Waf = &amp;quot;on&amp;quot;,
+            Minify = new Cloudflare.Inputs.ZoneSettingsOverrideSettingsMinifyArgs
+            {
+                Css = &amp;quot;on&amp;quot;,
+                Js = &amp;quot;off&amp;quot;,
+                Html = &amp;quot;off&amp;quot;,
+            },
+            Security_header = 
+            {
+                { &amp;quot;enabled&amp;quot;, true },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Cloudflare.ZoneSettingsOverrideArgs.html">ZoneSettingsOverrideArgs</a></h4>
       <section></section>

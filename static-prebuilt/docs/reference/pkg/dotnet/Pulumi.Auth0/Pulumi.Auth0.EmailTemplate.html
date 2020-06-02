@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class EmailTemplate
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EmailTemplate
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Auth0.EmailTemplate">
+  
+  <h1 id="Pulumi_Auth0_EmailTemplate" data-uid="Pulumi.Auth0.EmailTemplate" class="text-break">Class EmailTemplate
+  </h1>
+  <div class="markdown level0 summary"><p>With Auth0, you can have standard welcome, password reset, and account verification email-based workflows built right into Auth0. This resource allows you to configure email templates to customize the look, feel, and sender identities of emails sent by Auth0. Used in conjunction with configured email providers.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Auth0 = Pulumi.Auth0;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myEmailProvider = new Auth0.Email(&amp;quot;myEmailProvider&amp;quot;, new Auth0.EmailArgs
+    {
+        Enabled = true,
+        DefaultFromAddress = &amp;quot;accounts@example.com&amp;quot;,
+        Credentials = new Auth0.Inputs.EmailCredentialsArgs
+        {
+            AccessKeyId = &amp;quot;AKIAXXXXXXXXXXXXXXXX&amp;quot;,
+            SecretAccessKey = &amp;quot;7e8c2148xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&amp;quot;,
+            Region = &amp;quot;us-east-1&amp;quot;,
+        },
+    });
+    var myEmailTemplate = new Auth0.EmailTemplate(&amp;quot;myEmailTemplate&amp;quot;, new Auth0.EmailTemplateArgs
+    {
+        Template = &amp;quot;welcome_email&amp;quot;,
+        Body = &amp;quot;&amp;lt;html&gt;&amp;lt;body&gt;&amp;lt;h1&gt;Welcome!&amp;lt;/h1&gt;&amp;lt;/body&gt;&amp;lt;/html&gt;&amp;quot;,
+        From = &amp;quot;welcome@example.com&amp;quot;,
+        ResultUrl = &amp;quot;https://example.com/welcome&amp;quot;,
+        Subject = &amp;quot;Welcome&amp;quot;,
+        Syntax = &amp;quot;liquid&amp;quot;,
+        UrlLifetimeInSeconds = 3600,
+        Enabled = true,
+    });
+}
+
+}
+</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Pulumi.Resource</span></div>
+    <div class="level2"><span class="xref">Pulumi.CustomResource</span></div>
+    <div class="level3"><span class="xref">EmailTemplate</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Pulumi.CustomResource.Id</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.GetResourceType()</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.GetResourceName()</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.Urn</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Auth0.html">Pulumi.Auth0</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Auth0.dll</h6>
+  <h5 id="Pulumi_Auth0_EmailTemplate_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EmailTemplate : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/EmailTemplate.cs/#L112">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_EmailTemplate__ctor_" data-uid="Pulumi.Auth0.EmailTemplate.#ctor*"></a>
+  <h4 id="Pulumi_Auth0_EmailTemplate__ctor_System_String_Pulumi_Auth0_EmailTemplateArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Auth0.EmailTemplate.#ctor(System.String,Pulumi.Auth0.EmailTemplateArgs,Pulumi.CustomResourceOptions)">EmailTemplate(String, EmailTemplateArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a EmailTemplate resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EmailTemplate(string name, EmailTemplateArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Auth0.EmailTemplateArgs.html">EmailTemplateArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.CustomResourceOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/EmailTemplate.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_EmailTemplate_Body_" data-uid="Pulumi.Auth0.EmailTemplate.Body*"></a>
+  <h4 id="Pulumi_Auth0_EmailTemplate_Body" data-uid="Pulumi.Auth0.EmailTemplate.Body">Body</h4>
+  <div class="markdown level1 summary"><p>String. Body of the email template. You can include <a href="https://auth0.com/docs/email/templates#common-variables">common variables</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Body { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/EmailTemplate.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_EmailTemplate_Enabled_" data-uid="Pulumi.Auth0.EmailTemplate.Enabled*"></a>
+  <h4 id="Pulumi_Auth0_EmailTemplate_Enabled" data-uid="Pulumi.Auth0.EmailTemplate.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Boolean. Indicates whether or not the template is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/EmailTemplate.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_EmailTemplate_From_" data-uid="Pulumi.Auth0.EmailTemplate.From*"></a>
+  <h4 id="Pulumi_Auth0_EmailTemplate_From" data-uid="Pulumi.Auth0.EmailTemplate.From">From</h4>
+  <div class="markdown level1 summary"><p>String. Email address to use as the sender. You can include <a href="https://auth0.com/docs/email/templates#common-variables">common variables</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; From { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/EmailTemplate.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_EmailTemplate_ResultUrl_" data-uid="Pulumi.Auth0.EmailTemplate.ResultUrl*"></a>
+  <h4 id="Pulumi_Auth0_EmailTemplate_ResultUrl" data-uid="Pulumi.Auth0.EmailTemplate.ResultUrl">ResultUrl</h4>
+  <div class="markdown level1 summary"><p>String. URL to redirect the user to after a successful action. <a href="https://auth0.com/docs/email/templates#configuring-the-redirect-to-url">Learn more</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResultUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/EmailTemplate.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_EmailTemplate_Subject_" data-uid="Pulumi.Auth0.EmailTemplate.Subject*"></a>
+  <h4 id="Pulumi_Auth0_EmailTemplate_Subject" data-uid="Pulumi.Auth0.EmailTemplate.Subject">Subject</h4>
+  <div class="markdown level1 summary"><p>String. Subject line of the email. You can include <a href="https://auth0.com/docs/email/templates#common-variables">common variables</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Subject { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/EmailTemplate.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_EmailTemplate_Syntax_" data-uid="Pulumi.Auth0.EmailTemplate.Syntax*"></a>
+  <h4 id="Pulumi_Auth0_EmailTemplate_Syntax" data-uid="Pulumi.Auth0.EmailTemplate.Syntax">Syntax</h4>
+  <div class="markdown level1 summary"><p>String. Syntax of the template body. You can use either text or HTML + Liquid syntax.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Syntax { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/EmailTemplate.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_EmailTemplate_Template_" data-uid="Pulumi.Auth0.EmailTemplate.Template*"></a>
+  <h4 id="Pulumi_Auth0_EmailTemplate_Template" data-uid="Pulumi.Auth0.EmailTemplate.Template">Template</h4>
+  <div class="markdown level1 summary"><p>String. Template name. Options include <code>verify_email</code>, <code>reset_email</code>, <code>welcome_email</code>, <code>blocked_account</code>, <code>stolen_credentials</code>, <code>enrollment_email</code>, <code>mfa_oob_code</code>, <code>change_password</code> (legacy), and <code>password_reset</code> (legacy).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Template { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/EmailTemplate.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_EmailTemplate_UrlLifetimeInSeconds_" data-uid="Pulumi.Auth0.EmailTemplate.UrlLifetimeInSeconds*"></a>
+  <h4 id="Pulumi_Auth0_EmailTemplate_UrlLifetimeInSeconds" data-uid="Pulumi.Auth0.EmailTemplate.UrlLifetimeInSeconds">UrlLifetimeInSeconds</h4>
+  <div class="markdown level1 summary"><p>Integer. Number of seconds during which the link within the email will be valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; UrlLifetimeInSeconds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/EmailTemplate.cs/#L142">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_EmailTemplate_Get_" data-uid="Pulumi.Auth0.EmailTemplate.Get*"></a>
+  <h4 id="Pulumi_Auth0_EmailTemplate_Get_System_String_Pulumi_Input_System_String__Pulumi_Auth0_EmailTemplateState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Auth0.EmailTemplate.Get(System.String,Pulumi.Input{System.String},Pulumi.Auth0.EmailTemplateState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, EmailTemplateState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing EmailTemplate resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EmailTemplate Get(string name, Input&lt;string&gt; id, EmailTemplateState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Auth0.EmailTemplateState.html">EmailTemplateState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.CustomResourceOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Auth0.EmailTemplate.html">EmailTemplate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/EmailTemplate.cs/#L54" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

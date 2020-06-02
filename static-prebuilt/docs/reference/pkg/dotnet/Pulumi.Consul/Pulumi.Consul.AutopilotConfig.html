@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AutopilotConfig
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,68 @@
 of Consul to automatically manage Consul servers.</p>
 <p>It includes to automatically cleanup dead servers, monitor the status of the Raft
 cluster and stable server introduction.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Consul.AutopilotConfig(&amp;quot;config&amp;quot;, new Consul.AutopilotConfigArgs
+    {
+        CleanupDeadServers = false,
+        LastContactThreshold = &amp;quot;1s&amp;quot;,
+        MaxTrailingLogs = 500,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AutopilotConfig</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AutopilotConfig</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Consul.html">Pulumi.Consul</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Consul.dll</h6>
@@ -91,16 +147,16 @@ cluster and stable server introduction.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AutopilotConfig.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AutopilotConfig.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Consul_AutopilotConfig__ctor_" data-uid="Pulumi.Consul.AutopilotConfig.#ctor*"></a>
-  <h4 id="Pulumi_Consul_AutopilotConfig__ctor_System_String_Pulumi_Consul_AutopilotConfigArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.AutopilotConfig.#ctor(System.String,Pulumi.Consul.AutopilotConfigArgs,System.Nullable{CustomResourceOptions})">AutopilotConfig(String, AutopilotConfigArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Consul_AutopilotConfig__ctor_System_String_Pulumi_Consul_AutopilotConfigArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Consul.AutopilotConfig.#ctor(System.String,Pulumi.Consul.AutopilotConfigArgs,Pulumi.CustomResourceOptions)">AutopilotConfig(String, AutopilotConfigArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a AutopilotConfig resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AutopilotConfig(string name, AutopilotConfigArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AutopilotConfig(string name, AutopilotConfigArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +181,7 @@ cluster and stable server introduction.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +191,7 @@ cluster and stable server introduction.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AutopilotConfig.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AutopilotConfig.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Consul_AutopilotConfig_CleanupDeadServers_" data-uid="Pulumi.Consul.AutopilotConfig.CleanupDeadServers*"></a>
   <h4 id="Pulumi_Consul_AutopilotConfig_CleanupDeadServers" data-uid="Pulumi.Consul.AutopilotConfig.CleanupDeadServers">CleanupDeadServers</h4>
@@ -157,13 +213,13 @@ replacement comes online. Defaults to true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AutopilotConfig.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AutopilotConfig.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Consul_AutopilotConfig_Datacenter_" data-uid="Pulumi.Consul.AutopilotConfig.Datacenter*"></a>
   <h4 id="Pulumi_Consul_AutopilotConfig_Datacenter" data-uid="Pulumi.Consul.AutopilotConfig.Datacenter">Datacenter</h4>
@@ -173,7 +229,7 @@ default datacenter and the datacenter in the provider setup.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Datacenter { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Datacenter { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,13 +241,13 @@ default datacenter and the datacenter in the provider setup.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AutopilotConfig.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AutopilotConfig.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Consul_AutopilotConfig_DisableUpgradeMigration_" data-uid="Pulumi.Consul.AutopilotConfig.DisableUpgradeMigration*"></a>
   <h4 id="Pulumi_Consul_AutopilotConfig_DisableUpgradeMigration" data-uid="Pulumi.Consul.AutopilotConfig.DisableUpgradeMigration">DisableUpgradeMigration</h4>
@@ -213,13 +269,13 @@ Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AutopilotConfig.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AutopilotConfig.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Consul_AutopilotConfig_LastContactThreshold_" data-uid="Pulumi.Consul.AutopilotConfig.LastContactThreshold*"></a>
   <h4 id="Pulumi_Consul_AutopilotConfig_LastContactThreshold" data-uid="Pulumi.Consul.AutopilotConfig.LastContactThreshold">LastContactThreshold</h4>
@@ -229,7 +285,7 @@ considered as unhealthy and will be removed. Defaults to <code>&amp;quot;200ms&a
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LastContactThreshold { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LastContactThreshold { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,13 +297,13 @@ considered as unhealthy and will be removed. Defaults to <code>&amp;quot;200ms&a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AutopilotConfig.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AutopilotConfig.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Consul_AutopilotConfig_MaxTrailingLogs_" data-uid="Pulumi.Consul.AutopilotConfig.MaxTrailingLogs*"></a>
   <h4 id="Pulumi_Consul_AutopilotConfig_MaxTrailingLogs" data-uid="Pulumi.Consul.AutopilotConfig.MaxTrailingLogs">MaxTrailingLogs</h4>
@@ -269,13 +325,13 @@ server can trail the leader. Defaults to 250.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AutopilotConfig.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AutopilotConfig.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Consul_AutopilotConfig_RedundancyZoneTag_" data-uid="Pulumi.Consul.AutopilotConfig.RedundancyZoneTag*"></a>
   <h4 id="Pulumi_Consul_AutopilotConfig_RedundancyZoneTag" data-uid="Pulumi.Consul.AutopilotConfig.RedundancyZoneTag">RedundancyZoneTag</h4>
@@ -286,7 +342,7 @@ of isolated failure domains. Defaults to an empty string.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RedundancyZoneTag { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RedundancyZoneTag { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -298,13 +354,13 @@ of isolated failure domains. Defaults to an empty string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AutopilotConfig.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AutopilotConfig.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Consul_AutopilotConfig_ServerStabilizationTime_" data-uid="Pulumi.Consul.AutopilotConfig.ServerStabilizationTime*"></a>
   <h4 id="Pulumi_Consul_AutopilotConfig_ServerStabilizationTime" data-uid="Pulumi.Consul.AutopilotConfig.ServerStabilizationTime">ServerStabilizationTime</h4>
@@ -315,7 +371,7 @@ healthy and stable before being promoted to a full, voting member. Defaults to
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ServerStabilizationTime { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServerStabilizationTime { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -327,13 +383,13 @@ healthy and stable before being promoted to a full, voting member. Defaults to
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AutopilotConfig.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AutopilotConfig.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Consul_AutopilotConfig_UpgradeVersionTag_" data-uid="Pulumi.Consul.AutopilotConfig.UpgradeVersionTag*"></a>
   <h4 id="Pulumi_Consul_AutopilotConfig_UpgradeVersionTag" data-uid="Pulumi.Consul.AutopilotConfig.UpgradeVersionTag">UpgradeVersionTag</h4>
@@ -343,7 +399,7 @@ used during a migration. Defaults to an empty string.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UpgradeVersionTag { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UpgradeVersionTag { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,7 +411,7 @@ used during a migration. Defaults to an empty string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -363,17 +419,17 @@ used during a migration. Defaults to an empty string.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AutopilotConfig.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AutopilotConfig.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Consul_AutopilotConfig_Get_" data-uid="Pulumi.Consul.AutopilotConfig.Get*"></a>
-  <h4 id="Pulumi_Consul_AutopilotConfig_Get_System_String_Input_System_String__Pulumi_Consul_AutopilotConfigState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.AutopilotConfig.Get(System.String,Input{System.String},Pulumi.Consul.AutopilotConfigState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AutopilotConfigState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Consul_AutopilotConfig_Get_System_String_Pulumi_Input_System_String__Pulumi_Consul_AutopilotConfigState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Consul.AutopilotConfig.Get(System.String,Pulumi.Input{System.String},Pulumi.Consul.AutopilotConfigState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AutopilotConfigState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing AutopilotConfig resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AutopilotConfig Get(string name, Input&lt;string&gt; id, AutopilotConfigState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AutopilotConfig Get(string name, Input&lt;string&gt; id, AutopilotConfigState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,7 +448,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -404,7 +460,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -433,7 +489,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AutopilotConfig.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AutopilotConfig.cs/#L42" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

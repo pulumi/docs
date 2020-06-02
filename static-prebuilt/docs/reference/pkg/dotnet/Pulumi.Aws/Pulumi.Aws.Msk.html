@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Msk
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -88,6 +88,29 @@
 <blockquote>
 <p><strong>NOTE:</strong> The API does not support deleting MSK configurations. Removing this resource will only remove the this provider state for it.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Msk.Configuration(&amp;quot;example&amp;quot;, new Aws.Msk.ConfigurationArgs
+    {
+        KafkaVersions = 
+        {
+            &amp;quot;2.1.0&amp;quot;,
+        },
+        ServerProperties = @&amp;quot;auto.create.topics.enable = true
+delete.topic.enable = true
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Msk.ConfigurationArgs.html">ConfigurationArgs</a></h4>
       <section></section>

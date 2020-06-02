@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.Gcp
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,23 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Vault.Gcp.AuthBackend.html">AuthBackend</a></h4>
       <section><p>Provides a resource to configure the <a href="https://www.vaultproject.io/docs/auth/gcp.html">GCP auth backend within Vault</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var gcp = new Vault.Gcp.AuthBackend(&amp;quot;gcp&amp;quot;, new Vault.Gcp.AuthBackendArgs
+    {
+        Credentials = File.ReadAllText(&amp;quot;vault-gcp-credentials.json&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Gcp.AuthBackendArgs.html">AuthBackendArgs</a></h4>
       <section></section>
@@ -99,6 +116,47 @@
       <h4><a class="xref" href="Pulumi.Vault.Gcp.SecretRoleset.html">SecretRoleset</a></h4>
       <section><p>Creates a Roleset in the <a href="https://www.vaultproject.io/docs/secrets/gcp/index.html">GCP Secrets Engine</a> for Vault.</p>
 <p>Each Roleset is <a href="https://www.vaultproject.io/docs/secrets/gcp/index.html#service-accounts-are-tied-to-rolesets">tied</a> to a Service Account, and can have one or more <a href="https://www.vaultproject.io/docs/secrets/gcp/index.html#roleset-bindings">bindings</a> associated with it.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var project = &amp;quot;my-awesome-project&amp;quot;;
+    var gcp = new Vault.Gcp.SecretBackend(&amp;quot;gcp&amp;quot;, new Vault.Gcp.SecretBackendArgs
+    {
+        Credentials = File.ReadAllText(&amp;quot;credentials.json&amp;quot;),
+        Path = &amp;quot;gcp&amp;quot;,
+    });
+    var roleset = new Vault.Gcp.SecretRoleset(&amp;quot;roleset&amp;quot;, new Vault.Gcp.SecretRolesetArgs
+    {
+        Backend = gcp.Path,
+        Bindings = 
+        {
+            new Vault.Gcp.Inputs.SecretRolesetBindingArgs
+            {
+                Resource = $&amp;quot;//cloudresourcemanager.googleapis.com/projects/{project}&amp;quot;,
+                Roles = 
+                {
+                    &amp;quot;roles/viewer&amp;quot;,
+                },
+            },
+        },
+        Project = project,
+        Roleset = &amp;quot;project_viewer&amp;quot;,
+        SecretType = &amp;quot;access_token&amp;quot;,
+        TokenScopes = 
+        {
+            &amp;quot;https://www.googleapis.com/auth/cloud-platform&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Gcp.SecretRolesetArgs.html">SecretRolesetArgs</a></h4>
       <section></section>

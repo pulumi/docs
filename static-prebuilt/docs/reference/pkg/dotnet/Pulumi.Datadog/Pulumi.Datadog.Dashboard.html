@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Dashboard
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,16 +71,50 @@
   
   <h1 id="Pulumi_Datadog_Dashboard" data-uid="Pulumi.Datadog.Dashboard" class="text-break">Class Dashboard
   </h1>
-  <div class="markdown level0 summary"><p>Provides a Datadog dashboard resource. This can be used to create and manage Datadog dashboards.</p>
-<blockquote>
-<p><strong>Note:</strong> This resource uses the new <a href="https://docs.datadoghq.com/api/#dashboards">Dashboard API</a> which adds new features like better validation and support for the <a href="https://docs.datadoghq.com/graphing/widgets/group/">Group widget</a>. Additionally, this resource unifies <code>datadog..TimeBoard</code> and <code>datadog..ScreenBoard</code> resources to allow you to manage all of your dashboards using a single format.</p>
-</blockquote>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Dashboard</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Dashboard</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Datadog.html">Pulumi.Datadog</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Datadog.dll</h6>
@@ -91,16 +125,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Dashboard.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Dashboard.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Dashboard__ctor_" data-uid="Pulumi.Datadog.Dashboard.#ctor*"></a>
-  <h4 id="Pulumi_Datadog_Dashboard__ctor_System_String_Pulumi_Datadog_DashboardArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.Dashboard.#ctor(System.String,Pulumi.Datadog.DashboardArgs,System.Nullable{CustomResourceOptions})">Dashboard(String, DashboardArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Datadog_Dashboard__ctor_System_String_Pulumi_Datadog_DashboardArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Datadog.Dashboard.#ctor(System.String,Pulumi.Datadog.DashboardArgs,Pulumi.CustomResourceOptions)">Dashboard(String, DashboardArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Dashboard resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Dashboard(string name, DashboardArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Dashboard(string name, DashboardArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +159,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +169,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Dashboard.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Dashboard.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Dashboard_Description_" data-uid="Pulumi.Datadog.Dashboard.Description*"></a>
   <h4 id="Pulumi_Datadog_Dashboard_Description" data-uid="Pulumi.Datadog.Dashboard.Description">Description</h4>
@@ -144,7 +178,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +190,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Dashboard.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Dashboard.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Dashboard_IsReadOnly_" data-uid="Pulumi.Datadog.Dashboard.IsReadOnly*"></a>
   <h4 id="Pulumi_Datadog_Dashboard_IsReadOnly" data-uid="Pulumi.Datadog.Dashboard.IsReadOnly">IsReadOnly</h4>
@@ -183,13 +217,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Dashboard.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Dashboard.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Dashboard_LayoutType_" data-uid="Pulumi.Datadog.Dashboard.LayoutType*"></a>
   <h4 id="Pulumi_Datadog_Dashboard_LayoutType" data-uid="Pulumi.Datadog.Dashboard.LayoutType">LayoutType</h4>
@@ -210,13 +244,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Dashboard.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Dashboard.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Dashboard_NotifyLists_" data-uid="Pulumi.Datadog.Dashboard.NotifyLists*"></a>
   <h4 id="Pulumi_Datadog_Dashboard_NotifyLists" data-uid="Pulumi.Datadog.Dashboard.NotifyLists">NotifyLists</h4>
@@ -237,13 +271,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Dashboard.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Dashboard.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Dashboard_TemplateVariablePresets_" data-uid="Pulumi.Datadog.Dashboard.TemplateVariablePresets*"></a>
   <h4 id="Pulumi_Datadog_Dashboard_TemplateVariablePresets" data-uid="Pulumi.Datadog.Dashboard.TemplateVariablePresets">TemplateVariablePresets</h4>
@@ -264,13 +298,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.DashboardTemplateVariablePreset.html">DashboardTemplateVariablePreset</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.DashboardTemplateVariablePreset.html">DashboardTemplateVariablePreset</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Dashboard.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Dashboard.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Dashboard_TemplateVariables_" data-uid="Pulumi.Datadog.Dashboard.TemplateVariables*"></a>
   <h4 id="Pulumi_Datadog_Dashboard_TemplateVariables" data-uid="Pulumi.Datadog.Dashboard.TemplateVariables">TemplateVariables</h4>
@@ -291,13 +325,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.DashboardTemplateVariable.html">DashboardTemplateVariable</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.DashboardTemplateVariable.html">DashboardTemplateVariable</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Dashboard.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Dashboard.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Dashboard_Title_" data-uid="Pulumi.Datadog.Dashboard.Title*"></a>
   <h4 id="Pulumi_Datadog_Dashboard_Title" data-uid="Pulumi.Datadog.Dashboard.Title">Title</h4>
@@ -318,13 +352,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Dashboard.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Dashboard.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Dashboard_Widgets_" data-uid="Pulumi.Datadog.Dashboard.Widgets*"></a>
   <h4 id="Pulumi_Datadog_Dashboard_Widgets" data-uid="Pulumi.Datadog.Dashboard.Widgets">Widgets</h4>
@@ -345,7 +379,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.DashboardWidget.html">DashboardWidget</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.DashboardWidget.html">DashboardWidget</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -353,17 +387,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Dashboard.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Dashboard.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Dashboard_Get_" data-uid="Pulumi.Datadog.Dashboard.Get*"></a>
-  <h4 id="Pulumi_Datadog_Dashboard_Get_System_String_Input_System_String__Pulumi_Datadog_DashboardState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.Dashboard.Get(System.String,Input{System.String},Pulumi.Datadog.DashboardState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DashboardState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Datadog_Dashboard_Get_System_String_Pulumi_Input_System_String__Pulumi_Datadog_DashboardState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Datadog.Dashboard.Get(System.String,Pulumi.Input{System.String},Pulumi.Datadog.DashboardState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DashboardState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Dashboard resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Dashboard Get(string name, Input&lt;string&gt; id, DashboardState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Dashboard Get(string name, Input&lt;string&gt; id, DashboardState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -382,7 +416,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -394,7 +428,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -423,7 +457,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Dashboard.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Dashboard.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

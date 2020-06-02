@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.BlockStorage
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -115,6 +115,32 @@
 <p><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API
 in case of delete call.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var project1 = new OpenStack.Identity.Project(&amp;quot;project1&amp;quot;, new OpenStack.Identity.ProjectArgs
+    {
+    });
+    var quotaset1 = new OpenStack.BlockStorage.QuoteSetV2(&amp;quot;quotaset1&amp;quot;, new OpenStack.BlockStorage.QuoteSetV2Args
+    {
+        ProjectId = project1.Id,
+        Volumes = 10,
+        Snapshots = 4,
+        Gigabytes = 100,
+        PerVolumeGigabytes = 10,
+        Backups = 4,
+        BackupGigabytes = 10,
+        Groups = 100,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.BlockStorage.QuoteSetV2Args.html">QuoteSetV2Args</a></h4>
       <section></section>
@@ -129,6 +155,32 @@ in case of delete call.</p>
 <p><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API
 in case of delete call.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var project1 = new OpenStack.Identity.Project(&amp;quot;project1&amp;quot;, new OpenStack.Identity.ProjectArgs
+    {
+    });
+    var quotaset1 = new OpenStack.BlockStorage.QuoteSetV3(&amp;quot;quotaset1&amp;quot;, new OpenStack.BlockStorage.QuoteSetV3Args
+    {
+        ProjectId = project1.Id,
+        Volumes = 10,
+        Snapshots = 4,
+        Gigabytes = 100,
+        PerVolumeGigabytes = 10,
+        Backups = 4,
+        BackupGigabytes = 10,
+        Groups = 100,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.BlockStorage.QuoteSetV3Args.html">QuoteSetV3Args</a></h4>
       <section></section>
@@ -136,6 +188,24 @@ in case of delete call.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.BlockStorage.Volume.html">Volume</a></h4>
       <section><p>Manages a V3 volume resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var volume1 = new OpenStack.BlockStorage.Volume(&amp;quot;volume1&amp;quot;, new OpenStack.BlockStorage.VolumeArgs
+    {
+        Description = &amp;quot;first test volume&amp;quot;,
+        Region = &amp;quot;RegionOne&amp;quot;,
+        Size = 3,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.BlockStorage.VolumeArgs.html">VolumeArgs</a></h4>
       <section></section>
@@ -151,6 +221,32 @@ such as a bare-metal server or a remote virtual machine in a
 different cloud provider.</p>
 <p>This does not actually attach a volume to an instance. Please use
 the <code>openstack.compute.VolumeAttach</code> resource for that.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var volume1 = new OpenStack.BlockStorage.Volume(&amp;quot;volume1&amp;quot;, new OpenStack.BlockStorage.VolumeArgs
+    {
+        Size = 1,
+    });
+    var va1 = new OpenStack.BlockStorage.VolumeAttach(&amp;quot;va1&amp;quot;, new OpenStack.BlockStorage.VolumeAttachArgs
+    {
+        Device = &amp;quot;auto&amp;quot;,
+        HostName = &amp;quot;devstack&amp;quot;,
+        Initiator = &amp;quot;iqn.1993-08.org.debian:01:e9861fb1859&amp;quot;,
+        IpAddress = &amp;quot;192.168.255.10&amp;quot;,
+        OsType = &amp;quot;linux2&amp;quot;,
+        Platform = &amp;quot;x86_64&amp;quot;,
+        VolumeId = volume1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.html">VolumeAttachArgs</a></h4>
       <section></section>
@@ -168,6 +264,32 @@ such as a bare-metal server or a remote virtual machine in a
 different cloud provider.</p>
 <p>This does not actually attach a volume to an instance. Please use
 the <code>openstack.compute.VolumeAttach</code> resource for that.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var volume1 = new OpenStack.BlockStorage.VolumeV2(&amp;quot;volume1&amp;quot;, new OpenStack.BlockStorage.VolumeV2Args
+    {
+        Size = 1,
+    });
+    var va1 = new OpenStack.BlockStorage.VolumeAttachV2(&amp;quot;va1&amp;quot;, new OpenStack.BlockStorage.VolumeAttachV2Args
+    {
+        Device = &amp;quot;auto&amp;quot;,
+        HostName = &amp;quot;devstack&amp;quot;,
+        Initiator = &amp;quot;iqn.1993-08.org.debian:01:e9861fb1859&amp;quot;,
+        IpAddress = &amp;quot;192.168.255.10&amp;quot;,
+        OsType = &amp;quot;linux2&amp;quot;,
+        Platform = &amp;quot;x86_64&amp;quot;,
+        VolumeId = volume1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.BlockStorage.VolumeAttachV2Args.html">VolumeAttachV2Args</a></h4>
       <section></section>
@@ -177,6 +299,24 @@ the <code>openstack.compute.VolumeAttach</code> resource for that.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.BlockStorage.VolumeV1.html">VolumeV1</a></h4>
       <section><p>Manages a V1 volume resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var volume1 = new OpenStack.BlockStorage.VolumeV1(&amp;quot;volume1&amp;quot;, new OpenStack.BlockStorage.VolumeV1Args
+    {
+        Description = &amp;quot;first test volume&amp;quot;,
+        Region = &amp;quot;RegionOne&amp;quot;,
+        Size = 3,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.BlockStorage.VolumeV1Args.html">VolumeV1Args</a></h4>
       <section></section>
@@ -184,6 +324,24 @@ the <code>openstack.compute.VolumeAttach</code> resource for that.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.BlockStorage.VolumeV2.html">VolumeV2</a></h4>
       <section><p>Manages a V2 volume resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var volume1 = new OpenStack.BlockStorage.VolumeV2(&amp;quot;volume1&amp;quot;, new OpenStack.BlockStorage.VolumeV2Args
+    {
+        Description = &amp;quot;first test volume&amp;quot;,
+        Region = &amp;quot;RegionOne&amp;quot;,
+        Size = 3,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.BlockStorage.VolumeV2Args.html">VolumeV2Args</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RouterBgpArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">RouterBgpArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">RouterBgpArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Inputs.html">Pulumi.Gcp.Compute.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_RouterBgpArgs__ctor_" data-uid="Pulumi.Gcp.Compute.Inputs.RouterBgpArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_RouterBgpArgs__ctor" data-uid="Pulumi.Gcp.Compute.Inputs.RouterBgpArgs.#ctor">RouterBgpArgs()</h4>
@@ -100,11 +129,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_RouterBgpArgs_AdvertisedGroups_" data-uid="Pulumi.Gcp.Compute.Inputs.RouterBgpArgs.AdvertisedGroups*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_RouterBgpArgs_AdvertisedGroups" data-uid="Pulumi.Gcp.Compute.Inputs.RouterBgpArgs.AdvertisedGroups">AdvertisedGroups</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>User-specified list of prefix groups to advertise in custom mode.
+This field can only be populated if advertiseMode is CUSTOM and
+is advertised to all peers of the router. These groups will be
+advertised in addition to any specified prefixes. Leave this field
+blank to advertise no custom groups.
+This enum field has the one valid value: ALL_SUBNETS</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -120,17 +155,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_RouterBgpArgs_AdvertisedIpRanges_" data-uid="Pulumi.Gcp.Compute.Inputs.RouterBgpArgs.AdvertisedIpRanges*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_RouterBgpArgs_AdvertisedIpRanges" data-uid="Pulumi.Gcp.Compute.Inputs.RouterBgpArgs.AdvertisedIpRanges">AdvertisedIpRanges</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if advertiseMode
+is CUSTOM and is advertised to all peers of the router. These IP
+ranges will be advertised in addition to any specified groups.
+Leave this field blank to advertise no custom IP ranges.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -146,21 +186,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RouterBgpAdvertisedIpRangeArgs.html">RouterBgpAdvertisedIpRangeArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RouterBgpAdvertisedIpRangeArgs.html">RouterBgpAdvertisedIpRangeArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_RouterBgpArgs_AdvertiseMode_" data-uid="Pulumi.Gcp.Compute.Inputs.RouterBgpArgs.AdvertiseMode*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_RouterBgpArgs_AdvertiseMode" data-uid="Pulumi.Gcp.Compute.Inputs.RouterBgpArgs.AdvertiseMode">AdvertiseMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>User-specified flag to indicate which mode to use for advertisement.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AdvertiseMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AdvertiseMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,17 +213,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_RouterBgpArgs_Asn_" data-uid="Pulumi.Gcp.Compute.Inputs.RouterBgpArgs.Asn*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_RouterBgpArgs_Asn" data-uid="Pulumi.Gcp.Compute.Inputs.RouterBgpArgs.Asn">Asn</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Local BGP Autonomous System Number (ASN). Must be an RFC6996
+private ASN, either 16-bit or 32-bit. The value will be fixed for
+this router resource. All VPN tunnels that link to this router
+will have the same local ASN.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -198,7 +243,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -210,7 +255,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/RouterBgpArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

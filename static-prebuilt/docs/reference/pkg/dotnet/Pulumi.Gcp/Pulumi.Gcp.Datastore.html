@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Datastore
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,35 @@
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/datastore/docs/concepts/indexes">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---datastore-index">Example Usage - Datastore Index</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Datastore.DataStoreIndex(&amp;quot;default&amp;quot;, new Gcp.Datastore.DataStoreIndexArgs
+    {
+        Kind = &amp;quot;foo&amp;quot;,
+        Properties = 
+        {
+            new Gcp.Datastore.Inputs.DataStoreIndexPropertyArgs
+            {
+                Direction = &amp;quot;ASCENDING&amp;quot;,
+                Name = &amp;quot;property_a&amp;quot;,
+            },
+            new Gcp.Datastore.Inputs.DataStoreIndexPropertyArgs
+            {
+                Direction = &amp;quot;ASCENDING&amp;quot;,
+                Name = &amp;quot;property_b&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Datastore.DataStoreIndexArgs.html">DataStoreIndexArgs</a></h4>
       <section></section>

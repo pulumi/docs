@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Route
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,68 @@
   </h1>
   <div class="markdown level0 summary"><p>Manages an Amazon API Gateway Version 2 route.
 More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.Route(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.RouteArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        RouteKey = &amp;quot;$$default&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Route</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Route</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ApiGatewayV2.html">Pulumi.Aws.ApiGatewayV2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -89,16 +145,16 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route__ctor_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.#ctor*"></a>
-  <h4 id="Pulumi_Aws_ApiGatewayV2_Route__ctor_System_String_Pulumi_Aws_ApiGatewayV2_RouteArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ApiGatewayV2.Route.#ctor(System.String,Pulumi.Aws.ApiGatewayV2.RouteArgs,System.Nullable{CustomResourceOptions})">Route(String, RouteArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ApiGatewayV2_Route__ctor_System_String_Pulumi_Aws_ApiGatewayV2_RouteArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.#ctor(System.String,Pulumi.Aws.ApiGatewayV2.RouteArgs,Pulumi.CustomResourceOptions)">Route(String, RouteArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Route resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Route(string name, RouteArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Route(string name, RouteArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +179,7 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +189,7 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_ApiId_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.ApiId*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Route_ApiId" data-uid="Pulumi.Aws.ApiGatewayV2.Route.ApiId">ApiId</h4>
@@ -154,13 +210,13 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_ApiKeyRequired_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.ApiKeyRequired*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Route_ApiKeyRequired" data-uid="Pulumi.Aws.ApiGatewayV2.Route.ApiKeyRequired">ApiKeyRequired</h4>
@@ -181,13 +237,13 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_AuthorizationScopes_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.AuthorizationScopes*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Route_AuthorizationScopes" data-uid="Pulumi.Aws.ApiGatewayV2.Route.AuthorizationScopes">AuthorizationScopes</h4>
@@ -208,13 +264,13 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_AuthorizationType_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.AuthorizationType*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Route_AuthorizationType" data-uid="Pulumi.Aws.ApiGatewayV2.Route.AuthorizationType">AuthorizationType</h4>
@@ -226,7 +282,7 @@ Defaults to <code>NONE</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AuthorizationType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AuthorizationType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,13 +294,13 @@ Defaults to <code>NONE</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_AuthorizerId_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.AuthorizerId*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Route_AuthorizerId" data-uid="Pulumi.Aws.ApiGatewayV2.Route.AuthorizerId">AuthorizerId</h4>
@@ -253,7 +309,7 @@ Defaults to <code>NONE</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AuthorizerId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AuthorizerId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -265,13 +321,13 @@ Defaults to <code>NONE</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_ModelSelectionExpression_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.ModelSelectionExpression*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Route_ModelSelectionExpression" data-uid="Pulumi.Aws.ApiGatewayV2.Route.ModelSelectionExpression">ModelSelectionExpression</h4>
@@ -280,7 +336,7 @@ Defaults to <code>NONE</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ModelSelectionExpression { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ModelSelectionExpression { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,13 +348,13 @@ Defaults to <code>NONE</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_OperationName_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.OperationName*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Route_OperationName" data-uid="Pulumi.Aws.ApiGatewayV2.Route.OperationName">OperationName</h4>
@@ -307,7 +363,7 @@ Defaults to <code>NONE</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OperationName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OperationName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -319,13 +375,13 @@ Defaults to <code>NONE</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_RequestModels_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.RequestModels*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Route_RequestModels" data-uid="Pulumi.Aws.ApiGatewayV2.Route.RequestModels">RequestModels</h4>
@@ -334,7 +390,7 @@ Defaults to <code>NONE</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; RequestModels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; RequestModels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -346,13 +402,13 @@ Defaults to <code>NONE</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_RouteKey_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.RouteKey*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Route_RouteKey" data-uid="Pulumi.Aws.ApiGatewayV2.Route.RouteKey">RouteKey</h4>
@@ -373,13 +429,13 @@ Defaults to <code>NONE</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_RouteResponseSelectionExpression_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.RouteResponseSelectionExpression*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Route_RouteResponseSelectionExpression" data-uid="Pulumi.Aws.ApiGatewayV2.Route.RouteResponseSelectionExpression">RouteResponseSelectionExpression</h4>
@@ -388,7 +444,7 @@ Defaults to <code>NONE</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RouteResponseSelectionExpression { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RouteResponseSelectionExpression { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -400,13 +456,13 @@ Defaults to <code>NONE</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_Target_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.Target*"></a>
   <h4 id="Pulumi_Aws_ApiGatewayV2_Route_Target" data-uid="Pulumi.Aws.ApiGatewayV2.Route.Target">Target</h4>
@@ -415,7 +471,7 @@ Defaults to <code>NONE</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Target { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Target { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -427,7 +483,7 @@ Defaults to <code>NONE</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -435,17 +491,17 @@ Defaults to <code>NONE</code>.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGatewayV2_Route_Get_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.Get*"></a>
-  <h4 id="Pulumi_Aws_ApiGatewayV2_Route_Get_System_String_Input_System_String__Pulumi_Aws_ApiGatewayV2_RouteState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ApiGatewayV2.Route.Get(System.String,Input{System.String},Pulumi.Aws.ApiGatewayV2.RouteState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RouteState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ApiGatewayV2_Route_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_ApiGatewayV2_RouteState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGatewayV2.Route.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.ApiGatewayV2.RouteState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RouteState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Route resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Route Get(string name, Input&lt;string&gt; id, RouteState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Route Get(string name, Input&lt;string&gt; id, RouteState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -464,7 +520,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -476,7 +532,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -505,7 +561,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGatewayV2/Route.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ApiGatewayV2/Route.cs/#L38" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

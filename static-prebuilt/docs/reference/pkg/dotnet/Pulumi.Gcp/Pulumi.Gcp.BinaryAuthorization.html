@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.BinaryAuthorization
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -100,6 +100,79 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.binaryauthorization.AttestorIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.binaryauthorization.AttestorIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_binary_authorization_attestor_iam_policy">google_binary_authorization_attestor_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.BinaryAuthorization.AttestorIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.BinaryAuthorization.AttestorIamPolicyArgs
+    {
+        Project = google_binary_authorization_attestor.Attestor.Project,
+        Attestor = google_binary_authorization_attestor.Attestor.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_binary_authorization_attestor_iam_binding">google_binary_authorization_attestor_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.BinaryAuthorization.AttestorIamBinding(&amp;quot;binding&amp;quot;, new Gcp.BinaryAuthorization.AttestorIamBindingArgs
+    {
+        Project = google_binary_authorization_attestor.Attestor.Project,
+        Attestor = google_binary_authorization_attestor.Attestor.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_binary_authorization_attestor_iam_member">google_binary_authorization_attestor_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.BinaryAuthorization.AttestorIamMember(&amp;quot;member&amp;quot;, new Gcp.BinaryAuthorization.AttestorIamMemberArgs
+    {
+        Project = google_binary_authorization_attestor.Attestor.Project,
+        Attestor = google_binary_authorization_attestor.Attestor.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamBindingArgs.html">AttestorIamBindingArgs</a></h4>
       <section></section>
@@ -118,6 +191,79 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.binaryauthorization.AttestorIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.binaryauthorization.AttestorIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_binary_authorization_attestor_iam_policy">google_binary_authorization_attestor_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.BinaryAuthorization.AttestorIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.BinaryAuthorization.AttestorIamPolicyArgs
+    {
+        Project = google_binary_authorization_attestor.Attestor.Project,
+        Attestor = google_binary_authorization_attestor.Attestor.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_binary_authorization_attestor_iam_binding">google_binary_authorization_attestor_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.BinaryAuthorization.AttestorIamBinding(&amp;quot;binding&amp;quot;, new Gcp.BinaryAuthorization.AttestorIamBindingArgs
+    {
+        Project = google_binary_authorization_attestor.Attestor.Project,
+        Attestor = google_binary_authorization_attestor.Attestor.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_binary_authorization_attestor_iam_member">google_binary_authorization_attestor_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.BinaryAuthorization.AttestorIamMember(&amp;quot;member&amp;quot;, new Gcp.BinaryAuthorization.AttestorIamMemberArgs
+    {
+        Project = google_binary_authorization_attestor.Attestor.Project,
+        Attestor = google_binary_authorization_attestor.Attestor.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamMemberArgs.html">AttestorIamMemberArgs</a></h4>
       <section></section>
@@ -136,6 +282,79 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.binaryauthorization.AttestorIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.binaryauthorization.AttestorIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_binary_authorization_attestor_iam_policy">google_binary_authorization_attestor_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.BinaryAuthorization.AttestorIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.BinaryAuthorization.AttestorIamPolicyArgs
+    {
+        Project = google_binary_authorization_attestor.Attestor.Project,
+        Attestor = google_binary_authorization_attestor.Attestor.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_binary_authorization_attestor_iam_binding">google_binary_authorization_attestor_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.BinaryAuthorization.AttestorIamBinding(&amp;quot;binding&amp;quot;, new Gcp.BinaryAuthorization.AttestorIamBindingArgs
+    {
+        Project = google_binary_authorization_attestor.Attestor.Project,
+        Attestor = google_binary_authorization_attestor.Attestor.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_binary_authorization_attestor_iam_member">google_binary_authorization_attestor_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.BinaryAuthorization.AttestorIamMember(&amp;quot;member&amp;quot;, new Gcp.BinaryAuthorization.AttestorIamMemberArgs
+    {
+        Project = google_binary_authorization_attestor.Attestor.Project,
+        Attestor = google_binary_authorization_attestor.Attestor.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamPolicyArgs.html">AttestorIamPolicyArgs</a></h4>
       <section></section>

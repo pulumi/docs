@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ComputeClusterVmHostRule
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,14 +73,14 @@
   </h1>
   <div class="markdown level0 summary"><p>The <code>vsphere..ComputeClusterVmHostRule</code> resource can be used to manage
 VM-to-host rules in a cluster, either created by the
-<a href="/docs/providers/vsphere/r/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> resource or looked up
-by the <a href="/docs/providers/vsphere/d/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> data source.</p>
+<code>vsphere..ComputeCluster</code> resource or looked up
+by the <code>vsphere..ComputeCluster</code> data source.</p>
 <p>This resource can create both <em>affinity rules</em>, where virtual machines run on
 specified hosts, or <em>anti-affinity</em> rules, where virtual machines run on hosts
 outside of the ones specified in the rule. Virtual machines and hosts are
 supplied via groups, which can be managed via the
-<a href="/docs/providers/vsphere/r/compute_cluster_vm_group.html"><code>vsphere..ComputeClusterVmGroup</code></a> and
-<a href="/docs/providers/vsphere/r/compute_cluster_host_group.html"><code>vsphere..ComputeClusterHostGroup</code></a>
+<code>vsphere..ComputeClusterVmGroup</code> and
+<code>vsphere..ComputeClusterHostGroup</code>
 resources.</p>
 <blockquote>
 <p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
@@ -89,12 +89,131 @@ connections.</p>
 <blockquote>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+    {
+        Name = &amp;quot;dc1&amp;quot;,
+    }));
+    var datastore = dc.Apply(dc =&gt; Output.Create(VSphere.GetDatastore.InvokeAsync(new VSphere.GetDatastoreArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;datastore1&amp;quot;,
+    })));
+    var cluster = dc.Apply(dc =&gt; Output.Create(VSphere.GetComputeCluster.InvokeAsync(new VSphere.GetComputeClusterArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;cluster1&amp;quot;,
+    })));
+    var host = dc.Apply(dc =&gt; Output.Create(VSphere.GetHost.InvokeAsync(new VSphere.GetHostArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;esxi1&amp;quot;,
+    })));
+    var network = dc.Apply(dc =&gt; Output.Create(VSphere.GetNetwork.InvokeAsync(new VSphere.GetNetworkArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;network1&amp;quot;,
+    })));
+    var vm = new VSphere.VirtualMachine(&amp;quot;vm&amp;quot;, new VSphere.VirtualMachineArgs
+    {
+        DatastoreId = datastore.Apply(datastore =&gt; datastore.Id),
+        Disks = 
+        {
+            new VSphere.Inputs.VirtualMachineDiskArgs
+            {
+                Label = &amp;quot;disk0&amp;quot;,
+                Size = 20,
+            },
+        },
+        GuestId = &amp;quot;other3xLinux64Guest&amp;quot;,
+        Memory = 2048,
+        NetworkInterfaces = 
+        {
+            new VSphere.Inputs.VirtualMachineNetworkInterfaceArgs
+            {
+                NetworkId = network.Apply(network =&gt; network.Id),
+            },
+        },
+        NumCpus = 2,
+        ResourcePoolId = cluster.Apply(cluster =&gt; cluster.ResourcePoolId),
+    });
+    var clusterVmGroup = new VSphere.ComputeClusterVmGroup(&amp;quot;clusterVmGroup&amp;quot;, new VSphere.ComputeClusterVmGroupArgs
+    {
+        ComputeClusterId = cluster.Apply(cluster =&gt; cluster.Id),
+        VirtualMachineIds = 
+        {
+            vm.Id,
+        },
+    });
+    var clusterHostGroup = new VSphere.ComputeClusterHostGroup(&amp;quot;clusterHostGroup&amp;quot;, new VSphere.ComputeClusterHostGroupArgs
+    {
+        ComputeClusterId = cluster.Apply(cluster =&gt; cluster.Id),
+        HostSystemIds = 
+        {
+            host.Apply(host =&gt; host.Id),
+        },
+    });
+    var clusterVmHostRule = new VSphere.ComputeClusterVmHostRule(&amp;quot;clusterVmHostRule&amp;quot;, new VSphere.ComputeClusterVmHostRuleArgs
+    {
+        AffinityHostGroupName = clusterHostGroup.Name,
+        ComputeClusterId = cluster.Apply(cluster =&gt; cluster.Id),
+        VmGroupName = clusterVmGroup.Name,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ComputeClusterVmHostRule</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ComputeClusterVmHostRule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -105,16 +224,16 @@ connections.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmHostRule.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmHostRule.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmHostRule__ctor_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule__ctor_System_String_Pulumi_VSphere_ComputeClusterVmHostRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.#ctor(System.String,Pulumi.VSphere.ComputeClusterVmHostRuleArgs,System.Nullable{CustomResourceOptions})">ComputeClusterVmHostRule(String, ComputeClusterVmHostRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule__ctor_System_String_Pulumi_VSphere_ComputeClusterVmHostRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.#ctor(System.String,Pulumi.VSphere.ComputeClusterVmHostRuleArgs,Pulumi.CustomResourceOptions)">ComputeClusterVmHostRule(String, ComputeClusterVmHostRuleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ComputeClusterVmHostRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ComputeClusterVmHostRule(string name, ComputeClusterVmHostRuleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ComputeClusterVmHostRule(string name, ComputeClusterVmHostRuleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -139,7 +258,7 @@ connections.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -149,7 +268,7 @@ connections.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmHostRule.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmHostRule.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmHostRule_AffinityHostGroupName_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.AffinityHostGroupName*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_AffinityHostGroupName" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.AffinityHostGroupName">AffinityHostGroupName</h4>
@@ -160,7 +279,7 @@ hosts defined in this host group.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AffinityHostGroupName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AffinityHostGroupName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,13 +291,13 @@ hosts defined in this host group.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmHostRule.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmHostRule.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmHostRule_AntiAffinityHostGroupName_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.AntiAffinityHostGroupName*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_AntiAffinityHostGroupName" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.AntiAffinityHostGroupName">AntiAffinityHostGroupName</h4>
@@ -189,7 +308,7 @@ run on the hosts defined in this host group.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AntiAffinityHostGroupName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AntiAffinityHostGroupName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,18 +320,18 @@ run on the hosts defined in this host group.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmHostRule.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmHostRule.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmHostRule_ComputeClusterId_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.ComputeClusterId*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_ComputeClusterId" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.ComputeClusterId">ComputeClusterId</h4>
-  <div class="markdown level1 summary"><p>The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+  <div class="markdown level1 summary"><p>The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -230,13 +349,13 @@ resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmHostRule.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmHostRule.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmHostRule_Enabled_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Enabled*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_Enabled" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Enabled">Enabled</h4>
@@ -257,13 +376,13 @@ resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmHostRule.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmHostRule.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmHostRule_Mandatory_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Mandatory*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_Mandatory" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Mandatory">Mandatory</h4>
@@ -285,13 +404,13 @@ machine operations that may violate this rule. Default: <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmHostRule.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmHostRule.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmHostRule_Name_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Name*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_Name" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Name">Name</h4>
@@ -313,13 +432,13 @@ cluster.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmHostRule.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmHostRule.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmHostRule_VmGroupName_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.VmGroupName*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_VmGroupName" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.VmGroupName">VmGroupName</h4>
@@ -341,7 +460,7 @@ with this rule.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -349,17 +468,17 @@ with this rule.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmHostRule.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmHostRule.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmHostRule_Get_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Get*"></a>
-  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_Get_System_String_Input_System_String__Pulumi_VSphere_ComputeClusterVmHostRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Get(System.String,Input{System.String},Pulumi.VSphere.ComputeClusterVmHostRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ComputeClusterVmHostRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_ComputeClusterVmHostRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.ComputeClusterVmHostRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ComputeClusterVmHostRuleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ComputeClusterVmHostRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ComputeClusterVmHostRule Get(string name, Input&lt;string&gt; id, ComputeClusterVmHostRuleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ComputeClusterVmHostRule Get(string name, Input&lt;string&gt; id, ComputeClusterVmHostRuleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,7 +497,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -390,7 +509,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -419,7 +538,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmHostRule.cs/#L37" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmHostRule.cs/#L117" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

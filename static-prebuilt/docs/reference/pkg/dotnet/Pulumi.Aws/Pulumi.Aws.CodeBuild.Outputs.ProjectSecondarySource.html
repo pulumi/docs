@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ProjectSecondarySource
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ProjectSecondarySource</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.html">Pulumi.Aws.CodeBuild.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_CodeBuild_Outputs_ProjectSecondarySource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ProjectSecondarySource : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ProjectSecondarySource</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectSecondarySource_Auths" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySource.Auths">Auths</h4>
   <div class="markdown level1 summary"><p>Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.</p>
@@ -107,13 +131,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySourceAuth.html">ProjectSecondarySourceAuth</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySourceAuth.html">ProjectSecondarySourceAuth</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectSecondarySource_Buildspec" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySource.Buildspec">Buildspec</h4>
   <div class="markdown level1 summary"><p>The build spec declaration to use for this build project's related builds.</p>
@@ -121,7 +145,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Buildspec</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Buildspec</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectSecondarySource_GitCloneDepth" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySource.GitCloneDepth">GitCloneDepth</h4>
   <div class="markdown level1 summary"><p>Truncate git history to this many commits.</p>
@@ -165,10 +189,10 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectSecondarySource_GitSubmodulesConfig" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySource.GitSubmodulesConfig">GitSubmodulesConfig</h4>
-  <div class="markdown level1 summary"><p>Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the <code>type</code> is <code>CODECOMMIT</code>.</p>
+  <div class="markdown level1 summary"><p>Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the <code>type</code> is <code>CODECOMMIT</code>, <code>GITHUB</code> or <code>GITHUB_ENTERPRISE</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -191,7 +215,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectSecondarySource_InsecureSsl" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySource.InsecureSsl">InsecureSsl</h4>
   <div class="markdown level1 summary"><p>Ignore SSL warnings when connecting to source control.</p>
@@ -217,7 +241,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectSecondarySource_Location" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySource.Location">Location</h4>
   <div class="markdown level1 summary"><p>The location of the source code from git or s3.</p>
@@ -225,7 +249,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Location</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Location</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +261,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectSecondarySource_ReportBuildStatus" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySource.ReportBuildStatus">ReportBuildStatus</h4>
   <div class="markdown level1 summary"><p>Set to <code>true</code> to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is <code>GITHUB</code>, <code>BITBUCKET</code>, or <code>GITHUB_ENTERPRISE</code>.</p>
@@ -269,7 +293,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectSecondarySource_SourceIdentifier" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySource.SourceIdentifier">SourceIdentifier</h4>
   <div class="markdown level1 summary"><p>The source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory</p>
@@ -295,7 +319,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectSecondarySource_Type" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySource.Type">Type</h4>
   <div class="markdown level1 summary"><p>The type of repository that contains the source code to be built. Valid values for this parameter are: <code>CODECOMMIT</code>, <code>CODEPIPELINE</code>, <code>GITHUB</code>, <code>GITHUB_ENTERPRISE</code>, <code>BITBUCKET</code> or <code>S3</code>.</p>
@@ -327,7 +351,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CodeBuild/Outputs/ProjectSecondarySource.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

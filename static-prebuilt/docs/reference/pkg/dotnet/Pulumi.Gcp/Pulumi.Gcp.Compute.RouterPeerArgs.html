@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RouterPeerArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">RouterPeerArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">RouterPeerArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L258">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L297">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs__ctor_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs__ctor" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.#ctor">RouterPeerArgs()</h4>
@@ -100,16 +129,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L185">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs_AdvertisedGroups_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.AdvertisedGroups*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs_AdvertisedGroups" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.AdvertisedGroups">AdvertisedGroups</h4>
-  <div class="markdown level1 summary"><p>User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the &quot;bgp&quot;
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.</p>
+  <div class="markdown level1 summary"><p>User-specified list of prefix groups to advertise in custom
+mode, which can take one of the following options:</p>
+<ul>
+<li><code>ALL_SUBNETS</code>: Advertises all available subnets, including peer VPC subnets.</li>
+<li><code>ALL_VPC_SUBNETS</code>: Advertises the router's own VPC subnets.</li>
+<li><code>ALL_PEER_VPC_SUBNETS</code>: Advertises peer subnets of the router's VPC network.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -126,19 +156,21 @@ custom groups.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L199">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs_AdvertisedIpRanges_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.AdvertisedIpRanges*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs_AdvertisedIpRanges" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.AdvertisedIpRanges">AdvertisedIpRanges</h4>
-  <div class="markdown level1 summary"><p>User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.</p>
+  <div class="markdown level1 summary"><p>User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if advertiseMode
+is <code>CUSTOM</code> and is advertised to all peers of the router. These IP
+ranges will be advertised in addition to any specified groups.
+Leave this field blank to advertise no custom IP ranges.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -155,23 +187,24 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RouterPeerAdvertisedIpRangeArgs.html">RouterPeerAdvertisedIpRangeArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RouterPeerAdvertisedIpRangeArgs.html">RouterPeerAdvertisedIpRangeArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs_AdvertisedRoutePriority_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.AdvertisedRoutePriority*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs_AdvertisedRoutePriority" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.AdvertisedRoutePriority">AdvertisedRoutePriority</h4>
-  <div class="markdown level1 summary"><p>The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.</p>
+  <div class="markdown level1 summary"><p>The priority of routes advertised to this BGP peer.
+Where there is more than one matching route of maximum
+length, the routes with the lowest priority value win.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? AdvertisedRoutePriority { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; AdvertisedRoutePriority { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,23 +216,23 @@ routes with the lowest priority value win.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs_AdvertiseMode_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.AdvertiseMode*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs_AdvertiseMode" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.AdvertiseMode">AdvertiseMode</h4>
-  <div class="markdown level1 summary"><p>User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'</p>
+  <div class="markdown level1 summary"><p>User-specified flag to indicate which mode to use for advertisement.
+Valid values of this enum field are: <code>DEFAULT</code>, <code>CUSTOM</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AdvertiseMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AdvertiseMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,13 +244,13 @@ routes with the lowest priority value win.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs_Interface_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.Interface*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs_Interface" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.Interface">Interface</h4>
@@ -238,25 +271,27 @@ routes with the lowest priority value win.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L224">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L260">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs_Name_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs_Name" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.</p>
+  <div class="markdown level1 summary"><p>Name of this BGP peer. The name must be 1-63 characters long,
+and comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression <code>a-z?</code> which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,17 +303,18 @@ character, which cannot be a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L230">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L267">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs_PeerAsn_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.PeerAsn*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs_PeerAsn" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.PeerAsn">PeerAsn</h4>
-  <div class="markdown level1 summary"><p>Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.</p>
+  <div class="markdown level1 summary"><p>Peer BGP Autonomous System Number (ASN).
+Each BGP interface may use a different value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -295,17 +331,18 @@ character, which cannot be a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L236">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L274">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs_PeerIpAddress_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.PeerIpAddress*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs_PeerIpAddress" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.PeerIpAddress">PeerIpAddress</h4>
-  <div class="markdown level1 summary"><p>IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.</p>
+  <div class="markdown level1 summary"><p>IP address of the BGP interface outside Google Cloud Platform.
+Only IPv4 is supported.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -322,13 +359,13 @@ character, which cannot be a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L243">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L281">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs_Project_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs_Project" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.Project">Project</h4>
@@ -338,7 +375,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -350,22 +387,23 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L249">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L288">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs_Region_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs_Region" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.Region">Region</h4>
-  <div class="markdown level1 summary"><p>Region where the router and BgpPeer reside. If it is not provided, the provider region is used.</p>
+  <div class="markdown level1 summary"><p>Region where the router and BgpPeer reside.
+If it is not provided, the provider region is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -377,13 +415,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L255">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L294">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterPeerArgs_Router_" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.Router*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterPeerArgs_Router" data-uid="Pulumi.Gcp.Compute.RouterPeerArgs.Router">Router</h4>
@@ -404,7 +442,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -416,7 +454,7 @@ If it is not provided, the provider project is used.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterPeer.cs/#L165" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RouterPeer.cs/#L197" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

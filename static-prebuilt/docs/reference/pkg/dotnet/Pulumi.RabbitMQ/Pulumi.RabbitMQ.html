@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.RabbitMQ
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,59 @@
       <h4><a class="xref" href="Pulumi.RabbitMQ.Binding.html">Binding</a></h4>
       <section><p>The <code>rabbitmq..Binding</code> resource creates and manages a binding relationship
 between a queue an exchange.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testVHost = new RabbitMQ.VHost(&amp;quot;testVHost&amp;quot;, new RabbitMQ.VHostArgs
+    {
+    });
+    var guest = new RabbitMQ.Permissions(&amp;quot;guest&amp;quot;, new RabbitMQ.PermissionsArgs
+    {
+        Permissions = new RabbitMQ.Inputs.PermissionsPermissionsArgs
+        {
+            Configure = &amp;quot;.*&amp;quot;,
+            Read = &amp;quot;.*&amp;quot;,
+            Write = &amp;quot;.*&amp;quot;,
+        },
+        User = &amp;quot;guest&amp;quot;,
+        Vhost = testVHost.Name,
+    });
+    var testExchange = new RabbitMQ.Exchange(&amp;quot;testExchange&amp;quot;, new RabbitMQ.ExchangeArgs
+    {
+        Settings = new RabbitMQ.Inputs.ExchangeSettingsArgs
+        {
+            AutoDelete = true,
+            Durable = false,
+            Type = &amp;quot;fanout&amp;quot;,
+        },
+        Vhost = guest.Vhost,
+    });
+    var testQueue = new RabbitMQ.Queue(&amp;quot;testQueue&amp;quot;, new RabbitMQ.QueueArgs
+    {
+        Settings = new RabbitMQ.Inputs.QueueSettingsArgs
+        {
+            AutoDelete = false,
+            Durable = true,
+        },
+        Vhost = guest.Vhost,
+    });
+    var testBinding = new RabbitMQ.Binding(&amp;quot;testBinding&amp;quot;, new RabbitMQ.BindingArgs
+    {
+        Destination = testQueue.Name,
+        DestinationType = &amp;quot;queue&amp;quot;,
+        RoutingKey = &amp;quot;#&amp;quot;,
+        Source = testExchange.Name,
+        Vhost = testVHost.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.RabbitMQ.BindingArgs.html">BindingArgs</a></h4>
       <section></section>
@@ -88,6 +141,42 @@ between a queue an exchange.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.RabbitMQ.Exchange.html">Exchange</a></h4>
       <section><p>The <code>rabbitmq..Exchange</code> resource creates and manages an exchange.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testVHost = new RabbitMQ.VHost(&amp;quot;testVHost&amp;quot;, new RabbitMQ.VHostArgs
+    {
+    });
+    var guest = new RabbitMQ.Permissions(&amp;quot;guest&amp;quot;, new RabbitMQ.PermissionsArgs
+    {
+        Permissions = new RabbitMQ.Inputs.PermissionsPermissionsArgs
+        {
+            Configure = &amp;quot;.*&amp;quot;,
+            Read = &amp;quot;.*&amp;quot;,
+            Write = &amp;quot;.*&amp;quot;,
+        },
+        User = &amp;quot;guest&amp;quot;,
+        Vhost = testVHost.Name,
+    });
+    var testExchange = new RabbitMQ.Exchange(&amp;quot;testExchange&amp;quot;, new RabbitMQ.ExchangeArgs
+    {
+        Settings = new RabbitMQ.Inputs.ExchangeSettingsArgs
+        {
+            AutoDelete = true,
+            Durable = false,
+            Type = &amp;quot;fanout&amp;quot;,
+        },
+        Vhost = guest.Vhost,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.RabbitMQ.ExchangeArgs.html">ExchangeArgs</a></h4>
       <section></section>
@@ -96,6 +185,40 @@ between a queue an exchange.</p>
       <h4><a class="xref" href="Pulumi.RabbitMQ.Permissions.html">Permissions</a></h4>
       <section><p>The <code>rabbitmq..Permissions</code> resource creates and manages a user's set of
 permissions.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testVHost = new RabbitMQ.VHost(&amp;quot;testVHost&amp;quot;, new RabbitMQ.VHostArgs
+    {
+    });
+    var testUser = new RabbitMQ.User(&amp;quot;testUser&amp;quot;, new RabbitMQ.UserArgs
+    {
+        Password = &amp;quot;foobar&amp;quot;,
+        Tags = 
+        {
+            &amp;quot;administrator&amp;quot;,
+        },
+    });
+    var testPermissions = new RabbitMQ.Permissions(&amp;quot;testPermissions&amp;quot;, new RabbitMQ.PermissionsArgs
+    {
+        Permissions = new RabbitMQ.Inputs.PermissionsPermissionsArgs
+        {
+            Configure = &amp;quot;.*&amp;quot;,
+            Read = &amp;quot;.*&amp;quot;,
+            Write = &amp;quot;.*&amp;quot;,
+        },
+        User = testUser.Name,
+        Vhost = testVHost.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.RabbitMQ.PermissionsArgs.html">PermissionsArgs</a></h4>
       <section></section>
@@ -104,6 +227,46 @@ permissions.</p>
       <h4><a class="xref" href="Pulumi.RabbitMQ.Policy.html">Policy</a></h4>
       <section><p>The <code>rabbitmq..Policy</code> resource creates and manages policies for exchanges
 and queues.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testVHost = new RabbitMQ.VHost(&amp;quot;testVHost&amp;quot;, new RabbitMQ.VHostArgs
+    {
+    });
+    var guest = new RabbitMQ.Permissions(&amp;quot;guest&amp;quot;, new RabbitMQ.PermissionsArgs
+    {
+        Permissions = new RabbitMQ.Inputs.PermissionsPermissionsArgs
+        {
+            Configure = &amp;quot;.*&amp;quot;,
+            Read = &amp;quot;.*&amp;quot;,
+            Write = &amp;quot;.*&amp;quot;,
+        },
+        User = &amp;quot;guest&amp;quot;,
+        Vhost = testVHost.Name,
+    });
+    var testPolicy = new RabbitMQ.Policy(&amp;quot;testPolicy&amp;quot;, new RabbitMQ.PolicyArgs
+    {
+        Policy = new RabbitMQ.Inputs.PolicyPolicyArgs
+        {
+            ApplyTo = &amp;quot;all&amp;quot;,
+            Definition = 
+            {
+                { &amp;quot;ha-mode&amp;quot;, &amp;quot;all&amp;quot; },
+            },
+            Pattern = &amp;quot;.*&amp;quot;,
+            Priority = 0,
+        },
+        Vhost = guest.Vhost,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.RabbitMQ.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
@@ -119,6 +282,84 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.RabbitMQ.Queue.html">Queue</a></h4>
       <section><p>The <code>rabbitmq..Queue</code> resource creates and manages a queue.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-example">Basic Example</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testVHost = new RabbitMQ.VHost(&amp;quot;testVHost&amp;quot;, new RabbitMQ.VHostArgs
+    {
+    });
+    var guest = new RabbitMQ.Permissions(&amp;quot;guest&amp;quot;, new RabbitMQ.PermissionsArgs
+    {
+        Permissions = new RabbitMQ.Inputs.PermissionsPermissionsArgs
+        {
+            Configure = &amp;quot;.*&amp;quot;,
+            Read = &amp;quot;.*&amp;quot;,
+            Write = &amp;quot;.*&amp;quot;,
+        },
+        User = &amp;quot;guest&amp;quot;,
+        Vhost = testVHost.Name,
+    });
+    var testQueue = new RabbitMQ.Queue(&amp;quot;testQueue&amp;quot;, new RabbitMQ.QueueArgs
+    {
+        Settings = new RabbitMQ.Inputs.QueueSettingsArgs
+        {
+            AutoDelete = true,
+            Durable = false,
+        },
+        Vhost = guest.Vhost,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-with-json-arguments">Example With JSON Arguments</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var arguments = config.Get(&amp;quot;arguments&amp;quot;) ?? @&amp;quot;{
+&amp;quot;&amp;quot;x-message-ttl&amp;quot;&amp;quot;: 5000
+}
+
+&amp;quot;;
+    var testVHost = new RabbitMQ.VHost(&amp;quot;testVHost&amp;quot;, new RabbitMQ.VHostArgs
+    {
+    });
+    var guest = new RabbitMQ.Permissions(&amp;quot;guest&amp;quot;, new RabbitMQ.PermissionsArgs
+    {
+        Permissions = new RabbitMQ.Inputs.PermissionsPermissionsArgs
+        {
+            Configure = &amp;quot;.*&amp;quot;,
+            Read = &amp;quot;.*&amp;quot;,
+            Write = &amp;quot;.*&amp;quot;,
+        },
+        User = &amp;quot;guest&amp;quot;,
+        Vhost = testVHost.Name,
+    });
+    var testQueue = new RabbitMQ.Queue(&amp;quot;testQueue&amp;quot;, new RabbitMQ.QueueArgs
+    {
+        Settings = new RabbitMQ.Inputs.QueueSettingsArgs
+        {
+            ArgumentsJson = arguments,
+            AutoDelete = true,
+            Durable = false,
+        },
+        Vhost = guest.Vhost,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.RabbitMQ.QueueArgs.html">QueueArgs</a></h4>
       <section></section>
@@ -127,6 +368,43 @@ construction to achieve fine-grained programmatic control over provider settings
       <h4><a class="xref" href="Pulumi.RabbitMQ.TopicPermissions.html">TopicPermissions</a></h4>
       <section><p>The <code>rabbitmq..TopicPermissions</code> resource creates and manages a user's set of
 topic permissions.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testVHost = new RabbitMQ.VHost(&amp;quot;testVHost&amp;quot;, new RabbitMQ.VHostArgs
+    {
+    });
+    var testUser = new RabbitMQ.User(&amp;quot;testUser&amp;quot;, new RabbitMQ.UserArgs
+    {
+        Password = &amp;quot;foobar&amp;quot;,
+        Tags = 
+        {
+            &amp;quot;administrator&amp;quot;,
+        },
+    });
+    var testTopicPermissions = new RabbitMQ.TopicPermissions(&amp;quot;testTopicPermissions&amp;quot;, new RabbitMQ.TopicPermissionsArgs
+    {
+        Permissions = 
+        {
+            new RabbitMQ.Inputs.TopicPermissionsPermissionArgs
+            {
+                Exchange = &amp;quot;amq.topic&amp;quot;,
+                Read = &amp;quot;.*&amp;quot;,
+                Write = &amp;quot;.*&amp;quot;,
+            },
+        },
+        User = testUser.Name,
+        Vhost = testVHost.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.RabbitMQ.TopicPermissionsArgs.html">TopicPermissionsArgs</a></h4>
       <section></section>
@@ -138,6 +416,27 @@ topic permissions.</p>
 <p><strong>Note:</strong> All arguments including username and password will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new RabbitMQ.User(&amp;quot;test&amp;quot;, new RabbitMQ.UserArgs
+    {
+        Password = &amp;quot;foobar&amp;quot;,
+        Tags = 
+        {
+            &amp;quot;administrator&amp;quot;,
+            &amp;quot;management&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.RabbitMQ.UserArgs.html">UserArgs</a></h4>
       <section></section>
@@ -145,6 +444,21 @@ topic permissions.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.RabbitMQ.VHost.html">VHost</a></h4>
       <section><p>The <code>rabbitmq..VHost</code> resource creates and manages a vhost.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myVhost = new RabbitMQ.VHost(&amp;quot;myVhost&amp;quot;, new RabbitMQ.VHostArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.RabbitMQ.VHostArgs.html">VHostArgs</a></h4>
       <section></section>

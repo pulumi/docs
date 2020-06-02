@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class WindowsVirtualMachineScaleSetDataDisk
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">WindowsVirtualMachineScaleSetDataDisk</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.Outputs.html">Pulumi.Azure.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Compute_Outputs_WindowsVirtualMachineScaleSetDataDisk_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class WindowsVirtualMachineScaleSetDataDisk : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class WindowsVirtualMachineScaleSetDataDisk</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_WindowsVirtualMachineScaleSetDataDisk_Caching" data-uid="Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineScaleSetDataDisk.Caching">Caching</h4>
   <div class="markdown level1 summary"><p>The type of Caching which should be used for this Data Disk. Possible values are <code>None</code>, <code>ReadOnly</code> and <code>ReadWrite</code>.</p>
@@ -113,15 +137,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L23">View Source</a>
   </span>
-  <h4 id="Pulumi_Azure_Compute_Outputs_WindowsVirtualMachineScaleSetDataDisk_DiskEncryptionSetId" data-uid="Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineScaleSetDataDisk.DiskEncryptionSetId">DiskEncryptionSetId</h4>
-  <div class="markdown level1 summary"><p>The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p>
+  <h4 id="Pulumi_Azure_Compute_Outputs_WindowsVirtualMachineScaleSetDataDisk_CreateOption" data-uid="Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineScaleSetDataDisk.CreateOption">CreateOption</h4>
+  <div class="markdown level1 summary"><p>The create option which should be used for this Data Disk. Possible values are <code>Empty</code> and <code>FromImage</code>. Defaults to <code>Empty</code>. (<code>FromImage</code> should only be used if the source image includes data disks).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DiskEncryptionSetId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string CreateOption</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,13 +157,39 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L27">View Source</a>
+  </span>
+  <h4 id="Pulumi_Azure_Compute_Outputs_WindowsVirtualMachineScaleSetDataDisk_DiskEncryptionSetId" data-uid="Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineScaleSetDataDisk.DiskEncryptionSetId">DiskEncryptionSetId</h4>
+  <div class="markdown level1 summary"><p>The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string DiskEncryptionSetId</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_WindowsVirtualMachineScaleSetDataDisk_DiskSizeGb" data-uid="Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineScaleSetDataDisk.DiskSizeGb">DiskSizeGb</h4>
   <div class="markdown level1 summary"><p>The size of the Data Disk which should be created.</p>
@@ -165,7 +215,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_WindowsVirtualMachineScaleSetDataDisk_Lun" data-uid="Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineScaleSetDataDisk.Lun">Lun</h4>
   <div class="markdown level1 summary"><p>The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p>
@@ -191,7 +241,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_WindowsVirtualMachineScaleSetDataDisk_StorageAccountType" data-uid="Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineScaleSetDataDisk.StorageAccountType">StorageAccountType</h4>
   <div class="markdown level1 summary"><p>The Type of Storage Account which should back this Data Disk. Possible values include <code>Standard_LRS</code>, <code>StandardSSD_LRS</code>, <code>Premium_LRS</code> and <code>UltraSSD_LRS</code>.</p>
@@ -217,7 +267,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_WindowsVirtualMachineScaleSetDataDisk_WriteAcceleratorEnabled" data-uid="Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineScaleSetDataDisk.WriteAcceleratorEnabled">WriteAcceleratorEnabled</h4>
   <div class="markdown level1 summary"><p>Should Write Accelerator be enabled for this Data Disk? Defaults to <code>false</code>.</p>
@@ -249,7 +299,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Outputs/WindowsVirtualMachineScaleSetDataDisk.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

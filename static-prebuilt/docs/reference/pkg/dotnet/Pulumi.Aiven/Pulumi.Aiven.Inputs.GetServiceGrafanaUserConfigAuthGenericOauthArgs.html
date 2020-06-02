@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetServiceGrafanaUserConfigAuthGenericOauthArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,18 +76,47 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GetServiceGrafanaUserConfigAuthGenericOauthArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html">InvokeArgs</a></div>
+    <div class="level3"><span class="xref">GetServiceGrafanaUserConfigAuthGenericOauthArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs_Empty">InvokeArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aiven.Inputs.html">Pulumi.Aiven.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aiven.dll</h6>
   <h5 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetServiceGrafanaUserConfigAuthGenericOauthArgs : ResourceArgs</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetServiceGrafanaUserConfigAuthGenericOauthArgs : InvokeArgs</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L684">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs__ctor_" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.#ctor*"></a>
   <h4 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs__ctor" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.#ctor">GetServiceGrafanaUserConfigAuthGenericOauthArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L644">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_AllowedDomains_" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.AllowedDomains*"></a>
   <h4 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_AllowedDomains" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.AllowedDomains">AllowedDomains</h4>
@@ -108,7 +137,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; AllowedDomains { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; AllowedDomains { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,13 +149,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L652">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_AllowedOrganizations_" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.AllowedOrganizations*"></a>
   <h4 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_AllowedOrganizations" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.AllowedOrganizations">AllowedOrganizations</h4>
@@ -134,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; AllowedOrganizations { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; AllowedOrganizations { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L639">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L15">View Source</a>
   </span>
   <a id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_AllowSignUp_" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.AllowSignUp*"></a>
   <h4 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_AllowSignUp" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.AllowSignUp">AllowSignUp</h4>
@@ -160,7 +189,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AllowSignUp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string AllowSignUp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,13 +201,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L658">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_ApiUrl_" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.ApiUrl*"></a>
   <h4 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_ApiUrl" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.ApiUrl">ApiUrl</h4>
@@ -186,7 +215,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ApiUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ApiUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,13 +227,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L661">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_AuthUrl_" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.AuthUrl*"></a>
   <h4 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_AuthUrl" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.AuthUrl">AuthUrl</h4>
@@ -212,7 +241,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AuthUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string AuthUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,13 +253,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L664">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_ClientId_" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.ClientId*"></a>
   <h4 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_ClientId" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.ClientId">ClientId</h4>
@@ -238,7 +267,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClientId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ClientId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,13 +279,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L667">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_ClientSecret_" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.ClientSecret*"></a>
   <h4 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_ClientSecret" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.ClientSecret">ClientSecret</h4>
@@ -264,7 +293,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClientSecret { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ClientSecret { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,13 +305,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L670">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_Name_" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.Name*"></a>
   <h4 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_Name" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.Name">Name</h4>
@@ -290,7 +319,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,13 +331,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L675">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_Scopes_" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.Scopes*"></a>
   <h4 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_Scopes" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.Scopes">Scopes</h4>
@@ -316,7 +345,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; Scopes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Scopes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,13 +357,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L681">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_TokenUrl_" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.TokenUrl*"></a>
   <h4 id="Pulumi_Aiven_Inputs_GetServiceGrafanaUserConfigAuthGenericOauthArgs_TokenUrl" data-uid="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigAuthGenericOauthArgs.TokenUrl">TokenUrl</h4>
@@ -342,7 +371,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TokenUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string TokenUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -354,7 +383,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -366,7 +395,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L637" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/Inputs/GetServiceGrafanaUserConfigAuthGenericOauthArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

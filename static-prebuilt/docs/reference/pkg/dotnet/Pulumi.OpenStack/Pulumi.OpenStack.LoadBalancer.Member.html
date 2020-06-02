@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Member
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,68 @@
   <h1 id="Pulumi_OpenStack_LoadBalancer_Member" data-uid="Pulumi.OpenStack.LoadBalancer.Member" class="text-break">Class Member
   </h1>
   <div class="markdown level0 summary"><p>Manages a V2 member resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member1 = new OpenStack.LoadBalancer.Member(&amp;quot;member1&amp;quot;, new OpenStack.LoadBalancer.MemberArgs
+    {
+        Address = &amp;quot;192.168.199.23&amp;quot;,
+        PoolId = &amp;quot;935685fb-a896-40f9-9ff4-ae531a3a00fe&amp;quot;,
+        ProtocolPort = 8080,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Member</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Member</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.LoadBalancer.html">Pulumi.OpenStack.LoadBalancer</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -88,16 +144,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Member__ctor_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_LoadBalancer_Member__ctor_System_String_Pulumi_OpenStack_LoadBalancer_MemberArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.LoadBalancer.Member.#ctor(System.String,Pulumi.OpenStack.LoadBalancer.MemberArgs,System.Nullable{CustomResourceOptions})">Member(String, MemberArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Member__ctor_System_String_Pulumi_OpenStack_LoadBalancer_MemberArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.#ctor(System.String,Pulumi.OpenStack.LoadBalancer.MemberArgs,Pulumi.CustomResourceOptions)">Member(String, MemberArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Member resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Member(string name, MemberArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Member(string name, MemberArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +178,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +188,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Member_Address_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.Address*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Member_Address" data-uid="Pulumi.OpenStack.LoadBalancer.Member.Address">Address</h4>
@@ -154,18 +210,18 @@ the load balancer. Changing this creates a new member.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Member_AdminStateUp_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.AdminStateUp*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Member_AdminStateUp" data-uid="Pulumi.OpenStack.LoadBalancer.Member.AdminStateUp">AdminStateUp</h4>
   <div class="markdown level1 summary"><p>The administrative state of the member.
-A valid value is true (UP) or false (DOWN).</p>
+A valid value is true (UP) or false (DOWN). Defaults to true.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -182,13 +238,13 @@ A valid value is true (UP) or false (DOWN).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Member_Name_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.Name*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Member_Name" data-uid="Pulumi.OpenStack.LoadBalancer.Member.Name">Name</h4>
@@ -209,18 +265,18 @@ A valid value is true (UP) or false (DOWN).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Member_PoolId_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.PoolId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Member_PoolId" data-uid="Pulumi.OpenStack.LoadBalancer.Member.PoolId">PoolId</h4>
-  <div class="markdown level1 summary"><p>The id of the pool that this member will be
-assigned to.</p>
+  <div class="markdown level1 summary"><p>The id of the pool that this member will be assigned
+to. Changing this creates a new member.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -237,13 +293,13 @@ assigned to.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Member_ProtocolPort_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.ProtocolPort*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Member_ProtocolPort" data-uid="Pulumi.OpenStack.LoadBalancer.Member.ProtocolPort">ProtocolPort</h4>
@@ -265,20 +321,19 @@ Changing this creates a new member.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Member_Region_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.Region*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Member_Region" data-uid="Pulumi.OpenStack.LoadBalancer.Member.Region">Region</h4>
   <div class="markdown level1 summary"><p>The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-<code>region</code> argument of the provider is used. Changing this creates a new
-member.</p>
+A Networking client is needed to create a member. If omitted, the <code>region</code>
+argument of the provider is used. Changing this creates a new member.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -295,22 +350,23 @@ member.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Member_SubnetId_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.SubnetId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Member_SubnetId" data-uid="Pulumi.OpenStack.LoadBalancer.Member.SubnetId">SubnetId</h4>
-  <div class="markdown level1 summary"><p>The subnet in which to access the member</p>
+  <div class="markdown level1 summary"><p>The subnet in which to access the member. Changing
+this creates a new member.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubnetId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SubnetId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -322,13 +378,13 @@ member.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Member_TenantId_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.TenantId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Member_TenantId" data-uid="Pulumi.OpenStack.LoadBalancer.Member.TenantId">TenantId</h4>
@@ -351,20 +407,20 @@ other than their own. Changing this creates a new member.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Member_Weight_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.Weight*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Member_Weight" data-uid="Pulumi.OpenStack.LoadBalancer.Member.Weight">Weight</h4>
   <div class="markdown level1 summary"><p>A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.</p>
+as a member with a weight of 2. Defaults to 1.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -381,7 +437,7 @@ as a member with a weight of 2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -389,17 +445,17 @@ as a member with a weight of 2.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Member_Get_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.Get*"></a>
-  <h4 id="Pulumi_OpenStack_LoadBalancer_Member_Get_System_String_Input_System_String__Pulumi_OpenStack_LoadBalancer_MemberState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.LoadBalancer.Member.Get(System.String,Input{System.String},Pulumi.OpenStack.LoadBalancer.MemberState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, MemberState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Member_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_LoadBalancer_MemberState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.LoadBalancer.Member.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.LoadBalancer.MemberState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, MemberState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Member resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Member Get(string name, Input&lt;string&gt; id, MemberState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Member Get(string name, Input&lt;string&gt; id, MemberState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -418,7 +474,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -430,7 +486,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -459,7 +515,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Member.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Member.cs/#L38" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

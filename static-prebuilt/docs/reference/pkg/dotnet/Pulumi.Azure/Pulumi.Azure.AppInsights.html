@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.AppInsights
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,35 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.AppInsights.AnalyticsItem.html">AnalyticsItem</a></h4>
       <section><p>Manages an Application Insights Analytics Item component.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleInsights = new Azure.AppInsights.Insights(&amp;quot;exampleInsights&amp;quot;, new Azure.AppInsights.InsightsArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApplicationType = &amp;quot;web&amp;quot;,
+    });
+    var exampleAnalyticsItem = new Azure.AppInsights.AnalyticsItem(&amp;quot;exampleAnalyticsItem&amp;quot;, new Azure.AppInsights.AnalyticsItemArgs
+    {
+        ApplicationInsightsId = exampleInsights.Id,
+        Content = &amp;quot;requests //simple example query&amp;quot;,
+        Scope = &amp;quot;shared&amp;quot;,
+        Type = &amp;quot;query&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.AppInsights.AnalyticsItemArgs.html">AnalyticsItemArgs</a></h4>
       <section></section>
@@ -85,6 +114,85 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.AppInsights.ApiKey.html">ApiKey</a></h4>
       <section><p>Manages an Application Insights API key.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleInsights = new Azure.AppInsights.Insights(&amp;quot;exampleInsights&amp;quot;, new Azure.AppInsights.InsightsArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApplicationType = &amp;quot;web&amp;quot;,
+    });
+    var readTelemetry = new Azure.AppInsights.ApiKey(&amp;quot;readTelemetry&amp;quot;, new Azure.AppInsights.ApiKeyArgs
+    {
+        ApplicationInsightsId = exampleInsights.Id,
+        ReadPermissions = 
+        {
+            &amp;quot;aggregate&amp;quot;,
+            &amp;quot;api&amp;quot;,
+            &amp;quot;draft&amp;quot;,
+            &amp;quot;extendqueries&amp;quot;,
+            &amp;quot;search&amp;quot;,
+        },
+    });
+    var writeAnnotations = new Azure.AppInsights.ApiKey(&amp;quot;writeAnnotations&amp;quot;, new Azure.AppInsights.ApiKeyArgs
+    {
+        ApplicationInsightsId = exampleInsights.Id,
+        WritePermissions = 
+        {
+            &amp;quot;annotations&amp;quot;,
+        },
+    });
+    var authenticateSdkControlChannelApiKey = new Azure.AppInsights.ApiKey(&amp;quot;authenticateSdkControlChannelApiKey&amp;quot;, new Azure.AppInsights.ApiKeyArgs
+    {
+        ApplicationInsightsId = exampleInsights.Id,
+        ReadPermissions = 
+        {
+            &amp;quot;agentconfig&amp;quot;,
+        },
+    });
+    var fullPermissions = new Azure.AppInsights.ApiKey(&amp;quot;fullPermissions&amp;quot;, new Azure.AppInsights.ApiKeyArgs
+    {
+        ApplicationInsightsId = exampleInsights.Id,
+        ReadPermissions = 
+        {
+            &amp;quot;agentconfig&amp;quot;,
+            &amp;quot;aggregate&amp;quot;,
+            &amp;quot;api&amp;quot;,
+            &amp;quot;draft&amp;quot;,
+            &amp;quot;extendqueries&amp;quot;,
+            &amp;quot;search&amp;quot;,
+        },
+        WritePermissions = 
+        {
+            &amp;quot;annotations&amp;quot;,
+        },
+    });
+    this.ReadTelemetryApiKey = readTelemetry.ApiKey;
+    this.WriteAnnotationsApiKey = writeAnnotations.ApiKey;
+    this.AuthenticateSdkControlChannel = authenticateSdkControlChannelApiKey.ApiKey;
+    this.FullPermissionsApiKey = fullPermissions.ApiKey;
+}
+
+[Output(&amp;quot;readTelemetryApiKey&amp;quot;)]
+public Output&amp;lt;string&gt; ReadTelemetryApiKey { get; set; }
+[Output(&amp;quot;writeAnnotationsApiKey&amp;quot;)]
+public Output&amp;lt;string&gt; WriteAnnotationsApiKey { get; set; }
+[Output(&amp;quot;authenticateSdkControlChannel&amp;quot;)]
+public Output&amp;lt;string&gt; AuthenticateSdkControlChannel { get; set; }
+[Output(&amp;quot;fullPermissionsApiKey&amp;quot;)]
+public Output&amp;lt;string&gt; FullPermissionsApiKey { get; set; }
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.AppInsights.ApiKeyArgs.html">ApiKeyArgs</a></h4>
       <section></section>
@@ -98,6 +206,34 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.AppInsights.Insights.html">Insights</a></h4>
       <section><p>Manages an Application Insights component.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleInsights = new Azure.AppInsights.Insights(&amp;quot;exampleInsights&amp;quot;, new Azure.AppInsights.InsightsArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApplicationType = &amp;quot;web&amp;quot;,
+    });
+    this.InstrumentationKey = exampleInsights.InstrumentationKey;
+    this.AppId = exampleInsights.AppId;
+}
+
+[Output(&amp;quot;instrumentationKey&amp;quot;)]
+public Output&amp;lt;string&gt; InstrumentationKey { get; set; }
+[Output(&amp;quot;appId&amp;quot;)]
+public Output&amp;lt;string&gt; AppId { get; set; }
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.AppInsights.InsightsArgs.html">InsightsArgs</a></h4>
       <section></section>

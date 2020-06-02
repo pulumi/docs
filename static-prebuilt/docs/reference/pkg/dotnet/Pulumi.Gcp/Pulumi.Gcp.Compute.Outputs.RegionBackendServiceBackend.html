@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RegionBackendServiceBackend
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,23 +78,48 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RegionBackendServiceBackend</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RegionBackendServiceBackend : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RegionBackendServiceBackend</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_BalancingMode" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.BalancingMode">BalancingMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the balancing mode for this backend.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? BalancingMode</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string BalancingMode</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -106,16 +131,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L30">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_CapacityScaler" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.CapacityScaler">CapacityScaler</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A multiplier applied to the group's maximum servicing capacity
+(based on UTILIZATION, RATE or CONNECTION).
+~&gt;<strong>NOTE</strong>: This field cannot be set for
+INTERNAL region backend services (default loadBalancingScheme),
+but is required for non-INTERNAL backend service. The total
+capacity_scaler for all backends must be non-zero.
+A setting of 0 means the group is completely drained, offering
+0% of its available Capacity. Valid range is [0.0,1.0].</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -137,14 +170,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_Description" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.Description">Description</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An optional description of this resource.
+Provide this property when you create the resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Description</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Description</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,16 +191,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L40">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_Failover" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.Failover">Failover</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This field designates whether this is a failover backend. More
+than one failover backend can be configured for a given RegionBackendService.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -187,10 +224,26 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_Group" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.Group">Group</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The fully-qualified URL of an Instance Group or Network Endpoint
+Group resource. In case of instance group this defines the list
+of instances that serve traffic. Member virtual machine
+instances from each instance group must live in the same zone as
+the instance group itself. No two backends in a backend service
+are allowed to use same Instance Group resource.
+For Network Endpoint Groups this defines list of endpoints. All
+endpoints of Network Endpoint Group must be hosted on instances
+located in the same zone as the Network Endpoint Group.
+Backend services cannot mix Instance Group and
+Network Endpoint Group backends.
+When the <code>load_balancing_scheme</code> is INTERNAL, only instance groups
+are supported.
+Note that you must specify an Instance Group or Network Endpoint
+Group resource using the fully-qualified URL, rather than a
+partial URL.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -212,10 +265,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L64">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_MaxConnections" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.MaxConnections">MaxConnections</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of connections to the backend cluster.
+Defaults to 1024.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -237,10 +292,17 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L74">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_MaxConnectionsPerEndpoint" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.MaxConnectionsPerEndpoint">MaxConnectionsPerEndpoint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The max number of simultaneous connections that a single backend
+network endpoint can handle. Cannot be set
+for INTERNAL backend services.
+This is used to calculate the capacity of the group. Can be
+used in either CONNECTION or UTILIZATION balancing modes. For
+CONNECTION mode, either maxConnections or
+maxConnectionsPerEndpoint must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -262,10 +324,17 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L84">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_MaxConnectionsPerInstance" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.MaxConnectionsPerInstance">MaxConnectionsPerInstance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The max number of simultaneous connections that a single
+backend instance can handle. Cannot be set for INTERNAL backend
+services.
+This is used to calculate the capacity of the group.
+Can be used in either CONNECTION or UTILIZATION balancing modes.
+For CONNECTION mode, either maxConnections or
+maxConnectionsPerInstance must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -287,10 +356,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L93">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_MaxRate" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.MaxRate">MaxRate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The max requests per second (RPS) of the group. Cannot be set
+for INTERNAL backend services.
+Can be used with either RATE or UTILIZATION balancing modes,
+but required if RATE mode. Either maxRate or one
+of maxRatePerInstance or maxRatePerEndpoint, as appropriate for
+group type, must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -312,10 +387,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L101">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_MaxRatePerEndpoint" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.MaxRatePerEndpoint">MaxRatePerEndpoint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The max requests per second (RPS) that a single backend network
+endpoint can handle. This is used to calculate the capacity of
+the group. Can be used in either balancing mode. For RATE mode,
+either maxRate or maxRatePerEndpoint must be set. Cannot be set
+for INTERNAL backend services.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -337,10 +417,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L109">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_MaxRatePerInstance" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.MaxRatePerInstance">MaxRatePerInstance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The max requests per second (RPS) that a single backend
+instance can handle. This is used to calculate the capacity of
+the group. Can be used in either balancing mode. For RATE mode,
+either maxRate or maxRatePerInstance must be set. Cannot be set
+for INTERNAL backend services.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -362,10 +447,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L115">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionBackendServiceBackend_MaxUtilization" data-uid="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.MaxUtilization">MaxUtilization</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used when balancingMode is UTILIZATION. This ratio defines the
+CPU utilization target for the group. Valid range is [0.0, 1.0].
+Cannot be set for INTERNAL backend services.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -393,7 +481,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionBackendServiceBackend.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

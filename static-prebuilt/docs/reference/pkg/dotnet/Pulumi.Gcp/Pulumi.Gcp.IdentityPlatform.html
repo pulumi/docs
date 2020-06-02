@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.IdentityPlatform
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,25 @@
 <p>You must enable the
 <a href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
+<h2 id="example-usage---identity-platform-default-supported-idp-config-basic">Example Usage - Identity Platform Default Supported Idp Config Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var idpConfig = new Gcp.IdentityPlatform.DefaultSupportedIdpConfig(&amp;quot;idpConfig&amp;quot;, new Gcp.IdentityPlatform.DefaultSupportedIdpConfigArgs
+    {
+        ClientId = &amp;quot;client-id&amp;quot;,
+        ClientSecret = &amp;quot;secret&amp;quot;,
+        Enabled = true,
+        IdpId = &amp;quot;playgames.google.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.IdentityPlatform.DefaultSupportedIdpConfigArgs.html">DefaultSupportedIdpConfigArgs</a></h4>
       <section></section>
@@ -101,6 +120,26 @@ the marketplace prior to using this resource.</p>
 <p>You must enable the
 <a href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
+<h2 id="example-usage---identity-platform-oauth-idp-config-basic">Example Usage - Identity Platform Oauth Idp Config Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var oauthIdpConfig = new Gcp.IdentityPlatform.OauthIdpConfig(&amp;quot;oauthIdpConfig&amp;quot;, new Gcp.IdentityPlatform.OauthIdpConfigArgs
+    {
+        ClientId = &amp;quot;client-id&amp;quot;,
+        ClientSecret = &amp;quot;secret&amp;quot;,
+        DisplayName = &amp;quot;Display Name&amp;quot;,
+        Enabled = true,
+        Issuer = &amp;quot;issuer&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.IdentityPlatform.OauthIdpConfigArgs.html">OauthIdpConfigArgs</a></h4>
       <section></section>
@@ -113,6 +152,23 @@ the marketplace prior to using this resource.</p>
 the marketplace prior to using this resource.</p>
 <p>You must <a href="https://cloud.google.com/identity-platform/docs/multi-tenancy-quickstart">enable multi-tenancy</a> via
 the Cloud Console prior to creating tenants.</p>
+<h2 id="example-usage---identity-platform-tenant-basic">Example Usage - Identity Platform Tenant Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tenant = new Gcp.IdentityPlatform.Tenant(&amp;quot;tenant&amp;quot;, new Gcp.IdentityPlatform.TenantArgs
+    {
+        AllowPasswordSignup = true,
+        DisplayName = &amp;quot;tenant&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.IdentityPlatform.TenantArgs.html">TenantArgs</a></h4>
       <section></section>
@@ -121,6 +177,30 @@ the Cloud Console prior to creating tenants.</p>
 <p>You must enable the
 <a href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
+<h2 id="example-usage---identity-platform-tenant-default-supported-idp-config-basic">Example Usage - Identity Platform Tenant Default Supported Idp Config Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tenant = new Gcp.IdentityPlatform.Tenant(&amp;quot;tenant&amp;quot;, new Gcp.IdentityPlatform.TenantArgs
+    {
+        DisplayName = &amp;quot;tenant&amp;quot;,
+    });
+    var idpConfig = new Gcp.IdentityPlatform.TenantDefaultSupportedIdpConfig(&amp;quot;idpConfig&amp;quot;, new Gcp.IdentityPlatform.TenantDefaultSupportedIdpConfigArgs
+    {
+        Enabled = true,
+        Tenant = tenant.Name,
+        IdpId = &amp;quot;playgames.google.com&amp;quot;,
+        ClientId = &amp;quot;my-client-id&amp;quot;,
+        ClientSecret = &amp;quot;secret&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.IdentityPlatform.TenantDefaultSupportedIdpConfigArgs.html">TenantDefaultSupportedIdpConfigArgs</a></h4>
       <section></section>
@@ -141,6 +221,31 @@ the marketplace prior to using this resource.</p>
 <p>You must enable the
 <a href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
+<h2 id="example-usage---identity-platform-tenant-oauth-idp-config-basic">Example Usage - Identity Platform Tenant Oauth Idp Config Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tenant = new Gcp.IdentityPlatform.Tenant(&amp;quot;tenant&amp;quot;, new Gcp.IdentityPlatform.TenantArgs
+    {
+        DisplayName = &amp;quot;tenant&amp;quot;,
+    });
+    var tenantOauthIdpConfig = new Gcp.IdentityPlatform.TenantOauthIdpConfig(&amp;quot;tenantOauthIdpConfig&amp;quot;, new Gcp.IdentityPlatform.TenantOauthIdpConfigArgs
+    {
+        Tenant = tenant.Name,
+        DisplayName = &amp;quot;Display Name&amp;quot;,
+        ClientId = &amp;quot;client-id&amp;quot;,
+        Issuer = &amp;quot;issuer&amp;quot;,
+        Enabled = true,
+        ClientSecret = &amp;quot;secret&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.IdentityPlatform.TenantOauthIdpConfigArgs.html">TenantOauthIdpConfigArgs</a></h4>
       <section></section>

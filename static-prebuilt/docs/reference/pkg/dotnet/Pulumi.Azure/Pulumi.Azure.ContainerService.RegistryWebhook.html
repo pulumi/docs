@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RegistryWebhook
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,90 @@
   <h1 id="Pulumi_Azure_ContainerService_RegistryWebhook" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook" class="text-break">Class RegistryWebhook
   </h1>
   <div class="markdown level0 summary"><p>Manages an Azure Container Registry Webhook.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rg = new Azure.Core.ResourceGroup(&amp;quot;rg&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var acr = new Azure.ContainerService.Registry(&amp;quot;acr&amp;quot;, new Azure.ContainerService.RegistryArgs
+    {
+        ResourceGroupName = rg.Name,
+        Location = rg.Location,
+        Sku = &amp;quot;Standard&amp;quot;,
+        AdminEnabled = false,
+    });
+    var webhook = new Azure.ContainerService.RegistryWebhook(&amp;quot;webhook&amp;quot;, new Azure.ContainerService.RegistryWebhookArgs
+    {
+        ResourceGroupName = rg.Name,
+        RegistryName = acr.Name,
+        Location = rg.Location,
+        ServiceUri = &amp;quot;https://mywebhookreceiver.example/mytag&amp;quot;,
+        Status = &amp;quot;enabled&amp;quot;,
+        Scope = &amp;quot;mytag:*&amp;quot;,
+        Actions = 
+        {
+            &amp;quot;push&amp;quot;,
+        },
+        CustomHeaders = 
+        {
+            { &amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">RegistryWebhook</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">RegistryWebhook</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ContainerService.html">Pulumi.Azure.ContainerService</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -88,16 +166,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook__ctor_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.#ctor*"></a>
-  <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook__ctor_System_String_Pulumi_Azure_ContainerService_RegistryWebhookArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.#ctor(System.String,Pulumi.Azure.ContainerService.RegistryWebhookArgs,System.Nullable{CustomResourceOptions})">RegistryWebhook(String, RegistryWebhookArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook__ctor_System_String_Pulumi_Azure_ContainerService_RegistryWebhookArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.#ctor(System.String,Pulumi.Azure.ContainerService.RegistryWebhookArgs,Pulumi.CustomResourceOptions)">RegistryWebhook(String, RegistryWebhookArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a RegistryWebhook resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RegistryWebhook(string name, RegistryWebhookArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public RegistryWebhook(string name, RegistryWebhookArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +200,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +210,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook_Actions_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Actions*"></a>
   <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_Actions" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Actions">Actions</h4>
@@ -153,13 +231,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook_CustomHeaders_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.CustomHeaders*"></a>
   <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_CustomHeaders" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.CustomHeaders">CustomHeaders</h4>
@@ -168,7 +246,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; CustomHeaders { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; CustomHeaders { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +258,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook_Location_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Location*"></a>
   <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_Location" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Location">Location</h4>
@@ -207,13 +285,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook_Name_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Name*"></a>
   <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_Name" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Name">Name</h4>
@@ -234,13 +312,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook_RegistryName_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.RegistryName*"></a>
   <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_RegistryName" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.RegistryName">RegistryName</h4>
@@ -261,13 +339,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook_ResourceGroupName_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_ResourceGroupName" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.ResourceGroupName">ResourceGroupName</h4>
@@ -288,13 +366,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook_Scope_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Scope*"></a>
   <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_Scope" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Scope">Scope</h4>
@@ -303,7 +381,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Scope { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Scope { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,13 +393,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook_ServiceUri_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.ServiceUri*"></a>
   <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_ServiceUri" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.ServiceUri">ServiceUri</h4>
@@ -342,13 +420,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook_Status_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Status*"></a>
   <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_Status" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Status">Status</h4>
@@ -357,7 +435,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Status { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,13 +447,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook_Tags_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Tags*"></a>
   <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_Tags" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Tags">Tags</h4>
@@ -383,7 +461,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -395,7 +473,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -403,17 +481,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_RegistryWebhook_Get_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Get*"></a>
-  <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_Get_System_String_Input_System_String__Pulumi_Azure_ContainerService_RegistryWebhookState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Get(System.String,Input{System.String},Pulumi.Azure.ContainerService.RegistryWebhookState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RegistryWebhookState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_ContainerService_RegistryWebhook_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_ContainerService_RegistryWebhookState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.ContainerService.RegistryWebhook.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.ContainerService.RegistryWebhookState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RegistryWebhookState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing RegistryWebhook resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RegistryWebhook Get(string name, Input&lt;string&gt; id, RegistryWebhookState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RegistryWebhook Get(string name, Input&lt;string&gt; id, RegistryWebhookState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -432,7 +510,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -444,7 +522,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -473,7 +551,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/ContainerService/RegistryWebhook.cs/#L60" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

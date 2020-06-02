@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetShareArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GetShareArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html">InvokeArgs</a></div>
+    <div class="level3"><span class="xref">GetShareArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs_Empty">InvokeArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.SharedFileSystem.html">Pulumi.OpenStack.SharedFileSystem</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/GetShare.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/SharedFileSystem/GetShare.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs__ctor_" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs__ctor" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.#ctor">GetShareArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/GetShare.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/SharedFileSystem/GetShare.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_Description_" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.Description*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_Description" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.Description">Description</h4>
@@ -109,7 +138,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,13 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/GetShare.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/SharedFileSystem/GetShare.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_ExportLocationPath_" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.ExportLocationPath*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_ExportLocationPath" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.ExportLocationPath">ExportLocationPath</h4>
@@ -137,7 +166,7 @@ since Manila API version 2.35.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? ExportLocationPath { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ExportLocationPath { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,13 +178,13 @@ since Manila API version 2.35.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/GetShare.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/SharedFileSystem/GetShare.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_IsPublic_" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.IsPublic*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_IsPublic" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.IsPublic">IsPublic</h4>
@@ -183,7 +212,7 @@ length.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/GetShare.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/SharedFileSystem/GetShare.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_Metadata_" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.Metadata*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_Metadata" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.Metadata">Metadata</h4>
@@ -205,13 +234,13 @@ strings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/GetShare.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/SharedFileSystem/GetShare.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_Name_" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.Name*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_Name" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.Name">Name</h4>
@@ -220,7 +249,7 @@ strings.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,13 +261,13 @@ strings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/GetShare.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/SharedFileSystem/GetShare.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_Region_" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.Region*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_Region" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.Region">Region</h4>
@@ -247,7 +276,7 @@ strings.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,13 +288,13 @@ strings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/GetShare.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/SharedFileSystem/GetShare.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_ShareNetworkId_" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.ShareNetworkId*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_ShareNetworkId" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.ShareNetworkId">ShareNetworkId</h4>
@@ -274,7 +303,7 @@ strings.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? ShareNetworkId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ShareNetworkId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,13 +315,13 @@ strings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/GetShare.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/SharedFileSystem/GetShare.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_SnapshotId_" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.SnapshotId*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_SnapshotId" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.SnapshotId">SnapshotId</h4>
@@ -301,7 +330,7 @@ strings.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? SnapshotId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string SnapshotId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,13 +342,13 @@ strings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/GetShare.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/SharedFileSystem/GetShare.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_Status_" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.Status*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_GetShareArgs_Status" data-uid="Pulumi.OpenStack.SharedFileSystem.GetShareArgs.Status">Status</h4>
@@ -332,7 +361,7 @@ strings.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Status { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Status { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,7 +373,7 @@ strings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -356,7 +385,7 @@ strings.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/GetShare.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/SharedFileSystem/GetShare.cs/#L46" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

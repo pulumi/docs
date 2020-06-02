@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Kusto
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,36 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.Kusto.Cluster.html">Cluster</a></h4>
       <section><p>Manages a Kusto (also known as Azure Data Explorer) Cluster</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rg = new Azure.Core.ResourceGroup(&amp;quot;rg&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var example = new Azure.Kusto.Cluster(&amp;quot;example&amp;quot;, new Azure.Kusto.ClusterArgs
+    {
+        Location = rg.Location,
+        ResourceGroupName = rg.Name,
+        Sku = new Azure.Kusto.Inputs.ClusterSkuArgs
+        {
+            Name = &amp;quot;Standard_D13_v2&amp;quot;,
+            Capacity = 2,
+        },
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Kusto.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
@@ -85,11 +115,90 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Kusto.Database.html">Database</a></h4>
       <section><p>Manages a Kusto (also known as Azure Data Explorer) Database</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rg = new Azure.Core.ResourceGroup(&amp;quot;rg&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var cluster = new Azure.Kusto.Cluster(&amp;quot;cluster&amp;quot;, new Azure.Kusto.ClusterArgs
+    {
+        Location = rg.Location,
+        ResourceGroupName = rg.Name,
+        Sku = new Azure.Kusto.Inputs.ClusterSkuArgs
+        {
+            Name = &amp;quot;Standard_D13_v2&amp;quot;,
+            Capacity = 2,
+        },
+    });
+    var database = new Azure.Kusto.Database(&amp;quot;database&amp;quot;, new Azure.Kusto.DatabaseArgs
+    {
+        ResourceGroupName = rg.Name,
+        Location = rg.Location,
+        ClusterName = cluster.Name,
+        HotCachePeriod = &amp;quot;P7D&amp;quot;,
+        SoftDeletePeriod = &amp;quot;P31D&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Kusto.DatabaseArgs.html">DatabaseArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Kusto.DatabasePrincipal.html">DatabasePrincipal</a></h4>
       <section><p>Manages a Kusto (also known as Azure Data Explorer) Database Principal</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var rg = new Azure.Core.ResourceGroup(&amp;quot;rg&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var cluster = new Azure.Kusto.Cluster(&amp;quot;cluster&amp;quot;, new Azure.Kusto.ClusterArgs
+    {
+        Location = rg.Location,
+        ResourceGroupName = rg.Name,
+        Sku = new Azure.Kusto.Inputs.ClusterSkuArgs
+        {
+            Name = &amp;quot;Standard_D13_v2&amp;quot;,
+            Capacity = 2,
+        },
+    });
+    var database = new Azure.Kusto.Database(&amp;quot;database&amp;quot;, new Azure.Kusto.DatabaseArgs
+    {
+        ResourceGroupName = rg.Name,
+        Location = rg.Location,
+        ClusterName = cluster.Name,
+        HotCachePeriod = &amp;quot;P7D&amp;quot;,
+        SoftDeletePeriod = &amp;quot;P31D&amp;quot;,
+    });
+    var principal = new Azure.Kusto.DatabasePrincipal(&amp;quot;principal&amp;quot;, new Azure.Kusto.DatabasePrincipalArgs
+    {
+        ResourceGroupName = rg.Name,
+        ClusterName = cluster.Name,
+        DatabaseName = azurerm_kusto_database.Test.Name,
+        Role = &amp;quot;Viewer&amp;quot;,
+        Type = &amp;quot;User&amp;quot;,
+        ClientId = current.Apply(current =&gt; current.TenantId),
+        ObjectId = current.Apply(current =&gt; current.ClientId),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Kusto.DatabasePrincipalArgs.html">DatabasePrincipalArgs</a></h4>
       <section></section>
@@ -99,6 +208,72 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Kusto.EventhubDataConnection.html">EventhubDataConnection</a></h4>
       <section><p>Manages a Kusto (also known as Azure Data Explorer) EventHub Data Connection</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rg = new Azure.Core.ResourceGroup(&amp;quot;rg&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var cluster = new Azure.Kusto.Cluster(&amp;quot;cluster&amp;quot;, new Azure.Kusto.ClusterArgs
+    {
+        Location = rg.Location,
+        ResourceGroupName = rg.Name,
+        Sku = new Azure.Kusto.Inputs.ClusterSkuArgs
+        {
+            Name = &amp;quot;Standard_D13_v2&amp;quot;,
+            Capacity = 2,
+        },
+    });
+    var database = new Azure.Kusto.Database(&amp;quot;database&amp;quot;, new Azure.Kusto.DatabaseArgs
+    {
+        ResourceGroupName = rg.Name,
+        Location = rg.Location,
+        ClusterName = cluster.Name,
+        HotCachePeriod = &amp;quot;P7D&amp;quot;,
+        SoftDeletePeriod = &amp;quot;P31D&amp;quot;,
+    });
+    var eventhubNs = new Azure.EventHub.EventHubNamespace(&amp;quot;eventhubNs&amp;quot;, new Azure.EventHub.EventHubNamespaceArgs
+    {
+        Location = rg.Location,
+        ResourceGroupName = rg.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+    });
+    var eventhub = new Azure.EventHub.EventHub(&amp;quot;eventhub&amp;quot;, new Azure.EventHub.EventHubArgs
+    {
+        NamespaceName = eventhubNs.Name,
+        ResourceGroupName = rg.Name,
+        PartitionCount = 1,
+        MessageRetention = 1,
+    });
+    var consumerGroup = new Azure.EventHub.ConsumerGroup(&amp;quot;consumerGroup&amp;quot;, new Azure.EventHub.ConsumerGroupArgs
+    {
+        NamespaceName = eventhubNs.Name,
+        EventhubName = eventhub.Name,
+        ResourceGroupName = rg.Name,
+    });
+    var eventhubConnection = new Azure.Kusto.EventhubDataConnection(&amp;quot;eventhubConnection&amp;quot;, new Azure.Kusto.EventhubDataConnectionArgs
+    {
+        ResourceGroupName = rg.Name,
+        Location = rg.Location,
+        ClusterName = cluster.Name,
+        DatabaseName = database.Name,
+        EventhubId = azurerm_eventhub.Evenhub.Id,
+        ConsumerGroup = consumerGroup.Name,
+        TableName = &amp;quot;my-table&amp;quot;,
+        MappingRuleName = &amp;quot;my-table-mapping&amp;quot;,
+        DataFormat = &amp;quot;JSON&amp;quot;,
+    });
+    //(Optional)
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Kusto.EventhubDataConnectionArgs.html">EventhubDataConnectionArgs</a></h4>
       <section></section>

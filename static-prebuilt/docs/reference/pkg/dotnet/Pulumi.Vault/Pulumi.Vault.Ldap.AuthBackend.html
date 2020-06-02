@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AuthBackend
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,73 @@
   <h1 id="Pulumi_Vault_Ldap_AuthBackend" data-uid="Pulumi.Vault.Ldap.AuthBackend" class="text-break">Class AuthBackend
   </h1>
   <div class="markdown level0 summary"><p>Provides a resource for managing an <a href="https://www.vaultproject.io/docs/auth/ldap.html">LDAP auth backend within Vault</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ldap = new Vault.Ldap.AuthBackend(&amp;quot;ldap&amp;quot;, new Vault.Ldap.AuthBackendArgs
+    {
+        Discoverdn = false,
+        Groupdn = &amp;quot;OU=Groups,DC=example,DC=org&amp;quot;,
+        Groupfilter = &amp;quot;(&amp;amp;(objectClass=group)(member:1.2.840.113556.1.4.1941:={{.UserDN}}))&amp;quot;,
+        Path = &amp;quot;ldap&amp;quot;,
+        Upndomain = &amp;quot;EXAMPLE.ORG&amp;quot;,
+        Url = &amp;quot;ldaps://dc-01.example.org&amp;quot;,
+        Userattr = &amp;quot;sAMAccountName&amp;quot;,
+        Userdn = &amp;quot;OU=Users,OU=Accounts,DC=example,DC=org&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AuthBackend</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AuthBackend</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Vault.Ldap.html">Pulumi.Vault.Ldap</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Vault.dll</h6>
@@ -88,16 +149,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L211">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L239">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend__ctor_" data-uid="Pulumi.Vault.Ldap.AuthBackend.#ctor*"></a>
-  <h4 id="Pulumi_Vault_Ldap_AuthBackend__ctor_System_String_Pulumi_Vault_Ldap_AuthBackendArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.Ldap.AuthBackend.#ctor(System.String,Pulumi.Vault.Ldap.AuthBackendArgs,System.Nullable{CustomResourceOptions})">AuthBackend(String, AuthBackendArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_Ldap_AuthBackend__ctor_System_String_Pulumi_Vault_Ldap_AuthBackendArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.Ldap.AuthBackend.#ctor(System.String,Pulumi.Vault.Ldap.AuthBackendArgs,Pulumi.CustomResourceOptions)">AuthBackend(String, AuthBackendArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a AuthBackend resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AuthBackend(string name, AuthBackendArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AuthBackend(string name, AuthBackendArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +183,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +193,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Accessor_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Accessor*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Accessor" data-uid="Pulumi.Vault.Ldap.AuthBackend.Accessor">Accessor</h4>
@@ -153,13 +214,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Binddn_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Binddn*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Binddn" data-uid="Pulumi.Vault.Ldap.AuthBackend.Binddn">Binddn</h4>
@@ -180,13 +241,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Bindpass_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Bindpass*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Bindpass" data-uid="Pulumi.Vault.Ldap.AuthBackend.Bindpass">Bindpass</h4>
@@ -207,13 +268,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Certificate_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Certificate*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Certificate" data-uid="Pulumi.Vault.Ldap.AuthBackend.Certificate">Certificate</h4>
@@ -234,13 +295,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_DenyNullBind_" data-uid="Pulumi.Vault.Ldap.AuthBackend.DenyNullBind*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_DenyNullBind" data-uid="Pulumi.Vault.Ldap.AuthBackend.DenyNullBind">DenyNullBind</h4>
@@ -260,13 +321,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Description_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Description*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Description" data-uid="Pulumi.Vault.Ldap.AuthBackend.Description">Description</h4>
@@ -287,13 +348,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Discoverdn_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Discoverdn*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Discoverdn" data-uid="Pulumi.Vault.Ldap.AuthBackend.Discoverdn">Discoverdn</h4>
@@ -313,13 +374,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Groupattr_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Groupattr*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Groupattr" data-uid="Pulumi.Vault.Ldap.AuthBackend.Groupattr">Groupattr</h4>
@@ -340,13 +401,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Groupdn_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Groupdn*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Groupdn" data-uid="Pulumi.Vault.Ldap.AuthBackend.Groupdn">Groupdn</h4>
@@ -367,13 +428,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Groupfilter_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Groupfilter*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Groupfilter" data-uid="Pulumi.Vault.Ldap.AuthBackend.Groupfilter">Groupfilter</h4>
@@ -394,13 +455,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_InsecureTls_" data-uid="Pulumi.Vault.Ldap.AuthBackend.InsecureTls*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_InsecureTls" data-uid="Pulumi.Vault.Ldap.AuthBackend.InsecureTls">InsecureTls</h4>
@@ -421,13 +482,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Path_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Path*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Path" data-uid="Pulumi.Vault.Ldap.AuthBackend.Path">Path</h4>
@@ -436,7 +497,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Path { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Path { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -448,13 +509,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Starttls_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Starttls*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Starttls" data-uid="Pulumi.Vault.Ldap.AuthBackend.Starttls">Starttls</h4>
@@ -475,13 +536,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_TlsMaxVersion_" data-uid="Pulumi.Vault.Ldap.AuthBackend.TlsMaxVersion*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_TlsMaxVersion" data-uid="Pulumi.Vault.Ldap.AuthBackend.TlsMaxVersion">TlsMaxVersion</h4>
@@ -502,13 +563,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_TlsMinVersion_" data-uid="Pulumi.Vault.Ldap.AuthBackend.TlsMinVersion*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_TlsMinVersion" data-uid="Pulumi.Vault.Ldap.AuthBackend.TlsMinVersion">TlsMinVersion</h4>
@@ -529,13 +590,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_TokenBoundCidrs_" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenBoundCidrs*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_TokenBoundCidrs" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenBoundCidrs">TokenBoundCidrs</h4>
@@ -558,13 +619,13 @@ as well.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_TokenExplicitMaxTtl_" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenExplicitMaxTtl*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_TokenExplicitMaxTtl" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenExplicitMaxTtl">TokenExplicitMaxTtl</h4>
@@ -588,13 +649,13 @@ onto the token in number of seconds. This is a hard cap even if <code>token_ttl<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_TokenMaxTtl_" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenMaxTtl*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_TokenMaxTtl" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenMaxTtl">TokenMaxTtl</h4>
@@ -616,13 +677,13 @@ Its current value will be referenced at renewal time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_TokenNoDefaultPolicy_" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenNoDefaultPolicy*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_TokenNoDefaultPolicy" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenNoDefaultPolicy">TokenNoDefaultPolicy</h4>
@@ -644,13 +705,13 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_TokenNumUses_" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenNumUses*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_TokenNumUses" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenNumUses">TokenNumUses</h4>
@@ -673,13 +734,13 @@ if any, in number of seconds to set on the token.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_TokenPeriod_" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenPeriod*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_TokenPeriod" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenPeriod">TokenPeriod</h4>
@@ -703,13 +764,13 @@ value of this field. Specified in seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_TokenPolicies_" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenPolicies*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_TokenPolicies" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenPolicies">TokenPolicies</h4>
@@ -731,13 +792,13 @@ on the auth method, this list may be supplemented by user/group/other values.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_TokenTtl_" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenTtl*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_TokenTtl" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenTtl">TokenTtl</h4>
@@ -759,13 +820,13 @@ Its current value will be referenced at renewal time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L198">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_TokenType_" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenType*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_TokenType" data-uid="Pulumi.Vault.Ldap.AuthBackend.TokenType">TokenType</h4>
@@ -778,7 +839,7 @@ requests a different type at generation time.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TokenType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TokenType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -790,13 +851,13 @@ requests a different type at generation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Upndomain_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Upndomain*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Upndomain" data-uid="Pulumi.Vault.Ldap.AuthBackend.Upndomain">Upndomain</h4>
@@ -817,13 +878,13 @@ requests a different type at generation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L210">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Url_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Url*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Url" data-uid="Pulumi.Vault.Ldap.AuthBackend.Url">Url</h4>
@@ -844,13 +905,13 @@ requests a different type at generation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L194">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Userattr_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Userattr*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Userattr" data-uid="Pulumi.Vault.Ldap.AuthBackend.Userattr">Userattr</h4>
@@ -871,13 +932,13 @@ requests a different type at generation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Userdn_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Userdn*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_Userdn" data-uid="Pulumi.Vault.Ldap.AuthBackend.Userdn">Userdn</h4>
@@ -898,13 +959,13 @@ requests a different type at generation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L188">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_UseTokenGroups_" data-uid="Pulumi.Vault.Ldap.AuthBackend.UseTokenGroups*"></a>
   <h4 id="Pulumi_Vault_Ldap_AuthBackend_UseTokenGroups" data-uid="Pulumi.Vault.Ldap.AuthBackend.UseTokenGroups">UseTokenGroups</h4>
@@ -925,7 +986,7 @@ requests a different type at generation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -933,17 +994,17 @@ requests a different type at generation time.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L241">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L269">View Source</a>
   </span>
   <a id="Pulumi_Vault_Ldap_AuthBackend_Get_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Get*"></a>
-  <h4 id="Pulumi_Vault_Ldap_AuthBackend_Get_System_String_Input_System_String__Pulumi_Vault_Ldap_AuthBackendState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.Ldap.AuthBackend.Get(System.String,Input{System.String},Pulumi.Vault.Ldap.AuthBackendState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AuthBackendState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_Ldap_AuthBackend_Get_System_String_Pulumi_Input_System_String__Pulumi_Vault_Ldap_AuthBackendState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.Ldap.AuthBackend.Get(System.String,Pulumi.Input{System.String},Pulumi.Vault.Ldap.AuthBackendState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AuthBackendState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing AuthBackend resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AuthBackend Get(string name, Input&lt;string&gt; id, AuthBackendState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AuthBackend Get(string name, Input&lt;string&gt; id, AuthBackendState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -962,7 +1023,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -974,7 +1035,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1003,7 +1064,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Ldap/AuthBackend.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Ldap/AuthBackend.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

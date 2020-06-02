@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NasDatastore
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,7 +75,7 @@
 datastores on an ESXi host or a set of hosts. The resource supports mounting
 NFS v3 and v4.1 shares to be used as datastores.</p>
 <blockquote>
-<p><strong>NOTE:</strong> Unlike <a href="/docs/providers/vsphere/r/vmfs_datastore.html"><code>vsphere..VmfsDatastore</code></a>, a NAS
+<p><strong>NOTE:</strong> Unlike <code>vsphere..VmfsDatastore</code>, a NAS
 datastore is only mounted on the hosts you choose to mount it on. To mount on
 multiple hosts, you must specify each host that you want to add in the
 <code>host_system_ids</code> argument.</p>
@@ -85,7 +85,45 @@ multiple hosts, you must specify each host that you want to add in the
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">NasDatastore</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">NasDatastore</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -96,16 +134,16 @@ multiple hosts, you must specify each host that you want to add in the
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore__ctor_" data-uid="Pulumi.VSphere.NasDatastore.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_NasDatastore__ctor_System_String_Pulumi_VSphere_NasDatastoreArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.NasDatastore.#ctor(System.String,Pulumi.VSphere.NasDatastoreArgs,System.Nullable{CustomResourceOptions})">NasDatastore(String, NasDatastoreArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_NasDatastore__ctor_System_String_Pulumi_VSphere_NasDatastoreArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.NasDatastore.#ctor(System.String,Pulumi.VSphere.NasDatastoreArgs,Pulumi.CustomResourceOptions)">NasDatastore(String, NasDatastoreArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a NasDatastore resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NasDatastore(string name, NasDatastoreArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public NasDatastore(string name, NasDatastoreArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,7 +168,7 @@ multiple hosts, you must specify each host that you want to add in the
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -140,7 +178,7 @@ multiple hosts, you must specify each host that you want to add in the
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_Accessible_" data-uid="Pulumi.VSphere.NasDatastore.Accessible*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_Accessible" data-uid="Pulumi.VSphere.NasDatastore.Accessible">Accessible</h4>
@@ -162,13 +200,13 @@ some other computed attributes may be out of date.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_AccessMode_" data-uid="Pulumi.VSphere.NasDatastore.AccessMode*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_AccessMode" data-uid="Pulumi.VSphere.NasDatastore.AccessMode">AccessMode</h4>
@@ -180,7 +218,7 @@ actual share. Default: <code>readWrite</code>. Forces a new resource if changed.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccessMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -192,13 +230,13 @@ actual share. Default: <code>readWrite</code>. Forces a new resource if changed.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_Capacity_" data-uid="Pulumi.VSphere.NasDatastore.Capacity*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_Capacity" data-uid="Pulumi.VSphere.NasDatastore.Capacity">Capacity</h4>
@@ -219,25 +257,23 @@ actual share. Default: <code>readWrite</code>. Forces a new resource if changed.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_CustomAttributes_" data-uid="Pulumi.VSphere.NasDatastore.CustomAttributes*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_CustomAttributes" data-uid="Pulumi.VSphere.NasDatastore.CustomAttributes">CustomAttributes</h4>
   <div class="markdown level1 summary"><p>Map of custom attribute ids to attribute
-value strings to set on datasource resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.</p>
+value strings to set on datasource resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; CustomAttributes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; CustomAttributes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -249,24 +285,24 @@ for custom attributes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_DatastoreClusterId_" data-uid="Pulumi.VSphere.NasDatastore.DatastoreClusterId*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_DatastoreClusterId" data-uid="Pulumi.VSphere.NasDatastore.DatastoreClusterId">DatastoreClusterId</h4>
-  <div class="markdown level1 summary"><p>The [managed object
-ID][docs-about-morefs] of a datastore cluster to put this datastore in.
+  <div class="markdown level1 summary"><p>The managed object
+ID of a datastore cluster to put this datastore in.
 Conflicts with <code>folder</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DatastoreClusterId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DatastoreClusterId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -278,22 +314,28 @@ Conflicts with <code>folder</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_Folder_" data-uid="Pulumi.VSphere.NasDatastore.Folder*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_Folder" data-uid="Pulumi.VSphere.NasDatastore.Folder">Folder</h4>
-  <div class="markdown level1 summary"><p>The path to the datastore folder to put the datastore in.</p>
+  <div class="markdown level1 summary"><p>The relative path to a folder to put this datastore in.
+This is a path relative to the datacenter you are deploying the datastore to.
+Example: for the <code>dc1</code> datacenter, and a provided <code>folder</code> of <code>foo/bar</code>,
+The provider will place a datastore named <code>test</code> in a datastore folder
+located at <code>/dc1/datastore/foo/bar</code>, with the final inventory path being
+<code>/dc1/datastore/foo/bar/test</code>. Conflicts with
+<code>datastore_cluster_id</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Folder { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Folder { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,13 +347,13 @@ Conflicts with <code>folder</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_FreeSpace_" data-uid="Pulumi.VSphere.NasDatastore.FreeSpace*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_FreeSpace" data-uid="Pulumi.VSphere.NasDatastore.FreeSpace">FreeSpace</h4>
@@ -332,17 +374,17 @@ Conflicts with <code>folder</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_HostSystemIds_" data-uid="Pulumi.VSphere.NasDatastore.HostSystemIds*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_HostSystemIds" data-uid="Pulumi.VSphere.NasDatastore.HostSystemIds">HostSystemIds</h4>
-  <div class="markdown level1 summary"><p>The [managed object IDs][docs-about-morefs] of
+  <div class="markdown level1 summary"><p>The managed object IDs of
 the hosts to mount the datastore on.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -360,13 +402,13 @@ the hosts to mount the datastore on.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_MaintenanceMode_" data-uid="Pulumi.VSphere.NasDatastore.MaintenanceMode*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_MaintenanceMode" data-uid="Pulumi.VSphere.NasDatastore.MaintenanceMode">MaintenanceMode</h4>
@@ -387,13 +429,13 @@ the hosts to mount the datastore on.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_MultipleHostAccess_" data-uid="Pulumi.VSphere.NasDatastore.MultipleHostAccess*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_MultipleHostAccess" data-uid="Pulumi.VSphere.NasDatastore.MultipleHostAccess">MultipleHostAccess</h4>
@@ -415,13 +457,13 @@ been configured with access to the datastore.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_Name_" data-uid="Pulumi.VSphere.NasDatastore.Name*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_Name" data-uid="Pulumi.VSphere.NasDatastore.Name">Name</h4>
@@ -443,13 +485,13 @@ changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_ProtocolEndpoint_" data-uid="Pulumi.VSphere.NasDatastore.ProtocolEndpoint*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_ProtocolEndpoint" data-uid="Pulumi.VSphere.NasDatastore.ProtocolEndpoint">ProtocolEndpoint</h4>
@@ -471,13 +513,13 @@ This field is only populated if the host supports virtual datastores.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_RemoteHosts_" data-uid="Pulumi.VSphere.NasDatastore.RemoteHosts*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_RemoteHosts" data-uid="Pulumi.VSphere.NasDatastore.RemoteHosts">RemoteHosts</h4>
@@ -500,13 +542,13 @@ can be present for NFS v4.1. Forces a new resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_RemotePath_" data-uid="Pulumi.VSphere.NasDatastore.RemotePath*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_RemotePath" data-uid="Pulumi.VSphere.NasDatastore.RemotePath">RemotePath</h4>
@@ -528,13 +570,13 @@ resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_SecurityType_" data-uid="Pulumi.VSphere.NasDatastore.SecurityType*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_SecurityType" data-uid="Pulumi.VSphere.NasDatastore.SecurityType">SecurityType</h4>
@@ -545,7 +587,7 @@ if changed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SecurityType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecurityType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -557,18 +599,17 @@ if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_Tags_" data-uid="Pulumi.VSphere.NasDatastore.Tags*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_Tags" data-uid="Pulumi.VSphere.NasDatastore.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.</p>
+  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -585,13 +626,13 @@ if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_Type_" data-uid="Pulumi.VSphere.NasDatastore.Type*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_Type" data-uid="Pulumi.VSphere.NasDatastore.Type">Type</h4>
@@ -602,7 +643,7 @@ changed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -614,13 +655,13 @@ changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_UncommittedSpace_" data-uid="Pulumi.VSphere.NasDatastore.UncommittedSpace*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_UncommittedSpace" data-uid="Pulumi.VSphere.NasDatastore.UncommittedSpace">UncommittedSpace</h4>
@@ -642,13 +683,13 @@ potentially used by all virtual machines on this datastore.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_Url_" data-uid="Pulumi.VSphere.NasDatastore.Url*"></a>
   <h4 id="Pulumi_VSphere_NasDatastore_Url" data-uid="Pulumi.VSphere.NasDatastore.Url">Url</h4>
@@ -669,7 +710,7 @@ potentially used by all virtual machines on this datastore.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -677,17 +718,17 @@ potentially used by all virtual machines on this datastore.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L201">View Source</a>
   </span>
   <a id="Pulumi_VSphere_NasDatastore_Get_" data-uid="Pulumi.VSphere.NasDatastore.Get*"></a>
-  <h4 id="Pulumi_VSphere_NasDatastore_Get_System_String_Input_System_String__Pulumi_VSphere_NasDatastoreState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.NasDatastore.Get(System.String,Input{System.String},Pulumi.VSphere.NasDatastoreState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NasDatastoreState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_NasDatastore_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_NasDatastoreState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.NasDatastore.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.NasDatastoreState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NasDatastoreState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing NasDatastore resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NasDatastore Get(string name, Input&lt;string&gt; id, NasDatastoreState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NasDatastore Get(string name, Input&lt;string&gt; id, NasDatastoreState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -706,7 +747,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -718,7 +759,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -747,7 +788,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/NasDatastore.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/NasDatastore.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

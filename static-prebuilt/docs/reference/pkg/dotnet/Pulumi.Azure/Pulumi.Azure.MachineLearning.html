@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.MachineLearning
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,55 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.MachineLearning.Workspace.html">Workspace</a></h4>
       <section><p>Manages a Azure Machine Learning Workspace</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleInsights = new Azure.AppInsights.Insights(&amp;quot;exampleInsights&amp;quot;, new Azure.AppInsights.InsightsArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApplicationType = &amp;quot;web&amp;quot;,
+    });
+    var exampleKeyVault = new Azure.KeyVault.KeyVault(&amp;quot;exampleKeyVault&amp;quot;, new Azure.KeyVault.KeyVaultArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        TenantId = current.Apply(current =&gt; current.TenantId),
+        SkuName = &amp;quot;premium&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;GRS&amp;quot;,
+    });
+    var exampleWorkspace = new Azure.MachineLearning.Workspace(&amp;quot;exampleWorkspace&amp;quot;, new Azure.MachineLearning.WorkspaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApplicationInsightsId = exampleInsights.Id,
+        KeyVaultId = exampleKeyVault.Id,
+        StorageAccountId = exampleAccount.Id,
+        Identity = new Azure.MachineLearning.Inputs.WorkspaceIdentityArgs
+        {
+            Type = &amp;quot;SystemAssigned&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.MachineLearning.WorkspaceArgs.html">WorkspaceArgs</a></h4>
       <section></section>

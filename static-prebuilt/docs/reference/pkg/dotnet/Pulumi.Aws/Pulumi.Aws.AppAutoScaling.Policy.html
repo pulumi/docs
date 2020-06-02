@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Policy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,35 +72,164 @@
   <h1 id="Pulumi_Aws_AppAutoScaling_Policy" data-uid="Pulumi.Aws.AppAutoScaling.Policy" class="text-break">Class Policy
   </h1>
   <div class="markdown level0 summary"><p>Provides an Application AutoScaling Policy resource.</p>
-<h2 id="nested-fields">Nested fields</h2>
-<h3 id="target_tracking_scaling_policy_configuration"><code>target_tracking_scaling_policy_configuration</code></h3>
-<ul>
-<li><code>target_value</code> - (Required) The target value for the metric.</li>
-<li><code>disable_scale_in</code> - (Optional) Indicates whether scale in by the target tracking policy is disabled. If the value is true, scale in is disabled and the target tracking policy won't remove capacity from the scalable resource. Otherwise, scale in is enabled and the target tracking policy can remove capacity from the scalable resource. The default value is <code>false</code>.</li>
-<li><code>scale_in_cooldown</code> - (Optional) The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.</li>
-<li><code>scale_out_cooldown</code> - (Optional) The amount of time, in seconds, after a scale out activity completes before another scale out activity can start.</li>
-<li><code>customized_metric_specification</code> - (Optional) A custom CloudWatch metric. Documentation can be found  at: <a href="https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html">AWS Customized Metric Specification</a>. See supported fields below.</li>
-<li><code>predefined_metric_specification</code> - (Optional) A predefined metric. See supported fields below.</li>
-</ul>
-<h3 id="customized_metric_specification"><code>customized_metric_specification</code></h3>
-<ul>
-<li><code>dimensions</code> - (Optional) The dimensions of the metric.</li>
-<li><code>metric_name</code> - (Required) The name of the metric.</li>
-<li><code>namespace</code> - (Required) The namespace of the metric.</li>
-<li><code>statistic</code> - (Required) The statistic of the metric.</li>
-<li><code>unit</code> - (Optional) The unit of the metric.</li>
-</ul>
-<h3 id="predefined_metric_specification"><code>predefined_metric_specification</code></h3>
-<ul>
-<li><code>predefined_metric_type</code> - (Required) The metric type.</li>
-<li><code>resource_label</code> - (Optional) Reserved for future use.</li>
-</ul>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="dynamodb-table-autoscaling">DynamoDB Table Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dynamodbTableReadTarget = new Aws.AppAutoScaling.Target(&amp;quot;dynamodbTableReadTarget&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 100,
+        MinCapacity = 5,
+        ResourceId = &amp;quot;table/tableName&amp;quot;,
+        ScalableDimension = &amp;quot;dynamodb:table:ReadCapacityUnits&amp;quot;,
+        ServiceNamespace = &amp;quot;dynamodb&amp;quot;,
+    });
+    var dynamodbTableReadPolicy = new Aws.AppAutoScaling.Policy(&amp;quot;dynamodbTableReadPolicy&amp;quot;, new Aws.AppAutoScaling.PolicyArgs
+    {
+        PolicyType = &amp;quot;TargetTrackingScaling&amp;quot;,
+        ResourceId = dynamodbTableReadTarget.ResourceId,
+        ScalableDimension = dynamodbTableReadTarget.ScalableDimension,
+        ServiceNamespace = dynamodbTableReadTarget.ServiceNamespace,
+        TargetTrackingScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs
+        {
+            PredefinedMetricSpecification = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs
+            {
+                PredefinedMetricType = &amp;quot;DynamoDBReadCapacityUtilization&amp;quot;,
+            },
+            TargetValue = 70,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="ecs-service-autoscaling">ECS Service Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ecsTarget = new Aws.AppAutoScaling.Target(&amp;quot;ecsTarget&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 4,
+        MinCapacity = 1,
+        ResourceId = &amp;quot;service/clusterName/serviceName&amp;quot;,
+        ScalableDimension = &amp;quot;ecs:service:DesiredCount&amp;quot;,
+        ServiceNamespace = &amp;quot;ecs&amp;quot;,
+    });
+    var ecsPolicy = new Aws.AppAutoScaling.Policy(&amp;quot;ecsPolicy&amp;quot;, new Aws.AppAutoScaling.PolicyArgs
+    {
+        PolicyType = &amp;quot;StepScaling&amp;quot;,
+        ResourceId = ecsTarget.ResourceId,
+        ScalableDimension = ecsTarget.ScalableDimension,
+        ServiceNamespace = ecsTarget.ServiceNamespace,
+        StepScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyStepScalingPolicyConfigurationArgs
+        {
+            AdjustmentType = &amp;quot;ChangeInCapacity&amp;quot;,
+            Cooldown = 60,
+            MetricAggregationType = &amp;quot;Maximum&amp;quot;,
+            StepAdjustment = 
+            {
+
+                {
+                    { &amp;quot;metricIntervalUpperBound&amp;quot;, 0 },
+                    { &amp;quot;scalingAdjustment&amp;quot;, -1 },
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="aurora-read-replica-autoscaling">Aurora Read Replica Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var replicasTarget = new Aws.AppAutoScaling.Target(&amp;quot;replicasTarget&amp;quot;, new Aws.AppAutoScaling.TargetArgs
+    {
+        MaxCapacity = 15,
+        MinCapacity = 1,
+        ResourceId = $&amp;quot;cluster:{aws_rds_cluster.Example.Id}&amp;quot;,
+        ScalableDimension = &amp;quot;rds:cluster:ReadReplicaCount&amp;quot;,
+        ServiceNamespace = &amp;quot;rds&amp;quot;,
+    });
+    var replicasPolicy = new Aws.AppAutoScaling.Policy(&amp;quot;replicasPolicy&amp;quot;, new Aws.AppAutoScaling.PolicyArgs
+    {
+        PolicyType = &amp;quot;TargetTrackingScaling&amp;quot;,
+        ResourceId = replicasTarget.ResourceId,
+        ScalableDimension = replicasTarget.ScalableDimension,
+        ServiceNamespace = replicasTarget.ServiceNamespace,
+        TargetTrackingScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs
+        {
+            PredefinedMetricSpecification = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs
+            {
+                PredefinedMetricType = &amp;quot;RDSReaderAverageCPUUtilization&amp;quot;,
+            },
+            ScaleInCooldown = 300,
+            ScaleOutCooldown = 300,
+            TargetValue = 75,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Policy</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Policy</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.AppAutoScaling.html">Pulumi.Aws.AppAutoScaling</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -111,16 +240,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Policy.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Policy.cs/#L197">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppAutoScaling_Policy__ctor_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.#ctor*"></a>
-  <h4 id="Pulumi_Aws_AppAutoScaling_Policy__ctor_System_String_Pulumi_Aws_AppAutoScaling_PolicyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.AppAutoScaling.Policy.#ctor(System.String,Pulumi.Aws.AppAutoScaling.PolicyArgs,System.Nullable{CustomResourceOptions})">Policy(String, PolicyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy__ctor_System_String_Pulumi_Aws_AppAutoScaling_PolicyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.#ctor(System.String,Pulumi.Aws.AppAutoScaling.PolicyArgs,Pulumi.CustomResourceOptions)">Policy(String, PolicyArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Policy resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Policy(string name, PolicyArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Policy(string name, PolicyArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -145,7 +274,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -155,7 +284,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Policy.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Policy.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppAutoScaling_Policy_Arn_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Arn*"></a>
   <h4 id="Pulumi_Aws_AppAutoScaling_Policy_Arn" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Arn">Arn</h4>
@@ -176,13 +305,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Policy.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Policy.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppAutoScaling_Policy_Name_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Name*"></a>
   <h4 id="Pulumi_Aws_AppAutoScaling_Policy_Name" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Name">Name</h4>
@@ -203,22 +332,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Policy.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Policy.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppAutoScaling_Policy_PolicyType_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.PolicyType*"></a>
   <h4 id="Pulumi_Aws_AppAutoScaling_Policy_PolicyType" data-uid="Pulumi.Aws.AppAutoScaling.Policy.PolicyType">PolicyType</h4>
-  <div class="markdown level1 summary"><p>For DynamoDB, only <code>TargetTrackingScaling</code> is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both <code>StepScaling</code> and <code>TargetTrackingScaling</code> are supported. For any other service, only <code>StepScaling</code> is supported. Defaults to <code>StepScaling</code>.</p>
+  <div class="markdown level1 summary"><p>The policy type. Valid values are <code>StepScaling</code> and <code>TargetTrackingScaling</code>. Defaults to <code>StepScaling</code>. Certain services only support only one policy type. For more information see the <a href="https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html">Target Tracking Scaling Policies</a> and <a href="https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html">Step Scaling Policies</a> documentation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PolicyType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PolicyType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,13 +359,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Policy.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Policy.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppAutoScaling_Policy_ResourceId_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ResourceId*"></a>
   <h4 id="Pulumi_Aws_AppAutoScaling_Policy_ResourceId" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ResourceId">ResourceId</h4>
@@ -257,13 +386,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Policy.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Policy.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppAutoScaling_Policy_ScalableDimension_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ScalableDimension*"></a>
   <h4 id="Pulumi_Aws_AppAutoScaling_Policy_ScalableDimension" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ScalableDimension">ScalableDimension</h4>
@@ -284,13 +413,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Policy.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Policy.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppAutoScaling_Policy_ServiceNamespace_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ServiceNamespace*"></a>
   <h4 id="Pulumi_Aws_AppAutoScaling_Policy_ServiceNamespace" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ServiceNamespace">ServiceNamespace</h4>
@@ -311,13 +440,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Policy.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Policy.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppAutoScaling_Policy_StepScalingPolicyConfiguration_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.StepScalingPolicyConfiguration*"></a>
   <h4 id="Pulumi_Aws_AppAutoScaling_Policy_StepScalingPolicyConfiguration" data-uid="Pulumi.Aws.AppAutoScaling.Policy.StepScalingPolicyConfiguration">StepScalingPolicyConfiguration</h4>
@@ -338,13 +467,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfiguration.html">PolicyStepScalingPolicyConfiguration</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfiguration.html">PolicyStepScalingPolicyConfiguration</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Policy.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Policy.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppAutoScaling_Policy_TargetTrackingScalingPolicyConfiguration_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.TargetTrackingScalingPolicyConfiguration*"></a>
   <h4 id="Pulumi_Aws_AppAutoScaling_Policy_TargetTrackingScalingPolicyConfiguration" data-uid="Pulumi.Aws.AppAutoScaling.Policy.TargetTrackingScalingPolicyConfiguration">TargetTrackingScalingPolicyConfiguration</h4>
@@ -365,7 +494,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfiguration.html">PolicyTargetTrackingScalingPolicyConfiguration</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfiguration.html">PolicyTargetTrackingScalingPolicyConfiguration</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -373,17 +502,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Policy.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Policy.cs/#L227">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppAutoScaling_Policy_Get_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Get*"></a>
-  <h4 id="Pulumi_Aws_AppAutoScaling_Policy_Get_System_String_Input_System_String__Pulumi_Aws_AppAutoScaling_PolicyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Get(System.String,Input{System.String},Pulumi.Aws.AppAutoScaling.PolicyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, PolicyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_AppAutoScaling_PolicyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.AppAutoScaling.PolicyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, PolicyState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Policy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Policy Get(string name, Input&lt;string&gt; id, PolicyState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Policy Get(string name, Input&lt;string&gt; id, PolicyState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -402,7 +531,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -414,7 +543,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -443,7 +572,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppAutoScaling/Policy.cs/#L40" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppAutoScaling/Policy.cs/#L139" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.VpcAccess
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,24 @@
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/vpc/docs/configure-serverless-vpc-access">Configuring Serverless VPC Access</a></li>
 </ul>
+<h2 id="example-usage---vpc-access-connector">Example Usage - VPC Access Connector</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var connector = new Gcp.VpcAccess.Connector(&amp;quot;connector&amp;quot;, new Gcp.VpcAccess.ConnectorArgs
+    {
+        IpCidrRange = &amp;quot;10.8.0.0/28&amp;quot;,
+        Network = &amp;quot;default&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.VpcAccess.ConnectorArgs.html">ConnectorArgs</a></h4>
       <section></section>

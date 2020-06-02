@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.SignalR
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,50 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.SignalR.Service.html">Service</a></h4>
       <section><p>Manages an Azure SignalR service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleService = new Azure.SignalR.Service(&amp;quot;exampleService&amp;quot;, new Azure.SignalR.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = new Azure.SignalR.Inputs.ServiceSkuArgs
+        {
+            Name = &amp;quot;Free_F1&amp;quot;,
+            Capacity = 1,
+        },
+        Cors = 
+        {
+            new Azure.SignalR.Inputs.ServiceCorArgs
+            {
+                AllowedOrigins = 
+                {
+                    &amp;quot;http://www.example.com&amp;quot;,
+                },
+            },
+        },
+        Features = 
+        {
+            new Azure.SignalR.Inputs.ServiceFeatureArgs
+            {
+                Flag = &amp;quot;ServiceMode&amp;quot;,
+                Value = &amp;quot;Default&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.SignalR.ServiceArgs.html">ServiceArgs</a></h4>
       <section></section>

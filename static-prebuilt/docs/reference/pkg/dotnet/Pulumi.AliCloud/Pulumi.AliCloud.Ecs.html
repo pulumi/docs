@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Ecs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,6 +76,85 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.AliCloud.Ecs.AutoProvisioningGroup.html">AutoProvisioningGroup</a></h4>
+      <section><p>Provides a ECS auto provisioning group resource which is a solution that uses preemptive instances and pay_as_you_go instances to rapidly deploy clusters.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.79.0+</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;auto_provisioning_group&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup(&amp;quot;defaultSecurityGroup&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+    {
+        MostRecent = true,
+        NameRegex = &amp;quot;^ubuntu_18.*64&amp;quot;,
+        Owners = &amp;quot;system&amp;quot;,
+    }));
+    var template = new AliCloud.Ecs.LaunchTemplate(&amp;quot;template&amp;quot;, new AliCloud.Ecs.LaunchTemplateArgs
+    {
+        ImageId = defaultImages.Apply(defaultImages =&gt; defaultImages.Images[0].Id),
+        InstanceType = &amp;quot;ecs.n1.tiny&amp;quot;,
+        SecurityGroupId = defaultSecurityGroup.Id,
+    });
+    var defaultAutoProvisioningGroup = new AliCloud.Ecs.AutoProvisioningGroup(&amp;quot;defaultAutoProvisioningGroup&amp;quot;, new AliCloud.Ecs.AutoProvisioningGroupArgs
+    {
+        LaunchTemplateConfigs = 
+        {
+            new AliCloud.Ecs.Inputs.AutoProvisioningGroupLaunchTemplateConfigArgs
+            {
+                InstanceType = &amp;quot;ecs.n1.small&amp;quot;,
+                VswitchId = defaultSwitch.Id,
+            },
+        },
+        LaunchTemplateId = template.Id,
+        PayAsYouGoTargetCapacity = &amp;quot;1&amp;quot;,
+        SpotTargetCapacity = &amp;quot;2&amp;quot;,
+        TotalTargetCapacity = &amp;quot;4&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="block-config">Block config</h2>
+<p>The config mapping supports the following:</p>
+<ul>
+<li><code>instance_type</code> - (Optional) The instance type of the Nth extended configurations of the launch template.</li>
+<li><code>max_price</code> - (Required) The maximum price of the instance type specified in the Nth extended configurations of the launch template.</li>
+<li><code>vswitch_id</code> - (Required) The ID of the VSwitch in the Nth extended configurations of the launch template.</li>
+<li><code>weighted_capacity</code> - (Optional) The weight of the instance type specified in the Nth extended configurations of the launch template.</li>
+<li><code>priority</code> - (Optional) The priority of the instance type specified in the Nth extended configurations of the launch template. A value of 0 indicates the highest priority.</li>
+</ul>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Ecs.AutoProvisioningGroupArgs.html">AutoProvisioningGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Ecs.AutoProvisioningGroupState.html">AutoProvisioningGroupState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.CopyImage.html">CopyImage</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.CopyImageArgs.html">CopyImageArgs</a></h4>
@@ -83,11 +162,7 @@
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.CopyImageState.html">CopyImageState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.Disk.html">Disk</a></h4>
-      <section><p>Provides a ECS disk resource.</p>
-<blockquote>
-<p><strong>NOTE:</strong> One of <code>size</code> or <code>snapshot_id</code> is required when specifying an ECS disk. If all of them be specified, <code>size</code> must more than the size of snapshot which <code>snapshot_id</code> represents. Currently, <code>alicloud.ecs.Disk</code> doesn't resize disk.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.DiskArgs.html">DiskArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.DiskAttachment.html">DiskAttachment</a></h4>
@@ -191,6 +266,31 @@
 <blockquote>
 <p><strong>NOTE:</strong>  Available in 1.64.0+</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.Ecs.Image(&amp;quot;default&amp;quot;, new AliCloud.Ecs.ImageArgs
+    {
+        Architecture = &amp;quot;x86_64&amp;quot;,
+        Description = &amp;quot;test-image&amp;quot;,
+        ImageName = &amp;quot;test-image&amp;quot;,
+        InstanceId = &amp;quot;i-bp1g6zv0ce8oghu7k***&amp;quot;,
+        Platform = &amp;quot;CentOS&amp;quot;,
+        ResourceGroupId = &amp;quot;rg-bp67acfmxazb4ph***&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;FinanceDept&amp;quot;, &amp;quot;FinanceDeptJoshua&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.ImageArgs.html">ImageArgs</a></h4>
       <section></section>
@@ -208,6 +308,29 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.66.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.Ecs.ImageCopy(&amp;quot;default&amp;quot;, new AliCloud.Ecs.ImageCopyArgs
+    {
+        Description = &amp;quot;test-image&amp;quot;,
+        ImageName = &amp;quot;test-image&amp;quot;,
+        SourceImageId = &amp;quot;m-bp1gxyhdswlsn18tu***&amp;quot;,
+        SourceRegionId = &amp;quot;cn-hangzhou&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;FinanceDept&amp;quot;, &amp;quot;FinanceDeptJoshua&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.ImageCopyArgs.html">ImageCopyArgs</a></h4>
       <section></section>
@@ -227,6 +350,24 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.68.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.Ecs.ImageExport(&amp;quot;default&amp;quot;, new AliCloud.Ecs.ImageExportArgs
+    {
+        ImageId = &amp;quot;m-bp1gxy***&amp;quot;,
+        OssBucket = &amp;quot;ecsimageexportconfig&amp;quot;,
+        OssPrefix = &amp;quot;ecsExport&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.ImageExportArgs.html">ImageExportArgs</a></h4>
       <section></section>
@@ -243,6 +384,36 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.69.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @this = new AliCloud.Ecs.ImageImport(&amp;quot;this&amp;quot;, new AliCloud.Ecs.ImageImportArgs
+    {
+        Architecture = &amp;quot;x86_64&amp;quot;,
+        Description = &amp;quot;test import image&amp;quot;,
+        DiskDeviceMappings = 
+        {
+            new AliCloud.Ecs.Inputs.ImageImportDiskDeviceMappingArgs
+            {
+                DiskImageSize = 5,
+                OssBucket = &amp;quot;testimportimage&amp;quot;,
+                OssObject = &amp;quot;root.img&amp;quot;,
+            },
+        },
+        ImageName = &amp;quot;test-import-image&amp;quot;,
+        LicenseType = &amp;quot;Auto&amp;quot;,
+        OsType = &amp;quot;linux&amp;quot;,
+        Platform = &amp;quot;Ubuntu&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.ImageImportArgs.html">ImageImportArgs</a></h4>
       <section></section>
@@ -262,6 +433,23 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.68.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.Ecs.ImageSharePermission(&amp;quot;default&amp;quot;, new AliCloud.Ecs.ImageSharePermissionArgs
+    {
+        AccountId = &amp;quot;1234567890&amp;quot;,
+        ImageId = &amp;quot;m-bp1gxyh***&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.ImageSharePermissionArgs.html">ImageSharePermissionArgs</a></h4>
       <section></section>
@@ -276,8 +464,7 @@
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.InstanceState.html">InstanceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.KeyPair.html">KeyPair</a></h4>
-      <section><p>Provides a key pair resource.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.KeyPairArgs.html">KeyPairArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.KeyPairAttachment.html">KeyPairAttachment</a></h4>
@@ -285,6 +472,84 @@
 <blockquote>
 <p><strong>NOTE:</strong> After the key pair is attached with sone instances, there instances must be rebooted to make the key pair affect.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableDiskCategory = &amp;quot;cloud_ssd&amp;quot;,
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var type = @default.Apply(@default =&gt; Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+    {
+        AvailabilityZone = @default.Zones[0].Id,
+        CpuCoreCount = 1,
+        MemorySize = 2,
+    })));
+    var images = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+    {
+        MostRecent = true,
+        NameRegex = &amp;quot;^ubuntu_18.*64&amp;quot;,
+        Owners = &amp;quot;system&amp;quot;,
+    }));
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;keyPairAttachmentName&amp;quot;;
+    var vpc = new AliCloud.Vpc.Network(&amp;quot;vpc&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;10.1.0.0/21&amp;quot;,
+    });
+    var vswitch = new AliCloud.Vpc.Switch(&amp;quot;vswitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = @default.Apply(@default =&gt; @default.Zones[0].Id),
+        CidrBlock = &amp;quot;10.1.1.0/24&amp;quot;,
+        VpcId = vpc.Id,
+    });
+    var @group = new AliCloud.Ecs.SecurityGroup(&amp;quot;group&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        Description = &amp;quot;New security group&amp;quot;,
+        VpcId = vpc.Id,
+    });
+    var instance = new List&amp;lt;AliCloud.Ecs.Instance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 2; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        instance.Add(new AliCloud.Ecs.Instance($&amp;quot;instance-{range.Value}&amp;quot;, new AliCloud.Ecs.InstanceArgs
+        {
+            ImageId = images.Apply(images =&gt; images.Images[0].Id),
+            InstanceChargeType = &amp;quot;PostPaid&amp;quot;,
+            InstanceName = $&amp;quot;{name}-{range.Value + 1}&amp;quot;,
+            InstanceType = type.Apply(type =&gt; type.InstanceTypes[0].Id),
+            InternetChargeType = &amp;quot;PayByTraffic&amp;quot;,
+            InternetMaxBandwidthOut = 5,
+            Password = &amp;quot;Test12345&amp;quot;,
+            SecurityGroups = 
+            {
+                @group.Id,
+            },
+            SystemDiskCategory = &amp;quot;cloud_ssd&amp;quot;,
+            VswitchId = vswitch.Id,
+        }));
+    }
+    var pair = new AliCloud.Ecs.KeyPair(&amp;quot;pair&amp;quot;, new AliCloud.Ecs.KeyPairArgs
+    {
+        KeyName = name,
+    });
+    var attachment = new AliCloud.Ecs.KeyPairAttachment(&amp;quot;attachment&amp;quot;, new AliCloud.Ecs.KeyPairAttachmentArgs
+    {
+        InstanceIds = instance.Select(__item =&gt; __item.Id).ToList(),
+        KeyName = pair.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.KeyPairAttachmentArgs.html">KeyPairAttachmentArgs</a></h4>
       <section></section>
@@ -295,6 +560,78 @@
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.LaunchTemplate.html">LaunchTemplate</a></h4>
       <section><p>Provides an ECS Launch Template resource.</p>
 <p>For information about Launch Template and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/73916.html">Launch Template</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var images = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+    {
+        Owners = &amp;quot;system&amp;quot;,
+    }));
+    var instances = Output.Create(AliCloud.Ecs.GetInstances.InvokeAsync());
+    var template = new AliCloud.Ecs.LaunchTemplate(&amp;quot;template&amp;quot;, new AliCloud.Ecs.LaunchTemplateArgs
+    {
+        DataDisks = 
+        {
+            new AliCloud.Ecs.Inputs.LaunchTemplateDataDiskArgs
+            {
+                Description = &amp;quot;test1&amp;quot;,
+                Name = &amp;quot;disk1&amp;quot;,
+            },
+            new AliCloud.Ecs.Inputs.LaunchTemplateDataDiskArgs
+            {
+                Description = &amp;quot;test2&amp;quot;,
+                Name = &amp;quot;disk2&amp;quot;,
+            },
+        },
+        Description = &amp;quot;test1&amp;quot;,
+        HostName = &amp;quot;tf-test-host&amp;quot;,
+        ImageId = images.Apply(images =&gt; images.Images[0].Id),
+        InstanceChargeType = &amp;quot;PrePaid&amp;quot;,
+        InstanceName = &amp;quot;tf-instance-name&amp;quot;,
+        InstanceType = instances.Apply(instances =&gt; instances.Instances[0].InstanceType),
+        InternetChargeType = &amp;quot;PayByBandwidth&amp;quot;,
+        InternetMaxBandwidthIn = 5,
+        InternetMaxBandwidthOut = 0,
+        IoOptimized = &amp;quot;none&amp;quot;,
+        KeyPairName = &amp;quot;test-key-pair&amp;quot;,
+        NetworkInterfaces = new AliCloud.Ecs.Inputs.LaunchTemplateNetworkInterfacesArgs
+        {
+            Description = &amp;quot;hello1&amp;quot;,
+            Name = &amp;quot;eth0&amp;quot;,
+            PrimaryIp = &amp;quot;10.0.0.2&amp;quot;,
+            SecurityGroupId = &amp;quot;xxxx&amp;quot;,
+            VswitchId = &amp;quot;xxxxxxx&amp;quot;,
+        },
+        NetworkType = &amp;quot;vpc&amp;quot;,
+        RamRoleName = &amp;quot;xxxxx&amp;quot;,
+        ResourceGroupId = &amp;quot;rg-zkdfjahg9zxncv0&amp;quot;,
+        SecurityEnhancementStrategy = &amp;quot;Active&amp;quot;,
+        SecurityGroupId = &amp;quot;sg-zxcvj0lasdf102350asdf9a&amp;quot;,
+        SpotPriceLimit = 5,
+        SpotStrategy = &amp;quot;SpotWithPriceLimit&amp;quot;,
+        SystemDiskCategory = &amp;quot;cloud_ssd&amp;quot;,
+        SystemDiskDescription = &amp;quot;test disk&amp;quot;,
+        SystemDiskName = &amp;quot;hello&amp;quot;,
+        SystemDiskSize = 40,
+        Tags = 
+        {
+            { &amp;quot;tag1&amp;quot;, &amp;quot;hello&amp;quot; },
+            { &amp;quot;tag2&amp;quot;, &amp;quot;world&amp;quot; },
+        },
+        Userdata = &amp;quot;xxxxxxxxxxxxxx&amp;quot;,
+        VpcId = &amp;quot;vpc-asdfnbg0as8dfk1nb2&amp;quot;,
+        VswitchId = &amp;quot;sw-ljkngaksdjfj0nnasdf&amp;quot;,
+        ZoneId = &amp;quot;beijing-a&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.LaunchTemplateArgs.html">LaunchTemplateArgs</a></h4>
       <section></section>
@@ -305,6 +642,29 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.65.0+</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.Ecs.ReservedInstance(&amp;quot;default&amp;quot;, new AliCloud.Ecs.ReservedInstanceArgs
+    {
+        InstanceType = &amp;quot;ecs.g6.large&amp;quot;,
+        InstanceAmount = &amp;quot;1&amp;quot;,
+        PeriodUnit = &amp;quot;Year&amp;quot;,
+        OfferingType = &amp;quot;All Upfront&amp;quot;,
+        Description = &amp;quot;ReservedInstance&amp;quot;,
+        ZoneId = &amp;quot;cn-shanghai-g&amp;quot;,
+        Scope = &amp;quot;Zone&amp;quot;,
+        Period = &amp;quot;1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.ReservedInstanceArgs.html">ReservedInstanceArgs</a></h4>
       <section></section>
@@ -325,6 +685,27 @@
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.Snapshot.html">Snapshot</a></h4>
       <section><p>Provides an ECS snapshot resource.</p>
 <p>For information about snapshot and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/25460.html">Snapshot</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var snapshot = new AliCloud.Ecs.Snapshot(&amp;quot;snapshot&amp;quot;, new AliCloud.Ecs.SnapshotArgs
+    {
+        Description = &amp;quot;this snapshot is created for testing&amp;quot;,
+        DiskId = alicloud_disk_attachment.Instance_attachment.Disk_id,
+        Tags = 
+        {
+            { &amp;quot;version&amp;quot;, &amp;quot;1.2&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.SnapshotArgs.html">SnapshotArgs</a></h4>
       <section></section>
@@ -334,6 +715,34 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.42.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var sp = new AliCloud.Ecs.SnapshotPolicy(&amp;quot;sp&amp;quot;, new AliCloud.Ecs.SnapshotPolicyArgs
+    {
+        RepeatWeekdays = 
+        {
+            &amp;quot;1&amp;quot;,
+            &amp;quot;2&amp;quot;,
+            &amp;quot;3&amp;quot;,
+        },
+        RetentionDays = -1,
+        TimePoints = 
+        {
+            &amp;quot;1&amp;quot;,
+            &amp;quot;22&amp;quot;,
+            &amp;quot;23&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ecs.SnapshotPolicyArgs.html">SnapshotPolicyArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ManagedDisk
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,119 @@
   <h1 id="Pulumi_Azure_Compute_ManagedDisk" data-uid="Pulumi.Azure.Compute.ManagedDisk" class="text-break">Class ManagedDisk
   </h1>
   <div class="markdown level0 summary"><p>Manages a managed disk.</p>
+<h2 id="example-usage-with-create-empty">Example Usage with Create Empty</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+    });
+    var exampleManagedDisk = new Azure.Compute.ManagedDisk(&amp;quot;exampleManagedDisk&amp;quot;, new Azure.Compute.ManagedDiskArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        StorageAccountType = &amp;quot;Standard_LRS&amp;quot;,
+        CreateOption = &amp;quot;Empty&amp;quot;,
+        DiskSizeGb = &amp;quot;1&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;staging&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-with-create-copy">Example Usage with Create Copy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Core.ResourceGroup(&amp;quot;example&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+    });
+    var source = new Azure.Compute.ManagedDisk(&amp;quot;source&amp;quot;, new Azure.Compute.ManagedDiskArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+        ResourceGroupName = example.Name,
+        StorageAccountType = &amp;quot;Standard_LRS&amp;quot;,
+        CreateOption = &amp;quot;Empty&amp;quot;,
+        DiskSizeGb = &amp;quot;1&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;staging&amp;quot; },
+        },
+    });
+    var copy = new Azure.Compute.ManagedDisk(&amp;quot;copy&amp;quot;, new Azure.Compute.ManagedDiskArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+        ResourceGroupName = example.Name,
+        StorageAccountType = &amp;quot;Standard_LRS&amp;quot;,
+        CreateOption = &amp;quot;Copy&amp;quot;,
+        SourceResourceId = source.Id,
+        DiskSizeGb = &amp;quot;1&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;staging&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ManagedDisk</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ManagedDisk</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.html">Pulumi.Azure.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -88,16 +195,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk__ctor_" data-uid="Pulumi.Azure.Compute.ManagedDisk.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Compute_ManagedDisk__ctor_System_String_Pulumi_Azure_Compute_ManagedDiskArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Compute.ManagedDisk.#ctor(System.String,Pulumi.Azure.Compute.ManagedDiskArgs,System.Nullable{CustomResourceOptions})">ManagedDisk(String, ManagedDiskArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Compute_ManagedDisk__ctor_System_String_Pulumi_Azure_Compute_ManagedDiskArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.ManagedDisk.#ctor(System.String,Pulumi.Azure.Compute.ManagedDiskArgs,Pulumi.CustomResourceOptions)">ManagedDisk(String, ManagedDiskArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ManagedDisk resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManagedDisk(string name, ManagedDiskArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ManagedDisk(string name, ManagedDiskArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +229,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +239,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_CreateOption_" data-uid="Pulumi.Azure.Compute.ManagedDisk.CreateOption*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_CreateOption" data-uid="Pulumi.Azure.Compute.ManagedDisk.CreateOption">CreateOption</h4>
@@ -153,13 +260,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_DiskEncryptionSetId_" data-uid="Pulumi.Azure.Compute.ManagedDisk.DiskEncryptionSetId*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_DiskEncryptionSetId" data-uid="Pulumi.Azure.Compute.ManagedDisk.DiskEncryptionSetId">DiskEncryptionSetId</h4>
@@ -168,7 +275,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DiskEncryptionSetId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DiskEncryptionSetId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +287,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_DiskIopsReadWrite_" data-uid="Pulumi.Azure.Compute.ManagedDisk.DiskIopsReadWrite*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_DiskIopsReadWrite" data-uid="Pulumi.Azure.Compute.ManagedDisk.DiskIopsReadWrite">DiskIopsReadWrite</h4>
@@ -207,13 +314,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_DiskMbpsReadWrite_" data-uid="Pulumi.Azure.Compute.ManagedDisk.DiskMbpsReadWrite*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_DiskMbpsReadWrite" data-uid="Pulumi.Azure.Compute.ManagedDisk.DiskMbpsReadWrite">DiskMbpsReadWrite</h4>
@@ -234,13 +341,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_DiskSizeGb_" data-uid="Pulumi.Azure.Compute.ManagedDisk.DiskSizeGb*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_DiskSizeGb" data-uid="Pulumi.Azure.Compute.ManagedDisk.DiskSizeGb">DiskSizeGb</h4>
@@ -261,13 +368,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_EncryptionSettings_" data-uid="Pulumi.Azure.Compute.ManagedDisk.EncryptionSettings*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_EncryptionSettings" data-uid="Pulumi.Azure.Compute.ManagedDisk.EncryptionSettings">EncryptionSettings</h4>
@@ -288,13 +395,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ManagedDiskEncryptionSettings.html">ManagedDiskEncryptionSettings</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ManagedDiskEncryptionSettings.html">ManagedDiskEncryptionSettings</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_ImageReferenceId_" data-uid="Pulumi.Azure.Compute.ManagedDisk.ImageReferenceId*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_ImageReferenceId" data-uid="Pulumi.Azure.Compute.ManagedDisk.ImageReferenceId">ImageReferenceId</h4>
@@ -303,7 +410,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ImageReferenceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ImageReferenceId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,13 +422,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_Location_" data-uid="Pulumi.Azure.Compute.ManagedDisk.Location*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_Location" data-uid="Pulumi.Azure.Compute.ManagedDisk.Location">Location</h4>
@@ -342,13 +449,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_Name_" data-uid="Pulumi.Azure.Compute.ManagedDisk.Name*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_Name" data-uid="Pulumi.Azure.Compute.ManagedDisk.Name">Name</h4>
@@ -369,13 +476,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_OsType_" data-uid="Pulumi.Azure.Compute.ManagedDisk.OsType*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_OsType" data-uid="Pulumi.Azure.Compute.ManagedDisk.OsType">OsType</h4>
@@ -384,7 +491,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OsType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OsType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -396,13 +503,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_ResourceGroupName_" data-uid="Pulumi.Azure.Compute.ManagedDisk.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_ResourceGroupName" data-uid="Pulumi.Azure.Compute.ManagedDisk.ResourceGroupName">ResourceGroupName</h4>
@@ -423,13 +530,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_SourceResourceId_" data-uid="Pulumi.Azure.Compute.ManagedDisk.SourceResourceId*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_SourceResourceId" data-uid="Pulumi.Azure.Compute.ManagedDisk.SourceResourceId">SourceResourceId</h4>
@@ -438,7 +545,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceResourceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceResourceId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,13 +557,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_SourceUri_" data-uid="Pulumi.Azure.Compute.ManagedDisk.SourceUri*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_SourceUri" data-uid="Pulumi.Azure.Compute.ManagedDisk.SourceUri">SourceUri</h4>
@@ -477,13 +584,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_StorageAccountId_" data-uid="Pulumi.Azure.Compute.ManagedDisk.StorageAccountId*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_StorageAccountId" data-uid="Pulumi.Azure.Compute.ManagedDisk.StorageAccountId">StorageAccountId</h4>
@@ -492,7 +599,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; StorageAccountId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StorageAccountId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -504,13 +611,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_StorageAccountType_" data-uid="Pulumi.Azure.Compute.ManagedDisk.StorageAccountType*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_StorageAccountType" data-uid="Pulumi.Azure.Compute.ManagedDisk.StorageAccountType">StorageAccountType</h4>
@@ -531,13 +638,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_Tags_" data-uid="Pulumi.Azure.Compute.ManagedDisk.Tags*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_Tags" data-uid="Pulumi.Azure.Compute.ManagedDisk.Tags">Tags</h4>
@@ -546,7 +653,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -558,13 +665,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L191">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_Zones_" data-uid="Pulumi.Azure.Compute.ManagedDisk.Zones*"></a>
   <h4 id="Pulumi_Azure_Compute_ManagedDisk_Zones" data-uid="Pulumi.Azure.Compute.ManagedDisk.Zones">Zones</h4>
@@ -573,7 +680,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Zones { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Zones { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -585,7 +692,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -593,17 +700,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ManagedDisk_Get_" data-uid="Pulumi.Azure.Compute.ManagedDisk.Get*"></a>
-  <h4 id="Pulumi_Azure_Compute_ManagedDisk_Get_System_String_Input_System_String__Pulumi_Azure_Compute_ManagedDiskState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Compute.ManagedDisk.Get(System.String,Input{System.String},Pulumi.Azure.Compute.ManagedDiskState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ManagedDiskState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Compute_ManagedDisk_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Compute_ManagedDiskState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.ManagedDisk.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Compute.ManagedDiskState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ManagedDiskState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ManagedDisk resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ManagedDisk Get(string name, Input&lt;string&gt; id, ManagedDiskState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ManagedDisk Get(string name, Input&lt;string&gt; id, ManagedDiskState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -622,7 +729,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -634,7 +741,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -663,7 +770,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ManagedDisk.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ManagedDisk.cs/#L90" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

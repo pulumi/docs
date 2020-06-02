@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class IpSecPolicy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,65 @@
   <h1 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy" class="text-break">Class IpSecPolicy
   </h1>
   <div class="markdown level0 summary"><p>Manages a V2 Neutron IPSec policy resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var policy1 = new OpenStack.VPNaaS.IpSecPolicy(&amp;quot;policy1&amp;quot;, new OpenStack.VPNaaS.IpSecPolicyArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">IpSecPolicy</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">IpSecPolicy</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.VPNaaS.html">Pulumi.OpenStack.VPNaaS</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -88,16 +141,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy__ctor_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy__ctor_System_String_Pulumi_OpenStack_VPNaaS_IpSecPolicyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.#ctor(System.String,Pulumi.OpenStack.VPNaaS.IpSecPolicyArgs,System.Nullable{CustomResourceOptions})">IpSecPolicy(String, IpSecPolicyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy__ctor_System_String_Pulumi_OpenStack_VPNaaS_IpSecPolicyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.#ctor(System.String,Pulumi.OpenStack.VPNaaS.IpSecPolicyArgs,Pulumi.CustomResourceOptions)">IpSecPolicy(String, IpSecPolicyArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a IpSecPolicy resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IpSecPolicy(string name, IpSecPolicyArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IpSecPolicy(string name, IpSecPolicyArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +175,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +185,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_AuthAlgorithm_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.AuthAlgorithm*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_AuthAlgorithm" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.AuthAlgorithm">AuthAlgorithm</h4>
@@ -154,13 +207,13 @@ Default is sha1. Changing this updates the algorithm of the existing policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Description_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Description*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Description" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Description">Description</h4>
@@ -170,7 +223,7 @@ Changing this updates the description of the existing policy.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,13 +235,13 @@ Changing this updates the description of the existing policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_EncapsulationMode_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.EncapsulationMode*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_EncapsulationMode" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.EncapsulationMode">EncapsulationMode</h4>
@@ -210,13 +263,13 @@ Changing this updates the existing policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_EncryptionAlgorithm_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.EncryptionAlgorithm*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_EncryptionAlgorithm" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.EncryptionAlgorithm">EncryptionAlgorithm</h4>
@@ -238,13 +291,13 @@ The default value is aes-128. Changing this updates the existing policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Lifetimes_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Lifetimes*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Lifetimes" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Lifetimes">Lifetimes</h4>
@@ -271,13 +324,13 @@ Default is 3600.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.VPNaaS.Outputs.IpSecPolicyLifetime.html">IpSecPolicyLifetime</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.VPNaaS.Outputs.IpSecPolicyLifetime.html">IpSecPolicyLifetime</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Name_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Name*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Name" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Name">Name</h4>
@@ -299,13 +352,13 @@ the existing policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Pfs_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Pfs*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Pfs" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Pfs">Pfs</h4>
@@ -327,13 +380,13 @@ Changing this updates the existing policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Region_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Region*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Region" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Region">Region</h4>
@@ -357,13 +410,13 @@ policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_TenantId_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.TenantId*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_TenantId" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.TenantId">TenantId</h4>
@@ -385,13 +438,13 @@ create a policy for another project. Changing this creates a new policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_TransformProtocol_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.TransformProtocol*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_TransformProtocol" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.TransformProtocol">TransformProtocol</h4>
@@ -413,13 +466,13 @@ Changing this updates the existing policy. Default is ESP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_ValueSpecs_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.ValueSpecs*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_ValueSpecs" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.ValueSpecs">ValueSpecs</h4>
@@ -428,7 +481,7 @@ Changing this updates the existing policy. Default is ESP.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; ValueSpecs { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; ValueSpecs { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -440,7 +493,7 @@ Changing this updates the existing policy. Default is ESP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -448,17 +501,17 @@ Changing this updates the existing policy. Default is ESP.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Get_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Get*"></a>
-  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Get_System_String_Input_System_String__Pulumi_OpenStack_VPNaaS_IpSecPolicyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Get(System.String,Input{System.String},Pulumi.OpenStack.VPNaaS.IpSecPolicyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IpSecPolicyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_VPNaaS_IpSecPolicyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.VPNaaS.IpSecPolicyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, IpSecPolicyState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing IpSecPolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IpSecPolicy Get(string name, Input&lt;string&gt; id, IpSecPolicyState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IpSecPolicy Get(string name, Input&lt;string&gt; id, IpSecPolicyState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -477,7 +530,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -489,7 +542,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -518,7 +571,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/IpSecPolicy.cs/#L35" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

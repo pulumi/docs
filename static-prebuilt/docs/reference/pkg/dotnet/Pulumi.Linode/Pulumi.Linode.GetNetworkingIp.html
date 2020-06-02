@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetNetworkingIp
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -111,12 +111,31 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/GetNetworkingIp.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/GetNetworkingIp.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Linode_GetNetworkingIp_InvokeAsync_" data-uid="Pulumi.Linode.GetNetworkingIp.InvokeAsync*"></a>
   <h4 id="Pulumi_Linode_GetNetworkingIp_InvokeAsync_Pulumi_Linode_GetNetworkingIpArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Linode.GetNetworkingIp.InvokeAsync(Pulumi.Linode.GetNetworkingIpArgs,Pulumi.InvokeOptions)">InvokeAsync(GetNetworkingIpArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Provides information about a Linode Networking IP Address</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<p>The following example shows how one might use this data source to access information about a Linode Networking IP Address.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ns1LinodeCom = Output.Create(Linode.GetNetworkingIp.InvokeAsync(new Linode.GetNetworkingIpArgs
+    {
+        Address = &amp;quot;162.159.27.72&amp;quot;,
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 <h2 id="attributes">Attributes</h2>
 <p>The Linode Network IP Address resource exports the following attributes:</p>

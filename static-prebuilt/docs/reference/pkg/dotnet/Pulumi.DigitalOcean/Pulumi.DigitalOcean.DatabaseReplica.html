@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatabaseReplica
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,77 @@
   <h1 id="Pulumi_DigitalOcean_DatabaseReplica" data-uid="Pulumi.DigitalOcean.DatabaseReplica" class="text-break">Class DatabaseReplica
   </h1>
   <div class="markdown level0 summary"><p>Provides a DigitalOcean database replica resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-new-postgresql-database-replica">Create a new PostgreSQL database replica</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var postgres_example = new DigitalOcean.DatabaseCluster(&amp;quot;postgres-example&amp;quot;, new DigitalOcean.DatabaseClusterArgs
+    {
+        Engine = &amp;quot;pg&amp;quot;,
+        Version = &amp;quot;11&amp;quot;,
+        Size = &amp;quot;db-s-1vcpu-1gb&amp;quot;,
+        Region = &amp;quot;nyc1&amp;quot;,
+        NodeCount = 1,
+    });
+    var read_replica = new DigitalOcean.DatabaseReplica(&amp;quot;read-replica&amp;quot;, new DigitalOcean.DatabaseReplicaArgs
+    {
+        ClusterId = postgres_example.Id,
+        Size = &amp;quot;db-s-1vcpu-1gb&amp;quot;,
+        Region = &amp;quot;nyc1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DatabaseReplica</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">DatabaseReplica</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
@@ -88,16 +153,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica__ctor_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.#ctor*"></a>
-  <h4 id="Pulumi_DigitalOcean_DatabaseReplica__ctor_System_String_Pulumi_DigitalOcean_DatabaseReplicaArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.DigitalOcean.DatabaseReplica.#ctor(System.String,Pulumi.DigitalOcean.DatabaseReplicaArgs,System.Nullable{CustomResourceOptions})">DatabaseReplica(String, DatabaseReplicaArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_DigitalOcean_DatabaseReplica__ctor_System_String_Pulumi_DigitalOcean_DatabaseReplicaArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.#ctor(System.String,Pulumi.DigitalOcean.DatabaseReplicaArgs,Pulumi.CustomResourceOptions)">DatabaseReplica(String, DatabaseReplicaArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a DatabaseReplica resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DatabaseReplica(string name, DatabaseReplicaArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public DatabaseReplica(string name, DatabaseReplicaArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +187,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +197,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_ClusterId_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.ClusterId*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_ClusterId" data-uid="Pulumi.DigitalOcean.DatabaseReplica.ClusterId">ClusterId</h4>
@@ -153,13 +218,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_Database_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Database*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_Database" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Database">Database</h4>
@@ -180,13 +245,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_Host_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Host*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_Host" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Host">Host</h4>
@@ -207,13 +272,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_Name_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Name*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_Name" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Name">Name</h4>
@@ -234,13 +299,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_Password_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Password*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_Password" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Password">Password</h4>
@@ -261,13 +326,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_Port_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Port*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_Port" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Port">Port</h4>
@@ -288,13 +353,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_PrivateHost_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.PrivateHost*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_PrivateHost" data-uid="Pulumi.DigitalOcean.DatabaseReplica.PrivateHost">PrivateHost</h4>
@@ -315,13 +380,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_PrivateUri_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.PrivateUri*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_PrivateUri" data-uid="Pulumi.DigitalOcean.DatabaseReplica.PrivateUri">PrivateUri</h4>
@@ -342,13 +407,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_Region_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Region*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_Region" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Region">Region</h4>
@@ -357,7 +422,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Region { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,13 +434,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_Size_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Size*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_Size" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Size">Size</h4>
@@ -384,7 +449,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Size { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Size { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -396,13 +461,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_Tags_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Tags*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_Tags" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Tags">Tags</h4>
@@ -422,13 +487,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_Uri_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Uri*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_Uri" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Uri">Uri</h4>
@@ -449,13 +514,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_User_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.User*"></a>
   <h4 id="Pulumi_DigitalOcean_DatabaseReplica_User" data-uid="Pulumi.DigitalOcean.DatabaseReplica.User">User</h4>
@@ -476,7 +541,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -484,17 +549,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_DatabaseReplica_Get_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Get*"></a>
-  <h4 id="Pulumi_DigitalOcean_DatabaseReplica_Get_System_String_Input_System_String__Pulumi_DigitalOcean_DatabaseReplicaState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Get(System.String,Input{System.String},Pulumi.DigitalOcean.DatabaseReplicaState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DatabaseReplicaState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_DigitalOcean_DatabaseReplica_Get_System_String_Pulumi_Input_System_String__Pulumi_DigitalOcean_DatabaseReplicaState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.DigitalOcean.DatabaseReplica.Get(System.String,Pulumi.Input{System.String},Pulumi.DigitalOcean.DatabaseReplicaState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DatabaseReplicaState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing DatabaseReplica resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DatabaseReplica Get(string name, Input&lt;string&gt; id, DatabaseReplicaState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static DatabaseReplica Get(string name, Input&lt;string&gt; id, DatabaseReplicaState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -513,7 +578,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -525,7 +590,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -554,7 +619,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/DatabaseReplica.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/DatabaseReplica.cs/#L46" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

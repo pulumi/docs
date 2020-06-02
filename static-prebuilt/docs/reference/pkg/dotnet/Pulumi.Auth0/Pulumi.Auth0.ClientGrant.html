@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ClientGrant
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ClientGrant
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Auth0.ClientGrant">
+  
+  <h1 id="Pulumi_Auth0_ClientGrant" data-uid="Pulumi.Auth0.ClientGrant" class="text-break">Class ClientGrant
+  </h1>
+  <div class="markdown level0 summary"><p>Auth0 uses various grant types, or methods by which you grant limited access to your resources to another entity without exposing credentials. The OAuth 2.0 protocol supports several types of grants, which allow different types of access. This resource allows you to create and manage client grants used with configured Auth0 clients.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Auth0 = Pulumi.Auth0;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myClient = new Auth0.Client(&amp;quot;myClient&amp;quot;, new Auth0.ClientArgs
+    {
+    });
+    var myResourceServer = new Auth0.ResourceServer(&amp;quot;myResourceServer&amp;quot;, new Auth0.ResourceServerArgs
+    {
+        Identifier = &amp;quot;https://api.example.com/client-grant&amp;quot;,
+        Scopes = 
+        {
+            new Auth0.Inputs.ResourceServerScopeArgs
+            {
+                Description = &amp;quot;Create foos&amp;quot;,
+                Value = &amp;quot;create:foo&amp;quot;,
+            },
+            new Auth0.Inputs.ResourceServerScopeArgs
+            {
+                Description = &amp;quot;Create bars&amp;quot;,
+                Value = &amp;quot;create:bar&amp;quot;,
+            },
+        },
+    });
+    var myClientGrant = new Auth0.ClientGrant(&amp;quot;myClientGrant&amp;quot;, new Auth0.ClientGrantArgs
+    {
+        Audience = myResourceServer.Identifier,
+        ClientId = myClient.Id,
+        Scopes = 
+        {
+            &amp;quot;create:foo&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Pulumi.Resource</span></div>
+    <div class="level2"><span class="xref">Pulumi.CustomResource</span></div>
+    <div class="level3"><span class="xref">ClientGrant</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Pulumi.CustomResource.Id</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.GetResourceType()</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.GetResourceName()</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.Urn</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Auth0.html">Pulumi.Auth0</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Auth0.dll</h6>
+  <h5 id="Pulumi_Auth0_ClientGrant_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ClientGrant : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/ClientGrant.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_ClientGrant__ctor_" data-uid="Pulumi.Auth0.ClientGrant.#ctor*"></a>
+  <h4 id="Pulumi_Auth0_ClientGrant__ctor_System_String_Pulumi_Auth0_ClientGrantArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Auth0.ClientGrant.#ctor(System.String,Pulumi.Auth0.ClientGrantArgs,Pulumi.CustomResourceOptions)">ClientGrant(String, ClientGrantArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a ClientGrant resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientGrant(string name, ClientGrantArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Auth0.ClientGrantArgs.html">ClientGrantArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.CustomResourceOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/ClientGrant.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_ClientGrant_Audience_" data-uid="Pulumi.Auth0.ClientGrant.Audience*"></a>
+  <h4 id="Pulumi_Auth0_ClientGrant_Audience" data-uid="Pulumi.Auth0.ClientGrant.Audience">Audience</h4>
+  <div class="markdown level1 summary"><p>String. Audience or API Identifier for this grant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Audience { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/ClientGrant.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_ClientGrant_ClientId_" data-uid="Pulumi.Auth0.ClientGrant.ClientId*"></a>
+  <h4 id="Pulumi_Auth0_ClientGrant_ClientId" data-uid="Pulumi.Auth0.ClientGrant.ClientId">ClientId</h4>
+  <div class="markdown level1 summary"><p>String. ID of the client for this grant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClientId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/ClientGrant.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_ClientGrant_Scopes_" data-uid="Pulumi.Auth0.ClientGrant.Scopes*"></a>
+  <h4 id="Pulumi_Auth0_ClientGrant_Scopes" data-uid="Pulumi.Auth0.ClientGrant.Scopes">Scopes</h4>
+  <div class="markdown level1 summary"><p>List(String). Permissions (scopes) included in this grant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Scopes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/ClientGrant.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_Auth0_ClientGrant_Get_" data-uid="Pulumi.Auth0.ClientGrant.Get*"></a>
+  <h4 id="Pulumi_Auth0_ClientGrant_Get_System_String_Pulumi_Input_System_String__Pulumi_Auth0_ClientGrantState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Auth0.ClientGrant.Get(System.String,Pulumi.Input{System.String},Pulumi.Auth0.ClientGrantState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClientGrantState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing ClientGrant resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ClientGrant Get(string name, Input&lt;string&gt; id, ClientGrantState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Auth0.ClientGrantState.html">ClientGrantState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.CustomResourceOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Auth0.ClientGrant.html">ClientGrant</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-auth0/blob/b00c60b36a1c2a10552cee99cbaccb6855931a0f/sdk/dotnet/ClientGrant.cs/#L61" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

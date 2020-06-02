@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Okta.Idp
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -91,6 +91,39 @@
       <h4><a class="xref" href="Pulumi.Okta.Idp.Oidc.html">Oidc</a></h4>
       <section><p>Creates an OIDC Identity Provider.</p>
 <p>This resource allows you to create and configure an OIDC Identity Provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Idp.Oidc(&amp;quot;example&amp;quot;, new Okta.Idp.OidcArgs
+    {
+        AcsBinding = &amp;quot;HTTP-POST&amp;quot;,
+        AcsType = &amp;quot;INSTANCE&amp;quot;,
+        AuthorizationBinding = &amp;quot;HTTP-REDIRECT&amp;quot;,
+        AuthorizationUrl = &amp;quot;https://idp.example.com/authorize&amp;quot;,
+        ClientId = &amp;quot;efg456&amp;quot;,
+        ClientSecret = &amp;quot;efg456&amp;quot;,
+        IssuerUrl = &amp;quot;https://id.example.com&amp;quot;,
+        JwksBinding = &amp;quot;HTTP-REDIRECT&amp;quot;,
+        JwksUrl = &amp;quot;https://idp.example.com/keys&amp;quot;,
+        Scopes = 
+        {
+            &amp;quot;openid&amp;quot;,
+        },
+        TokenBinding = &amp;quot;HTTP-POST&amp;quot;,
+        TokenUrl = &amp;quot;https://idp.example.com/token&amp;quot;,
+        UserInfoBinding = &amp;quot;HTTP-REDIRECT&amp;quot;,
+        UserInfoUrl = &amp;quot;https://idp.example.com/userinfo&amp;quot;,
+        UsernameTemplate = &amp;quot;idpuser.email&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Idp.OidcArgs.html">OidcArgs</a></h4>
       <section></section>
@@ -99,12 +132,56 @@
       <h4><a class="xref" href="Pulumi.Okta.Idp.Saml.html">Saml</a></h4>
       <section><p>Creates a SAML Identity Provider.</p>
 <p>This resource allows you to create and configure a SAML Identity Provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Idp.Saml(&amp;quot;example&amp;quot;, new Okta.Idp.SamlArgs
+    {
+        AcsBinding = &amp;quot;HTTP-POST&amp;quot;,
+        AcsType = &amp;quot;INSTANCE&amp;quot;,
+        Issuer = &amp;quot;https://idp.example.com&amp;quot;,
+        Kid = okta_idp_saml_key.Test.Id,
+        RequestSignatureScope = &amp;quot;REQUEST&amp;quot;,
+        ResponseSignatureScope = &amp;quot;ANY&amp;quot;,
+        SsoBinding = &amp;quot;HTTP-POST&amp;quot;,
+        SsoDestination = &amp;quot;https://idp.example.com&amp;quot;,
+        SsoUrl = &amp;quot;https://idp.example.com&amp;quot;,
+        UsernameTemplate = &amp;quot;idpuser.email&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Idp.SamlArgs.html">SamlArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Okta.Idp.SamlKey.html">SamlKey</a></h4>
       <section><p>Creates a SAML Identity Provider Signing Key.</p>
 <p>This resource allows you to create and configure a SAML Identity Provider Signing Key.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Idp.SamlKey(&amp;quot;example&amp;quot;, new Okta.Idp.SamlKeyArgs
+    {
+        X5cs = 
+        {
+            okta_app_saml.Example.Certificate,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Idp.SamlKeyArgs.html">SamlKeyArgs</a></h4>
       <section></section>
@@ -115,6 +192,33 @@
       <h4><a class="xref" href="Pulumi.Okta.Idp.Social.html">Social</a></h4>
       <section><p>Creates an Social Identity Provider.</p>
 <p>This resource allows you to create and configure an Social Identity Provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Idp.Social(&amp;quot;example&amp;quot;, new Okta.Idp.SocialArgs
+    {
+        ClientId = &amp;quot;abcd123&amp;quot;,
+        ClientSecret = &amp;quot;abcd123&amp;quot;,
+        MatchAttribute = &amp;quot;customfieldId&amp;quot;,
+        MatchType = &amp;quot;CUSTOM_ATTRIBUTE&amp;quot;,
+        ProtocolType = &amp;quot;OAUTH2&amp;quot;,
+        Scopes = 
+        {
+            &amp;quot;public_profile&amp;quot;,
+            &amp;quot;email&amp;quot;,
+        },
+        Type = &amp;quot;FACEBOOK&amp;quot;,
+        UsernameTemplate = &amp;quot;idpuser.email&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Idp.SocialArgs.html">SocialArgs</a></h4>
       <section></section>

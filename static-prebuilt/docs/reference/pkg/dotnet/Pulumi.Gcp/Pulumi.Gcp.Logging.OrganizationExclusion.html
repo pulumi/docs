@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class OrganizationExclusion
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,12 +76,68 @@
 <a href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
 granted to the credentials used with this provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_exclusion = new Gcp.Logging.OrganizationExclusion(&amp;quot;my-exclusion&amp;quot;, new Gcp.Logging.OrganizationExclusionArgs
+    {
+        Description = &amp;quot;Exclude GCE instance debug logs&amp;quot;,
+        Filter = &amp;quot;resource.type = gce_instance AND severity &amp;lt;= DEBUG&amp;quot;,
+        OrgId = &amp;quot;123456789&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">OrganizationExclusion</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">OrganizationExclusion</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Logging.html">Pulumi.Gcp.Logging</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -92,16 +148,16 @@ granted to the credentials used with this provider.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationExclusion.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationExclusion.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationExclusion__ctor_" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Logging_OrganizationExclusion__ctor_System_String_Pulumi_Gcp_Logging_OrganizationExclusionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.#ctor(System.String,Pulumi.Gcp.Logging.OrganizationExclusionArgs,System.Nullable{CustomResourceOptions})">OrganizationExclusion(String, OrganizationExclusionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Logging_OrganizationExclusion__ctor_System_String_Pulumi_Gcp_Logging_OrganizationExclusionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.#ctor(System.String,Pulumi.Gcp.Logging.OrganizationExclusionArgs,Pulumi.CustomResourceOptions)">OrganizationExclusion(String, OrganizationExclusionArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a OrganizationExclusion resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OrganizationExclusion(string name, OrganizationExclusionArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public OrganizationExclusion(string name, OrganizationExclusionArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,7 +182,7 @@ granted to the credentials used with this provider.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -136,7 +192,7 @@ granted to the credentials used with this provider.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationExclusion.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationExclusion.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationExclusion_Description_" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.Description*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationExclusion_Description" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.Description">Description</h4>
@@ -145,7 +201,7 @@ granted to the credentials used with this provider.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +213,13 @@ granted to the credentials used with this provider.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationExclusion.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationExclusion.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationExclusion_Disabled_" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.Disabled*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationExclusion_Disabled" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.Disabled">Disabled</h4>
@@ -185,13 +241,13 @@ false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationExclusion.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationExclusion.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationExclusion_Filter_" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.Filter*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationExclusion_Filter" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.Filter">Filter</h4>
@@ -214,13 +270,13 @@ write a filter.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationExclusion.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationExclusion.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationExclusion_Name_" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.Name*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationExclusion_Name" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.Name">Name</h4>
@@ -241,13 +297,13 @@ write a filter.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationExclusion.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationExclusion.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationExclusion_OrgId_" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.OrgId*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationExclusion_OrgId" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.OrgId">OrgId</h4>
@@ -268,7 +324,7 @@ write a filter.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -276,17 +332,17 @@ write a filter.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationExclusion.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationExclusion.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationExclusion_Get_" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.Get*"></a>
-  <h4 id="Pulumi_Gcp_Logging_OrganizationExclusion_Get_System_String_Input_System_String__Pulumi_Gcp_Logging_OrganizationExclusionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.Get(System.String,Input{System.String},Pulumi.Gcp.Logging.OrganizationExclusionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, OrganizationExclusionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Logging_OrganizationExclusion_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Logging_OrganizationExclusionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Logging.OrganizationExclusion.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Logging.OrganizationExclusionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, OrganizationExclusionState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing OrganizationExclusion resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OrganizationExclusion Get(string name, Input&lt;string&gt; id, OrganizationExclusionState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static OrganizationExclusion Get(string name, Input&lt;string&gt; id, OrganizationExclusionState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,7 +361,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -317,7 +373,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -346,7 +402,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationExclusion.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Logging/OrganizationExclusion.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

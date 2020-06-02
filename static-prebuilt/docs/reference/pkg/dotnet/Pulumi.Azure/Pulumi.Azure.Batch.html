@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Batch
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,40 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.Batch.Account.html">Account</a></h4>
       <section><p>Manages an Azure Batch account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;westeurope&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var exampleBatch_accountAccount = new Azure.Batch.Account(&amp;quot;exampleBatch/accountAccount&amp;quot;, new Azure.Batch.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        PoolAllocationMode = &amp;quot;BatchService&amp;quot;,
+        StorageAccountId = exampleAccount.Id,
+        Tags = 
+        {
+            { &amp;quot;env&amp;quot;, &amp;quot;test&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Batch.AccountArgs.html">AccountArgs</a></h4>
       <section></section>
@@ -85,6 +119,41 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Batch.Application.html">Application</a></h4>
       <section><p>Manages Azure Batch Application instance.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var exampleBatch_accountAccount = new Azure.Batch.Account(&amp;quot;exampleBatch/accountAccount&amp;quot;, new Azure.Batch.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        PoolAllocationMode = &amp;quot;BatchService&amp;quot;,
+        StorageAccountId = exampleAccount.Id,
+    });
+    var exampleApplication = new Azure.Batch.Application(&amp;quot;exampleApplication&amp;quot;, new Azure.Batch.ApplicationArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        AccountName = exampleBatch / accountAccount.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Batch.ApplicationArgs.html">ApplicationArgs</a></h4>
       <section></section>

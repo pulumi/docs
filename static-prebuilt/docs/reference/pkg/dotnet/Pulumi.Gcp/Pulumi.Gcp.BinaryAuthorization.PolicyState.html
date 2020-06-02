@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PolicyState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">PolicyState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">PolicyState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BinaryAuthorization.html">Pulumi.Gcp.BinaryAuthorization</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Policy.cs/#L227">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Policy.cs/#L239">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BinaryAuthorization_PolicyState__ctor_" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_BinaryAuthorization_PolicyState__ctor" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.#ctor">PolicyState()</h4>
@@ -100,12 +129,13 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Policy.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Policy.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BinaryAuthorization_PolicyState_AdmissionWhitelistPatterns_" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.AdmissionWhitelistPatterns*"></a>
   <h4 id="Pulumi_Gcp_BinaryAuthorization_PolicyState_AdmissionWhitelistPatterns" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.AdmissionWhitelistPatterns">AdmissionWhitelistPatterns</h4>
-  <div class="markdown level1 summary"><p>A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
-image's admission requests will always be permitted regardless of your admission rules.</p>
+  <div class="markdown level1 summary"><p>A whitelist of image patterns to exclude from admission rules. If an
+image's name matches a whitelist pattern, the image's admission
+requests will always be permitted regardless of your admission rules.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -122,20 +152,21 @@ image's admission requests will always be permitted regardless of your admission
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyAdmissionWhitelistPatternGetArgs.html">PolicyAdmissionWhitelistPatternGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyAdmissionWhitelistPatternGetArgs.html">PolicyAdmissionWhitelistPatternGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Policy.cs/#L195">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Policy.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BinaryAuthorization_PolicyState_ClusterAdmissionRules_" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.ClusterAdmissionRules*"></a>
   <h4 id="Pulumi_Gcp_BinaryAuthorization_PolicyState_ClusterAdmissionRules" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.ClusterAdmissionRules">ClusterAdmissionRules</h4>
-  <div class="markdown level1 summary"><p>Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
-must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
-denied. There can be at most one admission rule per cluster spec. Identifier format: '{{location}}.{{clusterId}}'. A
-location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-central1').</p>
+  <div class="markdown level1 summary"><p>Per-cluster admission rules. An admission rule specifies either that
+all container images used in a pod creation request must be attested
+to by one or more attestors, that all pod creations will be allowed,
+or that all pod creations will be denied. There can be at most one
+admission rule per cluster spec.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -152,22 +183,23 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyClusterAdmissionRuleGetArgs.html">PolicyClusterAdmissionRuleGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyClusterAdmissionRuleGetArgs.html">PolicyClusterAdmissionRuleGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Policy.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Policy.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BinaryAuthorization_PolicyState_DefaultAdmissionRule_" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.DefaultAdmissionRule*"></a>
   <h4 id="Pulumi_Gcp_BinaryAuthorization_PolicyState_DefaultAdmissionRule" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.DefaultAdmissionRule">DefaultAdmissionRule</h4>
-  <div class="markdown level1 summary"><p>Default admission rule for a cluster without a per-cluster admission rule.</p>
+  <div class="markdown level1 summary"><p>Default admission rule for a cluster without a per-cluster admission
+rule.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;PolicyDefaultAdmissionRuleGetArgs&gt;? DefaultAdmissionRule { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;PolicyDefaultAdmissionRuleGetArgs&gt; DefaultAdmissionRule { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +211,13 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyDefaultAdmissionRuleGetArgs.html">PolicyDefaultAdmissionRuleGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyDefaultAdmissionRuleGetArgs.html">PolicyDefaultAdmissionRuleGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Policy.cs/#L210">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Policy.cs/#L221">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BinaryAuthorization_PolicyState_Description_" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.Description*"></a>
   <h4 id="Pulumi_Gcp_BinaryAuthorization_PolicyState_Description" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.Description">Description</h4>
@@ -194,7 +226,7 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,23 +238,24 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Policy.cs/#L217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Policy.cs/#L229">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BinaryAuthorization_PolicyState_GlobalPolicyEvaluationMode_" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.GlobalPolicyEvaluationMode*"></a>
   <h4 id="Pulumi_Gcp_BinaryAuthorization_PolicyState_GlobalPolicyEvaluationMode" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.GlobalPolicyEvaluationMode">GlobalPolicyEvaluationMode</h4>
-  <div class="markdown level1 summary"><p>Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
-covered by the global policy will be subject to the project admission policy.</p>
+  <div class="markdown level1 summary"><p>Controls the evaluation of a Google-maintained global admission policy
+for common system-level images. Images not covered by the global
+policy will be subject to the project admission policy.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? GlobalPolicyEvaluationMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; GlobalPolicyEvaluationMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +267,13 @@ covered by the global policy will be subject to the project admission policy.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Policy.cs/#L224">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Policy.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BinaryAuthorization_PolicyState_Project_" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.Project*"></a>
   <h4 id="Pulumi_Gcp_BinaryAuthorization_PolicyState_Project" data-uid="Pulumi.Gcp.BinaryAuthorization.PolicyState.Project">Project</h4>
@@ -250,7 +283,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,7 +295,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -274,7 +307,7 @@ If it is not provided, the provider project is used.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Policy.cs/#L171" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Policy.cs/#L179" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

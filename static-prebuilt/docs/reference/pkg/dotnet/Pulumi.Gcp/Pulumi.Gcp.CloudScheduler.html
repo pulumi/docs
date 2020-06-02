@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.CloudScheduler
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -88,6 +88,71 @@ does not have an App Engine app, you must create one.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/scheduler/">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---scheduler-job-http">Example Usage - Scheduler Job Http</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var job = new Gcp.CloudScheduler.Job(&amp;quot;job&amp;quot;, new Gcp.CloudScheduler.JobArgs
+    {
+        AttemptDeadline = &amp;quot;320s&amp;quot;,
+        Description = &amp;quot;test http job&amp;quot;,
+        HttpTarget = new Gcp.CloudScheduler.Inputs.JobHttpTargetArgs
+        {
+            HttpMethod = &amp;quot;POST&amp;quot;,
+            Uri = &amp;quot;https://example.com/ping&amp;quot;,
+        },
+        RetryConfig = new Gcp.CloudScheduler.Inputs.JobRetryConfigArgs
+        {
+            RetryCount = 1,
+        },
+        Schedule = &amp;quot;*/8 * * * *&amp;quot;,
+        TimeZone = &amp;quot;America/New_York&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---scheduler-job-app-engine">Example Usage - Scheduler Job App Engine</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var job = new Gcp.CloudScheduler.Job(&amp;quot;job&amp;quot;, new Gcp.CloudScheduler.JobArgs
+    {
+        AppEngineHttpTarget = new Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetArgs
+        {
+            AppEngineRouting = new Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetAppEngineRoutingArgs
+            {
+                Instance = &amp;quot;my-instance-001&amp;quot;,
+                Service = &amp;quot;web&amp;quot;,
+                Version = &amp;quot;prod&amp;quot;,
+            },
+            HttpMethod = &amp;quot;POST&amp;quot;,
+            RelativeUri = &amp;quot;/ping&amp;quot;,
+        },
+        AttemptDeadline = &amp;quot;320s&amp;quot;,
+        Description = &amp;quot;test app engine job&amp;quot;,
+        RetryConfig = new Gcp.CloudScheduler.Inputs.JobRetryConfigArgs
+        {
+            MaxDoublings = 2,
+            MaxRetryDuration = &amp;quot;10s&amp;quot;,
+            MinBackoffDuration = &amp;quot;1s&amp;quot;,
+            RetryCount = 3,
+        },
+        Schedule = &amp;quot;*/4 * * * *&amp;quot;,
+        TimeZone = &amp;quot;Europe/London&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudScheduler.JobArgs.html">JobArgs</a></h4>
       <section></section>

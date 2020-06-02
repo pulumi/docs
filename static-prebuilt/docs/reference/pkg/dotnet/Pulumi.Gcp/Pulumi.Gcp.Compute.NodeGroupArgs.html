@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NodeGroupArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">NodeGroupArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">NodeGroupArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeGroup.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeGroup.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeGroupArgs__ctor_" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeGroupArgs__ctor" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.#ctor">NodeGroupArgs()</h4>
@@ -100,17 +129,20 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeGroup.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeGroup.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeGroupArgs_AutoscalingPolicy_" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.AutoscalingPolicy*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeGroupArgs_AutoscalingPolicy" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.AutoscalingPolicy">AutoscalingPolicy</h4>
-  <div class="markdown level1 summary"><p>If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes
-of your node groups.</p>
+  <div class="markdown level1 summary"><ul>
+<li></li>
+</ul>
+<p>If you use sole-tenant nodes for your workloads, you can use the node
+group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;NodeGroupAutoscalingPolicyArgs&gt;? AutoscalingPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;NodeGroupAutoscalingPolicyArgs&gt; AutoscalingPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,13 +154,13 @@ of your node groups.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.NodeGroupAutoscalingPolicyArgs.html">NodeGroupAutoscalingPolicyArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.NodeGroupAutoscalingPolicyArgs.html">NodeGroupAutoscalingPolicyArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeGroup.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeGroup.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeGroupArgs_Description_" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeGroupArgs_Description" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.Description">Description</h4>
@@ -137,7 +169,7 @@ of your node groups.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,13 +181,13 @@ of your node groups.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeGroup.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeGroup.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeGroupArgs_Name_" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeGroupArgs_Name" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.Name">Name</h4>
@@ -164,7 +196,7 @@ of your node groups.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,13 +208,13 @@ of your node groups.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeGroup.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeGroup.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeGroupArgs_NodeTemplate_" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.NodeTemplate*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeGroupArgs_NodeTemplate" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.NodeTemplate">NodeTemplate</h4>
@@ -203,13 +235,13 @@ of your node groups.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeGroup.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeGroup.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeGroupArgs_Project_" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeGroupArgs_Project" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.Project">Project</h4>
@@ -219,7 +251,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +263,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeGroup.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeGroup.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeGroupArgs_Size_" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.Size*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeGroupArgs_Size" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.Size">Size</h4>
@@ -258,13 +290,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeGroup.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeGroup.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeGroupArgs_Zone_" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.Zone*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeGroupArgs_Zone" data-uid="Pulumi.Gcp.Compute.NodeGroupArgs.Zone">Zone</h4>
@@ -273,7 +305,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Zone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Zone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,7 +317,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -297,7 +329,7 @@ If it is not provided, the provider project is used.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeGroup.cs/#L129" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeGroup.cs/#L162" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

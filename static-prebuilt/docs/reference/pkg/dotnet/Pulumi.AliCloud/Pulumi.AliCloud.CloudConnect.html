@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.CloudConnect
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -91,6 +91,24 @@
 <blockquote>
 <p><strong>NOTE:</strong> Only the following regions support create Cloud Connect Network. [<code>cn-shanghai</code>, <code>cn-shanghai-finance-1</code>, <code>cn-hongkong</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-southeast-3</code>, <code>ap-southeast-5</code>, <code>ap-northeast-1</code>, <code>eu-central-1</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.CloudConnect.Network(&amp;quot;default&amp;quot;, new AliCloud.CloudConnect.NetworkArgs
+    {
+        CidrBlock = &amp;quot;192.168.0.0/24&amp;quot;,
+        Description = &amp;quot;tf-testAccCloudConnectNetworkDescription&amp;quot;,
+        IsDefault = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.CloudConnect.NetworkArgs.html">NetworkArgs</a></h4>
       <section></section>
@@ -103,6 +121,27 @@
 <blockquote>
 <p><strong>NOTE:</strong> Only the following regions support. [<code>cn-shanghai</code>, <code>cn-shanghai-finance-1</code>, <code>cn-hongkong</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-southeast-3</code>, <code>ap-southeast-5</code>, <code>ap-northeast-1</code>, <code>eu-central-1</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ccn = new AliCloud.CloudConnect.Network(&amp;quot;ccn&amp;quot;, new AliCloud.CloudConnect.NetworkArgs
+    {
+        IsDefault = &amp;quot;true&amp;quot;,
+    });
+    var @default = new AliCloud.CloudConnect.NetworkAttachment(&amp;quot;default&amp;quot;, new AliCloud.CloudConnect.NetworkAttachmentArgs
+    {
+        CcnId = ccn.Id,
+        SagId = &amp;quot;sag-xxxxx&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.CloudConnect.NetworkAttachmentArgs.html">NetworkAttachmentArgs</a></h4>
       <section></section>
@@ -117,6 +156,40 @@
 <blockquote>
 <p><strong>NOTE:</strong> Only the following regions support create Cloud Connect Network Grant. [<code>cn-shanghai</code>, <code>cn-shanghai-finance-1</code>, <code>cn-hongkong</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-southeast-3</code>, <code>ap-southeast-5</code>, <code>ap-northeast-1</code>, <code>eu-central-1</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ccnAccount = new AliCloud.Provider(&amp;quot;ccnAccount&amp;quot;, new AliCloud.ProviderArgs
+    {
+    });
+    var cenAccount = new AliCloud.Provider(&amp;quot;cenAccount&amp;quot;, new AliCloud.ProviderArgs
+    {
+        AccessKey = &amp;quot;xxxxxx&amp;quot;,
+        Region = &amp;quot;cn-hangzhou&amp;quot;,
+        SecretKey = &amp;quot;xxxxxx&amp;quot;,
+    });
+    var cen = new AliCloud.Cen.Instance(&amp;quot;cen&amp;quot;, new AliCloud.Cen.InstanceArgs
+    {
+    });
+    var ccn = new AliCloud.CloudConnect.Network(&amp;quot;ccn&amp;quot;, new AliCloud.CloudConnect.NetworkArgs
+    {
+        IsDefault = &amp;quot;true&amp;quot;,
+    });
+    var @default = new AliCloud.CloudConnect.NetworkGrant(&amp;quot;default&amp;quot;, new AliCloud.CloudConnect.NetworkGrantArgs
+    {
+        CcnId = ccn.Id,
+        CenId = cen.Id,
+        CenUid = &amp;quot;xxxxxx&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.CloudConnect.NetworkGrantArgs.html">NetworkGrantArgs</a></h4>
       <section></section>

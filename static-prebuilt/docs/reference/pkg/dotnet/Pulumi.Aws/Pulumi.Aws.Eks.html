@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Eks
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,72 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Eks.Cluster.html">Cluster</a></h4>
       <section><p>Manages an EKS Cluster.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="example-iam-role-for-eks-cluster">Example IAM Role for EKS Cluster</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Iam.Role(&amp;quot;example&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;eks.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var example_AmazonEKSClusterPolicy = new Aws.Iam.RolePolicyAttachment(&amp;quot;example-AmazonEKSClusterPolicy&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/AmazonEKSClusterPolicy&amp;quot;,
+        Role = example.Name,
+    });
+    var example_AmazonEKSServicePolicy = new Aws.Iam.RolePolicyAttachment(&amp;quot;example-AmazonEKSServicePolicy&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/AmazonEKSServicePolicy&amp;quot;,
+        Role = example.Name,
+    });
+}
+
+}
+</code></pre>
+<h3 id="enabling-control-plane-logging">Enabling Control Plane Logging</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var clusterName = config.Get(&amp;quot;clusterName&amp;quot;) ?? &amp;quot;example&amp;quot;;
+    var exampleCluster = new Aws.Eks.Cluster(&amp;quot;exampleCluster&amp;quot;, new Aws.Eks.ClusterArgs
+    {
+        EnabledClusterLogTypes = 
+        {
+            &amp;quot;api&amp;quot;,
+            &amp;quot;audit&amp;quot;,
+        },
+    });
+    var exampleLogGroup = new Aws.CloudWatch.LogGroup(&amp;quot;exampleLogGroup&amp;quot;, new Aws.CloudWatch.LogGroupArgs
+    {
+        RetentionInDays = 7,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Eks.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
@@ -85,6 +151,46 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Eks.FargateProfile.html">FargateProfile</a></h4>
       <section><p>Manages an EKS Fargate Profile.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="example-iam-role-for-eks-fargate-profile">Example IAM Role for EKS Fargate Profile</h3>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Iam.Role(&amp;quot;example&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;Statement&amp;quot;, new[]
+                {
+                    new Dictionary&amp;lt;string, object?&gt;
+                    {
+                        { &amp;quot;Action&amp;quot;, &amp;quot;sts:AssumeRole&amp;quot; },
+                        { &amp;quot;Effect&amp;quot;, &amp;quot;Allow&amp;quot; },
+                        { &amp;quot;Principal&amp;quot;, new Dictionary&amp;lt;string, object?&gt;
+                        {
+                            { &amp;quot;Service&amp;quot;, &amp;quot;eks-fargate-pods.amazonaws.com&amp;quot; },
+                        } },
+                    },
+                }
+             },
+            { &amp;quot;Version&amp;quot;, &amp;quot;2012-10-17&amp;quot; },
+        }),
+    });
+    var example_AmazonEKSFargatePodExecutionRolePolicy = new Aws.Iam.RolePolicyAttachment(&amp;quot;example-AmazonEKSFargatePodExecutionRolePolicy&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy&amp;quot;,
+        Role = example.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Eks.FargateProfileArgs.html">FargateProfileArgs</a></h4>
       <section></section>
@@ -104,6 +210,56 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Eks.NodeGroup.html">NodeGroup</a></h4>
       <section><p>Manages an EKS Node Group, which can provision and optionally update an Auto Scaling Group of Kubernetes worker nodes compatible with EKS. Additional documentation about this functionality can be found in the <a href="https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html">EKS User Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="example-iam-role-for-eks-node-group">Example IAM Role for EKS Node Group</h3>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Iam.Role(&amp;quot;example&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;Statement&amp;quot;, new[]
+                {
+                    new Dictionary&amp;lt;string, object?&gt;
+                    {
+                        { &amp;quot;Action&amp;quot;, &amp;quot;sts:AssumeRole&amp;quot; },
+                        { &amp;quot;Effect&amp;quot;, &amp;quot;Allow&amp;quot; },
+                        { &amp;quot;Principal&amp;quot;, new Dictionary&amp;lt;string, object?&gt;
+                        {
+                            { &amp;quot;Service&amp;quot;, &amp;quot;ec2.amazonaws.com&amp;quot; },
+                        } },
+                    },
+                }
+             },
+            { &amp;quot;Version&amp;quot;, &amp;quot;2012-10-17&amp;quot; },
+        }),
+    });
+    var example_AmazonEKSWorkerNodePolicy = new Aws.Iam.RolePolicyAttachment(&amp;quot;example-AmazonEKSWorkerNodePolicy&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy&amp;quot;,
+        Role = example.Name,
+    });
+    var example_AmazonEKSCNIPolicy = new Aws.Iam.RolePolicyAttachment(&amp;quot;example-AmazonEKSCNIPolicy&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy&amp;quot;,
+        Role = example.Name,
+    });
+    var example_AmazonEC2ContainerRegistryReadOnly = new Aws.Iam.RolePolicyAttachment(&amp;quot;example-AmazonEC2ContainerRegistryReadOnly&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly&amp;quot;,
+        Role = example.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Eks.NodeGroupArgs.html">NodeGroupArgs</a></h4>
       <section></section>

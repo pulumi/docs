@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ProjectArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ProjectArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">ProjectArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L251">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs__ctor_" data-uid="Pulumi.Rancher2.ProjectArgs.#ctor*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs__ctor" data-uid="Pulumi.Rancher2.ProjectArgs.#ctor">ProjectArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs_Annotations_" data-uid="Pulumi.Rancher2.ProjectArgs.Annotations*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs_Annotations" data-uid="Pulumi.Rancher2.ProjectArgs.Annotations">Annotations</h4>
@@ -121,13 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L144">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs_ClusterId_" data-uid="Pulumi.Rancher2.ProjectArgs.ClusterId*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs_ClusterId" data-uid="Pulumi.Rancher2.ProjectArgs.ClusterId">ClusterId</h4>
@@ -148,13 +177,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs_ContainerResourceLimit_" data-uid="Pulumi.Rancher2.ProjectArgs.ContainerResourceLimit*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs_ContainerResourceLimit" data-uid="Pulumi.Rancher2.ProjectArgs.ContainerResourceLimit">ContainerResourceLimit</h4>
@@ -163,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ProjectContainerResourceLimitArgs&gt;? ContainerResourceLimit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ProjectContainerResourceLimitArgs&gt; ContainerResourceLimit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +204,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ProjectContainerResourceLimitArgs.html">ProjectContainerResourceLimitArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ProjectContainerResourceLimitArgs.html">ProjectContainerResourceLimitArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs_Description_" data-uid="Pulumi.Rancher2.ProjectArgs.Description*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs_Description" data-uid="Pulumi.Rancher2.ProjectArgs.Description">Description</h4>
@@ -190,7 +219,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,13 +231,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L162">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs_EnableProjectMonitoring_" data-uid="Pulumi.Rancher2.ProjectArgs.EnableProjectMonitoring*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs_EnableProjectMonitoring" data-uid="Pulumi.Rancher2.ProjectArgs.EnableProjectMonitoring">EnableProjectMonitoring</h4>
@@ -217,7 +246,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableProjectMonitoring { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableProjectMonitoring { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,13 +258,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs_Labels_" data-uid="Pulumi.Rancher2.ProjectArgs.Labels*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs_Labels" data-uid="Pulumi.Rancher2.ProjectArgs.Labels">Labels</h4>
@@ -256,13 +285,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs_Name_" data-uid="Pulumi.Rancher2.ProjectArgs.Name*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs_Name" data-uid="Pulumi.Rancher2.ProjectArgs.Name">Name</h4>
@@ -271,7 +300,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,13 +312,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L186">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs_PodSecurityPolicyTemplateId_" data-uid="Pulumi.Rancher2.ProjectArgs.PodSecurityPolicyTemplateId*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs_PodSecurityPolicyTemplateId" data-uid="Pulumi.Rancher2.ProjectArgs.PodSecurityPolicyTemplateId">PodSecurityPolicyTemplateId</h4>
@@ -298,7 +327,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PodSecurityPolicyTemplateId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PodSecurityPolicyTemplateId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,13 +339,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L192">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs_ProjectMonitoringInput_" data-uid="Pulumi.Rancher2.ProjectArgs.ProjectMonitoringInput*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs_ProjectMonitoringInput" data-uid="Pulumi.Rancher2.ProjectArgs.ProjectMonitoringInput">ProjectMonitoringInput</h4>
@@ -325,7 +354,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ProjectProjectMonitoringInputArgs&gt;? ProjectMonitoringInput { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ProjectProjectMonitoringInputArgs&gt; ProjectMonitoringInput { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,13 +366,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ProjectProjectMonitoringInputArgs.html">ProjectProjectMonitoringInputArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ProjectProjectMonitoringInputArgs.html">ProjectProjectMonitoringInputArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs_ResourceQuota_" data-uid="Pulumi.Rancher2.ProjectArgs.ResourceQuota*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs_ResourceQuota" data-uid="Pulumi.Rancher2.ProjectArgs.ResourceQuota">ResourceQuota</h4>
@@ -352,7 +381,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ProjectResourceQuotaArgs&gt;? ResourceQuota { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ProjectResourceQuotaArgs&gt; ResourceQuota { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -364,13 +393,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ProjectResourceQuotaArgs.html">ProjectResourceQuotaArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ProjectResourceQuotaArgs.html">ProjectResourceQuotaArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProjectArgs_WaitForCluster_" data-uid="Pulumi.Rancher2.ProjectArgs.WaitForCluster*"></a>
   <h4 id="Pulumi_Rancher2_ProjectArgs_WaitForCluster" data-uid="Pulumi.Rancher2.ProjectArgs.WaitForCluster">WaitForCluster</h4>
@@ -379,7 +408,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? WaitForCluster { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; WaitForCluster { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -391,7 +420,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -403,7 +432,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Project.cs/#L127" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Project.cs/#L171" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

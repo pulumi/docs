@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Dns
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,66 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.Dns.AaaaRecord.html">AaaaRecord</a></h4>
       <section><p>Enables you to manage DNS AAAA Records within Azure DNS.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.Dns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.Dns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleAaaaRecord = new Azure.Dns.AaaaRecord(&amp;quot;exampleAaaaRecord&amp;quot;, new Azure.Dns.AaaaRecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-alias-record">Example Usage (Alias Record)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.Dns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.Dns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var examplePublicIp = new Azure.Network.PublicIp(&amp;quot;examplePublicIp&amp;quot;, new Azure.Network.PublicIpArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AllocationMethod = &amp;quot;Dynamic&amp;quot;,
+        IpVersion = &amp;quot;IPv6&amp;quot;,
+    });
+    var exampleAaaaRecord = new Azure.Dns.AaaaRecord(&amp;quot;exampleAaaaRecord&amp;quot;, new Azure.Dns.AaaaRecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+        TargetResourceId = examplePublicIp.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Dns.AaaaRecordArgs.html">AaaaRecordArgs</a></h4>
       <section></section>
@@ -85,6 +145,70 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Dns.ARecord.html">ARecord</a></h4>
       <section><p>Enables you to manage DNS A Records within Azure DNS.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.Dns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.Dns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleARecord = new Azure.Dns.ARecord(&amp;quot;exampleARecord&amp;quot;, new Azure.Dns.ARecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+        Records = 
+        {
+            &amp;quot;10.0.180.17&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-alias-record">Example Usage (Alias Record)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.Dns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.Dns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var examplePublicIp = new Azure.Network.PublicIp(&amp;quot;examplePublicIp&amp;quot;, new Azure.Network.PublicIpArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AllocationMethod = &amp;quot;Dynamic&amp;quot;,
+        IpVersion = &amp;quot;IPv4&amp;quot;,
+    });
+    var exampleARecord = new Azure.Dns.ARecord(&amp;quot;exampleARecord&amp;quot;, new Azure.Dns.ARecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+        TargetResourceId = examplePublicIp.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Dns.ARecordArgs.html">ARecordArgs</a></h4>
       <section></section>
@@ -99,6 +223,67 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Dns.CNameRecord.html">CNameRecord</a></h4>
       <section><p>Enables you to manage DNS CNAME Records within Azure DNS.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.Dns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.Dns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleCNameRecord = new Azure.Dns.CNameRecord(&amp;quot;exampleCNameRecord&amp;quot;, new Azure.Dns.CNameRecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+        Record = &amp;quot;contoso.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-alias-record">Example Usage (Alias Record)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.Dns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.Dns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var target = new Azure.Dns.CNameRecord(&amp;quot;target&amp;quot;, new Azure.Dns.CNameRecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+        Record = &amp;quot;contoso.com&amp;quot;,
+    });
+    var exampleCNameRecord = new Azure.Dns.CNameRecord(&amp;quot;exampleCNameRecord&amp;quot;, new Azure.Dns.CNameRecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+        TargetResourceId = target.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Dns.CNameRecordArgs.html">CNameRecordArgs</a></h4>
       <section></section>
@@ -119,6 +304,41 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Dns.NsRecord.html">NsRecord</a></h4>
       <section><p>Enables you to manage DNS NS Records within Azure DNS.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.Dns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.Dns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleNsRecord = new Azure.Dns.NsRecord(&amp;quot;exampleNsRecord&amp;quot;, new Azure.Dns.NsRecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+        Records = 
+        {
+            &amp;quot;ns1.contoso.com&amp;quot;,
+            &amp;quot;ns2.contoso.com&amp;quot;,
+        },
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Dns.NsRecordArgs.html">NsRecordArgs</a></h4>
       <section></section>
@@ -126,6 +346,36 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Dns.PtrRecord.html">PtrRecord</a></h4>
       <section><p>Enables you to manage DNS PTR Records within Azure DNS.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleZone = new Azure.Dns.Zone(&amp;quot;exampleZone&amp;quot;, new Azure.Dns.ZoneArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var examplePtrRecord = new Azure.Dns.PtrRecord(&amp;quot;examplePtrRecord&amp;quot;, new Azure.Dns.PtrRecordArgs
+    {
+        ZoneName = exampleZone.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Ttl = 300,
+        Records = 
+        {
+            &amp;quot;yourdomain.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Dns.PtrRecordArgs.html">PtrRecordArgs</a></h4>
       <section></section>
@@ -147,6 +397,30 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Dns.Zone.html">Zone</a></h4>
       <section><p>Enables you to manage DNS zones within Azure DNS. These zones are hosted on Azure's name servers to which you can delegate the zone from the parent domain.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Core.ResourceGroup(&amp;quot;example&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var example_public = new Azure.Dns.Zone(&amp;quot;example-public&amp;quot;, new Azure.Dns.ZoneArgs
+    {
+        ResourceGroupName = example.Name,
+    });
+    var example_private = new Azure.PrivateDns.Zone(&amp;quot;example-private&amp;quot;, new Azure.PrivateDns.ZoneArgs
+    {
+        ResourceGroupName = example.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Dns.ZoneArgs.html">ZoneArgs</a></h4>
       <section></section>

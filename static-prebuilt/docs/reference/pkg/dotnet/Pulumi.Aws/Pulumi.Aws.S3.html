@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.S3
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,26 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.S3.AccessPoint.html">AccessPoint</a></h4>
       <section><p>Provides a resource to manage an S3 Access Point.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-usage">Basic Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleBucket = new Aws.S3.Bucket(&amp;quot;exampleBucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var exampleAccessPoint = new Aws.S3.AccessPoint(&amp;quot;exampleAccessPoint&amp;quot;, new Aws.S3.AccessPointArgs
+    {
+        Bucket = exampleBucket.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.S3.AccessPointArgs.html">AccessPointArgs</a></h4>
       <section></section>
@@ -91,24 +111,539 @@
 <blockquote>
 <p>Advanced usage: To use a custom API endpoint for this resource, use the <a href="https://www.terraform.io/docs/providers/aws/index.html#s3control"><code>s3control</code> endpoint provider configuration</a>, not the <code>s3</code> endpoint provider configuration.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.S3.AccountPublicAccessBlock(&amp;quot;example&amp;quot;, new Aws.S3.AccountPublicAccessBlockArgs
+    {
+        BlockPublicAcls = true,
+        BlockPublicPolicy = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.S3.AccountPublicAccessBlockArgs.html">AccountPublicAccessBlockArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.S3.AccountPublicAccessBlockState.html">AccountPublicAccessBlockState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.S3.AnalyticsConfiguration.html">AnalyticsConfiguration</a></h4>
-      <section></section>
+      <section><p>Provides a S3 bucket <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html">analytics configuration</a> resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="add-analytics-configuration-with-s3-bucket-object-filter">Add analytics configuration with S3 bucket object filter</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.S3.Bucket(&amp;quot;example&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var example_filtered = new Aws.S3.AnalyticsConfiguration(&amp;quot;example-filtered&amp;quot;, new Aws.S3.AnalyticsConfigurationArgs
+    {
+        Bucket = example.BucketName,
+        Filter = new Aws.S3.Inputs.AnalyticsConfigurationFilterArgs
+        {
+            Prefix = &amp;quot;documents/&amp;quot;,
+            Tags = 
+            {
+                { &amp;quot;priority&amp;quot;, &amp;quot;high&amp;quot; },
+                { &amp;quot;class&amp;quot;, &amp;quot;blue&amp;quot; },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.S3.AnalyticsConfigurationArgs.html">AnalyticsConfigurationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.S3.AnalyticsConfigurationState.html">AnalyticsConfigurationState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.S3.Bucket.html">Bucket</a></h4>
       <section><p>Provides a S3 bucket resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="private-bucket-w-tags">Private Bucket w/ Tags</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;Dev&amp;quot; },
+            { &amp;quot;Name&amp;quot;, &amp;quot;My bucket&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="static-website-hosting">Static Website Hosting</h3>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;public-read&amp;quot;,
+        Policy = File.ReadAllText(&amp;quot;policy.json&amp;quot;),
+        Website = new Aws.S3.Inputs.BucketWebsiteArgs
+        {
+            Website = &amp;quot;error.html&amp;quot;,
+            Website = &amp;quot;index.html&amp;quot;,
+            Website = @&amp;quot;[{
+&amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;KeyPrefixEquals&amp;quot;&amp;quot;: &amp;quot;&amp;quot;docs/&amp;quot;&amp;quot;
+},
+&amp;quot;&amp;quot;Redirect&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;ReplaceKeyPrefixWith&amp;quot;&amp;quot;: &amp;quot;&amp;quot;documents/&amp;quot;&amp;quot;
+}
+}]
+
+&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="using-cors">Using CORS</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;public-read&amp;quot;,
+        CorsRules = 
+        {
+            new Aws.S3.Inputs.BucketCorsRuleArgs
+            {
+                AllowedHeaders = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+                AllowedMethods = 
+                {
+                    &amp;quot;PUT&amp;quot;,
+                    &amp;quot;POST&amp;quot;,
+                },
+                AllowedOrigins = 
+                {
+                    &amp;quot;https://s3-website-test.mydomain.com&amp;quot;,
+                },
+                ExposeHeaders = 
+                {
+                    &amp;quot;ETag&amp;quot;,
+                },
+                MaxAgeSeconds = 3000,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="using-versioning">Using versioning</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+        Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+        {
+            Enabled = true,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="enable-logging">Enable Logging</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var logBucket = new Aws.S3.Bucket(&amp;quot;logBucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;log-delivery-write&amp;quot;,
+    });
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+        Loggings = 
+        {
+            new Aws.S3.Inputs.BucketLoggingArgs
+            {
+                TargetBucket = logBucket.Id,
+                TargetPrefix = &amp;quot;log/&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="using-object-lifecycle">Using object lifecycle</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+        LifecycleRules = 
+        {
+            new Aws.S3.Inputs.BucketLifecycleRuleArgs
+            {
+                Enabled = true,
+                Expiration = new Aws.S3.Inputs.BucketLifecycleRuleExpirationArgs
+                {
+                    Days = 90,
+                },
+                Id = &amp;quot;log&amp;quot;,
+                Prefix = &amp;quot;log/&amp;quot;,
+                Tags = 
+                {
+                    { &amp;quot;autoclean&amp;quot;, &amp;quot;true&amp;quot; },
+                    { &amp;quot;rule&amp;quot;, &amp;quot;log&amp;quot; },
+                },
+                Transition = 
+                {
+
+                    {
+                        { &amp;quot;days&amp;quot;, 30 },
+                        { &amp;quot;storageClass&amp;quot;, &amp;quot;STANDARD_IA&amp;quot; },
+                    },
+
+                    {
+                        { &amp;quot;days&amp;quot;, 60 },
+                        { &amp;quot;storageClass&amp;quot;, &amp;quot;GLACIER&amp;quot; },
+                    },
+                },
+            },
+            new Aws.S3.Inputs.BucketLifecycleRuleArgs
+            {
+                Enabled = true,
+                Expiration = new Aws.S3.Inputs.BucketLifecycleRuleExpirationArgs
+                {
+                    Date = &amp;quot;2016-01-12&amp;quot;,
+                },
+                Id = &amp;quot;tmp&amp;quot;,
+                Prefix = &amp;quot;tmp/&amp;quot;,
+            },
+        },
+    });
+    var versioningBucket = new Aws.S3.Bucket(&amp;quot;versioningBucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+        LifecycleRules = 
+        {
+            new Aws.S3.Inputs.BucketLifecycleRuleArgs
+            {
+                Enabled = true,
+                NoncurrentVersionExpiration = new Aws.S3.Inputs.BucketLifecycleRuleNoncurrentVersionExpirationArgs
+                {
+                    Days = 90,
+                },
+                NoncurrentVersionTransition = 
+                {
+
+                    {
+                        { &amp;quot;days&amp;quot;, 30 },
+                        { &amp;quot;storageClass&amp;quot;, &amp;quot;STANDARD_IA&amp;quot; },
+                    },
+
+                    {
+                        { &amp;quot;days&amp;quot;, 60 },
+                        { &amp;quot;storageClass&amp;quot;, &amp;quot;GLACIER&amp;quot; },
+                    },
+                },
+                Prefix = &amp;quot;config/&amp;quot;,
+            },
+        },
+        Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+        {
+            Enabled = true,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="using-replication-configuration">Using replication configuration</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var central = new Aws.Provider(&amp;quot;central&amp;quot;, new Aws.ProviderArgs
+    {
+        Region = &amp;quot;eu-central-1&amp;quot;,
+    });
+    var replicationRole = new Aws.Iam.Role(&amp;quot;replicationRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;s3.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var destination = new Aws.S3.Bucket(&amp;quot;destination&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Region = &amp;quot;eu-west-1&amp;quot;,
+        Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+        {
+            Enabled = true,
+        },
+    });
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+        Region = &amp;quot;eu-central-1&amp;quot;,
+        ReplicationConfiguration = new Aws.S3.Inputs.BucketReplicationConfigurationArgs
+        {
+            Role = replicationRole.Arn,
+            Rules = 
+            {
+                new Aws.S3.Inputs.BucketReplicationConfigurationRuleArgs
+                {
+                    Destination = new Aws.S3.Inputs.BucketReplicationConfigurationRuleDestinationArgs
+                    {
+                        Bucket = destination.Arn,
+                        StorageClass = &amp;quot;STANDARD&amp;quot;,
+                    },
+                    Id = &amp;quot;foobar&amp;quot;,
+                    Prefix = &amp;quot;foo&amp;quot;,
+                    Status = &amp;quot;Enabled&amp;quot;,
+                },
+            },
+        },
+        Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+        {
+            Enabled = true,
+        },
+    });
+    var replicationPolicy = new Aws.Iam.Policy(&amp;quot;replicationPolicy&amp;quot;, new Aws.Iam.PolicyArgs
+    {
+        Policy = Output.Tuple(bucket.Arn, bucket.Arn, destination.Arn).Apply(values =&gt;
+        {
+            var bucketArn = values.Item1;
+            var bucketArn1 = values.Item2;
+            var destinationArn = values.Item3;
+            return @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;s3:GetReplicationConfiguration&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;s3:ListBucket&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;{bucketArn}&amp;quot;&amp;quot;
+  ]
+}},
+{{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;s3:GetObjectVersion&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;s3:GetObjectVersionAcl&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;{bucketArn1}/*&amp;quot;&amp;quot;
+  ]
+}},
+{{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;s3:ReplicateObject&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;s3:ReplicateDelete&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;{destinationArn}/*&amp;quot;&amp;quot;
+}}
+]
+}}
+
+&amp;quot;;
+        }),
+    });
+    var replicationRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment(&amp;quot;replicationRolePolicyAttachment&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = replicationPolicy.Arn,
+        Role = replicationRole.Name,
+    });
+}
+
+}
+</code></pre>
+<h3 id="enable-default-server-side-encryption">Enable Default Server Side Encryption</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var mykey = new Aws.Kms.Key(&amp;quot;mykey&amp;quot;, new Aws.Kms.KeyArgs
+    {
+        DeletionWindowInDays = 10,
+        Description = &amp;quot;This key is used to encrypt bucket objects&amp;quot;,
+    });
+    var mybucket = new Aws.S3.Bucket(&amp;quot;mybucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        ServerSideEncryptionConfiguration = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationArgs
+        {
+            Rule = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleArgs
+            {
+                ApplyServerSideEncryptionByDefault = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs
+                {
+                    KmsMasterKeyId = mykey.Arn,
+                    SseAlgorithm = &amp;quot;aws:kms&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="using-acl-policy-grants">Using ACL policy grants</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var currentUser = Output.Create(Aws.GetCanonicalUserId.InvokeAsync());
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Grants = 
+        {
+            new Aws.S3.Inputs.BucketGrantArgs
+            {
+                Id = currentUser.Apply(currentUser =&gt; currentUser.Id),
+                Permissions = 
+                {
+                    &amp;quot;FULL_CONTROL&amp;quot;,
+                },
+                Type = &amp;quot;CanonicalUser&amp;quot;,
+            },
+            new Aws.S3.Inputs.BucketGrantArgs
+            {
+                Permissions = 
+                {
+                    &amp;quot;READ&amp;quot;,
+                    &amp;quot;WRITE&amp;quot;,
+                },
+                Type = &amp;quot;Group&amp;quot;,
+                Uri = &amp;quot;http://acs.amazonaws.com/groups/s3/LogDelivery&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.S3.BucketArgs.html">BucketArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.S3.BucketMetric.html">BucketMetric</a></h4>
       <section><p>Provides a S3 bucket <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html">metrics configuration</a> resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="add-metrics-configuration-for-entire-s3-bucket">Add metrics configuration for entire S3 bucket</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.S3.Bucket(&amp;quot;example&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var example_entire_bucket = new Aws.S3.BucketMetric(&amp;quot;example-entire-bucket&amp;quot;, new Aws.S3.BucketMetricArgs
+    {
+        Bucket = example.BucketName,
+    });
+}
+
+}
+</code></pre>
+<h3 id="add-metrics-configuration-with-s3-bucket-object-filter">Add metrics configuration with S3 bucket object filter</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.S3.Bucket(&amp;quot;example&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var example_filtered = new Aws.S3.BucketMetric(&amp;quot;example-filtered&amp;quot;, new Aws.S3.BucketMetricArgs
+    {
+        Bucket = example.BucketName,
+        Filter = new Aws.S3.Inputs.BucketMetricFilterArgs
+        {
+            Prefix = &amp;quot;documents/&amp;quot;,
+            Tags = 
+            {
+                { &amp;quot;class&amp;quot;, &amp;quot;blue&amp;quot; },
+                { &amp;quot;priority&amp;quot;, &amp;quot;high&amp;quot; },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.S3.BucketMetricArgs.html">BucketMetricArgs</a></h4>
       <section></section>
@@ -119,6 +654,166 @@
 <blockquote>
 <p><strong>NOTE:</strong> S3 Buckets only support a single notification configuration. Declaring multiple <code>aws.s3.BucketNotification</code> resources to the same S3 Bucket will cause a perpetual difference in configuration. See the example &quot;Trigger multiple Lambda functions&quot; for an option.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="add-notification-configuration-to-sns-topic">Add notification configuration to SNS Topic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var topic = new Aws.Sns.Topic(&amp;quot;topic&amp;quot;, new Aws.Sns.TopicArgs
+    {
+        Policy = bucket.Arn.Apply(arn =&gt; @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;:&amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;:[{{
+    &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {{&amp;quot;&amp;quot;AWS&amp;quot;&amp;quot;:&amp;quot;&amp;quot;*&amp;quot;&amp;quot;}},
+    &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;SNS:Publish&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:sns:*:*:s3-event-notification-topic&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;:{{
+        &amp;quot;&amp;quot;ArnLike&amp;quot;&amp;quot;:{{&amp;quot;&amp;quot;aws:SourceArn&amp;quot;&amp;quot;:&amp;quot;&amp;quot;{arn}&amp;quot;&amp;quot;}}
+    }}
+}}]
+}}
+
+&amp;quot;),
+    });
+    var bucketNotification = new Aws.S3.BucketNotification(&amp;quot;bucketNotification&amp;quot;, new Aws.S3.BucketNotificationArgs
+    {
+        Bucket = bucket.Id,
+        Topics = 
+        {
+            new Aws.S3.Inputs.BucketNotificationTopicArgs
+            {
+                Events = 
+                {
+                    &amp;quot;s3:ObjectCreated:*&amp;quot;,
+                },
+                FilterSuffix = &amp;quot;.log&amp;quot;,
+                TopicArn = topic.Arn,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="add-notification-configuration-to-sqs-queue">Add notification configuration to SQS Queue</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var queue = new Aws.Sqs.Queue(&amp;quot;queue&amp;quot;, new Aws.Sqs.QueueArgs
+    {
+        Policy = bucket.Arn.Apply(arn =&gt; @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sqs:SendMessage&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:sqs:*:*:s3-event-notification-queue&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {{
+    &amp;quot;&amp;quot;ArnEquals&amp;quot;&amp;quot;: {{ &amp;quot;&amp;quot;aws:SourceArn&amp;quot;&amp;quot;: &amp;quot;&amp;quot;{arn}&amp;quot;&amp;quot; }}
+  }}
+}}
+]
+}}
+
+&amp;quot;),
+    });
+    var bucketNotification = new Aws.S3.BucketNotification(&amp;quot;bucketNotification&amp;quot;, new Aws.S3.BucketNotificationArgs
+    {
+        Bucket = bucket.Id,
+        Queues = 
+        {
+            new Aws.S3.Inputs.BucketNotificationQueueArgs
+            {
+                Events = 
+                {
+                    &amp;quot;s3:ObjectCreated:*&amp;quot;,
+                },
+                FilterSuffix = &amp;quot;.log&amp;quot;,
+                QueueArn = queue.Arn,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="add-multiple-notification-configurations-to-sqs-queue">Add multiple notification configurations to SQS Queue</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var queue = new Aws.Sqs.Queue(&amp;quot;queue&amp;quot;, new Aws.Sqs.QueueArgs
+    {
+        Policy = bucket.Arn.Apply(arn =&gt; @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sqs:SendMessage&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:sqs:*:*:s3-event-notification-queue&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {{
+    &amp;quot;&amp;quot;ArnEquals&amp;quot;&amp;quot;: {{ &amp;quot;&amp;quot;aws:SourceArn&amp;quot;&amp;quot;: &amp;quot;&amp;quot;{arn}&amp;quot;&amp;quot; }}
+  }}
+}}
+]
+}}
+
+&amp;quot;),
+    });
+    var bucketNotification = new Aws.S3.BucketNotification(&amp;quot;bucketNotification&amp;quot;, new Aws.S3.BucketNotificationArgs
+    {
+        Bucket = bucket.Id,
+        Queues = 
+        {
+            new Aws.S3.Inputs.BucketNotificationQueueArgs
+            {
+                Events = 
+                {
+                    &amp;quot;s3:ObjectCreated:*&amp;quot;,
+                },
+                FilterPrefix = &amp;quot;images/&amp;quot;,
+                Id = &amp;quot;image-upload-event&amp;quot;,
+                QueueArn = queue.Arn,
+            },
+            new Aws.S3.Inputs.BucketNotificationQueueArgs
+            {
+                Events = 
+                {
+                    &amp;quot;s3:ObjectCreated:*&amp;quot;,
+                },
+                FilterPrefix = &amp;quot;videos/&amp;quot;,
+                Id = &amp;quot;video-upload-event&amp;quot;,
+                QueueArn = queue.Arn,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.S3.BucketNotificationArgs.html">BucketNotificationArgs</a></h4>
       <section></section>
@@ -126,6 +821,115 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.S3.BucketObject.html">BucketObject</a></h4>
       <section><p>Provides a S3 bucket object resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="encrypting-with-kms-key">Encrypting with KMS Key</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var examplekms = new Aws.Kms.Key(&amp;quot;examplekms&amp;quot;, new Aws.Kms.KeyArgs
+    {
+        DeletionWindowInDays = 7,
+        Description = &amp;quot;KMS key 1&amp;quot;,
+    });
+    var examplebucket = new Aws.S3.Bucket(&amp;quot;examplebucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+    });
+    var examplebucketObject = new Aws.S3.BucketObject(&amp;quot;examplebucketObject&amp;quot;, new Aws.S3.BucketObjectArgs
+    {
+        Bucket = examplebucket.Id,
+        Key = &amp;quot;someobject&amp;quot;,
+        KmsKeyId = examplekms.Arn,
+        Source = new FileAsset(&amp;quot;index.html&amp;quot;),
+    });
+}
+
+}
+</code></pre>
+<h3 id="server-side-encryption-with-s3-default-master-key">Server Side Encryption with S3 Default Master Key</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var examplebucket = new Aws.S3.Bucket(&amp;quot;examplebucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+    });
+    var examplebucketObject = new Aws.S3.BucketObject(&amp;quot;examplebucketObject&amp;quot;, new Aws.S3.BucketObjectArgs
+    {
+        Bucket = examplebucket.Id,
+        Key = &amp;quot;someobject&amp;quot;,
+        ServerSideEncryption = &amp;quot;aws:kms&amp;quot;,
+        Source = new FileAsset(&amp;quot;index.html&amp;quot;),
+    });
+}
+
+}
+</code></pre>
+<h3 id="server-side-encryption-with-aws-managed-key">Server Side Encryption with AWS-Managed Key</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var examplebucket = new Aws.S3.Bucket(&amp;quot;examplebucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+    });
+    var examplebucketObject = new Aws.S3.BucketObject(&amp;quot;examplebucketObject&amp;quot;, new Aws.S3.BucketObjectArgs
+    {
+        Bucket = examplebucket.Id,
+        Key = &amp;quot;someobject&amp;quot;,
+        ServerSideEncryption = &amp;quot;AES256&amp;quot;,
+        Source = new FileAsset(&amp;quot;index.html&amp;quot;),
+    });
+}
+
+}
+</code></pre>
+<h3 id="s3-object-lock">S3 Object Lock</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var examplebucket = new Aws.S3.Bucket(&amp;quot;examplebucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+        ObjectLockConfiguration = new Aws.S3.Inputs.BucketObjectLockConfigurationArgs
+        {
+            ObjectLockEnabled = &amp;quot;Enabled&amp;quot;,
+        },
+        Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+        {
+            Enabled = true,
+        },
+    });
+    var examplebucketObject = new Aws.S3.BucketObject(&amp;quot;examplebucketObject&amp;quot;, new Aws.S3.BucketObjectArgs
+    {
+        Bucket = examplebucket.Id,
+        ForceDestroy = true,
+        Key = &amp;quot;someobject&amp;quot;,
+        ObjectLockLegalHoldStatus = &amp;quot;ON&amp;quot;,
+        ObjectLockMode = &amp;quot;GOVERNANCE&amp;quot;,
+        ObjectLockRetainUntilDate = &amp;quot;2021-12-31T23:59:60Z&amp;quot;,
+        Source = new FileAsset(&amp;quot;important.txt&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.S3.BucketObjectArgs.html">BucketObjectArgs</a></h4>
       <section></section>
@@ -133,6 +937,44 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.S3.BucketPolicy.html">BucketPolicy</a></h4>
       <section><p>Attaches a policy to an S3 bucket resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-usage">Basic Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var bucketPolicy = new Aws.S3.BucketPolicy(&amp;quot;bucketPolicy&amp;quot;, new Aws.S3.BucketPolicyArgs
+    {
+        Bucket = bucket.Id,
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Id&amp;quot;&amp;quot;: &amp;quot;&amp;quot;MYBUCKETPOLICY&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;IPAllow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Deny&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;s3:*&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:s3:::my_tf_test_bucket/*&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {
+     &amp;quot;&amp;quot;IpAddress&amp;quot;&amp;quot;: {&amp;quot;&amp;quot;aws:SourceIp&amp;quot;&amp;quot;: &amp;quot;&amp;quot;8.8.8.8/32&amp;quot;&amp;quot;}
+  }
+}
+]
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.S3.BucketPolicyArgs.html">BucketPolicyArgs</a></h4>
       <section></section>
@@ -140,6 +982,27 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.S3.BucketPublicAccessBlock.html">BucketPublicAccessBlock</a></h4>
       <section><p>Manages S3 bucket-level Public Access Block configuration. For more information about these settings, see the <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">AWS S3 Block Public Access documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleBucket = new Aws.S3.Bucket(&amp;quot;exampleBucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var exampleBucketPublicAccessBlock = new Aws.S3.BucketPublicAccessBlock(&amp;quot;exampleBucketPublicAccessBlock&amp;quot;, new Aws.S3.BucketPublicAccessBlockArgs
+    {
+        BlockPublicAcls = true,
+        BlockPublicPolicy = true,
+        Bucket = exampleBucket.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.S3.BucketPublicAccessBlockArgs.html">BucketPublicAccessBlockArgs</a></h4>
       <section></section>
@@ -167,6 +1030,82 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.S3.Inventory.html">Inventory</a></h4>
       <section><p>Provides a S3 bucket <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html">inventory configuration</a> resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="add-inventory-configuration">Add inventory configuration</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testBucket = new Aws.S3.Bucket(&amp;quot;testBucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var inventory = new Aws.S3.Bucket(&amp;quot;inventory&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var testInventory = new Aws.S3.Inventory(&amp;quot;testInventory&amp;quot;, new Aws.S3.InventoryArgs
+    {
+        Bucket = testBucket.Id,
+        Destination = new Aws.S3.Inputs.InventoryDestinationArgs
+        {
+            Bucket = new Aws.S3.Inputs.InventoryDestinationBucketArgs
+            {
+                BucketArn = inventory.Arn,
+                Format = &amp;quot;ORC&amp;quot;,
+            },
+        },
+        IncludedObjectVersions = &amp;quot;All&amp;quot;,
+        Schedule = new Aws.S3.Inputs.InventoryScheduleArgs
+        {
+            Frequency = &amp;quot;Daily&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="add-inventory-configuration-with-s3-bucket-object-prefix">Add inventory configuration with S3 bucket object prefix</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Aws.S3.Bucket(&amp;quot;test&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var inventory = new Aws.S3.Bucket(&amp;quot;inventory&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var test_prefix = new Aws.S3.Inventory(&amp;quot;test-prefix&amp;quot;, new Aws.S3.InventoryArgs
+    {
+        Bucket = test.Id,
+        Destination = new Aws.S3.Inputs.InventoryDestinationArgs
+        {
+            Bucket = new Aws.S3.Inputs.InventoryDestinationBucketArgs
+            {
+                BucketArn = inventory.Arn,
+                Format = &amp;quot;ORC&amp;quot;,
+                Prefix = &amp;quot;inventory&amp;quot;,
+            },
+        },
+        Filter = new Aws.S3.Inputs.InventoryFilterArgs
+        {
+            Prefix = &amp;quot;documents/&amp;quot;,
+        },
+        IncludedObjectVersions = &amp;quot;All&amp;quot;,
+        Schedule = new Aws.S3.Inputs.InventoryScheduleArgs
+        {
+            Frequency = &amp;quot;Daily&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.S3.InventoryArgs.html">InventoryArgs</a></h4>
       <section></section>

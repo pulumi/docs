@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetRoute
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,30 +78,85 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetRoute</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2_GetRoute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetRoute : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetRoute</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetRoute.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/GetRoute.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_GetRoute_InvokeAsync_" data-uid="Pulumi.Aws.Ec2.GetRoute.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_Ec2_GetRoute_InvokeAsync_Pulumi_Aws_Ec2_GetRouteArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.Ec2.GetRoute.InvokeAsync(Pulumi.Aws.Ec2.GetRouteArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetRouteArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2_GetRoute_InvokeAsync_Pulumi_Aws_Ec2_GetRouteArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.Ec2.GetRoute.InvokeAsync(Pulumi.Aws.Ec2.GetRouteArgs,Pulumi.InvokeOptions)">InvokeAsync(GetRouteArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p><code>aws.ec2.Route</code> provides details about a specific Route.</p>
 <p>This resource can prove useful when finding the resource
 associated with a CIDR. For example, finding the peering
 connection associated with a CIDR value.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<p>The following example shows how one might use a CIDR value to find a network interface id
+and use this to create a data source of that network interface.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var subnetId = config.RequireObject&amp;lt;dynamic&gt;(&amp;quot;subnetId&amp;quot;);
+    var selected = Output.Create(Aws.Ec2.GetRouteTable.InvokeAsync(new Aws.Ec2.GetRouteTableArgs
+    {
+        SubnetId = subnetId,
+    }));
+    var route = Output.Create(Aws.Ec2.GetRoute.InvokeAsync(new Aws.Ec2.GetRouteArgs
+    {
+        DestinationCidrBlock = &amp;quot;10.0.1.0/24&amp;quot;,
+        RouteTableId = aws_route_table.Selected.Id,
+    }));
+    var @interface = Output.Create(Aws.Ec2.GetNetworkInterface.InvokeAsync(new Aws.Ec2.GetNetworkInterfaceArgs
+    {
+        NetworkInterfaceId = route.Apply(route =&gt; route.NetworkInterfaceId),
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetRouteResult&gt; InvokeAsync(GetRouteArgs args, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetRouteResult&gt; InvokeAsync(GetRouteArgs args, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +174,7 @@ connection associated with a CIDR value.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -135,7 +190,7 @@ connection associated with a CIDR value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.GetRouteResult.html">GetRouteResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.GetRouteResult.html">GetRouteResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -147,7 +202,7 @@ connection associated with a CIDR value.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetRoute.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/GetRoute.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

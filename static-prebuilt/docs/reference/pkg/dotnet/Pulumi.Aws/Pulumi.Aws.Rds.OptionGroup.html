@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class OptionGroup
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,12 +78,99 @@
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html">MySQL Options</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html">Oracle Options</a></li>
 </ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Rds.OptionGroup(&amp;quot;example&amp;quot;, new Aws.Rds.OptionGroupArgs
+    {
+        EngineName = &amp;quot;sqlserver-ee&amp;quot;,
+        MajorEngineVersion = &amp;quot;11.00&amp;quot;,
+        Options = 
+        {
+            new Aws.Rds.Inputs.OptionGroupOptionArgs
+            {
+                OptionName = &amp;quot;Timezone&amp;quot;,
+                OptionSettings = 
+                {
+                    new Aws.Rds.Inputs.OptionGroupOptionOptionSettingArgs
+                    {
+                        Name = &amp;quot;TIME_ZONE&amp;quot;,
+                        Value = &amp;quot;UTC&amp;quot;,
+                    },
+                },
+            },
+            new Aws.Rds.Inputs.OptionGroupOptionArgs
+            {
+                OptionName = &amp;quot;SQLSERVER_BACKUP_RESTORE&amp;quot;,
+                OptionSettings = 
+                {
+                    new Aws.Rds.Inputs.OptionGroupOptionOptionSettingArgs
+                    {
+                        Name = &amp;quot;IAM_ROLE_ARN&amp;quot;,
+                        Value = aws_iam_role.Example.Arn,
+                    },
+                },
+            },
+            new Aws.Rds.Inputs.OptionGroupOptionArgs
+            {
+                OptionName = &amp;quot;TDE&amp;quot;,
+            },
+        },
+        OptionGroupDescription = &amp;quot;Option Group&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">OptionGroup</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">OptionGroup</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Rds.html">Pulumi.Aws.Rds</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -94,16 +181,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/OptionGroup.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/OptionGroup.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_OptionGroup__ctor_" data-uid="Pulumi.Aws.Rds.OptionGroup.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Rds_OptionGroup__ctor_System_String_Pulumi_Aws_Rds_OptionGroupArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Rds.OptionGroup.#ctor(System.String,Pulumi.Aws.Rds.OptionGroupArgs,System.Nullable{CustomResourceOptions})">OptionGroup(String, OptionGroupArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Rds_OptionGroup__ctor_System_String_Pulumi_Aws_Rds_OptionGroupArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Rds.OptionGroup.#ctor(System.String,Pulumi.Aws.Rds.OptionGroupArgs,Pulumi.CustomResourceOptions)">OptionGroup(String, OptionGroupArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a OptionGroup resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OptionGroup(string name, OptionGroupArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public OptionGroup(string name, OptionGroupArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,7 +215,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -138,7 +225,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/OptionGroup.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/OptionGroup.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_OptionGroup_Arn_" data-uid="Pulumi.Aws.Rds.OptionGroup.Arn*"></a>
   <h4 id="Pulumi_Aws_Rds_OptionGroup_Arn" data-uid="Pulumi.Aws.Rds.OptionGroup.Arn">Arn</h4>
@@ -159,13 +246,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/OptionGroup.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/OptionGroup.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_OptionGroup_EngineName_" data-uid="Pulumi.Aws.Rds.OptionGroup.EngineName*"></a>
   <h4 id="Pulumi_Aws_Rds_OptionGroup_EngineName" data-uid="Pulumi.Aws.Rds.OptionGroup.EngineName">EngineName</h4>
@@ -186,13 +273,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/OptionGroup.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/OptionGroup.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_OptionGroup_MajorEngineVersion_" data-uid="Pulumi.Aws.Rds.OptionGroup.MajorEngineVersion*"></a>
   <h4 id="Pulumi_Aws_Rds_OptionGroup_MajorEngineVersion" data-uid="Pulumi.Aws.Rds.OptionGroup.MajorEngineVersion">MajorEngineVersion</h4>
@@ -213,13 +300,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/OptionGroup.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/OptionGroup.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_OptionGroup_Name_" data-uid="Pulumi.Aws.Rds.OptionGroup.Name*"></a>
   <h4 id="Pulumi_Aws_Rds_OptionGroup_Name" data-uid="Pulumi.Aws.Rds.OptionGroup.Name">Name</h4>
@@ -240,13 +327,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/OptionGroup.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/OptionGroup.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_OptionGroup_NamePrefix_" data-uid="Pulumi.Aws.Rds.OptionGroup.NamePrefix*"></a>
   <h4 id="Pulumi_Aws_Rds_OptionGroup_NamePrefix" data-uid="Pulumi.Aws.Rds.OptionGroup.NamePrefix">NamePrefix</h4>
@@ -267,13 +354,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/OptionGroup.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/OptionGroup.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_OptionGroup_OptionGroupDescription_" data-uid="Pulumi.Aws.Rds.OptionGroup.OptionGroupDescription*"></a>
   <h4 id="Pulumi_Aws_Rds_OptionGroup_OptionGroupDescription" data-uid="Pulumi.Aws.Rds.OptionGroup.OptionGroupDescription">OptionGroupDescription</h4>
@@ -294,13 +381,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/OptionGroup.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/OptionGroup.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_OptionGroup_Options_" data-uid="Pulumi.Aws.Rds.OptionGroup.Options*"></a>
   <h4 id="Pulumi_Aws_Rds_OptionGroup_Options" data-uid="Pulumi.Aws.Rds.OptionGroup.Options">Options</h4>
@@ -321,22 +408,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Rds.Outputs.OptionGroupOption.html">OptionGroupOption</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Rds.Outputs.OptionGroupOption.html">OptionGroupOption</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/OptionGroup.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/OptionGroup.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_OptionGroup_Tags_" data-uid="Pulumi.Aws.Rds.OptionGroup.Tags*"></a>
   <h4 id="Pulumi_Aws_Rds_OptionGroup_Tags" data-uid="Pulumi.Aws.Rds.OptionGroup.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -348,7 +435,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -356,17 +443,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/OptionGroup.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/OptionGroup.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_OptionGroup_Get_" data-uid="Pulumi.Aws.Rds.OptionGroup.Get*"></a>
-  <h4 id="Pulumi_Aws_Rds_OptionGroup_Get_System_String_Input_System_String__Pulumi_Aws_Rds_OptionGroupState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Rds.OptionGroup.Get(System.String,Input{System.String},Pulumi.Aws.Rds.OptionGroupState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, OptionGroupState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Rds_OptionGroup_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Rds_OptionGroupState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Rds.OptionGroup.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Rds.OptionGroupState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, OptionGroupState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing OptionGroup resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OptionGroup Get(string name, Input&lt;string&gt; id, OptionGroupState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static OptionGroup Get(string name, Input&lt;string&gt; id, OptionGroupState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -385,7 +472,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -397,7 +484,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -426,7 +513,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/OptionGroup.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/OptionGroup.cs/#L74" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

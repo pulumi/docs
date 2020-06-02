@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetRegion
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -111,12 +111,31 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/GetRegion.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/GetRegion.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Linode_GetRegion_InvokeAsync_" data-uid="Pulumi.Linode.GetRegion.InvokeAsync*"></a>
   <h4 id="Pulumi_Linode_GetRegion_InvokeAsync_Pulumi_Linode_GetRegionArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Linode.GetRegion.InvokeAsync(Pulumi.Linode.GetRegionArgs,Pulumi.InvokeOptions)">InvokeAsync(GetRegionArgs, InvokeOptions)</h4>
-  <div class="markdown level1 summary"><p><code>linode..getRegion</code> provides details about a specific Linode region.</p>
-<p>{{% examples %}}
+  <div class="markdown level1 summary"><p><code>linode..getRegion</code> provides details about a specific Linode region. See all regions <a href="https://api.linode.com/v4/regions">here</a>.</p>
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<p>The following example shows how the resource might be used to obtain additional information about a Linode region.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var region = Output.Create(Linode.GetRegion.InvokeAsync(new Linode.GetRegionArgs
+    {
+        Id = &amp;quot;us-east&amp;quot;,
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>

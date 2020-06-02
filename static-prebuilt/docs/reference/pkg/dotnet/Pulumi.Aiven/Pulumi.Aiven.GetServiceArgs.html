@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetServiceArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,18 +76,47 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GetServiceArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html">InvokeArgs</a></div>
+    <div class="level3"><span class="xref">GetServiceArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs_Empty">InvokeArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aiven.html">Pulumi.Aiven</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aiven.dll</h6>
   <h5 id="Pulumi_Aiven_GetServiceArgs_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetServiceArgs : ResourceArgs</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetServiceArgs : InvokeArgs</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs__ctor_" data-uid="Pulumi.Aiven.GetServiceArgs.#ctor*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs__ctor" data-uid="Pulumi.Aiven.GetServiceArgs.#ctor">GetServiceArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_Cassandra_" data-uid="Pulumi.Aiven.GetServiceArgs.Cassandra*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_Cassandra" data-uid="Pulumi.Aiven.GetServiceArgs.Cassandra">Cassandra</h4>
@@ -108,7 +137,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceCassandraArgs&gt;? Cassandra { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceCassandraArgs Cassandra { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,13 +149,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceCassandraArgs.html">GetServiceCassandraArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceCassandraArgs.html">GetServiceCassandraArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_CassandraUserConfig_" data-uid="Pulumi.Aiven.GetServiceArgs.CassandraUserConfig*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_CassandraUserConfig" data-uid="Pulumi.Aiven.GetServiceArgs.CassandraUserConfig">CassandraUserConfig</h4>
@@ -134,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceCassandraUserConfigArgs&gt;? CassandraUserConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceCassandraUserConfigArgs CassandraUserConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceCassandraUserConfigArgs.html">GetServiceCassandraUserConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceCassandraUserConfigArgs.html">GetServiceCassandraUserConfigArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_CloudName_" data-uid="Pulumi.Aiven.GetServiceArgs.CloudName*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_CloudName" data-uid="Pulumi.Aiven.GetServiceArgs.CloudName">CloudName</h4>
@@ -160,7 +189,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CloudName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string CloudName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,13 +201,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_Components_" data-uid="Pulumi.Aiven.GetServiceArgs.Components*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_Components" data-uid="Pulumi.Aiven.GetServiceArgs.Components">Components</h4>
@@ -186,7 +215,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;GetServiceComponentsArgs&gt; Components { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;GetServiceComponentArgs&gt; Components { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,13 +227,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceComponentsArgs.html">GetServiceComponentsArgs</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceComponentArgs.html">GetServiceComponentArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_Elasticsearch_" data-uid="Pulumi.Aiven.GetServiceArgs.Elasticsearch*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_Elasticsearch" data-uid="Pulumi.Aiven.GetServiceArgs.Elasticsearch">Elasticsearch</h4>
@@ -212,7 +241,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceElasticsearchArgs&gt;? Elasticsearch { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceElasticsearchArgs Elasticsearch { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,13 +253,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceElasticsearchArgs.html">GetServiceElasticsearchArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceElasticsearchArgs.html">GetServiceElasticsearchArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_ElasticsearchUserConfig_" data-uid="Pulumi.Aiven.GetServiceArgs.ElasticsearchUserConfig*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_ElasticsearchUserConfig" data-uid="Pulumi.Aiven.GetServiceArgs.ElasticsearchUserConfig">ElasticsearchUserConfig</h4>
@@ -238,7 +267,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceElasticsearchUserConfigArgs&gt;? ElasticsearchUserConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceElasticsearchUserConfigArgs ElasticsearchUserConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,13 +279,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceElasticsearchUserConfigArgs.html">GetServiceElasticsearchUserConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceElasticsearchUserConfigArgs.html">GetServiceElasticsearchUserConfigArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_Grafana_" data-uid="Pulumi.Aiven.GetServiceArgs.Grafana*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_Grafana" data-uid="Pulumi.Aiven.GetServiceArgs.Grafana">Grafana</h4>
@@ -264,7 +293,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceGrafanaArgs&gt;? Grafana { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceGrafanaArgs Grafana { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,13 +305,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceGrafanaArgs.html">GetServiceGrafanaArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceGrafanaArgs.html">GetServiceGrafanaArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_GrafanaUserConfig_" data-uid="Pulumi.Aiven.GetServiceArgs.GrafanaUserConfig*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_GrafanaUserConfig" data-uid="Pulumi.Aiven.GetServiceArgs.GrafanaUserConfig">GrafanaUserConfig</h4>
@@ -290,7 +319,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceGrafanaUserConfigArgs&gt;? GrafanaUserConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceGrafanaUserConfigArgs GrafanaUserConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,13 +331,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigArgs.html">GetServiceGrafanaUserConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceGrafanaUserConfigArgs.html">GetServiceGrafanaUserConfigArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_Influxdb_" data-uid="Pulumi.Aiven.GetServiceArgs.Influxdb*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_Influxdb" data-uid="Pulumi.Aiven.GetServiceArgs.Influxdb">Influxdb</h4>
@@ -316,7 +345,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceInfluxdbArgs&gt;? Influxdb { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceInfluxdbArgs Influxdb { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,13 +357,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceInfluxdbArgs.html">GetServiceInfluxdbArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceInfluxdbArgs.html">GetServiceInfluxdbArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_InfluxdbUserConfig_" data-uid="Pulumi.Aiven.GetServiceArgs.InfluxdbUserConfig*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_InfluxdbUserConfig" data-uid="Pulumi.Aiven.GetServiceArgs.InfluxdbUserConfig">InfluxdbUserConfig</h4>
@@ -342,7 +371,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceInfluxdbUserConfigArgs&gt;? InfluxdbUserConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceInfluxdbUserConfigArgs InfluxdbUserConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -354,13 +383,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceInfluxdbUserConfigArgs.html">GetServiceInfluxdbUserConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceInfluxdbUserConfigArgs.html">GetServiceInfluxdbUserConfigArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_Kafka_" data-uid="Pulumi.Aiven.GetServiceArgs.Kafka*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_Kafka" data-uid="Pulumi.Aiven.GetServiceArgs.Kafka">Kafka</h4>
@@ -368,7 +397,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceKafkaArgs&gt;? Kafka { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceKafkaArgs Kafka { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -380,13 +409,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceKafkaArgs.html">GetServiceKafkaArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceKafkaArgs.html">GetServiceKafkaArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_KafkaConnect_" data-uid="Pulumi.Aiven.GetServiceArgs.KafkaConnect*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_KafkaConnect" data-uid="Pulumi.Aiven.GetServiceArgs.KafkaConnect">KafkaConnect</h4>
@@ -394,7 +423,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceKafkaConnectArgs&gt;? KafkaConnect { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceKafkaConnectArgs KafkaConnect { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -406,13 +435,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceKafkaConnectArgs.html">GetServiceKafkaConnectArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceKafkaConnectArgs.html">GetServiceKafkaConnectArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_KafkaConnectUserConfig_" data-uid="Pulumi.Aiven.GetServiceArgs.KafkaConnectUserConfig*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_KafkaConnectUserConfig" data-uid="Pulumi.Aiven.GetServiceArgs.KafkaConnectUserConfig">KafkaConnectUserConfig</h4>
@@ -420,7 +449,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceKafkaConnectUserConfigArgs&gt;? KafkaConnectUserConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceKafkaConnectUserConfigArgs KafkaConnectUserConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -432,13 +461,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceKafkaConnectUserConfigArgs.html">GetServiceKafkaConnectUserConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceKafkaConnectUserConfigArgs.html">GetServiceKafkaConnectUserConfigArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_KafkaUserConfig_" data-uid="Pulumi.Aiven.GetServiceArgs.KafkaUserConfig*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_KafkaUserConfig" data-uid="Pulumi.Aiven.GetServiceArgs.KafkaUserConfig">KafkaUserConfig</h4>
@@ -446,7 +475,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceKafkaUserConfigArgs&gt;? KafkaUserConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceKafkaUserConfigArgs KafkaUserConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -458,13 +487,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceKafkaUserConfigArgs.html">GetServiceKafkaUserConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceKafkaUserConfigArgs.html">GetServiceKafkaUserConfigArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_MaintenanceWindowDow_" data-uid="Pulumi.Aiven.GetServiceArgs.MaintenanceWindowDow*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_MaintenanceWindowDow" data-uid="Pulumi.Aiven.GetServiceArgs.MaintenanceWindowDow">MaintenanceWindowDow</h4>
@@ -472,7 +501,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MaintenanceWindowDow { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string MaintenanceWindowDow { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -484,13 +513,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_MaintenanceWindowTime_" data-uid="Pulumi.Aiven.GetServiceArgs.MaintenanceWindowTime*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_MaintenanceWindowTime" data-uid="Pulumi.Aiven.GetServiceArgs.MaintenanceWindowTime">MaintenanceWindowTime</h4>
@@ -498,7 +527,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MaintenanceWindowTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string MaintenanceWindowTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -510,13 +539,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_Mysql_" data-uid="Pulumi.Aiven.GetServiceArgs.Mysql*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_Mysql" data-uid="Pulumi.Aiven.GetServiceArgs.Mysql">Mysql</h4>
@@ -524,7 +553,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceMysqlArgs&gt;? Mysql { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceMysqlArgs Mysql { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -536,13 +565,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceMysqlArgs.html">GetServiceMysqlArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceMysqlArgs.html">GetServiceMysqlArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_MysqlUserConfig_" data-uid="Pulumi.Aiven.GetServiceArgs.MysqlUserConfig*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_MysqlUserConfig" data-uid="Pulumi.Aiven.GetServiceArgs.MysqlUserConfig">MysqlUserConfig</h4>
@@ -550,7 +579,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceMysqlUserConfigArgs&gt;? MysqlUserConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceMysqlUserConfigArgs MysqlUserConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -562,13 +591,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceMysqlUserConfigArgs.html">GetServiceMysqlUserConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceMysqlUserConfigArgs.html">GetServiceMysqlUserConfigArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_Pg_" data-uid="Pulumi.Aiven.GetServiceArgs.Pg*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_Pg" data-uid="Pulumi.Aiven.GetServiceArgs.Pg">Pg</h4>
@@ -576,7 +605,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServicePgArgs&gt;? Pg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServicePgArgs Pg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -588,13 +617,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServicePgArgs.html">GetServicePgArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServicePgArgs.html">GetServicePgArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_PgUserConfig_" data-uid="Pulumi.Aiven.GetServiceArgs.PgUserConfig*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_PgUserConfig" data-uid="Pulumi.Aiven.GetServiceArgs.PgUserConfig">PgUserConfig</h4>
@@ -602,7 +631,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServicePgUserConfigArgs&gt;? PgUserConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServicePgUserConfigArgs PgUserConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -614,13 +643,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServicePgUserConfigArgs.html">GetServicePgUserConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServicePgUserConfigArgs.html">GetServicePgUserConfigArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_Plan_" data-uid="Pulumi.Aiven.GetServiceArgs.Plan*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_Plan" data-uid="Pulumi.Aiven.GetServiceArgs.Plan">Plan</h4>
@@ -628,7 +657,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Plan { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Plan { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -640,13 +669,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_Project_" data-uid="Pulumi.Aiven.GetServiceArgs.Project*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_Project" data-uid="Pulumi.Aiven.GetServiceArgs.Project">Project</h4>
@@ -654,7 +683,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -666,13 +695,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_ProjectVpcId_" data-uid="Pulumi.Aiven.GetServiceArgs.ProjectVpcId*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_ProjectVpcId" data-uid="Pulumi.Aiven.GetServiceArgs.ProjectVpcId">ProjectVpcId</h4>
@@ -680,7 +709,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProjectVpcId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ProjectVpcId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -692,13 +721,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_Redis_" data-uid="Pulumi.Aiven.GetServiceArgs.Redis*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_Redis" data-uid="Pulumi.Aiven.GetServiceArgs.Redis">Redis</h4>
@@ -706,7 +735,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceRedisArgs&gt;? Redis { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceRedisArgs Redis { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -718,13 +747,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceRedisArgs.html">GetServiceRedisArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceRedisArgs.html">GetServiceRedisArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_RedisUserConfig_" data-uid="Pulumi.Aiven.GetServiceArgs.RedisUserConfig*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_RedisUserConfig" data-uid="Pulumi.Aiven.GetServiceArgs.RedisUserConfig">RedisUserConfig</h4>
@@ -732,7 +761,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;GetServiceRedisUserConfigArgs&gt;? RedisUserConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GetServiceRedisUserConfigArgs RedisUserConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -744,13 +773,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceRedisUserConfigArgs.html">GetServiceRedisUserConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Aiven.Inputs.GetServiceRedisUserConfigArgs.html">GetServiceRedisUserConfigArgs</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_ServiceHost_" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceHost*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_ServiceHost" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceHost">ServiceHost</h4>
@@ -758,7 +787,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServiceHost { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ServiceHost { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -770,13 +799,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_ServiceIntegrations_" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceIntegrations*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_ServiceIntegrations" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceIntegrations">ServiceIntegrations</h4>
@@ -784,7 +813,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;GetServiceServiceIntegrationsArgs&gt; ServiceIntegrations { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;GetServiceServiceIntegrationArgs&gt; ServiceIntegrations { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -796,13 +825,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceServiceIntegrationsArgs.html">GetServiceServiceIntegrationsArgs</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Pulumi.Aiven.Inputs.GetServiceServiceIntegrationArgs.html">GetServiceServiceIntegrationArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_ServiceName_" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceName*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_ServiceName" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceName">ServiceName</h4>
@@ -810,7 +839,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServiceName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ServiceName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -822,13 +851,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_ServicePassword_" data-uid="Pulumi.Aiven.GetServiceArgs.ServicePassword*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_ServicePassword" data-uid="Pulumi.Aiven.GetServiceArgs.ServicePassword">ServicePassword</h4>
@@ -836,7 +865,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServicePassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ServicePassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -848,13 +877,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_ServicePort_" data-uid="Pulumi.Aiven.GetServiceArgs.ServicePort*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_ServicePort" data-uid="Pulumi.Aiven.GetServiceArgs.ServicePort">ServicePort</h4>
@@ -862,7 +891,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? ServicePort { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int? ServicePort { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -874,13 +903,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_ServiceType_" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceType*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_ServiceType" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceType">ServiceType</h4>
@@ -888,7 +917,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServiceType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ServiceType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -900,13 +929,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_ServiceUri_" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceUri*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_ServiceUri" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceUri">ServiceUri</h4>
@@ -914,7 +943,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServiceUri { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ServiceUri { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -926,13 +955,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_ServiceUsername_" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceUsername*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_ServiceUsername" data-uid="Pulumi.Aiven.GetServiceArgs.ServiceUsername">ServiceUsername</h4>
@@ -940,7 +969,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServiceUsername { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ServiceUsername { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -952,13 +981,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_State_" data-uid="Pulumi.Aiven.GetServiceArgs.State*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_State" data-uid="Pulumi.Aiven.GetServiceArgs.State">State</h4>
@@ -966,7 +995,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? State { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string State { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -978,13 +1007,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Aiven_GetServiceArgs_TerminationProtection_" data-uid="Pulumi.Aiven.GetServiceArgs.TerminationProtection*"></a>
   <h4 id="Pulumi_Aiven_GetServiceArgs_TerminationProtection" data-uid="Pulumi.Aiven.GetServiceArgs.TerminationProtection">TerminationProtection</h4>
@@ -992,7 +1021,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? TerminationProtection { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool? TerminationProtection { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1004,7 +1033,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1016,7 +1045,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aiven/blob/717f7c80a8cfca406526446c5ae81b0b29669f77/sdk/dotnet/GetService.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aiven/blob/38d64bbfddebf8e6039218c006839fe03f58c521/sdk/dotnet/GetService.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

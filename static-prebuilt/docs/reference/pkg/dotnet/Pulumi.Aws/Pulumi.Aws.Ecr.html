@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Ecr
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -102,6 +102,83 @@
 <blockquote>
 <p><strong>NOTE:</strong> The AWS ECR API seems to reorder rules based on <code>rulePriority</code>. If you define multiple rules that are not sorted in ascending <code>rulePriority</code> order in the this provider code, the resource will be flagged for recreation every deployment.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="policy-on-untagged-image">Policy on untagged image</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.Ecr.Repository(&amp;quot;foo&amp;quot;, new Aws.Ecr.RepositoryArgs
+    {
+    });
+    var foopolicy = new Aws.Ecr.LifecyclePolicy(&amp;quot;foopolicy&amp;quot;, new Aws.Ecr.LifecyclePolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;rules&amp;quot;&amp;quot;: [
+    {
+        &amp;quot;&amp;quot;rulePriority&amp;quot;&amp;quot;: 1,
+        &amp;quot;&amp;quot;description&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Expire images older than 14 days&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;selection&amp;quot;&amp;quot;: {
+            &amp;quot;&amp;quot;tagStatus&amp;quot;&amp;quot;: &amp;quot;&amp;quot;untagged&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;countType&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sinceImagePushed&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;countUnit&amp;quot;&amp;quot;: &amp;quot;&amp;quot;days&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;countNumber&amp;quot;&amp;quot;: 14
+        },
+        &amp;quot;&amp;quot;action&amp;quot;&amp;quot;: {
+            &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;expire&amp;quot;&amp;quot;
+        }
+    }
+]
+}
+
+&amp;quot;,
+        Repository = foo.Name,
+    });
+}
+
+}
+</code></pre>
+<h3 id="policy-on-tagged-image">Policy on tagged image</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.Ecr.Repository(&amp;quot;foo&amp;quot;, new Aws.Ecr.RepositoryArgs
+    {
+    });
+    var foopolicy = new Aws.Ecr.LifecyclePolicy(&amp;quot;foopolicy&amp;quot;, new Aws.Ecr.LifecyclePolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;rules&amp;quot;&amp;quot;: [
+    {
+        &amp;quot;&amp;quot;rulePriority&amp;quot;&amp;quot;: 1,
+        &amp;quot;&amp;quot;description&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Keep last 30 images&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;selection&amp;quot;&amp;quot;: {
+            &amp;quot;&amp;quot;tagStatus&amp;quot;&amp;quot;: &amp;quot;&amp;quot;tagged&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;tagPrefixList&amp;quot;&amp;quot;: [&amp;quot;&amp;quot;v&amp;quot;&amp;quot;],
+            &amp;quot;&amp;quot;countType&amp;quot;&amp;quot;: &amp;quot;&amp;quot;imageCountMoreThan&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;countNumber&amp;quot;&amp;quot;: 30
+        },
+        &amp;quot;&amp;quot;action&amp;quot;&amp;quot;: {
+            &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;expire&amp;quot;&amp;quot;
+        }
+    }
+]
+}
+
+&amp;quot;,
+        Repository = foo.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ecr.LifecyclePolicyArgs.html">LifecyclePolicyArgs</a></h4>
       <section></section>
@@ -109,12 +186,79 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecr.Repository.html">Repository</a></h4>
       <section><p>Provides an Elastic Container Registry Repository.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.Ecr.Repository(&amp;quot;foo&amp;quot;, new Aws.Ecr.RepositoryArgs
+    {
+        ImageScanningConfiguration = new Aws.Ecr.Inputs.RepositoryImageScanningConfigurationArgs
+        {
+            ScanOnPush = true,
+        },
+        ImageTagMutability = &amp;quot;MUTABLE&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ecr.RepositoryArgs.html">RepositoryArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecr.RepositoryPolicy.html">RepositoryPolicy</a></h4>
       <section><p>Provides an Elastic Container Registry Repository Policy.</p>
 <p>Note that currently only one policy may be applied to a repository.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.Ecr.Repository(&amp;quot;foo&amp;quot;, new Aws.Ecr.RepositoryArgs
+    {
+    });
+    var foopolicy = new Aws.Ecr.RepositoryPolicy(&amp;quot;foopolicy&amp;quot;, new Aws.Ecr.RepositoryPolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2008-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+    {
+        &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;new policy&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+            &amp;quot;&amp;quot;ecr:GetDownloadUrlForLayer&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:BatchGetImage&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:BatchCheckLayerAvailability&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:PutImage&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:InitiateLayerUpload&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:UploadLayerPart&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:CompleteLayerUpload&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:DescribeRepositories&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:GetRepositoryPolicy&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:ListImages&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:DeleteRepository&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:BatchDeleteImage&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:SetRepositoryPolicy&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;ecr:DeleteRepositoryPolicy&amp;quot;&amp;quot;
+        ]
+    }
+]
+}
+
+&amp;quot;,
+        Repository = foo.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ecr.RepositoryPolicyArgs.html">RepositoryPolicyArgs</a></h4>
       <section></section>

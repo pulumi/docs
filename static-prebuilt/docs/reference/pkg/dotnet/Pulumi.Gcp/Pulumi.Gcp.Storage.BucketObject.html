@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BucketObject
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,12 +77,67 @@ For more information see
 <a href="https://cloud.google.com/storage/docs/key-terms#objects">the official documentation</a>
 and
 <a href="https://cloud.google.com/storage/docs/json_api/v1/objects">API</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var picture = new Gcp.Storage.BucketObject(&amp;quot;picture&amp;quot;, new Gcp.Storage.BucketObjectArgs
+    {
+        Bucket = &amp;quot;image-store&amp;quot;,
+        Source = new FileAsset(&amp;quot;/images/nature/garden-tiger-moth.jpg&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">BucketObject</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">BucketObject</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Storage.html">Pulumi.Gcp.Storage</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -93,16 +148,16 @@ and
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject__ctor_" data-uid="Pulumi.Gcp.Storage.BucketObject.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Storage_BucketObject__ctor_System_String_Pulumi_Gcp_Storage_BucketObjectArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Storage.BucketObject.#ctor(System.String,Pulumi.Gcp.Storage.BucketObjectArgs,System.Nullable{CustomResourceOptions})">BucketObject(String, BucketObjectArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Storage_BucketObject__ctor_System_String_Pulumi_Gcp_Storage_BucketObjectArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.BucketObject.#ctor(System.String,Pulumi.Gcp.Storage.BucketObjectArgs,Pulumi.CustomResourceOptions)">BucketObject(String, BucketObjectArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a BucketObject resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BucketObject(string name, BucketObjectArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public BucketObject(string name, BucketObjectArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,7 +182,7 @@ and
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -137,7 +192,7 @@ and
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_Bucket_" data-uid="Pulumi.Gcp.Storage.BucketObject.Bucket*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_Bucket" data-uid="Pulumi.Gcp.Storage.BucketObject.Bucket">Bucket</h4>
@@ -158,13 +213,13 @@ and
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_CacheControl_" data-uid="Pulumi.Gcp.Storage.BucketObject.CacheControl*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_CacheControl" data-uid="Pulumi.Gcp.Storage.BucketObject.CacheControl">CacheControl</h4>
@@ -174,7 +229,7 @@ directive to specify caching behavior of object data. If omitted and object is a
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CacheControl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CacheControl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,13 +241,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_Content_" data-uid="Pulumi.Gcp.Storage.BucketObject.Content*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_Content" data-uid="Pulumi.Gcp.Storage.BucketObject.Content">Content</h4>
@@ -201,7 +256,7 @@ directive to specify caching behavior of object data. If omitted and object is a
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Content { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Content { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,13 +268,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_ContentDisposition_" data-uid="Pulumi.Gcp.Storage.BucketObject.ContentDisposition*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_ContentDisposition" data-uid="Pulumi.Gcp.Storage.BucketObject.ContentDisposition">ContentDisposition</h4>
@@ -228,7 +283,7 @@ directive to specify caching behavior of object data. If omitted and object is a
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContentDisposition { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContentDisposition { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -240,13 +295,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_ContentEncoding_" data-uid="Pulumi.Gcp.Storage.BucketObject.ContentEncoding*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_ContentEncoding" data-uid="Pulumi.Gcp.Storage.BucketObject.ContentEncoding">ContentEncoding</h4>
@@ -255,7 +310,7 @@ directive to specify caching behavior of object data. If omitted and object is a
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContentEncoding { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContentEncoding { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -267,13 +322,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_ContentLanguage_" data-uid="Pulumi.Gcp.Storage.BucketObject.ContentLanguage*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_ContentLanguage" data-uid="Pulumi.Gcp.Storage.BucketObject.ContentLanguage">ContentLanguage</h4>
@@ -282,7 +337,7 @@ directive to specify caching behavior of object data. If omitted and object is a
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContentLanguage { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContentLanguage { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -294,13 +349,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_ContentType_" data-uid="Pulumi.Gcp.Storage.BucketObject.ContentType*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_ContentType" data-uid="Pulumi.Gcp.Storage.BucketObject.ContentType">ContentType</h4>
@@ -321,13 +376,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_Crc32c_" data-uid="Pulumi.Gcp.Storage.BucketObject.Crc32c*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_Crc32c" data-uid="Pulumi.Gcp.Storage.BucketObject.Crc32c">Crc32c</h4>
@@ -348,13 +403,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_DetectMd5hash_" data-uid="Pulumi.Gcp.Storage.BucketObject.DetectMd5hash*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_DetectMd5hash" data-uid="Pulumi.Gcp.Storage.BucketObject.DetectMd5hash">DetectMd5hash</h4>
@@ -362,7 +417,7 @@ directive to specify caching behavior of object data. If omitted and object is a
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DetectMd5hash { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DetectMd5hash { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -374,13 +429,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_Md5hash_" data-uid="Pulumi.Gcp.Storage.BucketObject.Md5hash*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_Md5hash" data-uid="Pulumi.Gcp.Storage.BucketObject.Md5hash">Md5hash</h4>
@@ -401,13 +456,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_Metadata_" data-uid="Pulumi.Gcp.Storage.BucketObject.Metadata*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_Metadata" data-uid="Pulumi.Gcp.Storage.BucketObject.Metadata">Metadata</h4>
@@ -416,7 +471,7 @@ directive to specify caching behavior of object data. If omitted and object is a
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Metadata { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Metadata { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -428,13 +483,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_Name_" data-uid="Pulumi.Gcp.Storage.BucketObject.Name*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_Name" data-uid="Pulumi.Gcp.Storage.BucketObject.Name">Name</h4>
@@ -455,13 +510,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_OutputName_" data-uid="Pulumi.Gcp.Storage.BucketObject.OutputName*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_OutputName" data-uid="Pulumi.Gcp.Storage.BucketObject.OutputName">OutputName</h4>
@@ -483,13 +538,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_SelfLink_" data-uid="Pulumi.Gcp.Storage.BucketObject.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_SelfLink" data-uid="Pulumi.Gcp.Storage.BucketObject.SelfLink">SelfLink</h4>
@@ -510,13 +565,13 @@ directive to specify caching behavior of object data. If omitted and object is a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_Source_" data-uid="Pulumi.Gcp.Storage.BucketObject.Source*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_Source" data-uid="Pulumi.Gcp.Storage.BucketObject.Source">Source</h4>
@@ -526,7 +581,7 @@ if <code>content</code> is not.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;AssetOrArchive?&gt; Source { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;AssetOrArchive&gt; Source { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -538,13 +593,13 @@ if <code>content</code> is not.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">AssetOrArchive</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="../Pulumi/Pulumi.AssetOrArchive.html">AssetOrArchive</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_StorageClass_" data-uid="Pulumi.Gcp.Storage.BucketObject.StorageClass*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketObject_StorageClass" data-uid="Pulumi.Gcp.Storage.BucketObject.StorageClass">StorageClass</h4>
@@ -567,7 +622,7 @@ storage class or to a <a href="https://cloud.google.com/storage/docs/storage-cla
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -575,17 +630,17 @@ storage class or to a <a href="https://cloud.google.com/storage/docs/storage-cla
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketObject_Get_" data-uid="Pulumi.Gcp.Storage.BucketObject.Get*"></a>
-  <h4 id="Pulumi_Gcp_Storage_BucketObject_Get_System_String_Input_System_String__Pulumi_Gcp_Storage_BucketObjectState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Storage.BucketObject.Get(System.String,Input{System.String},Pulumi.Gcp.Storage.BucketObjectState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BucketObjectState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Storage_BucketObject_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Storage_BucketObjectState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.BucketObject.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Storage.BucketObjectState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BucketObjectState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing BucketObject resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BucketObject Get(string name, Input&lt;string&gt; id, BucketObjectState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static BucketObject Get(string name, Input&lt;string&gt; id, BucketObjectState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -604,7 +659,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -616,7 +671,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -645,7 +700,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketObject.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketObject.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

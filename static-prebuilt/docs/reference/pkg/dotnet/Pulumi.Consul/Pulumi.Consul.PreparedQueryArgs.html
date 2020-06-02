@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PreparedQueryArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">PreparedQueryArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">PreparedQueryArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Consul.html">Pulumi.Consul</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Consul.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L260">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L332">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs__ctor_" data-uid="Pulumi.Consul.PreparedQueryArgs.#ctor*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs__ctor" data-uid="Pulumi.Consul.PreparedQueryArgs.#ctor">PreparedQueryArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L162">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_Connect_" data-uid="Pulumi.Consul.PreparedQueryArgs.Connect*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_Connect" data-uid="Pulumi.Consul.PreparedQueryArgs.Connect">Connect</h4>
@@ -111,7 +140,7 @@ prepared query will be matched against the proxy service. Defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Connect { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Connect { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,13 +152,13 @@ prepared query will be matched against the proxy service. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_Datacenter_" data-uid="Pulumi.Consul.PreparedQueryArgs.Datacenter*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_Datacenter" data-uid="Pulumi.Consul.PreparedQueryArgs.Datacenter">Datacenter</h4>
@@ -139,7 +168,7 @@ agent's default datacenter and the datacenter in the provider setup.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Datacenter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Datacenter { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +180,13 @@ agent's default datacenter and the datacenter in the provider setup.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_Dns_" data-uid="Pulumi.Consul.PreparedQueryArgs.Dns*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_Dns" data-uid="Pulumi.Consul.PreparedQueryArgs.Dns">Dns</h4>
@@ -166,7 +195,7 @@ agent's default datacenter and the datacenter in the provider setup.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;PreparedQueryDnsArgs&gt;? Dns { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;PreparedQueryDnsArgs&gt; Dns { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,13 +207,13 @@ agent's default datacenter and the datacenter in the provider setup.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Consul.Inputs.PreparedQueryDnsArgs.html">PreparedQueryDnsArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Consul.Inputs.PreparedQueryDnsArgs.html">PreparedQueryDnsArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_Failover_" data-uid="Pulumi.Consul.PreparedQueryArgs.Failover*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_Failover" data-uid="Pulumi.Consul.PreparedQueryArgs.Failover">Failover</h4>
@@ -194,7 +223,7 @@ nodes are available in the local DC.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;PreparedQueryFailoverArgs&gt;? Failover { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;PreparedQueryFailoverArgs&gt; Failover { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +235,45 @@ nodes are available in the local DC.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Consul.Inputs.PreparedQueryFailoverArgs.html">PreparedQueryFailoverArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Consul.Inputs.PreparedQueryFailoverArgs.html">PreparedQueryFailoverArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L223">View Source</a>
+  </span>
+  <a id="Pulumi_Consul_PreparedQueryArgs_IgnoreCheckIds_" data-uid="Pulumi.Consul.PreparedQueryArgs.IgnoreCheckIds*"></a>
+  <h4 id="Pulumi_Consul_PreparedQueryArgs_IgnoreCheckIds" data-uid="Pulumi.Consul.PreparedQueryArgs.IgnoreCheckIds">IgnoreCheckIds</h4>
+  <div class="markdown level1 summary"><p>Specifies a list of check IDs that should be
+ignored when filtering unhealthy instances. This is mostly useful in an
+emergency or as a temporary measure when a health check is found to be
+unreliable. Being able to ignore it in centrally-defined queries can be
+simpler than de-registering the check as an interim solution until the check
+can be fixed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; IgnoreCheckIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_Name_" data-uid="Pulumi.Consul.PreparedQueryArgs.Name*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_Name" data-uid="Pulumi.Consul.PreparedQueryArgs.Name">Name</h4>
@@ -223,7 +284,7 @@ to configure the query as a catch-all.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +296,13 @@ to configure the query as a catch-all.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L199">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_Near_" data-uid="Pulumi.Consul.PreparedQueryArgs.Near*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_Near" data-uid="Pulumi.Consul.PreparedQueryArgs.Near">Near</h4>
@@ -253,7 +314,7 @@ request.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Near { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Near { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -265,13 +326,42 @@ request.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L206">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L254">View Source</a>
+  </span>
+  <a id="Pulumi_Consul_PreparedQueryArgs_NodeMeta_" data-uid="Pulumi.Consul.PreparedQueryArgs.NodeMeta*"></a>
+  <h4 id="Pulumi_Consul_PreparedQueryArgs_NodeMeta" data-uid="Pulumi.Consul.PreparedQueryArgs.NodeMeta">NodeMeta</h4>
+  <div class="markdown level1 summary"><p>Specifies a list of user-defined key/value pairs that
+will be used for filtering the query results to nodes with the given metadata
+values present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputMap&lt;string&gt; NodeMeta { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L264">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_OnlyPassing_" data-uid="Pulumi.Consul.PreparedQueryArgs.OnlyPassing*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_OnlyPassing" data-uid="Pulumi.Consul.PreparedQueryArgs.OnlyPassing">OnlyPassing</h4>
@@ -281,7 +371,7 @@ return nodes with passing health checks in the result.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? OnlyPassing { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; OnlyPassing { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -293,13 +383,13 @@ return nodes with passing health checks in the result.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L212">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L270">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_Service_" data-uid="Pulumi.Consul.PreparedQueryArgs.Service*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_Service" data-uid="Pulumi.Consul.PreparedQueryArgs.Service">Service</h4>
@@ -320,13 +410,42 @@ return nodes with passing health checks in the result.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L222">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L281">View Source</a>
+  </span>
+  <a id="Pulumi_Consul_PreparedQueryArgs_ServiceMeta_" data-uid="Pulumi.Consul.PreparedQueryArgs.ServiceMeta*"></a>
+  <h4 id="Pulumi_Consul_PreparedQueryArgs_ServiceMeta" data-uid="Pulumi.Consul.PreparedQueryArgs.ServiceMeta">ServiceMeta</h4>
+  <div class="markdown level1 summary"><p>Specifies a list of user-defined key/value pairs
+that will be used for filtering the query results to services with the given
+metadata values present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputMap&lt;string&gt; ServiceMeta { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L294">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_Session_" data-uid="Pulumi.Consul.PreparedQueryArgs.Session*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_Session" data-uid="Pulumi.Consul.PreparedQueryArgs.Session">Session</h4>
@@ -339,7 +458,7 @@ parameter is omitted the query will not expire.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Session { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Session { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,13 +470,13 @@ parameter is omitted the query will not expire.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L229">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L301">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_StoredToken_" data-uid="Pulumi.Consul.PreparedQueryArgs.StoredToken*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_StoredToken" data-uid="Pulumi.Consul.PreparedQueryArgs.StoredToken">StoredToken</h4>
@@ -367,7 +486,7 @@ query. This token will be used by default whenever the query is executed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StoredToken { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; StoredToken { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -379,13 +498,13 @@ query. This token will be used by default whenever the query is executed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L240">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L312">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_Tags_" data-uid="Pulumi.Consul.PreparedQueryArgs.Tags*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_Tags" data-uid="Pulumi.Consul.PreparedQueryArgs.Tags">Tags</h4>
@@ -408,13 +527,13 @@ disallowed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L250">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L322">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_Template_" data-uid="Pulumi.Consul.PreparedQueryArgs.Template*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_Template" data-uid="Pulumi.Consul.PreparedQueryArgs.Template">Template</h4>
@@ -424,7 +543,7 @@ single prepared query respond to many different requests.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;PreparedQueryTemplateArgs&gt;? Template { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;PreparedQueryTemplateArgs&gt; Template { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,13 +555,13 @@ single prepared query respond to many different requests.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Consul.Inputs.PreparedQueryTemplateArgs.html">PreparedQueryTemplateArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Consul.Inputs.PreparedQueryTemplateArgs.html">PreparedQueryTemplateArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L257">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L329">View Source</a>
   </span>
   <a id="Pulumi_Consul_PreparedQueryArgs_Token_" data-uid="Pulumi.Consul.PreparedQueryArgs.Token*"></a>
   <h4 id="Pulumi_Consul_PreparedQueryArgs_Token" data-uid="Pulumi.Consul.PreparedQueryArgs.Token">Token</h4>
@@ -452,7 +571,7 @@ This overrides the token that the agent provides by default.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Token { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Token { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -464,7 +583,7 @@ This overrides the token that the agent provides by default.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -476,7 +595,7 @@ This overrides the token that the agent provides by default.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/PreparedQuery.cs/#L155" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/PreparedQuery.cs/#L182" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

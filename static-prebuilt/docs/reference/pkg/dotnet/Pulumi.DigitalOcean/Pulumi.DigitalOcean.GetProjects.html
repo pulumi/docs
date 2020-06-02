@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetProjects
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,32 +78,128 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetProjects</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
   <h5 id="Pulumi_DigitalOcean_GetProjects_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetProjects : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetProjects</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetProjects.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/GetProjects.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_GetProjects_InvokeAsync_" data-uid="Pulumi.DigitalOcean.GetProjects.InvokeAsync*"></a>
-  <h4 id="Pulumi_DigitalOcean_GetProjects_InvokeAsync_Pulumi_DigitalOcean_GetProjectsArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.DigitalOcean.GetProjects.InvokeAsync(Pulumi.DigitalOcean.GetProjectsArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetProjectsArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_DigitalOcean_GetProjects_InvokeAsync_Pulumi_DigitalOcean_GetProjectsArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.DigitalOcean.GetProjects.InvokeAsync(Pulumi.DigitalOcean.GetProjectsArgs,Pulumi.InvokeOptions)">InvokeAsync(GetProjectsArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Retrieve information about all DigitalOcean projects associated with an account, with
 the ability to filter and sort the results. If no filters are specified, all projects
 will be returned.</p>
 <p>Note: You can use the <a href="https://www.terraform.io/docs/providers/do/d/project.html"><code>digitalocean..Project</code></a> data source to
 obtain metadata about a single project if you already know the <code>id</code> to retrieve or the unique
 <code>name</code> of the project.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<p>Use the <code>filter</code> block with a <code>key</code> string and <code>values</code> list to filter projects.</p>
+<p>For example to find all staging environment projects:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var staging = Output.Create(DigitalOcean.GetProjects.InvokeAsync(new DigitalOcean.GetProjectsArgs
+    {
+        Filters = 
+        {
+            new DigitalOcean.Inputs.GetProjectsFilterArgs
+            {
+                Key = &amp;quot;environment&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;Staging&amp;quot;,
+                },
+            },
+        },
+    }));
+}
+
+}
+</code></pre>
+<p>You can filter on multiple fields and sort the results as well:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var non_default_production = Output.Create(DigitalOcean.GetProjects.InvokeAsync(new DigitalOcean.GetProjectsArgs
+    {
+        Filters = 
+        {
+            new DigitalOcean.Inputs.GetProjectsFilterArgs
+            {
+                Key = &amp;quot;environment&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;Production&amp;quot;,
+                },
+            },
+            new DigitalOcean.Inputs.GetProjectsFilterArgs
+            {
+                Key = &amp;quot;is_default&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;false&amp;quot;,
+                },
+            },
+        },
+        Sorts = 
+        {
+            new DigitalOcean.Inputs.GetProjectsSortArgs
+            {
+                Direction = &amp;quot;asc&amp;quot;,
+                Key = &amp;quot;name&amp;quot;,
+            },
+        },
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetProjectsResult&gt; InvokeAsync(GetProjectsArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetProjectsResult&gt; InvokeAsync(GetProjectsArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +217,7 @@ obtain metadata about a single project if you already know the <code>id</code> t
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -137,7 +233,7 @@ obtain metadata about a single project if you already know the <code>id</code> t
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.DigitalOcean.GetProjectsResult.html">GetProjectsResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.DigitalOcean.GetProjectsResult.html">GetProjectsResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -149,7 +245,7 @@ obtain metadata about a single project if you already know the <code>id</code> t
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetProjects.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/GetProjects.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Organizations
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,6 +87,30 @@ and
 resource must have <code>roles/resourcemanager.folderCreator</code>. See the
 <a href="https://cloud.google.com/resource-manager/docs/access-control-folders">Access Control for Folders Using IAM</a>
 doc for more information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Top-level folder under an organization.
+    var department1 = new Gcp.Organizations.Folder(&amp;quot;department1&amp;quot;, new Gcp.Organizations.FolderArgs
+    {
+        DisplayName = &amp;quot;Department 1&amp;quot;,
+        Parent = &amp;quot;organizations/1234567&amp;quot;,
+    });
+    // Folder nested under another folder.
+    var team_abc = new Gcp.Organizations.Folder(&amp;quot;team-abc&amp;quot;, new Gcp.Organizations.FolderArgs
+    {
+        DisplayName = &amp;quot;Team ABC&amp;quot;,
+        Parent = department1.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.FolderArgs.html">FolderArgs</a></h4>
       <section></section>
@@ -138,6 +162,34 @@ doc for more information.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IamAuditConfig.html">IamAuditConfig</a></h4>
       <section><p>Allows management of audit logging config for a given service for a Google Cloud Platform Organization.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Gcp.Organizations.IamAuditConfig(&amp;quot;config&amp;quot;, new Gcp.Organizations.IamAuditConfigArgs
+    {
+        AuditLogConfigs = 
+        {
+            new Gcp.Organizations.Inputs.IamAuditConfigAuditLogConfigArgs
+            {
+                ExemptedMembers = 
+                {
+                    &amp;quot;user:joebloggs@hashicorp.com&amp;quot;,
+                },
+                LogType = &amp;quot;DATA_READ&amp;quot;,
+            },
+        },
+        OrgId = &amp;quot;your-organization-id&amp;quot;,
+        Service = &amp;quot;allServices&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IamAuditConfigArgs.html">IamAuditConfigArgs</a></h4>
       <section></section>
@@ -156,6 +208,27 @@ what your policy should be.</p>
 Use <code>pulumi import</code> and inspect the `output to ensure
 your existing members are preserved.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Organizations.IAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Organizations.IAMBindingArgs
+    {
+        Members = 
+        {
+            &amp;quot;user:alice@gmail.com&amp;quot;,
+        },
+        OrgId = &amp;quot;123456789&amp;quot;,
+        Role = &amp;quot;roles/browser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IAMBindingArgs.html">IAMBindingArgs</a></h4>
       <section></section>
@@ -174,6 +247,31 @@ after 7 days, but it can take up to 30 more days (i.e. between 7 and 37 days aft
 made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
 by the provider, and new roles cannot share that name.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_custom_role = new Gcp.Organizations.IAMCustomRole(&amp;quot;my-custom-role&amp;quot;, new Gcp.Organizations.IAMCustomRoleArgs
+    {
+        Description = &amp;quot;A description&amp;quot;,
+        OrgId = &amp;quot;123456789&amp;quot;,
+        Permissions = 
+        {
+            &amp;quot;iam.roles.list&amp;quot;,
+            &amp;quot;iam.roles.create&amp;quot;,
+            &amp;quot;iam.roles.delete&amp;quot;,
+        },
+        RoleId = &amp;quot;myCustomRole&amp;quot;,
+        Title = &amp;quot;My Custom Role&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IAMCustomRoleArgs.html">IAMCustomRoleArgs</a></h4>
       <section></section>
@@ -187,6 +285,24 @@ the IAM policy for an existing Google Cloud Platform Organization.</p>
 <code>gcp.organizations.IAMBinding</code> for the <strong>same role</strong> or they will fight over
 what your policy should be.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Organizations.IAMMember(&amp;quot;binding&amp;quot;, new Gcp.Organizations.IAMMemberArgs
+    {
+        Member = &amp;quot;user:alice@gmail.com&amp;quot;,
+        OrgId = &amp;quot;0123456789&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IAMMemberArgs.html">IAMMemberArgs</a></h4>
       <section></section>
@@ -207,6 +323,37 @@ by importing your existing policy, and examining the diff very closely.</p>
 <code>gcp.organizations.IAMMember</code> or <code>gcp.organizations.IAMBinding</code>
 or they will fight over what your policy should be.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Organizations.IAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Organizations.IAMPolicyArgs
+    {
+        OrgId = &amp;quot;123456789&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IAMPolicyArgs.html">IAMPolicyArgs</a></h4>
       <section></section>
@@ -217,6 +364,27 @@ or they will fight over what your policy should be.</p>
 <a href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a> and
 <a href="https://cloud.google.com/resource-manager/reference/rest/v1/organizations/setOrgPolicy">API</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var serialPortPolicy = new Gcp.Organizations.Policy(&amp;quot;serialPortPolicy&amp;quot;, new Gcp.Organizations.PolicyArgs
+    {
+        BooleanPolicy = new Gcp.Organizations.Inputs.PolicyBooleanPolicyArgs
+        {
+            Enforced = true,
+        },
+        Constraint = &amp;quot;compute.disableSerialPortAccess&amp;quot;,
+        OrgId = &amp;quot;123456789&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
@@ -230,6 +398,23 @@ See the <a href="https://cloud.google.com/resource-manager/docs/quickstarts">Org
 resource must have <code>roles/resourcemanager.projectCreator</code>. See the
 <a href="https://cloud.google.com/resource-manager/docs/access-control-org">Access Control for Organizations Using IAM</a>
 doc for more information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myProject = new Gcp.Organizations.Project(&amp;quot;myProject&amp;quot;, new Gcp.Organizations.ProjectArgs
+    {
+        OrgId = &amp;quot;1234567&amp;quot;,
+        ProjectId = &amp;quot;your-project-id&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.ProjectArgs.html">ProjectArgs</a></h4>
       <section></section>

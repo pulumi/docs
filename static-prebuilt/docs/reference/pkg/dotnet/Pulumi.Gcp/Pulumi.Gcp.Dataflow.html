@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Dataflow
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,6 +80,28 @@
       <section><p>Creates a job on Dataflow, which is an implementation of Apache Beam running on Google Compute Engine. For more information see
 the official documentation for
 <a href="https://beam.apache.org">Beam</a> and <a href="https://cloud.google.com/dataflow/">Dataflow</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bigDataJob = new Gcp.Dataflow.Job(&amp;quot;bigDataJob&amp;quot;, new Gcp.Dataflow.JobArgs
+    {
+        Parameters = 
+        {
+            { &amp;quot;baz&amp;quot;, &amp;quot;qux&amp;quot; },
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+        TempGcsLocation = &amp;quot;gs://my-bucket/tmp_dir&amp;quot;,
+        TemplateGcsPath = &amp;quot;gs://my-bucket/templates/template_file&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h2 id="note-on-destroy--apply">Note on &quot;destroy&quot; / &quot;apply&quot;</h2>
 <p>There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other Google resources.</p>
 <p>The Dataflow resource is considered 'existing' while it is in a nonterminal state.  If it reaches a terminal state (e.g. 'FAILED', 'COMPLETE', 'CANCELLED'), it will be recreated on the next 'apply'.  This is as expected for jobs which run continuously, but may surprise users who use this resource for other kinds of Dataflow jobs.</p>

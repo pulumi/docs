@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.SpotInst.Azure
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,358 @@
   </h3>
       <h4><a class="xref" href="Pulumi.SpotInst.Azure.Elastigroup.html">Elastigroup</a></h4>
       <section><p>Provides a Spotinst elastigroup Azure resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testAzureGroup = new SpotInst.Azure.Elastigroup(&amp;quot;testAzureGroup&amp;quot;, new SpotInst.Azure.ElastigroupArgs
+    {
+        DesiredCapacity = 1,
+        HealthCheck = new SpotInst.Azure.Inputs.ElastigroupHealthCheckArgs
+        {
+            AutoHealing = true,
+            GracePeriod = 120,
+            HealthCheckType = &amp;quot;INSTANCE_STATE&amp;quot;,
+        },
+        Images = 
+        {
+            new SpotInst.Azure.Inputs.ElastigroupImageArgs
+            {
+                Marketplace = 
+                {
+
+                    {
+                        { &amp;quot;offer&amp;quot;, &amp;quot;UbuntuServer&amp;quot; },
+                        { &amp;quot;publisher&amp;quot;, &amp;quot;Canonical&amp;quot; },
+                        { &amp;quot;sku&amp;quot;, &amp;quot;16.04-LTS&amp;quot; },
+                    },
+                },
+            },
+        },
+        LoadBalancers = 
+        {
+            new SpotInst.Azure.Inputs.ElastigroupLoadBalancerArgs
+            {
+                AutoWeight = true,
+                BalancerId = &amp;quot;lb-1ee2e3q&amp;quot;,
+                TargetSetId = &amp;quot;ts-3eq&amp;quot;,
+                Type = &amp;quot;MULTAI_TARGET_SET&amp;quot;,
+            },
+        },
+        Login = new SpotInst.Azure.Inputs.ElastigroupLoginArgs
+        {
+            SshPublicKey = &amp;quot;33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==&amp;quot;,
+            UserName = &amp;quot;admin&amp;quot;,
+        },
+        LowPrioritySizes = 
+        {
+            &amp;quot;standard_a1_v1&amp;quot;,
+            &amp;quot;standard_a1_v2&amp;quot;,
+        },
+        ManagedServiceIdentities = 
+        {
+            new SpotInst.Azure.Inputs.ElastigroupManagedServiceIdentityArgs
+            {
+                Name = &amp;quot;example-identity&amp;quot;,
+                ResourceGroupName = &amp;quot;spotinst-azure&amp;quot;,
+            },
+        },
+        MaxSize = 1,
+        MinSize = 0,
+        Network = new SpotInst.Azure.Inputs.ElastigroupNetworkArgs
+        {
+            AssignPublicIp = true,
+            ResourceGroupName = &amp;quot;subnetResourceGroup&amp;quot;,
+            SubnetName = &amp;quot;my-subnet-name&amp;quot;,
+            VirtualNetworkName = &amp;quot;vname&amp;quot;,
+        },
+        OdSizes = 
+        {
+            &amp;quot;standard_a1_v1&amp;quot;,
+            &amp;quot;standard_a1_v2&amp;quot;,
+        },
+        Product = &amp;quot;Linux&amp;quot;,
+        Region = &amp;quot;eastus&amp;quot;,
+        ResourceGroupName = &amp;quot;spotinst-azure&amp;quot;,
+        ScalingDownPolicies = 
+        {
+            new SpotInst.Azure.Inputs.ElastigroupScalingDownPolicyArgs
+            {
+                ActionType = &amp;quot;adjustment&amp;quot;,
+                Adjustment = &amp;quot;MIN(5,10)&amp;quot;,
+                Cooldown = 60,
+                Dimensions = 
+                {
+                    new SpotInst.Azure.Inputs.ElastigroupScalingDownPolicyDimensionArgs
+                    {
+                        Name = &amp;quot;name-1&amp;quot;,
+                        Value = &amp;quot;value-1&amp;quot;,
+                    },
+                },
+                EvaluationPeriods = &amp;quot;10&amp;quot;,
+                MetricName = &amp;quot;CPUUtilization&amp;quot;,
+                Namespace = &amp;quot;Microsoft.Compute&amp;quot;,
+                Operator = &amp;quot;gt&amp;quot;,
+                Period = &amp;quot;60&amp;quot;,
+                PolicyName = &amp;quot;policy-name&amp;quot;,
+                Statistic = &amp;quot;average&amp;quot;,
+                Threshold = 10,
+                Unit = &amp;quot;percent&amp;quot;,
+            },
+        },
+        ScalingUpPolicies = 
+        {
+            new SpotInst.Azure.Inputs.ElastigroupScalingUpPolicyArgs
+            {
+                ActionType = &amp;quot;setMinTarget&amp;quot;,
+                Cooldown = 60,
+                Dimensions = 
+                {
+                    new SpotInst.Azure.Inputs.ElastigroupScalingUpPolicyDimensionArgs
+                    {
+                        Name = &amp;quot;resourceName&amp;quot;,
+                        Value = &amp;quot;resource-name&amp;quot;,
+                    },
+                    new SpotInst.Azure.Inputs.ElastigroupScalingUpPolicyDimensionArgs
+                    {
+                        Name = &amp;quot;resourceGroupName&amp;quot;,
+                        Value = &amp;quot;resource-group-name&amp;quot;,
+                    },
+                },
+                EvaluationPeriods = &amp;quot;10&amp;quot;,
+                MetricName = &amp;quot;CPUUtilization&amp;quot;,
+                MinTargetCapacity = 1,
+                Namespace = &amp;quot;Microsoft.Compute&amp;quot;,
+                Operator = &amp;quot;gt&amp;quot;,
+                Period = &amp;quot;60&amp;quot;,
+                PolicyName = &amp;quot;policy-name&amp;quot;,
+                Statistic = &amp;quot;average&amp;quot;,
+                Threshold = 10,
+                Unit = &amp;quot;percent&amp;quot;,
+            },
+        },
+        ScheduledTasks = 
+        {
+            new SpotInst.Azure.Inputs.ElastigroupScheduledTaskArgs
+            {
+                Adjustment = 2,
+                AdjustmentPercentage = 50,
+                BatchSizePercentage = 33,
+                CronExpression = &amp;quot;* * * * *&amp;quot;,
+                GracePeriod = 300,
+                IsEnabled = true,
+                ScaleMaxCapacity = 8,
+                ScaleMinCapacity = 5,
+                ScaleTargetCapacity = 6,
+                TaskType = &amp;quot;scale&amp;quot;,
+            },
+        },
+        ShutdownScript = &amp;quot;&amp;quot;,
+        Strategy = new SpotInst.Azure.Inputs.ElastigroupStrategyArgs
+        {
+            DrainingTimeout = 300,
+            OdCount = 1,
+        },
+        UserData = &amp;quot;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="load-balancers">Load Balancers</h2>
+<ul>
+<li><code>load_balancers</code> - (Required) Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.</li>
+<li><code>type</code> - (Required) The resource type. Valid values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.</li>
+<li><code>balancer_id</code> - (Required) The balancer ID.</li>
+<li><code>target_set_id</code> - (Required) The scale set ID associated with the load balancer.</li>
+<li><code>auto_weight</code> - (Optional, Default: <code>false</code>)</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;image&quot;&gt;&lt;/a&gt;</p>
+<h2 id="image">Image</h2>
+<ul>
+<li><code>image</code> - (Required) Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.</li>
+<li><code>publisher</code> - (Optional) Image publisher. Required if resource_group_name is not specified.</li>
+<li><code>offer</code> - (Optional) Name of the image to use. Required if publisher is specified.</li>
+<li><code>sku</code> - (Optional) Image's Stock Keeping Unit, which is the specific version of the image. Required if publisher is specified.</li>
+<li><code>resource_group_name</code> - (Optional) Name of Resource Group for custom image. Required if publisher not specified.</li>
+<li><code>image_name</code> - (Optional) Name of the custom image. Required if resource_group_name is specified.</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;health-check&quot;&gt;&lt;/a&gt;</p>
+<h2 id="health-check">Health Check</h2>
+<ul>
+<li><code>health_check</code> - (Optional) Describes the health check configuration.</li>
+<li><code>health_check_type</code> - (Optional) Health check used to validate VM health. Valid values: “INSTANCE_STATE”.</li>
+<li><code>grace_period</code> - (Optional) Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.</li>
+<li><code>auto_healing</code> - (Optional) Enable auto-healing of unhealthy VMs.</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;network&quot;&gt;&lt;/a&gt;</p>
+<h2 id="network">Network</h2>
+<ul>
+<li><code>network</code> - (Required) Defines the Virtual Network and Subnet for your Elastigroup.</li>
+<li><code>virtual_network_name</code> - (Required) Name of Vnet.</li>
+<li><code>subnet_name</code> - (Required) ID of subnet.</li>
+<li><code>resource_group_name</code> - (Required) Vnet Resource Group Name.</li>
+<li><code>assign_public_up</code> - (Optional, Default: <code>false</code>) Assign a public IP to each VM in the Elastigroup.</li>
+<li><code>additional_ip_configs</code> - (Optional) Array of additional IP configuration objects.</li>
+<li><code>name</code> - (Required) The IP configuration name.</li>
+<li><code>private_ip_version</code> - (Optional) Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: <code>IPv4</code>, <code>IPv6</code>.</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;login&quot;&gt;&lt;/a&gt;</p>
+<h2 id="login">Login</h2>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;login&quot;&gt;&lt;/a&gt;</p>
+<h2 id="login-1">Login</h2>
+<ul>
+<li><code>login</code> - (Required) Describes the login configuration.</li>
+<li><code>user_name</code> - (Required) Set admin access for accessing your VMs.</li>
+<li><code>ssh_public_key</code> - (Optional) SSH for admin access to Linux VMs. Required for Linux product types.</li>
+<li><code>password</code> - (Optional) Password for admin access to Windows VMs. Required for Windows product types.</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;scaling-policy&quot;&gt;&lt;/a&gt;</p>
+<h2 id="scheduling">Scheduling</h2>
+<ul>
+<li><code>scheduled_task</code> - (Optional) Describes the configuration of one or more scheduled tasks.</li>
+<li><code>is_enabled</code> - (Optional, Default: <code>true</code>) Describes whether the task is enabled. When true the task should run when false it should not run.</li>
+<li><code>cron_expression</code> - (Required) A valid cron expression (<code>* * * * *</code>). The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script.</li>
+<li><code>task_type</code> - (Required) The task type to run. Valid Values: <code>backup_ami</code>, <code>scale</code>, <code>scaleUp</code>, <code>roll</code>, <code>statefulUpdateCapacity</code>, <code>statefulRecycle</code>.</li>
+<li><code>scale_min_capacity</code> - (Optional) The min capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.</li>
+<li><code>scale_max_capacity</code> - (Optional) The max capacity of the group. Required when ‘task_type' is ‘scale'.</li>
+<li><code>scale_target_capacity</code> - (Optional) The target capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.</li>
+<li><code>adjustment</code> - (Optional) The number of instances to add/remove to/from the target capacity when scale is needed.</li>
+<li><code>adjustment_percentage</code> - (Optional) The percent of instances to add/remove to/from the target capacity when scale is needed.</li>
+<li><code>batch_size_percentage</code> - (Optional) The percentage size of each batch in the scheduled deployment roll. Required when the 'task_type' is 'roll'.</li>
+<li><code>grace_period</code> - (Optional) The time to allow instances to become healthy.</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;update-policy&quot;&gt;&lt;/a&gt;</p>
+<h2 id="update-policy">Update Policy</h2>
+<ul>
+<li><p><code>update_policy</code> - (Optional)</p>
+</li>
+<li><p><code>should_roll</code> - (Required) Sets the enablement of the roll option.</p>
+</li>
+<li><p><code>roll_config</code> - (Required) While used, you can control whether the group should perform a deployment after an update to the configuration.</p>
+<ul>
+<li><code>batch_size_percentage</code> - (Required) Sets the percentage of the instances to deploy in each batch.</li>
+<li><code>health_check_type</code> - (Optional) Sets the health check type to use. Valid values: <code>&amp;quot;INSTANCE_STATE&amp;quot;</code>, <code>&amp;quot;NONE&amp;quot;</code>.</li>
+<li><code>grace_period</code> - (Optional) Sets the grace period for new instances to become healthy.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;third-party-integrations&quot;&gt;&lt;/a&gt;</p>
+<h2 id="third-party-integrations">Third-Party Integrations</h2>
+<ul>
+<li><code>integration_kubernetes</code> - (Optional) Describes the <a href="https://kubernetes.io/">Kubernetes</a> integration.</li>
+<li><code>cluster_identifier</code> - (Required) The cluster ID.</li>
+</ul>
+<p>Usage:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<ul>
+<li><code>integration_multai_runtime</code> - (Optional) Describes the <a href="https://spotinst.com/">Multai Runtime</a> integration.</li>
+<li><code>deployment_id</code> - (Optional) The deployment id you want to get</li>
+</ul>
+<p>Usage:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SpotInst.Azure.ElastigroupArgs.html">ElastigroupArgs</a></h4>
       <section></section>
