@@ -1,7 +1,6 @@
 ---
 title: "AWS Tutorials"
-meta_desc: A collection of tutorials that highlight complete end-to-end scenarios when
-           using the Amazon Web Services (AWS) platform.
+meta_desc: The following AWS tutorials highlight the platform using complete end-to-end scenarios.
 linktitle: "AWS"
 menu:
   userguides:
@@ -11,16 +10,16 @@ menu:
 aliases: ["/docs/reference/tutorials/aws/"]
 ---
 
-The following tutorials highlight the AWS platform using complete end-to-end scenarios.
+The following Amazon Web Services (AWS) tutorials highlight the platform using complete end-to-end learning scenarios.
 
 > If this is your first time getting started with Pulumi for AWS, try the
-> easy <a href="{{< relref "/docs/get-started/aws" >}}">Get Started guide</a> first.
-> For a more in-depth information about Pulumi's support for specific AWS services, see the
+> easy <a href="{{< relref "/docs/get-started/aws" >}}">Get Started guide</a> for Pulumi AWS basics before diving in to these AWS tutorials.
+> For more in-depth information about Pulumi's support for specific AWS services, see the
 > [Pulumi AWS User Guide]({{< relref "/docs/guides/crosswalk/aws" >}}).
 >
 > If you are looking to use Kubernetes on AWS, see [the EKS tutorial]({{< relref "../kubernetes/eks" >}}).
 
-## Featured Tutorials
+## Featured AWS Tutorials
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
@@ -80,6 +79,6 @@ The following tutorials highlight the AWS platform using complete end-to-end sce
 {{< chooser language "typescript,python,go,csharp" / >}}
 {{< tutorials-index-aws >}}
 
-If you'd like to see a new tutorial, please [request one](
+If you'd like to see a new AWS tutorial, please [request one](
 https://github.com/pulumi/docs/issues/new?title=New%20AWS%20Tutorial%20Request).
 Pull requests are also welcome!
