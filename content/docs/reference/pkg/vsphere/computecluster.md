@@ -90,7 +90,7 @@ These settings require vSphere 6.5 or higher:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#ComputeCluster">ComputeCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>dpm_threshold=None<span class="p">, </span>drs_advanced_options=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enable_predictive_drs=None<span class="p">, </span>drs_enable_vm_overrides=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>drs_migration_threshold=None<span class="p">, </span>folder=None<span class="p">, </span>force_evacuate_on_destroy=None<span class="p">, </span>ha_admission_control_failover_host_system_ids=None<span class="p">, </span>ha_admission_control_host_failure_tolerance=None<span class="p">, </span>ha_admission_control_performance_tolerance=None<span class="p">, </span>ha_admission_control_policy=None<span class="p">, </span>ha_admission_control_resource_percentage_auto_compute=None<span class="p">, </span>ha_admission_control_resource_percentage_cpu=None<span class="p">, </span>ha_admission_control_resource_percentage_memory=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_cpu=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_memory=None<span class="p">, </span>ha_admission_control_slot_policy_use_explicit_size=None<span class="p">, </span>ha_advanced_options=None<span class="p">, </span>ha_datastore_apd_recovery_action=None<span class="p">, </span>ha_datastore_apd_response=None<span class="p">, </span>ha_datastore_apd_response_delay=None<span class="p">, </span>ha_datastore_pdl_response=None<span class="p">, </span>ha_enabled=None<span class="p">, </span>ha_heartbeat_datastore_ids=None<span class="p">, </span>ha_heartbeat_datastore_policy=None<span class="p">, </span>ha_host_isolation_response=None<span class="p">, </span>ha_host_monitoring=None<span class="p">, </span>ha_vm_component_protection=None<span class="p">, </span>ha_vm_dependency_restart_condition=None<span class="p">, </span>ha_vm_failure_interval=None<span class="p">, </span>ha_vm_maximum_failure_window=None<span class="p">, </span>ha_vm_maximum_resets=None<span class="p">, </span>ha_vm_minimum_uptime=None<span class="p">, </span>ha_vm_monitoring=None<span class="p">, </span>ha_vm_restart_additional_delay=None<span class="p">, </span>ha_vm_restart_priority=None<span class="p">, </span>ha_vm_restart_timeout=None<span class="p">, </span>host_cluster_exit_timeout=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>proactive_ha_automation_level=None<span class="p">, </span>proactive_ha_enabled=None<span class="p">, </span>proactive_ha_moderate_remediation=None<span class="p">, </span>proactive_ha_provider_ids=None<span class="p">, </span>proactive_ha_severe_remediation=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#ComputeCluster">ComputeCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>dpm_threshold=None<span class="p">, </span>drs_advanced_options=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enable_predictive_drs=None<span class="p">, </span>drs_enable_vm_overrides=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>drs_migration_threshold=None<span class="p">, </span>folder=None<span class="p">, </span>force_evacuate_on_destroy=None<span class="p">, </span>ha_admission_control_failover_host_system_ids=None<span class="p">, </span>ha_admission_control_host_failure_tolerance=None<span class="p">, </span>ha_admission_control_performance_tolerance=None<span class="p">, </span>ha_admission_control_policy=None<span class="p">, </span>ha_admission_control_resource_percentage_auto_compute=None<span class="p">, </span>ha_admission_control_resource_percentage_cpu=None<span class="p">, </span>ha_admission_control_resource_percentage_memory=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_cpu=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_memory=None<span class="p">, </span>ha_admission_control_slot_policy_use_explicit_size=None<span class="p">, </span>ha_advanced_options=None<span class="p">, </span>ha_datastore_apd_recovery_action=None<span class="p">, </span>ha_datastore_apd_response=None<span class="p">, </span>ha_datastore_apd_response_delay=None<span class="p">, </span>ha_datastore_pdl_response=None<span class="p">, </span>ha_enabled=None<span class="p">, </span>ha_heartbeat_datastore_ids=None<span class="p">, </span>ha_heartbeat_datastore_policy=None<span class="p">, </span>ha_host_isolation_response=None<span class="p">, </span>ha_host_monitoring=None<span class="p">, </span>ha_vm_component_protection=None<span class="p">, </span>ha_vm_dependency_restart_condition=None<span class="p">, </span>ha_vm_failure_interval=None<span class="p">, </span>ha_vm_maximum_failure_window=None<span class="p">, </span>ha_vm_maximum_resets=None<span class="p">, </span>ha_vm_minimum_uptime=None<span class="p">, </span>ha_vm_monitoring=None<span class="p">, </span>ha_vm_restart_additional_delay=None<span class="p">, </span>ha_vm_restart_priority=None<span class="p">, </span>ha_vm_restart_timeout=None<span class="p">, </span>host_cluster_exit_timeout=None<span class="p">, </span>host_managed=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>proactive_ha_automation_level=None<span class="p">, </span>proactive_ha_enabled=None<span class="p">, </span>proactive_ha_moderate_remediation=None<span class="p">, </span>proactive_ha_provider_ids=None<span class="p">, </span>proactive_ha_severe_remediation=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -860,14 +860,28 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="hostmanaged_csharp">
+<a href="#hostmanaged_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `host` resource rather than the
+`compute_cluster` resource. Conflicts with: `host_system_ids`.
+>>>>>>> v1.18.3
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="hostsystemids_csharp">
 <a href="#hostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The managed object IDs of
-the hosts to put in the cluster.
+    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+the hosts to put in the cluster. Conflicts with: `host_managed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1568,14 +1582,28 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="hostmanaged_go">
+<a href="#hostmanaged_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `host` resource rather than the
+`compute_cluster` resource. Conflicts with: `host_system_ids`.
+>>>>>>> v1.18.3
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="hostsystemids_go">
 <a href="#hostsystemids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The managed object IDs of
-the hosts to put in the cluster.
+    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+the hosts to put in the cluster. Conflicts with: `host_managed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2276,14 +2304,28 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="hostmanaged_nodejs">
+<a href="#hostmanaged_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `host` resource rather than the
+`compute_cluster` resource. Conflicts with: `host_system_ids`.
+>>>>>>> v1.18.3
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="hostsystemids_nodejs">
 <a href="#hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The managed object IDs of
-the hosts to put in the cluster.
+    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+the hosts to put in the cluster. Conflicts with: `host_managed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2984,14 +3026,28 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="host_managed_python">
+<a href="#host_managed_python" style="color: inherit; text-decoration: inherit;">host_<wbr>managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `host` resource rather than the
+`compute_cluster` resource. Conflicts with: `host_system_ids`.
+>>>>>>> v1.18.3
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="host_system_ids_python">
 <a href="#host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The managed object IDs of
-the hosts to put in the cluster.
+    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+the hosts to put in the cluster. Conflicts with: `host_managed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3229,7 +3285,7 @@ Get an existing ComputeCluster resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>dpm_threshold=None<span class="p">, </span>drs_advanced_options=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enable_predictive_drs=None<span class="p">, </span>drs_enable_vm_overrides=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>drs_migration_threshold=None<span class="p">, </span>folder=None<span class="p">, </span>force_evacuate_on_destroy=None<span class="p">, </span>ha_admission_control_failover_host_system_ids=None<span class="p">, </span>ha_admission_control_host_failure_tolerance=None<span class="p">, </span>ha_admission_control_performance_tolerance=None<span class="p">, </span>ha_admission_control_policy=None<span class="p">, </span>ha_admission_control_resource_percentage_auto_compute=None<span class="p">, </span>ha_admission_control_resource_percentage_cpu=None<span class="p">, </span>ha_admission_control_resource_percentage_memory=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_cpu=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_memory=None<span class="p">, </span>ha_admission_control_slot_policy_use_explicit_size=None<span class="p">, </span>ha_advanced_options=None<span class="p">, </span>ha_datastore_apd_recovery_action=None<span class="p">, </span>ha_datastore_apd_response=None<span class="p">, </span>ha_datastore_apd_response_delay=None<span class="p">, </span>ha_datastore_pdl_response=None<span class="p">, </span>ha_enabled=None<span class="p">, </span>ha_heartbeat_datastore_ids=None<span class="p">, </span>ha_heartbeat_datastore_policy=None<span class="p">, </span>ha_host_isolation_response=None<span class="p">, </span>ha_host_monitoring=None<span class="p">, </span>ha_vm_component_protection=None<span class="p">, </span>ha_vm_dependency_restart_condition=None<span class="p">, </span>ha_vm_failure_interval=None<span class="p">, </span>ha_vm_maximum_failure_window=None<span class="p">, </span>ha_vm_maximum_resets=None<span class="p">, </span>ha_vm_minimum_uptime=None<span class="p">, </span>ha_vm_monitoring=None<span class="p">, </span>ha_vm_restart_additional_delay=None<span class="p">, </span>ha_vm_restart_priority=None<span class="p">, </span>ha_vm_restart_timeout=None<span class="p">, </span>host_cluster_exit_timeout=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>proactive_ha_automation_level=None<span class="p">, </span>proactive_ha_enabled=None<span class="p">, </span>proactive_ha_moderate_remediation=None<span class="p">, </span>proactive_ha_provider_ids=None<span class="p">, </span>proactive_ha_severe_remediation=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>dpm_threshold=None<span class="p">, </span>drs_advanced_options=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enable_predictive_drs=None<span class="p">, </span>drs_enable_vm_overrides=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>drs_migration_threshold=None<span class="p">, </span>folder=None<span class="p">, </span>force_evacuate_on_destroy=None<span class="p">, </span>ha_admission_control_failover_host_system_ids=None<span class="p">, </span>ha_admission_control_host_failure_tolerance=None<span class="p">, </span>ha_admission_control_performance_tolerance=None<span class="p">, </span>ha_admission_control_policy=None<span class="p">, </span>ha_admission_control_resource_percentage_auto_compute=None<span class="p">, </span>ha_admission_control_resource_percentage_cpu=None<span class="p">, </span>ha_admission_control_resource_percentage_memory=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_cpu=None<span class="p">, </span>ha_admission_control_slot_policy_explicit_memory=None<span class="p">, </span>ha_admission_control_slot_policy_use_explicit_size=None<span class="p">, </span>ha_advanced_options=None<span class="p">, </span>ha_datastore_apd_recovery_action=None<span class="p">, </span>ha_datastore_apd_response=None<span class="p">, </span>ha_datastore_apd_response_delay=None<span class="p">, </span>ha_datastore_pdl_response=None<span class="p">, </span>ha_enabled=None<span class="p">, </span>ha_heartbeat_datastore_ids=None<span class="p">, </span>ha_heartbeat_datastore_policy=None<span class="p">, </span>ha_host_isolation_response=None<span class="p">, </span>ha_host_monitoring=None<span class="p">, </span>ha_vm_component_protection=None<span class="p">, </span>ha_vm_dependency_restart_condition=None<span class="p">, </span>ha_vm_failure_interval=None<span class="p">, </span>ha_vm_maximum_failure_window=None<span class="p">, </span>ha_vm_maximum_resets=None<span class="p">, </span>ha_vm_minimum_uptime=None<span class="p">, </span>ha_vm_monitoring=None<span class="p">, </span>ha_vm_restart_additional_delay=None<span class="p">, </span>ha_vm_restart_priority=None<span class="p">, </span>ha_vm_restart_timeout=None<span class="p">, </span>host_cluster_exit_timeout=None<span class="p">, </span>host_managed=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>proactive_ha_automation_level=None<span class="p">, </span>proactive_ha_enabled=None<span class="p">, </span>proactive_ha_moderate_remediation=None<span class="p">, </span>proactive_ha_provider_ids=None<span class="p">, </span>proactive_ha_severe_remediation=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3941,14 +3997,28 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hostmanaged_csharp">
+<a href="#state_hostmanaged_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `host` resource rather than the
+`compute_cluster` resource. Conflicts with: `host_system_ids`.
+>>>>>>> v1.18.3
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_hostsystemids_csharp">
 <a href="#state_hostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The managed object IDs of
-the hosts to put in the cluster.
+    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+the hosts to put in the cluster. Conflicts with: `host_managed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4660,14 +4730,28 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hostmanaged_go">
+<a href="#state_hostmanaged_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `host` resource rather than the
+`compute_cluster` resource. Conflicts with: `host_system_ids`.
+>>>>>>> v1.18.3
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_hostsystemids_go">
 <a href="#state_hostsystemids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The managed object IDs of
-the hosts to put in the cluster.
+    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+the hosts to put in the cluster. Conflicts with: `host_managed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5379,14 +5463,28 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hostmanaged_nodejs">
+<a href="#state_hostmanaged_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `host` resource rather than the
+`compute_cluster` resource. Conflicts with: `host_system_ids`.
+>>>>>>> v1.18.3
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_hostsystemids_nodejs">
 <a href="#state_hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The managed object IDs of
-the hosts to put in the cluster.
+    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+the hosts to put in the cluster. Conflicts with: `host_managed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6098,14 +6196,28 @@ seconds. Default: `3600` (1 hour).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_host_managed_python">
+<a href="#state_host_managed_python" style="color: inherit; text-decoration: inherit;">host_<wbr>managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `host` resource rather than the
+`compute_cluster` resource. Conflicts with: `host_system_ids`.
+>>>>>>> v1.18.3
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_host_system_ids_python">
 <a href="#state_host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The managed object IDs of
-the hosts to put in the cluster.
+    <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
+the hosts to put in the cluster. Conflicts with: `host_managed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
