@@ -198,7 +198,7 @@ const h1 = new vsphere.Host("h1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#Host">Host</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#Host">Host</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster=None<span class="p">, </span>cluster_managed=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -414,7 +414,21 @@ to the host.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
+be added to. This should not be set if `datacenter` is set. Conflicts with:
+`cluster`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustermanaged_csharp">
+<a href="#clustermanaged_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `compute_cluster` resource rather
+than the`host` resource. Conflicts with: `cluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -552,7 +566,21 @@ to the host.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
+be added to. This should not be set if `datacenter` is set. Conflicts with:
+`cluster`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustermanaged_go">
+<a href="#clustermanaged_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `compute_cluster` resource rather
+than the`host` resource. Conflicts with: `cluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -690,7 +718,21 @@ to the host.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
+be added to. This should not be set if `datacenter` is set. Conflicts with:
+`cluster`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustermanaged_nodejs">
+<a href="#clustermanaged_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `compute_cluster` resource rather
+than the`host` resource. Conflicts with: `cluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -828,7 +870,21 @@ to the host.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
+be added to. This should not be set if `datacenter` is set. Conflicts with:
+`cluster`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_managed_python">
+<a href="#cluster_managed_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `compute_cluster` resource rather
+than the`host` resource. Conflicts with: `cluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1013,7 +1069,7 @@ Get an existing Host resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster=None<span class="p">, </span>cluster_managed=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1136,7 +1192,21 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
+be added to. This should not be set if `datacenter` is set. Conflicts with:
+`cluster`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clustermanaged_csharp">
+<a href="#state_clustermanaged_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `compute_cluster` resource rather
+than the`host` resource. Conflicts with: `cluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1274,7 +1344,21 @@ to the host.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
+be added to. This should not be set if `datacenter` is set. Conflicts with:
+`cluster`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clustermanaged_go">
+<a href="#state_clustermanaged_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `compute_cluster` resource rather
+than the`host` resource. Conflicts with: `cluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1412,7 +1496,21 @@ to the host.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
+be added to. This should not be set if `datacenter` is set. Conflicts with:
+`cluster`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clustermanaged_nodejs">
+<a href="#state_clustermanaged_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `compute_cluster` resource rather
+than the`host` resource. Conflicts with: `cluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1550,7 +1648,21 @@ to the host.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
+be added to. This should not be set if `datacenter` is set. Conflicts with:
+`cluster`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cluster_managed_python">
+<a href="#state_cluster_managed_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Can be set to `true` if compute cluster
+membership will be managed through the `compute_cluster` resource rather
+than the`host` resource. Conflicts with: `cluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
