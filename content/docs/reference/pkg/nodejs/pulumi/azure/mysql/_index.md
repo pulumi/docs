@@ -219,7 +219,7 @@ const exampleDatabase = new azure.mysql.Database("exampleDatabase", {
     resourceGroupName: exampleResourceGroup.name,
     serverName: exampleServer.name,
     charset: "utf8",
-    collation: "utf8UnicodeCi",
+    collation: "utf8_unicode_ci",
 });
 ```
 
