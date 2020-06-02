@@ -16,7 +16,7 @@ You’ve containerized your application, and it’s running great on your deskto
 
 ## It’s Dangerous to Go Alone. Take this
 
-Recently, Pulumi engineer [Levi Blackstone](https://twitter.com/levi_blackstone) posted a Twitter thread on why he thinks Pulumi is the best way to build and deploy modern applications on Kubernetes. Levi might be a bit biased, but he makes solid points for using Pulumi with Kubernetes, whether you’re a developer or operator.
+Recently, Pulumi engineer [Levi Blackstone](https://twitter.com/levi_blackstone) posted a [Twitter thread](https://twitter.com/levi_blackstone/status/1265798769242550272) on why he thinks Pulumi is the best way to build and deploy modern applications on Kubernetes. Levi might be a bit biased, but he makes solid points for using Pulumi with Kubernetes, whether you’re a developer or operator.
 
 ![Legend of Pulumipus](dangerous_pulumi.gif)
 
@@ -75,7 +75,21 @@ Pulumi is not just for developers; operators can leverage it to manage Kubernete
 
 - **Use existing YAML manifests** – Many of us already have a pile of YAML Kubernetes definitions to manage. Manage these manifests directly; no conversion needed! Pulumi shows detailed previews and allows you to run arbitrary transformations on the YAML before it is applied.
 
-![YAML manifests](yaml_manifests.jpg)
+```python
+def set_namespace(namespace):
+   def f(obj):
+      if "metadata" in obh:
+         obj["metadata"]["namespace"] = namespace
+      else:
+         obj["metadata"] = {"namespace": namespace}
+   return f
+
+deployment = ConfigFile(
+   "deployment",
+   file_id="nginx-deployment.yaml",
+   transformations=[set_namespace("test)],
+)
+```
 
 - **Helm support** – Pulumi lets you manage Helm charts similarly to our YAML support. It’s common for organizations to fork upstream charts to customize a few values, but this can often be avoided with the use of transformations in Pulumi.
 
