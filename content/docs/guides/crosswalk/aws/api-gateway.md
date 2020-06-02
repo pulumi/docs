@@ -22,7 +22,7 @@ is inexpensive, has no minimum fees, and you only pay for the API calls you rece
 
 ## Overview
 
-Pulumi Crosswalk for Amazon Web Services (AWS) provides better AWS API management through significantly easier ways of programming API Gateway. This includes using
+Pulumi Crosswalk for Amazon Web Services (AWS) provides better AWS API management through significantly easier ways of programming an API Gateway. This includes using
 infrastructure as code techniques for simple, declarative APIs, including easy Lambda-based handlers.
 
 ## Defining an AWS API Gateway Endpoint and Routes
