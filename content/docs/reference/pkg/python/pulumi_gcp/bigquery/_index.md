@@ -227,8 +227,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<blockquote>
+<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">cloud_sql.credential.password</span></code> will be stored in the raw
+state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
 
 <span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DatabaseInstance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
     <span class="n">database_version</span><span class="o">=</span><span class="s2">&quot;POSTGRES_11&quot;</span><span class="p">,</span>
@@ -237,6 +242,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;db&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">pwd</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomPassword</span><span class="p">(</span><span class="s2">&quot;pwd&quot;</span><span class="p">,</span>
+    <span class="n">length</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+    <span class="n">special</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">pwd</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;connection&quot;</span><span class="p">,</span>
     <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;👋&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a riveting description&quot;</span><span class="p">,</span>
@@ -244,11 +255,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;instance_id&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">connection_name</span><span class="p">,</span>
         <span class="s2">&quot;database&quot;</span><span class="p">:</span> <span class="n">db</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;POSTGRES&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;credential&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">password</span><span class="p">,</span>
+        <span class="p">},</span>
     <span class="p">})</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
 
 <span class="n">instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DatabaseInstance</span><span class="p">(</span><span class="s2">&quot;instance&quot;</span><span class="p">,</span>
     <span class="n">database_version</span><span class="o">=</span><span class="s2">&quot;POSTGRES_11&quot;</span><span class="p">,</span>
@@ -257,6 +273,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;db&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">pwd</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomPassword</span><span class="p">(</span><span class="s2">&quot;pwd&quot;</span><span class="p">,</span>
+    <span class="n">length</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+    <span class="n">special</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+    <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">pwd</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;connection&quot;</span><span class="p">,</span>
     <span class="n">connection_id</span><span class="o">=</span><span class="s2">&quot;my-connection&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
@@ -266,6 +288,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;instance_id&quot;</span><span class="p">:</span> <span class="n">instance</span><span class="o">.</span><span class="n">connection_name</span><span class="p">,</span>
         <span class="s2">&quot;database&quot;</span><span class="p">:</span> <span class="n">db</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;POSTGRES&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;credential&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">password</span><span class="p">,</span>
+        <span class="p">},</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -289,6 +315,12 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>cloud_sql</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">credential</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Cloud SQL properties.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password for database.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username for database.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">database</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Database name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cloud SQL instance ID in the form project:location:instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the Cloud SQL database.</p></li>
@@ -298,6 +330,12 @@ If it is not provided, the provider project is used.</p></li>
 <code class="sig-name descname">cloud_sql</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Connection.cloud_sql" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cloud SQL properties.  Structure is documented below.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">credential</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Cloud SQL properties.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Password for database.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Username for database.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">database</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Database name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Cloud SQL instance ID in the form project:location:instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of the Cloud SQL database.</p></li>
@@ -380,6 +418,12 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>cloud_sql</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">credential</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Cloud SQL properties.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password for database.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username for database.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">database</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Database name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cloud SQL instance ID in the form project:location:instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the Cloud SQL database.</p></li>

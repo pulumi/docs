@@ -24,7 +24,7 @@ import * as gcp from "@pulumi/gcp";
 const test = new gcp.compute.InstanceGroup("test", {
     description: "Test instance group",
     zone: "us-central1-a",
-    network: google_compute_network["default"].self_link,
+    network: google_compute_network["default"].id,
 });
 ```
 ```python
@@ -34,7 +34,7 @@ import pulumi_gcp as gcp
 test = gcp.compute.InstanceGroup("test",
     description="Test instance group",
     zone="us-central1-a",
-    network=google_compute_network["default"]["self_link"])
+    network=google_compute_network["default"]["id"])
 ```
 ```csharp
 using Pulumi;
@@ -48,7 +48,7 @@ class MyStack : Stack
         {
             Description = "Test instance group",
             Zone = "us-central1-a",
-            Network = google_compute_network.Default.Self_link,
+            Network = google_compute_network.Default.Id,
         });
     }
 

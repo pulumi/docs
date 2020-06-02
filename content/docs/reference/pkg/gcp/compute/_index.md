@@ -43,6 +43,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="instanceiampolicy" title="InstanceIAMPolicy"><span class="symbol resource"></span>InstanceIAMPolicy</a></li>
     <li><a href="instancetemplate" title="InstanceTemplate"><span class="symbol resource"></span>InstanceTemplate</a></li>
     <li><a href="interconnectattachment" title="InterconnectAttachment"><span class="symbol resource"></span>InterconnectAttachment</a></li>
+    <li><a href="machineimage" title="MachineImage"><span class="symbol resource"></span>MachineImage</a></li>
     <li><a href="managedsslcertificate" title="ManagedSslCertificate"><span class="symbol resource"></span>ManagedSslCertificate</a></li>
     <li><a href="mangedsslcertificate" title="MangedSslCertificate"><span class="symbol resource"></span>MangedSslCertificate</a></li>
     <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
@@ -134,7 +135,7 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.7.1</dd>
+	<dd>3.8.0</dd>
 </dl>
 
 

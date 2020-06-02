@@ -10516,7 +10516,7 @@ and
     <span class="n">can_ip_forward</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">tpl_instance_from_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceFromTemplate</span><span class="p">(</span><span class="s2">&quot;tplInstanceFromTemplate&quot;</span><span class="p">,</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
-    <span class="n">source_instance_template</span><span class="o">=</span><span class="n">tpl_instance_template</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">source_instance_template</span><span class="o">=</span><span class="n">tpl_instance_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">can_ip_forward</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;my_key&quot;</span><span class="p">:</span> <span class="s2">&quot;my_value&quot;</span><span class="p">,</span>
@@ -10794,7 +10794,7 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <span class="n">test</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroup</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test instance group&quot;</span><span class="p">,</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
-    <span class="n">network</span><span class="o">=</span><span class="n">google_compute_network</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">])</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">google_compute_network</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -10803,8 +10803,8 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <span class="n">webservers</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroup</span><span class="p">(</span><span class="s2">&quot;webservers&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test instance group&quot;</span><span class="p">,</span>
     <span class="n">instances</span><span class="o">=</span><span class="p">[</span>
-        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
-        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test2&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="p">],</span>
     <span class="n">named_port</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
@@ -10840,7 +10840,7 @@ as shown in this example to avoid this type of error.</p>
     <span class="p">}])</span>
 <span class="n">staging_group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroup</span><span class="p">(</span><span class="s2">&quot;stagingGroup&quot;</span><span class="p">,</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-c&quot;</span><span class="p">,</span>
-    <span class="n">instances</span><span class="o">=</span><span class="p">[</span><span class="n">staging_vm</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">instances</span><span class="o">=</span><span class="p">[</span><span class="n">staging_vm</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
     <span class="n">named_port</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
@@ -10856,9 +10856,9 @@ as shown in this example to avoid this type of error.</p>
     <span class="n">port_name</span><span class="o">=</span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
     <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTPS&quot;</span><span class="p">,</span>
     <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="n">staging_group</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="n">staging_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
-    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">staging_health</span><span class="o">.</span><span class="n">self_link</span><span class="p">])</span>
+    <span class="n">health_checks</span><span class="o">=</span><span class="p">[</span><span class="n">staging_health</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -11057,16 +11057,16 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
     <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
     <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="p">}],</span>
-    <span class="n">target_pools</span><span class="o">=</span><span class="p">[</span><span class="n">google_compute_target_pool</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">]],</span>
+    <span class="n">target_pools</span><span class="o">=</span><span class="p">[</span><span class="n">google_compute_target_pool</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
     <span class="n">target_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
     <span class="n">named_port</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;customHTTP&quot;</span><span class="p">,</span>
         <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8888</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">auto_healing_policies</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;healthCheck&quot;</span><span class="p">:</span> <span class="n">autohealing</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;healthCheck&quot;</span><span class="p">:</span> <span class="n">autohealing</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;initialDelaySec&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
@@ -11081,11 +11081,11 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
     <span class="n">version</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;appserver&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;appserver-canary&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver-canary&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver-canary&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
             <span class="s2">&quot;target_size&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;fixed&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="p">},</span>
@@ -12403,7 +12403,7 @@ with <code class="docutils literal notranslate"><span class="pre">name_prefix</s
     <span class="n">disk</span><span class="o">=</span><span class="p">[{}],</span>
     <span class="n">network_interface</span><span class="o">=</span><span class="p">[{}])</span>
 <span class="n">instance_group_manager</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;instanceGroupManager&quot;</span><span class="p">,</span>
-    <span class="n">instance_template</span><span class="o">=</span><span class="n">instance_template</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">instance_template</span><span class="o">=</span><span class="n">instance_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;instance-group-manager&quot;</span><span class="p">,</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
     <span class="n">target_size</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
@@ -13503,6 +13503,141 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gcp.compute.MachineImage">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">MachineImage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.MachineImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a MachineImage resource. Machine images store all the configuration,
+metadata, permissions, and data from one or more disks required to create a
+Virtual machine (VM) instance.</p>
+<p>To get more information about MachineImage, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/machineImages">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/compute/docs/machine-images">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">vm</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;vm&quot;</span><span class="p">,</span>
+    <span class="n">machine_type</span><span class="o">=</span><span class="s2">&quot;n1-standard-1&quot;</span><span class="p">,</span>
+    <span class="n">boot_disk</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;initialize_params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;debian-cloud/debian-9&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">network_interface</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">MachineImage</span><span class="p">(</span><span class="s2">&quot;image&quot;</span><span class="p">,</span> <span class="n">source_instance</span><span class="o">=</span><span class="n">vm</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A text description of the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>source_instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.MachineImage.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.MachineImage.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A text description of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.MachineImage.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.MachineImage.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.MachineImage.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.MachineImage.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.MachineImage.self_link">
+<code class="sig-name descname">self_link</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.MachineImage.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URI of the created resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.MachineImage.source_instance">
+<code class="sig-name descname">source_instance</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.MachineImage.source_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.compute.MachineImage.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_instance</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.MachineImage.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing MachineImage resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A text description of the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
+<li><p><strong>source_instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.compute.MachineImage.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.MachineImage.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.compute.MachineImage.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.MachineImage.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gcp.compute.ManagedSslCertificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">ManagedSslCertificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ManagedSslCertificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>An SslCertificate resource, used for HTTPS load balancing.  This resource
@@ -14507,11 +14642,11 @@ to be functional.</p>
 <span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">)</span>
 <span class="n">other</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;other&quot;</span><span class="p">,</span> <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">)</span>
 <span class="n">peering1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;peering1&quot;</span><span class="p">,</span>
-    <span class="n">network</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
-    <span class="n">peer_network</span><span class="o">=</span><span class="n">other</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">peer_network</span><span class="o">=</span><span class="n">other</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">peering2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;peering2&quot;</span><span class="p">,</span>
-    <span class="n">network</span><span class="o">=</span><span class="n">other</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
-    <span class="n">peer_network</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">other</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">peer_network</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -19270,16 +19405,16 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
         <span class="s2">&quot;us-central1-f&quot;</span><span class="p">,</span>
     <span class="p">],</span>
     <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="p">}],</span>
-    <span class="n">target_pools</span><span class="o">=</span><span class="p">[</span><span class="n">google_compute_target_pool</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">]],</span>
+    <span class="n">target_pools</span><span class="o">=</span><span class="p">[</span><span class="n">google_compute_target_pool</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
     <span class="n">target_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
     <span class="n">named_port</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;custom&quot;</span><span class="p">,</span>
         <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8888</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">auto_healing_policies</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;healthCheck&quot;</span><span class="p">:</span> <span class="n">autohealing</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;healthCheck&quot;</span><span class="p">:</span> <span class="n">autohealing</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;initialDelaySec&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
@@ -19293,10 +19428,10 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
     <span class="n">target_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
     <span class="n">version</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver-canary&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">google_compute_instance_template</span><span class="p">[</span><span class="s2">&quot;appserver-canary&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
             <span class="s2">&quot;target_size&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;fixed&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="p">},</span>

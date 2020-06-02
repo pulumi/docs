@@ -30,6 +30,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="compute/" title="compute"><span class="symbol module"></span>compute</a></li>
     <li><a href="container/" title="container"><span class="symbol module"></span>container</a></li>
     <li><a href="containeranalysis/" title="containeranalysis"><span class="symbol module"></span>containeranalysis</a></li>
+    <li><a href="datacatalog/" title="datacatalog"><span class="symbol module"></span>datacatalog</a></li>
     <li><a href="dataflow/" title="dataflow"><span class="symbol module"></span>dataflow</a></li>
     <li><a href="datafusion/" title="datafusion"><span class="symbol module"></span>datafusion</a></li>
     <li><a href="dataproc/" title="dataproc"><span class="symbol module"></span>dataproc</a></li>
@@ -87,7 +88,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.7.1</dd>
+	<dd>3.8.0</dd>
 </dl>
 
 

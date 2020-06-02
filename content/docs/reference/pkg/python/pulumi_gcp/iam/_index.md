@@ -58,9 +58,21 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iam.</code><code class="sig-name descname">GetTestablePermissionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">custom_support_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_resource_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stages</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.GetTestablePermissionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTestablePermissions.</p>
 <dl class="py attribute">
+<dt id="pulumi_gcp.iam.GetTestablePermissionsResult.custom_support_level">
+<code class="sig-name descname">custom_support_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iam.GetTestablePermissionsResult.custom_support_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The the support level of this permission for custom roles.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.iam.GetTestablePermissionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iam.GetTestablePermissionsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.iam.GetTestablePermissionsResult.permissions">
+<code class="sig-name descname">permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iam.GetTestablePermissionsResult.permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of permissions matching the provided input. Structure is defined below.</p>
 </dd></dl>
 
 </dd></dl>
@@ -86,7 +98,26 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py function">
 <dt id="pulumi_gcp.iam.get_testable_permissions">
 <code class="sig-prename descclassname">pulumi_gcp.iam.</code><code class="sig-name descname">get_testable_permissions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">custom_support_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_resource_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.get_testable_permissions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Retrieve a list of testable permissions for a resource. Testable permissions mean the permissions that user can add or remove in a role at a given resource. The resource can be referenced either via the full resource name or via a URI.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">perms</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_testable_permissions</span><span class="p">(</span><span class="n">full_resource_name</span><span class="o">=</span><span class="s2">&quot;//cloudresourcemanager.googleapis.com/projects/my-project&quot;</span><span class="p">,</span>
+    <span class="n">stages</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;GA&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;BETA&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_support_level</strong> (<em>str</em>) – The level of support for custom roles. Can be one of <code class="docutils literal notranslate"><span class="pre">&quot;NOT_SUPPORTED&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;SUPPORTED&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;TESTING&quot;</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">&quot;SUPPORTED&quot;</span></code></p></li>
+<li><p><strong>full_resource_name</strong> (<em>str</em>) – See <a class="reference external" href="https://cloud.google.com/apis/design/resource_names#full_resource_name">full resource name documentation</a> for more detail.</p></li>
+<li><p><strong>stages</strong> (<em>list</em>) – The acceptable release stages of the permission in the output. Note that <code class="docutils literal notranslate"><span class="pre">BETA</span></code> does not include permissions in <code class="docutils literal notranslate"><span class="pre">GA</span></code>, but you can specify both with <code class="docutils literal notranslate"><span class="pre">[&quot;GA&quot;,</span> <span class="pre">&quot;BETA&quot;]</span></code> for example. Can be a list of <code class="docutils literal notranslate"><span class="pre">&quot;ALPHA&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;BETA&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;GA&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;DEPRECATED&quot;</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">[&quot;GA&quot;]</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

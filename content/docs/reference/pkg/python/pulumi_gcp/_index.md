@@ -31,6 +31,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="compute/">compute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="container/">container</a></li>
 <li class="toctree-l1"><a class="reference internal" href="containeranalysis/">containeranalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datacatalog/">datacatalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataflow/">dataflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datafusion/">datafusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataproc/">dataproc</a></li>
