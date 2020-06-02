@@ -10,23 +10,23 @@ tags:
     - kubernetes
 ---
 
-You’ve containerized your application and it’s running great on your desktop using Docker Compose or even Swarm. But now it’s time to test it locally with minikube and then put it into production with Kubernetes. Manifests are a bit like Compose files - it’s just YAML, right?
+You’ve containerized your application, and it’s running great on your desktop using Docker Compose or even Swarm. But now it’s time to test it locally with minikube and then put it into production with Kubernetes. Manifests are a bit like Compose files - it’s just YAML, right?
 
 <!--more-->
 
 ## It’s Dangerous to Go Alone. Take this
 
-Recently, Pulumi engineer, [Levi Blackstone](https://twitter.com/levi_blackstone) posted a Twitter thread on why he thinks Pulumi is the best way to build and deploy modern applications on Kubernetes. Levi might be a bit biased, but he makes very strong points for using Pulumi with Kubernetes whether you’re a developer or operator.
+Recently, Pulumi engineer, [Levi Blackstone](https://twitter.com/levi_blackstone) posted a Twitter thread on why he thinks Pulumi is the best way to build and deploy modern applications on Kubernetes. Levi might be a bit biased, but he makes solid points for using Pulumi with Kubernetes, whether you’re a developer or operator.
 
 ## For Devs
 
 First, let’s take a look at Kubernetes from a dev’s point of view.
 
-- **Use the full Kubernetes API surface** – Each of Pulumi’s Kubernetes SDKs (TypeScript, Python, .NET and Go) are generated from the OpenAPI spec. This is critical because it means that resource definitions in any language are a 1:1 match with the upstream API. As you can see in the example below, the deployment manifest on the left corresponds to the typescript on the right.
+- **Use the full Kubernetes API surface** – Each of Pulumi’s Kubernetes SDKs (TypeScript, Python, .NET and Go) are generated from the OpenAPI spec. This is critical because it means that resource definitions in any language are a 1:1 match with the upstream API. In the example below, the deployment manifest on the left corresponds to the typescript on the right.
 
 ![Kubernetes API](kubernetes_api.jpg)
 
-- **Conditional logic* – Another big drawback of YAML is the lack of conditional logic. It’s common to change parameters depending on the environment, but this usually calls for separate tools to template your YAML. With Pulumi, this logic can go right into your resource definitions. It’s not uncommon to develop your application locally using minikube which uses ClusterIP to expose the application. When you deploy in the cloud, Kubernetes uses a LoadBalancer to manage ingress and egress. The example below shows how you can deploy to either environment without having to rewrite the manifest.
+- **Conditional logic* – Another significant drawback of YAML is the lack of conditional logic. It’s common to change parameters depending on the environment, but this usually calls for separate tools to template your YAML. With Pulumi, this logic can go right into your resource definitions. It’s not uncommon to develop your application locally using minikube, which uses ClusterIP to expose the application. When you deploy in the cloud, Kubernetes uses a LoadBalancer to manage ingress and egress. The example below shows how you can deploy to either environment without having to rewrite the manifest.
 
 ```ts
 var frontendServiceType string
@@ -53,7 +53,7 @@ frontendService, err := corev1.NewService(ctx, “frontent”, &corev1.ServiceAr
 })
 ```
 
-- **Strongly typed resources** – A tricky part about defining Kubernetes resources in YAML/JSON is the lack of typing. It's hard to track typos and you have to apply the resource to a cluster to get any feedback. Pulumi helps here by showing type information right in the SDK.
+- **Strongly typed resources** – A tricky part about defining Kubernetes resources in YAML/JSON is the lack of typing. It's hard to track typos, and you have to apply the resource to a cluster to get any feedback. Pulumi helps here by showing type information right in the SDK.
 
 ![Typed resources](typed_resources.jpg)
 
@@ -85,8 +85,8 @@ Pulumi is not just for developers, operators have fine-grained control over Kube
 
 ## Conclusion
 
-If you’re just starting out with Kubernetes, Pulumi provides a great experience by letting you take advantage of conditional logic, strong typing, error checking, and full access to the Kubernetes API. When deploying infrastructure, you can avoid deploying deprecated versions and know exactly when your cluster is ready.
+If you’re just starting out with Kubernetes, Pulumi provides a great experience by letting you take advantage of conditional logic, strong typing, error checking, and full access to the Kubernetes API. When deploying infrastructure, you can avoid deploying deprecated versions and know precisely when your cluster is ready.
 
-If you’re an experienced operator with existing resources, you can still use YAML manifests and Helm charts. But if you want to fine-tune your infrastructure, Pulumi lets you manage your clusters on any cloud provider including your own infrastructure. You can also simplify your deployments with Pulumi’s Crosswalk for Kubernetes which features a convenience API that reduces boilerplate. Finally, you can export resource definitions as YAML, providing portability for your deployments.
+You can still use YAML manifests and Helm charts if you’re an experienced operator with existing resources. But if you want to fine-tune your infrastructure, Pulumi lets you manage your clusters on any cloud provider, including your own infrastructure. You can also simplify your deployments with Pulumi’s Crosswalk for Kubernetes, which features a convenience API that reduces boilerplate. Finally, you can export resource definitions as YAML, providing portability for your deployments.
 
-Learn how Pulumi can make your Kubernetes experience smoother and more efficient by working through [tutorial](https://www.pulumi.com/docs/tutorials/kubernetes/) or trying out our [examples](https://github.com/pulumi/examples#kubernetes).
+Learn how Pulumi can make your Kubernetes experience smoother and more efficient by working through [tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) or trying out our [examples](https://github.com/pulumi/examples#kubernetes).
