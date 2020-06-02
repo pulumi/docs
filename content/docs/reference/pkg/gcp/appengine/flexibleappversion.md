@@ -36,7 +36,7 @@ To get more information about FlexibleAppVersion, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#FlexibleAppVersion">FlexibleAppVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_config=None<span class="p">, </span>automatic_scaling=None<span class="p">, </span>beta_settings=None<span class="p">, </span>default_expiration=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>endpoints_api_service=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>inbound_services=None<span class="p">, </span>instance_class=None<span class="p">, </span>liveness_check=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>network=None<span class="p">, </span>nobuild_files_regex=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>readiness_check=None<span class="p">, </span>resources=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>runtime_channel=None<span class="p">, </span>runtime_main_executable_path=None<span class="p">, </span>service=None<span class="p">, </span>serving_status=None<span class="p">, </span>version_id=None<span class="p">, </span>vpc_access_connector=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#FlexibleAppVersion">FlexibleAppVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_config=None<span class="p">, </span>automatic_scaling=None<span class="p">, </span>beta_settings=None<span class="p">, </span>default_expiration=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>endpoints_api_service=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>inbound_services=None<span class="p">, </span>instance_class=None<span class="p">, </span>liveness_check=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>network=None<span class="p">, </span>nobuild_files_regex=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>readiness_check=None<span class="p">, </span>resources=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>runtime_channel=None<span class="p">, </span>runtime_main_executable_path=None<span class="p">, </span>service=None<span class="p">, </span>serving_status=None<span class="p">, </span>version_id=None<span class="p">, </span>vpc_access_connector=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -339,6 +339,18 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="handlers_csharp">
+<a href="#handlers_csharp" style="color: inherit; text-decoration: inherit;">Handlers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">List&lt;Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -654,6 +666,18 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 
     <dt class="property-optional"
             title="Optional">
+        <span id="handlers_go">
+<a href="#handlers_go" style="color: inherit; text-decoration: inherit;">Handlers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">[]Flexible<wbr>App<wbr>Version<wbr>Handler</a></span>
+    </dt>
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="inboundservices_go">
 <a href="#inboundservices_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
 </span> 
@@ -961,6 +985,18 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="handlers_nodejs">
+<a href="#handlers_nodejs" style="color: inherit; text-decoration: inherit;">handlers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">Flexible<wbr>App<wbr>Version<wbr>Handler[]</a></span>
+    </dt>
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1276,6 +1312,18 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 
     <dt class="property-optional"
             title="Optional">
+        <span id="handlers_python">
+<a href="#handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">List[Flexible<wbr>App<wbr>Version<wbr>Handler]</a></span>
+    </dt>
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="inbound_services_python">
 <a href="#inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
 </span> 
@@ -1587,7 +1635,7 @@ Get an existing FlexibleAppVersion resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_config=None<span class="p">, </span>automatic_scaling=None<span class="p">, </span>beta_settings=None<span class="p">, </span>default_expiration=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>endpoints_api_service=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>inbound_services=None<span class="p">, </span>instance_class=None<span class="p">, </span>liveness_check=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>nobuild_files_regex=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>readiness_check=None<span class="p">, </span>resources=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>runtime_channel=None<span class="p">, </span>runtime_main_executable_path=None<span class="p">, </span>service=None<span class="p">, </span>serving_status=None<span class="p">, </span>version_id=None<span class="p">, </span>vpc_access_connector=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_config=None<span class="p">, </span>automatic_scaling=None<span class="p">, </span>beta_settings=None<span class="p">, </span>default_expiration=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>endpoints_api_service=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>inbound_services=None<span class="p">, </span>instance_class=None<span class="p">, </span>liveness_check=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>nobuild_files_regex=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>readiness_check=None<span class="p">, </span>resources=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>runtime_channel=None<span class="p">, </span>runtime_main_executable_path=None<span class="p">, </span>service=None<span class="p">, </span>serving_status=None<span class="p">, </span>version_id=None<span class="p">, </span>vpc_access_connector=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1799,6 +1847,18 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_handlers_csharp">
+<a href="#state_handlers_csharp" style="color: inherit; text-decoration: inherit;">Handlers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">List&lt;Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2125,6 +2185,18 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_handlers_go">
+<a href="#state_handlers_go" style="color: inherit; text-decoration: inherit;">Handlers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">[]Flexible<wbr>App<wbr>Version<wbr>Handler</a></span>
+    </dt>
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_inboundservices_go">
 <a href="#state_inboundservices_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
 </span> 
@@ -2447,6 +2519,18 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_handlers_nodejs">
+<a href="#state_handlers_nodejs" style="color: inherit; text-decoration: inherit;">handlers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">Flexible<wbr>App<wbr>Version<wbr>Handler[]</a></span>
+    </dt>
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_inboundservices_nodejs">
 <a href="#state_inboundservices_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Services</a>
 </span> 
@@ -2765,6 +2849,18 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_handlers_python">
+<a href="#state_handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">List[Flexible<wbr>App<wbr>Version<wbr>Handler]</a></span>
+    </dt>
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5663,6 +5759,840 @@ the configuration ID. In this case, configId must be omitted.
 
 
 
+<h4 id="flexibleappversionhandler">Flexible<wbr>App<wbr>Version<wbr>Handler</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionHandler">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionHandler">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionHandler.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authfailaction_csharp">
+<a href="#authfailaction_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Fail<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="login_csharp">
+<a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Level of login required to access this resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redirecthttpresponsecode_csharp">
+<a href="#redirecthttpresponsecode_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http<wbr>Response<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitylevel_csharp">
+<a href="#securitylevel_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="staticfiles_csharp">
+<a href="#staticfiles_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Files</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlregex_csharp">
+<a href="#urlregex_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authfailaction_go">
+<a href="#authfailaction_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Fail<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="login_go">
+<a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Level of login required to access this resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redirecthttpresponsecode_go">
+<a href="#redirecthttpresponsecode_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http<wbr>Response<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitylevel_go">
+<a href="#securitylevel_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="staticfiles_go">
+<a href="#staticfiles_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Files</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
+    </dt>
+    <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlregex_go">
+<a href="#urlregex_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authfailaction_nodejs">
+<a href="#authfailaction_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Fail<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="login_nodejs">
+<a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Level of login required to access this resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redirecthttpresponsecode_nodejs">
+<a href="#redirecthttpresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http<wbr>Response<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitylevel_nodejs">
+<a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="staticfiles_nodejs">
+<a href="#staticfiles_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Files</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
+    </dt>
+    <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlregex_nodejs">
+<a href="#urlregex_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authfailaction_python">
+<a href="#authfailaction_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Fail<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Action to take when users access resources that require authentication.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="login_python">
+<a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of login required to access this resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redirecthttpresponsecode_python">
+<a href="#redirecthttpresponsecode_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http<wbr>Response<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerscript">Dict[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script]</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitylevel_python">
+<a href="#securitylevel_python" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="staticfiles_python">
+<a href="#staticfiles_python" style="color: inherit; text-decoration: inherit;">static<wbr>Files</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Dict[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files]</a></span>
+    </dt>
+    <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlregex_python">
+<a href="#urlregex_python" style="color: inherit; text-decoration: inherit;">url<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionHandlerScript">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionHandlerScript">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerScriptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerScriptOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerScriptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionHandlerScript.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scriptpath_csharp">
+<a href="#scriptpath_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scriptpath_go">
+<a href="#scriptpath_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scriptpath_nodejs">
+<a href="#scriptpath_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scriptpath_python">
+<a href="#scriptpath_python" style="color: inherit; text-decoration: inherit;">script<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionHandlerStaticFiles">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionHandlerStaticFiles">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerStaticFilesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerStaticFilesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerStaticFilesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionHandlerStaticFiles.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationreadable_csharp">
+<a href="#applicationreadable_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Readable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are
+uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
+uploads are charged against both your code and static data storage resource quotas.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expiration_csharp">
+<a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+Default is '0s'
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpheaders_csharp">
+<a href="#httpheaders_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
+An object containing a list of "key:value" value pairs.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mimetype_csharp">
+<a href="#mimetype_csharp" style="color: inherit; text-decoration: inherit;">Mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}MIME type used to serve all files served by this handler.
+Defaults to file-specific MIME types, which are derived from each file's filename extension.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requirematchingfile_csharp">
+<a href="#requirematchingfile_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Matching<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uploadpathregex_csharp">
+<a href="#uploadpathregex_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Path<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationreadable_go">
+<a href="#applicationreadable_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Readable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are
+uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
+uploads are charged against both your code and static data storage resource quotas.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expiration_go">
+<a href="#expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+Default is '0s'
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpheaders_go">
+<a href="#httpheaders_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
+An object containing a list of "key:value" value pairs.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mimetype_go">
+<a href="#mimetype_go" style="color: inherit; text-decoration: inherit;">Mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}MIME type used to serve all files served by this handler.
+Defaults to file-specific MIME types, which are derived from each file's filename extension.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requirematchingfile_go">
+<a href="#requirematchingfile_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Matching<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uploadpathregex_go">
+<a href="#uploadpathregex_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Path<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationreadable_nodejs">
+<a href="#applicationreadable_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Readable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are
+uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
+uploads are charged against both your code and static data storage resource quotas.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expiration_nodejs">
+<a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+Default is '0s'
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpheaders_nodejs">
+<a href="#httpheaders_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
+An object containing a list of "key:value" value pairs.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mimetype_nodejs">
+<a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}MIME type used to serve all files served by this handler.
+Defaults to file-specific MIME types, which are derived from each file's filename extension.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requirematchingfile_nodejs">
+<a href="#requirematchingfile_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Matching<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uploadpathregex_nodejs">
+<a href="#uploadpathregex_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Path<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationreadable_python">
+<a href="#applicationreadable_python" style="color: inherit; text-decoration: inherit;">application<wbr>Readable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are
+uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
+uploads are charged against both your code and static data storage resource quotas.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expiration_python">
+<a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+Default is '0s'
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpheaders_python">
+<a href="#httpheaders_python" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
+An object containing a list of "key:value" value pairs.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mimetype_python">
+<a href="#mimetype_python" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}MIME type used to serve all files served by this handler.
+Defaults to file-specific MIME types, which are derived from each file's filename extension.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requirematchingfile_python">
+<a href="#requirematchingfile_python" style="color: inherit; text-decoration: inherit;">require<wbr>Matching<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uploadpathregex_python">
+<a href="#uploadpathregex_python" style="color: inherit; text-decoration: inherit;">upload<wbr>Path<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionLivenessCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionLivenessCheck">output</a> API doc for this type.
@@ -5689,7 +6619,8 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path.
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5773,7 +6704,8 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path.
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5857,7 +6789,8 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path.
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5941,7 +6874,8 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The request path.
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6423,7 +7357,8 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path.
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6508,7 +7443,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path.
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6593,7 +7529,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path.
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6678,7 +7615,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The request path.
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
+The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

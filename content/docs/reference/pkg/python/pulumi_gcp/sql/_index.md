@@ -233,9 +233,9 @@ a restricted host and strong password.</p>
     <span class="n">purpose</span><span class="o">=</span><span class="s2">&quot;VPC_PEERING&quot;</span><span class="p">,</span>
     <span class="n">address_type</span><span class="o">=</span><span class="s2">&quot;INTERNAL&quot;</span><span class="p">,</span>
     <span class="n">prefix_length</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
-    <span class="n">network</span><span class="o">=</span><span class="n">private_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">private_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">private_vpc_connection</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">servicenetworking</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;privateVpcConnection&quot;</span><span class="p">,</span>
-    <span class="n">network</span><span class="o">=</span><span class="n">private_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">private_network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">service</span><span class="o">=</span><span class="s2">&quot;servicenetworking.googleapis.com&quot;</span><span class="p">,</span>
     <span class="n">reserved_peering_ranges</span><span class="o">=</span><span class="p">[</span><span class="n">private_ip_address</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
 <span class="n">db_name_suffix</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomId</span><span class="p">(</span><span class="s2">&quot;dbNameSuffix&quot;</span><span class="p">,</span> <span class="n">byte_length</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -245,7 +245,7 @@ a restricted host and strong password.</p>
         <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;db-f1-micro&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ip_configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;ipv4Enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-            <span class="s2">&quot;privateNetwork&quot;</span><span class="p">:</span> <span class="n">private_network</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="s2">&quot;privateNetwork&quot;</span><span class="p">:</span> <span class="n">private_network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">})</span>
 </pre></div>
@@ -257,7 +257,7 @@ a restricted host and strong password.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>,
-<code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
+<code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_10</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_12</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
 <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>.
 <a class="reference external" href="https://cloud.google.com/sql/docs/sqlserver/db-versions">Database Version Policies</a>
 includes an up-to-date reference of supported versions.</p></li>
@@ -413,7 +413,7 @@ connection strings. For example, when connecting with <a class="reference extern
 <code class="sig-name descname">database_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.database_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>,
-<code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
+<code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_10</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_12</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
 <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>.
 <a class="reference external" href="https://cloud.google.com/sql/docs/sqlserver/db-versions">Database Version Policies</a>
 includes an up-to-date reference of supported versions.</p>
@@ -640,7 +640,7 @@ connection strings. For example, when connecting with <a class="reference extern
 </p></li>
 <li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>,
-<code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
+<code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code>,<code class="docutils literal notranslate"><span class="pre">POSTGRES_10</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_11</span></code>, <code class="docutils literal notranslate"><span class="pre">POSTGRES_12</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_STANDARD</span></code>,
 <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_ENTERPRISE</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_EXPRESS</span></code>, <code class="docutils literal notranslate"><span class="pre">SQLSERVER_2017_WEB</span></code>.
 <a class="reference external" href="https://cloud.google.com/sql/docs/sqlserver/db-versions">Database Version Policies</a>
 includes an up-to-date reference of supported versions.</p>

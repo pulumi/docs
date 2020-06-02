@@ -26,10 +26,10 @@ const privateIpAlloc = new gcp.compute.GlobalAddress("privateIpAlloc", {
     purpose: "VPC_PEERING",
     addressType: "INTERNAL",
     prefixLength: 16,
-    network: peeringNetwork.selfLink,
+    network: peeringNetwork.id,
 });
 const foobar = new gcp.servicenetworking.Connection("foobar", {
-    network: peeringNetwork.selfLink,
+    network: peeringNetwork.id,
     service: "servicenetworking.googleapis.com",
     reservedPeeringRanges: [privateIpAlloc.name],
 });
@@ -43,9 +43,9 @@ private_ip_alloc = gcp.compute.GlobalAddress("privateIpAlloc",
     purpose="VPC_PEERING",
     address_type="INTERNAL",
     prefix_length=16,
-    network=peering_network.self_link)
+    network=peering_network.id)
 foobar = gcp.servicenetworking.Connection("foobar",
-    network=peering_network.self_link,
+    network=peering_network.id,
     service="servicenetworking.googleapis.com",
     reserved_peering_ranges=[private_ip_alloc.name])
 ```
@@ -65,11 +65,11 @@ class MyStack : Stack
             Purpose = "VPC_PEERING",
             AddressType = "INTERNAL",
             PrefixLength = 16,
-            Network = peeringNetwork.SelfLink,
+            Network = peeringNetwork.Id,
         });
         var foobar = new Gcp.ServiceNetworking.Connection("foobar", new Gcp.ServiceNetworking.ConnectionArgs
         {
-            Network = peeringNetwork.SelfLink,
+            Network = peeringNetwork.Id,
             Service = "servicenetworking.googleapis.com",
             ReservedPeeringRanges = 
             {

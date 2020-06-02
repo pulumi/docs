@@ -46,13 +46,13 @@ class MyStack : Stack
         });
         var peering1 = new Gcp.Compute.NetworkPeering("peering1", new Gcp.Compute.NetworkPeeringArgs
         {
-            Network = @default.SelfLink,
-            PeerNetwork = other.SelfLink,
+            Network = @default.Id,
+            PeerNetwork = other.Id,
         });
         var peering2 = new Gcp.Compute.NetworkPeering("peering2", new Gcp.Compute.NetworkPeeringArgs
         {
-            Network = other.SelfLink,
-            PeerNetwork = @default.SelfLink,
+            Network = other.Id,
+            PeerNetwork = @default.Id,
         });
     }
 
@@ -72,11 +72,11 @@ import pulumi_gcp as gcp
 default = gcp.compute.Network("default", auto_create_subnetworks="false")
 other = gcp.compute.Network("other", auto_create_subnetworks="false")
 peering1 = gcp.compute.NetworkPeering("peering1",
-    network=default.self_link,
-    peer_network=other.self_link)
+    network=default.id,
+    peer_network=other.id)
 peering2 = gcp.compute.NetworkPeering("peering2",
-    network=other.self_link,
-    peer_network=default.self_link)
+    network=other.id,
+    peer_network=default.id)
 ```
 {{% /example %}}
 
@@ -88,12 +88,12 @@ import * as gcp from "@pulumi/gcp";
 const _default = new gcp.compute.Network("default", {autoCreateSubnetworks: "false"});
 const other = new gcp.compute.Network("other", {autoCreateSubnetworks: "false"});
 const peering1 = new gcp.compute.NetworkPeering("peering1", {
-    network: _default.selfLink,
-    peerNetwork: other.selfLink,
+    network: _default.id,
+    peerNetwork: other.id,
 });
 const peering2 = new gcp.compute.NetworkPeering("peering2", {
-    network: other.selfLink,
-    peerNetwork: _default.selfLink,
+    network: other.id,
+    peerNetwork: _default.id,
 });
 ```
 {{% /example %}}

@@ -32,7 +32,7 @@ Explore the resources and functions of the secretmanager module in the GCP packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.7.1</dd>
+	<dd>3.8.0</dd>
 </dl>
 
 

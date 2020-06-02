@@ -125,11 +125,11 @@ class MyStack : Stack
             Purpose = "VPC_PEERING",
             AddressType = "INTERNAL",
             PrefixLength = 16,
-            Network = privateNetwork.SelfLink,
+            Network = privateNetwork.Id,
         });
         var privateVpcConnection = new Gcp.ServiceNetworking.Connection("privateVpcConnection", new Gcp.ServiceNetworking.ConnectionArgs
         {
-            Network = privateNetwork.SelfLink,
+            Network = privateNetwork.Id,
             Service = "servicenetworking.googleapis.com",
             ReservedPeeringRanges = 
             {
@@ -149,7 +149,7 @@ class MyStack : Stack
                 Ip_configuration = 
                 {
                     { "ipv4Enabled", false },
-                    { "privateNetwork", privateNetwork.SelfLink },
+                    { "privateNetwork", privateNetwork.Id },
                 },
             },
         });
@@ -174,9 +174,9 @@ private_ip_address = gcp.compute.GlobalAddress("privateIpAddress",
     purpose="VPC_PEERING",
     address_type="INTERNAL",
     prefix_length=16,
-    network=private_network.self_link)
+    network=private_network.id)
 private_vpc_connection = gcp.servicenetworking.Connection("privateVpcConnection",
-    network=private_network.self_link,
+    network=private_network.id,
     service="servicenetworking.googleapis.com",
     reserved_peering_ranges=[private_ip_address.name])
 db_name_suffix = random.RandomId("dbNameSuffix", byte_length=4)
@@ -186,7 +186,7 @@ instance = gcp.sql.DatabaseInstance("instance",
         "tier": "db-f1-micro",
         "ip_configuration": {
             "ipv4Enabled": False,
-            "privateNetwork": private_network.self_link,
+            "privateNetwork": private_network.id,
         },
     })
 ```
@@ -203,10 +203,10 @@ const privateIpAddress = new gcp.compute.GlobalAddress("privateIpAddress", {
     purpose: "VPC_PEERING",
     addressType: "INTERNAL",
     prefixLength: 16,
-    network: privateNetwork.selfLink,
+    network: privateNetwork.id,
 });
 const privateVpcConnection = new gcp.servicenetworking.Connection("privateVpcConnection", {
-    network: privateNetwork.selfLink,
+    network: privateNetwork.id,
     service: "servicenetworking.googleapis.com",
     reservedPeeringRanges: [privateIpAddress.name],
 });
@@ -217,7 +217,7 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
         tier: "db-f1-micro",
         ip_configuration: {
             ipv4Enabled: false,
-            privateNetwork: privateNetwork.selfLink,
+            privateNetwork: privateNetwork.id,
         },
     },
 });
@@ -430,7 +430,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_11`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
 includes an up-to-date reference of supported versions.
@@ -559,7 +559,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_11`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
 includes an up-to-date reference of supported versions.
@@ -688,7 +688,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_11`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
 includes an up-to-date reference of supported versions.
@@ -817,7 +817,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_11`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
 includes an up-to-date reference of supported versions.
@@ -1503,7 +1503,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_11`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
 includes an up-to-date reference of supported versions.
@@ -1720,7 +1720,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_11`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
 includes an up-to-date reference of supported versions.
@@ -1937,7 +1937,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_11`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
 includes an up-to-date reference of supported versions.
@@ -2154,7 +2154,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_11`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
 includes an up-to-date reference of supported versions.

@@ -67,18 +67,17 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A Secret is a logical secret whose value and versions can be accessed.</p>
 <p>To get more information about Secret, see:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.secrets">API documentation</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets">API documentation</a></p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
 <span class="n">secret_basic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">secretmanager</span><span class="o">.</span><span class="n">Secret</span><span class="p">(</span><span class="s2">&quot;secret-basic&quot;</span><span class="p">,</span>
-    <span class="n">secret_id</span><span class="o">=</span><span class="s2">&quot;secret&quot;</span><span class="p">,</span>
     <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;my-label&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">replication</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;user_managed&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;userManaged&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;replicas&quot;</span><span class="p">:</span> <span class="p">[</span>
                 <span class="p">{</span>
                     <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
@@ -88,7 +87,8 @@ anything, please consult the source <a class="reference external" href="https://
                 <span class="p">},</span>
             <span class="p">],</span>
         <span class="p">},</span>
-    <span class="p">})</span>
+    <span class="p">},</span>
+    <span class="n">secret_id</span><span class="o">=</span><span class="s2">&quot;secret&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -841,7 +841,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_gcp.secretmanager.get_secret_version">
 <code class="sig-prename descclassname">pulumi_gcp.secretmanager.</code><code class="sig-name descname">get_secret_version</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.secretmanager.get_secret_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a Secret Manager secret’s version. For more information see the <a class="reference external" href="https://cloud.google.com/secret-manager/docs/">official documentation</a> and <a class="reference external" href="https://cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.secrets.versions">API</a>.</p>
+<dd><p>Get a Secret Manager secret’s version. For more information see the <a class="reference external" href="https://cloud.google.com/secret-manager/docs/">official documentation</a> and <a class="reference external" href="https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions">API</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 

@@ -14,7 +14,8 @@ A Secret is a logical secret whose value and versions can be accessed.
 
 To get more information about Secret, see:
 
-* [API documentation](https://cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.secrets)
+* [API documentation](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets)
+
 
 ## Example Usage - Secret Config Basic
 
@@ -24,12 +25,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
-    secretId: "secret",
     labels: {
         label: "my-label",
     },
     replication: {
-        user_managed: {
+        userManaged: {
             replicas: [
                 {
                     location: "us-central1",
@@ -40,6 +40,7 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
             ],
         },
     },
+    secretId: "secret",
 });
 ```
 ```python
@@ -47,12 +48,11 @@ import pulumi
 import pulumi_gcp as gcp
 
 secret_basic = gcp.secretmanager.Secret("secret-basic",
-    secret_id="secret",
     labels={
         "label": "my-label",
     },
     replication={
-        "user_managed": {
+        "userManaged": {
             "replicas": [
                 {
                     "location": "us-central1",
@@ -62,7 +62,8 @@ secret_basic = gcp.secretmanager.Secret("secret-basic",
                 },
             ],
         },
-    })
+    },
+    secret_id="secret")
 ```
 ```csharp
 using Pulumi;
@@ -74,28 +75,28 @@ class MyStack : Stack
     {
         var secret_basic = new Gcp.SecretManager.Secret("secret-basic", new Gcp.SecretManager.SecretArgs
         {
-            SecretId = "secret",
             Labels = 
             {
                 { "label", "my-label" },
             },
             Replication = new Gcp.SecretManager.Inputs.SecretReplicationArgs
             {
-                User_managed = 
+                UserManaged = new Gcp.SecretManager.Inputs.SecretReplicationUserManagedArgs
                 {
-                    { "replicas", 
+                    Replicas = 
                     {
-                        
+                        new Gcp.SecretManager.Inputs.SecretReplicationUserManagedReplicaArgs
                         {
-                            { "location", "us-central1" },
+                            Location = "us-central1",
                         },
-                        
+                        new Gcp.SecretManager.Inputs.SecretReplicationUserManagedReplicaArgs
                         {
-                            { "location", "us-east1" },
+                            Location = "us-east1",
                         },
-                    } },
+                    },
                 },
             },
+            SecretId = "secret",
         });
     }
 

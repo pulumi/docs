@@ -18,6 +18,9 @@ To get more information about Connection, see:
 * How-to Guides
     * [Cloud SQL federated queries](https://cloud.google.com/bigquery/docs/cloud-sql-federated-queries)
 
+> **Warning:** All arguments including `cloud_sql.credential.password` will be stored in the raw
+state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
 
 
 ## Create a Connection Resource {#create}
@@ -1234,6 +1237,17 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
+        <span id="credential_csharp">
+<a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="database_csharp">
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
 </span> 
@@ -1271,6 +1285,17 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="credential_go">
+<a href="#credential_go" style="color: inherit; text-decoration: inherit;">Credential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1314,6 +1339,17 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
+        <span id="credential_nodejs">
+<a href="#credential_nodejs" style="color: inherit; text-decoration: inherit;">credential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="database_nodejs">
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
@@ -1354,6 +1390,17 @@ If it is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
+        <span id="credential_python">
+<a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectioncloudsqlcredential">Dict[Connection<wbr>Cloud<wbr>Sql<wbr>Credential]</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="database_python">
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span> 
@@ -1383,6 +1430,140 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ConnectionCloudSqlCredential">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ConnectionCloudSqlCredential">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#ConnectionCloudSqlCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#ConnectionCloudSqlCredentialOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.ConnectionCloudSqlCredentialArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.ConnectionCloudSqlCredential.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Username for database.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Username for database.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Username for database.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Username for database.
 {{% /md %}}</dd>
 
 </dl>
