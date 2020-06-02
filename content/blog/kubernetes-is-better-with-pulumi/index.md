@@ -30,7 +30,7 @@ First, let’s take a look at Kubernetes from a dev’s point of view.
 
 - **Conditional logic** – Another significant drawback of YAML is the lack of conditional logic. It’s common to change parameters depending on the environment, but this usually calls for separate tools to template your YAML. With Pulumi, this logic can go right into your resource definitions. It’s common to develop your application locally using minikube, which doesn't natively support LoadBalancer Services. On the other hand, many cloud deployments do use a LoadBalancer Service to route traffic. The example below shows how you can deploy to either environment without having to rewrite the manifest by using a configuration value.
 
-```ts
+```go
 var frontendServiceType string
 if isMinikube {
    frontendServiceType = “ClusterIP”
