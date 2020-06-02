@@ -2,10 +2,10 @@
 title: "Kubernetes Is Better with Pulumi"
 date: 2020-06-02
 meta_desc: "Ten reasons why you should deploy modern apps and Kubernetes with Pulumi"
-meta_image: meta.png
+meta_image: dangerous_pulumi.gif
 authors:
-    - sophia-parafina
-    - levi-blackstone
+   - levi-blackstone
+   - sophia-parafina 
 tags:
     - kubernetes
 ---
@@ -18,6 +18,8 @@ You’ve containerized your application, and it’s running great on your deskto
 
 Recently, Pulumi engineer, [Levi Blackstone](https://twitter.com/levi_blackstone) posted a Twitter thread on why he thinks Pulumi is the best way to build and deploy modern applications on Kubernetes. Levi might be a bit biased, but he makes solid points for using Pulumi with Kubernetes, whether you’re a developer or operator.
 
+![Legend of Pulumipus](dangerous_pulumi.gif)
+
 ## For Devs
 
 First, let’s take a look at Kubernetes from a dev’s point of view.
@@ -26,7 +28,7 @@ First, let’s take a look at Kubernetes from a dev’s point of view.
 
 ![Kubernetes API](kubernetes_api.jpg)
 
-- **Conditional logic* – Another significant drawback of YAML is the lack of conditional logic. It’s common to change parameters depending on the environment, but this usually calls for separate tools to template your YAML. With Pulumi, this logic can go right into your resource definitions. It’s not uncommon to develop your application locally using minikube, which uses ClusterIP to expose the application. When you deploy in the cloud, Kubernetes uses a LoadBalancer to manage ingress and egress. The example below shows how you can deploy to either environment without having to rewrite the manifest.
+- **Conditional logic** – Another significant drawback of YAML is the lack of conditional logic. It’s common to change parameters depending on the environment, but this usually calls for separate tools to template your YAML. With Pulumi, this logic can go right into your resource definitions. It’s not uncommon to develop your application locally using minikube, which uses ClusterIP to expose the application. When you deploy in the cloud, Kubernetes uses a LoadBalancer to manage ingress and egress. The example below shows how you can deploy to either environment without having to rewrite the manifest.
 
 ```ts
 var frontendServiceType string
