@@ -666,7 +666,7 @@ const nginxDeployment = new kx.Deployment(appName, {
 
 ## Perform a ConfigMap Rollout on a Deployment
 
-For a complete example, check out the [Graceful App Rollout][tutorial-app-rollout]
+For a complete example, check out our Kubernetes [Graceful App Rollout][tutorial-app-rollout]
 tutorial for more details on how to update a Deployment automatically
 when it's ConfigMap changes.
 
