@@ -113,7 +113,7 @@ class MyStack : Stack
                     networkInterfaceId,
                 },
                 InstanceId = instanceId,
-                NameRegex = "tf-testAccNetworkInterfacesBasic%d",
+                NameRegex = name,
                 PrivateIp = "192.168.0.2",
                 SecurityGroupId = groupId,
                 Tags = 
@@ -176,7 +176,7 @@ attachment = alicloud.vpc.NetworkInterfaceAttachment("attachment",
     network_interface_id=interface.id)
 default_network_interfaces = pulumi.Output.all(attachment.network_interface_id, instance.id, group.id, vpc.id, vswitch.id).apply(lambda network_interface_id, instanceId, groupId, vpcId, vswitchId: alicloud.ecs.get_network_interfaces(ids=[network_interface_id],
     instance_id=instance_id,
-    name_regex="tf-testAccNetworkInterfacesBasic%d",
+    name_regex=name,
     private_ip="192.168.0.2",
     security_group_id=group_id,
     tags={
@@ -237,7 +237,7 @@ const attachment = new alicloud.vpc.NetworkInterfaceAttachment("attachment", {
 const defaultNetworkInterfaces = pulumi.all([attachment.networkInterfaceId, instance.id, group.id, vpc.id, vswitch.id]).apply(([networkInterfaceId, instanceId, groupId, vpcId, vswitchId]) => alicloud.ecs.getNetworkInterfaces({
     ids: [networkInterfaceId],
     instanceId: instanceId,
-    nameRegex: "tf-testAccNetworkInterfacesBasic%d",
+    nameRegex: name,
     privateIp: "192.168.0.2",
     securityGroupId: groupId,
     tags: {

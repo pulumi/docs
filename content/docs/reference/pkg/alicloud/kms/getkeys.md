@@ -919,8 +919,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deletedate_python">
-<a href="#deletedate_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Date</a>
+        <span id="delete_date_python">
+<a href="#delete_date_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

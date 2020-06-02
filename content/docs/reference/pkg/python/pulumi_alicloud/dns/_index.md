@@ -14,6 +14,183 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/issues">terraform-providers/terraform-provider-alicloud repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.dns"></span><dl class="py class">
+<dt id="pulumi_alicloud.dns.AlidnsRecord">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AlidnsRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lang</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">line</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remark</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_client_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Alidns Record resource. For information about Alidns Domain Record and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/en/doc-detail/29772.htm">What is Resource Alidns Record</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.85.0+.</p>
+<p><strong>NOTE:</strong> When the site is an international site, the <code class="docutils literal notranslate"><span class="pre">type</span></code> neither supports <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code> nor <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code></p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="c1"># Create a new Domain Record</span>
+<span class="n">record</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">AlidnsRecord</span><span class="p">(</span><span class="s2">&quot;record&quot;</span><span class="p">,</span>
+    <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;domainname&quot;</span><span class="p">,</span>
+    <span class="n">remark</span><span class="o">=</span><span class="s2">&quot;Test new alidns record.&quot;</span><span class="p">,</span>
+    <span class="n">rr</span><span class="o">=</span><span class="s2">&quot;@&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;ENABLE&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;192.168.99.99&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or “-“, and must not begin or end with “-“, and “-” must not in the 3th and 4th character positions at the same time. Suffix <code class="docutils literal notranslate"><span class="pre">.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">.tel</span></code> are not supported.</p></li>
+<li><p><strong>lang</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User language.</p></li>
+<li><p><strong>line</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resolution line of domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">telecom</span></code>, <code class="docutils literal notranslate"><span class="pre">unicom</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile</span></code>, <code class="docutils literal notranslate"><span class="pre">oversea</span></code>, <code class="docutils literal notranslate"><span class="pre">edu</span></code>, <code class="docutils literal notranslate"><span class="pre">drpeng</span></code>, <code class="docutils literal notranslate"><span class="pre">btvn</span></code>. When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">FORWORD_URL</span></code>, this parameter must be <code class="docutils literal notranslate"><span class="pre">default</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">default</span></code>. For checking all resolution lines enumeration please visit <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/34339.htm">Alibaba Cloud DNS doc</a> or using dns.getResolutionLines in data source to get the value.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">[1-10]</span></code>. When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">MX</span></code>, this parameter is required.</p></li>
+<li><p><strong>remark</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The remark of the domain record.</p></li>
+<li><p><strong>rr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Host record for the domain record. This host_record can have at most 253 characters, and each part split with <code class="docutils literal notranslate"><span class="pre">.</span></code> can have at most 63 characters, and must contain only alphanumeric characters or hyphens, such as <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, and must not begin or end with <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code>,<code class="docutils literal notranslate"><span class="pre">DISABLE</span></code>.</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The effective time of domain record. Its scope depends on the edition of the cloud resolution. Free is <code class="docutils literal notranslate"><span class="pre">[600,</span> <span class="pre">86400]</span></code>, Basic is <code class="docutils literal notranslate"><span class="pre">[120,</span> <span class="pre">86400]</span></code>, Standard is <code class="docutils literal notranslate"><span class="pre">[60,</span> <span class="pre">86400]</span></code>, Ultimate is <code class="docutils literal notranslate"><span class="pre">[10,</span> <span class="pre">86400]</span></code>, Exclusive is <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">86400]</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">600</span></code>.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">A</span></code>,<code class="docutils literal notranslate"><span class="pre">NS</span></code>,<code class="docutils literal notranslate"><span class="pre">MX</span></code>,<code class="docutils literal notranslate"><span class="pre">TXT</span></code>,<code class="docutils literal notranslate"><span class="pre">CNAME</span></code>,<code class="docutils literal notranslate"><span class="pre">SRV</span></code>,<code class="docutils literal notranslate"><span class="pre">AAAA</span></code>,<code class="docutils literal notranslate"><span class="pre">CAA</span></code>, <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code> and <code class="docutils literal notranslate"><span class="pre">FORWORD_URL</span></code>.</p></li>
+<li><p><strong>user_client_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of the client.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of domain record, When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">MX</span></code>,<code class="docutils literal notranslate"><span class="pre">NS</span></code>,<code class="docutils literal notranslate"><span class="pre">CNAME</span></code>,<code class="docutils literal notranslate"><span class="pre">SRV</span></code>, the server will treat the <code class="docutils literal notranslate"><span class="pre">value</span></code> as a fully qualified domain name, so it’s no need to add a <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.domain_name">
+<code class="sig-name descname">domain_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.domain_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or “-“, and must not begin or end with “-“, and “-” must not in the 3th and 4th character positions at the same time. Suffix <code class="docutils literal notranslate"><span class="pre">.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">.tel</span></code> are not supported.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.lang">
+<code class="sig-name descname">lang</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.lang" title="Permalink to this definition">¶</a></dt>
+<dd><p>User language.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.line">
+<code class="sig-name descname">line</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.line" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resolution line of domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">telecom</span></code>, <code class="docutils literal notranslate"><span class="pre">unicom</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile</span></code>, <code class="docutils literal notranslate"><span class="pre">oversea</span></code>, <code class="docutils literal notranslate"><span class="pre">edu</span></code>, <code class="docutils literal notranslate"><span class="pre">drpeng</span></code>, <code class="docutils literal notranslate"><span class="pre">btvn</span></code>. When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">FORWORD_URL</span></code>, this parameter must be <code class="docutils literal notranslate"><span class="pre">default</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">default</span></code>. For checking all resolution lines enumeration please visit <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/34339.htm">Alibaba Cloud DNS doc</a> or using dns.getResolutionLines in data source to get the value.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.priority">
+<code class="sig-name descname">priority</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>The priority of domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">[1-10]</span></code>. When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">MX</span></code>, this parameter is required.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.remark">
+<code class="sig-name descname">remark</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.remark" title="Permalink to this definition">¶</a></dt>
+<dd><p>The remark of the domain record.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.rr">
+<code class="sig-name descname">rr</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.rr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Host record for the domain record. This host_record can have at most 253 characters, and each part split with <code class="docutils literal notranslate"><span class="pre">.</span></code> can have at most 63 characters, and must contain only alphanumeric characters or hyphens, such as <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, and must not begin or end with <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.status">
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code>,<code class="docutils literal notranslate"><span class="pre">DISABLE</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.ttl">
+<code class="sig-name descname">ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The effective time of domain record. Its scope depends on the edition of the cloud resolution. Free is <code class="docutils literal notranslate"><span class="pre">[600,</span> <span class="pre">86400]</span></code>, Basic is <code class="docutils literal notranslate"><span class="pre">[120,</span> <span class="pre">86400]</span></code>, Standard is <code class="docutils literal notranslate"><span class="pre">[60,</span> <span class="pre">86400]</span></code>, Ultimate is <code class="docutils literal notranslate"><span class="pre">[10,</span> <span class="pre">86400]</span></code>, Exclusive is <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">86400]</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">600</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.type">
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">A</span></code>,<code class="docutils literal notranslate"><span class="pre">NS</span></code>,<code class="docutils literal notranslate"><span class="pre">MX</span></code>,<code class="docutils literal notranslate"><span class="pre">TXT</span></code>,<code class="docutils literal notranslate"><span class="pre">CNAME</span></code>,<code class="docutils literal notranslate"><span class="pre">SRV</span></code>,<code class="docutils literal notranslate"><span class="pre">AAAA</span></code>,<code class="docutils literal notranslate"><span class="pre">CAA</span></code>, <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code> and <code class="docutils literal notranslate"><span class="pre">FORWORD_URL</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.user_client_ip">
+<code class="sig-name descname">user_client_ip</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.user_client_ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IP address of the client.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.value">
+<code class="sig-name descname">value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of domain record, When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">MX</span></code>,<code class="docutils literal notranslate"><span class="pre">NS</span></code>,<code class="docutils literal notranslate"><span class="pre">CNAME</span></code>,<code class="docutils literal notranslate"><span class="pre">SRV</span></code>, the server will treat the <code class="docutils literal notranslate"><span class="pre">value</span></code> as a fully qualified domain name, so it’s no need to add a <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lang</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">line</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remark</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_client_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AlidnsRecord resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or “-“, and must not begin or end with “-“, and “-” must not in the 3th and 4th character positions at the same time. Suffix <code class="docutils literal notranslate"><span class="pre">.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">.tel</span></code> are not supported.</p></li>
+<li><p><strong>lang</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User language.</p></li>
+<li><p><strong>line</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The resolution line of domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">telecom</span></code>, <code class="docutils literal notranslate"><span class="pre">unicom</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile</span></code>, <code class="docutils literal notranslate"><span class="pre">oversea</span></code>, <code class="docutils literal notranslate"><span class="pre">edu</span></code>, <code class="docutils literal notranslate"><span class="pre">drpeng</span></code>, <code class="docutils literal notranslate"><span class="pre">btvn</span></code>. When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">FORWORD_URL</span></code>, this parameter must be <code class="docutils literal notranslate"><span class="pre">default</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">default</span></code>. For checking all resolution lines enumeration please visit <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/34339.htm">Alibaba Cloud DNS doc</a> or using dns.getResolutionLines in data source to get the value.</p>
+</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">[1-10]</span></code>. When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">MX</span></code>, this parameter is required.</p></li>
+<li><p><strong>remark</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The remark of the domain record.</p></li>
+<li><p><strong>rr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Host record for the domain record. This host_record can have at most 253 characters, and each part split with <code class="docutils literal notranslate"><span class="pre">.</span></code> can have at most 63 characters, and must contain only alphanumeric characters or hyphens, such as <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, and must not begin or end with <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code>,<code class="docutils literal notranslate"><span class="pre">DISABLE</span></code>.</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The effective time of domain record. Its scope depends on the edition of the cloud resolution. Free is <code class="docutils literal notranslate"><span class="pre">[600,</span> <span class="pre">86400]</span></code>, Basic is <code class="docutils literal notranslate"><span class="pre">[120,</span> <span class="pre">86400]</span></code>, Standard is <code class="docutils literal notranslate"><span class="pre">[60,</span> <span class="pre">86400]</span></code>, Ultimate is <code class="docutils literal notranslate"><span class="pre">[10,</span> <span class="pre">86400]</span></code>, Exclusive is <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">86400]</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">600</span></code>.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of domain record. Valid values: <code class="docutils literal notranslate"><span class="pre">A</span></code>,<code class="docutils literal notranslate"><span class="pre">NS</span></code>,<code class="docutils literal notranslate"><span class="pre">MX</span></code>,<code class="docutils literal notranslate"><span class="pre">TXT</span></code>,<code class="docutils literal notranslate"><span class="pre">CNAME</span></code>,<code class="docutils literal notranslate"><span class="pre">SRV</span></code>,<code class="docutils literal notranslate"><span class="pre">AAAA</span></code>,<code class="docutils literal notranslate"><span class="pre">CAA</span></code>, <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code> and <code class="docutils literal notranslate"><span class="pre">FORWORD_URL</span></code>.</p></li>
+<li><p><strong>user_client_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of the client.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of domain record, When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">MX</span></code>,<code class="docutils literal notranslate"><span class="pre">NS</span></code>,<code class="docutils literal notranslate"><span class="pre">CNAME</span></code>,<code class="docutils literal notranslate"><span class="pre">SRV</span></code>, the server will treat the <code class="docutils literal notranslate"><span class="pre">value</span></code> as a fully qualified domain name, so it’s no need to add a <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.dns.AlidnsRecord.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AlidnsRecord.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.dns.AwaitableGetAlidnsDomainGroupsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetAlidnsDomainGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetAlidnsDomainGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.dns.AwaitableGetDomainGroupsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetDomainGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetDomainGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -36,6 +213,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py class">
 <dt id="pulumi_alicloud.dns.AwaitableGetGroupsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.dns.AwaitableGetInstancesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -737,6 +919,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.dns.GetAlidnsDomainGroupsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetAlidnsDomainGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsDomainGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAlidnsDomainGroups.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetAlidnsDomainGroupsResult.groups">
+<code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsDomainGroupsResult.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of instances. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetAlidnsDomainGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsDomainGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetAlidnsDomainGroupsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsDomainGroupsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of instance IDs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetAlidnsDomainGroupsResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsDomainGroupsResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of domain group names.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.dns.GetDomainGroupsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetDomainGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDomainGroups.</p>
@@ -864,6 +1076,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.dns.GetGroupsResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetGroupsResult.names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of group names.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.dns.GetInstancesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getInstances.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetInstancesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetInstancesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetInstancesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of instance IDs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetInstancesResult.instances">
+<code class="sig-name descname">instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetInstancesResult.instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of instances. Each element contains the following attributes:</p>
 </dd></dl>
 
 </dd></dl>
@@ -1159,35 +1395,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.dns.Record">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">Record</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_record</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.Record" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a DNS Record resource.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> When the site is an international site, the <code class="docutils literal notranslate"><span class="pre">type</span></code> neither supports <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code> nor <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code></p>
-</div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
-
-<span class="c1"># Create a new Domain record</span>
-<span class="n">record</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;record&quot;</span><span class="p">,</span>
-    <span class="n">host_record</span><span class="o">=</span><span class="s2">&quot;@&quot;</span><span class="p">,</span>
-    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
-    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;192.168.99.99&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>host_record</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Host record for the domain record. This host_record can have at most 253 characters, and each part split with “.” can have at most 63 characters, and must contain only alphanumeric characters or hyphens, such as “-“,”.”,”*”,”&#64;”,  and must not begin or end with “-“.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or “-“, and must not begin or end with “-“, and “-” must not in the 3th and 4th character positions at the same time. Suffix <code class="docutils literal notranslate"><span class="pre">.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">.tel</span></code> are not supported.</p></li>
-<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of domain record. Valid values are <code class="docutils literal notranslate"><span class="pre">[1-10]</span></code>. When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">MX</span></code>, this parameter is required.</p></li>
-<li><p><strong>routing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resolution line of domain record. Valid values are <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">telecom</span></code>, <code class="docutils literal notranslate"><span class="pre">unicom</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile</span></code>, <code class="docutils literal notranslate"><span class="pre">oversea</span></code>, <code class="docutils literal notranslate"><span class="pre">edu</span></code>, <code class="docutils literal notranslate"><span class="pre">drpeng</span></code>, <code class="docutils literal notranslate"><span class="pre">btvn</span></code>, .etc. When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">FORWORD_URL</span></code>, this parameter must be <code class="docutils literal notranslate"><span class="pre">default</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">default</span></code>. For checking all resolution lines enumeration please visit <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/34339.htm">Alibaba Cloud DNS doc</a> or using dns.getResolutionLines in data source to get the value.</p></li>
-<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The effective time of domain record. Its scope depends on the edition of the cloud resolution. Free is <code class="docutils literal notranslate"><span class="pre">[600,</span> <span class="pre">86400]</span></code>, Basic is <code class="docutils literal notranslate"><span class="pre">[120,</span> <span class="pre">86400]</span></code>, Standard is <code class="docutils literal notranslate"><span class="pre">[60,</span> <span class="pre">86400]</span></code>, Ultimate is <code class="docutils literal notranslate"><span class="pre">[10,</span> <span class="pre">86400]</span></code>, Exclusive is <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">86400]</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">600</span></code>.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of domain record. Valid values are <code class="docutils literal notranslate"><span class="pre">A</span></code>,<code class="docutils literal notranslate"><span class="pre">NS</span></code>,<code class="docutils literal notranslate"><span class="pre">MX</span></code>,<code class="docutils literal notranslate"><span class="pre">TXT</span></code>,<code class="docutils literal notranslate"><span class="pre">CNAME</span></code>,<code class="docutils literal notranslate"><span class="pre">SRV</span></code>,<code class="docutils literal notranslate"><span class="pre">AAAA</span></code>,<code class="docutils literal notranslate"><span class="pre">CAA</span></code>, <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code> and <code class="docutils literal notranslate"><span class="pre">FORWORD_URL</span></code>.</p></li>
-<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of domain record, When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">MX</span></code>,<code class="docutils literal notranslate"><span class="pre">NS</span></code>,<code class="docutils literal notranslate"><span class="pre">CNAME</span></code>,<code class="docutils literal notranslate"><span class="pre">SRV</span></code>, the server will treat the <code class="docutils literal notranslate"><span class="pre">value</span></code> as a fully qualified domain name, so it’s no need to add a <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Record resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] host_record: Host record for the domain record. This host_record can have at most 253 characters, and each part split with “.” can have at most 63 characters, and must contain only alphanumeric characters or hyphens, such as “-“,”.”,”*”,”&#64;”,  and must not begin or end with “-“.
+:param pulumi.Input[str] name: Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or “-“, and must not begin or end with “-“, and “-” must not in the 3th and 4th character positions at the same time. Suffix <code class="docutils literal notranslate"><span class="pre">.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">.tel</span></code> are not supported.
+:param pulumi.Input[float] priority: The priority of domain record. Valid values are <code class="docutils literal notranslate"><span class="pre">[1-10]</span></code>. When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">MX</span></code>, this parameter is required.
+:param pulumi.Input[str] routing: The resolution line of domain record. Valid values are <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">telecom</span></code>, <code class="docutils literal notranslate"><span class="pre">unicom</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile</span></code>, <code class="docutils literal notranslate"><span class="pre">oversea</span></code>, <code class="docutils literal notranslate"><span class="pre">edu</span></code>, <code class="docutils literal notranslate"><span class="pre">drpeng</span></code>, <code class="docutils literal notranslate"><span class="pre">btvn</span></code>, .etc. When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">FORWORD_URL</span></code>, this parameter must be <code class="docutils literal notranslate"><span class="pre">default</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">default</span></code>. For checking all resolution lines enumeration please visit <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/34339.htm">Alibaba Cloud DNS doc</a> or using dns.getResolutionLines in data source to get the value. 
+:param pulumi.Input[float] ttl: The effective time of domain record. Its scope depends on the edition of the cloud resolution. Free is <code class="docutils literal notranslate"><span class="pre">[600,</span> <span class="pre">86400]</span></code>, Basic is <code class="docutils literal notranslate"><span class="pre">[120,</span> <span class="pre">86400]</span></code>, Standard is <code class="docutils literal notranslate"><span class="pre">[60,</span> <span class="pre">86400]</span></code>, Ultimate is <code class="docutils literal notranslate"><span class="pre">[10,</span> <span class="pre">86400]</span></code>, Exclusive is <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">86400]</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">600</span></code>.
+:param pulumi.Input[str] type: The type of domain record. Valid values are <code class="docutils literal notranslate"><span class="pre">A</span></code>,<code class="docutils literal notranslate"><span class="pre">NS</span></code>,<code class="docutils literal notranslate"><span class="pre">MX</span></code>,<code class="docutils literal notranslate"><span class="pre">TXT</span></code>,<code class="docutils literal notranslate"><span class="pre">CNAME</span></code>,<code class="docutils literal notranslate"><span class="pre">SRV</span></code>,<code class="docutils literal notranslate"><span class="pre">AAAA</span></code>,<code class="docutils literal notranslate"><span class="pre">CAA</span></code>, <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code> and <code class="docutils literal notranslate"><span class="pre">FORWORD_URL</span></code>.
+:param pulumi.Input[str] value: The value of domain record, When the <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">MX</span></code>,<code class="docutils literal notranslate"><span class="pre">NS</span></code>,<code class="docutils literal notranslate"><span class="pre">CNAME</span></code>,<code class="docutils literal notranslate"><span class="pre">SRV</span></code>, the server will treat the <code class="docutils literal notranslate"><span class="pre">value</span></code> as a fully qualified domain name, so it’s no need to add a <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end.</p>
 <dl class="py attribute">
 <dt id="pulumi_alicloud.dns.Record.host_record">
 <code class="sig-name descname">host_record</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.Record.host_record" title="Permalink to this definition">¶</a></dt>
@@ -1300,6 +1517,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_alicloud.dns.get_alidns_domain_groups">
+<code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_alidns_domain_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_alidns_domain_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list of Alidns Domain Groups in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong>  Available in 1.85.0+.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">get_alidns_domain_groups</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;c5ef2bc43064445787adf182af2****&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstDomainGroupId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of instance IDs.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by the domain group name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_alicloud.dns.get_domain_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_domain_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_domain_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
@@ -1386,6 +1627,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>ids</strong> (<em>list</em>) – A list of group IDs.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by group name.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.dns.get_instances">
+<code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list of DNS instances in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong>  Available in 1.84.0+.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">get_instances</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;dns-cn-oew1npk****&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstInstanceId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ids</strong> (<em>list</em>) – A list of instance IDs.</p>
 </dd>
 </dl>
 </dd></dl>
