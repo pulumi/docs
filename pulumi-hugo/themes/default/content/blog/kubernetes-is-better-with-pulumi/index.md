@@ -69,7 +69,7 @@ frontendService, err := corev1.NewService(ctx, “frontent”, &corev1.ServiceAr
 
 ## For  Operators
 
-Pulumi is not just for developers, operators have fine-grained control over Kubernetes that includes managing clusters, reuse of existing YAML manifests and Helm charts, and a convenience API for Kubernetes that abstracts boilerplate such as networking configurations. You can even export your Pulumi programs to YAML for portability.
+Pulumi is not just for developers; operators can leverage it to manage Kubernetes clusters, reuse existing YAML manifests and Helm charts, and conveniently manage common configurations like networking, storage, or RBAC. You can even export your Pulumi programs to YAML for portability.
 
 - **Manage Kubernetes clusters** – With Pulumi, you can manage every layer of your stack, from specifying a custom VPC to deploying Kubernetes clusters! [Check out this example]({{< relref "/blog/multicloud-app" >}}) where we create clusters on AWS, AKS, and GKE, and then deploy an app to all of them.
 
