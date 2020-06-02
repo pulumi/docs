@@ -16,7 +16,7 @@ You’ve containerized your application, and it’s running great on your deskto
 
 ## It’s Dangerous to Go Alone. Take this
 
-Recently, Pulumi engineer, [Levi Blackstone](https://twitter.com/levi_blackstone) posted a Twitter thread on why he thinks Pulumi is the best way to build and deploy modern applications on Kubernetes. Levi might be a bit biased, but he makes solid points for using Pulumi with Kubernetes, whether you’re a developer or operator.
+Recently, Pulumi engineer [Levi Blackstone](https://twitter.com/levi_blackstone) posted a Twitter thread on why he thinks Pulumi is the best way to build and deploy modern applications on Kubernetes. Levi might be a bit biased, but he makes solid points for using Pulumi with Kubernetes, whether you’re a developer or operator.
 
 ![Legend of Pulumipus](dangerous_pulumi.gif)
 
