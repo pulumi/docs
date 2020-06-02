@@ -87,7 +87,7 @@ Pulumi is not just for developers, operators have fine-grained control over Kube
 
 ## Conclusion
 
-If you’re just starting out with Kubernetes, Pulumi provides a great experience by letting you take advantage of conditional logic, strong typing, error checking, and full access to the Kubernetes API. When deploying infrastructure, you can avoid deploying deprecated versions and know precisely when your cluster is ready.
+If you’re just starting out with Kubernetes, Pulumi provides a great experience by letting you take advantage of conditional logic, strong typing, error checking, and full access to the Kubernetes API. When deploying infrastructure, you can avoid deploying deprecated versions and know precisely when your resources are ready.
 
 You can still use YAML manifests and Helm charts if you’re an experienced operator with existing resources. But if you want to fine-tune your infrastructure, Pulumi lets you manage your clusters on any cloud provider, including your own infrastructure. You can also simplify your deployments with Pulumi’s Crosswalk for Kubernetes, which features a convenience API that reduces boilerplate. Finally, you can export resource definitions as YAML, providing portability for your deployments.
 
