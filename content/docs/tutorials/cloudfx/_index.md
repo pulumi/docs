@@ -62,7 +62,7 @@ Authentication options must be set for the target cloud provider. See the [AWS s
 
 ## Configuration
 
-The Cloud Framework accepts the following configuration settings.  These can be provided via `pulumi config set cloud:<option>`.
+The Cloud Framework accepts the following configuration settings. These can be provided via `pulumi config set cloud:<option>`.
 
 * `provider`: (Required) The provider to deploy cloud resources into. Currently only `aws` is supported.
 
