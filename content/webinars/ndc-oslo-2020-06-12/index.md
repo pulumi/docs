@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "NDC Oslo"
-meta_desc: "In this talk, Paul will demonstrate why writing infrastructure in general programming languages is a better choice for infrastructure management."
+meta_desc: "In this talk, Paul Stack will demonstrate why writing infrastructure in general programming languages is a better choice for infrastructure management."
 
 # A featured webinar will display first in the list.
 featured: false

@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "TechStrong Con"
-meta_desc: "In this talk, Paul will demonstrate how to build infrastructure that manages Serverless, Kubernetes, PaaS and IaaS systems across multiple cloud providers."
+meta_desc: "In this talk, Paul Stack will demonstrate how to build infrastructure that manages Serverless, Kubernetes, PaaS, & IaaS systems across multiple cloud providers."
 
 # A featured webinar will display first in the list.
 featured: false

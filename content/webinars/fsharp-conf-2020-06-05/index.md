@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "fsharpConf 2020"
-meta_desc: "In this talk, Mikhail will introduce Pulumi, an open-source tool that leverages programming languages to manage infrastructure, yet in a declarative manner."
+meta_desc: "In this talk, Mikhail Shilkov will introduce Pulumi, an open-source tool that leverages programming languages to manage infrastructure in a declarative manner."
 
 # A featured webinar will display first in the list.
 featured: false
