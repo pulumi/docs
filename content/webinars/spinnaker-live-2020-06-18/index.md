@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Spinnaker Live"
-meta_desc: "In this talk, Dan and Praneet will go over how the Pulumi plugin for spinnaker works and example use cases."
+meta_desc: "Dan and Praneet will demonstrate how Pulumi works with Spinnaker to enable cloud-native continuous delivery for infrastructure along with your applications."
 
 # A featured webinar will display first in the list.
 featured: false

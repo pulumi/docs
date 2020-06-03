@@ -27,7 +27,7 @@ type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page.
-external: false
+external: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
