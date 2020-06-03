@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Is Better with Pulumi"
+title: "Winning with Pulumi Superpowers and Kubernetes"
 date: 2020-06-02
 meta_desc: "Ten reasons why you should deploy modern apps and Kubernetes with Pulumi"
 meta_image: dangerous_pulumi.gif
