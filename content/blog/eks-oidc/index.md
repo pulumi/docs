@@ -4,7 +4,7 @@ title: "Access Control for Pods on Amazon EKS"
 authors: ["mike-metral"]
 tags: ["EKS", "RBAC", "Kubernetes"]
 meta_desc: "Amazon EKS clusters can use IAM roles and policies for Pods to assign fine-grained access control of AWS services."
-meta_image: cluster.svg
+meta_image: cluster.png
 ---
 
 Amazon [EKS][aws-eks] clusters can use [IAM][aws-iam] roles and policies for Pods
