@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class KubernetesAutoscaler
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,12 +84,78 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.65.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.CS.KubernetesAutoscaler(&amp;quot;default&amp;quot;, new AliCloud.CS.KubernetesAutoscalerArgs
+    {
+        ClusterId = @var.Cluster_id,
+        CoolDownDuration = @var.Cool_down_duration,
+        DeferScaleInDuration = @var.Defer_scale_in_duration,
+        Nodepools = 
+        {
+            new AliCloud.CS.Inputs.KubernetesAutoscalerNodepoolArgs
+            {
+                Id = &amp;quot;scaling_group_id&amp;quot;,
+                Labels = &amp;quot;a=b&amp;quot;,
+                Taints = &amp;quot;c=d:NoSchedule&amp;quot;,
+            },
+        },
+        Utilization = @var.Utilization,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">KubernetesAutoscaler</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">KubernetesAutoscaler</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.CS.html">Pulumi.AliCloud.CS</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -100,16 +166,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesAutoscaler__ctor_" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.#ctor*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesAutoscaler__ctor_System_String_Pulumi_AliCloud_CS_KubernetesAutoscalerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.#ctor(System.String,Pulumi.AliCloud.CS.KubernetesAutoscalerArgs,System.Nullable{CustomResourceOptions})">KubernetesAutoscaler(String, KubernetesAutoscalerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_CS_KubernetesAutoscaler__ctor_System_String_Pulumi_AliCloud_CS_KubernetesAutoscalerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.#ctor(System.String,Pulumi.AliCloud.CS.KubernetesAutoscalerArgs,Pulumi.CustomResourceOptions)">KubernetesAutoscaler(String, KubernetesAutoscalerArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a KubernetesAutoscaler resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KubernetesAutoscaler(string name, KubernetesAutoscalerArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public KubernetesAutoscaler(string name, KubernetesAutoscalerArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,7 +200,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -144,7 +210,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesAutoscaler_ClusterId_" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.ClusterId*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesAutoscaler_ClusterId" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.ClusterId">ClusterId</h4>
@@ -165,13 +231,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesAutoscaler_CoolDownDuration_" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.CoolDownDuration*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesAutoscaler_CoolDownDuration" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.CoolDownDuration">CoolDownDuration</h4>
@@ -192,13 +258,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesAutoscaler_DeferScaleInDuration_" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.DeferScaleInDuration*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesAutoscaler_DeferScaleInDuration" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.DeferScaleInDuration">DeferScaleInDuration</h4>
@@ -219,13 +285,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesAutoscaler_Nodepools_" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.Nodepools*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesAutoscaler_Nodepools" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.Nodepools">Nodepools</h4>
@@ -250,13 +316,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.CS.Outputs.KubernetesAutoscalerNodepool.html">KubernetesAutoscalerNodepool</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.CS.Outputs.KubernetesAutoscalerNodepool.html">KubernetesAutoscalerNodepool</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesAutoscaler_Utilization_" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.Utilization*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesAutoscaler_Utilization" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.Utilization">Utilization</h4>
@@ -277,7 +343,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -285,17 +351,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesAutoscaler_Get_" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.Get*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesAutoscaler_Get_System_String_Input_System_String__Pulumi_AliCloud_CS_KubernetesAutoscalerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.Get(System.String,Input{System.String},Pulumi.AliCloud.CS.KubernetesAutoscalerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, KubernetesAutoscalerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_CS_KubernetesAutoscaler_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_CS_KubernetesAutoscalerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.CS.KubernetesAutoscaler.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.CS.KubernetesAutoscalerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, KubernetesAutoscalerState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing KubernetesAutoscaler resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static KubernetesAutoscaler Get(string name, Input&lt;string&gt; id, KubernetesAutoscalerState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static KubernetesAutoscaler Get(string name, Input&lt;string&gt; id, KubernetesAutoscalerState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -314,7 +380,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -326,7 +392,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -355,7 +421,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/CS/KubernetesAutoscaler.cs/#L56" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

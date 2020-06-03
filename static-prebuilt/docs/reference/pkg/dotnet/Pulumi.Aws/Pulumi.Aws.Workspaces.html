@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Workspaces
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,57 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Workspaces.Directory.html">Directory</a></h4>
       <section><p>Provides a directory registration in AWS WorkSpaces Service</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var mainVpc = new Aws.Ec2.Vpc(&amp;quot;mainVpc&amp;quot;, new Aws.Ec2.VpcArgs
+    {
+        CidrBlock = &amp;quot;10.0.0.0/16&amp;quot;,
+    });
+    var private_a = new Aws.Ec2.Subnet(&amp;quot;private-a&amp;quot;, new Aws.Ec2.SubnetArgs
+    {
+        AvailabilityZone = &amp;quot;us-east-1a&amp;quot;,
+        CidrBlock = &amp;quot;10.0.0.0/24&amp;quot;,
+        VpcId = mainVpc.Id,
+    });
+    var private_b = new Aws.Ec2.Subnet(&amp;quot;private-b&amp;quot;, new Aws.Ec2.SubnetArgs
+    {
+        AvailabilityZone = &amp;quot;us-east-1b&amp;quot;,
+        CidrBlock = &amp;quot;10.0.1.0/24&amp;quot;,
+        VpcId = mainVpc.Id,
+    });
+    var mainDirectory = new Aws.DirectoryService.Directory(&amp;quot;mainDirectory&amp;quot;, new Aws.DirectoryService.DirectoryArgs
+    {
+        Password = &amp;quot;#S1ncerely&amp;quot;,
+        Size = &amp;quot;Small&amp;quot;,
+        VpcSettings = new Aws.DirectoryService.Inputs.DirectoryVpcSettingsArgs
+        {
+            SubnetIds = 
+            {
+                private_a.Id,
+                private_b.Id,
+            },
+            VpcId = mainVpc.Id,
+        },
+    });
+    var mainWorkspaces_directoryDirectory = new Aws.Workspaces.Directory(&amp;quot;mainWorkspaces/directoryDirectory&amp;quot;, new Aws.Workspaces.DirectoryArgs
+    {
+        DirectoryId = mainDirectory.Id,
+        SelfServicePermissions = new Aws.Workspaces.Inputs.DirectorySelfServicePermissionsArgs
+        {
+            IncreaseVolumeSize = true,
+            RebuildWorkspace = true,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Workspaces.DirectoryArgs.html">DirectoryArgs</a></h4>
       <section></section>
@@ -91,10 +142,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Workspaces.IpGroup.html">IpGroup</a></h4>
       <section><p>Provides an IP access control group in AWS WorkSpaces Service</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var contractors = new Aws.Workspaces.IpGroup(&amp;quot;contractors&amp;quot;, new Aws.Workspaces.IpGroupArgs
+    {
+        Description = &amp;quot;Contractors IP access control group&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Workspaces.IpGroupArgs.html">IpGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Workspaces.IpGroupState.html">IpGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Workspaces.Workspace.html">Workspace</a></h4>
+      <section><p>Provides a workspace in <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html">AWS Workspaces</a> Service</p>
+<blockquote>
+<p><strong>NOTE:</strong> During deletion of an <code>aws.workspaces.Workspace</code> resource, the service role <code>workspaces_DefaultRole</code> must be attached to the
+policy <code>arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess</code>, or it will leak the ENI that the Workspaces service creates for the Workspace.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Workspaces.WorkspaceArgs.html">WorkspaceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Workspaces.WorkspaceState.html">WorkspaceState</a></h4>
       <section></section>
 </article>
           </div>

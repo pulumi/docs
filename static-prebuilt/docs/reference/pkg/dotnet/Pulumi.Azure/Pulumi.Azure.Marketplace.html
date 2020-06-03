@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Marketplace
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,24 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.Marketplace.Agreement.html">Agreement</a></h4>
       <section><p>Allows accepting the Legal Terms for a Marketplace Image.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var barracuda = new Azure.Marketplace.Agreement(&amp;quot;barracuda&amp;quot;, new Azure.Marketplace.AgreementArgs
+    {
+        Offer = &amp;quot;waf&amp;quot;,
+        Plan = &amp;quot;hourly&amp;quot;,
+        Publisher = &amp;quot;barracudanetworks&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Marketplace.AgreementArgs.html">AgreementArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.ServiceQuotas
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,6 +90,24 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ServiceQuotas.ServiceQuota.html">ServiceQuota</a></h4>
       <section><p>Manages an individual Service Quota.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ServiceQuotas.ServiceQuota(&amp;quot;example&amp;quot;, new Aws.ServiceQuotas.ServiceQuotaArgs
+    {
+        QuotaCode = &amp;quot;L-F678F1CE&amp;quot;,
+        ServiceCode = &amp;quot;vpc&amp;quot;,
+        Value = 75,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ServiceQuotas.ServiceQuotaArgs.html">ServiceQuotaArgs</a></h4>
       <section></section>

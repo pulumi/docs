@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VolumeArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">VolumeArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">VolumeArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ebs.html">Pulumi.Aws.Ebs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ebs/Volume.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L221">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ebs_VolumeArgs__ctor_" data-uid="Pulumi.Aws.Ebs.VolumeArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Ebs_VolumeArgs__ctor" data-uid="Pulumi.Aws.Ebs.VolumeArgs.#ctor">VolumeArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ebs/Volume.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ebs_VolumeArgs_AvailabilityZone_" data-uid="Pulumi.Aws.Ebs.VolumeArgs.AvailabilityZone*"></a>
   <h4 id="Pulumi_Aws_Ebs_VolumeArgs_AvailabilityZone" data-uid="Pulumi.Aws.Ebs.VolumeArgs.AvailabilityZone">AvailabilityZone</h4>
@@ -121,13 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ebs/Volume.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ebs_VolumeArgs_Encrypted_" data-uid="Pulumi.Aws.Ebs.VolumeArgs.Encrypted*"></a>
   <h4 id="Pulumi_Aws_Ebs_VolumeArgs_Encrypted" data-uid="Pulumi.Aws.Ebs.VolumeArgs.Encrypted">Encrypted</h4>
@@ -136,7 +165,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Encrypted { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Encrypted { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +177,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ebs/Volume.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ebs_VolumeArgs_Iops_" data-uid="Pulumi.Aws.Ebs.VolumeArgs.Iops*"></a>
   <h4 id="Pulumi_Aws_Ebs_VolumeArgs_Iops" data-uid="Pulumi.Aws.Ebs.VolumeArgs.Iops">Iops</h4>
@@ -163,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Iops { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Iops { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +204,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ebs/Volume.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ebs_VolumeArgs_KmsKeyId_" data-uid="Pulumi.Aws.Ebs.VolumeArgs.KmsKeyId*"></a>
   <h4 id="Pulumi_Aws_Ebs_VolumeArgs_KmsKeyId" data-uid="Pulumi.Aws.Ebs.VolumeArgs.KmsKeyId">KmsKeyId</h4>
@@ -190,7 +219,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsKeyId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsKeyId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,13 +231,67 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ebs/Volume.cs/#L144">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L182">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ebs_VolumeArgs_MultiAttachEnabled_" data-uid="Pulumi.Aws.Ebs.VolumeArgs.MultiAttachEnabled*"></a>
+  <h4 id="Pulumi_Aws_Ebs_VolumeArgs_MultiAttachEnabled" data-uid="Pulumi.Aws.Ebs.VolumeArgs.MultiAttachEnabled">MultiAttachEnabled</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported exclusively on <code>io1</code> volumes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; MultiAttachEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L188">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ebs_VolumeArgs_OutpostArn_" data-uid="Pulumi.Aws.Ebs.VolumeArgs.OutpostArn*"></a>
+  <h4 id="Pulumi_Aws_Ebs_VolumeArgs_OutpostArn" data-uid="Pulumi.Aws.Ebs.VolumeArgs.OutpostArn">OutpostArn</h4>
+  <div class="markdown level1 summary"><p>The Amazon Resource Name (ARN) of the Outpost.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OutpostArn { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ebs_VolumeArgs_Size_" data-uid="Pulumi.Aws.Ebs.VolumeArgs.Size*"></a>
   <h4 id="Pulumi_Aws_Ebs_VolumeArgs_Size" data-uid="Pulumi.Aws.Ebs.VolumeArgs.Size">Size</h4>
@@ -217,7 +300,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Size { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Size { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,13 +312,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ebs/Volume.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ebs_VolumeArgs_SnapshotId_" data-uid="Pulumi.Aws.Ebs.VolumeArgs.SnapshotId*"></a>
   <h4 id="Pulumi_Aws_Ebs_VolumeArgs_SnapshotId" data-uid="Pulumi.Aws.Ebs.VolumeArgs.SnapshotId">SnapshotId</h4>
@@ -244,7 +327,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SnapshotId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SnapshotId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,17 +339,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ebs/Volume.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ebs_VolumeArgs_Tags_" data-uid="Pulumi.Aws.Ebs.VolumeArgs.Tags*"></a>
   <h4 id="Pulumi_Aws_Ebs_VolumeArgs_Tags" data-uid="Pulumi.Aws.Ebs.VolumeArgs.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -283,13 +366,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ebs/Volume.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L218">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ebs_VolumeArgs_Type_" data-uid="Pulumi.Aws.Ebs.VolumeArgs.Type*"></a>
   <h4 id="Pulumi_Aws_Ebs_VolumeArgs_Type" data-uid="Pulumi.Aws.Ebs.VolumeArgs.Type">Type</h4>
@@ -298,7 +381,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,7 +393,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -322,7 +405,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ebs/Volume.cs/#L115" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ebs/Volume.cs/#L153" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

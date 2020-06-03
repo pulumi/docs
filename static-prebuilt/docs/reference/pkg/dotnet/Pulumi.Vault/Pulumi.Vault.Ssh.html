@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.Ssh
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,26 @@
       <h4><a class="xref" href="Pulumi.Vault.Ssh.SecretBackendCa.html">SecretBackendCa</a></h4>
       <section><p>Provides a resource to manage CA information in an SSH secret backend
 <a href="https://www.vaultproject.io/docs/secrets/ssh/index.html">SSH secret backend within Vault</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Vault.Mount(&amp;quot;example&amp;quot;, new Vault.MountArgs
+    {
+        Type = &amp;quot;ssh&amp;quot;,
+    });
+    var foo = new Vault.Ssh.SecretBackendCa(&amp;quot;foo&amp;quot;, new Vault.Ssh.SecretBackendCaArgs
+    {
+        Backend = example.Path,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Ssh.SecretBackendCaArgs.html">SecretBackendCaArgs</a></h4>
       <section></section>
@@ -87,6 +107,36 @@
       <h4><a class="xref" href="Pulumi.Vault.Ssh.SecretBackendRole.html">SecretBackendRole</a></h4>
       <section><p>Provides a resource to manage roles in an SSH secret backend
 <a href="https://www.vaultproject.io/docs/secrets/ssh/index.html">SSH secret backend within Vault</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Vault.Mount(&amp;quot;example&amp;quot;, new Vault.MountArgs
+    {
+        Type = &amp;quot;ssh&amp;quot;,
+    });
+    var foo = new Vault.Ssh.SecretBackendRole(&amp;quot;foo&amp;quot;, new Vault.Ssh.SecretBackendRoleArgs
+    {
+        AllowUserCertificates = true,
+        Backend = example.Path,
+        KeyType = &amp;quot;ca&amp;quot;,
+    });
+    var bar = new Vault.Ssh.SecretBackendRole(&amp;quot;bar&amp;quot;, new Vault.Ssh.SecretBackendRoleArgs
+    {
+        AllowedUsers = &amp;quot;default,baz&amp;quot;,
+        Backend = example.Path,
+        CidrList = &amp;quot;0.0.0.0/0&amp;quot;,
+        DefaultUser = &amp;quot;default&amp;quot;,
+        KeyType = &amp;quot;otp&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Ssh.SecretBackendRoleArgs.html">SecretBackendRoleArgs</a></h4>
       <section></section>

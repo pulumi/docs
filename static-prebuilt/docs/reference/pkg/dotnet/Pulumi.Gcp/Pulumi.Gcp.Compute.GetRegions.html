@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetRegions
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,26 +78,84 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetRegions</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_GetRegions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetRegions : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetRegions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetRegions.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/GetRegions.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GetRegions_InvokeAsync_" data-uid="Pulumi.Gcp.Compute.GetRegions.InvokeAsync*"></a>
-  <h4 id="Pulumi_Gcp_Compute_GetRegions_InvokeAsync_Pulumi_Gcp_Compute_GetRegionsArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Gcp.Compute.GetRegions.InvokeAsync(Pulumi.Gcp.Compute.GetRegionsArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetRegionsArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_GetRegions_InvokeAsync_Pulumi_Gcp_Compute_GetRegionsArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Gcp.Compute.GetRegions.InvokeAsync(Pulumi.Gcp.Compute.GetRegionsArgs,Pulumi.InvokeOptions)">InvokeAsync(GetRegionsArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Provides access to available Google Compute regions for a given project.
-See more about <a href="https://cloud.google.com/compute/docs/regions-zones/">regions and regions</a> in the upstream docs.</p>
+See more about <a href="https://cloud.google.com/compute/docs/regions-zones/">regions and zones</a> in the upstream docs.</p>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dict = Output.Create(Initialize());
+}
+
+private async Task&amp;lt;IDictionary&amp;lt;string, Output&amp;lt;string&gt;&gt;&gt; Initialize()
+{
+    var available = await Gcp.Compute.GetRegions.InvokeAsync();
+    var cluster = new List&amp;lt;Gcp.Compute.Subnetwork&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; available.Names.Length; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        cluster.Add(new Gcp.Compute.Subnetwork($&amp;quot;cluster-{range.Value}&amp;quot;, new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = $&amp;quot;10.36.{range.Value}.0/24&amp;quot;,
+            Network = &amp;quot;my-network&amp;quot;,
+            Region = available.Names[range.Value],
+        }));
+    }
+
+    return new Dictionary&amp;lt;string, Output&amp;lt;string&gt;&gt;
+    {
+    };
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetRegionsResult&gt; InvokeAsync(GetRegionsArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetRegionsResult&gt; InvokeAsync(GetRegionsArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -115,7 +173,7 @@ See more about <a href="https://cloud.google.com/compute/docs/regions-zones/">re
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -131,7 +189,7 @@ See more about <a href="https://cloud.google.com/compute/docs/regions-zones/">re
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.GetRegionsResult.html">GetRegionsResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.GetRegionsResult.html">GetRegionsResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -143,7 +201,7 @@ See more about <a href="https://cloud.google.com/compute/docs/regions-zones/">re
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetRegions.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/GetRegions.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

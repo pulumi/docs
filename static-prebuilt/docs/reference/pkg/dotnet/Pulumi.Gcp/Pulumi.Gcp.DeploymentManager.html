@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.DeploymentManager
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,6 +90,37 @@ experienced user of both tools.</p>
 deployments in preview as recreate-only for any update operation other
 than actually deploying an in-preview deployment (i.e. <code>preview=true</code> to
 <code>preview=false</code>).</p>
+<h2 id="example-usage---deployment-manager-deployment-basic">Example Usage - Deployment Manager Deployment Basic</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var deployment = new Gcp.DeploymentManager.Deployment(&amp;quot;deployment&amp;quot;, new Gcp.DeploymentManager.DeploymentArgs
+    {
+        Target = new Gcp.DeploymentManager.Inputs.DeploymentTargetArgs
+        {
+            Config = new Gcp.DeploymentManager.Inputs.DeploymentTargetConfigArgs
+            {
+                Content = File.ReadAllText(&amp;quot;path/to/config.yml&amp;quot;),
+            },
+        },
+        Labels = 
+        {
+            new Gcp.DeploymentManager.Inputs.DeploymentLabelArgs
+            {
+                Key = &amp;quot;foo&amp;quot;,
+                Value = &amp;quot;bar&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.DeploymentManager.DeploymentArgs.html">DeploymentArgs</a></h4>
       <section></section>

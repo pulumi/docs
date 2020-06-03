@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.Ldap
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,11 +78,66 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Vault.Ldap.AuthBackend.html">AuthBackend</a></h4>
       <section><p>Provides a resource for managing an <a href="https://www.vaultproject.io/docs/auth/ldap.html">LDAP auth backend within Vault</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ldap = new Vault.Ldap.AuthBackend(&amp;quot;ldap&amp;quot;, new Vault.Ldap.AuthBackendArgs
+    {
+        Discoverdn = false,
+        Groupdn = &amp;quot;OU=Groups,DC=example,DC=org&amp;quot;,
+        Groupfilter = &amp;quot;(&amp;amp;(objectClass=group)(member:1.2.840.113556.1.4.1941:={{.UserDN}}))&amp;quot;,
+        Path = &amp;quot;ldap&amp;quot;,
+        Upndomain = &amp;quot;EXAMPLE.ORG&amp;quot;,
+        Url = &amp;quot;ldaps://dc-01.example.org&amp;quot;,
+        Userattr = &amp;quot;sAMAccountName&amp;quot;,
+        Userdn = &amp;quot;OU=Users,OU=Accounts,DC=example,DC=org&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Ldap.AuthBackendArgs.html">AuthBackendArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Ldap.AuthBackendGroup.html">AuthBackendGroup</a></h4>
       <section><p>Provides a resource to create a group in an <a href="https://www.vaultproject.io/docs/auth/ldap.html">LDAP auth backend within Vault</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ldap = new Vault.Ldap.AuthBackend(&amp;quot;ldap&amp;quot;, new Vault.Ldap.AuthBackendArgs
+    {
+        Discoverdn = false,
+        Groupdn = &amp;quot;OU=Groups,DC=example,DC=org&amp;quot;,
+        Groupfilter = &amp;quot;(&amp;amp;(objectClass=group)(member:1.2.840.113556.1.4.1941:={{.UserDN}}))&amp;quot;,
+        Path = &amp;quot;ldap&amp;quot;,
+        Upndomain = &amp;quot;EXAMPLE.ORG&amp;quot;,
+        Url = &amp;quot;ldaps://dc-01.example.org&amp;quot;,
+        Userattr = &amp;quot;sAMAccountName&amp;quot;,
+        Userdn = &amp;quot;OU=Users,OU=Accounts,DC=example,DC=org&amp;quot;,
+    });
+    var @group = new Vault.Ldap.AuthBackendGroup(&amp;quot;group&amp;quot;, new Vault.Ldap.AuthBackendGroupArgs
+    {
+        Backend = ldap.Path,
+        Groupname = &amp;quot;dba&amp;quot;,
+        Policies = 
+        {
+            &amp;quot;dba&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Ldap.AuthBackendGroupArgs.html">AuthBackendGroupArgs</a></h4>
       <section></section>
@@ -92,6 +147,39 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Ldap.AuthBackendUser.html">AuthBackendUser</a></h4>
       <section><p>Provides a resource to create a user in an <a href="https://www.vaultproject.io/docs/auth/ldap.html">LDAP auth backend within Vault</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ldap = new Vault.Ldap.AuthBackend(&amp;quot;ldap&amp;quot;, new Vault.Ldap.AuthBackendArgs
+    {
+        Discoverdn = false,
+        Groupdn = &amp;quot;OU=Groups,DC=example,DC=org&amp;quot;,
+        Groupfilter = &amp;quot;(&amp;amp;(objectClass=group)(member:1.2.840.113556.1.4.1941:={{.UserDN}}))&amp;quot;,
+        Path = &amp;quot;ldap&amp;quot;,
+        Upndomain = &amp;quot;EXAMPLE.ORG&amp;quot;,
+        Url = &amp;quot;ldaps://dc-01.example.org&amp;quot;,
+        Userattr = &amp;quot;sAMAccountName&amp;quot;,
+        Userdn = &amp;quot;OU=Users,OU=Accounts,DC=example,DC=org&amp;quot;,
+    });
+    var user = new Vault.Ldap.AuthBackendUser(&amp;quot;user&amp;quot;, new Vault.Ldap.AuthBackendUserArgs
+    {
+        Backend = ldap.Path,
+        Policies = 
+        {
+            &amp;quot;dba&amp;quot;,
+            &amp;quot;sysops&amp;quot;,
+        },
+        Username = &amp;quot;test-user&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Ldap.AuthBackendUserArgs.html">AuthBackendUserArgs</a></h4>
       <section></section>

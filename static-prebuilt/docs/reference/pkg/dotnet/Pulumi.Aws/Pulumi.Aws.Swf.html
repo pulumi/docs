@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Swf
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,23 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Swf.Domain.html">Domain</a></h4>
       <section><p>Provides an SWF Domain resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.Swf.Domain(&amp;quot;foo&amp;quot;, new Aws.Swf.DomainArgs
+    {
+        Description = &amp;quot;SWF Domain&amp;quot;,
+        WorkflowExecutionRetentionPeriodInDays = 30,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Swf.DomainArgs.html">DomainArgs</a></h4>
       <section></section>

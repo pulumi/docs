@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.F5BigIP
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,6 +89,24 @@
       <h4><a class="xref" href="Pulumi.F5BigIP.Do.html">Do</a></h4>
       <section><p><code>f5bigip..Do</code> provides details about bigip do resource</p>
 <p>This resource is helpful to configure do declarative JSON on BIG-IP.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var do_example = new F5BigIP.Do(&amp;quot;do-example&amp;quot;, new F5BigIP.DoArgs
+    {
+        DoJson = File.ReadAllText(&amp;quot;example.json&amp;quot;),
+        TenantName = &amp;quot;sample_test1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.DoArgs.html">DoArgs</a></h4>
       <section></section>

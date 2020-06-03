@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.ActionTrail
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -117,6 +117,26 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.35.0+</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new action trail.
+    var foo = new AliCloud.ActionTrail.Trail(&amp;quot;foo&amp;quot;, new AliCloud.ActionTrail.TrailArgs
+    {
+        EventRw = &amp;quot;Write-test&amp;quot;,
+        OssBucketName = alicloud_oss_bucket.Bucket.Id,
+        OssKeyPrefix = &amp;quot;at-product-account-audit-B&amp;quot;,
+        RoleName = alicloud_ram_role_policy_attachment.Attach.Role_name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.ActionTrail.TrailArgs.html">TrailArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class WebAclAssociation
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,247 @@
 <blockquote>
 <p><strong>Note:</strong> An Application Load Balancer can only be associated with one WAF Regional WebACL.</p>
 </blockquote>
+<h2 id="application-load-balancer-association-example">Application Load Balancer Association Example</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ipset = new Aws.WafRegional.IpSet(&amp;quot;ipset&amp;quot;, new Aws.WafRegional.IpSetArgs
+    {
+        IpSetDescriptors = 
+        {
+            new Aws.WafRegional.Inputs.IpSetIpSetDescriptorArgs
+            {
+                Type = &amp;quot;IPV4&amp;quot;,
+                Value = &amp;quot;192.0.7.0/24&amp;quot;,
+            },
+        },
+    });
+    var fooRule = new Aws.WafRegional.Rule(&amp;quot;fooRule&amp;quot;, new Aws.WafRegional.RuleArgs
+    {
+        MetricName = &amp;quot;tfWAFRule&amp;quot;,
+        Predicates = 
+        {
+            new Aws.WafRegional.Inputs.RulePredicateArgs
+            {
+                DataId = ipset.Id,
+                Negated = false,
+                Type = &amp;quot;IPMatch&amp;quot;,
+            },
+        },
+    });
+    var fooWebAcl = new Aws.WafRegional.WebAcl(&amp;quot;fooWebAcl&amp;quot;, new Aws.WafRegional.WebAclArgs
+    {
+        DefaultAction = new Aws.WafRegional.Inputs.WebAclDefaultActionArgs
+        {
+            Type = &amp;quot;ALLOW&amp;quot;,
+        },
+        MetricName = &amp;quot;foo&amp;quot;,
+        Rules = 
+        {
+            new Aws.WafRegional.Inputs.WebAclRuleArgs
+            {
+                Action = new Aws.WafRegional.Inputs.WebAclRuleActionArgs
+                {
+                    Type = &amp;quot;BLOCK&amp;quot;,
+                },
+                Priority = 1,
+                RuleId = fooRule.Id,
+            },
+        },
+    });
+    var fooVpc = new Aws.Ec2.Vpc(&amp;quot;fooVpc&amp;quot;, new Aws.Ec2.VpcArgs
+    {
+        CidrBlock = &amp;quot;10.1.0.0/16&amp;quot;,
+    });
+    var available = Output.Create(Aws.GetAvailabilityZones.InvokeAsync());
+    var fooSubnet = new Aws.Ec2.Subnet(&amp;quot;fooSubnet&amp;quot;, new Aws.Ec2.SubnetArgs
+    {
+        AvailabilityZone = available.Apply(available =&gt; available.Names[0]),
+        CidrBlock = &amp;quot;10.1.1.0/24&amp;quot;,
+        VpcId = fooVpc.Id,
+    });
+    var bar = new Aws.Ec2.Subnet(&amp;quot;bar&amp;quot;, new Aws.Ec2.SubnetArgs
+    {
+        AvailabilityZone = available.Apply(available =&gt; available.Names[1]),
+        CidrBlock = &amp;quot;10.1.2.0/24&amp;quot;,
+        VpcId = fooVpc.Id,
+    });
+    var fooLoadBalancer = new Aws.Alb.LoadBalancer(&amp;quot;fooLoadBalancer&amp;quot;, new Aws.Alb.LoadBalancerArgs
+    {
+        Internal = true,
+        Subnets = 
+        {
+            fooSubnet.Id,
+            bar.Id,
+        },
+    });
+    var fooWebAclAssociation = new Aws.WafRegional.WebAclAssociation(&amp;quot;fooWebAclAssociation&amp;quot;, new Aws.WafRegional.WebAclAssociationArgs
+    {
+        ResourceArn = fooLoadBalancer.Arn,
+        WebAclId = fooWebAcl.Id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="api-gateway-association-example">API Gateway Association Example</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ipset = new Aws.WafRegional.IpSet(&amp;quot;ipset&amp;quot;, new Aws.WafRegional.IpSetArgs
+    {
+        IpSetDescriptors = 
+        {
+            new Aws.WafRegional.Inputs.IpSetIpSetDescriptorArgs
+            {
+                Type = &amp;quot;IPV4&amp;quot;,
+                Value = &amp;quot;192.0.7.0/24&amp;quot;,
+            },
+        },
+    });
+    var fooRule = new Aws.WafRegional.Rule(&amp;quot;fooRule&amp;quot;, new Aws.WafRegional.RuleArgs
+    {
+        MetricName = &amp;quot;tfWAFRule&amp;quot;,
+        Predicates = 
+        {
+            new Aws.WafRegional.Inputs.RulePredicateArgs
+            {
+                DataId = ipset.Id,
+                Negated = false,
+                Type = &amp;quot;IPMatch&amp;quot;,
+            },
+        },
+    });
+    var fooWebAcl = new Aws.WafRegional.WebAcl(&amp;quot;fooWebAcl&amp;quot;, new Aws.WafRegional.WebAclArgs
+    {
+        DefaultAction = new Aws.WafRegional.Inputs.WebAclDefaultActionArgs
+        {
+            Type = &amp;quot;ALLOW&amp;quot;,
+        },
+        MetricName = &amp;quot;foo&amp;quot;,
+        Rules = 
+        {
+            new Aws.WafRegional.Inputs.WebAclRuleArgs
+            {
+                Action = new Aws.WafRegional.Inputs.WebAclRuleActionArgs
+                {
+                    Type = &amp;quot;BLOCK&amp;quot;,
+                },
+                Priority = 1,
+                RuleId = fooRule.Id,
+            },
+        },
+    });
+    var testRestApi = new Aws.ApiGateway.RestApi(&amp;quot;testRestApi&amp;quot;, new Aws.ApiGateway.RestApiArgs
+    {
+    });
+    var testResource = new Aws.ApiGateway.Resource(&amp;quot;testResource&amp;quot;, new Aws.ApiGateway.ResourceArgs
+    {
+        ParentId = testRestApi.RootResourceId,
+        PathPart = &amp;quot;test&amp;quot;,
+        RestApi = testRestApi.Id,
+    });
+    var testMethod = new Aws.ApiGateway.Method(&amp;quot;testMethod&amp;quot;, new Aws.ApiGateway.MethodArgs
+    {
+        Authorization = &amp;quot;NONE&amp;quot;,
+        HttpMethod = &amp;quot;GET&amp;quot;,
+        ResourceId = testResource.Id,
+        RestApi = testRestApi.Id,
+    });
+    var testMethodResponse = new Aws.ApiGateway.MethodResponse(&amp;quot;testMethodResponse&amp;quot;, new Aws.ApiGateway.MethodResponseArgs
+    {
+        HttpMethod = testMethod.HttpMethod,
+        ResourceId = testResource.Id,
+        RestApi = testRestApi.Id,
+        StatusCode = &amp;quot;400&amp;quot;,
+    });
+    var testIntegration = new Aws.ApiGateway.Integration(&amp;quot;testIntegration&amp;quot;, new Aws.ApiGateway.IntegrationArgs
+    {
+        HttpMethod = testMethod.HttpMethod,
+        IntegrationHttpMethod = &amp;quot;GET&amp;quot;,
+        ResourceId = testResource.Id,
+        RestApi = testRestApi.Id,
+        Type = &amp;quot;HTTP&amp;quot;,
+        Uri = &amp;quot;http://www.example.com&amp;quot;,
+    });
+    var testIntegrationResponse = new Aws.ApiGateway.IntegrationResponse(&amp;quot;testIntegrationResponse&amp;quot;, new Aws.ApiGateway.IntegrationResponseArgs
+    {
+        HttpMethod = testIntegration.HttpMethod,
+        ResourceId = testResource.Id,
+        RestApi = testRestApi.Id,
+        StatusCode = testMethodResponse.StatusCode,
+    });
+    var testDeployment = new Aws.ApiGateway.Deployment(&amp;quot;testDeployment&amp;quot;, new Aws.ApiGateway.DeploymentArgs
+    {
+        RestApi = testRestApi.Id,
+    });
+    var testStage = new Aws.ApiGateway.Stage(&amp;quot;testStage&amp;quot;, new Aws.ApiGateway.StageArgs
+    {
+        Deployment = testDeployment.Id,
+        RestApi = testRestApi.Id,
+        StageName = &amp;quot;test&amp;quot;,
+    });
+    var association = new Aws.WafRegional.WebAclAssociation(&amp;quot;association&amp;quot;, new Aws.WafRegional.WebAclAssociationArgs
+    {
+        ResourceArn = testStage.Arn,
+        WebAclId = fooWebAcl.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">WebAclAssociation</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">WebAclAssociation</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.WafRegional.html">Pulumi.Aws.WafRegional</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -91,16 +326,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/WafRegional/WebAclAssociation.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/WafRegional/WebAclAssociation.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Aws_WafRegional_WebAclAssociation__ctor_" data-uid="Pulumi.Aws.WafRegional.WebAclAssociation.#ctor*"></a>
-  <h4 id="Pulumi_Aws_WafRegional_WebAclAssociation__ctor_System_String_Pulumi_Aws_WafRegional_WebAclAssociationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.WafRegional.WebAclAssociation.#ctor(System.String,Pulumi.Aws.WafRegional.WebAclAssociationArgs,System.Nullable{CustomResourceOptions})">WebAclAssociation(String, WebAclAssociationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_WafRegional_WebAclAssociation__ctor_System_String_Pulumi_Aws_WafRegional_WebAclAssociationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.WafRegional.WebAclAssociation.#ctor(System.String,Pulumi.Aws.WafRegional.WebAclAssociationArgs,Pulumi.CustomResourceOptions)">WebAclAssociation(String, WebAclAssociationArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a WebAclAssociation resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WebAclAssociation(string name, WebAclAssociationArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public WebAclAssociation(string name, WebAclAssociationArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +360,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +370,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/WafRegional/WebAclAssociation.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/WafRegional/WebAclAssociation.cs/#L225">View Source</a>
   </span>
   <a id="Pulumi_Aws_WafRegional_WebAclAssociation_ResourceArn_" data-uid="Pulumi.Aws.WafRegional.WebAclAssociation.ResourceArn*"></a>
   <h4 id="Pulumi_Aws_WafRegional_WebAclAssociation_ResourceArn" data-uid="Pulumi.Aws.WafRegional.WebAclAssociation.ResourceArn">ResourceArn</h4>
@@ -156,13 +391,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/WafRegional/WebAclAssociation.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/WafRegional/WebAclAssociation.cs/#L231">View Source</a>
   </span>
   <a id="Pulumi_Aws_WafRegional_WebAclAssociation_WebAclId_" data-uid="Pulumi.Aws.WafRegional.WebAclAssociation.WebAclId*"></a>
   <h4 id="Pulumi_Aws_WafRegional_WebAclAssociation_WebAclId" data-uid="Pulumi.Aws.WafRegional.WebAclAssociation.WebAclId">WebAclId</h4>
@@ -183,7 +418,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -191,17 +426,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/WafRegional/WebAclAssociation.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/WafRegional/WebAclAssociation.cs/#L272">View Source</a>
   </span>
   <a id="Pulumi_Aws_WafRegional_WebAclAssociation_Get_" data-uid="Pulumi.Aws.WafRegional.WebAclAssociation.Get*"></a>
-  <h4 id="Pulumi_Aws_WafRegional_WebAclAssociation_Get_System_String_Input_System_String__Pulumi_Aws_WafRegional_WebAclAssociationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.WafRegional.WebAclAssociation.Get(System.String,Input{System.String},Pulumi.Aws.WafRegional.WebAclAssociationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, WebAclAssociationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_WafRegional_WebAclAssociation_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_WafRegional_WebAclAssociationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.WafRegional.WebAclAssociation.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.WafRegional.WebAclAssociationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, WebAclAssociationState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing WebAclAssociation resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WebAclAssociation Get(string name, Input&lt;string&gt; id, WebAclAssociationState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static WebAclAssociation Get(string name, Input&lt;string&gt; id, WebAclAssociationState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -220,7 +455,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -232,7 +467,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -261,7 +496,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/WafRegional/WebAclAssociation.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/WafRegional/WebAclAssociation.cs/#L220" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

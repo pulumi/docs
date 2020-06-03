@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Cluster
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,14 +80,110 @@ it is applied in the next maintenance window. Because of this, this provider may
 a difference in its planning phase because the actual modification has not yet taken
 place. You can use the <code>apply_immediately</code> flag to instruct the service to apply the
 change immediately. Using <code>apply_immediately</code> can result in a brief downtime as the server reboots.
-See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.</p>
+See the AWS Docs on <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.Modify.html">Modifying an ElastiCache Cache Cluster</a> for more information.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="memcached-cluster">Memcached Cluster</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ElastiCache.Cluster(&amp;quot;example&amp;quot;, new Aws.ElastiCache.ClusterArgs
+    {
+        Engine = &amp;quot;memcached&amp;quot;,
+        NodeType = &amp;quot;cache.m4.large&amp;quot;,
+        NumCacheNodes = 2,
+        ParameterGroupName = &amp;quot;default.memcached1.4&amp;quot;,
+        Port = 11211,
+    });
+}
+
+}
+</code></pre>
+<h3 id="redis-instance">Redis Instance</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ElastiCache.Cluster(&amp;quot;example&amp;quot;, new Aws.ElastiCache.ClusterArgs
+    {
+        Engine = &amp;quot;redis&amp;quot;,
+        EngineVersion = &amp;quot;3.2.10&amp;quot;,
+        NodeType = &amp;quot;cache.m4.large&amp;quot;,
+        NumCacheNodes = 1,
+        ParameterGroupName = &amp;quot;default.redis3.2&amp;quot;,
+        Port = 6379,
+    });
+}
+
+}
+</code></pre>
+<h3 id="redis-cluster-mode-disabled-read-replica-instance">Redis Cluster Mode Disabled Read Replica Instance</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var replica = new Aws.ElastiCache.Cluster(&amp;quot;replica&amp;quot;, new Aws.ElastiCache.ClusterArgs
+    {
+        ReplicationGroupId = aws_elasticache_replication_group.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Cluster</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Cluster</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ElastiCache.html">Pulumi.Aws.ElastiCache</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -98,16 +194,16 @@ See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more informa
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L283">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster__ctor_" data-uid="Pulumi.Aws.ElastiCache.Cluster.#ctor*"></a>
-  <h4 id="Pulumi_Aws_ElastiCache_Cluster__ctor_System_String_Pulumi_Aws_ElastiCache_ClusterArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ElastiCache.Cluster.#ctor(System.String,Pulumi.Aws.ElastiCache.ClusterArgs,System.Nullable{CustomResourceOptions})">Cluster(String, ClusterArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster__ctor_System_String_Pulumi_Aws_ElastiCache_ClusterArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ElastiCache.Cluster.#ctor(System.String,Pulumi.Aws.ElastiCache.ClusterArgs,Pulumi.CustomResourceOptions)">Cluster(String, ClusterArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Cluster resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +228,7 @@ See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more informa
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -142,13 +238,13 @@ See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more informa
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_ApplyImmediately_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ApplyImmediately*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_ApplyImmediately" data-uid="Pulumi.Aws.ElastiCache.Cluster.ApplyImmediately">ApplyImmediately</h4>
   <div class="markdown level1 summary"><p>Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-<code>false</code>. See [Amazon ElastiCache Documentation for more information.][1]
+<code>false</code>. See <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html">Amazon ElastiCache Documentation for more information.</a>
 (Available since v0.6.0)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -166,13 +262,13 @@ are applied immediately, or during the next maintenance window. Default is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_Arn_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Arn*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_Arn" data-uid="Pulumi.Aws.ElastiCache.Cluster.Arn">Arn</h4>
@@ -192,13 +288,13 @@ are applied immediately, or during the next maintenance window. Default is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_AvailabilityZone_" data-uid="Pulumi.Aws.ElastiCache.Cluster.AvailabilityZone*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_AvailabilityZone" data-uid="Pulumi.Aws.ElastiCache.Cluster.AvailabilityZone">AvailabilityZone</h4>
@@ -219,13 +315,13 @@ are applied immediately, or during the next maintenance window. Default is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_AzMode_" data-uid="Pulumi.Aws.ElastiCache.Cluster.AzMode*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_AzMode" data-uid="Pulumi.Aws.ElastiCache.Cluster.AzMode">AzMode</h4>
@@ -246,13 +342,13 @@ are applied immediately, or during the next maintenance window. Default is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_CacheNodes_" data-uid="Pulumi.Aws.ElastiCache.Cluster.CacheNodes*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_CacheNodes" data-uid="Pulumi.Aws.ElastiCache.Cluster.CacheNodes">CacheNodes</h4>
@@ -274,13 +370,13 @@ Referenceable e.g. as <code>${aws_elasticache_cluster.bar.cache_nodes.0.address}
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ElastiCache.Outputs.ClusterCacheNode.html">ClusterCacheNode</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ElastiCache.Outputs.ClusterCacheNode.html">ClusterCacheNode</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_ClusterAddress_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ClusterAddress*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_ClusterAddress" data-uid="Pulumi.Aws.ElastiCache.Cluster.ClusterAddress">ClusterAddress</h4>
@@ -301,13 +397,13 @@ Referenceable e.g. as <code>${aws_elasticache_cluster.bar.cache_nodes.0.address}
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_ClusterId_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ClusterId*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_ClusterId" data-uid="Pulumi.Aws.ElastiCache.Cluster.ClusterId">ClusterId</h4>
@@ -329,13 +425,13 @@ this name to lowercase</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_ConfigurationEndpoint_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ConfigurationEndpoint*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_ConfigurationEndpoint" data-uid="Pulumi.Aws.ElastiCache.Cluster.ConfigurationEndpoint">ConfigurationEndpoint</h4>
@@ -356,13 +452,13 @@ this name to lowercase</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L148">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_Engine_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Engine*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_Engine" data-uid="Pulumi.Aws.ElastiCache.Cluster.Engine">Engine</h4>
@@ -384,13 +480,13 @@ Valid values for this parameter are <code>memcached</code> or <code>redis</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_EngineVersion_" data-uid="Pulumi.Aws.ElastiCache.Cluster.EngineVersion*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_EngineVersion" data-uid="Pulumi.Aws.ElastiCache.Cluster.EngineVersion">EngineVersion</h4>
@@ -413,13 +509,13 @@ in the AWS Documentation center for supported versions</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_MaintenanceWindow_" data-uid="Pulumi.Aws.ElastiCache.Cluster.MaintenanceWindow*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_MaintenanceWindow" data-uid="Pulumi.Aws.ElastiCache.Cluster.MaintenanceWindow">MaintenanceWindow</h4>
@@ -442,13 +538,13 @@ The minimum maintenance window is a 60 minute period. Example: <code>sun:05:00-s
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_NodeType_" data-uid="Pulumi.Aws.ElastiCache.Cluster.NodeType*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_NodeType" data-uid="Pulumi.Aws.ElastiCache.Cluster.NodeType">NodeType</h4>
@@ -471,13 +567,13 @@ supported node types</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_NotificationTopicArn_" data-uid="Pulumi.Aws.ElastiCache.Cluster.NotificationTopicArn*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_NotificationTopicArn" data-uid="Pulumi.Aws.ElastiCache.Cluster.NotificationTopicArn">NotificationTopicArn</h4>
@@ -488,7 +584,7 @@ SNS topic to send ElastiCache notifications to. Example:
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NotificationTopicArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NotificationTopicArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -500,13 +596,13 @@ SNS topic to send ElastiCache notifications to. Example:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_NumCacheNodes_" data-uid="Pulumi.Aws.ElastiCache.Cluster.NumCacheNodes*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_NumCacheNodes" data-uid="Pulumi.Aws.ElastiCache.Cluster.NumCacheNodes">NumCacheNodes</h4>
@@ -530,13 +626,13 @@ the highest numbered nodes will be removed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_ParameterGroupName_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ParameterGroupName*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_ParameterGroupName" data-uid="Pulumi.Aws.ElastiCache.Cluster.ParameterGroupName">ParameterGroupName</h4>
@@ -558,13 +654,13 @@ with this cache cluster</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_Port_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Port*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_Port" data-uid="Pulumi.Aws.ElastiCache.Cluster.Port">Port</h4>
@@ -585,13 +681,13 @@ with this cache cluster</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_PreferredAvailabilityZones_" data-uid="Pulumi.Aws.ElastiCache.Cluster.PreferredAvailabilityZones*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_PreferredAvailabilityZones" data-uid="Pulumi.Aws.ElastiCache.Cluster.PreferredAvailabilityZones">PreferredAvailabilityZones</h4>
@@ -612,13 +708,13 @@ with this cache cluster</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L214">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_ReplicationGroupId_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ReplicationGroupId*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_ReplicationGroupId" data-uid="Pulumi.Aws.ElastiCache.Cluster.ReplicationGroupId">ReplicationGroupId</h4>
@@ -639,13 +735,13 @@ with this cache cluster</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L221">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_SecurityGroupIds_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_SecurityGroupIds" data-uid="Pulumi.Aws.ElastiCache.Cluster.SecurityGroupIds">SecurityGroupIds</h4>
@@ -667,13 +763,13 @@ with the cache cluster</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_SecurityGroupNames_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SecurityGroupNames*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_SecurityGroupNames" data-uid="Pulumi.Aws.ElastiCache.Cluster.SecurityGroupNames">SecurityGroupNames</h4>
@@ -695,13 +791,13 @@ names to associate with this cache cluster</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_SnapshotArns_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotArns*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_SnapshotArns" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotArns">SnapshotArns</h4>
@@ -724,13 +820,13 @@ Example: <code>arn:aws:s3:::my_bucket/snapshot1.rdb</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L174">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_SnapshotName_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotName*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_SnapshotName" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotName">SnapshotName</h4>
@@ -739,7 +835,7 @@ Example: <code>arn:aws:s3:::my_bucket/snapshot1.rdb</code></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SnapshotName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SnapshotName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -751,13 +847,13 @@ Example: <code>arn:aws:s3:::my_bucket/snapshot1.rdb</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L252">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_SnapshotRetentionLimit_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotRetentionLimit*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_SnapshotRetentionLimit" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotRetentionLimit">SnapshotRetentionLimit</h4>
@@ -782,13 +878,13 @@ Please note that setting a <code>snapshot_retention_limit</code> is not supporte
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L259">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_SnapshotWindow_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotWindow*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_SnapshotWindow" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotWindow">SnapshotWindow</h4>
@@ -810,13 +906,13 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L266">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_SubnetGroupName_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SubnetGroupName*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_SubnetGroupName" data-uid="Pulumi.Aws.ElastiCache.Cluster.SubnetGroupName">SubnetGroupName</h4>
@@ -838,22 +934,22 @@ for the cache cluster.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L272">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_Tags_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Tags*"></a>
   <h4 id="Pulumi_Aws_ElastiCache_Cluster_Tags" data-uid="Pulumi.Aws.ElastiCache.Cluster.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -865,7 +961,7 @@ for the cache cluster.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -873,17 +969,17 @@ for the cache cluster.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L245">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L313">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElastiCache_Cluster_Get_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Get*"></a>
-  <h4 id="Pulumi_Aws_ElastiCache_Cluster_Get_System_String_Input_System_String__Pulumi_Aws_ElastiCache_ClusterState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ElastiCache.Cluster.Get(System.String,Input{System.String},Pulumi.Aws.ElastiCache.ClusterState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClusterState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_ElastiCache_ClusterState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.ElastiCache.ClusterState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClusterState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Cluster resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -902,7 +998,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -914,7 +1010,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -943,7 +1039,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/Cluster.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElastiCache/Cluster.cs/#L92" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

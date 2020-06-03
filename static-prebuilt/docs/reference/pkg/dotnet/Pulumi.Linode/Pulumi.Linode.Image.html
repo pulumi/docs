@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Image
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,6 +73,36 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides a Linode Image resource.  This can be used to create, modify, and delete Linodes Images.  Linode Images are snapshots of a Linode Instance Disk which can then be used to provision more Linode Instances.  Images can be used across regions.</p>
 <p>For more information, see <a href="https://www.linode.com/docs/platform/disk-images/linode-images/">Linode's documentation on Images</a> and the <a href="https://developers.linode.com/api/v4#operation/createImage">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Linode.Instance(&amp;quot;foo&amp;quot;, new Linode.InstanceArgs
+    {
+        Region = &amp;quot;us-central&amp;quot;,
+        Type = &amp;quot;g6-nanode-1&amp;quot;,
+    });
+    var bar = new Linode.Image(&amp;quot;bar&amp;quot;, new Linode.ImageArgs
+    {
+        Description = &amp;quot;Image taken from foo&amp;quot;,
+        DiskId = foo.Disks.Apply(disks =&gt; disks[0].Id),
+        Label = &amp;quot;foo-sda-image&amp;quot;,
+        LinodeId = foo.Id,
+    });
+    var barBased = new Linode.Instance(&amp;quot;barBased&amp;quot;, new Linode.InstanceArgs
+    {
+        Image = bar.Id,
+        Region = &amp;quot;eu-west&amp;quot;,
+        Type = foo.Type,
+    });
+}
+
+}
+</code></pre>
 <h2 id="attributes">Attributes</h2>
 <p>This resource exports the following attributes:</p>
 <ul>
@@ -149,7 +179,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image__ctor_" data-uid="Pulumi.Linode.Image.#ctor*"></a>
   <h4 id="Pulumi_Linode_Image__ctor_System_String_Pulumi_Linode_ImageArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.Image.#ctor(System.String,Pulumi.Linode.ImageArgs,Pulumi.CustomResourceOptions)">Image(String, ImageArgs, CustomResourceOptions)</h4>
@@ -193,7 +223,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_Created_" data-uid="Pulumi.Linode.Image.Created*"></a>
   <h4 id="Pulumi_Linode_Image_Created" data-uid="Pulumi.Linode.Image.Created">Created</h4>
@@ -220,7 +250,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_CreatedBy_" data-uid="Pulumi.Linode.Image.CreatedBy*"></a>
   <h4 id="Pulumi_Linode_Image_CreatedBy" data-uid="Pulumi.Linode.Image.CreatedBy">CreatedBy</h4>
@@ -247,7 +277,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_Deprecated_" data-uid="Pulumi.Linode.Image.Deprecated*"></a>
   <h4 id="Pulumi_Linode_Image_Deprecated" data-uid="Pulumi.Linode.Image.Deprecated">Deprecated</h4>
@@ -274,7 +304,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_Description_" data-uid="Pulumi.Linode.Image.Description*"></a>
   <h4 id="Pulumi_Linode_Image_Description" data-uid="Pulumi.Linode.Image.Description">Description</h4>
@@ -301,7 +331,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_DiskId_" data-uid="Pulumi.Linode.Image.DiskId*"></a>
   <h4 id="Pulumi_Linode_Image_DiskId" data-uid="Pulumi.Linode.Image.DiskId">DiskId</h4>
@@ -328,7 +358,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_Expiry_" data-uid="Pulumi.Linode.Image.Expiry*"></a>
   <h4 id="Pulumi_Linode_Image_Expiry" data-uid="Pulumi.Linode.Image.Expiry">Expiry</h4>
@@ -355,7 +385,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_IsPublic_" data-uid="Pulumi.Linode.Image.IsPublic*"></a>
   <h4 id="Pulumi_Linode_Image_IsPublic" data-uid="Pulumi.Linode.Image.IsPublic">IsPublic</h4>
@@ -382,7 +412,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_Label_" data-uid="Pulumi.Linode.Image.Label*"></a>
   <h4 id="Pulumi_Linode_Image_Label" data-uid="Pulumi.Linode.Image.Label">Label</h4>
@@ -409,7 +439,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_LinodeId_" data-uid="Pulumi.Linode.Image.LinodeId*"></a>
   <h4 id="Pulumi_Linode_Image_LinodeId" data-uid="Pulumi.Linode.Image.LinodeId">LinodeId</h4>
@@ -436,7 +466,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_Size_" data-uid="Pulumi.Linode.Image.Size*"></a>
   <h4 id="Pulumi_Linode_Image_Size" data-uid="Pulumi.Linode.Image.Size">Size</h4>
@@ -463,7 +493,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_Type_" data-uid="Pulumi.Linode.Image.Type*"></a>
   <h4 id="Pulumi_Linode_Image_Type" data-uid="Pulumi.Linode.Image.Type">Type</h4>
@@ -491,7 +521,7 @@ a deleted Linode.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_Vendor_" data-uid="Pulumi.Linode.Image.Vendor*"></a>
   <h4 id="Pulumi_Linode_Image_Vendor" data-uid="Pulumi.Linode.Image.Vendor">Vendor</h4>
@@ -520,7 +550,7 @@ a deleted Linode.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_Linode_Image_Get_" data-uid="Pulumi.Linode.Image.Get*"></a>
   <h4 id="Pulumi_Linode_Image_Get_System_String_Pulumi_Input_System_String__Pulumi_Linode_ImageState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.Image.Get(System.String,Pulumi.Input{System.String},Pulumi.Linode.ImageState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ImageState, CustomResourceOptions)</h4>
@@ -590,7 +620,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L40" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Image.cs/#L74" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

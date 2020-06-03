@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EventTarget
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,273 @@
   <h1 id="Pulumi_Aws_CloudWatch_EventTarget" data-uid="Pulumi.Aws.CloudWatch.EventTarget" class="text-break">Class EventTarget
   </h1>
   <div class="markdown level0 summary"><p>Provides a CloudWatch Event Target resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var console = new Aws.CloudWatch.EventRule(&amp;quot;console&amp;quot;, new Aws.CloudWatch.EventRuleArgs
+    {
+        Description = &amp;quot;Capture all EC2 scaling events&amp;quot;,
+        EventPattern = @&amp;quot;{
+&amp;quot;&amp;quot;source&amp;quot;&amp;quot;: [
+&amp;quot;&amp;quot;aws.autoscaling&amp;quot;&amp;quot;
+],
+&amp;quot;&amp;quot;detail-type&amp;quot;&amp;quot;: [
+&amp;quot;&amp;quot;EC2 Instance Launch Successful&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;EC2 Instance Terminate Successful&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;EC2 Instance Launch Unsuccessful&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;EC2 Instance Terminate Unsuccessful&amp;quot;&amp;quot;
+]
+}
+
+&amp;quot;,
+    });
+    var testStream = new Aws.Kinesis.Stream(&amp;quot;testStream&amp;quot;, new Aws.Kinesis.StreamArgs
+    {
+        ShardCount = 1,
+    });
+    var yada = new Aws.CloudWatch.EventTarget(&amp;quot;yada&amp;quot;, new Aws.CloudWatch.EventTargetArgs
+    {
+        Arn = testStream.Arn,
+        Rule = console.Name,
+        RunCommandTargets = 
+        {
+            new Aws.CloudWatch.Inputs.EventTargetRunCommandTargetArgs
+            {
+                Key = &amp;quot;tag:Name&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;FooBar&amp;quot;,
+                },
+            },
+            new Aws.CloudWatch.Inputs.EventTargetRunCommandTargetArgs
+            {
+                Key = &amp;quot;InstanceIds&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;i-162058cd308bffec2&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-ssm-document-usage">Example SSM Document Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ssmLifecycleTrust = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;sts:AssumeRole&amp;quot;,
+                },
+                Principals = 
+                {
+                    new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                    {
+                        Identifiers = 
+                        {
+                            &amp;quot;events.amazonaws.com&amp;quot;,
+                        },
+                        Type = &amp;quot;Service&amp;quot;,
+                    },
+                },
+            },
+        },
+    }));
+    var stopInstance = new Aws.Ssm.Document(&amp;quot;stopInstance&amp;quot;, new Aws.Ssm.DocumentArgs
+    {
+        Content = @&amp;quot;  {
+&amp;quot;&amp;quot;schemaVersion&amp;quot;&amp;quot;: &amp;quot;&amp;quot;1.2&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;description&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Stop an instance&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;parameters&amp;quot;&amp;quot;: {
+
+},
+&amp;quot;&amp;quot;runtimeConfig&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;aws:runShellScript&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;properties&amp;quot;&amp;quot;: [
+      {
+        &amp;quot;&amp;quot;id&amp;quot;&amp;quot;: &amp;quot;&amp;quot;0.aws:runShellScript&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;runCommand&amp;quot;&amp;quot;: [&amp;quot;&amp;quot;halt&amp;quot;&amp;quot;]
+      }
+    ]
+  }
+}
+}
+
+&amp;quot;,
+        DocumentType = &amp;quot;Command&amp;quot;,
+    });
+    var ssmLifecyclePolicyDocument = stopInstance.Arn.Apply(arn =&gt; Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;ssm:SendCommand&amp;quot;,
+                },
+                Condition = 
+                {
+
+                    {
+                        { &amp;quot;test&amp;quot;, &amp;quot;StringEquals&amp;quot; },
+                        { &amp;quot;values&amp;quot;, 
+                        {
+                            &amp;quot;*&amp;quot;,
+                        } },
+                        { &amp;quot;variable&amp;quot;, &amp;quot;ec2:ResourceTag/Terminate&amp;quot; },
+                    },
+                },
+                Effect = &amp;quot;Allow&amp;quot;,
+                Resources = 
+                {
+                    &amp;quot;arn:aws:ec2:eu-west-1:1234567890:instance/*&amp;quot;,
+                },
+            },
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;ssm:SendCommand&amp;quot;,
+                },
+                Effect = &amp;quot;Allow&amp;quot;,
+                Resources = 
+                {
+                    arn,
+                },
+            },
+        },
+    }));
+    var ssmLifecycleRole = new Aws.Iam.Role(&amp;quot;ssmLifecycleRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = ssmLifecycleTrust.Apply(ssmLifecycleTrust =&gt; ssmLifecycleTrust.Json),
+    });
+    var ssmLifecyclePolicy = new Aws.Iam.Policy(&amp;quot;ssmLifecyclePolicy&amp;quot;, new Aws.Iam.PolicyArgs
+    {
+        Policy = ssmLifecyclePolicyDocument.Apply(ssmLifecyclePolicyDocument =&gt; ssmLifecyclePolicyDocument.Json),
+    });
+    var stopInstancesEventRule = new Aws.CloudWatch.EventRule(&amp;quot;stopInstancesEventRule&amp;quot;, new Aws.CloudWatch.EventRuleArgs
+    {
+        Description = &amp;quot;Stop instances nightly&amp;quot;,
+        ScheduleExpression = &amp;quot;cron(0 0 * * ? *)&amp;quot;,
+    });
+    var stopInstancesEventTarget = new Aws.CloudWatch.EventTarget(&amp;quot;stopInstancesEventTarget&amp;quot;, new Aws.CloudWatch.EventTargetArgs
+    {
+        Arn = stopInstance.Arn,
+        RoleArn = ssmLifecycleRole.Arn,
+        Rule = stopInstancesEventRule.Name,
+        RunCommandTargets = 
+        {
+            new Aws.CloudWatch.Inputs.EventTargetRunCommandTargetArgs
+            {
+                Key = &amp;quot;tag:Terminate&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;midnight&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-runcommand-usage">Example RunCommand Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var stopInstancesEventRule = new Aws.CloudWatch.EventRule(&amp;quot;stopInstancesEventRule&amp;quot;, new Aws.CloudWatch.EventRuleArgs
+    {
+        Description = &amp;quot;Stop instances nightly&amp;quot;,
+        ScheduleExpression = &amp;quot;cron(0 0 * * ? *)&amp;quot;,
+    });
+    var stopInstancesEventTarget = new Aws.CloudWatch.EventTarget(&amp;quot;stopInstancesEventTarget&amp;quot;, new Aws.CloudWatch.EventTargetArgs
+    {
+        Arn = $&amp;quot;arn:aws:ssm:{@var.Aws_region}::document/AWS-RunShellScript&amp;quot;,
+        Input = &amp;quot;{\&amp;quot;commands\&amp;quot;:[\&amp;quot;halt\&amp;quot;]}&amp;quot;,
+        RoleArn = aws_iam_role.Ssm_lifecycle.Arn,
+        Rule = stopInstancesEventRule.Name,
+        RunCommandTargets = 
+        {
+            new Aws.CloudWatch.Inputs.EventTargetRunCommandTargetArgs
+            {
+                Key = &amp;quot;tag:Terminate&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;midnight&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">EventTarget</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">EventTarget</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CloudWatch.html">Pulumi.Aws.CloudWatch</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +349,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L332">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget__ctor_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.#ctor*"></a>
-  <h4 id="Pulumi_Aws_CloudWatch_EventTarget__ctor_System_String_Pulumi_Aws_CloudWatch_EventTargetArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.CloudWatch.EventTarget.#ctor(System.String,Pulumi.Aws.CloudWatch.EventTargetArgs,System.Nullable{CustomResourceOptions})">EventTarget(String, EventTargetArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_CloudWatch_EventTarget__ctor_System_String_Pulumi_Aws_CloudWatch_EventTargetArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.#ctor(System.String,Pulumi.Aws.CloudWatch.EventTargetArgs,Pulumi.CustomResourceOptions)">EventTarget(String, EventTargetArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a EventTarget resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EventTarget(string name, EventTargetArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public EventTarget(string name, EventTargetArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +383,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +393,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_Arn_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.Arn*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_Arn" data-uid="Pulumi.Aws.CloudWatch.EventTarget.Arn">Arn</h4>
@@ -153,13 +414,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L260">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_BatchTarget_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.BatchTarget*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_BatchTarget" data-uid="Pulumi.Aws.CloudWatch.EventTarget.BatchTarget">BatchTarget</h4>
@@ -180,13 +441,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetBatchTarget.html">EventTargetBatchTarget</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetBatchTarget.html">EventTargetBatchTarget</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L266">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_EcsTarget_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.EcsTarget*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_EcsTarget" data-uid="Pulumi.Aws.CloudWatch.EventTarget.EcsTarget">EcsTarget</h4>
@@ -207,13 +468,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTarget.html">EventTargetEcsTarget</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTarget.html">EventTargetEcsTarget</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L272">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_Input_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.Input*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_Input" data-uid="Pulumi.Aws.CloudWatch.EventTarget.Input">Input</h4>
@@ -222,7 +483,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Input { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Input { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +495,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_InputPath_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.InputPath*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_InputPath" data-uid="Pulumi.Aws.CloudWatch.EventTarget.InputPath">InputPath</h4>
@@ -250,7 +511,7 @@ that is used for extracting part of the matched event when passing it to the tar
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InputPath { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InputPath { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +523,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L285">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_InputTransformer_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.InputTransformer*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_InputTransformer" data-uid="Pulumi.Aws.CloudWatch.EventTarget.InputTransformer">InputTransformer</h4>
@@ -289,13 +550,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetInputTransformer.html">EventTargetInputTransformer</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetInputTransformer.html">EventTargetInputTransformer</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L291">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_KinesisTarget_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.KinesisTarget*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_KinesisTarget" data-uid="Pulumi.Aws.CloudWatch.EventTarget.KinesisTarget">KinesisTarget</h4>
@@ -316,13 +577,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetKinesisTarget.html">EventTargetKinesisTarget</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetKinesisTarget.html">EventTargetKinesisTarget</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L297">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_RoleArn_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.RoleArn*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_RoleArn" data-uid="Pulumi.Aws.CloudWatch.EventTarget.RoleArn">RoleArn</h4>
@@ -331,7 +592,7 @@ that is used for extracting part of the matched event when passing it to the tar
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,13 +604,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L303">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_Rule_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.Rule*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_Rule" data-uid="Pulumi.Aws.CloudWatch.EventTarget.Rule">Rule</h4>
@@ -370,13 +631,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L309">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_RunCommandTargets_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.RunCommandTargets*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_RunCommandTargets" data-uid="Pulumi.Aws.CloudWatch.EventTarget.RunCommandTargets">RunCommandTargets</h4>
@@ -397,13 +658,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetRunCommandTarget.html">EventTargetRunCommandTarget</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetRunCommandTarget.html">EventTargetRunCommandTarget</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L315">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_SqsTarget_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.SqsTarget*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_SqsTarget" data-uid="Pulumi.Aws.CloudWatch.EventTarget.SqsTarget">SqsTarget</h4>
@@ -424,13 +685,13 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetSqsTarget.html">EventTargetSqsTarget</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.EventTargetSqsTarget.html">EventTargetSqsTarget</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L321">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_TargetId_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.TargetId*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_EventTarget_TargetId" data-uid="Pulumi.Aws.CloudWatch.EventTarget.TargetId">TargetId</h4>
@@ -451,7 +712,7 @@ that is used for extracting part of the matched event when passing it to the tar
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -459,17 +720,17 @@ that is used for extracting part of the matched event when passing it to the tar
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L362">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_EventTarget_Get_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.Get*"></a>
-  <h4 id="Pulumi_Aws_CloudWatch_EventTarget_Get_System_String_Input_System_String__Pulumi_Aws_CloudWatch_EventTargetState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.CloudWatch.EventTarget.Get(System.String,Input{System.String},Pulumi.Aws.CloudWatch.EventTargetState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, EventTargetState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_CloudWatch_EventTarget_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_CloudWatch_EventTargetState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.CloudWatch.EventTarget.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.CloudWatch.EventTargetState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, EventTargetState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing EventTarget resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static EventTarget Get(string name, Input&lt;string&gt; id, EventTargetState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static EventTarget Get(string name, Input&lt;string&gt; id, EventTargetState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -488,7 +749,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -500,7 +761,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -529,7 +790,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/EventTarget.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/EventTarget.cs/#L249" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

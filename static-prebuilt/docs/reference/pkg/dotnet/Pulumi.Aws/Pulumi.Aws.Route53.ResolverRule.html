@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ResolverRule
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,97 @@
   <h1 id="Pulumi_Aws_Route53_ResolverRule" data-uid="Pulumi.Aws.Route53.ResolverRule" class="text-break">Class ResolverRule
   </h1>
   <div class="markdown level0 summary"><p>Provides a Route53 Resolver rule.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="system-rule">System rule</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var sys = new Aws.Route53.ResolverRule(&amp;quot;sys&amp;quot;, new Aws.Route53.ResolverRuleArgs
+    {
+        DomainName = &amp;quot;subdomain.example.com&amp;quot;,
+        RuleType = &amp;quot;SYSTEM&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="forward-rule">Forward rule</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fwd = new Aws.Route53.ResolverRule(&amp;quot;fwd&amp;quot;, new Aws.Route53.ResolverRuleArgs
+    {
+        DomainName = &amp;quot;example.com&amp;quot;,
+        ResolverEndpointId = aws_route53_resolver_endpoint.Foo.Id,
+        RuleType = &amp;quot;FORWARD&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;Prod&amp;quot; },
+        },
+        TargetIps = 
+        {
+            new Aws.Route53.Inputs.ResolverRuleTargetIpArgs
+            {
+                Ip = &amp;quot;123.45.67.89&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ResolverRule</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ResolverRule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Route53.html">Pulumi.Aws.Route53</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +173,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ResolverRule__ctor_" data-uid="Pulumi.Aws.Route53.ResolverRule.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Route53_ResolverRule__ctor_System_String_Pulumi_Aws_Route53_ResolverRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Route53.ResolverRule.#ctor(System.String,Pulumi.Aws.Route53.ResolverRuleArgs,System.Nullable{CustomResourceOptions})">ResolverRule(String, ResolverRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Route53_ResolverRule__ctor_System_String_Pulumi_Aws_Route53_ResolverRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Route53.ResolverRule.#ctor(System.String,Pulumi.Aws.Route53.ResolverRuleArgs,Pulumi.CustomResourceOptions)">ResolverRule(String, ResolverRuleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ResolverRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResolverRule(string name, ResolverRuleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ResolverRule(string name, ResolverRuleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +207,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +217,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ResolverRule_Arn_" data-uid="Pulumi.Aws.Route53.ResolverRule.Arn*"></a>
   <h4 id="Pulumi_Aws_Route53_ResolverRule_Arn" data-uid="Pulumi.Aws.Route53.ResolverRule.Arn">Arn</h4>
@@ -153,13 +238,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ResolverRule_DomainName_" data-uid="Pulumi.Aws.Route53.ResolverRule.DomainName*"></a>
   <h4 id="Pulumi_Aws_Route53_ResolverRule_DomainName" data-uid="Pulumi.Aws.Route53.ResolverRule.DomainName">DomainName</h4>
@@ -180,13 +265,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ResolverRule_Name_" data-uid="Pulumi.Aws.Route53.ResolverRule.Name*"></a>
   <h4 id="Pulumi_Aws_Route53_ResolverRule_Name" data-uid="Pulumi.Aws.Route53.ResolverRule.Name">Name</h4>
@@ -207,13 +292,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ResolverRule_OwnerId_" data-uid="Pulumi.Aws.Route53.ResolverRule.OwnerId*"></a>
   <h4 id="Pulumi_Aws_Route53_ResolverRule_OwnerId" data-uid="Pulumi.Aws.Route53.ResolverRule.OwnerId">OwnerId</h4>
@@ -234,13 +319,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ResolverRule_ResolverEndpointId_" data-uid="Pulumi.Aws.Route53.ResolverRule.ResolverEndpointId*"></a>
   <h4 id="Pulumi_Aws_Route53_ResolverRule_ResolverEndpointId" data-uid="Pulumi.Aws.Route53.ResolverRule.ResolverEndpointId">ResolverEndpointId</h4>
@@ -250,7 +335,7 @@ This argument should only be specified for <code>FORWARD</code> type rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ResolverEndpointId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResolverEndpointId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +347,13 @@ This argument should only be specified for <code>FORWARD</code> type rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ResolverRule_RuleType_" data-uid="Pulumi.Aws.Route53.ResolverRule.RuleType*"></a>
   <h4 id="Pulumi_Aws_Route53_ResolverRule_RuleType" data-uid="Pulumi.Aws.Route53.ResolverRule.RuleType">RuleType</h4>
@@ -289,13 +374,13 @@ This argument should only be specified for <code>FORWARD</code> type rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ResolverRule_ShareStatus_" data-uid="Pulumi.Aws.Route53.ResolverRule.ShareStatus*"></a>
   <h4 id="Pulumi_Aws_Route53_ResolverRule_ShareStatus" data-uid="Pulumi.Aws.Route53.ResolverRule.ShareStatus">ShareStatus</h4>
@@ -317,22 +402,22 @@ Values are <code>NOT_SHARED</code>, <code>SHARED_BY_ME</code> or <code>SHARED_WI
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ResolverRule_Tags_" data-uid="Pulumi.Aws.Route53.ResolverRule.Tags*"></a>
   <h4 id="Pulumi_Aws_Route53_ResolverRule_Tags" data-uid="Pulumi.Aws.Route53.ResolverRule.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,13 +429,13 @@ Values are <code>NOT_SHARED</code>, <code>SHARED_BY_ME</code> or <code>SHARED_WI
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ResolverRule_TargetIps_" data-uid="Pulumi.Aws.Route53.ResolverRule.TargetIps*"></a>
   <h4 id="Pulumi_Aws_Route53_ResolverRule_TargetIps" data-uid="Pulumi.Aws.Route53.ResolverRule.TargetIps">TargetIps</h4>
@@ -372,7 +457,7 @@ This argument should only be specified for <code>FORWARD</code> type rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Route53.Outputs.ResolverRuleTargetIp.html">ResolverRuleTargetIp</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Route53.Outputs.ResolverRuleTargetIp.html">ResolverRuleTargetIp</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -380,17 +465,17 @@ This argument should only be specified for <code>FORWARD</code> type rules.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ResolverRule_Get_" data-uid="Pulumi.Aws.Route53.ResolverRule.Get*"></a>
-  <h4 id="Pulumi_Aws_Route53_ResolverRule_Get_System_String_Input_System_String__Pulumi_Aws_Route53_ResolverRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Route53.ResolverRule.Get(System.String,Input{System.String},Pulumi.Aws.Route53.ResolverRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ResolverRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Route53_ResolverRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Route53_ResolverRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Route53.ResolverRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Route53.ResolverRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ResolverRuleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ResolverRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ResolverRule Get(string name, Input&lt;string&gt; id, ResolverRuleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ResolverRule Get(string name, Input&lt;string&gt; id, ResolverRuleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -409,7 +494,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -421,7 +506,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -450,7 +535,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ResolverRule.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Route53/ResolverRule.cs/#L69" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

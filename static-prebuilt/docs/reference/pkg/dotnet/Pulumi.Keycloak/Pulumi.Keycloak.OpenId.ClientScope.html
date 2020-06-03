@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ClientScope
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,6 +77,28 @@ clients that use the OpenID Connect protocol.</p>
 <p>Client Scopes can be used to share common protocol and role mappings between multiple
 clients within a realm. They can also be used by clients to conditionally request
 claims or roles for a user based on the OAuth 2.0 <code>scope</code> parameter.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClientScope = new Keycloak.OpenId.ClientScope(&amp;quot;openidClientScope&amp;quot;, new Keycloak.OpenId.ClientScopeArgs
+    {
+        Description = &amp;quot;When requested, this scope will map a user&amp;apos;s group memberships to a claim&amp;quot;,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -92,7 +114,45 @@ value of this attribute.</li>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ClientScope</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ClientScope</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.OpenId.html">Pulumi.Keycloak.OpenId</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
@@ -103,16 +163,16 @@ value of this attribute.</li>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/ClientScope.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/ClientScope.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_ClientScope__ctor_" data-uid="Pulumi.Keycloak.OpenId.ClientScope.#ctor*"></a>
-  <h4 id="Pulumi_Keycloak_OpenId_ClientScope__ctor_System_String_Pulumi_Keycloak_OpenId_ClientScopeArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.OpenId.ClientScope.#ctor(System.String,Pulumi.Keycloak.OpenId.ClientScopeArgs,System.Nullable{CustomResourceOptions})">ClientScope(String, ClientScopeArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_OpenId_ClientScope__ctor_System_String_Pulumi_Keycloak_OpenId_ClientScopeArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.OpenId.ClientScope.#ctor(System.String,Pulumi.Keycloak.OpenId.ClientScopeArgs,Pulumi.CustomResourceOptions)">ClientScope(String, ClientScopeArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ClientScope resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClientScope(string name, ClientScopeArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ClientScope(string name, ClientScopeArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,7 +197,7 @@ value of this attribute.</li>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -147,7 +207,7 @@ value of this attribute.</li>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/ClientScope.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/ClientScope.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_ClientScope_ConsentScreenText_" data-uid="Pulumi.Keycloak.OpenId.ClientScope.ConsentScreenText*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_ClientScope_ConsentScreenText" data-uid="Pulumi.Keycloak.OpenId.ClientScope.ConsentScreenText">ConsentScreenText</h4>
@@ -155,7 +215,7 @@ value of this attribute.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ConsentScreenText { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ConsentScreenText { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,13 +227,13 @@ value of this attribute.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/ClientScope.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/ClientScope.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_ClientScope_Description_" data-uid="Pulumi.Keycloak.OpenId.ClientScope.Description*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_ClientScope_Description" data-uid="Pulumi.Keycloak.OpenId.ClientScope.Description">Description</h4>
@@ -181,7 +241,7 @@ value of this attribute.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,13 +253,13 @@ value of this attribute.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/ClientScope.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/ClientScope.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_ClientScope_Name_" data-uid="Pulumi.Keycloak.OpenId.ClientScope.Name*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_ClientScope_Name" data-uid="Pulumi.Keycloak.OpenId.ClientScope.Name">Name</h4>
@@ -219,13 +279,13 @@ value of this attribute.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/ClientScope.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/ClientScope.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_ClientScope_RealmId_" data-uid="Pulumi.Keycloak.OpenId.ClientScope.RealmId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_ClientScope_RealmId" data-uid="Pulumi.Keycloak.OpenId.ClientScope.RealmId">RealmId</h4>
@@ -245,7 +305,7 @@ value of this attribute.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -253,17 +313,17 @@ value of this attribute.</li>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/ClientScope.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/ClientScope.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_ClientScope_Get_" data-uid="Pulumi.Keycloak.OpenId.ClientScope.Get*"></a>
-  <h4 id="Pulumi_Keycloak_OpenId_ClientScope_Get_System_String_Input_System_String__Pulumi_Keycloak_OpenId_ClientScopeState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.OpenId.ClientScope.Get(System.String,Input{System.String},Pulumi.Keycloak.OpenId.ClientScopeState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClientScopeState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_OpenId_ClientScope_Get_System_String_Pulumi_Input_System_String__Pulumi_Keycloak_OpenId_ClientScopeState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.OpenId.ClientScope.Get(System.String,Pulumi.Input{System.String},Pulumi.Keycloak.OpenId.ClientScopeState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClientScopeState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ClientScope resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ClientScope Get(string name, Input&lt;string&gt; id, ClientScopeState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ClientScope Get(string name, Input&lt;string&gt; id, ClientScopeState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -282,7 +342,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -294,7 +354,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -323,7 +383,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/ClientScope.cs/#L33" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/ClientScope.cs/#L58" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

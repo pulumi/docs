@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ContainerVolume
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ContainerVolume</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Docker.Outputs.html">Pulumi.Docker.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Docker.dll</h6>
   <h5 id="Pulumi_Docker_Outputs_ContainerVolume_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ContainerVolume : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ContainerVolume</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ContainerVolume.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Outputs/ContainerVolume.cs/#L20">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ContainerVolume_ContainerPath" data-uid="Pulumi.Docker.Outputs.ContainerVolume.ContainerPath">ContainerPath</h4>
   <div class="markdown level1 summary"><p>The path in the container where the
@@ -96,7 +120,7 @@ device will be binded.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ContainerPath</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ContainerPath</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -108,13 +132,13 @@ device will be binded.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ContainerVolume.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Outputs/ContainerVolume.cs/#L25">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ContainerVolume_FromContainer" data-uid="Pulumi.Docker.Outputs.ContainerVolume.FromContainer">FromContainer</h4>
   <div class="markdown level1 summary"><p>The container where the volume is
@@ -123,7 +147,7 @@ coming from.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? FromContainer</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string FromContainer</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,13 +159,13 @@ coming from.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ContainerVolume.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Outputs/ContainerVolume.cs/#L30">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ContainerVolume_HostPath" data-uid="Pulumi.Docker.Outputs.ContainerVolume.HostPath">HostPath</h4>
   <div class="markdown level1 summary"><p>The path on the host where the device
@@ -150,7 +174,7 @@ is located.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? HostPath</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string HostPath</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,13 +186,13 @@ is located.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ContainerVolume.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Outputs/ContainerVolume.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ContainerVolume_ReadOnly" data-uid="Pulumi.Docker.Outputs.ContainerVolume.ReadOnly">ReadOnly</h4>
   <div class="markdown level1 summary"><p>If true, this volume will be readonly.
@@ -195,7 +219,7 @@ Defaults to false.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ContainerVolume.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Outputs/ContainerVolume.cs/#L40">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ContainerVolume_VolumeName" data-uid="Pulumi.Docker.Outputs.ContainerVolume.VolumeName">VolumeName</h4>
   <div class="markdown level1 summary"><p>The name of the docker volume which
@@ -204,7 +228,7 @@ should be mounted.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? VolumeName</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string VolumeName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -216,7 +240,7 @@ should be mounted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -228,7 +252,7 @@ should be mounted.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ContainerVolume.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Outputs/ContainerVolume.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

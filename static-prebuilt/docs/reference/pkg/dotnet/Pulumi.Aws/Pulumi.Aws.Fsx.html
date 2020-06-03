@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Fsx
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,24 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Fsx.LustreFileSystem.html">LustreFileSystem</a></h4>
       <section><p>Manages a FSx Lustre File System. See the <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html">FSx Lustre Guide</a> for more information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Fsx.LustreFileSystem(&amp;quot;example&amp;quot;, new Aws.Fsx.LustreFileSystemArgs
+    {
+        ImportPath = $&amp;quot;s3://{aws_s3_bucket.Example.Bucket}&amp;quot;,
+        StorageCapacity = 1200,
+        SubnetIds = aws_subnet.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Fsx.LustreFileSystemArgs.html">LustreFileSystemArgs</a></h4>
       <section></section>
@@ -88,6 +106,57 @@
 <blockquote>
 <p><strong>NOTE:</strong> Either the <code>active_directory_id</code> argument or <code>self_managed_active_directory</code> configuration block must be specified.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="using-aws-directory-service">Using AWS Directory Service</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Fsx.WindowsFileSystem(&amp;quot;example&amp;quot;, new Aws.Fsx.WindowsFileSystemArgs
+    {
+        ActiveDirectoryId = aws_directory_service_directory.Example.Id,
+        KmsKeyId = aws_kms_key.Example.Arn,
+        StorageCapacity = 300,
+        SubnetIds = aws_subnet.Example.Id,
+        ThroughputCapacity = 1024,
+    });
+}
+
+}
+</code></pre>
+<h3 id="using-a-self-managed-microsoft-active-directory">Using a Self-Managed Microsoft Active Directory</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Fsx.WindowsFileSystem(&amp;quot;example&amp;quot;, new Aws.Fsx.WindowsFileSystemArgs
+    {
+        KmsKeyId = aws_kms_key.Example.Arn,
+        SelfManagedActiveDirectory = new Aws.Fsx.Inputs.WindowsFileSystemSelfManagedActiveDirectoryArgs
+        {
+            DnsIps = 
+            {
+                &amp;quot;10.0.0.111&amp;quot;,
+                &amp;quot;10.0.0.222&amp;quot;,
+            },
+            DomainName = &amp;quot;corp.example.com&amp;quot;,
+            Password = &amp;quot;avoid-plaintext-passwords&amp;quot;,
+            Username = &amp;quot;Admin&amp;quot;,
+        },
+        StorageCapacity = 300,
+        SubnetIds = aws_subnet.Example.Id,
+        ThroughputCapacity = 1024,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Fsx.WindowsFileSystemArgs.html">WindowsFileSystemArgs</a></h4>
       <section></section>

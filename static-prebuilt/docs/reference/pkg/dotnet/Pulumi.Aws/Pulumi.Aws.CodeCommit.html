@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.CodeCommit
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,11 +84,23 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.CodeCommit.Repository.html">Repository</a></h4>
       <section><p>Provides a CodeCommit Repository Resource.</p>
-<blockquote>
-<p><strong>NOTE on CodeCommit Availability</strong>: The CodeCommit is not yet rolled out
-in all regions - available regions are listed
-<a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">the AWS Docs</a>.</p>
-</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Aws.CodeCommit.Repository(&amp;quot;test&amp;quot;, new Aws.CodeCommit.RepositoryArgs
+    {
+        Description = &amp;quot;This is the Sample App Repository&amp;quot;,
+        RepositoryName = &amp;quot;MyTestRepository&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CodeCommit.RepositoryArgs.html">RepositoryArgs</a></h4>
       <section></section>
@@ -96,11 +108,38 @@ in all regions - available regions are listed
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.CodeCommit.Trigger.html">Trigger</a></h4>
       <section><p>Provides a CodeCommit Trigger Resource.</p>
-<blockquote>
-<p><strong>NOTE on CodeCommit</strong>: The CodeCommit is not yet rolled out
-in all regions - available regions are listed
-<a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">the AWS Docs</a>.</p>
-</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testRepository = new Aws.CodeCommit.Repository(&amp;quot;testRepository&amp;quot;, new Aws.CodeCommit.RepositoryArgs
+    {
+        RepositoryName = &amp;quot;test&amp;quot;,
+    });
+    var testTrigger = new Aws.CodeCommit.Trigger(&amp;quot;testTrigger&amp;quot;, new Aws.CodeCommit.TriggerArgs
+    {
+        RepositoryName = testRepository.RepositoryName,
+        Triggers = 
+        {
+            new Aws.CodeCommit.Inputs.TriggerTriggerArgs
+            {
+                DestinationArn = aws_sns_topic.Test.Arn,
+                Events = 
+                {
+                    &amp;quot;all&amp;quot;,
+                },
+                Name = &amp;quot;all&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CodeCommit.TriggerArgs.html">TriggerArgs</a></h4>
       <section></section>

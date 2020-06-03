@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Endpoints
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,7 +82,7 @@
       <h4><a class="xref" href="Pulumi.Gcp.Endpoints.ServiceArgs.html">ServiceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Endpoints.ServiceIamBinding.html">ServiceIamBinding</a></h4>
-      <section><p>Three different resources help you manage your IAM policy for Service Management Service. Each of these resources serves a different use case:</p>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Endpoints Service. Each of these resources serves a different use case:</p>
 <ul>
 <li><code>gcp.endpoints.ServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</li>
 <li><code>gcp.endpoints.ServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</li>
@@ -94,13 +94,83 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.endpoints.ServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.endpoints.ServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_endpoints_service_iam_policy">google_endpoints_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Endpoints.ServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Endpoints.ServiceIamPolicyArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_endpoints_service_iam_binding">google_endpoints_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Endpoints.ServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Endpoints.ServiceIamBindingArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_endpoints_service_iam_member">google_endpoints_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Endpoints.ServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Endpoints.ServiceIamMemberArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Endpoints.ServiceIamBindingArgs.html">ServiceIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Endpoints.ServiceIamBindingState.html">ServiceIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Endpoints.ServiceIamMember.html">ServiceIamMember</a></h4>
-      <section><p>Three different resources help you manage your IAM policy for Service Management Service. Each of these resources serves a different use case:</p>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Endpoints Service. Each of these resources serves a different use case:</p>
 <ul>
 <li><code>gcp.endpoints.ServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</li>
 <li><code>gcp.endpoints.ServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</li>
@@ -112,13 +182,83 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.endpoints.ServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.endpoints.ServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_endpoints_service_iam_policy">google_endpoints_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Endpoints.ServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Endpoints.ServiceIamPolicyArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_endpoints_service_iam_binding">google_endpoints_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Endpoints.ServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Endpoints.ServiceIamBindingArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_endpoints_service_iam_member">google_endpoints_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Endpoints.ServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Endpoints.ServiceIamMemberArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Endpoints.ServiceIamMemberArgs.html">ServiceIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Endpoints.ServiceIamMemberState.html">ServiceIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Endpoints.ServiceIamPolicy.html">ServiceIamPolicy</a></h4>
-      <section><p>Three different resources help you manage your IAM policy for Service Management Service. Each of these resources serves a different use case:</p>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Endpoints Service. Each of these resources serves a different use case:</p>
 <ul>
 <li><code>gcp.endpoints.ServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</li>
 <li><code>gcp.endpoints.ServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</li>
@@ -130,6 +270,76 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.endpoints.ServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.endpoints.ServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_endpoints_service_iam_policy">google_endpoints_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Endpoints.ServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Endpoints.ServiceIamPolicyArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_endpoints_service_iam_binding">google_endpoints_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Endpoints.ServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Endpoints.ServiceIamBindingArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_endpoints_service_iam_member">google_endpoints_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Endpoints.ServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Endpoints.ServiceIamMemberArgs
+    {
+        ServiceName = google_endpoints_service.Endpoints_service.Service_name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Endpoints.ServiceIamPolicyArgs.html">ServiceIamPolicyArgs</a></h4>
       <section></section>

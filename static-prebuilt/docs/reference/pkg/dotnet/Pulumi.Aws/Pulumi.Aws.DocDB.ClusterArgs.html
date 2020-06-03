@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ClusterArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ClusterArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">ClusterArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.DocDB.html">Pulumi.Aws.DocDB</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L434">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L461">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs__ctor_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs__ctor" data-uid="Pulumi.Aws.DocDB.ClusterArgs.#ctor">ClusterArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L259">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_ApplyImmediately_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.ApplyImmediately*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_ApplyImmediately" data-uid="Pulumi.Aws.DocDB.ClusterArgs.ApplyImmediately">ApplyImmediately</h4>
@@ -111,7 +140,7 @@ are applied immediately, or during the next maintenance window. Default is
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ApplyImmediately { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; ApplyImmediately { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,13 +152,13 @@ are applied immediately, or during the next maintenance window. Default is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L269">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L296">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_AvailabilityZones_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.AvailabilityZones*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_AvailabilityZones" data-uid="Pulumi.Aws.DocDB.ClusterArgs.AvailabilityZones">AvailabilityZones</h4>
@@ -151,13 +180,13 @@ instances in the DB cluster can be created in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L278">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L305">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_BackupRetentionPeriod_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.BackupRetentionPeriod*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_BackupRetentionPeriod" data-uid="Pulumi.Aws.DocDB.ClusterArgs.BackupRetentionPeriod">BackupRetentionPeriod</h4>
@@ -166,7 +195,7 @@ instances in the DB cluster can be created in.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? BackupRetentionPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; BackupRetentionPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,13 +207,13 @@ instances in the DB cluster can be created in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L284">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L311">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_ClusterIdentifier_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.ClusterIdentifier*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_ClusterIdentifier" data-uid="Pulumi.Aws.DocDB.ClusterArgs.ClusterIdentifier">ClusterIdentifier</h4>
@@ -193,7 +222,7 @@ instances in the DB cluster can be created in.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClusterIdentifier { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClusterIdentifier { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,13 +234,13 @@ instances in the DB cluster can be created in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L290">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L317">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_ClusterIdentifierPrefix_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.ClusterIdentifierPrefix*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_ClusterIdentifierPrefix" data-uid="Pulumi.Aws.DocDB.ClusterArgs.ClusterIdentifierPrefix">ClusterIdentifierPrefix</h4>
@@ -220,7 +249,7 @@ instances in the DB cluster can be created in.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClusterIdentifierPrefix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClusterIdentifierPrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,13 +261,13 @@ instances in the DB cluster can be created in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L299">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L326">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_ClusterMembers_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.ClusterMembers*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_ClusterMembers" data-uid="Pulumi.Aws.DocDB.ClusterArgs.ClusterMembers">ClusterMembers</h4>
@@ -259,13 +288,13 @@ instances in the DB cluster can be created in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L308">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L335">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_DbClusterParameterGroupName_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.DbClusterParameterGroupName*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_DbClusterParameterGroupName" data-uid="Pulumi.Aws.DocDB.ClusterArgs.DbClusterParameterGroupName">DbClusterParameterGroupName</h4>
@@ -274,7 +303,7 @@ instances in the DB cluster can be created in.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DbClusterParameterGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DbClusterParameterGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,13 +315,13 @@ instances in the DB cluster can be created in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L314">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L341">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_DbSubnetGroupName_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.DbSubnetGroupName*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_DbSubnetGroupName" data-uid="Pulumi.Aws.DocDB.ClusterArgs.DbSubnetGroupName">DbSubnetGroupName</h4>
@@ -301,7 +330,7 @@ instances in the DB cluster can be created in.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DbSubnetGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DbSubnetGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,13 +342,13 @@ instances in the DB cluster can be created in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L320">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L347">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_DeletionProtection_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.DeletionProtection*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_DeletionProtection" data-uid="Pulumi.Aws.DocDB.ClusterArgs.DeletionProtection">DeletionProtection</h4>
@@ -328,7 +357,7 @@ instances in the DB cluster can be created in.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DeletionProtection { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DeletionProtection { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -340,13 +369,13 @@ instances in the DB cluster can be created in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L330">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L357">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_EnabledCloudwatchLogsExports_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.EnabledCloudwatchLogsExports*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_EnabledCloudwatchLogsExports" data-uid="Pulumi.Aws.DocDB.ClusterArgs.EnabledCloudwatchLogsExports">EnabledCloudwatchLogsExports</h4>
@@ -368,13 +397,13 @@ The following log types are supported: <code>audit</code>, <code>profiler</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L339">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L366">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_Engine_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.Engine*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_Engine" data-uid="Pulumi.Aws.DocDB.ClusterArgs.Engine">Engine</h4>
@@ -383,7 +412,7 @@ The following log types are supported: <code>audit</code>, <code>profiler</code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Engine { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Engine { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -395,13 +424,13 @@ The following log types are supported: <code>audit</code>, <code>profiler</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L345">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L372">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_EngineVersion_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.EngineVersion*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_EngineVersion" data-uid="Pulumi.Aws.DocDB.ClusterArgs.EngineVersion">EngineVersion</h4>
@@ -410,7 +439,7 @@ The following log types are supported: <code>audit</code>, <code>profiler</code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EngineVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EngineVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -422,13 +451,13 @@ The following log types are supported: <code>audit</code>, <code>profiler</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L353">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L380">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_FinalSnapshotIdentifier_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.FinalSnapshotIdentifier*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_FinalSnapshotIdentifier" data-uid="Pulumi.Aws.DocDB.ClusterArgs.FinalSnapshotIdentifier">FinalSnapshotIdentifier</h4>
@@ -439,7 +468,7 @@ made.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FinalSnapshotIdentifier { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FinalSnapshotIdentifier { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -451,13 +480,13 @@ made.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L359">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L386">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_KmsKeyId_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.KmsKeyId*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_KmsKeyId" data-uid="Pulumi.Aws.DocDB.ClusterArgs.KmsKeyId">KmsKeyId</h4>
@@ -466,7 +495,7 @@ made.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsKeyId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsKeyId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -478,13 +507,13 @@ made.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L366">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L393">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_MasterPassword_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.MasterPassword*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_MasterPassword" data-uid="Pulumi.Aws.DocDB.ClusterArgs.MasterPassword">MasterPassword</h4>
@@ -494,7 +523,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MasterPassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MasterPassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -506,13 +535,13 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L372">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L399">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_MasterUsername_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.MasterUsername*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_MasterUsername" data-uid="Pulumi.Aws.DocDB.ClusterArgs.MasterUsername">MasterUsername</h4>
@@ -521,7 +550,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MasterUsername { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MasterUsername { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -533,13 +562,13 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L378">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L405">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_Port_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.Port*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_Port" data-uid="Pulumi.Aws.DocDB.ClusterArgs.Port">Port</h4>
@@ -548,7 +577,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Port { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Port { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -560,13 +589,13 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L385">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L412">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_PreferredBackupWindow_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.PreferredBackupWindow*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_PreferredBackupWindow" data-uid="Pulumi.Aws.DocDB.ClusterArgs.PreferredBackupWindow">PreferredBackupWindow</h4>
@@ -576,7 +605,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PreferredBackupWindow { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PreferredBackupWindow { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -588,13 +617,13 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L388">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L415">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_PreferredMaintenanceWindow_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.PreferredMaintenanceWindow*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_PreferredMaintenanceWindow" data-uid="Pulumi.Aws.DocDB.ClusterArgs.PreferredMaintenanceWindow">PreferredMaintenanceWindow</h4>
@@ -602,7 +631,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PreferredMaintenanceWindow { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PreferredMaintenanceWindow { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -614,13 +643,13 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L394">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L421">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_SkipFinalSnapshot_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.SkipFinalSnapshot*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_SkipFinalSnapshot" data-uid="Pulumi.Aws.DocDB.ClusterArgs.SkipFinalSnapshot">SkipFinalSnapshot</h4>
@@ -629,7 +658,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SkipFinalSnapshot { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SkipFinalSnapshot { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -641,13 +670,13 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L400">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L427">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_SnapshotIdentifier_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.SnapshotIdentifier*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_SnapshotIdentifier" data-uid="Pulumi.Aws.DocDB.ClusterArgs.SnapshotIdentifier">SnapshotIdentifier</h4>
@@ -656,7 +685,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SnapshotIdentifier { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SnapshotIdentifier { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -668,13 +697,13 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L406">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L433">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_StorageEncrypted_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.StorageEncrypted*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_StorageEncrypted" data-uid="Pulumi.Aws.DocDB.ClusterArgs.StorageEncrypted">StorageEncrypted</h4>
@@ -683,7 +712,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? StorageEncrypted { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; StorageEncrypted { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -695,17 +724,17 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L415">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L442">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_Tags_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.Tags*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_Tags" data-uid="Pulumi.Aws.DocDB.ClusterArgs.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the DB cluster.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the DB cluster.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -722,13 +751,13 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L428">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L455">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterArgs_VpcSecurityGroupIds_" data-uid="Pulumi.Aws.DocDB.ClusterArgs.VpcSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterArgs_VpcSecurityGroupIds" data-uid="Pulumi.Aws.DocDB.ClusterArgs.VpcSecurityGroupIds">VpcSecurityGroupIds</h4>
@@ -750,7 +779,7 @@ with the Cluster</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -762,7 +791,7 @@ with the Cluster</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/Cluster.cs/#L252" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/DocDB/Cluster.cs/#L279" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

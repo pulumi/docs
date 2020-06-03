@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Qldb
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,6 +87,21 @@
 <blockquote>
 <p><strong>NOTE:</strong> Deletion protection is enabled by default. To successfully delete this resource via this provider, <code>deletion_protection = false</code> must be applied before attempting deletion.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var sample_ledger = new Aws.Qldb.Ledger(&amp;quot;sample-ledger&amp;quot;, new Aws.Qldb.LedgerArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Qldb.LedgerArgs.html">LedgerArgs</a></h4>
       <section></section>

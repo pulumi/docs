@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DetectorRule
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DetectorRule</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.SignalFx.Outputs.html">Pulumi.SignalFx.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.SignalFx.dll</h6>
   <h5 id="Pulumi_SignalFx_Outputs_DetectorRule_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DetectorRule : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DetectorRule</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Outputs/DetectorRule.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Outputs/DetectorRule.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_SignalFx_Outputs_DetectorRule_Description" data-uid="Pulumi.SignalFx.Outputs.DetectorRule.Description">Description</h4>
   <div class="markdown level1 summary"><p>Description for the rule. Displays as the alert condition in the Alert Rules tab of the detector editor in the web UI.</p>
@@ -95,7 +119,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Description</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Description</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -107,13 +131,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Outputs/DetectorRule.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Outputs/DetectorRule.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_SignalFx_Outputs_DetectorRule_DetectLabel" data-uid="Pulumi.SignalFx.Outputs.DetectorRule.DetectLabel">DetectLabel</h4>
   <div class="markdown level1 summary"><p>A detect label which matches a detect label within <code>program_text</code>.</p>
@@ -139,7 +163,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Outputs/DetectorRule.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Outputs/DetectorRule.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_SignalFx_Outputs_DetectorRule_Disabled" data-uid="Pulumi.SignalFx.Outputs.DetectorRule.Disabled">Disabled</h4>
   <div class="markdown level1 summary"><p>When true, notifications and events will not be generated for the detect label. <code>false</code> by default.</p>
@@ -165,7 +189,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Outputs/DetectorRule.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Outputs/DetectorRule.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_SignalFx_Outputs_DetectorRule_Notifications" data-uid="Pulumi.SignalFx.Outputs.DetectorRule.Notifications">Notifications</h4>
   <div class="markdown level1 summary"><p>List of strings specifying where notifications will be sent when an incident occurs. See <a href="https://developers.signalfx.com/detectors_reference.html#operation/Create%20Single%20Detector">Create A Single Detector</a> for more info.</p>
@@ -185,13 +209,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Outputs/DetectorRule.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Outputs/DetectorRule.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_SignalFx_Outputs_DetectorRule_ParameterizedBody" data-uid="Pulumi.SignalFx.Outputs.DetectorRule.ParameterizedBody">ParameterizedBody</h4>
   <div class="markdown level1 summary"><p>Custom notification message body when an alert is triggered. See <a href="https://docs.signalfx.com/en/latest/detect-alert/set-up-detectors.html#about-detectors#alert-settings">Set Up Detectors to Trigger Alerts</a> for more info.</p>
@@ -199,7 +223,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ParameterizedBody</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ParameterizedBody</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,13 +235,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Outputs/DetectorRule.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Outputs/DetectorRule.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_SignalFx_Outputs_DetectorRule_ParameterizedSubject" data-uid="Pulumi.SignalFx.Outputs.DetectorRule.ParameterizedSubject">ParameterizedSubject</h4>
   <div class="markdown level1 summary"><p>Custom notification message subject when an alert is triggered. See <a href="https://docs.signalfx.com/en/latest/detect-alert/set-up-detectors.html#about-detectors#alert-settings">Set Up Detectors to Trigger Alerts</a> for more info.</p>
@@ -225,7 +249,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ParameterizedSubject</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ParameterizedSubject</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +261,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Outputs/DetectorRule.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Outputs/DetectorRule.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_SignalFx_Outputs_DetectorRule_RunbookUrl" data-uid="Pulumi.SignalFx.Outputs.DetectorRule.RunbookUrl">RunbookUrl</h4>
   <div class="markdown level1 summary"><p>URL of page to consult when an alert is triggered. This can be used with custom notification messages.</p>
@@ -251,7 +275,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? RunbookUrl</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string RunbookUrl</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +287,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Outputs/DetectorRule.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Outputs/DetectorRule.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_SignalFx_Outputs_DetectorRule_Severity" data-uid="Pulumi.SignalFx.Outputs.DetectorRule.Severity">Severity</h4>
   <div class="markdown level1 summary"><p>The severity of the rule, must be one of: <code>&amp;quot;Critical&amp;quot;</code>, <code>&amp;quot;Major&amp;quot;</code>, <code>&amp;quot;Minor&amp;quot;</code>, <code>&amp;quot;Warning&amp;quot;</code>, <code>&amp;quot;Info&amp;quot;</code>.</p>
@@ -295,7 +319,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Outputs/DetectorRule.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Outputs/DetectorRule.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_SignalFx_Outputs_DetectorRule_Tip" data-uid="Pulumi.SignalFx.Outputs.DetectorRule.Tip">Tip</h4>
   <div class="markdown level1 summary"><p>Plain text suggested first course of action, such as a command line to execute. This can be used with custom notification messages.</p>
@@ -303,7 +327,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Tip</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Tip</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,7 +339,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -327,7 +351,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Outputs/DetectorRule.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Outputs/DetectorRule.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetPolicyDocument
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,23 +78,119 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetPolicyDocument</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Iam.html">Pulumi.Aws.Iam</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Iam_GetPolicyDocument_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetPolicyDocument : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetPolicyDocument</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/GetPolicyDocument.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/GetPolicyDocument.cs/#L397">View Source</a>
   </span>
   <a id="Pulumi_Aws_Iam_GetPolicyDocument_InvokeAsync_" data-uid="Pulumi.Aws.Iam.GetPolicyDocument.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_Iam_GetPolicyDocument_InvokeAsync_Pulumi_Aws_Iam_GetPolicyDocumentArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.Iam.GetPolicyDocument.InvokeAsync(Pulumi.Aws.Iam.GetPolicyDocumentArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetPolicyDocumentArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Iam_GetPolicyDocument_InvokeAsync_Pulumi_Aws_Iam_GetPolicyDocumentArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.Iam.GetPolicyDocument.InvokeAsync(Pulumi.Aws.Iam.GetPolicyDocumentArgs,Pulumi.InvokeOptions)">InvokeAsync(GetPolicyDocumentArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Generates an IAM policy document in JSON format.</p>
 <p>This is a data source which can be used to construct a JSON representation of
 an IAM policy document, for use with resources which expect policy documents,
 such as the <code>aws.iam.Policy</code> resource.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var examplePolicyDocument = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;s3:ListAllMyBuckets&amp;quot;,
+                    &amp;quot;s3:GetBucketLocation&amp;quot;,
+                },
+                Resources = 
+                {
+                    &amp;quot;arn:aws:s3:::*&amp;quot;,
+                },
+                Sid = &amp;quot;1&amp;quot;,
+            },
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;s3:ListBucket&amp;quot;,
+                },
+                Condition = 
+                {
+
+                    {
+                        { &amp;quot;test&amp;quot;, &amp;quot;StringLike&amp;quot; },
+                        { &amp;quot;values&amp;quot;, 
+                        {
+                            &amp;quot;&amp;quot;,
+                            &amp;quot;home/&amp;quot;,
+                            &amp;quot;home/&amp;amp;{aws:username}/&amp;quot;,
+                        } },
+                        { &amp;quot;variable&amp;quot;, &amp;quot;s3:prefix&amp;quot; },
+                    },
+                },
+                Resources = 
+                {
+                    $&amp;quot;arn:aws:s3:::{@var.S3_bucket_name}&amp;quot;,
+                },
+            },
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;s3:*&amp;quot;,
+                },
+                Resources = 
+                {
+                    $&amp;quot;arn:aws:s3:::{@var.S3_bucket_name}/home/&amp;amp;{{aws:username}}&amp;quot;,
+                    $&amp;quot;arn:aws:s3:::{@var.S3_bucket_name}/home/&amp;amp;{{aws:username}}/*&amp;quot;,
+                },
+            },
+        },
+    }));
+    var examplePolicy = new Aws.Iam.Policy(&amp;quot;examplePolicy&amp;quot;, new Aws.Iam.PolicyArgs
+    {
+        Path = &amp;quot;/&amp;quot;,
+        Policy = examplePolicyDocument.Apply(examplePolicyDocument =&gt; examplePolicyDocument.Json),
+    });
+}
+
+}
+</code></pre>
 <p>Using this data source to generate policy documents is <em>optional</em>. It is also
 valid to use literal JSON strings within your configuration, or to use the
 <code>file</code> interpolation function to read a raw JSON policy document from a file.</p>
@@ -112,11 +208,269 @@ states that <code>&amp;quot;Principal&amp;quot;: &amp;quot;*&amp;quot;</code> an
 those principals have different behavior for IAM Role Trust Policy. Therefore
 this provider will normalize the principal field only in above-mentioned case and principals
 like <code>type = &amp;quot;AWS&amp;quot;</code> and <code>identifiers = [&amp;quot;*&amp;quot;]</code> will be rendered as <code>&amp;quot;Principal&amp;quot;: {&amp;quot;AWS&amp;quot;: &amp;quot;*&amp;quot;}</code>.</p>
+<h2 id="example-with-multiple-principals">Example with Multiple Principals</h2>
+<p>Showing how you can use this as an assume role policy as well as showing how you can specify multiple principal blocks with different types.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var eventStreamBucketRoleAssumeRolePolicy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;sts:AssumeRole&amp;quot;,
+                },
+                Principals = 
+                {
+                    new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                    {
+                        Identifiers = 
+                        {
+                            &amp;quot;firehose.amazonaws.com&amp;quot;,
+                        },
+                        Type = &amp;quot;Service&amp;quot;,
+                    },
+                    new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                    {
+                        Identifiers = 
+                        {
+                            @var.Trusted_role_arn,
+                        },
+                        Type = &amp;quot;AWS&amp;quot;,
+                    },
+                    new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                    {
+                        Identifiers = 
+                        {
+                            $&amp;quot;arn:aws:iam::{@var.Account_id}:saml-provider/{@var.Provider_name}&amp;quot;,
+                            &amp;quot;cognito-identity.amazonaws.com&amp;quot;,
+                        },
+                        Type = &amp;quot;Federated&amp;quot;,
+                    },
+                },
+            },
+        },
+    }));
+}
+
+}
+</code></pre>
+<h2 id="example-with-source-and-override">Example with Source and Override</h2>
+<p>Showing how you can use <code>source_json</code> and <code>override_json</code></p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var source = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;ec2:*&amp;quot;,
+                },
+                Resources = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+            },
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;s3:*&amp;quot;,
+                },
+                Resources = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+                Sid = &amp;quot;SidToOverwrite&amp;quot;,
+            },
+        },
+    }));
+    var sourceJsonExample = source.Apply(source =&gt; Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        SourceJson = source.Json,
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;s3:*&amp;quot;,
+                },
+                Resources = 
+                {
+                    &amp;quot;arn:aws:s3:::somebucket&amp;quot;,
+                    &amp;quot;arn:aws:s3:::somebucket/*&amp;quot;,
+                },
+                Sid = &amp;quot;SidToOverwrite&amp;quot;,
+            },
+        },
+    })));
+    var @override = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;s3:*&amp;quot;,
+                },
+                Resources = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+                Sid = &amp;quot;SidToOverwrite&amp;quot;,
+            },
+        },
+    }));
+    var overrideJsonExample = @override.Apply(@override =&gt; Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        OverrideJson = @override.Json,
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;ec2:*&amp;quot;,
+                },
+                Resources = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+            },
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;s3:*&amp;quot;,
+                },
+                Resources = 
+                {
+                    &amp;quot;arn:aws:s3:::somebucket&amp;quot;,
+                    &amp;quot;arn:aws:s3:::somebucket/*&amp;quot;,
+                },
+                Sid = &amp;quot;SidToOverwrite&amp;quot;,
+            },
+        },
+    })));
+}
+
+}
+</code></pre>
+<p><code>data.aws_iam_policy_document.source_json_example.json</code> will evaluate to:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p><code>data.aws_iam_policy_document.override_json_example.json</code> will evaluate to:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>You can also combine <code>source_json</code> and <code>override_json</code> in the same document.</p>
+<h2 id="example-without-statement">Example without Statement</h2>
+<p>Use without a <code>statement</code>:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var source = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;ec2:DescribeAccountAttributes&amp;quot;,
+                },
+                Resources = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+                Sid = &amp;quot;OverridePlaceholder&amp;quot;,
+            },
+        },
+    }));
+    var @override = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;s3:GetObject&amp;quot;,
+                },
+                Resources = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+                Sid = &amp;quot;OverridePlaceholder&amp;quot;,
+            },
+        },
+    }));
+    var politik = Output.Tuple(@override, source).Apply(values =&gt;
+    {
+        var @override = values.Item1;
+        var source = values.Item2;
+        return Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            OverrideJson = @override.Json,
+            SourceJson = source.Json,
+        }));
+    });
+}
+
+}
+</code></pre>
+<p><code>data.aws_iam_policy_document.politik.json</code> will evaluate to:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetPolicyDocumentResult&gt; InvokeAsync(GetPolicyDocumentArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetPolicyDocumentResult&gt; InvokeAsync(GetPolicyDocumentArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,7 +488,7 @@ like <code>type = &amp;quot;AWS&amp;quot;</code> and <code>identifiers = [&amp;q
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -150,7 +504,7 @@ like <code>type = &amp;quot;AWS&amp;quot;</code> and <code>identifiers = [&amp;q
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.Iam.GetPolicyDocumentResult.html">GetPolicyDocumentResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.Iam.GetPolicyDocumentResult.html">GetPolicyDocumentResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -162,7 +516,7 @@ like <code>type = &amp;quot;AWS&amp;quot;</code> and <code>identifiers = [&amp;q
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/GetPolicyDocument.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/GetPolicyDocument.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

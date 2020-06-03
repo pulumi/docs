@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.AutoScaling
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,6 +86,24 @@ an ELB), and an AutoScaling Group resource with
 load balancers in conjunction with an ASG Attachment resource. Doing so will cause a
 conflict and will overwrite attachments.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new load balancer attachment
+    var asgAttachmentBar = new Aws.AutoScaling.Attachment(&amp;quot;asgAttachmentBar&amp;quot;, new Aws.AutoScaling.AttachmentArgs
+    {
+        AutoscalingGroupName = aws_autoscaling_group.Asg.Id,
+        Elb = aws_elb.Bar.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.AttachmentArgs.html">AttachmentArgs</a></h4>
       <section></section>
@@ -102,6 +120,154 @@ conflict and will overwrite attachments.</p>
 <blockquote>
 <p><strong>Note:</strong> You must specify either <code>launch_configuration</code>, <code>launch_template</code>, or <code>mixed_instances_policy</code>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Aws.Ec2.PlacementGroup(&amp;quot;test&amp;quot;, new Aws.Ec2.PlacementGroupArgs
+    {
+        Strategy = &amp;quot;cluster&amp;quot;,
+    });
+    var bar = new Aws.AutoScaling.Group(&amp;quot;bar&amp;quot;, new Aws.AutoScaling.GroupArgs
+    {
+        DesiredCapacity = 4,
+        ForceDelete = true,
+        HealthCheckGracePeriod = 300,
+        HealthCheckType = &amp;quot;ELB&amp;quot;,
+        InitialLifecycleHooks = 
+        {
+            new Aws.AutoScaling.Inputs.GroupInitialLifecycleHookArgs
+            {
+                DefaultResult = &amp;quot;CONTINUE&amp;quot;,
+                HeartbeatTimeout = 2000,
+                LifecycleTransition = &amp;quot;autoscaling:EC2_INSTANCE_LAUNCHING&amp;quot;,
+                Name = &amp;quot;foobar&amp;quot;,
+                NotificationMetadata = @&amp;quot;{
+&amp;quot;&amp;quot;foo&amp;quot;&amp;quot;: &amp;quot;&amp;quot;bar&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+                NotificationTargetArn = &amp;quot;arn:aws:sqs:us-east-1:444455556666:queue1*&amp;quot;,
+                RoleArn = &amp;quot;arn:aws:iam::123456789012:role/S3Access&amp;quot;,
+            },
+        },
+        LaunchConfiguration = aws_launch_configuration.Foobar.Name,
+        MaxSize = 5,
+        MinSize = 2,
+        PlacementGroup = test.Id,
+        Tags = 
+        {
+            new Aws.AutoScaling.Inputs.GroupTagArgs
+            {
+                Key = &amp;quot;foo&amp;quot;,
+                PropagateAtLaunch = true,
+                Value = &amp;quot;bar&amp;quot;,
+            },
+            new Aws.AutoScaling.Inputs.GroupTagArgs
+            {
+                Key = &amp;quot;lorem&amp;quot;,
+                PropagateAtLaunch = false,
+                Value = &amp;quot;ipsum&amp;quot;,
+            },
+        },
+        VpcZoneIdentifiers = 
+        {
+            aws_subnet.Example1.Id,
+            aws_subnet.Example2.Id,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="with-latest-version-of-launch-template">With Latest Version Of Launch Template</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new Aws.Ec2.LaunchTemplate(&amp;quot;foobar&amp;quot;, new Aws.Ec2.LaunchTemplateArgs
+    {
+        ImageId = &amp;quot;ami-1a2b3c&amp;quot;,
+        InstanceType = &amp;quot;t2.micro&amp;quot;,
+        NamePrefix = &amp;quot;foobar&amp;quot;,
+    });
+    var bar = new Aws.AutoScaling.Group(&amp;quot;bar&amp;quot;, new Aws.AutoScaling.GroupArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-east-1a&amp;quot;,
+        },
+        DesiredCapacity = 1,
+        LaunchTemplate = new Aws.AutoScaling.Inputs.GroupLaunchTemplateArgs
+        {
+            Id = foobar.Id,
+            Version = &amp;quot;$$Latest&amp;quot;,
+        },
+        MaxSize = 1,
+        MinSize = 1,
+    });
+}
+
+}
+</code></pre>
+<h3 id="mixed-instances-policy">Mixed Instances Policy</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleLaunchTemplate = new Aws.Ec2.LaunchTemplate(&amp;quot;exampleLaunchTemplate&amp;quot;, new Aws.Ec2.LaunchTemplateArgs
+    {
+        ImageId = data.Aws_ami.Example.Id,
+        InstanceType = &amp;quot;c5.large&amp;quot;,
+        NamePrefix = &amp;quot;example&amp;quot;,
+    });
+    var exampleGroup = new Aws.AutoScaling.Group(&amp;quot;exampleGroup&amp;quot;, new Aws.AutoScaling.GroupArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-east-1a&amp;quot;,
+        },
+        DesiredCapacity = 1,
+        MaxSize = 1,
+        MinSize = 1,
+        MixedInstancesPolicy = new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyArgs
+        {
+            LaunchTemplate = new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateArgs
+            {
+                LaunchTemplateSpecification = new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs
+                {
+                    LaunchTemplateId = exampleLaunchTemplate.Id,
+                },
+                Override = 
+                {
+
+                    {
+                        { &amp;quot;instanceType&amp;quot;, &amp;quot;c4.large&amp;quot; },
+                        { &amp;quot;weightedCapacity&amp;quot;, &amp;quot;3&amp;quot; },
+                    },
+
+                    {
+                        { &amp;quot;instanceType&amp;quot;, &amp;quot;c3.large&amp;quot; },
+                        { &amp;quot;weightedCapacity&amp;quot;, &amp;quot;2&amp;quot; },
+                    },
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="waiting-for-capacity">Waiting for Capacity</h2>
 <p>A newly-created ASG is initially empty and begins to scale to <code>min_size</code> (or
 <code>desired_capacity</code>, if specified) by launching instances using the provided
@@ -165,6 +331,53 @@ behavior. If you need hooks to run on all instances, add them with
 <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html"><code>aws.autoscaling.Group</code></a>,
 but take care to not duplicate those hooks with this resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobarGroup = new Aws.AutoScaling.Group(&amp;quot;foobarGroup&amp;quot;, new Aws.AutoScaling.GroupArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-west-2a&amp;quot;,
+        },
+        HealthCheckType = &amp;quot;EC2&amp;quot;,
+        Tags = 
+        {
+            new Aws.AutoScaling.Inputs.GroupTagArgs
+            {
+                Key = &amp;quot;Foo&amp;quot;,
+                PropagateAtLaunch = true,
+                Value = &amp;quot;foo-bar&amp;quot;,
+            },
+        },
+        TerminationPolicies = 
+        {
+            &amp;quot;OldestInstance&amp;quot;,
+        },
+    });
+    var foobarLifecycleHook = new Aws.AutoScaling.LifecycleHook(&amp;quot;foobarLifecycleHook&amp;quot;, new Aws.AutoScaling.LifecycleHookArgs
+    {
+        AutoscalingGroupName = foobarGroup.Name,
+        DefaultResult = &amp;quot;CONTINUE&amp;quot;,
+        HeartbeatTimeout = 2000,
+        LifecycleTransition = &amp;quot;autoscaling:EC2_INSTANCE_LAUNCHING&amp;quot;,
+        NotificationMetadata = @&amp;quot;{
+&amp;quot;&amp;quot;foo&amp;quot;&amp;quot;: &amp;quot;&amp;quot;bar&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+        NotificationTargetArn = &amp;quot;arn:aws:sqs:us-east-1:444455556666:queue1*&amp;quot;,
+        RoleArn = &amp;quot;arn:aws:iam::123456789012:role/S3Access&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.LifecycleHookArgs.html">LifecycleHookArgs</a></h4>
       <section></section>
@@ -172,8 +385,45 @@ but take care to not duplicate those hooks with this resource.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.Notification.html">Notification</a></h4>
       <section><p>Provides an AutoScaling Group with Notification support, via SNS Topics. Each of
-the <code>notifications</code> map to a [Notification Configuration][2] inside Amazon Web
+the <code>notifications</code> map to a <a href="https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_DescribeNotificationConfigurations.html">Notification Configuration</a> inside Amazon Web
 Services, and are applied to each AutoScaling Group you supply.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Sns.Topic(&amp;quot;example&amp;quot;, new Aws.Sns.TopicArgs
+    {
+    });
+    var bar = new Aws.AutoScaling.Group(&amp;quot;bar&amp;quot;, new Aws.AutoScaling.GroupArgs
+    {
+    });
+    var foo = new Aws.AutoScaling.Group(&amp;quot;foo&amp;quot;, new Aws.AutoScaling.GroupArgs
+    {
+    });
+    var exampleNotifications = new Aws.AutoScaling.Notification(&amp;quot;exampleNotifications&amp;quot;, new Aws.AutoScaling.NotificationArgs
+    {
+        GroupNames = 
+        {
+            bar.Name,
+            foo.Name,
+        },
+        Notifications = 
+        {
+            &amp;quot;autoscaling:EC2_INSTANCE_LAUNCH&amp;quot;,
+            &amp;quot;autoscaling:EC2_INSTANCE_TERMINATE&amp;quot;,
+            &amp;quot;autoscaling:EC2_INSTANCE_LAUNCH_ERROR&amp;quot;,
+            &amp;quot;autoscaling:EC2_INSTANCE_TERMINATE_ERROR&amp;quot;,
+        },
+        TopicArn = example.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.NotificationArgs.html">NotificationArgs</a></h4>
       <section></section>
@@ -188,6 +438,38 @@ when using autoscaling policies. It's good practice to pick either
 or <a href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">dynamic</a>
 (policy-based) scaling.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bar = new Aws.AutoScaling.Group(&amp;quot;bar&amp;quot;, new Aws.AutoScaling.GroupArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-east-1a&amp;quot;,
+        },
+        ForceDelete = true,
+        HealthCheckGracePeriod = 300,
+        HealthCheckType = &amp;quot;ELB&amp;quot;,
+        LaunchConfiguration = aws_launch_configuration.Foo.Name,
+        MaxSize = 5,
+        MinSize = 2,
+    });
+    var bat = new Aws.AutoScaling.Policy(&amp;quot;bat&amp;quot;, new Aws.AutoScaling.PolicyArgs
+    {
+        AdjustmentType = &amp;quot;ChangeInCapacity&amp;quot;,
+        AutoscalingGroupName = bar.Name,
+        Cooldown = 300,
+        ScalingAdjustment = 4,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
@@ -195,6 +477,44 @@ or <a href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-sca
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.Schedule.html">Schedule</a></h4>
       <section><p>Provides an AutoScaling Schedule resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobarGroup = new Aws.AutoScaling.Group(&amp;quot;foobarGroup&amp;quot;, new Aws.AutoScaling.GroupArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-west-2a&amp;quot;,
+        },
+        ForceDelete = true,
+        HealthCheckGracePeriod = 300,
+        HealthCheckType = &amp;quot;ELB&amp;quot;,
+        MaxSize = 1,
+        MinSize = 1,
+        TerminationPolicies = 
+        {
+            &amp;quot;OldestInstance&amp;quot;,
+        },
+    });
+    var foobarSchedule = new Aws.AutoScaling.Schedule(&amp;quot;foobarSchedule&amp;quot;, new Aws.AutoScaling.ScheduleArgs
+    {
+        AutoscalingGroupName = foobarGroup.Name,
+        DesiredCapacity = 0,
+        EndTime = &amp;quot;2016-12-12T06:00:00Z&amp;quot;,
+        MaxSize = 1,
+        MinSize = 0,
+        ScheduledActionName = &amp;quot;foobar&amp;quot;,
+        StartTime = &amp;quot;2016-12-11T18:00:00Z&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.ScheduleArgs.html">ScheduleArgs</a></h4>
       <section></section>

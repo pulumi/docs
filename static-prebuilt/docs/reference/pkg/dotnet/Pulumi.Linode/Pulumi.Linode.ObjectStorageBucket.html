@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ObjectStorageBucket
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,6 +72,27 @@
   <h1 id="Pulumi_Linode_ObjectStorageBucket" data-uid="Pulumi.Linode.ObjectStorageBucket" class="text-break">Class ObjectStorageBucket
   </h1>
   <div class="markdown level0 summary"><p>Provides a Linode Object Storage Bucket resource. This can be used to create, modify, and delete Linodes Object Storage Buckets.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primary = Output.Create(Linode.GetObjectStorageCluster.InvokeAsync(new Linode.GetObjectStorageClusterArgs
+    {
+        Id = &amp;quot;us-east-1&amp;quot;,
+    }));
+    var foobar = new Linode.ObjectStorageBucket(&amp;quot;foobar&amp;quot;, new Linode.ObjectStorageBucketArgs
+    {
+        Cluster = primary.Apply(primary =&gt; primary.Id),
+        Label = &amp;quot;%s&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -126,7 +147,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/ObjectStorageBucket.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/ObjectStorageBucket.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Linode_ObjectStorageBucket__ctor_" data-uid="Pulumi.Linode.ObjectStorageBucket.#ctor*"></a>
   <h4 id="Pulumi_Linode_ObjectStorageBucket__ctor_System_String_Pulumi_Linode_ObjectStorageBucketArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.ObjectStorageBucket.#ctor(System.String,Pulumi.Linode.ObjectStorageBucketArgs,Pulumi.CustomResourceOptions)">ObjectStorageBucket(String, ObjectStorageBucketArgs, CustomResourceOptions)</h4>
@@ -170,7 +191,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/ObjectStorageBucket.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/ObjectStorageBucket.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Linode_ObjectStorageBucket_Cluster_" data-uid="Pulumi.Linode.ObjectStorageBucket.Cluster*"></a>
   <h4 id="Pulumi_Linode_ObjectStorageBucket_Cluster" data-uid="Pulumi.Linode.ObjectStorageBucket.Cluster">Cluster</h4>
@@ -197,7 +218,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/ObjectStorageBucket.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/ObjectStorageBucket.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Linode_ObjectStorageBucket_Label_" data-uid="Pulumi.Linode.ObjectStorageBucket.Label*"></a>
   <h4 id="Pulumi_Linode_ObjectStorageBucket_Label" data-uid="Pulumi.Linode.ObjectStorageBucket.Label">Label</h4>
@@ -226,7 +247,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/ObjectStorageBucket.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/ObjectStorageBucket.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Linode_ObjectStorageBucket_Get_" data-uid="Pulumi.Linode.ObjectStorageBucket.Get*"></a>
   <h4 id="Pulumi_Linode_ObjectStorageBucket_Get_System_String_Pulumi_Input_System_String__Pulumi_Linode_ObjectStorageBucketState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.ObjectStorageBucket.Get(System.String,Pulumi.Input{System.String},Pulumi.Linode.ObjectStorageBucketState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ObjectStorageBucketState, CustomResourceOptions)</h4>
@@ -296,7 +317,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/ObjectStorageBucket.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/ObjectStorageBucket.cs/#L41" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

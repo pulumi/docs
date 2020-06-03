@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.Compute
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,12 +78,62 @@
   </h3>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.Flavor.html">Flavor</a></h4>
       <section><p>Manages a V2 flavor resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test_flavor = new OpenStack.Compute.Flavor(&amp;quot;test-flavor&amp;quot;, new OpenStack.Compute.FlavorArgs
+    {
+        Disk = &amp;quot;20&amp;quot;,
+        ExtraSpecs = 
+        {
+            { &amp;quot;hw:cpu_policy&amp;quot;, &amp;quot;CPU-POLICY&amp;quot; },
+            { &amp;quot;hw:cpu_thread_policy&amp;quot;, &amp;quot;CPU-THREAD-POLICY&amp;quot; },
+        },
+        Ram = &amp;quot;8096&amp;quot;,
+        Vcpus = &amp;quot;2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.FlavorAccess.html">FlavorAccess</a></h4>
       <section><p>Manages a project access for flavor V2 resource within OpenStack.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
 <hr>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var project1 = new OpenStack.Identity.Project(&amp;quot;project1&amp;quot;, new OpenStack.Identity.ProjectArgs
+    {
+    });
+    var flavor1 = new OpenStack.Compute.Flavor(&amp;quot;flavor1&amp;quot;, new OpenStack.Compute.FlavorArgs
+    {
+        Disk = &amp;quot;20&amp;quot;,
+        IsPublic = false,
+        Ram = &amp;quot;8096&amp;quot;,
+        Vcpus = &amp;quot;2&amp;quot;,
+    });
+    var access1 = new OpenStack.Compute.FlavorAccess(&amp;quot;access1&amp;quot;, new OpenStack.Compute.FlavorAccessArgs
+    {
+        FlavorId = flavor1.Id,
+        TenantId = project1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.FlavorAccessArgs.html">FlavorAccessArgs</a></h4>
       <section></section>
@@ -100,12 +150,103 @@ that can be used for compute instances.</p>
 been deprecated. Unless you are using an older OpenStack environment, it is
 recommended to use the <code>openstack.networking.FloatingIp</code>
 resource instead, which uses the OpenStack Networking API.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var floatip1 = new OpenStack.Compute.FloatingIp(&amp;quot;floatip1&amp;quot;, new OpenStack.Compute.FloatingIpArgs
+    {
+        Pool = &amp;quot;public&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.FloatingIpArgs.html">FloatingIpArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.FloatingIpAssociate.html">FloatingIpAssociate</a></h4>
       <section><p>Associate a floating IP to an instance. This can be used instead of the
 <code>floating_ip</code> options in <code>openstack.compute.Instance</code>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="automatically-detect-the-correct-network">Automatically detect the correct network</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        FlavorId = 3,
+        ImageId = &amp;quot;ad091b52-742f-469e-8f3c-fd81cadf0743&amp;quot;,
+        KeyPair = &amp;quot;my_key_pair_name&amp;quot;,
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+    });
+    var fip1FloatingIp = new OpenStack.Networking.FloatingIp(&amp;quot;fip1FloatingIp&amp;quot;, new OpenStack.Networking.FloatingIpArgs
+    {
+        Pool = &amp;quot;my_pool&amp;quot;,
+    });
+    var fip1FloatingIpAssociate = new OpenStack.Compute.FloatingIpAssociate(&amp;quot;fip1FloatingIpAssociate&amp;quot;, new OpenStack.Compute.FloatingIpAssociateArgs
+    {
+        FloatingIp = fip1FloatingIp.Address,
+        InstanceId = instance1.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="explicitly-set-the-network-to-attach-to">Explicitly set the network to attach to</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        FlavorId = 3,
+        ImageId = &amp;quot;ad091b52-742f-469e-8f3c-fd81cadf0743&amp;quot;,
+        KeyPair = &amp;quot;my_key_pair_name&amp;quot;,
+        Networks = 
+        {
+            new OpenStack.Compute.Inputs.InstanceNetworkArgs
+            {
+                Name = &amp;quot;my_network&amp;quot;,
+            },
+            new OpenStack.Compute.Inputs.InstanceNetworkArgs
+            {
+                Name = &amp;quot;default&amp;quot;,
+            },
+        },
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+    });
+    var fip1FloatingIp = new OpenStack.Networking.FloatingIp(&amp;quot;fip1FloatingIp&amp;quot;, new OpenStack.Networking.FloatingIpArgs
+    {
+        Pool = &amp;quot;my_pool&amp;quot;,
+    });
+    var fip1FloatingIpAssociate = new OpenStack.Compute.FloatingIpAssociate(&amp;quot;fip1FloatingIpAssociate&amp;quot;, new OpenStack.Compute.FloatingIpAssociateArgs
+    {
+        FixedIp = instance1.Networks.Apply(networks =&gt; networks[1].FixedIpV4),
+        FloatingIp = fip1FloatingIp.Address,
+        InstanceId = instance1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.FloatingIpAssociateArgs.html">FloatingIpAssociateArgs</a></h4>
       <section></section>
@@ -132,17 +273,7 @@ resource instead, which uses the OpenStack Networking API.</p>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.GetKeypairResult.html">GetKeypairResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.Instance.html">Instance</a></h4>
-      <section><p>Manages a V2 VM instance resource within OpenStack.</p>
-<h2 id="importing-instances">Importing instances</h2>
-<p>Importing instances can be tricky, since the nova api does not offer all
-information provided at creation time for later retrieval.
-Network interface attachment order, and number and sizes of ephemeral
-disks are examples of this.</p>
-<h3 id="importing-an-instance-with-multiple-emphemeral-disks">Importing an instance with multiple emphemeral disks</h3>
-<p>The importer cannot read the emphemeral disk configuration
-of an instance, so just specify image_id as in the configuration
-of the basic instance example.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.InstanceState.html">InstanceState</a></h4>
@@ -150,6 +281,97 @@ of the basic instance example.</p>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.InterfaceAttach.html">InterfaceAttach</a></h4>
       <section><p>Attaches a Network Interface (a Port) to an Instance using the OpenStack
 Compute (Nova) v2 API.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-attachment">Basic Attachment</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+    });
+    var ai1 = new OpenStack.Compute.InterfaceAttach(&amp;quot;ai1&amp;quot;, new OpenStack.Compute.InterfaceAttachArgs
+    {
+        InstanceId = instance1.Id,
+        NetworkId = openstack_networking_port_v2.Network_1.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="attachment-specifying-a-fixed-ip">Attachment Specifying a Fixed IP</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+    });
+    var ai1 = new OpenStack.Compute.InterfaceAttach(&amp;quot;ai1&amp;quot;, new OpenStack.Compute.InterfaceAttachArgs
+    {
+        FixedIp = &amp;quot;10.0.10.10&amp;quot;,
+        InstanceId = instance1.Id,
+        NetworkId = openstack_networking_port_v2.Network_1.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="attachment-using-an-existing-port">Attachment Using an Existing Port</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var port1 = new OpenStack.Networking.Port(&amp;quot;port1&amp;quot;, new OpenStack.Networking.PortArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+        NetworkId = network1.Id,
+    });
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+    });
+    var ai1 = new OpenStack.Compute.InterfaceAttach(&amp;quot;ai1&amp;quot;, new OpenStack.Compute.InterfaceAttachArgs
+    {
+        InstanceId = instance1.Id,
+        PortId = port1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.InterfaceAttachArgs.html">InterfaceAttachArgs</a></h4>
       <section></section>
@@ -170,6 +392,31 @@ Compute (Nova) v2 API.</p>
 <p><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API
 in case of delete call.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var project1 = new OpenStack.Identity.Project(&amp;quot;project1&amp;quot;, new OpenStack.Identity.ProjectArgs
+    {
+    });
+    var quotaset1 = new OpenStack.Compute.QuotaSetV2(&amp;quot;quotaset1&amp;quot;, new OpenStack.Compute.QuotaSetV2Args
+    {
+        ProjectId = project1.Id,
+        KeyPairs = 10,
+        Ram = 40960,
+        Cores = 32,
+        Instances = 20,
+        ServerGroups = 4,
+        ServerGroupMembers = 8,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.QuotaSetV2Args.html">QuotaSetV2Args</a></h4>
       <section></section>
@@ -182,6 +429,76 @@ has been deprecated. Unless you are using an older OpenStack environment, it is
 recommended to use the <code>openstack.networking.SecGroup</code>
 and <code>openstack.networking.SecGroupRule</code>
 resources instead, which uses the OpenStack Networking API.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var secgroup1 = new OpenStack.Compute.SecGroup(&amp;quot;secgroup1&amp;quot;, new OpenStack.Compute.SecGroupArgs
+    {
+        Description = &amp;quot;my security group&amp;quot;,
+        Rules = 
+        {
+            new OpenStack.Compute.Inputs.SecGroupRuleArgs
+            {
+                Cidr = &amp;quot;0.0.0.0/0&amp;quot;,
+                FromPort = 22,
+                IpProtocol = &amp;quot;tcp&amp;quot;,
+                ToPort = 22,
+            },
+            new OpenStack.Compute.Inputs.SecGroupRuleArgs
+            {
+                Cidr = &amp;quot;0.0.0.0/0&amp;quot;,
+                FromPort = 80,
+                IpProtocol = &amp;quot;tcp&amp;quot;,
+                ToPort = 80,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="notes">Notes</h2>
+<h3 id="icmp-rules">ICMP Rules</h3>
+<p>When using ICMP as the <code>ip_protocol</code>, the <code>from_port</code> sets the ICMP <em>type</em> and the <code>to_port</code> sets the ICMP <em>code</em>. To allow all ICMP types, set each value to <code>-1</code>, like so:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>A list of ICMP types and codes can be found <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages">here</a>.</p>
+<h3 id="referencing-security-groups">Referencing Security Groups</h3>
+<p>When referencing a security group in a configuration (for example, a configuration creates a new security group and then needs to apply it to an instance being created in the same configuration), it is currently recommended to reference the security group by name and not by ID, like this:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test_server = new OpenStack.Compute.Instance(&amp;quot;test-server&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        FlavorId = &amp;quot;3&amp;quot;,
+        ImageId = &amp;quot;ad091b52-742f-469e-8f3c-fd81cadf0743&amp;quot;,
+        KeyPair = &amp;quot;my_key_pair_name&amp;quot;,
+        SecurityGroups = 
+        {
+            openstack_compute_secgroup_v2.Secgroup_1.Name,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.SecGroupArgs.html">SecGroupArgs</a></h4>
       <section></section>
@@ -189,6 +506,25 @@ resources instead, which uses the OpenStack Networking API.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.ServerGroup.html">ServerGroup</a></h4>
       <section><p>Manages a V2 Server Group resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test_sg = new OpenStack.Compute.ServerGroup(&amp;quot;test-sg&amp;quot;, new OpenStack.Compute.ServerGroupArgs
+    {
+        Policies = 
+        {
+            &amp;quot;anti-affinity&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="policies">Policies</h2>
 <ul>
 <li><p><code>affinity</code> - All instances/servers launched in this group will be hosted on
@@ -216,6 +552,78 @@ OpenStack environment should support Compute service API 2.15 or above.</p>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.VolumeAttach.html">VolumeAttach</a></h4>
       <section><p>Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-attachment-of-a-single-volume-to-a-single-instance">Basic attachment of a single volume to a single instance</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var volume1 = new OpenStack.BlockStorage.VolumeV2(&amp;quot;volume1&amp;quot;, new OpenStack.BlockStorage.VolumeV2Args
+    {
+        Size = 1,
+    });
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+    });
+    var va1 = new OpenStack.Compute.VolumeAttach(&amp;quot;va1&amp;quot;, new OpenStack.Compute.VolumeAttachArgs
+    {
+        InstanceId = instance1.Id,
+        VolumeId = volume1.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="using-multiattach-enabled-volumes">Using Multiattach-enabled volumes</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var volume1 = new OpenStack.BlockStorage.Volume(&amp;quot;volume1&amp;quot;, new OpenStack.BlockStorage.VolumeArgs
+    {
+        Multiattach = true,
+        Size = 1,
+    });
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+    });
+    var instance2 = new OpenStack.Compute.Instance(&amp;quot;instance2&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+    });
+    var va1 = new OpenStack.Compute.VolumeAttach(&amp;quot;va1&amp;quot;, new OpenStack.Compute.VolumeAttachArgs
+    {
+        InstanceId = instance1.Id,
+        Multiattach = true,
+        VolumeId = openstack_blockstorage_volume_v2.Volume_1.Id,
+    });
+    var va2 = new OpenStack.Compute.VolumeAttach(&amp;quot;va2&amp;quot;, new OpenStack.Compute.VolumeAttachArgs
+    {
+        InstanceId = instance2.Id,
+        Multiattach = true,
+        VolumeId = openstack_blockstorage_volume_v2.Volume_1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Compute.VolumeAttachArgs.html">VolumeAttachArgs</a></h4>
       <section></section>

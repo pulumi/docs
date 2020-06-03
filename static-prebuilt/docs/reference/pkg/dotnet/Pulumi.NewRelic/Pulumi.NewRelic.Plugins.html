@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.NewRelic.Plugins
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -92,6 +92,41 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.Plugins.AlertConditionState.html">AlertConditionState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.NewRelic.Plugins.ApplicationSettings.html">ApplicationSettings</a></h4>
+      <section><blockquote>
+<p><strong>NOTE:</strong> Applications are not created by this resource, but are created by
+a reporting agent.</p>
+</blockquote>
+<p>Use this resource to manage configuration for an application that already
+exists in New Relic.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new NewRelic.Plugins.ApplicationSettings(&amp;quot;app&amp;quot;, new NewRelic.Plugins.ApplicationSettingsArgs
+    {
+        AppApdexThreshold = &amp;quot;0.7&amp;quot;,
+        EnableRealUserMonitoring = false,
+        EndUserApdexThreshold = &amp;quot;0.8&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="notes">Notes</h2>
+<blockquote>
+<p><strong>NOTE:</strong> Applications that have reported data in the last twelve hours
+cannot be deleted.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.NewRelic.Plugins.ApplicationSettingsArgs.html">ApplicationSettingsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.NewRelic.Plugins.ApplicationSettingsState.html">ApplicationSettingsState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.Plugins.GetPlugin.html">GetPlugin</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.Plugins.GetPluginArgs.html">GetPluginArgs</a></h4>
@@ -103,6 +138,47 @@
       <h4><a class="xref" href="Pulumi.NewRelic.Plugins.GetPluginComponentResult.html">GetPluginComponentResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.Plugins.GetPluginResult.html">GetPluginResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.NewRelic.Plugins.Workload.html">Workload</a></h4>
+      <section><p>Use this resource to create, update, and delete a New Relic One workload.</p>
+<p>A New Relic Personal API key is required to provision this resource.  Set the <code>provider_api_key</code>
+attribute in the <code>provider</code> block or the <code>NEWRELIC_PERSONAL_API_KEY</code> environment
+variable with your Personal API key,</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new NewRelic.Plugins.Workload(&amp;quot;foo&amp;quot;, new NewRelic.Plugins.WorkloadArgs
+    {
+        AccountId = 12345678,
+        EntityGuids = 
+        {
+            &amp;quot;MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1&amp;quot;,
+        },
+        EntitySearchQueries = 
+        {
+            new NewRelic.Plugins.Inputs.WorkloadEntitySearchQueryArgs
+            {
+                Query = &amp;quot;name like &amp;apos;Example application&amp;apos;&amp;quot;,
+            },
+        },
+        ScopeAccountIds = 
+        {
+            12345678,
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.NewRelic.Plugins.WorkloadArgs.html">WorkloadArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.NewRelic.Plugins.WorkloadState.html">WorkloadState</a></h4>
       <section></section>
 </article>
           </div>

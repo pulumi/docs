@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AutoscalerArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AutoscalerArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">AutoscalerArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Autoscaler.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Autoscaler.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AutoscalerArgs__ctor_" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_AutoscalerArgs__ctor" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.#ctor">AutoscalerArgs()</h4>
@@ -100,13 +129,15 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Autoscaler.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Autoscaler.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AutoscalerArgs_AutoscalingPolicy_" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.AutoscalingPolicy*"></a>
   <h4 id="Pulumi_Gcp_Compute_AutoscalerArgs_AutoscalingPolicy" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.AutoscalingPolicy">AutoscalingPolicy</h4>
-  <div class="markdown level1 summary"><p>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
-autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
-default will be to autoscale based on cpuUtilization to 0.6 or 60%.</p>
+  <div class="markdown level1 summary"><p>The configuration parameters for the autoscaling algorithm. You can
+define one or more of the policies for an autoscaler: cpuUtilization,
+customMetricUtilizations, and loadBalancingUtilization.
+If none of these are specified, the default will be to autoscale based
+on cpuUtilization to 0.6 or 60%.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -123,13 +154,13 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyArgs.html">AutoscalerAutoscalingPolicyArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyArgs.html">AutoscalerAutoscalingPolicyArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Autoscaler.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Autoscaler.cs/#L148">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AutoscalerArgs_Description_" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_AutoscalerArgs_Description" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.Description">Description</h4>
@@ -138,7 +169,7 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,24 +181,24 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Autoscaler.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Autoscaler.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AutoscalerArgs_Name_" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_AutoscalerArgs_Name" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. The name must be 1-63 characters long and match the regular expression
-'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+  <div class="markdown level1 summary"><p>The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +210,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Autoscaler.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Autoscaler.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AutoscalerArgs_Project_" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_AutoscalerArgs_Project" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.Project">Project</h4>
@@ -195,7 +226,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,17 +238,19 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Autoscaler.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Autoscaler.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AutoscalerArgs_Target_" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.Target*"></a>
   <h4 id="Pulumi_Gcp_Compute_AutoscalerArgs_Target" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.Target">Target</h4>
-  <div class="markdown level1 summary"><p>URL of the managed instance group that this autoscaler will scale.</p>
+  <div class="markdown level1 summary"><p>Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -234,13 +267,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Autoscaler.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Autoscaler.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AutoscalerArgs_Zone_" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.Zone*"></a>
   <h4 id="Pulumi_Gcp_Compute_AutoscalerArgs_Zone" data-uid="Pulumi.Gcp.Compute.AutoscalerArgs.Zone">Zone</h4>
@@ -249,7 +282,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Zone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Zone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,7 +294,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -273,7 +306,7 @@ If it is not provided, the provider project is used.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Autoscaler.cs/#L125" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Autoscaler.cs/#L133" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

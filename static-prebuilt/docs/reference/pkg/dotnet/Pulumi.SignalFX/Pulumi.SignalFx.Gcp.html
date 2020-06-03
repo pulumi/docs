@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.SignalFx.Gcp
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,41 @@
 <blockquote>
 <p><strong>NOTE</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var gcpMyteam = new SignalFx.Gcp.Integration(&amp;quot;gcpMyteam&amp;quot;, new SignalFx.Gcp.IntegrationArgs
+    {
+        Enabled = true,
+        PollRate = 300000,
+        ProjectServiceKeys = 
+        {
+            new SignalFx.Gcp.Inputs.IntegrationProjectServiceKeyArgs
+            {
+                ProjectId = &amp;quot;gcp_project_id_1&amp;quot;,
+                ProjectKey = File.ReadAllText(&amp;quot;/path/to/gcp_credentials_1.json&amp;quot;),
+            },
+            new SignalFx.Gcp.Inputs.IntegrationProjectServiceKeyArgs
+            {
+                ProjectId = &amp;quot;gcp_project_id_2&amp;quot;,
+                ProjectKey = File.ReadAllText(&amp;quot;/path/to/gcp_credentials_2.json&amp;quot;),
+            },
+        },
+        Services = 
+        {
+            &amp;quot;compute&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SignalFx.Gcp.IntegrationArgs.html">IntegrationArgs</a></h4>
       <section></section>

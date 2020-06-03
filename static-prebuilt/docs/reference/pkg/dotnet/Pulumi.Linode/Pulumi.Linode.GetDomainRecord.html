@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetDomainRecord
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -111,12 +111,37 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/GetDomainRecord.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/GetDomainRecord.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Linode_GetDomainRecord_InvokeAsync_" data-uid="Pulumi.Linode.GetDomainRecord.InvokeAsync*"></a>
   <h4 id="Pulumi_Linode_GetDomainRecord_InvokeAsync_Pulumi_Linode_GetDomainRecordArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Linode.GetDomainRecord.InvokeAsync(Pulumi.Linode.GetDomainRecordArgs,Pulumi.InvokeOptions)">InvokeAsync(GetDomainRecordArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Provides information about a Linode Domain Record.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<p>The following example shows how one might use this data source to access information about a Linode Domain Record.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myRecord = Output.Create(Linode.GetDomainRecord.InvokeAsync(new Linode.GetDomainRecordArgs
+    {
+        DomainId = &amp;quot;3150401&amp;quot;,
+        Id = &amp;quot;14950401&amp;quot;,
+    }));
+    var myWwwRecord = Output.Create(Linode.GetDomainRecord.InvokeAsync(new Linode.GetDomainRecordArgs
+    {
+        DomainId = &amp;quot;3150401&amp;quot;,
+        Name = &amp;quot;www&amp;quot;,
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 <h2 id="attributes">Attributes</h2>
 <p>The Linode Volume resource exports the following attributes:</p>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Gpdb
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,6 +85,49 @@
 <p><strong>NOTE:</strong> Each instance will allocate a intranet connection string automatically and its prefix is instance ID.
 To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;Gpdb&amp;quot;;
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;gpdbConnectionBasic&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new AliCloud.Gpdb.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.Gpdb.InstanceArgs
+    {
+        Description = name,
+        Engine = &amp;quot;gpdb&amp;quot;,
+        EngineVersion = &amp;quot;4.3&amp;quot;,
+        InstanceClass = &amp;quot;gpdb.group.segsdx2&amp;quot;,
+        InstanceGroupCount = &amp;quot;2&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultConnection = new AliCloud.Gpdb.Connection(&amp;quot;defaultConnection&amp;quot;, new AliCloud.Gpdb.ConnectionArgs
+    {
+        ConnectionPrefix = &amp;quot;testAbc&amp;quot;,
+        InstanceId = defaultInstance.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Gpdb.ConnectionArgs.html">ConnectionArgs</a></h4>
       <section></section>

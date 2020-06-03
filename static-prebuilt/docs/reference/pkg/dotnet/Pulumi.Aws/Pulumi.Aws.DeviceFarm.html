@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.DeviceFarm
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,6 +82,21 @@ Please keep in mind that this feature is only supported on the &quot;us-west-2&q
 This resource will error if you try to create a project in another region.</p>
 <p>For more information about Device Farm Projects, see the AWS Documentation on
 [Device Farm Projects][aws-get-project].</p>
+<h2 id="basic-example-usage">Basic Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var awesomeDevices = new Aws.DeviceFarm.Project(&amp;quot;awesomeDevices&amp;quot;, new Aws.DeviceFarm.ProjectArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DeviceFarm.ProjectArgs.html">ProjectArgs</a></h4>
       <section></section>

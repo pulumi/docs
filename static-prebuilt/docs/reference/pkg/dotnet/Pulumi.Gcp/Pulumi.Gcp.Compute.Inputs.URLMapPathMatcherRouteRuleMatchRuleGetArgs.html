@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class URLMapPathMatcherRouteRuleMatchRuleGetArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">URLMapPathMatcherRouteRuleMatchRuleGetArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">URLMapPathMatcherRouteRuleMatchRuleGetArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Inputs.html">Pulumi.Gcp.Compute.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs__ctor_" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs__ctor" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.#ctor">URLMapPathMatcherRouteRuleMatchRuleGetArgs()</h4>
@@ -100,15 +129,20 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_FullPathMatch_" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.FullPathMatch*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_FullPathMatch" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.FullPathMatch">FullPathMatch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>For satifying the matchRule condition, the path of the request must exactly
+match the value specified in fullPathMatch after removing any query parameters
+and anchor that may be part of the original URL. FullPathMatch must be between 1
+and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
+be specified.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FullPathMatch { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FullPathMatch { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,17 +154,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_HeaderMatches_" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.HeaderMatches*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_HeaderMatches" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.HeaderMatches">HeaderMatches</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies a list of header match criteria, all of which must match corresponding
+headers in the request.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -146,21 +182,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs.html">URLMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs.html">URLMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_IgnoreCase_" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.IgnoreCase*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_IgnoreCase" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.IgnoreCase">IgnoreCase</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies that prefixMatch and fullPathMatch matches are case sensitive.
+Defaults to false.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IgnoreCase { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IgnoreCase { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,17 +210,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_MetadataFilters_" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.MetadataFilters*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_MetadataFilters" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.MetadataFilters">MetadataFilters</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Opaque filter criteria used by Loadbalancer to restrict routing configuration to
+a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
+clients present node metadata. If a match takes place, the relevant routing
+configuration is made available to those proxies. For each metadataFilter in
+this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the
+filterLabels must match the corresponding label provided in the metadata. If its
+filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
+with corresponding labels in the provided metadata. metadataFilters specified
+here can be overrides those specified in ForwardingRule that refers to this
+UrlMap. metadataFilters only applies to Loadbalancers that have their
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -198,21 +247,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs.html">URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs.html">URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_PrefixMatch_" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.PrefixMatch*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_PrefixMatch" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.PrefixMatch">PrefixMatch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The value of the header must start with the contents of prefixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PrefixMatch { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PrefixMatch { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,17 +276,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_QueryParameterMatches_" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.QueryParameterMatches*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_QueryParameterMatches" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.QueryParameterMatches">QueryParameterMatches</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies a list of query parameter match criteria, all of which must match
+corresponding query parameters in the request.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -250,21 +304,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs.html">URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs.html">URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_RegexMatch_" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.RegexMatch*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_URLMapPathMatcherRouteRuleMatchRuleGetArgs_RegexMatch" data-uid="Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs.RegexMatch">RegexMatch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RegexMatch { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RegexMatch { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,7 +334,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -288,7 +346,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/URLMapPathMatcherRouteRuleMatchRuleGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FlexibleAppVersionAutomaticScalingGetArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">FlexibleAppVersionAutomaticScalingGetArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">FlexibleAppVersionAutomaticScalingGetArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.html">Pulumi.Gcp.AppEngine.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs__ctor_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs__ctor" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.#ctor">FlexibleAppVersionAutomaticScalingGetArgs()</h4>
@@ -100,15 +129,18 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_CoolDownPeriod_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.CoolDownPeriod*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_CoolDownPeriod" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.CoolDownPeriod">CoolDownPeriod</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The time period that the Autoscaler should wait before it starts collecting information from a new instance.
+This prevents the autoscaler from collecting information when the instance is initializing,
+during which the collected usage would not be reliable. Default: 120s</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CoolDownPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CoolDownPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,17 +152,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_CpuUtilization_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.CpuUtilization*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_CpuUtilization" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.CpuUtilization">CpuUtilization</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Target scaling by CPU usage.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -146,21 +179,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs.html">FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs.html">FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_DiskUtilization_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.DiskUtilization*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_DiskUtilization" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.DiskUtilization">DiskUtilization</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Target scaling by disk usage.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs&gt;? DiskUtilization { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs&gt; DiskUtilization { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,21 +206,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs.html">FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs.html">FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MaxConcurrentRequests_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MaxConcurrentRequests*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MaxConcurrentRequests" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MaxConcurrentRequests">MaxConcurrentRequests</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+Defaults to a runtime-specific value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxConcurrentRequests { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxConcurrentRequests { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,21 +234,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MaxIdleInstances_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MaxIdleInstances*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MaxIdleInstances" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MaxIdleInstances">MaxIdleInstances</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum number of idle instances that should be maintained for this version.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxIdleInstances { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxIdleInstances { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,21 +261,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MaxPendingLatency_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MaxPendingLatency*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MaxPendingLatency" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MaxPendingLatency">MaxPendingLatency</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MaxPendingLatency { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MaxPendingLatency { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,21 +288,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MaxTotalInstances_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MaxTotalInstances*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MaxTotalInstances" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MaxTotalInstances">MaxTotalInstances</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum number of instances that should be started to handle requests for this version. Default: 20</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxTotalInstances { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxTotalInstances { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,21 +315,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MinIdleInstances_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MinIdleInstances*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MinIdleInstances" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MinIdleInstances">MinIdleInstances</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MinIdleInstances { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MinIdleInstances { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,21 +342,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MinPendingLatency_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MinPendingLatency*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MinPendingLatency" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MinPendingLatency">MinPendingLatency</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MinPendingLatency { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MinPendingLatency { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,21 +369,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MinTotalInstances_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MinTotalInstances*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_MinTotalInstances" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.MinTotalInstances">MinTotalInstances</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Minimum number of running instances that should be maintained for this version. Default: 2</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MinTotalInstances { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MinTotalInstances { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -354,21 +396,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_NetworkUtilization_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.NetworkUtilization*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_NetworkUtilization" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.NetworkUtilization">NetworkUtilization</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Target scaling by network usage.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs&gt;? NetworkUtilization { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs&gt; NetworkUtilization { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -380,21 +423,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs.html">FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs.html">FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_RequestUtilization_" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.RequestUtilization*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_FlexibleAppVersionAutomaticScalingGetArgs_RequestUtilization" data-uid="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingGetArgs.RequestUtilization">RequestUtilization</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Target scaling by request utilization.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs&gt;? RequestUtilization { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs&gt; RequestUtilization { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -406,7 +450,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs.html">FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs.html">FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -418,7 +462,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/FlexibleAppVersionAutomaticScalingGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

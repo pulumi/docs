@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Proximity
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,31 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Proximity.PlacementGroup.html">PlacementGroup</a></h4>
       <section><p>Manages a proximity placement group for virtual machines, virtual machine scale sets and availability sets.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var examplePlacementGroup = new Azure.Proximity.PlacementGroup(&amp;quot;examplePlacementGroup&amp;quot;, new Azure.Proximity.PlacementGroupArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Proximity.PlacementGroupArgs.html">PlacementGroupArgs</a></h4>
       <section></section>

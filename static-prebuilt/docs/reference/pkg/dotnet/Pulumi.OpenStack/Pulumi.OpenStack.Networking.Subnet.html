@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Subnet
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,71 @@
   <h1 id="Pulumi_OpenStack_Networking_Subnet" data-uid="Pulumi.OpenStack.Networking.Subnet" class="text-break">Class Subnet
   </h1>
   <div class="markdown level0 summary"><p>Manages a V2 Neutron subnet resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.199.0/24&amp;quot;,
+        NetworkId = network1.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Subnet</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Subnet</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Networking.html">Pulumi.OpenStack.Networking</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -88,16 +147,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L187">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet__ctor_" data-uid="Pulumi.OpenStack.Networking.Subnet.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_Networking_Subnet__ctor_System_String_Pulumi_OpenStack_Networking_SubnetArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.Subnet.#ctor(System.String,Pulumi.OpenStack.Networking.SubnetArgs,System.Nullable{CustomResourceOptions})">Subnet(String, SubnetArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Networking_Subnet__ctor_System_String_Pulumi_OpenStack_Networking_SubnetArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Networking.Subnet.#ctor(System.String,Pulumi.OpenStack.Networking.SubnetArgs,Pulumi.CustomResourceOptions)">Subnet(String, SubnetArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Subnet resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Subnet(string name, SubnetArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Subnet(string name, SubnetArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +181,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +191,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_AllocationPools_" data-uid="Pulumi.OpenStack.Networking.Subnet.AllocationPools*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_AllocationPools" data-uid="Pulumi.OpenStack.Networking.Subnet.AllocationPools">AllocationPools</h4>
@@ -158,13 +217,13 @@ The <code>allocation_pool</code> block is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Networking.Outputs.SubnetAllocationPool.html">SubnetAllocationPool</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Networking.Outputs.SubnetAllocationPool.html">SubnetAllocationPool</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_AllocationPoolsCollection_" data-uid="Pulumi.OpenStack.Networking.Subnet.AllocationPoolsCollection*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_AllocationPoolsCollection" data-uid="Pulumi.OpenStack.Networking.Subnet.AllocationPoolsCollection">AllocationPoolsCollection</h4>
@@ -187,13 +246,13 @@ The <code>allocation_pools</code> block is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Networking.Outputs.SubnetAllocationPoolsCollection.html">SubnetAllocationPoolsCollection</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Networking.Outputs.SubnetAllocationPoolsCollection.html">SubnetAllocationPoolsCollection</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_AllTags_" data-uid="Pulumi.OpenStack.Networking.Subnet.AllTags*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_AllTags" data-uid="Pulumi.OpenStack.Networking.Subnet.AllTags">AllTags</h4>
@@ -215,13 +274,13 @@ explicitly and implicitly added.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_Cidr_" data-uid="Pulumi.OpenStack.Networking.Subnet.Cidr*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_Cidr" data-uid="Pulumi.OpenStack.Networking.Subnet.Cidr">Cidr</h4>
@@ -244,13 +303,13 @@ subnet pool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_Description_" data-uid="Pulumi.OpenStack.Networking.Subnet.Description*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_Description" data-uid="Pulumi.OpenStack.Networking.Subnet.Description">Description</h4>
@@ -260,7 +319,7 @@ updates the name of the existing subnet.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,13 +331,13 @@ updates the name of the existing subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_DnsNameservers_" data-uid="Pulumi.OpenStack.Networking.Subnet.DnsNameservers*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_DnsNameservers" data-uid="Pulumi.OpenStack.Networking.Subnet.DnsNameservers">DnsNameservers</h4>
@@ -301,13 +360,13 @@ subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_EnableDhcp_" data-uid="Pulumi.OpenStack.Networking.Subnet.EnableDhcp*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_EnableDhcp" data-uid="Pulumi.OpenStack.Networking.Subnet.EnableDhcp">EnableDhcp</h4>
@@ -330,13 +389,13 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_GatewayIp_" data-uid="Pulumi.OpenStack.Networking.Subnet.GatewayIp*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_GatewayIp" data-uid="Pulumi.OpenStack.Networking.Subnet.GatewayIp">GatewayIp</h4>
@@ -360,13 +419,13 @@ existing subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_HostRoutes_" data-uid="Pulumi.OpenStack.Networking.Subnet.HostRoutes*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_HostRoutes" data-uid="Pulumi.OpenStack.Networking.Subnet.HostRoutes">HostRoutes</h4>
@@ -391,13 +450,13 @@ for the existing subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Networking.Outputs.SubnetHostRoute.html">SubnetHostRoute</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Networking.Outputs.SubnetHostRoute.html">SubnetHostRoute</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_Ipv6AddressMode_" data-uid="Pulumi.OpenStack.Networking.Subnet.Ipv6AddressMode*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_Ipv6AddressMode" data-uid="Pulumi.OpenStack.Networking.Subnet.Ipv6AddressMode">Ipv6AddressMode</h4>
@@ -419,13 +478,13 @@ for the existing subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_Ipv6RaMode_" data-uid="Pulumi.OpenStack.Networking.Subnet.Ipv6RaMode*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_Ipv6RaMode" data-uid="Pulumi.OpenStack.Networking.Subnet.Ipv6RaMode">Ipv6RaMode</h4>
@@ -447,13 +506,13 @@ are <code>dhcpv6-stateful</code>, <code>dhcpv6-stateless</code>, or <code>slaac<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_IpVersion_" data-uid="Pulumi.OpenStack.Networking.Subnet.IpVersion*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_IpVersion" data-uid="Pulumi.OpenStack.Networking.Subnet.IpVersion">IpVersion</h4>
@@ -475,13 +534,13 @@ new subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_Name_" data-uid="Pulumi.OpenStack.Networking.Subnet.Name*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_Name" data-uid="Pulumi.OpenStack.Networking.Subnet.Name">Name</h4>
@@ -503,13 +562,13 @@ the existing subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_NetworkId_" data-uid="Pulumi.OpenStack.Networking.Subnet.NetworkId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_NetworkId" data-uid="Pulumi.OpenStack.Networking.Subnet.NetworkId">NetworkId</h4>
@@ -531,13 +590,13 @@ creates a new subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_NoGateway_" data-uid="Pulumi.OpenStack.Networking.Subnet.NoGateway*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_NoGateway" data-uid="Pulumi.OpenStack.Networking.Subnet.NoGateway">NoGateway</h4>
@@ -559,13 +618,13 @@ this removes or adds a default gateway IP of the existing subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_PrefixLength_" data-uid="Pulumi.OpenStack.Networking.Subnet.PrefixLength*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_PrefixLength" data-uid="Pulumi.OpenStack.Networking.Subnet.PrefixLength">PrefixLength</h4>
@@ -589,13 +648,13 @@ creates a new subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L151">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_Region_" data-uid="Pulumi.OpenStack.Networking.Subnet.Region*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_Region" data-uid="Pulumi.OpenStack.Networking.Subnet.Region">Region</h4>
@@ -619,13 +678,13 @@ subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_SubnetpoolId_" data-uid="Pulumi.OpenStack.Networking.Subnet.SubnetpoolId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_SubnetpoolId" data-uid="Pulumi.OpenStack.Networking.Subnet.SubnetpoolId">SubnetpoolId</h4>
@@ -634,7 +693,7 @@ subnet.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubnetpoolId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SubnetpoolId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -646,13 +705,13 @@ subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_Tags_" data-uid="Pulumi.OpenStack.Networking.Subnet.Tags*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_Tags" data-uid="Pulumi.OpenStack.Networking.Subnet.Tags">Tags</h4>
@@ -673,13 +732,13 @@ subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_TenantId_" data-uid="Pulumi.OpenStack.Networking.Subnet.TenantId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_TenantId" data-uid="Pulumi.OpenStack.Networking.Subnet.TenantId">TenantId</h4>
@@ -701,13 +760,13 @@ create a subnet for another tenant. Changing this creates a new subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_ValueSpecs_" data-uid="Pulumi.OpenStack.Networking.Subnet.ValueSpecs*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Subnet_ValueSpecs" data-uid="Pulumi.OpenStack.Networking.Subnet.ValueSpecs">ValueSpecs</h4>
@@ -716,7 +775,7 @@ create a subnet for another tenant. Changing this creates a new subnet.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; ValueSpecs { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; ValueSpecs { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -728,7 +787,7 @@ create a subnet for another tenant. Changing this creates a new subnet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -736,17 +795,17 @@ create a subnet for another tenant. Changing this creates a new subnet.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Subnet_Get_" data-uid="Pulumi.OpenStack.Networking.Subnet.Get*"></a>
-  <h4 id="Pulumi_OpenStack_Networking_Subnet_Get_System_String_Input_System_String__Pulumi_OpenStack_Networking_SubnetState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.Subnet.Get(System.String,Input{System.String},Pulumi.OpenStack.Networking.SubnetState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SubnetState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Networking_Subnet_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_Networking_SubnetState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Networking.Subnet.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.Networking.SubnetState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SubnetState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Subnet resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Subnet Get(string name, Input&lt;string&gt; id, SubnetState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Subnet Get(string name, Input&lt;string&gt; id, SubnetState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -765,7 +824,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -777,7 +836,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -806,7 +865,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Subnet.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Subnet.cs/#L41" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

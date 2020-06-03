@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class KeyVaultAccessPolicy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">KeyVaultAccessPolicy</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.KeyVault.Outputs.html">Pulumi.Azure.KeyVault.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_KeyVault_Outputs_KeyVaultAccessPolicy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class KeyVaultAccessPolicy : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class KeyVaultAccessPolicy</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_Outputs_KeyVaultAccessPolicy_ApplicationId" data-uid="Pulumi.Azure.KeyVault.Outputs.KeyVaultAccessPolicy.ApplicationId">ApplicationId</h4>
   <div class="markdown level1 summary"><p>The object ID of an Application in Azure Active Directory.</p>
@@ -95,7 +119,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ApplicationId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ApplicationId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -107,13 +131,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_Outputs_KeyVaultAccessPolicy_CertificatePermissions" data-uid="Pulumi.Azure.KeyVault.Outputs.KeyVaultAccessPolicy.CertificatePermissions">CertificatePermissions</h4>
   <div class="markdown level1 summary"><p>List of certificate permissions, must be one or more from the following: <code>backup</code>, <code>create</code>, <code>delete</code>, <code>deleteissuers</code>, <code>get</code>, <code>getissuers</code>, <code>import</code>, <code>list</code>, <code>listissuers</code>, <code>managecontacts</code>, <code>manageissuers</code>, <code>purge</code>, <code>recover</code>, <code>restore</code>, <code>setissuers</code> and <code>update</code>.</p>
@@ -133,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_Outputs_KeyVaultAccessPolicy_KeyPermissions" data-uid="Pulumi.Azure.KeyVault.Outputs.KeyVaultAccessPolicy.KeyPermissions">KeyPermissions</h4>
   <div class="markdown level1 summary"><p>List of key permissions, must be one or more from the following: <code>backup</code>, <code>create</code>, <code>decrypt</code>, <code>delete</code>, <code>encrypt</code>, <code>get</code>, <code>import</code>, <code>list</code>, <code>purge</code>, <code>recover</code>, <code>restore</code>, <code>sign</code>, <code>unwrapKey</code>, <code>update</code>, <code>verify</code> and <code>wrapKey</code>.</p>
@@ -159,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_Outputs_KeyVaultAccessPolicy_ObjectId" data-uid="Pulumi.Azure.KeyVault.Outputs.KeyVaultAccessPolicy.ObjectId">ObjectId</h4>
   <div class="markdown level1 summary"><p>The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.</p>
@@ -191,7 +215,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_Outputs_KeyVaultAccessPolicy_SecretPermissions" data-uid="Pulumi.Azure.KeyVault.Outputs.KeyVaultAccessPolicy.SecretPermissions">SecretPermissions</h4>
   <div class="markdown level1 summary"><p>List of secret permissions, must be one or more from the following: <code>backup</code>, <code>delete</code>, <code>get</code>, <code>list</code>, <code>purge</code>, <code>recover</code>, <code>restore</code> and <code>set</code>.</p>
@@ -211,13 +235,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_Outputs_KeyVaultAccessPolicy_StoragePermissions" data-uid="Pulumi.Azure.KeyVault.Outputs.KeyVaultAccessPolicy.StoragePermissions">StoragePermissions</h4>
   <div class="markdown level1 summary"><p>List of storage permissions, must be one or more from the following: <code>backup</code>, <code>delete</code>, <code>deletesas</code>, <code>get</code>, <code>getsas</code>, <code>list</code>, <code>listsas</code>, <code>purge</code>, <code>recover</code>, <code>regeneratekey</code>, <code>restore</code>, <code>set</code>, <code>setsas</code> and <code>update</code>.</p>
@@ -237,13 +261,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_Outputs_KeyVaultAccessPolicy_TenantId" data-uid="Pulumi.Azure.KeyVault.Outputs.KeyVaultAccessPolicy.TenantId">TenantId</h4>
   <div class="markdown level1 summary"><p>The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault. Must match the <code>tenant_id</code> used above.</p>
@@ -275,7 +299,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/KeyVault/Outputs/KeyVaultAccessPolicy.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

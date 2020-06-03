@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Environment
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,6 +76,27 @@ you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
 <p>Environments are often things such as <code>development</code>, <code>integration</code>, or
 <code>production</code>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tftest = new Aws.ElasticBeanstalk.Application(&amp;quot;tftest&amp;quot;, new Aws.ElasticBeanstalk.ApplicationArgs
+    {
+        Description = &amp;quot;tf-test-desc&amp;quot;,
+    });
+    var tfenvtest = new Aws.ElasticBeanstalk.Environment(&amp;quot;tfenvtest&amp;quot;, new Aws.ElasticBeanstalk.EnvironmentArgs
+    {
+        Application = tftest.Name,
+        SolutionStackName = &amp;quot;64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h2 id="option-settings">Option Settings</h2>
 <p>Some options can be stack-specific, check <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html">AWS Docs</a>
 for supported options and examples.</p>
@@ -86,12 +107,86 @@ for supported options and examples.</p>
 <li><code>value</code> - value for the configuration option</li>
 <li><code>resource</code> - (Optional) resource name for <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction">scheduled action</a></li>
 </ul>
+<h3 id="example-with-options">Example With Options</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tftest = new Aws.ElasticBeanstalk.Application(&amp;quot;tftest&amp;quot;, new Aws.ElasticBeanstalk.ApplicationArgs
+    {
+        Description = &amp;quot;tf-test-desc&amp;quot;,
+    });
+    var tfenvtest = new Aws.ElasticBeanstalk.Environment(&amp;quot;tfenvtest&amp;quot;, new Aws.ElasticBeanstalk.EnvironmentArgs
+    {
+        Application = tftest.Name,
+        Settings = 
+        {
+            new Aws.ElasticBeanstalk.Inputs.EnvironmentSettingArgs
+            {
+                Name = &amp;quot;VPCId&amp;quot;,
+                Namespace = &amp;quot;aws:ec2:vpc&amp;quot;,
+                Value = &amp;quot;vpc-xxxxxxxx&amp;quot;,
+            },
+            new Aws.ElasticBeanstalk.Inputs.EnvironmentSettingArgs
+            {
+                Name = &amp;quot;Subnets&amp;quot;,
+                Namespace = &amp;quot;aws:ec2:vpc&amp;quot;,
+                Value = &amp;quot;subnet-xxxxxxxx&amp;quot;,
+            },
+        },
+        SolutionStackName = &amp;quot;64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Environment</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Environment</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ElasticBeanstalk.html">Pulumi.Aws.ElasticBeanstalk</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -102,16 +197,16 @@ for supported options and examples.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L260">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment__ctor_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.#ctor*"></a>
-  <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment__ctor_System_String_Pulumi_Aws_ElasticBeanstalk_EnvironmentArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.#ctor(System.String,Pulumi.Aws.ElasticBeanstalk.EnvironmentArgs,System.Nullable{CustomResourceOptions})">Environment(String, EnvironmentArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment__ctor_System_String_Pulumi_Aws_ElasticBeanstalk_EnvironmentArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.#ctor(System.String,Pulumi.Aws.ElasticBeanstalk.EnvironmentArgs,Pulumi.CustomResourceOptions)">Environment(String, EnvironmentArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Environment resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Environment(string name, EnvironmentArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Environment(string name, EnvironmentArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -136,7 +231,7 @@ for supported options and examples.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -146,7 +241,7 @@ for supported options and examples.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_AllSettings_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.AllSettings*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_AllSettings" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.AllSettings">AllSettings</h4>
@@ -169,13 +264,13 @@ the configuration.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ElasticBeanstalk.Outputs.EnvironmentAllSetting.html">EnvironmentAllSetting</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ElasticBeanstalk.Outputs.EnvironmentAllSetting.html">EnvironmentAllSetting</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Application_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Application*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Application" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Application">Application</h4>
@@ -197,13 +292,13 @@ to be deployed</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Arn_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Arn*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Arn" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Arn">Arn</h4>
@@ -223,13 +318,13 @@ to be deployed</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_AutoscalingGroups_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.AutoscalingGroups*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_AutoscalingGroups" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.AutoscalingGroups">AutoscalingGroups</h4>
@@ -250,13 +345,13 @@ to be deployed</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Cname_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Cname*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Cname" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Cname">Cname</h4>
@@ -277,13 +372,13 @@ to be deployed</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_CnamePrefix_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.CnamePrefix*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_CnamePrefix" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.CnamePrefix">CnamePrefix</h4>
@@ -305,13 +400,13 @@ the Environment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Description_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Description*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Description" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Description">Description</h4>
@@ -320,7 +415,7 @@ the Environment.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,13 +427,13 @@ the Environment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_EndpointUrl_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.EndpointUrl*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_EndpointUrl" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.EndpointUrl">EndpointUrl</h4>
@@ -359,13 +454,13 @@ the Environment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Instances_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Instances*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Instances" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Instances">Instances</h4>
@@ -386,13 +481,13 @@ the Environment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_LaunchConfigurations_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.LaunchConfigurations*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_LaunchConfigurations" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.LaunchConfigurations">LaunchConfigurations</h4>
@@ -413,13 +508,13 @@ the Environment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_LoadBalancers_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.LoadBalancers*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_LoadBalancers" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.LoadBalancers">LoadBalancers</h4>
@@ -440,13 +535,13 @@ the Environment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Name_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Name*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Name" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Name">Name</h4>
@@ -468,17 +563,17 @@ in the application URL</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_PlatformArn_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.PlatformArn*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_PlatformArn" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.PlatformArn">PlatformArn</h4>
-  <div class="markdown level1 summary"><p>The [ARN][2] of the Elastic Beanstalk [Platform][3]
+  <div class="markdown level1 summary"><p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the Elastic Beanstalk <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn">Platform</a>
 to use in deployment</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -496,13 +591,13 @@ to use in deployment</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_PollInterval_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.PollInterval*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_PollInterval" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.PollInterval">PollInterval</h4>
@@ -514,7 +609,7 @@ use the default behavior, which is an exponential backoff</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PollInterval { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PollInterval { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -526,13 +621,13 @@ use the default behavior, which is an exponential backoff</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L192">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Queues_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Queues*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Queues" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Queues">Queues</h4>
@@ -553,13 +648,13 @@ use the default behavior, which is an exponential backoff</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Settings_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Settings*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Settings" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Settings">Settings</h4>
@@ -582,18 +677,18 @@ below in Option Settings</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ElasticBeanstalk.Outputs.EnvironmentSetting.html">EnvironmentSetting</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ElasticBeanstalk.Outputs.EnvironmentSetting.html">EnvironmentSetting</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_SolutionStackName_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.SolutionStackName*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_SolutionStackName" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.SolutionStackName">SolutionStackName</h4>
   <div class="markdown level1 summary"><p>A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]</p>
+off of. Example stacks can be found in the <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html">Amazon API documentation</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -610,13 +705,13 @@ off of. Example stacks can be found in the [Amazon API documentation][1]</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Tags_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Tags*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Tags" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Tags">Tags</h4>
@@ -625,7 +720,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -637,13 +732,13 @@ off of. Example stacks can be found in the [Amazon API documentation][1]</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L220">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_TemplateName_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.TemplateName*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_TemplateName" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.TemplateName">TemplateName</h4>
@@ -653,7 +748,7 @@ template to use in deployment</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TemplateName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TemplateName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -665,13 +760,13 @@ template to use in deployment</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L227">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Tier_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Tier*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Tier" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Tier">Tier</h4>
@@ -681,7 +776,7 @@ or <code>WebServer</code>. If tier is left blank <code>WebServer</code> will be 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Tier { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Tier { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -693,13 +788,13 @@ or <code>WebServer</code>. If tier is left blank <code>WebServer</code> will be 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L233">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Triggers_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Triggers*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Triggers" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Triggers">Triggers</h4>
@@ -720,13 +815,13 @@ or <code>WebServer</code>. If tier is left blank <code>WebServer</code> will be 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L240">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Version_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Version*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Version" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Version">Version</h4>
@@ -748,13 +843,13 @@ to use in deployment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L185">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_WaitForReadyTimeout_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.WaitForReadyTimeout*"></a>
   <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_WaitForReadyTimeout" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.WaitForReadyTimeout">WaitForReadyTimeout</h4>
@@ -766,7 +861,7 @@ out.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; WaitForReadyTimeout { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; WaitForReadyTimeout { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -778,7 +873,7 @@ out.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -786,17 +881,17 @@ out.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L226">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L290">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticBeanstalk_Environment_Get_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Get*"></a>
-  <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Get_System_String_Input_System_String__Pulumi_Aws_ElasticBeanstalk_EnvironmentState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Get(System.String,Input{System.String},Pulumi.Aws.ElasticBeanstalk.EnvironmentState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, EnvironmentState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_ElasticBeanstalk_Environment_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_ElasticBeanstalk_EnvironmentState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ElasticBeanstalk.Environment.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.ElasticBeanstalk.EnvironmentState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, EnvironmentState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Environment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Environment Get(string name, Input&lt;string&gt; id, EnvironmentState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Environment Get(string name, Input&lt;string&gt; id, EnvironmentState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -815,7 +910,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -827,7 +922,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -856,7 +951,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L33" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/ElasticBeanstalk/Environment.cs/#L97" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

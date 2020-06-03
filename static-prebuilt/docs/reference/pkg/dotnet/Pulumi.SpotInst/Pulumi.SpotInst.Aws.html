@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.SpotInst.Aws
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,20 +78,142 @@
   </h3>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.Beanstalk.html">Beanstalk</a></h4>
       <section><p>Provides a Spotinst AWS group resource using Elastic Beanstalk.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var elastigoup_aws_beanstalk = new SpotInst.Aws.Beanstalk(&amp;quot;elastigoup-aws-beanstalk&amp;quot;, new SpotInst.Aws.BeanstalkArgs
+    {
+        BeanstalkEnvironmentId = &amp;quot;e-example&amp;quot;,
+        BeanstalkEnvironmentName = &amp;quot;example-env&amp;quot;,
+        DeploymentPreferences = new SpotInst.Aws.Inputs.BeanstalkDeploymentPreferencesArgs
+        {
+            AutomaticRoll = true,
+            BatchSizePercentage = 100,
+            GracePeriod = 90,
+            Strategy = 
+            {
+
+                {
+                    { &amp;quot;action&amp;quot;, &amp;quot;REPLACE_SERVER&amp;quot; },
+                    { &amp;quot;shouldDrainInstances&amp;quot;, true },
+                },
+            },
+        },
+        DesiredCapacity = 0,
+        InstanceTypesSpots = 
+        {
+            &amp;quot;t2.micro&amp;quot;,
+            &amp;quot;t2.medium&amp;quot;,
+            &amp;quot;t2.large&amp;quot;,
+        },
+        ManagedActions = new SpotInst.Aws.Inputs.BeanstalkManagedActionsArgs
+        {
+            PlatformUpdate = new SpotInst.Aws.Inputs.BeanstalkManagedActionsPlatformUpdateArgs
+            {
+                PerformAt = &amp;quot;timeWindow&amp;quot;,
+                TimeWindow = &amp;quot;Mon:23:50-Tue:00:20&amp;quot;,
+                UpdateLevel = &amp;quot;minorAndPatch&amp;quot;,
+            },
+        },
+        MaxSize = 1,
+        MinSize = 0,
+        Product = &amp;quot;Linux/UNIX&amp;quot;,
+        Region = &amp;quot;us-west-2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="scheduled-tasks">Scheduled Tasks</h2>
+<p>Each <code>scheduled_task</code> supports the following:</p>
+<ul>
+<li><code>task_type</code> - (Required) The task type to run. Supported task types are: <code>&amp;quot;scale&amp;quot;</code>, <code>&amp;quot;backup_ami&amp;quot;</code>, <code>&amp;quot;roll&amp;quot;</code>, <code>&amp;quot;scaleUp&amp;quot;</code>, <code>&amp;quot;percentageScaleUp&amp;quot;</code>, <code>&amp;quot;scaleDown&amp;quot;</code>, <code>&amp;quot;percentageScaleDown&amp;quot;</code>, <code>&amp;quot;statefulUpdateCapacity&amp;quot;</code>.</li>
+<li><code>cron_expression</code> - (Optional; Required if not using <code>frequency</code>) A valid cron expression. The cron is running in UTC time zone and is in <a href="https://en.wikipedia.org/wiki/Cron">Unix cron format</a>.</li>
+<li><code>start_time</code> - (Optional; Format: ISO 8601) Set a start time for one time tasks.</li>
+<li><code>frequency</code> - (Optional; Required if not using <code>cron_expression</code>) The recurrence frequency to run this task. Supported values are <code>&amp;quot;hourly&amp;quot;</code>, <code>&amp;quot;daily&amp;quot;</code>, <code>&amp;quot;weekly&amp;quot;</code> and <code>&amp;quot;continuous&amp;quot;</code>.</li>
+<li><code>scale_target_capacity</code> - (Optional) The desired number of instances the group should have.</li>
+<li><code>scale_min_capacity</code> - (Optional) The minimum number of instances the group should have.</li>
+<li><code>scale_max_capacity</code> - (Optional) The maximum number of instances the group should have.</li>
+<li><code>is_enabled</code> - (Optional, Default: <code>true</code>) Setting the task to being enabled or disabled.</li>
+<li><code>target_capacity</code> - (Optional; Only valid for statefulUpdateCapacity) The desired number of instances the group should have.</li>
+<li><code>min_capacity</code> - (Optional; Only valid for statefulUpdateCapacity) The minimum number of instances the group should have.</li>
+<li><code>max_capacity</code> - (Optional; Only valid for statefulUpdateCapacity) The maximum number of instances the group should have.</li>
+<li><code>batch_size_percentage</code> - (Optional; Required when the <code>task_type</code> is <code>&amp;quot;roll&amp;quot;</code>.) The percentage size of each batch in the scheduled deployment roll.</li>
+<li><code>grace_period</code> - (Optional) The period of time (seconds) to wait before checking a batch's health after it's deployment.</li>
+<li><code>adjustment</code> - (Optional; Min 1) The number of instances to add or remove.</li>
+<li><code>adjustment_percentage</code> - (Optional; Min 1) The percentage of instances to add or remove.</li>
+</ul>
+<p>Usage:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.BeanstalkArgs.html">BeanstalkArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.BeanstalkState.html">BeanstalkState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.Elastigroup.html">Elastigroup</a></h4>
-      <section><p>Provides a Spotinst AWS group resource.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.ElastigroupArgs.html">ElastigroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.ElastigroupState.html">ElastigroupState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.ManagedInstance.html">ManagedInstance</a></h4>
       <section><p>Provides a Spotinst AWS ManagedInstance resource.</p>
+<h2 id="network-interface---optional-list-of-network-interfaces-in-an-ec2-instance">Network Interface - (Optional) List of network interfaces in an EC2 instance.</h2>
+<ul>
+<li><code>device_index</code> - (Optional) The position of the network interface in the attachment order. A primary network interface has a device index of 0. If you specify a network interface when launching an instance, you must specify the device index.</li>
+<li><code>associate_public_ip_address</code> - (Optional) Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one. You cannot specify more than one network interface in the request. If launching into a default subnet, the default value is true.</li>
+<li><code>associate_ipv6_address</code> - (Optional) Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet.
+Default: false</li>
+</ul>
+<p>Usage:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;scheduled-task&quot;&gt;&lt;/a&gt;</p>
+<h2 id="scheduled-tasks">Scheduled Tasks</h2>
+<p>Each <code>scheduled_task</code> supports the following:</p>
+<ul>
+<li><code>is_enabled</code> - (Optional) Describes whether the task is enabled. When true the task should run when false it should not run.</li>
+<li><code>frequency</code> - (Optional) Set frequency for the task. Valid values: &quot;hourly&quot;, &quot;daily&quot;, &quot;weekly&quot;, &quot;continuous&quot;.</li>
+<li><code>start_time</code> - (Optional) DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If &quot;frequency&quot; or &quot;cronExpression&quot; are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
+Example: 2019-05-23T10:55:09Z</li>
+<li><code>cron_expression</code> - (Optional) A valid cron expression. For example : &quot; * * * * * &quot;. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
+Example: 0 1 * * *</li>
+<li><code>task_type</code>- (Required) The task type to run. Valid Values: &quot;pause&quot;, &quot;resume&quot;, &quot;recycle&quot;.</li>
+</ul>
+<p>Usage:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;load-balancers&quot;&gt;&lt;/a&gt;</p>
 <h2 id="load-balancers">Load Balancers</h2>
 <ul>
 <li><code>loadBalancersConfig</code> - (Optional) LB integration object.
@@ -126,175 +248,239 @@ Default: ts-123456
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.ManagedInstanceState.html">ManagedInstanceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.MrScalar.html">MrScalar</a></h4>
-      <section><p>Provides a Spotinst AWS MrScaler resource.</p>
-<h2 id="provisioning-timeout-clone-new-strategies">Provisioning Timeout (Clone, New strategies)</h2>
-<ul>
-<li><code>timeout</code> - (Optional) The amount of time (minutes) after which the cluster is automatically terminated if it's still in provisioning status. Minimum: '15'.</li>
-<li><code>timeout_action</code> - (Optional) The action to take if the timeout is exceeded. Valid values: <code>terminate</code>, <code>terminateAndRetry</code>.</li>
-</ul>
-<p>&lt;a id=&quot;cluster-config&quot;&gt;&lt;/a&gt;</p>
-<h2 id="cluster-configuration-new-strategy-only">Cluster Configuration (New strategy only)</h2>
-<ul>
-<li><code>log_uri</code> - (Optional) The path to the Amazon S3 location where logs for this cluster are stored.</li>
-<li><code>additional_info</code> - (Optional) This is meta information about third-party applications that third-party vendors use for testing purposes.</li>
-<li><code>security_config</code> - (Optional) The name of the security configuration applied to the cluster.</li>
-<li><code>service_role</code> - (Optional) The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.</li>
-<li><code>job_flow_role</code> - (Optional) The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.</li>
-<li><code>termination_protected</code> - (Optional) Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.</li>
-<li><code>keep_job_flow_alive</code> - (Optional) Specifies whether the cluster should remain available after completing all steps.</li>
-<li><code>retries</code> - (Optional) Specifies the maximum number of times a capacity provisioning should be retried if the provisioning timeout is exceeded.</li>
-</ul>
-<p>&lt;a id=&quot;task-group&quot;&gt;&lt;/a&gt;</p>
-<h2 id="task-group-wrap-clone-and-new-strategies">Task Group (Wrap, Clone, and New strategies)</h2>
-<ul>
-<li><code>task_instance_types</code> - (Required) The MrScaler instance types for the task nodes.</li>
-<li><code>task_target</code> - (Required) amount of instances in task group.</li>
-<li><code>task_maximum</code> - (Optional) maximal amount of instances in task group.</li>
-<li><code>task_minimum</code> - (Optional) The minimal amount of instances in task group.</li>
-<li><code>task_lifecycle</code> - (Required) The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.</li>
-<li><code>task_ebs_optimized</code> - (Optional) EBS Optimization setting for instances in group.</li>
-<li><code>task_ebs_block_device</code> - (Required) This determines the ebs configuration for your task group instances. Only a single block is allowed.</li>
-<li><code>volumes_per_instance</code> - (Optional; Default 1) Amount of volumes per instance in the task group.</li>
-<li><code>volume_type</code> - (Required) volume type. Allowed values are 'gp2', 'io1' and others.</li>
-<li><code>size_in_gb</code> - (Required) Size of the volume, in GBs.</li>
-<li><code>iops</code> - (Optional) IOPS for the volume. Required in some volume types, such as io1.</li>
-</ul>
-<p>&lt;a id=&quot;core-group&quot;&gt;&lt;/a&gt;</p>
-<h2 id="core-group-clone-new-strategies">Core Group (Clone, New strategies)</h2>
-<ul>
-<li><code>core_instance_types</code> - (Required) The MrScaler instance types for the core nodes.</li>
-<li><code>core_target</code> - (Required) amount of instances in core group.</li>
-<li><code>core_maximum</code> - (Optional) maximal amount of instances in core group.</li>
-<li><code>core_minimum</code> - (Optional) The minimal amount of instances in core group.</li>
-<li><code>core_lifecycle</code> - (Required) The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.</li>
-<li><code>core_ebs_optimized</code> - (Optional) EBS Optimization setting for instances in group.</li>
-<li><code>core_ebs_block_device</code> - (Required) This determines the ebs configuration for your core group instances. Only a single block is allowed.</li>
-<li><code>volumes_per_instance</code> - (Optional; Default 1) Amount of volumes per instance in the core group.</li>
-<li><code>volume_type</code> - (Required) volume type. Allowed values are 'gp2', 'io1' and others.</li>
-<li><code>size_in_gb</code> - (Required) Size of the volume, in GBs.</li>
-<li><code>iops</code> - (Optional) IOPS for the volume. Required in some volume types, such as io1.</li>
-</ul>
-<p>&lt;a id=&quot;master-group&quot;&gt;&lt;/a&gt;</p>
-<h2 id="master-group-clone-new-strategies">Master Group (Clone, New strategies)</h2>
-<ul>
-<li><code>master_instance_types</code> - (Required) The MrScaler instance types for the master nodes.</li>
-<li><code>master_lifecycle</code> - (Required) The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.</li>
-<li><code>master_ebs_optimized</code> - (Optional) EBS Optimization setting for instances in group.</li>
-<li><code>master_ebs_block_device</code> - (Required) This determines the ebs configuration for your master group instances. Only a single block is allowed.</li>
-<li><code>volumes_per_instance</code> - (Optional; Default 1) Amount of volumes per instance in the master group.</li>
-<li><code>volume_type</code> - (Required) volume type. Allowed values are 'gp2', 'io1' and others.</li>
-<li><code>size_in_gb</code> - (Required) Size of the volume, in GBs.</li>
-<li><code>iops</code> - (Optional) IOPS for the volume. Required in some volume types, such as io1.</li>
-</ul>
-<p>&lt;a id=&quot;tags&quot;&gt;&lt;/a&gt;</p>
-<h2 id="tags-clone-new-strategies">Tags (Clone, New strategies)</h2>
-<ul>
-<li><code>tags</code> - (Optional) A list of tags to assign to the resource. You may define multiple tags.</li>
-<li><code>key</code> - (Required) Tag key.</li>
-<li><code>value</code> - (Required) Tag value.</li>
-</ul>
-<p>&lt;a id=&quot;Optional Compute Parameters&quot;&gt;&lt;/a&gt;</p>
-<h2 id="optional-compute-parameters-new-strategy">Optional Compute Parameters (New strategy)</h2>
-<ul>
-<li><code>managed_primary_security_group</code> - (Optional) EMR Managed Security group that will be set to the primary instance group.</li>
-<li><code>managed_replica_security_group</code> - (Optional) EMR Managed Security group that will be set to the replica instance group.</li>
-<li><code>service_access_security_group</code> - (Optional) The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.</li>
-<li><code>additional_primary_security_groups</code> - (Optional) A list of additional Amazon EC2 security group IDs for the master node.</li>
-<li><code>additional_replica_security_groups</code> - (Optional) A list of additional Amazon EC2 security group IDs for the core and task nodes.</li>
-<li><code>custom_ami_id</code> - (Optional) The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.</li>
-<li><code>repo_upgrade_on_boot</code> - (Optional) Applies only when <code>custom_ami_id</code> is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: <code>SECURITY</code>, <code>NONE</code>.</li>
-<li><code>ec2_key_name</code> - (Optional) The name of an Amazon EC2 key pair that can be used to ssh to the master node.</li>
-<li><code>applications</code> - (Optional) A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster</li>
-<li><code>args</code> - (Optional) Arguments for EMR to pass to the application.</li>
-<li><code>name</code> - (Required) The application name.</li>
-<li><code>version</code>- (Optional)T he version of the application.</li>
-<li><code>instance_weights</code> - (Optional) Describes the instance and weights. Check out <a href="https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted">Elastigroup Weighted Instances</a> for more info.</li>
-<li><code>instance_type</code> - (Required) The type of the instance.</li>
-<li><code>weighted_capacity</code> - (Required) The weight given to the associated instance type.</li>
-</ul>
-<p>&lt;a id=&quot;availability-zone&quot;&gt;&lt;/a&gt;</p>
-<h2 id="availability-zones-clone-new-strategies">Availability Zones (Clone, New strategies)</h2>
-<ul>
-<li><code>availability_zones</code> - (Required in Clone) List of AZs and their subnet Ids. See example above for usage.</li>
-</ul>
-<p>&lt;a id=&quot;configurations&quot;&gt;&lt;/a&gt;</p>
-<h2 id="configurations-clone-new-strategies">Configurations (Clone, New strategies)</h2>
-<ul>
-<li><code>configurations_file</code> - (Optional) Describes path to S3 file containing description of configurations. <a href="https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/">More Information</a></li>
-<li><code>bucket</code> - (Required) S3 Bucket name for configurations.</li>
-<li><code>key</code>- (Required) S3 key for configurations.</li>
-</ul>
-<p>&lt;a id=&quot;steps&quot;&gt;&lt;/a&gt;</p>
-<h2 id="steps-clone-new-strategies">Steps (Clone, New strategies)</h2>
-<ul>
-<li><code>steps_file</code> - (Optional) Steps from S3.</li>
-<li><code>bucket</code> - (Required) S3 Bucket name for steps.</li>
-<li><code>key</code>- (Required) S3 key for steps.</li>
-</ul>
-<p>&lt;a id=&quot;boostrap-actions&quot;&gt;&lt;/a&gt;</p>
-<h2 id="bootstrap-actions-clone-new-strategies">Bootstrap Actions (Clone, New strategies)</h2>
-<ul>
-<li><code>bootstrap_actions_file</code> - (Optional) Describes path to S3 file containing description of bootstrap actions. <a href="https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/">More Information</a></li>
-<li><code>bucket</code> - (Required) S3 Bucket name for bootstrap actions.</li>
-<li><code>key</code>- (Required) S3 key for bootstrap actions.</li>
-</ul>
-<p>&lt;a id=&quot;scaling-policy&quot;&gt;&lt;/a&gt;</p>
-<h2 id="scaling-policies">Scaling Policies</h2>
-<p>Possible task group scaling policies (Wrap, Clone, and New strategies):</p>
-<ul>
-<li><code>task_scaling_up_policy</code></li>
-<li><code>task_scaling_down_policy</code></li>
-</ul>
-<p>Possible core group scaling policies (Clone, New strategies):</p>
-<ul>
-<li><code>core_scaling_up_policy</code></li>
-<li><code>core_scaling_down_policy</code></li>
-</ul>
-<p>Each <code>*_scaling_*_policy</code> supports the following:</p>
-<ul>
-<li><code>policy_name</code> - (Required) The name of the policy.</li>
-<li><code>metric_name</code> - (Required) The name of the metric, with or without spaces.</li>
-<li><code>statistic</code> - (Required) The metric statistics to return. For information about specific statistics go to <a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic">Statistics</a> in the Amazon CloudWatch Developer Guide.</li>
-<li><code>unit</code> - (Required) The unit for the metric.</li>
-<li><code>threshold</code> - (Required) The value against which the specified statistic is compared.</li>
-<li><code>adjustment</code> - (Optional) The number of instances to add/remove to/from the target capacity when scale is needed.</li>
-<li><code>min_target_capacity</code> - (Optional) Min target capacity for scale up.</li>
-<li><code>max_target_capacity</code> - (Optional) Max target capacity for scale down.</li>
-<li><code>namespace</code> - (Required) The namespace for the metric.</li>
-<li><code>operator</code> - (Required) The operator to use. Allowed values are : 'gt', 'gte', 'lt' , 'lte'.</li>
-<li><code>evaluation_periods</code> - (Required) The number of periods over which data is compared to the specified threshold.</li>
-<li><code>period</code> - (Required) The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.</li>
-<li><code>cooldown</code> - (Required) The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.</li>
-<li><code>dimensions</code> - (Optional) A mapping of dimensions describing qualities of the metric.</li>
-<li><code>minimum</code> - (Optional) The minimum to set when scale is needed.</li>
-<li><code>maximum</code> - (Optional) The maximum to set when scale is needed.</li>
-<li><code>target</code> - (Optional) The number of instances to set when scale is needed.</li>
-<li><code>action_type</code> - (Required) The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'</li>
-</ul>
-<p>&lt;a id=&quot;scheduled-task&quot;&gt;&lt;/a&gt;</p>
-<h2 id="scheduled-tasks">Scheduled Tasks</h2>
-<ul>
-<li><code>scheduled_task</code> - (Optional) An array of scheduled tasks.</li>
-<li><code>is_enabled</code> - (Optional) Enable/Disable the specified scheduling task.</li>
-<li><code>task_type</code> - (Required) The type of task to be scheduled. Valid values: <code>setCapacity</code>.</li>
-<li><code>instance_group_type</code> - (Required) Select the EMR instance groups to execute the scheduled task on. Valid values: <code>task</code>.</li>
-<li><code>cron</code> - (Required) A cron expression representing the schedule for the task.</li>
-<li><code>desired_capacity</code> - (Optional) New desired capacity for the elastigroup.</li>
-<li><code>min_capacity</code> - (Optional) New min capacity for the elastigroup.</li>
-<li><code>max_capacity</code> - (Optional) New max capacity for the elastigroup.</li>
-</ul>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.MrScalarArgs.html">MrScalarArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.MrScalarState.html">MrScalarState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.Ocean.html">Ocean</a></h4>
       <section><p>Provides a Spotinst Ocean AWS resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new SpotInst.Aws.Ocean(&amp;quot;example&amp;quot;, new SpotInst.Aws.OceanArgs
+    {
+        AssociatePublicIpAddress = true,
+        ControllerId = &amp;quot;fakeClusterId&amp;quot;,
+        DesiredCapacity = 2,
+        DrainingTimeout = 120,
+        EbsOptimized = true,
+        FallbackToOndemand = true,
+        GracePeriod = 600,
+        IamInstanceProfile = &amp;quot;iam-profile&amp;quot;,
+        ImageId = &amp;quot;ami-123456&amp;quot;,
+        KeyName = &amp;quot;fake key&amp;quot;,
+        LoadBalancers = 
+        {
+            new SpotInst.Aws.Inputs.OceanLoadBalancerArgs
+            {
+                Arn = &amp;quot;arn:aws:elasticloadbalancing:us-west-2:fake-arn&amp;quot;,
+                Type = &amp;quot;TARGET_GROUP&amp;quot;,
+            },
+            new SpotInst.Aws.Inputs.OceanLoadBalancerArgs
+            {
+                Name = &amp;quot;AntonK&amp;quot;,
+                Type = &amp;quot;CLASSIC&amp;quot;,
+            },
+        },
+        MaxSize = 2,
+        MinSize = 1,
+        Monitoring = true,
+        Region = &amp;quot;us-west-2&amp;quot;,
+        RootVolumeSize = 20,
+        SecurityGroups = 
+        {
+            &amp;quot;sg-987654321&amp;quot;,
+        },
+        SubnetIds = 
+        {
+            &amp;quot;subnet-123456789&amp;quot;,
+        },
+        Tags = 
+        {
+            new SpotInst.Aws.Inputs.OceanTagArgs
+            {
+                Key = &amp;quot;fakeKey&amp;quot;,
+                Value = &amp;quot;fakeValue&amp;quot;,
+            },
+        },
+        UserData = &amp;quot;echo hello world&amp;quot;,
+        UtilizeReservedInstances = false,
+        Whitelists = 
+        {
+            &amp;quot;t1.micro&amp;quot;,
+            &amp;quot;m1.small&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="auto-scaler">Auto Scaler</h2>
+<ul>
+<li><code>autoscaler</code> - (Optional) Describes the Ocean Kubernetes autoscaler.</li>
+<li><code>autoscale_is_enabled</code> - (Optional, Default: <code>true</code>) Enable the Ocean Kubernetes autoscaler.</li>
+<li><code>autoscale_is_auto_config</code> - (Optional, Default: <code>true</code>) Automatically configure and optimize headroom resources.</li>
+<li><code>autoscale_cooldown</code> - (Optional, Default: <code>null</code>) Cooldown period between scaling actions.</li>
+<li><code>auto_headroom_percentage</code> - (Optional) Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when <code>isAutoConfig</code> toggled on.</li>
+<li><code>autoscale_headroom</code> - (Optional) Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.</li>
+<li><code>cpu_per_unit</code> - (Optional) Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.</li>
+<li><code>gpu_per_unit</code> - (Optional) Optionally configure the number of GPUS to allocate the headroom.</li>
+<li><code>memory_per_unit</code> - (Optional) Optionally configure the amount of memory (MB) to allocate the headroom.</li>
+<li><code>num_of_units</code> - (Optional) The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.</li>
+<li><code>autoscale_down</code> - (Optional) Auto Scaling scale down operations.</li>
+<li><code>max_scale_down_percentage</code> - (Optional) Would represent the maximum % to scale-down. Number between 1-100.</li>
+<li><code>resource_limits</code> - (Optional) Optionally set upper and lower bounds on the resource usage of the cluster.</li>
+<li><code>max_vcpu</code> - (Optional) The maximum cpu in vCPU units that can be allocated to the cluster.</li>
+<li><code>max_memory_gib</code> - (Optional) The maximum memory in GiB units that can be allocated to the cluster.</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;update-policy&quot;&gt;&lt;/a&gt;</p>
+<h2 id="update-policy">Update Policy</h2>
+<ul>
+<li><code>update_policy</code> - (Optional)</li>
+<li><code>should_roll</code> - (Required) Enables the roll.</li>
+<li><code>roll_config</code> - (Required) While used, you can control whether the group should perform a deployment after an update to the configuration.
+<ul>
+<li><code>batch_size_percentage</code> - (Required) Sets the percentage of the instances to deploy in each batch.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;scheduled-task&quot;&gt;&lt;/a&gt;</p>
+<h2 id="scheduled-task">scheduled task</h2>
+<ul>
+<li><code>scheduled_task</code> - (Optional) Set scheduling object.</li>
+<li><code>shutdown_hours</code> - (Optional) Set shutdown hours for cluster object.
+<ul>
+<li><code>is_enabled</code> - (Optional)  Flag to enable / disable the shutdown hours.
+Example: True</li>
+<li><code>time_windows</code> - (Required) Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
+Example: Fri:15:30-Wed:14:30</li>
+</ul>
+</li>
+<li><code>tasks</code> - (Optional) The scheduling tasks for the cluster.
+<ul>
+<li><code>is_enabled</code> - (Required)  Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.</li>
+<li><code>cron_expression</code> - (Required) A valid cron expression. For example : &quot; * * * * * &quot;.The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
+Example: 0 1 * * *</li>
+<li><code>task_type</code> - (Required) Valid values: &quot;clusterRoll&quot;. Required for cluster.scheduling.tasks object
+Example: clusterRoll</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.OceanArgs.html">OceanArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.OceanLaunchSpec.html">OceanLaunchSpec</a></h4>
       <section><p>Provides a custom Spotinst Ocean AWS Launch Spec resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new SpotInst.Aws.OceanLaunchSpec(&amp;quot;example&amp;quot;, new SpotInst.Aws.OceanLaunchSpecArgs
+    {
+        AutoscaleHeadrooms = 
+        {
+            new SpotInst.Aws.Inputs.OceanLaunchSpecAutoscaleHeadroomArgs
+            {
+                CpuPerUnit = 1000,
+                GpuPerUnit = 0,
+                MemoryPerUnit = 2048,
+                NumOfUnits = 5,
+            },
+        },
+        ElasticIpPools = 
+        {
+            new SpotInst.Aws.Inputs.OceanLaunchSpecElasticIpPoolArgs
+            {
+                TagSelector = new SpotInst.Aws.Inputs.OceanLaunchSpecElasticIpPoolTagSelectorArgs
+                {
+                    TagKey = &amp;quot;key&amp;quot;,
+                    TagValue = &amp;quot;value&amp;quot;,
+                },
+            },
+        },
+        IamInstanceProfile = &amp;quot;iam-profile&amp;quot;,
+        ImageId = &amp;quot;ami-123456&amp;quot;,
+        Labels = 
+        {
+            new SpotInst.Aws.Inputs.OceanLaunchSpecLabelArgs
+            {
+                Key = &amp;quot;fakeKey&amp;quot;,
+                Value = &amp;quot;fakeValue&amp;quot;,
+            },
+        },
+        OceanId = &amp;quot;o-123456&amp;quot;,
+        RootVolumeSize = 30,
+        SecurityGroups = 
+        {
+            &amp;quot;sg-987654321&amp;quot;,
+        },
+        SubnetIds = 
+        {
+            &amp;quot;subnet-1234&amp;quot;,
+        },
+        Tags = 
+        {
+            new SpotInst.Aws.Inputs.OceanLaunchSpecTagArgs
+            {
+                Key = &amp;quot;Env&amp;quot;,
+                Value = &amp;quot;production&amp;quot;,
+            },
+        },
+        Taints = 
+        {
+            new SpotInst.Aws.Inputs.OceanLaunchSpecTaintArgs
+            {
+                Effect = &amp;quot;NoExecute&amp;quot;,
+                Key = &amp;quot;taint key updated&amp;quot;,
+                Value = &amp;quot;taint value updated&amp;quot;,
+            },
+        },
+        UserData = &amp;quot;echo hello world&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.html">OceanLaunchSpecArgs</a></h4>
       <section></section>

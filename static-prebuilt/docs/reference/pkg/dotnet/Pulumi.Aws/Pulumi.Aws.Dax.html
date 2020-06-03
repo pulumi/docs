@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Dax
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,25 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Dax.Cluster.html">Cluster</a></h4>
       <section><p>Provides a DAX Cluster resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bar = new Aws.Dax.Cluster(&amp;quot;bar&amp;quot;, new Aws.Dax.ClusterArgs
+    {
+        ClusterName = &amp;quot;cluster-example&amp;quot;,
+        IamRoleArn = data.Aws_iam_role.Example.Arn,
+        NodeType = &amp;quot;dax.r4.large&amp;quot;,
+        ReplicationFactor = 1,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Dax.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
@@ -85,12 +104,34 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Dax.ParameterGroup.html">ParameterGroup</a></h4>
       <section><p>Provides a DAX Parameter Group resource.</p>
-<h2 id="parameters">parameters</h2>
-<p><code>parameters</code> supports the following:</p>
-<ul>
-<li><code>name</code> - (Required) The name of the parameter.</li>
-<li><code>value</code> - (Required) The value for the parameter.</li>
-</ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Dax.ParameterGroup(&amp;quot;example&amp;quot;, new Aws.Dax.ParameterGroupArgs
+    {
+        Parameters = 
+        {
+            new Aws.Dax.Inputs.ParameterGroupParameterArgs
+            {
+                Name = &amp;quot;query-ttl-millis&amp;quot;,
+                Value = &amp;quot;100000&amp;quot;,
+            },
+            new Aws.Dax.Inputs.ParameterGroupParameterArgs
+            {
+                Name = &amp;quot;record-ttl-millis&amp;quot;,
+                Value = &amp;quot;100000&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Dax.ParameterGroupArgs.html">ParameterGroupArgs</a></h4>
       <section></section>
@@ -98,6 +139,26 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Dax.SubnetGroup.html">SubnetGroup</a></h4>
       <section><p>Provides a DAX Subnet Group resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Dax.SubnetGroup(&amp;quot;example&amp;quot;, new Aws.Dax.SubnetGroupArgs
+    {
+        SubnetIds = 
+        {
+            aws_subnet.Example1.Id,
+            aws_subnet.Example2.Id,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Dax.SubnetGroupArgs.html">SubnetGroupArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AlertPolicyConditionConditionThresholdAggregationArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AlertPolicyConditionConditionThresholdAggregationArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">AlertPolicyConditionConditionThresholdAggregationArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Monitoring.Inputs.html">Pulumi.Gcp.Monitoring.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_Inputs_AlertPolicyConditionConditionThresholdAggregationArgs__ctor_" data-uid="Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_Inputs_AlertPolicyConditionConditionThresholdAggregationArgs__ctor" data-uid="Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.#ctor">AlertPolicyConditionConditionThresholdAggregationArgs()</h4>
@@ -100,15 +129,29 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_Inputs_AlertPolicyConditionConditionThresholdAggregationArgs_AlignmentPeriod_" data-uid="Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.AlignmentPeriod*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_Inputs_AlertPolicyConditionConditionThresholdAggregationArgs_AlignmentPeriod" data-uid="Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.AlignmentPeriod">AlignmentPeriod</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AlignmentPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AlignmentPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,21 +163,38 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_Inputs_AlertPolicyConditionConditionThresholdAggregationArgs_CrossSeriesReducer_" data-uid="Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.CrossSeriesReducer*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_Inputs_AlertPolicyConditionConditionThresholdAggregationArgs_CrossSeriesReducer" data-uid="Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.CrossSeriesReducer">CrossSeriesReducer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CrossSeriesReducer { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CrossSeriesReducer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,17 +206,42 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_Inputs_AlertPolicyConditionConditionThresholdAggregationArgs_GroupByFields_" data-uid="Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.GroupByFields*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_Inputs_AlertPolicyConditionConditionThresholdAggregationArgs_GroupByFields" data-uid="Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.GroupByFields">GroupByFields</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -172,21 +257,38 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_Inputs_AlertPolicyConditionConditionThresholdAggregationArgs_PerSeriesAligner_" data-uid="Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.PerSeriesAligner*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_Inputs_AlertPolicyConditionConditionThresholdAggregationArgs_PerSeriesAligner" data-uid="Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.PerSeriesAligner">PerSeriesAligner</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PerSeriesAligner { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PerSeriesAligner { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,7 +300,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -210,7 +312,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Inputs/AlertPolicyConditionConditionThresholdAggregationArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

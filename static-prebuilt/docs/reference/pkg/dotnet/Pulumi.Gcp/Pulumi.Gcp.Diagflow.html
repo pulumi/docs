@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Diagflow
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,10 +87,134 @@ agent to handle the types of conversations required for your system.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/dialogflow/docs/">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---dialogflow-agent-full">Example Usage - Dialogflow Agent Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fullAgent = new Gcp.Diagflow.Agent(&amp;quot;fullAgent&amp;quot;, new Gcp.Diagflow.AgentArgs
+    {
+        ApiVersion = &amp;quot;API_VERSION_V2_BETA_1&amp;quot;,
+        AvatarUri = &amp;quot;https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png&amp;quot;,
+        ClassificationThreshold = 0.3,
+        DefaultLanguageCode = &amp;quot;en&amp;quot;,
+        Description = &amp;quot;Example description.&amp;quot;,
+        DisplayName = &amp;quot;dialogflow-agent&amp;quot;,
+        EnableLogging = true,
+        MatchMode = &amp;quot;MATCH_MODE_ML_ONLY&amp;quot;,
+        SupportedLanguageCodes = 
+        {
+            &amp;quot;fr&amp;quot;,
+            &amp;quot;de&amp;quot;,
+            &amp;quot;es&amp;quot;,
+        },
+        Tier = &amp;quot;TIER_STANDARD&amp;quot;,
+        TimeZone = &amp;quot;America/New_York&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Diagflow.AgentArgs.html">AgentArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Diagflow.AgentState.html">AgentState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Diagflow.EntityType.html">EntityType</a></h4>
+      <section><p>Represents an entity type. Entity types serve as a tool for extracting parameter values from natural language queries.</p>
+<p>To get more information about EntityType, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects.agent.entityTypes">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/dialogflow/docs/">Official Documentation</a></li>
+</ul>
+<h2 id="example-usage---dialogflow-entity-type-basic">Example Usage - Dialogflow Entity Type Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var basicAgent = new Gcp.Diagflow.Agent(&amp;quot;basicAgent&amp;quot;, new Gcp.Diagflow.AgentArgs
+    {
+        DisplayName = &amp;quot;example_agent&amp;quot;,
+        DefaultLanguageCode = &amp;quot;en&amp;quot;,
+        TimeZone = &amp;quot;America/New_York&amp;quot;,
+    });
+    var basicEntityType = new Gcp.Diagflow.EntityType(&amp;quot;basicEntityType&amp;quot;, new Gcp.Diagflow.EntityTypeArgs
+    {
+        DisplayName = &amp;quot;&amp;quot;,
+        Kind = &amp;quot;KIND_MAP&amp;quot;,
+        Entities = 
+        {
+            new Gcp.Diagflow.Inputs.EntityTypeEntityArgs
+            {
+                Value = &amp;quot;value1&amp;quot;,
+                Synonyms = 
+                {
+                    &amp;quot;synonym1&amp;quot;,
+                    &amp;quot;synonym2&amp;quot;,
+                },
+            },
+            new Gcp.Diagflow.Inputs.EntityTypeEntityArgs
+            {
+                Value = &amp;quot;value2&amp;quot;,
+                Synonyms = 
+                {
+                    &amp;quot;synonym3&amp;quot;,
+                    &amp;quot;synonym4&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Diagflow.EntityTypeArgs.html">EntityTypeArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Diagflow.EntityTypeState.html">EntityTypeState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Diagflow.Intent.html">Intent</a></h4>
+      <section><p>Represents a Dialogflow intent. Intents convert a number of user expressions or patterns into an action. An action
+is an extraction of a user command or sentence semantics.</p>
+<p>To get more information about Intent, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects.agent.intents">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/dialogflow/docs/">Official Documentation</a></li>
+</ul>
+<h2 id="example-usage---dialogflow-intent-basic">Example Usage - Dialogflow Intent Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var basicAgent = new Gcp.Diagflow.Agent(&amp;quot;basicAgent&amp;quot;, new Gcp.Diagflow.AgentArgs
+    {
+        DisplayName = &amp;quot;example_agent&amp;quot;,
+        DefaultLanguageCode = &amp;quot;en&amp;quot;,
+        TimeZone = &amp;quot;America/New_York&amp;quot;,
+    });
+    var basicIntent = new Gcp.Diagflow.Intent(&amp;quot;basicIntent&amp;quot;, new Gcp.Diagflow.IntentArgs
+    {
+        DisplayName = &amp;quot;basic-intent&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Diagflow.IntentArgs.html">IntentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Diagflow.IntentState.html">IntentState</a></h4>
       <section></section>
 </article>
           </div>

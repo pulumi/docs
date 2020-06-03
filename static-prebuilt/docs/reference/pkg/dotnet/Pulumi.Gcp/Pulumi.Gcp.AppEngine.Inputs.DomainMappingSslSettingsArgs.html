@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DomainMappingSslSettingsArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DomainMappingSslSettingsArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">DomainMappingSslSettingsArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.AppEngine.Inputs.html">Pulumi.Gcp.AppEngine.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/DomainMappingSslSettingsArgs.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/DomainMappingSslSettingsArgs.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_DomainMappingSslSettingsArgs__ctor_" data-uid="Pulumi.Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_DomainMappingSslSettingsArgs__ctor" data-uid="Pulumi.Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs.#ctor">DomainMappingSslSettingsArgs()</h4>
@@ -100,15 +129,21 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/DomainMappingSslSettingsArgs.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/DomainMappingSslSettingsArgs.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_DomainMappingSslSettingsArgs_CertificateId_" data-uid="Pulumi.Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs.CertificateId*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_DomainMappingSslSettingsArgs_CertificateId" data-uid="Pulumi.Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs.CertificateId">CertificateId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will
+remove SSL support.
+By default, a managed certificate is automatically created for every domain mapping. To omit SSL support
+or to configure SSL manually, specify <code>SslManagementType.MANUAL</code> on a <code>CREATE</code> or <code>UPDATE</code> request. You must be
+authorized to administer the <code>AuthorizedCertificate</code> resource to manually map it to a DomainMapping resource.
+Example: 12345.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CertificateId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CertificateId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,21 +155,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/DomainMappingSslSettingsArgs.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/DomainMappingSslSettingsArgs.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_DomainMappingSslSettingsArgs_PendingManagedCertificateId_" data-uid="Pulumi.Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs.PendingManagedCertificateId*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_DomainMappingSslSettingsArgs_PendingManagedCertificateId" data-uid="Pulumi.Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs.PendingManagedCertificateId">PendingManagedCertificateId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><ul>
+<li></li>
+</ul>
+<p>ID of the managed <code>AuthorizedCertificate</code> resource currently being provisioned, if applicable. Until the new
+managed certificate has been successfully provisioned, the previous SSL state will be preserved. Once the
+provisioning process completes, the <code>certificateId</code> field will reflect the new managed certificate and this
+field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the
+<code>certificateId</code> field with an update request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PendingManagedCertificateId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PendingManagedCertificateId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,17 +189,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/DomainMappingSslSettingsArgs.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/DomainMappingSslSettingsArgs.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Gcp_AppEngine_Inputs_DomainMappingSslSettingsArgs_SslManagementType_" data-uid="Pulumi.Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs.SslManagementType*"></a>
   <h4 id="Pulumi_Gcp_AppEngine_Inputs_DomainMappingSslSettingsArgs_SslManagementType" data-uid="Pulumi.Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs.SslManagementType">SslManagementType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>SSL management type for this domain. If <code>AUTOMATIC</code>, a managed certificate is automatically provisioned.
+If <code>MANUAL</code>, <code>certificateId</code> must be manually specified in order to configure SSL for this domain.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -172,7 +217,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -184,7 +229,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/Inputs/DomainMappingSslSettingsArgs.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/AppEngine/Inputs/DomainMappingSslSettingsArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

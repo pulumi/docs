@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Oss
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,11 +81,70 @@
 <blockquote>
 <p><strong>NOTE:</strong> The bucket namespace is shared by all users of the OSS system. Please set bucket name as unique as possible.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket_acl = new AliCloud.Oss.Bucket(&amp;quot;bucket-acl&amp;quot;, new AliCloud.Oss.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+        Bucket = &amp;quot;bucket-170309-acl&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Oss.BucketArgs.html">BucketArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Oss.BucketObject.html">BucketObject</a></h4>
       <section><p>Provides a resource to put a object(content or file) to a oss bucket.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="uploading-a-file-to-a-bucket">Uploading a file to a bucket</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var object_source = new AliCloud.Oss.BucketObject(&amp;quot;object-source&amp;quot;, new AliCloud.Oss.BucketObjectArgs
+    {
+        Bucket = &amp;quot;your_bucket_name&amp;quot;,
+        Key = &amp;quot;new_object_key&amp;quot;,
+        Source = &amp;quot;path/to/file&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="uploading-a-content-to-a-bucket">Uploading a content to a bucket</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new AliCloud.Oss.Bucket(&amp;quot;example&amp;quot;, new AliCloud.Oss.BucketArgs
+    {
+        Acl = &amp;quot;public-read&amp;quot;,
+        Bucket = &amp;quot;your_bucket_name&amp;quot;,
+    });
+    var object_content = new AliCloud.Oss.BucketObject(&amp;quot;object-content&amp;quot;, new AliCloud.Oss.BucketObjectArgs
+    {
+        Bucket = example.BucketName,
+        Content = &amp;quot;the content that you want to upload.&amp;quot;,
+        Key = &amp;quot;new_object_key&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Oss.BucketObjectArgs.html">BucketObjectArgs</a></h4>
       <section></section>

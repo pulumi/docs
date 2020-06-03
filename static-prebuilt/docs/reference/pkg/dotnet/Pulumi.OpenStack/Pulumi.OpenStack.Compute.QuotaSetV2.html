@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QuotaSetV2
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,12 +79,75 @@
 <p><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API
 in case of delete call.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var project1 = new OpenStack.Identity.Project(&amp;quot;project1&amp;quot;, new OpenStack.Identity.ProjectArgs
+    {
+    });
+    var quotaset1 = new OpenStack.Compute.QuotaSetV2(&amp;quot;quotaset1&amp;quot;, new OpenStack.Compute.QuotaSetV2Args
+    {
+        ProjectId = project1.Id,
+        KeyPairs = 10,
+        Ram = 40960,
+        Cores = 32,
+        Instances = 20,
+        ServerGroups = 4,
+        ServerGroupMembers = 8,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">QuotaSetV2</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">QuotaSetV2</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Compute.html">Pulumi.OpenStack.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -95,16 +158,16 @@ in case of delete call.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2__ctor_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2__ctor_System_String_Pulumi_OpenStack_Compute_QuotaSetV2Args_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.#ctor(System.String,Pulumi.OpenStack.Compute.QuotaSetV2Args,System.Nullable{CustomResourceOptions})">QuotaSetV2(String, QuotaSetV2Args, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2__ctor_System_String_Pulumi_OpenStack_Compute_QuotaSetV2Args_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.#ctor(System.String,Pulumi.OpenStack.Compute.QuotaSetV2Args,Pulumi.CustomResourceOptions)">QuotaSetV2(String, QuotaSetV2Args, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a QuotaSetV2 resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public QuotaSetV2(string name, QuotaSetV2Args args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public QuotaSetV2(string name, QuotaSetV2Args args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,7 +192,7 @@ in case of delete call.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -139,7 +202,7 @@ in case of delete call.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_Cores_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Cores*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_Cores" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Cores">Cores</h4>
@@ -161,13 +224,13 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_FixedIps_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.FixedIps*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_FixedIps" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.FixedIps">FixedIps</h4>
@@ -189,13 +252,13 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_FloatingIps_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.FloatingIps*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_FloatingIps" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.FloatingIps">FloatingIps</h4>
@@ -217,13 +280,13 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFileContentBytes_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFileContentBytes*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFileContentBytes" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFileContentBytes">InjectedFileContentBytes</h4>
@@ -245,13 +308,13 @@ of injected files. Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFilePathBytes_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFilePathBytes*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFilePathBytes" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFilePathBytes">InjectedFilePathBytes</h4>
@@ -273,13 +336,13 @@ injected files. Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFiles_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFiles*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFiles" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFiles">InjectedFiles</h4>
@@ -301,13 +364,13 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_Instances_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Instances*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_Instances" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Instances">Instances</h4>
@@ -329,13 +392,13 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_KeyPairs_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.KeyPairs*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_KeyPairs" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.KeyPairs">KeyPairs</h4>
@@ -357,13 +420,13 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_MetadataItems_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.MetadataItems*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_MetadataItems" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.MetadataItems">MetadataItems</h4>
@@ -385,13 +448,13 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_ProjectId_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ProjectId*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_ProjectId" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ProjectId">ProjectId</h4>
@@ -413,13 +476,13 @@ Changing this creates a new quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_Ram_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Ram*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_Ram" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Ram">Ram</h4>
@@ -441,13 +504,13 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_Region_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Region*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_Region" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Region">Region</h4>
@@ -470,13 +533,13 @@ creates a new quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_SecurityGroupRules_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.SecurityGroupRules*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_SecurityGroupRules" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.SecurityGroupRules">SecurityGroupRules</h4>
@@ -498,13 +561,13 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L148">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_SecurityGroups_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.SecurityGroups*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_SecurityGroups" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.SecurityGroups">SecurityGroups</h4>
@@ -526,13 +589,13 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_ServerGroupMembers_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ServerGroupMembers*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_ServerGroupMembers" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ServerGroupMembers">ServerGroupMembers</h4>
@@ -554,13 +617,13 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_ServerGroups_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ServerGroups*"></a>
   <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_ServerGroups" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ServerGroups">ServerGroups</h4>
@@ -582,7 +645,7 @@ Changing this updates the existing quotaset.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -590,17 +653,17 @@ Changing this updates the existing quotaset.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L173">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Compute_QuotaSetV2_Get_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Get*"></a>
-  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_Get_System_String_Input_System_String__Pulumi_OpenStack_Compute_QuotaSetV2State_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Get(System.String,Input{System.String},Pulumi.OpenStack.Compute.QuotaSetV2State,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, QuotaSetV2State, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_Compute_QuotaSetV2State_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.Compute.QuotaSetV2State,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, QuotaSetV2State, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing QuotaSetV2 resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static QuotaSetV2 Get(string name, Input&lt;string&gt; id, QuotaSetV2State state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static QuotaSetV2 Get(string name, Input&lt;string&gt; id, QuotaSetV2State state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -619,7 +682,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -631,7 +694,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -660,7 +723,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Compute/QuotaSetV2.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L50" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.F5BigIP.CM
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,11 +79,60 @@
       <h4><a class="xref" href="Pulumi.F5BigIP.CM.Device.html">Device</a></h4>
       <section><p><code>f5bigip.cm.Device</code> provides details about a specific bigip</p>
 <p>This resource is helpful when configuring the BIG-IP device in cluster or in HA mode.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myNewDevice = new F5BigIP.CM.Device(&amp;quot;myNewDevice&amp;quot;, new F5BigIP.CM.DeviceArgs
+    {
+        ConfigsyncIp = &amp;quot;2.2.2.2&amp;quot;,
+        MirrorIp = &amp;quot;10.10.10.10&amp;quot;,
+        MirrorSecondaryIp = &amp;quot;11.11.11.11&amp;quot;,
+        Name = &amp;quot;bigip300.f5.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.CM.DeviceArgs.html">DeviceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.CM.DeviceGroup.html">DeviceGroup</a></h4>
       <section><p><code>f5bigip.cm.DeviceGroup</code> A device group is a collection of BIG-IP devices that are configured to securely synchronize their BIG-IP configuration data, and fail over when needed.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myNewDevicegroup = new F5BigIP.CM.DeviceGroup(&amp;quot;myNewDevicegroup&amp;quot;, new F5BigIP.CM.DeviceGroupArgs
+    {
+        AutoSync = &amp;quot;enabled&amp;quot;,
+        Devices = 
+        {
+            new F5BigIP.CM.Inputs.DeviceGroupDeviceArgs
+            {
+                Name = &amp;quot;bigip1.cisco.com&amp;quot;,
+            },
+            new F5BigIP.CM.Inputs.DeviceGroupDeviceArgs
+            {
+                Name = &amp;quot;bigip200.f5.com&amp;quot;,
+            },
+        },
+        FullLoadOnSync = &amp;quot;true&amp;quot;,
+        Name = &amp;quot;sanjose_devicegroup&amp;quot;,
+        Type = &amp;quot;sync-only&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.CM.DeviceGroupArgs.html">DeviceGroupArgs</a></h4>
       <section></section>

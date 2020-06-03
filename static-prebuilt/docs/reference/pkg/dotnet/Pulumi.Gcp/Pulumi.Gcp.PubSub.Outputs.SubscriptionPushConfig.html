@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SubscriptionPushConfig
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,23 +78,67 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SubscriptionPushConfig</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.PubSub.Outputs.html">Pulumi.Gcp.PubSub.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_PubSub_Outputs_SubscriptionPushConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class SubscriptionPushConfig : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class SubscriptionPushConfig</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Outputs/SubscriptionPushConfig.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Outputs/SubscriptionPushConfig.cs/#L36">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_PubSub_Outputs_SubscriptionPushConfig_Attributes" data-uid="Pulumi.Gcp.PubSub.Outputs.SubscriptionPushConfig.Attributes">Attributes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Endpoint configuration attributes.
+Every endpoint has a set of API supported attributes that can
+be used to control different aspects of the message delivery.
+The currently supported attribute is x-goog-version, which you
+can use to change the format of the pushed message. This
+attribute indicates the version of the data expected by
+the endpoint. This controls the shape of the pushed message
+(i.e., its fields and metadata). The endpoint version is
+based on the version of the Pub/Sub API.
+If not present during the subscriptions.create call,
+it will default to the version of the API used to make
+such call. If not present during a subscriptions.modifyPushConfig
+call, its value will not be changed. subscriptions.get
+calls will always return a valid version, even if the
+subscription was created without this attribute.
+The possible values for this attribute are:</p>
+<ul>
+<li>v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.</li>
+<li>v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt;? Attributes</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; Attributes</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -106,16 +150,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Outputs/SubscriptionPushConfig.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Outputs/SubscriptionPushConfig.cs/#L41">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_PubSub_Outputs_SubscriptionPushConfig_OidcToken" data-uid="Pulumi.Gcp.PubSub.Outputs.SubscriptionPushConfig.OidcToken">OidcToken</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If specified, Pub/Sub will generate and attach an OIDC JWT token as
+an Authorization header in the HTTP request for every pushed message.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -137,10 +183,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Outputs/SubscriptionPushConfig.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Outputs/SubscriptionPushConfig.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_PubSub_Outputs_SubscriptionPushConfig_PushEndpoint" data-uid="Pulumi.Gcp.PubSub.Outputs.SubscriptionPushConfig.PushEndpoint">PushEndpoint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A URL locating the endpoint to which messages should be pushed.
+For example, a Webhook endpoint might use
+&quot;https://example.com/push&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -168,7 +217,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Outputs/SubscriptionPushConfig.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Outputs/SubscriptionPushConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

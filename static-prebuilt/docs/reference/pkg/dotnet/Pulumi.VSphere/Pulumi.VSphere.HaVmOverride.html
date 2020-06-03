@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class HaVmOverride
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,12 +81,110 @@ while not affecting the rest of the cluster.</p>
 <p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+    {
+        Name = &amp;quot;dc1&amp;quot;,
+    }));
+    var datastore = dc.Apply(dc =&gt; Output.Create(VSphere.GetDatastore.InvokeAsync(new VSphere.GetDatastoreArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;datastore1&amp;quot;,
+    })));
+    var cluster = dc.Apply(dc =&gt; Output.Create(VSphere.GetComputeCluster.InvokeAsync(new VSphere.GetComputeClusterArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;cluster1&amp;quot;,
+    })));
+    var network = dc.Apply(dc =&gt; Output.Create(VSphere.GetNetwork.InvokeAsync(new VSphere.GetNetworkArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;network1&amp;quot;,
+    })));
+    var vm = new VSphere.VirtualMachine(&amp;quot;vm&amp;quot;, new VSphere.VirtualMachineArgs
+    {
+        DatastoreId = datastore.Apply(datastore =&gt; datastore.Id),
+        Disks = 
+        {
+            new VSphere.Inputs.VirtualMachineDiskArgs
+            {
+                Label = &amp;quot;disk0&amp;quot;,
+                Size = 20,
+            },
+        },
+        GuestId = &amp;quot;other3xLinux64Guest&amp;quot;,
+        Memory = 2048,
+        NetworkInterfaces = 
+        {
+            new VSphere.Inputs.VirtualMachineNetworkInterfaceArgs
+            {
+                NetworkId = network.Apply(network =&gt; network.Id),
+            },
+        },
+        NumCpus = 2,
+        ResourcePoolId = cluster.Apply(cluster =&gt; cluster.ResourcePoolId),
+    });
+    var haVmOverride = new VSphere.HaVmOverride(&amp;quot;haVmOverride&amp;quot;, new VSphere.HaVmOverrideArgs
+    {
+        ComputeClusterId = cluster.Apply(cluster =&gt; cluster.Id),
+        HaVmRestartPriority = &amp;quot;highest&amp;quot;,
+        VirtualMachineId = vm.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">HaVmOverride</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">HaVmOverride</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -97,16 +195,16 @@ connections.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride__ctor_" data-uid="Pulumi.VSphere.HaVmOverride.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_HaVmOverride__ctor_System_String_Pulumi_VSphere_HaVmOverrideArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.HaVmOverride.#ctor(System.String,Pulumi.VSphere.HaVmOverrideArgs,System.Nullable{CustomResourceOptions})">HaVmOverride(String, HaVmOverrideArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_HaVmOverride__ctor_System_String_Pulumi_VSphere_HaVmOverrideArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.HaVmOverride.#ctor(System.String,Pulumi.VSphere.HaVmOverrideArgs,Pulumi.CustomResourceOptions)">HaVmOverride(String, HaVmOverrideArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a HaVmOverride resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HaVmOverride(string name, HaVmOverrideArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public HaVmOverride(string name, HaVmOverrideArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,7 +229,7 @@ connections.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -141,12 +239,12 @@ connections.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_ComputeClusterId_" data-uid="Pulumi.VSphere.HaVmOverride.ComputeClusterId*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_ComputeClusterId" data-uid="Pulumi.VSphere.HaVmOverride.ComputeClusterId">ComputeClusterId</h4>
-  <div class="markdown level1 summary"><p>The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+  <div class="markdown level1 summary"><p>The managed object reference
+ID of the cluster to put the override in.  Forces a new
 resource if changed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -164,26 +262,25 @@ resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaDatastoreApdRecoveryAction_" data-uid="Pulumi.VSphere.HaVmOverride.HaDatastoreApdRecoveryAction*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaDatastoreApdRecoveryAction" data-uid="Pulumi.VSphere.HaVmOverride.HaDatastoreApdRecoveryAction">HaDatastoreApdRecoveryAction</h4>
   <div class="markdown level1 summary"><p>Controls the action to take
 on this virtual machine if an APD status on an affected datastore clears in
 the middle of an APD event. Can be one of <code>useClusterDefault</code>, <code>none</code> or
-<code>reset</code>.  Default: <code>useClusterDefault</code>.
-&lt;sup&gt;[*][tf-vsphere-cluster-resource-version-restrictions]&lt;/sup&gt;</p>
+<code>reset</code>.  Default: <code>useClusterDefault</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaDatastoreApdRecoveryAction { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaDatastoreApdRecoveryAction { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -195,26 +292,25 @@ the middle of an APD event. Can be one of <code>useClusterDefault</code>, <code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaDatastoreApdResponse_" data-uid="Pulumi.VSphere.HaVmOverride.HaDatastoreApdResponse*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaDatastoreApdResponse" data-uid="Pulumi.VSphere.HaVmOverride.HaDatastoreApdResponse">HaDatastoreApdResponse</h4>
   <div class="markdown level1 summary"><p>Controls the action to take on this
 virtual machine when the cluster has detected loss to all paths to a relevant
 datastore. Can be one of <code>clusterDefault</code>, <code>disabled</code>, <code>warning</code>,
-<code>restartConservative</code>, or <code>restartAggressive</code>.  Default: <code>clusterDefault</code>.
-&lt;sup&gt;[*][tf-vsphere-cluster-resource-version-restrictions]&lt;/sup&gt;</p>
+<code>restartConservative</code>, or <code>restartAggressive</code>.  Default: <code>clusterDefault</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaDatastoreApdResponse { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaDatastoreApdResponse { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,21 +322,20 @@ datastore. Can be one of <code>clusterDefault</code>, <code>disabled</code>, <co
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaDatastoreApdResponseDelay_" data-uid="Pulumi.VSphere.HaVmOverride.HaDatastoreApdResponseDelay*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaDatastoreApdResponseDelay" data-uid="Pulumi.VSphere.HaVmOverride.HaDatastoreApdResponseDelay">HaDatastoreApdResponseDelay</h4>
   <div class="markdown level1 summary"><p>Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
 <code>ha_datastore_apd_response</code>. Use <code>-1</code> to use
-the cluster default. Default: <code>-1</code>.
-&lt;sup&gt;[*][tf-vsphere-cluster-resource-version-restrictions]&lt;/sup&gt;</p>
+the cluster default. Default: <code>-1</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -257,26 +352,25 @@ the cluster default. Default: <code>-1</code>.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaDatastorePdlResponse_" data-uid="Pulumi.VSphere.HaVmOverride.HaDatastorePdlResponse*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaDatastorePdlResponse" data-uid="Pulumi.VSphere.HaVmOverride.HaDatastorePdlResponse">HaDatastorePdlResponse</h4>
   <div class="markdown level1 summary"><p>Controls the action to take on this
 virtual machine when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of <code>clusterDefault</code>, <code>disabled</code>, <code>warning</code>, or
-<code>restartAggressive</code>. Default: <code>clusterDefault</code>.
-&lt;sup&gt;[*][tf-vsphere-cluster-resource-version-restrictions]&lt;/sup&gt;</p>
+<code>restartAggressive</code>. Default: <code>clusterDefault</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaDatastorePdlResponse { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaDatastorePdlResponse { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -288,13 +382,13 @@ relevant datastore. Can be one of <code>clusterDefault</code>, <code>disabled</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaHostIsolationResponse_" data-uid="Pulumi.VSphere.HaVmOverride.HaHostIsolationResponse*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaHostIsolationResponse" data-uid="Pulumi.VSphere.HaVmOverride.HaHostIsolationResponse">HaHostIsolationResponse</h4>
@@ -306,7 +400,7 @@ the cluster. Can be one of <code>clusterIsolationResponse</code>, <code>none</co
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaHostIsolationResponse { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaHostIsolationResponse { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,13 +412,13 @@ the cluster. Can be one of <code>clusterIsolationResponse</code>, <code>none</co
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaVmFailureInterval_" data-uid="Pulumi.VSphere.HaVmOverride.HaVmFailureInterval*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaVmFailureInterval" data-uid="Pulumi.VSphere.HaVmOverride.HaVmFailureInterval">HaVmFailureInterval</h4>
@@ -347,13 +441,13 @@ is marked as failed. The value is in seconds. Default: <code>30</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaVmMaximumFailureWindow_" data-uid="Pulumi.VSphere.HaVmOverride.HaVmMaximumFailureWindow*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaVmMaximumFailureWindow" data-uid="Pulumi.VSphere.HaVmOverride.HaVmMaximumFailureWindow">HaVmMaximumFailureWindow</h4>
@@ -379,13 +473,13 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaVmMaximumResets_" data-uid="Pulumi.VSphere.HaVmOverride.HaVmMaximumResets*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaVmMaximumResets" data-uid="Pulumi.VSphere.HaVmOverride.HaVmMaximumResets">HaVmMaximumResets</h4>
@@ -408,13 +502,13 @@ perform to this virtual machine when responding to a failure event. Default:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaVmMinimumUptime_" data-uid="Pulumi.VSphere.HaVmOverride.HaVmMinimumUptime*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaVmMinimumUptime" data-uid="Pulumi.VSphere.HaVmOverride.HaVmMinimumUptime">HaVmMinimumUptime</h4>
@@ -437,13 +531,13 @@ powering on this virtual machine before monitoring for heartbeats. Default:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaVmMonitoring_" data-uid="Pulumi.VSphere.HaVmOverride.HaVmMonitoring*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaVmMonitoring" data-uid="Pulumi.VSphere.HaVmOverride.HaVmMonitoring">HaVmMonitoring</h4>
@@ -454,7 +548,7 @@ when HA is enabled in the cluster. Can be one of <code>vmMonitoringDisabled</cod
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaVmMonitoring { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaVmMonitoring { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -466,13 +560,13 @@ when HA is enabled in the cluster. Can be one of <code>vmMonitoringDisabled</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaVmMonitoringUseClusterDefaults_" data-uid="Pulumi.VSphere.HaVmOverride.HaVmMonitoringUseClusterDefaults*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaVmMonitoringUseClusterDefaults" data-uid="Pulumi.VSphere.HaVmOverride.HaVmMonitoringUseClusterDefaults">HaVmMonitoringUseClusterDefaults</h4>
@@ -496,13 +590,13 @@ this resource are used for virtual machine monitoring. The default is <code>true
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaVmRestartPriority_" data-uid="Pulumi.VSphere.HaVmOverride.HaVmRestartPriority*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaVmRestartPriority" data-uid="Pulumi.VSphere.HaVmOverride.HaVmRestartPriority">HaVmRestartPriority</h4>
@@ -514,7 +608,7 @@ Default: <code>clusterRestartPriority</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HaVmRestartPriority { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HaVmRestartPriority { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -526,20 +620,19 @@ Default: <code>clusterRestartPriority</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L152">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_HaVmRestartTimeout_" data-uid="Pulumi.VSphere.HaVmOverride.HaVmRestartTimeout*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_HaVmRestartTimeout" data-uid="Pulumi.VSphere.HaVmOverride.HaVmRestartTimeout">HaVmRestartTimeout</h4>
   <div class="markdown level1 summary"><p>The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use <code>-1</code> to
-specify the cluster default.  Default: <code>-1</code>.
-&lt;sup&gt;[*][tf-vsphere-cluster-resource-version-restrictions]&lt;/sup&gt;</p>
+specify the cluster default.  Default: <code>-1</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -556,13 +649,13 @@ specify the cluster default.  Default: <code>-1</code>.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L219">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_VirtualMachineId_" data-uid="Pulumi.VSphere.HaVmOverride.VirtualMachineId*"></a>
   <h4 id="Pulumi_VSphere_HaVmOverride_VirtualMachineId" data-uid="Pulumi.VSphere.HaVmOverride.VirtualMachineId">VirtualMachineId</h4>
@@ -584,7 +677,7 @@ the override for.  Forces a new resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -592,17 +685,17 @@ the override for.  Forces a new resource if changed.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L260">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HaVmOverride_Get_" data-uid="Pulumi.VSphere.HaVmOverride.Get*"></a>
-  <h4 id="Pulumi_VSphere_HaVmOverride_Get_System_String_Input_System_String__Pulumi_VSphere_HaVmOverrideState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.HaVmOverride.Get(System.String,Input{System.String},Pulumi.VSphere.HaVmOverrideState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, HaVmOverrideState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_HaVmOverride_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_HaVmOverrideState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.HaVmOverride.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.HaVmOverrideState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, HaVmOverrideState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing HaVmOverride resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static HaVmOverride Get(string name, Input&lt;string&gt; id, HaVmOverrideState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static HaVmOverride Get(string name, Input&lt;string&gt; id, HaVmOverrideState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -621,7 +714,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -633,7 +726,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -662,7 +755,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HaVmOverride.cs/#L26" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/HaVmOverride.cs/#L91" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

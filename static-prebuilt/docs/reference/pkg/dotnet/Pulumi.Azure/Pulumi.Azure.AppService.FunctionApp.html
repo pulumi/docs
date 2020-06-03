@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FunctionApp
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,131 @@
   <h1 id="Pulumi_Azure_AppService_FunctionApp" data-uid="Pulumi.Azure.AppService.FunctionApp" class="text-break">Class FunctionApp
   </h1>
   <div class="markdown level0 summary"><p>Manages a Function App.</p>
+<h2 id="example-usage-with-app-service-plan">Example Usage (with App Service Plan)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;westus2&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var examplePlan = new Azure.AppService.Plan(&amp;quot;examplePlan&amp;quot;, new Azure.AppService.PlanArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = new Azure.AppService.Inputs.PlanSkuArgs
+        {
+            Tier = &amp;quot;Standard&amp;quot;,
+            Size = &amp;quot;S1&amp;quot;,
+        },
+    });
+    var exampleFunctionApp = new Azure.AppService.FunctionApp(&amp;quot;exampleFunctionApp&amp;quot;, new Azure.AppService.FunctionAppArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AppServicePlanId = examplePlan.Id,
+        StorageConnectionString = exampleAccount.PrimaryConnectionString,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-in-a-consumption-plan">Example Usage (in a Consumption Plan)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;westus2&amp;quot;,
+    });
+    var exampleAccount = new Azure.Storage.Account(&amp;quot;exampleAccount&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var examplePlan = new Azure.AppService.Plan(&amp;quot;examplePlan&amp;quot;, new Azure.AppService.PlanArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Kind = &amp;quot;FunctionApp&amp;quot;,
+        Sku = new Azure.AppService.Inputs.PlanSkuArgs
+        {
+            Tier = &amp;quot;Dynamic&amp;quot;,
+            Size = &amp;quot;Y1&amp;quot;,
+        },
+    });
+    var exampleFunctionApp = new Azure.AppService.FunctionApp(&amp;quot;exampleFunctionApp&amp;quot;, new Azure.AppService.FunctionAppArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AppServicePlanId = examplePlan.Id,
+        StorageConnectionString = exampleAccount.PrimaryConnectionString,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">FunctionApp</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">FunctionApp</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.AppService.html">Pulumi.Azure.AppService</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -88,16 +207,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp__ctor_" data-uid="Pulumi.Azure.AppService.FunctionApp.#ctor*"></a>
-  <h4 id="Pulumi_Azure_AppService_FunctionApp__ctor_System_String_Pulumi_Azure_AppService_FunctionAppArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.AppService.FunctionApp.#ctor(System.String,Pulumi.Azure.AppService.FunctionAppArgs,System.Nullable{CustomResourceOptions})">FunctionApp(String, FunctionAppArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_AppService_FunctionApp__ctor_System_String_Pulumi_Azure_AppService_FunctionAppArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.AppService.FunctionApp.#ctor(System.String,Pulumi.Azure.AppService.FunctionAppArgs,Pulumi.CustomResourceOptions)">FunctionApp(String, FunctionAppArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a FunctionApp resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FunctionApp(string name, FunctionAppArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public FunctionApp(string name, FunctionAppArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +241,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +251,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_AppServicePlanId_" data-uid="Pulumi.Azure.AppService.FunctionApp.AppServicePlanId*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_AppServicePlanId" data-uid="Pulumi.Azure.AppService.FunctionApp.AppServicePlanId">AppServicePlanId</h4>
@@ -153,13 +272,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_AppSettings_" data-uid="Pulumi.Azure.AppService.FunctionApp.AppSettings*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_AppSettings" data-uid="Pulumi.Azure.AppService.FunctionApp.AppSettings">AppSettings</h4>
@@ -168,7 +287,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; AppSettings { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; AppSettings { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +299,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_AuthSettings_" data-uid="Pulumi.Azure.AppService.FunctionApp.AuthSettings*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_AuthSettings" data-uid="Pulumi.Azure.AppService.FunctionApp.AuthSettings">AuthSettings</h4>
@@ -207,13 +326,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.FunctionAppAuthSettings.html">FunctionAppAuthSettings</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.FunctionAppAuthSettings.html">FunctionAppAuthSettings</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_ClientAffinityEnabled_" data-uid="Pulumi.Azure.AppService.FunctionApp.ClientAffinityEnabled*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_ClientAffinityEnabled" data-uid="Pulumi.Azure.AppService.FunctionApp.ClientAffinityEnabled">ClientAffinityEnabled</h4>
@@ -234,13 +353,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_ConnectionStrings_" data-uid="Pulumi.Azure.AppService.FunctionApp.ConnectionStrings*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_ConnectionStrings" data-uid="Pulumi.Azure.AppService.FunctionApp.ConnectionStrings">ConnectionStrings</h4>
@@ -261,13 +380,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.FunctionAppConnectionString.html">FunctionAppConnectionString</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.FunctionAppConnectionString.html">FunctionAppConnectionString</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_DailyMemoryTimeQuota_" data-uid="Pulumi.Azure.AppService.FunctionApp.DailyMemoryTimeQuota*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_DailyMemoryTimeQuota" data-uid="Pulumi.Azure.AppService.FunctionApp.DailyMemoryTimeQuota">DailyMemoryTimeQuota</h4>
@@ -288,13 +407,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_DefaultHostname_" data-uid="Pulumi.Azure.AppService.FunctionApp.DefaultHostname*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_DefaultHostname" data-uid="Pulumi.Azure.AppService.FunctionApp.DefaultHostname">DefaultHostname</h4>
@@ -315,13 +434,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L148">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_EnableBuiltinLogging_" data-uid="Pulumi.Azure.AppService.FunctionApp.EnableBuiltinLogging*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_EnableBuiltinLogging" data-uid="Pulumi.Azure.AppService.FunctionApp.EnableBuiltinLogging">EnableBuiltinLogging</h4>
@@ -342,13 +461,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_Enabled_" data-uid="Pulumi.Azure.AppService.FunctionApp.Enabled*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_Enabled" data-uid="Pulumi.Azure.AppService.FunctionApp.Enabled">Enabled</h4>
@@ -369,13 +488,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_HttpsOnly_" data-uid="Pulumi.Azure.AppService.FunctionApp.HttpsOnly*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_HttpsOnly" data-uid="Pulumi.Azure.AppService.FunctionApp.HttpsOnly">HttpsOnly</h4>
@@ -396,13 +515,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_Identity_" data-uid="Pulumi.Azure.AppService.FunctionApp.Identity*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_Identity" data-uid="Pulumi.Azure.AppService.FunctionApp.Identity">Identity</h4>
@@ -423,13 +542,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.FunctionAppIdentity.html">FunctionAppIdentity</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.FunctionAppIdentity.html">FunctionAppIdentity</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_Kind_" data-uid="Pulumi.Azure.AppService.FunctionApp.Kind*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_Kind" data-uid="Pulumi.Azure.AppService.FunctionApp.Kind">Kind</h4>
@@ -450,13 +569,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_Location_" data-uid="Pulumi.Azure.AppService.FunctionApp.Location*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_Location" data-uid="Pulumi.Azure.AppService.FunctionApp.Location">Location</h4>
@@ -477,13 +596,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L184">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_Name_" data-uid="Pulumi.Azure.AppService.FunctionApp.Name*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_Name" data-uid="Pulumi.Azure.AppService.FunctionApp.Name">Name</h4>
@@ -504,13 +623,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_OsType_" data-uid="Pulumi.Azure.AppService.FunctionApp.OsType*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_OsType" data-uid="Pulumi.Azure.AppService.FunctionApp.OsType">OsType</h4>
@@ -519,7 +638,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OsType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OsType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -531,13 +650,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_OutboundIpAddresses_" data-uid="Pulumi.Azure.AppService.FunctionApp.OutboundIpAddresses*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_OutboundIpAddresses" data-uid="Pulumi.Azure.AppService.FunctionApp.OutboundIpAddresses">OutboundIpAddresses</h4>
@@ -558,13 +677,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_PossibleOutboundIpAddresses_" data-uid="Pulumi.Azure.AppService.FunctionApp.PossibleOutboundIpAddresses*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_PossibleOutboundIpAddresses" data-uid="Pulumi.Azure.AppService.FunctionApp.PossibleOutboundIpAddresses">PossibleOutboundIpAddresses</h4>
@@ -585,13 +704,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_ResourceGroupName_" data-uid="Pulumi.Azure.AppService.FunctionApp.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_ResourceGroupName" data-uid="Pulumi.Azure.AppService.FunctionApp.ResourceGroupName">ResourceGroupName</h4>
@@ -612,13 +731,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L214">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_SiteConfig_" data-uid="Pulumi.Azure.AppService.FunctionApp.SiteConfig*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_SiteConfig" data-uid="Pulumi.Azure.AppService.FunctionApp.SiteConfig">SiteConfig</h4>
@@ -639,13 +758,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.FunctionAppSiteConfig.html">FunctionAppSiteConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.FunctionAppSiteConfig.html">FunctionAppSiteConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L220">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_SiteCredentials_" data-uid="Pulumi.Azure.AppService.FunctionApp.SiteCredentials*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_SiteCredentials" data-uid="Pulumi.Azure.AppService.FunctionApp.SiteCredentials">SiteCredentials</h4>
@@ -666,17 +785,71 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.FunctionAppSiteCredential.html">FunctionAppSiteCredential</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.FunctionAppSiteCredential.html">FunctionAppSiteCredential</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L226">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_FunctionApp_StorageAccountAccessKey_" data-uid="Pulumi.Azure.AppService.FunctionApp.StorageAccountAccessKey*"></a>
+  <h4 id="Pulumi_Azure_AppService_FunctionApp_StorageAccountAccessKey" data-uid="Pulumi.Azure.AppService.FunctionApp.StorageAccountAccessKey">StorageAccountAccessKey</h4>
+  <div class="markdown level1 summary"><p>The access key which will be used to access the backend storage account for the Function App.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StorageAccountAccessKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L232">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_FunctionApp_StorageAccountName_" data-uid="Pulumi.Azure.AppService.FunctionApp.StorageAccountName*"></a>
+  <h4 id="Pulumi_Azure_AppService_FunctionApp_StorageAccountName" data-uid="Pulumi.Azure.AppService.FunctionApp.StorageAccountName">StorageAccountName</h4>
+  <div class="markdown level1 summary"><p>The backend storage account name which will be used by this Function App (such as the dashboard, logs).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StorageAccountName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L238">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_StorageConnectionString_" data-uid="Pulumi.Azure.AppService.FunctionApp.StorageConnectionString*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_StorageConnectionString" data-uid="Pulumi.Azure.AppService.FunctionApp.StorageConnectionString">StorageConnectionString</h4>
-  <div class="markdown level1 summary"><p>The connection string of the backend storage account which will be used by this Function App (such as the dashboard, logs).</p>
+  <div class="markdown level1 summary"><p>The connection string to the backend storage account which will be used by this Function App (such as the dashboard, logs). Typically set to the <code>primary_connection_string</code> of a storage account resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -693,13 +866,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L244">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_Tags_" data-uid="Pulumi.Azure.AppService.FunctionApp.Tags*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_Tags" data-uid="Pulumi.Azure.AppService.FunctionApp.Tags">Tags</h4>
@@ -708,7 +881,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -720,13 +893,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L152">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L250">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_Version_" data-uid="Pulumi.Azure.AppService.FunctionApp.Version*"></a>
   <h4 id="Pulumi_Azure_AppService_FunctionApp_Version" data-uid="Pulumi.Azure.AppService.FunctionApp.Version">Version</h4>
@@ -735,7 +908,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Version { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Version { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -747,7 +920,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -755,17 +928,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L193">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L291">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_FunctionApp_Get_" data-uid="Pulumi.Azure.AppService.FunctionApp.Get*"></a>
-  <h4 id="Pulumi_Azure_AppService_FunctionApp_Get_System_String_Input_System_String__Pulumi_Azure_AppService_FunctionAppState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.AppService.FunctionApp.Get(System.String,Input{System.String},Pulumi.Azure.AppService.FunctionAppState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FunctionAppState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_AppService_FunctionApp_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_AppService_FunctionAppState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.AppService.FunctionApp.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.AppService.FunctionAppState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, FunctionAppState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing FunctionApp resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static FunctionApp Get(string name, Input&lt;string&gt; id, FunctionAppState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static FunctionApp Get(string name, Input&lt;string&gt; id, FunctionAppState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -784,7 +957,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -796,7 +969,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -825,7 +998,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/FunctionApp.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/FunctionApp.cs/#L101" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

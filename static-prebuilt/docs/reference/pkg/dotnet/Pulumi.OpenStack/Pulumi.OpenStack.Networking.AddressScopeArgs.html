@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AddressScopeArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AddressScopeArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">AddressScopeArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Networking.html">Pulumi.OpenStack.Networking</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/AddressScope.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/AddressScope.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_AddressScopeArgs__ctor_" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_Networking_AddressScopeArgs__ctor" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.#ctor">AddressScopeArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/AddressScope.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/AddressScope.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_AddressScopeArgs_IpVersion_" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.IpVersion*"></a>
   <h4 id="Pulumi_OpenStack_Networking_AddressScopeArgs_IpVersion" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.IpVersion">IpVersion</h4>
@@ -110,7 +139,7 @@ creates a new address-scope.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? IpVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; IpVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,13 +151,13 @@ creates a new address-scope.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/AddressScope.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/AddressScope.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_AddressScopeArgs_Name_" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.Name*"></a>
   <h4 id="Pulumi_OpenStack_Networking_AddressScopeArgs_Name" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.Name">Name</h4>
@@ -138,7 +167,7 @@ name of the existing address-scope.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +179,13 @@ name of the existing address-scope.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/AddressScope.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/AddressScope.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_AddressScopeArgs_ProjectId_" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.ProjectId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_AddressScopeArgs_ProjectId" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.ProjectId">ProjectId</h4>
@@ -167,7 +196,7 @@ new address-scope.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProjectId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ProjectId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +208,13 @@ new address-scope.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/AddressScope.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/AddressScope.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_AddressScopeArgs_Region_" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.Region*"></a>
   <h4 id="Pulumi_OpenStack_Networking_AddressScopeArgs_Region" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.Region">Region</h4>
@@ -197,7 +226,7 @@ address-scope.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +238,13 @@ address-scope.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/AddressScope.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/AddressScope.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_AddressScopeArgs_Shared_" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.Shared*"></a>
   <h4 id="Pulumi_OpenStack_Networking_AddressScopeArgs_Shared" data-uid="Pulumi.OpenStack.Networking.AddressScopeArgs.Shared">Shared</h4>
@@ -226,7 +255,7 @@ address-scope.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Shared { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Shared { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,7 +267,7 @@ address-scope.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -250,7 +279,7 @@ address-scope.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/AddressScope.cs/#L100" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/AddressScope.cs/#L149" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

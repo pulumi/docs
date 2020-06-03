@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BackendServiceBackendArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">BackendServiceBackendArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">BackendServiceBackendArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Inputs.html">Pulumi.Gcp.Compute.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs__ctor_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs__ctor" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.#ctor">BackendServiceBackendArgs()</h4>
@@ -100,15 +129,19 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_BalancingMode_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.BalancingMode*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_BalancingMode" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.BalancingMode">BalancingMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the balancing mode for this backend.
+For global HTTP(S) or TCP/SSL load balancing, the default is
+UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
+and CONNECTION (for TCP/SSL).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? BalancingMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; BalancingMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,21 +153,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_CapacityScaler_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.CapacityScaler*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_CapacityScaler" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.CapacityScaler">CapacityScaler</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A multiplier applied to the group's maximum servicing capacity
+(based on UTILIZATION, RATE or CONNECTION).
+Default value is 1, which means the group will serve up to 100%
+of its configured capacity (depending on balancingMode). A
+setting of 0 means the group is completely drained, offering
+0% of its available Capacity. Valid range is [0.0,1.0].</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;double&gt;? CapacityScaler { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;double&gt; CapacityScaler { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,21 +185,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_Description_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_Description" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.Description">Description</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An optional description of this resource.
+Provide this property when you create the resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,17 +213,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_Group_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.Group*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_Group" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.Group">Group</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The fully-qualified URL of an Instance Group or Network Endpoint
+Group resource. In case of instance group this defines the list
+of instances that serve traffic. Member virtual machine
+instances from each instance group must live in the same zone as
+the instance group itself. No two backends in a backend service
+are allowed to use same Instance Group resource.
+For Network Endpoint Groups this defines list of endpoints. All
+endpoints of Network Endpoint Group must be hosted on instances
+located in the same zone as the Network Endpoint Group.
+Backend services cannot mix Instance Group and
+Network Endpoint Group backends.
+Note that you must specify an Instance Group or Network Endpoint
+Group resource using the fully-qualified URL, rather than a
+partial URL.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -198,21 +253,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxConnections_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxConnections*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxConnections" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxConnections">MaxConnections</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of connections to the backend cluster.
+Defaults to 1024.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxConnections { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxConnections { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,21 +281,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxConnectionsPerEndpoint_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxConnectionsPerEndpoint*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxConnectionsPerEndpoint" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxConnectionsPerEndpoint">MaxConnectionsPerEndpoint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The max number of simultaneous connections that a single backend
+network endpoint can handle. This is used to calculate the
+capacity of the group. Can be used in either CONNECTION or
+UTILIZATION balancing modes.
+For CONNECTION mode, either
+maxConnections or maxConnectionsPerEndpoint must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxConnectionsPerEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxConnectionsPerEndpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,21 +313,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxConnectionsPerInstance_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxConnectionsPerInstance*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxConnectionsPerInstance" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxConnectionsPerInstance">MaxConnectionsPerInstance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The max number of simultaneous connections that a single
+backend instance can handle. This is used to calculate the
+capacity of the group. Can be used in either CONNECTION or
+UTILIZATION balancing modes.
+For CONNECTION mode, either maxConnections or
+maxConnectionsPerInstance must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxConnectionsPerInstance { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxConnectionsPerInstance { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,21 +345,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxRate_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxRate*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxRate" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxRate">MaxRate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The max requests per second (RPS) of the group.
+Can be used with either RATE or UTILIZATION balancing modes,
+but required if RATE mode. For RATE mode, either maxRate or one
+of maxRatePerInstance or maxRatePerEndpoint, as appropriate for
+group type, must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxRate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxRate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,21 +376,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxRatePerEndpoint_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxRatePerEndpoint*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxRatePerEndpoint" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxRatePerEndpoint">MaxRatePerEndpoint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The max requests per second (RPS) that a single backend network
+endpoint can handle. This is used to calculate the capacity of
+the group. Can be used in either balancing mode. For RATE mode,
+either maxRate or maxRatePerEndpoint must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;double&gt;? MaxRatePerEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;double&gt; MaxRatePerEndpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,21 +406,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxRatePerInstance_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxRatePerInstance*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxRatePerInstance" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxRatePerInstance">MaxRatePerInstance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The max requests per second (RPS) that a single backend
+instance can handle. This is used to calculate the capacity of
+the group. Can be used in either balancing mode. For RATE mode,
+either maxRate or maxRatePerInstance must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;double&gt;? MaxRatePerInstance { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;double&gt; MaxRatePerInstance { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -354,21 +436,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxUtilization_" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxUtilization*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_BackendServiceBackendArgs_MaxUtilization" data-uid="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.MaxUtilization">MaxUtilization</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used when balancingMode is UTILIZATION. This ratio defines the
+CPU utilization target for the group. The default is 0.8. Valid
+range is [0.0, 1.0].</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;double&gt;? MaxUtilization { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;double&gt; MaxUtilization { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -380,7 +465,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -392,7 +477,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Inputs/BackendServiceBackendArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

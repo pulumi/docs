@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Folder
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -95,6 +95,32 @@ should be.</p>
 Use <code>pulumi import</code> and inspect the output to ensure
 your existing members are preserved.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var department1 = new Gcp.Organizations.Folder(&amp;quot;department1&amp;quot;, new Gcp.Organizations.FolderArgs
+    {
+        DisplayName = &amp;quot;Department 1&amp;quot;,
+        Parent = &amp;quot;organizations/1234567&amp;quot;,
+    });
+    var admin = new Gcp.Folder.IAMBinding(&amp;quot;admin&amp;quot;, new Gcp.Folder.IAMBindingArgs
+    {
+        Folder = department1.Name,
+        Role = &amp;quot;roles/editor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:alice@gmail.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMBindingArgs.html">IAMBindingArgs</a></h4>
       <section></section>
@@ -109,6 +135,29 @@ the IAM policy for an existing Google Cloud Platform folder.</p>
 should be. Similarly, roles controlled by <code>gcp.folder.IAMBinding</code>
 should not be assigned to using <code>gcp.folder.IAMMember</code>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var department1 = new Gcp.Organizations.Folder(&amp;quot;department1&amp;quot;, new Gcp.Organizations.FolderArgs
+    {
+        DisplayName = &amp;quot;Department 1&amp;quot;,
+        Parent = &amp;quot;organizations/1234567&amp;quot;,
+    });
+    var admin = new Gcp.Folder.IAMMember(&amp;quot;admin&amp;quot;, new Gcp.Folder.IAMMemberArgs
+    {
+        Folder = department1.Name,
+        Role = &amp;quot;roles/editor&amp;quot;,
+        Member = &amp;quot;user:alice@gmail.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMMemberArgs.html">IAMMemberArgs</a></h4>
       <section></section>
@@ -117,6 +166,42 @@ should not be assigned to using <code>gcp.folder.IAMMember</code>.</p>
       <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMPolicy.html">IAMPolicy</a></h4>
       <section><p>Allows creation and management of the IAM policy for an existing Google Cloud
 Platform folder.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var department1 = new Gcp.Organizations.Folder(&amp;quot;department1&amp;quot;, new Gcp.Organizations.FolderArgs
+    {
+        DisplayName = &amp;quot;Department 1&amp;quot;,
+        Parent = &amp;quot;organizations/1234567&amp;quot;,
+    });
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var folderAdminPolicy = new Gcp.Folder.IAMPolicy(&amp;quot;folderAdminPolicy&amp;quot;, new Gcp.Folder.IAMPolicyArgs
+    {
+        Folder = department1.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMPolicyArgs.html">IAMPolicyArgs</a></h4>
       <section></section>
@@ -127,6 +212,27 @@ Platform folder.</p>
 <a href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a> and
 <a href="https://cloud.google.com/resource-manager/reference/rest/v1/folders/setOrgPolicy">API</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var serialPortPolicy = new Gcp.Folder.OrganizationPolicy(&amp;quot;serialPortPolicy&amp;quot;, new Gcp.Folder.OrganizationPolicyArgs
+    {
+        BooleanPolicy = new Gcp.Folder.Inputs.OrganizationPolicyBooleanPolicyArgs
+        {
+            Enforced = true,
+        },
+        Constraint = &amp;quot;compute.disableSerialPortAccess&amp;quot;,
+        Folder = &amp;quot;folders/123456789&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Folder.OrganizationPolicyArgs.html">OrganizationPolicyArgs</a></h4>
       <section></section>

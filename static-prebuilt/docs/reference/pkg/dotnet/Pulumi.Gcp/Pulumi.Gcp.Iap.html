@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Iap
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,6 +89,176 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.AppEngineServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_app_engine_service_iam_policy">google_iap_app_engine_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineServiceIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineServiceIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_service_iam_binding">google_iap_app_engine_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineServiceIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineServiceIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineServiceIamBindingConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_service_iam_member">google_iap_app_engine_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineServiceIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineServiceIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineServiceIamMemberConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamBindingArgs.html">AppEngineServiceIamBindingArgs</a></h4>
       <section></section>
@@ -107,6 +277,176 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.AppEngineServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_app_engine_service_iam_policy">google_iap_app_engine_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineServiceIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineServiceIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_service_iam_binding">google_iap_app_engine_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineServiceIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineServiceIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineServiceIamBindingConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_service_iam_member">google_iap_app_engine_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineServiceIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineServiceIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineServiceIamMemberConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamMemberArgs.html">AppEngineServiceIamMemberArgs</a></h4>
       <section></section>
@@ -125,6 +465,176 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.AppEngineServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_app_engine_service_iam_policy">google_iap_app_engine_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineServiceIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineServiceIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_service_iam_binding">google_iap_app_engine_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineServiceIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineServiceIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineServiceIamBindingConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_service_iam_member">google_iap_app_engine_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineServiceIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineServiceIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineServiceIamMemberConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamPolicyArgs.html">AppEngineServiceIamPolicyArgs</a></h4>
       <section></section>
@@ -143,6 +653,182 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.AppEngineVersionIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineVersionIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_app_engine_version_iam_policy">google_iap_app_engine_version_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineVersionIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineVersionIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineVersionIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineVersionIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_version_iam_binding">google_iap_app_engine_version_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineVersionIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineVersionIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineVersionIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineVersionIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineVersionIamBindingConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_version_iam_member">google_iap_app_engine_version_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineVersionIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineVersionIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineVersionIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineVersionIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineVersionIamMemberConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamBindingArgs.html">AppEngineVersionIamBindingArgs</a></h4>
       <section></section>
@@ -161,6 +847,182 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.AppEngineVersionIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineVersionIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_app_engine_version_iam_policy">google_iap_app_engine_version_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineVersionIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineVersionIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineVersionIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineVersionIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_version_iam_binding">google_iap_app_engine_version_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineVersionIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineVersionIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineVersionIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineVersionIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineVersionIamBindingConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_version_iam_member">google_iap_app_engine_version_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineVersionIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineVersionIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineVersionIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineVersionIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineVersionIamMemberConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamMemberArgs.html">AppEngineVersionIamMemberArgs</a></h4>
       <section></section>
@@ -179,6 +1041,182 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.AppEngineVersionIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineVersionIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_app_engine_version_iam_policy">google_iap_app_engine_version_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineVersionIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineVersionIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.AppEngineVersionIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.AppEngineVersionIamPolicyArgs
+    {
+        Project = google_app_engine_standard_app_version.Version.Project,
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_version_iam_binding">google_iap_app_engine_version_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineVersionIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineVersionIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.AppEngineVersionIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.AppEngineVersionIamBindingArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineVersionIamBindingConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_app_engine_version_iam_member">google_iap_app_engine_version_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineVersionIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineVersionIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.AppEngineVersionIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.AppEngineVersionIamMemberArgs
+    {
+        AppId = google_app_engine_standard_app_version.Version.Project,
+        Condition = new Gcp.Iap.Inputs.AppEngineVersionIamMemberConditionArgs
+        {
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+        },
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Project = google_app_engine_standard_app_version.Version.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Service = google_app_engine_standard_app_version.Version.Service,
+        VersionId = google_app_engine_standard_app_version.Version.Version_id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamPolicyArgs.html">AppEngineVersionIamPolicyArgs</a></h4>
       <section></section>
@@ -200,6 +1238,10 @@ will remove it from state but <em>will not delete the resource on the server.</e
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.Client.html">Client</a></h4>
       <section><p>Contains the data that describes an Identity Aware Proxy owned client.</p>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>secret</code> will be stored in the raw
+state as plain-text. <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
+</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.ClientArgs.html">ClientArgs</a></h4>
       <section></section>
@@ -218,6 +1260,176 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.TunnelInstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.TunnelInstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_tunnel_instance_iam_policy">google_iap_tunnel_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.TunnelInstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.TunnelInstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.TunnelInstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.TunnelInstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_tunnel_instance_iam_binding">google_iap_tunnel_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.TunnelInstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.TunnelInstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.TunnelInstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.TunnelInstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.TunnelInstanceIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_tunnel_instance_iam_member">google_iap_tunnel_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.TunnelInstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Iap.TunnelInstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.TunnelInstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Iap.TunnelInstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.TunnelInstanceIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMBindingArgs.html">TunnelInstanceIAMBindingArgs</a></h4>
       <section></section>
@@ -236,6 +1448,176 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.TunnelInstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.TunnelInstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_tunnel_instance_iam_policy">google_iap_tunnel_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.TunnelInstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.TunnelInstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.TunnelInstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.TunnelInstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_tunnel_instance_iam_binding">google_iap_tunnel_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.TunnelInstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.TunnelInstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.TunnelInstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.TunnelInstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.TunnelInstanceIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_tunnel_instance_iam_member">google_iap_tunnel_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.TunnelInstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Iap.TunnelInstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.TunnelInstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Iap.TunnelInstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.TunnelInstanceIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMMemberArgs.html">TunnelInstanceIAMMemberArgs</a></h4>
       <section></section>
@@ -254,6 +1636,176 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.TunnelInstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.TunnelInstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_tunnel_instance_iam_policy">google_iap_tunnel_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.TunnelInstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.TunnelInstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.TunnelInstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.TunnelInstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_tunnel_instance_iam_binding">google_iap_tunnel_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.TunnelInstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.TunnelInstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.TunnelInstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.TunnelInstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.TunnelInstanceIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_tunnel_instance_iam_member">google_iap_tunnel_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.TunnelInstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Iap.TunnelInstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.TunnelInstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Iap.TunnelInstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Tunnelvm.Project,
+        Zone = google_compute_instance.Tunnelvm.Zone,
+        Instance = google_compute_instance.Tunnelvm.Name,
+        Role = &amp;quot;roles/iap.tunnelResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.TunnelInstanceIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMPolicyArgs.html">TunnelInstanceIAMPolicyArgs</a></h4>
       <section></section>
@@ -272,6 +1824,170 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebBackendServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebBackendServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_backend_service_iam_policy">google_iap_web_backend_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebBackendServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebBackendServiceIamPolicyArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebBackendServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebBackendServiceIamPolicyArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_backend_service_iam_binding">google_iap_web_backend_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebBackendServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebBackendServiceIamBindingArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebBackendServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebBackendServiceIamBindingArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebBackendServiceIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_backend_service_iam_member">google_iap_web_backend_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebBackendServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebBackendServiceIamMemberArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebBackendServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebBackendServiceIamMemberArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebBackendServiceIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamBindingArgs.html">WebBackendServiceIamBindingArgs</a></h4>
       <section></section>
@@ -290,6 +2006,170 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebBackendServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebBackendServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_backend_service_iam_policy">google_iap_web_backend_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebBackendServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebBackendServiceIamPolicyArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebBackendServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebBackendServiceIamPolicyArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_backend_service_iam_binding">google_iap_web_backend_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebBackendServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebBackendServiceIamBindingArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebBackendServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebBackendServiceIamBindingArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebBackendServiceIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_backend_service_iam_member">google_iap_web_backend_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebBackendServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebBackendServiceIamMemberArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebBackendServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebBackendServiceIamMemberArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebBackendServiceIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamMemberArgs.html">WebBackendServiceIamMemberArgs</a></h4>
       <section></section>
@@ -308,6 +2188,170 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebBackendServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebBackendServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_backend_service_iam_policy">google_iap_web_backend_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebBackendServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebBackendServiceIamPolicyArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebBackendServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebBackendServiceIamPolicyArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_backend_service_iam_binding">google_iap_web_backend_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebBackendServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebBackendServiceIamBindingArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebBackendServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebBackendServiceIamBindingArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebBackendServiceIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_backend_service_iam_member">google_iap_web_backend_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebBackendServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebBackendServiceIamMemberArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebBackendServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebBackendServiceIamMemberArgs
+    {
+        Project = google_compute_backend_service.Default.Project,
+        WebBackendService = google_compute_backend_service.Default.Name,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebBackendServiceIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamPolicyArgs.html">WebBackendServiceIamPolicyArgs</a></h4>
       <section></section>
@@ -326,6 +2370,164 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_iam_policy">google_iap_web_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_iam_binding">google_iap_web_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_iam_member">google_iap_web_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamBindingArgs.html">WebIamBindingArgs</a></h4>
       <section></section>
@@ -344,6 +2546,164 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_iam_policy">google_iap_web_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_iam_binding">google_iap_web_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_iam_member">google_iap_web_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamMemberArgs.html">WebIamMemberArgs</a></h4>
       <section></section>
@@ -362,6 +2722,164 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_iam_policy">google_iap_web_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_iam_binding">google_iap_web_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_iam_member">google_iap_web_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamPolicyArgs.html">WebIamPolicyArgs</a></h4>
       <section></section>
@@ -380,6 +2898,170 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebTypeAppEngingIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeAppEngingIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_type_app_engine_iam_policy">google_iap_web_type_app_engine_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeAppEngingIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamPolicyArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeAppEngingIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamPolicyArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_app_engine_iam_binding">google_iap_web_type_app_engine_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeAppEngingIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamBindingArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeAppEngingIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamBindingArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebTypeAppEngingIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_app_engine_iam_member">google_iap_web_type_app_engine_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeAppEngingIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamMemberArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeAppEngingIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamMemberArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebTypeAppEngingIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamBindingArgs.html">WebTypeAppEngingIamBindingArgs</a></h4>
       <section></section>
@@ -398,6 +3080,170 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebTypeAppEngingIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeAppEngingIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_type_app_engine_iam_policy">google_iap_web_type_app_engine_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeAppEngingIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamPolicyArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeAppEngingIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamPolicyArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_app_engine_iam_binding">google_iap_web_type_app_engine_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeAppEngingIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamBindingArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeAppEngingIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamBindingArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebTypeAppEngingIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_app_engine_iam_member">google_iap_web_type_app_engine_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeAppEngingIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamMemberArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeAppEngingIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamMemberArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebTypeAppEngingIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamMemberArgs.html">WebTypeAppEngingIamMemberArgs</a></h4>
       <section></section>
@@ -416,6 +3262,170 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebTypeAppEngingIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeAppEngingIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_type_app_engine_iam_policy">google_iap_web_type_app_engine_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeAppEngingIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamPolicyArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeAppEngingIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamPolicyArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_app_engine_iam_binding">google_iap_web_type_app_engine_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeAppEngingIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamBindingArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeAppEngingIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamBindingArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebTypeAppEngingIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_app_engine_iam_member">google_iap_web_type_app_engine_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeAppEngingIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamMemberArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeAppEngingIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeAppEngingIamMemberArgs
+    {
+        Project = google_app_engine_application.App.Project,
+        AppId = google_app_engine_application.App.App_id,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebTypeAppEngingIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamPolicyArgs.html">WebTypeAppEngingIamPolicyArgs</a></h4>
       <section></section>
@@ -434,6 +3444,164 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebTypeComputeIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeComputeIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_type_compute_iam_policy">google_iap_web_type_compute_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeComputeIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeComputeIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeComputeIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeComputeIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_compute_iam_binding">google_iap_web_type_compute_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeComputeIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeComputeIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeComputeIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeComputeIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebTypeComputeIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_compute_iam_member">google_iap_web_type_compute_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeComputeIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeComputeIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeComputeIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeComputeIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebTypeComputeIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamBindingArgs.html">WebTypeComputeIamBindingArgs</a></h4>
       <section></section>
@@ -452,6 +3620,164 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebTypeComputeIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeComputeIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_type_compute_iam_policy">google_iap_web_type_compute_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeComputeIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeComputeIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeComputeIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeComputeIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_compute_iam_binding">google_iap_web_type_compute_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeComputeIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeComputeIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeComputeIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeComputeIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebTypeComputeIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_compute_iam_member">google_iap_web_type_compute_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeComputeIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeComputeIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeComputeIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeComputeIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebTypeComputeIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamMemberArgs.html">WebTypeComputeIamMemberArgs</a></h4>
       <section></section>
@@ -470,6 +3796,164 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.iap.WebTypeComputeIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeComputeIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_iap_web_type_compute_iam_policy">google_iap_web_type_compute_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeComputeIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeComputeIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/iap.httpsResourceAccessor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Iap.WebTypeComputeIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.Iap.WebTypeComputeIamPolicyArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_compute_iam_binding">google_iap_web_type_compute_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeComputeIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeComputeIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Iap.WebTypeComputeIamBinding(&amp;quot;binding&amp;quot;, new Gcp.Iap.WebTypeComputeIamBindingArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Iap.Inputs.WebTypeComputeIamBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_iap_web_type_compute_iam_member">google_iap_web_type_compute_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeComputeIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeComputeIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Iap.WebTypeComputeIamMember(&amp;quot;member&amp;quot;, new Gcp.Iap.WebTypeComputeIamMemberArgs
+    {
+        Project = google_project_service.Project_service.Project,
+        Role = &amp;quot;roles/iap.httpsResourceAccessor&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Iap.Inputs.WebTypeComputeIamMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamPolicyArgs.html">WebTypeComputeIamPolicyArgs</a></h4>
       <section></section>

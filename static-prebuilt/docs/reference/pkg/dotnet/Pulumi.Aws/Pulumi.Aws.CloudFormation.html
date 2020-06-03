@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.CloudFormation
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,6 +90,47 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.CloudFormation.Stack.html">Stack</a></h4>
       <section><p>Provides a CloudFormation Stack resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network = new Aws.CloudFormation.Stack(&amp;quot;network&amp;quot;, new Aws.CloudFormation.StackArgs
+    {
+        Parameters = 
+        {
+            { &amp;quot;VPCCidr&amp;quot;, &amp;quot;10.0.0.0/16&amp;quot; },
+        },
+        TemplateBody = @&amp;quot;{
+&amp;quot;&amp;quot;Parameters&amp;quot;&amp;quot; : {
+&amp;quot;&amp;quot;VPCCidr&amp;quot;&amp;quot; : {
+  &amp;quot;&amp;quot;Type&amp;quot;&amp;quot; : &amp;quot;&amp;quot;String&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Default&amp;quot;&amp;quot; : &amp;quot;&amp;quot;10.0.0.0/16&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Description&amp;quot;&amp;quot; : &amp;quot;&amp;quot;Enter the CIDR block for the VPC. Default is 10.0.0.0/16.&amp;quot;&amp;quot;
+}
+},
+&amp;quot;&amp;quot;Resources&amp;quot;&amp;quot; : {
+&amp;quot;&amp;quot;myVpc&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;Type&amp;quot;&amp;quot; : &amp;quot;&amp;quot;AWS::EC2::VPC&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Properties&amp;quot;&amp;quot; : {
+    &amp;quot;&amp;quot;CidrBlock&amp;quot;&amp;quot; : { &amp;quot;&amp;quot;Ref&amp;quot;&amp;quot; : &amp;quot;&amp;quot;VPCCidr&amp;quot;&amp;quot; },
+    &amp;quot;&amp;quot;Tags&amp;quot;&amp;quot; : [
+      {&amp;quot;&amp;quot;Key&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Name&amp;quot;&amp;quot;, &amp;quot;&amp;quot;Value&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Primary_CF_VPC&amp;quot;&amp;quot;}
+    ]
+  }
+}
+}
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CloudFormation.StackArgs.html">StackArgs</a></h4>
       <section></section>
@@ -101,6 +142,100 @@
 <blockquote>
 <p><strong>NOTE:</strong> All <code>NoEcho</code> template parameters must be ignored with the <code>lifecycle</code> configuration block <code>ignore_changes</code> argument.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;sts:AssumeRole&amp;quot;,
+                },
+                Effect = &amp;quot;Allow&amp;quot;,
+                Principals = 
+                {
+                    new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                    {
+                        Identifiers = 
+                        {
+                            &amp;quot;cloudformation.amazonaws.com&amp;quot;,
+                        },
+                        Type = &amp;quot;Service&amp;quot;,
+                    },
+                },
+            },
+        },
+    }));
+    var aWSCloudFormationStackSetAdministrationRole = new Aws.Iam.Role(&amp;quot;aWSCloudFormationStackSetAdministrationRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy.Apply(aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy =&gt; aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy.Json),
+    });
+    var example = new Aws.CloudFormation.StackSet(&amp;quot;example&amp;quot;, new Aws.CloudFormation.StackSetArgs
+    {
+        AdministrationRoleArn = aWSCloudFormationStackSetAdministrationRole.Arn,
+        Parameters = 
+        {
+            { &amp;quot;VPCCidr&amp;quot;, &amp;quot;10.0.0.0/16&amp;quot; },
+        },
+        TemplateBody = @&amp;quot;{
+&amp;quot;&amp;quot;Parameters&amp;quot;&amp;quot; : {
+&amp;quot;&amp;quot;VPCCidr&amp;quot;&amp;quot; : {
+  &amp;quot;&amp;quot;Type&amp;quot;&amp;quot; : &amp;quot;&amp;quot;String&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Default&amp;quot;&amp;quot; : &amp;quot;&amp;quot;10.0.0.0/16&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Description&amp;quot;&amp;quot; : &amp;quot;&amp;quot;Enter the CIDR block for the VPC. Default is 10.0.0.0/16.&amp;quot;&amp;quot;
+}
+},
+&amp;quot;&amp;quot;Resources&amp;quot;&amp;quot; : {
+&amp;quot;&amp;quot;myVpc&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;Type&amp;quot;&amp;quot; : &amp;quot;&amp;quot;AWS::EC2::VPC&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Properties&amp;quot;&amp;quot; : {
+    &amp;quot;&amp;quot;CidrBlock&amp;quot;&amp;quot; : { &amp;quot;&amp;quot;Ref&amp;quot;&amp;quot; : &amp;quot;&amp;quot;VPCCidr&amp;quot;&amp;quot; },
+    &amp;quot;&amp;quot;Tags&amp;quot;&amp;quot; : [
+      {&amp;quot;&amp;quot;Key&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Name&amp;quot;&amp;quot;, &amp;quot;&amp;quot;Value&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Primary_CF_VPC&amp;quot;&amp;quot;}
+    ]
+  }
+}
+}
+}
+
+&amp;quot;,
+    });
+    var aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument = example.ExecutionRoleName.Apply(executionRoleName =&gt; Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;sts:AssumeRole&amp;quot;,
+                },
+                Effect = &amp;quot;Allow&amp;quot;,
+                Resources = 
+                {
+                    $&amp;quot;arn:aws:iam::*:role/{executionRoleName}&amp;quot;,
+                },
+            },
+        },
+    }));
+    var aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy = new Aws.Iam.RolePolicy(&amp;quot;aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.Apply(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument =&gt; aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.Json),
+        Role = aWSCloudFormationStackSetAdministrationRole.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CloudFormation.StackSetArgs.html">StackSetArgs</a></h4>
       <section></section>
@@ -112,6 +247,90 @@
 <blockquote>
 <p><strong>NOTE:</strong> To retain the Stack during resource destroy, ensure <code>retain_stack</code> has been set to <code>true</code> in the state first. This must be completed <em>before</em> a deployment that would destroy the resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.CloudFormation.StackSetInstance(&amp;quot;example&amp;quot;, new Aws.CloudFormation.StackSetInstanceArgs
+    {
+        AccountId = &amp;quot;123456789012&amp;quot;,
+        Region = &amp;quot;us-east-1&amp;quot;,
+        StackSetName = aws_cloudformation_stack_set.Example.Name,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-iam-setup-in-target-account">Example IAM Setup in Target Account</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;sts:AssumeRole&amp;quot;,
+                },
+                Effect = &amp;quot;Allow&amp;quot;,
+                Principals = 
+                {
+                    new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                    {
+                        Identifiers = 
+                        {
+                            aws_iam_role.AWSCloudFormationStackSetAdministrationRole.Arn,
+                        },
+                        Type = &amp;quot;AWS&amp;quot;,
+                    },
+                },
+            },
+        },
+    }));
+    var aWSCloudFormationStackSetExecutionRole = new Aws.Iam.Role(&amp;quot;aWSCloudFormationStackSetExecutionRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy.Apply(aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy =&gt; aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy.Json),
+    });
+    var aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;cloudformation:*&amp;quot;,
+                    &amp;quot;s3:*&amp;quot;,
+                    &amp;quot;sns:*&amp;quot;,
+                },
+                Effect = &amp;quot;Allow&amp;quot;,
+                Resources = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+            },
+        },
+    }));
+    var aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = new Aws.Iam.RolePolicy(&amp;quot;aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument.Apply(aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument =&gt; aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument.Json),
+        Role = aWSCloudFormationStackSetExecutionRole.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CloudFormation.StackSetInstanceArgs.html">StackSetInstanceArgs</a></h4>
       <section></section>

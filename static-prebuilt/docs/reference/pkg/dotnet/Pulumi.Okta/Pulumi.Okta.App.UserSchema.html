@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UserSchema
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,72 @@
   </h1>
   <div class="markdown level0 summary"><p>Creates an Application User Schema property.</p>
 <p>This resource allows you to create and configure a custom user schema property and associate it with an application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.UserSchema(&amp;quot;example&amp;quot;, new Okta.App.UserSchemaArgs
+    {
+        AppId = &amp;quot;&amp;lt;app id&gt;&amp;quot;,
+        Description = &amp;quot;My custom property name&amp;quot;,
+        Index = &amp;quot;customPropertyName&amp;quot;,
+        Master = &amp;quot;OKTA&amp;quot;,
+        Scope = &amp;quot;SELF&amp;quot;,
+        Title = &amp;quot;customPropertyName&amp;quot;,
+        Type = &amp;quot;string&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UserSchema</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">UserSchema</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Okta.App.html">Pulumi.Okta.App</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Okta.dll</h6>
@@ -89,16 +149,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema__ctor_" data-uid="Pulumi.Okta.App.UserSchema.#ctor*"></a>
-  <h4 id="Pulumi_Okta_App_UserSchema__ctor_System_String_Pulumi_Okta_App_UserSchemaArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.App.UserSchema.#ctor(System.String,Pulumi.Okta.App.UserSchemaArgs,System.Nullable{CustomResourceOptions})">UserSchema(String, UserSchemaArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_App_UserSchema__ctor_System_String_Pulumi_Okta_App_UserSchemaArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.App.UserSchema.#ctor(System.String,Pulumi.Okta.App.UserSchemaArgs,Pulumi.CustomResourceOptions)">UserSchema(String, UserSchemaArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a UserSchema resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UserSchema(string name, UserSchemaArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public UserSchema(string name, UserSchemaArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +183,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +193,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_AppId_" data-uid="Pulumi.Okta.App.UserSchema.AppId*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_AppId" data-uid="Pulumi.Okta.App.UserSchema.AppId">AppId</h4>
@@ -154,13 +214,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_ArrayEnums_" data-uid="Pulumi.Okta.App.UserSchema.ArrayEnums*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_ArrayEnums" data-uid="Pulumi.Okta.App.UserSchema.ArrayEnums">ArrayEnums</h4>
@@ -181,13 +241,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_ArrayOneOfs_" data-uid="Pulumi.Okta.App.UserSchema.ArrayOneOfs*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_ArrayOneOfs" data-uid="Pulumi.Okta.App.UserSchema.ArrayOneOfs">ArrayOneOfs</h4>
@@ -208,13 +268,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.App.Outputs.UserSchemaArrayOneOf.html">UserSchemaArrayOneOf</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.App.Outputs.UserSchemaArrayOneOf.html">UserSchemaArrayOneOf</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_ArrayType_" data-uid="Pulumi.Okta.App.UserSchema.ArrayType*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_ArrayType" data-uid="Pulumi.Okta.App.UserSchema.ArrayType">ArrayType</h4>
@@ -223,7 +283,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ArrayType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ArrayType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +295,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_Description_" data-uid="Pulumi.Okta.App.UserSchema.Description*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_Description" data-uid="Pulumi.Okta.App.UserSchema.Description">Description</h4>
@@ -250,7 +310,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +322,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_Enums_" data-uid="Pulumi.Okta.App.UserSchema.Enums*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_Enums" data-uid="Pulumi.Okta.App.UserSchema.Enums">Enums</h4>
@@ -289,13 +349,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_ExternalName_" data-uid="Pulumi.Okta.App.UserSchema.ExternalName*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_ExternalName" data-uid="Pulumi.Okta.App.UserSchema.ExternalName">ExternalName</h4>
@@ -304,7 +364,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ExternalName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ExternalName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,13 +376,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_Index_" data-uid="Pulumi.Okta.App.UserSchema.Index*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_Index" data-uid="Pulumi.Okta.App.UserSchema.Index">Index</h4>
@@ -343,13 +403,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_Master_" data-uid="Pulumi.Okta.App.UserSchema.Master*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_Master" data-uid="Pulumi.Okta.App.UserSchema.Master">Master</h4>
@@ -358,7 +418,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Master { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Master { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -370,13 +430,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_MaxLength_" data-uid="Pulumi.Okta.App.UserSchema.MaxLength*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_MaxLength" data-uid="Pulumi.Okta.App.UserSchema.MaxLength">MaxLength</h4>
@@ -397,13 +457,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_MinLength_" data-uid="Pulumi.Okta.App.UserSchema.MinLength*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_MinLength" data-uid="Pulumi.Okta.App.UserSchema.MinLength">MinLength</h4>
@@ -424,13 +484,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_OneOfs_" data-uid="Pulumi.Okta.App.UserSchema.OneOfs*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_OneOfs" data-uid="Pulumi.Okta.App.UserSchema.OneOfs">OneOfs</h4>
@@ -451,13 +511,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.App.Outputs.UserSchemaOneOf.html">UserSchemaOneOf</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.App.Outputs.UserSchemaOneOf.html">UserSchemaOneOf</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_Permissions_" data-uid="Pulumi.Okta.App.UserSchema.Permissions*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_Permissions" data-uid="Pulumi.Okta.App.UserSchema.Permissions">Permissions</h4>
@@ -466,7 +526,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Permissions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Permissions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -478,13 +538,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_Required_" data-uid="Pulumi.Okta.App.UserSchema.Required*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_Required" data-uid="Pulumi.Okta.App.UserSchema.Required">Required</h4>
@@ -505,13 +565,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_Scope_" data-uid="Pulumi.Okta.App.UserSchema.Scope*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_Scope" data-uid="Pulumi.Okta.App.UserSchema.Scope">Scope</h4>
@@ -520,7 +580,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Scope { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Scope { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -532,13 +592,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_Title_" data-uid="Pulumi.Okta.App.UserSchema.Title*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_Title" data-uid="Pulumi.Okta.App.UserSchema.Title">Title</h4>
@@ -559,13 +619,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_Type_" data-uid="Pulumi.Okta.App.UserSchema.Type*"></a>
   <h4 id="Pulumi_Okta_App_UserSchema_Type" data-uid="Pulumi.Okta.App.UserSchema.Type">Type</h4>
@@ -586,7 +646,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -594,17 +654,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_UserSchema_Get_" data-uid="Pulumi.Okta.App.UserSchema.Get*"></a>
-  <h4 id="Pulumi_Okta_App_UserSchema_Get_System_String_Input_System_String__Pulumi_Okta_App_UserSchemaState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.App.UserSchema.Get(System.String,Input{System.String},Pulumi.Okta.App.UserSchemaState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, UserSchemaState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_App_UserSchema_Get_System_String_Pulumi_Input_System_String__Pulumi_Okta_App_UserSchemaState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.App.UserSchema.Get(System.String,Pulumi.Input{System.String},Pulumi.Okta.App.UserSchemaState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, UserSchemaState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing UserSchema resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static UserSchema Get(string name, Input&lt;string&gt; id, UserSchemaState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static UserSchema Get(string name, Input&lt;string&gt; id, UserSchemaState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -623,7 +683,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -635,7 +695,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -664,7 +724,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/UserSchema.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/UserSchema.cs/#L44" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

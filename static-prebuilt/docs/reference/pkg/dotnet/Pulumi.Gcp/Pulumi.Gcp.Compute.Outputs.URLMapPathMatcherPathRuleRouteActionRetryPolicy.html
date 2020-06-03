@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class URLMapPathMatcherPathRuleRouteActionRetryPolicy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,19 +78,44 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">URLMapPathMatcherPathRuleRouteActionRetryPolicy</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionRetryPolicy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class URLMapPathMatcherPathRuleRouteActionRetryPolicy : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class URLMapPathMatcherPathRuleRouteActionRetryPolicy</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionRetryPolicy.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionRetryPolicy.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionRetryPolicy_NumRetries" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRuleRouteActionRetryPolicy.NumRetries">NumRetries</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the allowed number retries. This number must be &gt; 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -112,10 +137,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionRetryPolicy.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionRetryPolicy.cs/#L25">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionRetryPolicy_PerTryTimeout" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRuleRouteActionRetryPolicy.PerTryTimeout">PerTryTimeout</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
+is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -137,10 +165,33 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionRetryPolicy.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionRetryPolicy.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherPathRuleRouteActionRetryPolicy_RetryConditions" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRuleRouteActionRetryPolicy.RetryConditions">RetryConditions</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specfies one or more conditions when this retry rule applies. Valid values are:</p>
+<ul>
+<li>5xx: Loadbalancer will attempt a retry if the backend service responds with
+any 5xx response code, or if the backend service does not respond at all,
+example: disconnects, reset, read timeout, connection failure, and refused
+streams.</li>
+<li>gateway-error: Similar to 5xx, but only applies to response codes
+502, 503 or 504.</li>
+<li>connect-failure: Loadbalancer will retry on failures
+connecting to backend services, for example due to connection timeouts.</li>
+<li>retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.</li>
+<li>refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+REFUSED_STREAM error code. This reset type indicates that it is safe to retry.</li>
+<li>cancelled: Loadbalancer will retry if the gRPC status code in the response
+header is set to cancelled</li>
+<li>deadline-exceeded: Loadbalancer will retry if the
+gRPC status code in the response header is set to deadline-exceeded</li>
+<li>resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+header is set to resource-exhausted</li>
+<li>unavailable: Loadbalancer will retry if the gRPC status code in
+the response header is set to unavailable</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -156,7 +207,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -168,7 +219,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionRetryPolicy.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherPathRuleRouteActionRetryPolicy.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

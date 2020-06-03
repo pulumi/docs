@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Iot
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,41 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Iot.Certificate.html">Certificate</a></h4>
       <section><p>Creates and manages an AWS IoT certificate.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="with-csr">With CSR</h3>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cert = new Aws.Iot.Certificate(&amp;quot;cert&amp;quot;, new Aws.Iot.CertificateArgs
+    {
+        Active = true,
+        Csr = File.ReadAllText(&amp;quot;/my/csr.pem&amp;quot;),
+    });
+}
+
+}
+</code></pre>
+<h3 id="without-csr">Without CSR</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cert = new Aws.Iot.Certificate(&amp;quot;cert&amp;quot;, new Aws.Iot.CertificateArgs
+    {
+        Active = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.CertificateArgs.html">CertificateArgs</a></h4>
       <section></section>
@@ -91,11 +126,80 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.Policy.html">Policy</a></h4>
       <section><p>Provides an IoT policy.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var pubsub = new Aws.Iot.Policy(&amp;quot;pubsub&amp;quot;, new Aws.Iot.PolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;iot:*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.PolicyAttachment.html">PolicyAttachment</a></h4>
       <section><p>Provides an IoT policy attachment.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var pubsub = new Aws.Iot.Policy(&amp;quot;pubsub&amp;quot;, new Aws.Iot.PolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;iot:*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var cert = new Aws.Iot.Certificate(&amp;quot;cert&amp;quot;, new Aws.Iot.CertificateArgs
+    {
+        Active = true,
+        Csr = File.ReadAllText(&amp;quot;csr.pem&amp;quot;),
+    });
+    var att = new Aws.Iot.PolicyAttachment(&amp;quot;att&amp;quot;, new Aws.Iot.PolicyAttachmentArgs
+    {
+        Policy = pubsub.Name,
+        Target = cert.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.PolicyAttachmentArgs.html">PolicyAttachmentArgs</a></h4>
       <section></section>
@@ -112,11 +216,56 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.Thing.html">Thing</a></h4>
       <section><p>Creates and manages an AWS IoT Thing.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Iot.Thing(&amp;quot;example&amp;quot;, new Aws.Iot.ThingArgs
+    {
+        Attributes = 
+        {
+            { &amp;quot;First&amp;quot;, &amp;quot;examplevalue&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.ThingArgs.html">ThingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.ThingPrincipalAttachment.html">ThingPrincipalAttachment</a></h4>
       <section><p>Attaches Principal to AWS IoT Thing.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Iot.Thing(&amp;quot;example&amp;quot;, new Aws.Iot.ThingArgs
+    {
+    });
+    var cert = new Aws.Iot.Certificate(&amp;quot;cert&amp;quot;, new Aws.Iot.CertificateArgs
+    {
+        Active = true,
+        Csr = File.ReadAllText(&amp;quot;csr.pem&amp;quot;),
+    });
+    var att = new Aws.Iot.ThingPrincipalAttachment(&amp;quot;att&amp;quot;, new Aws.Iot.ThingPrincipalAttachmentArgs
+    {
+        Principal = cert.Arn,
+        Thing = example.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.ThingPrincipalAttachmentArgs.html">ThingPrincipalAttachmentArgs</a></h4>
       <section></section>
@@ -126,13 +275,91 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.ThingType.html">ThingType</a></h4>
       <section><p>Creates and manages an AWS IoT Thing Type.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.Iot.ThingType(&amp;quot;foo&amp;quot;, new Aws.Iot.ThingTypeArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.ThingTypeArgs.html">ThingTypeArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.ThingTypeState.html">ThingTypeState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.TopicRule.html">TopicRule</a></h4>
-      <section></section>
+      <section><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var mytopic = new Aws.Sns.Topic(&amp;quot;mytopic&amp;quot;, new Aws.Sns.TopicArgs
+    {
+    });
+    var role = new Aws.Iam.Role(&amp;quot;role&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;iot.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var rule = new Aws.Iot.TopicRule(&amp;quot;rule&amp;quot;, new Aws.Iot.TopicRuleArgs
+    {
+        Description = &amp;quot;Example rule&amp;quot;,
+        Enabled = true,
+        Sns = new Aws.Iot.Inputs.TopicRuleSnsArgs
+        {
+            Sns = &amp;quot;RAW&amp;quot;,
+            Sns = role.Arn,
+            Sns = mytopic.Arn,
+        },
+        Sql = &amp;quot;SELECT * FROM &amp;apos;topic/test&amp;apos;&amp;quot;,
+        SqlVersion = &amp;quot;2016-03-23&amp;quot;,
+    });
+    var iamPolicyForLambda = new Aws.Iam.RolePolicy(&amp;quot;iamPolicyForLambda&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = mytopic.Arn.Apply(arn =&gt; @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+    &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+        &amp;quot;&amp;quot;sns:Publish&amp;quot;&amp;quot;
+    ],
+    &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;{arn}&amp;quot;&amp;quot;
+}}
+]
+}}
+
+&amp;quot;),
+        Role = role.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.TopicRuleArgs.html">TopicRuleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iot.TopicRuleState.html">TopicRuleState</a></h4>

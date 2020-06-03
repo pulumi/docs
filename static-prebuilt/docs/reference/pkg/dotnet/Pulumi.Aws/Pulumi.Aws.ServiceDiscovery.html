@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.ServiceDiscovery
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,13 +77,50 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.ServiceDiscovery.HttpNamespace.html">HttpNamespace</a></h4>
-      <section></section>
+      <section><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ServiceDiscovery.HttpNamespace(&amp;quot;example&amp;quot;, new Aws.ServiceDiscovery.HttpNamespaceArgs
+    {
+        Description = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.ServiceDiscovery.HttpNamespaceArgs.html">HttpNamespaceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ServiceDiscovery.HttpNamespaceState.html">HttpNamespaceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ServiceDiscovery.PrivateDnsNamespace.html">PrivateDnsNamespace</a></h4>
       <section><p>Provides a Service Discovery Private DNS Namespace resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleVpc = new Aws.Ec2.Vpc(&amp;quot;exampleVpc&amp;quot;, new Aws.Ec2.VpcArgs
+    {
+        CidrBlock = &amp;quot;10.0.0.0/16&amp;quot;,
+    });
+    var examplePrivateDnsNamespace = new Aws.ServiceDiscovery.PrivateDnsNamespace(&amp;quot;examplePrivateDnsNamespace&amp;quot;, new Aws.ServiceDiscovery.PrivateDnsNamespaceArgs
+    {
+        Description = &amp;quot;example&amp;quot;,
+        Vpc = exampleVpc.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ServiceDiscovery.PrivateDnsNamespaceArgs.html">PrivateDnsNamespaceArgs</a></h4>
       <section></section>
@@ -91,6 +128,22 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ServiceDiscovery.PublicDnsNamespace.html">PublicDnsNamespace</a></h4>
       <section><p>Provides a Service Discovery Public DNS Namespace resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ServiceDiscovery.PublicDnsNamespace(&amp;quot;example&amp;quot;, new Aws.ServiceDiscovery.PublicDnsNamespaceArgs
+    {
+        Description = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ServiceDiscovery.PublicDnsNamespaceArgs.html">PublicDnsNamespaceArgs</a></h4>
       <section></section>
@@ -98,6 +151,49 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ServiceDiscovery.Service.html">Service</a></h4>
       <section><p>Provides a Service Discovery Service resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleVpc = new Aws.Ec2.Vpc(&amp;quot;exampleVpc&amp;quot;, new Aws.Ec2.VpcArgs
+    {
+        CidrBlock = &amp;quot;10.0.0.0/16&amp;quot;,
+        EnableDnsHostnames = true,
+        EnableDnsSupport = true,
+    });
+    var examplePrivateDnsNamespace = new Aws.ServiceDiscovery.PrivateDnsNamespace(&amp;quot;examplePrivateDnsNamespace&amp;quot;, new Aws.ServiceDiscovery.PrivateDnsNamespaceArgs
+    {
+        Description = &amp;quot;example&amp;quot;,
+        Vpc = exampleVpc.Id,
+    });
+    var exampleService = new Aws.ServiceDiscovery.Service(&amp;quot;exampleService&amp;quot;, new Aws.ServiceDiscovery.ServiceArgs
+    {
+        DnsConfig = new Aws.ServiceDiscovery.Inputs.ServiceDnsConfigArgs
+        {
+            DnsRecords = 
+            {
+                new Aws.ServiceDiscovery.Inputs.ServiceDnsConfigDnsRecordArgs
+                {
+                    Ttl = 10,
+                    Type = &amp;quot;A&amp;quot;,
+                },
+            },
+            NamespaceId = examplePrivateDnsNamespace.Id,
+            RoutingPolicy = &amp;quot;MULTIVALUE&amp;quot;,
+        },
+        HealthCheckCustomConfig = new Aws.ServiceDiscovery.Inputs.ServiceHealthCheckCustomConfigArgs
+        {
+            FailureThreshold = 1,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ServiceDiscovery.ServiceArgs.html">ServiceArgs</a></h4>
       <section></section>

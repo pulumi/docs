@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.Orchestration
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,49 @@
   </h3>
       <h4><a class="xref" href="Pulumi.OpenStack.Orchestration.StackV1.html">StackV1</a></h4>
       <section><p>Manages a V1 stack resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var stack1 = new OpenStack.Orchestration.StackV1(&amp;quot;stack1&amp;quot;, new OpenStack.Orchestration.StackV1Args
+    {
+        DisableRollback = true,
+        EnvironmentOpts = 
+        {
+            { &amp;quot;Bin&amp;quot;, @&amp;quot;
+
+&amp;quot; },
+        },
+        Parameters = 
+        {
+            { &amp;quot;length&amp;quot;, 4 },
+        },
+        TemplateOpts = 
+        {
+            { &amp;quot;Bin&amp;quot;, @&amp;quot;heat_template_version: 2013-05-23
+parameters:
+length:
+type: number
+resources:
+test_res:
+type: OS::Heat::TestResource
+random:
+type: OS::Heat::RandomString
+properties:
+  length: {get_param: length}
+
+&amp;quot; },
+        },
+        Timeout = 30,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Orchestration.StackV1Args.html">StackV1Args</a></h4>
       <section></section>

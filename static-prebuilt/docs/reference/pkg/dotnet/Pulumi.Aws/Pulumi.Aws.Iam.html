@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Iam
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,48 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Iam.AccessKey.html">AccessKey</a></h4>
       <section><p>Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var lbUser = new Aws.Iam.User(&amp;quot;lbUser&amp;quot;, new Aws.Iam.UserArgs
+    {
+        Path = &amp;quot;/system/&amp;quot;,
+    });
+    var lbAccessKey = new Aws.Iam.AccessKey(&amp;quot;lbAccessKey&amp;quot;, new Aws.Iam.AccessKeyArgs
+    {
+        PgpKey = &amp;quot;keybase:some_person_that_exists&amp;quot;,
+        User = lbUser.Name,
+    });
+    var lbRo = new Aws.Iam.UserPolicy(&amp;quot;lbRo&amp;quot;, new Aws.Iam.UserPolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;ec2:Describe*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+        User = lbUser.Name,
+    });
+    this.Secret = lbAccessKey.EncryptedSecret;
+}
+
+[Output(&amp;quot;secret&amp;quot;)]
+public Output&amp;lt;string&gt; Secret { get; set; }
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.AccessKeyArgs.html">AccessKeyArgs</a></h4>
       <section></section>
@@ -88,6 +130,22 @@
 <p><strong>Note:</strong> There is only a single account alias per AWS account.</p>
 </blockquote>
 <p>Manages the account alias for the AWS Account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @alias = new Aws.Iam.AccountAlias(&amp;quot;alias&amp;quot;, new Aws.Iam.AccountAliasArgs
+    {
+        AccountAlias = &amp;quot;my-account-alias&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.AccountAliasArgs.html">AccountAliasArgs</a></h4>
       <section></section>
@@ -100,6 +158,27 @@
 <p>Manages Password Policy for the AWS Account.
 See more about <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html">Account Password Policy</a>
 in the official AWS docs.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var strict = new Aws.Iam.AccountPasswordPolicy(&amp;quot;strict&amp;quot;, new Aws.Iam.AccountPasswordPolicyArgs
+    {
+        AllowUsersToChangePassword = true,
+        MinimumPasswordLength = 8,
+        RequireLowercaseCharacters = true,
+        RequireNumbers = true,
+        RequireSymbols = true,
+        RequireUppercaseCharacters = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.AccountPasswordPolicyArgs.html">AccountPasswordPolicyArgs</a></h4>
       <section></section>
@@ -153,6 +232,22 @@ in the official AWS docs.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.Group.html">Group</a></h4>
       <section><p>Provides an IAM group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var developers = new Aws.Iam.Group(&amp;quot;developers&amp;quot;, new Aws.Iam.GroupArgs
+    {
+        Path = &amp;quot;/users/&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.GroupArgs.html">GroupArgs</a></h4>
       <section></section>
@@ -161,12 +256,42 @@ in the official AWS docs.</p>
 <p><strong>WARNING:</strong> Multiple aws.iam.GroupMembership resources with the same group name will produce inconsistent behavior!</p>
 </blockquote>
 <p>Provides a top level resource to manage IAM Group membership for IAM Users. For
-more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
-[IAM Users][2]</p>
+more information on managing IAM Groups or IAM Users, see <a href="https://www.terraform.io/docs/providers/aws/r/iam_group.html">IAM Groups</a> or
+<a href="https://www.terraform.io/docs/providers/aws/r/iam_user.html">IAM Users</a></p>
 <blockquote>
 <p><strong>Note:</strong> <code>aws.iam.GroupMembership</code> will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
 [<code>aws.iam.UserGroupMembership</code> resource][3].</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @group = new Aws.Iam.Group(&amp;quot;group&amp;quot;, new Aws.Iam.GroupArgs
+    {
+    });
+    var userOne = new Aws.Iam.User(&amp;quot;userOne&amp;quot;, new Aws.Iam.UserArgs
+    {
+    });
+    var userTwo = new Aws.Iam.User(&amp;quot;userTwo&amp;quot;, new Aws.Iam.UserArgs
+    {
+    });
+    var team = new Aws.Iam.GroupMembership(&amp;quot;team&amp;quot;, new Aws.Iam.GroupMembershipArgs
+    {
+        Group = @group.Name,
+        Users = 
+        {
+            userOne.Name,
+            userTwo.Name,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.GroupMembershipArgs.html">GroupMembershipArgs</a></h4>
       <section></section>
@@ -174,6 +299,40 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.GroupPolicy.html">GroupPolicy</a></h4>
       <section><p>Provides an IAM policy attached to a group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myDevelopers = new Aws.Iam.Group(&amp;quot;myDevelopers&amp;quot;, new Aws.Iam.GroupArgs
+    {
+        Path = &amp;quot;/users/&amp;quot;,
+    });
+    var myDeveloperPolicy = new Aws.Iam.GroupPolicy(&amp;quot;myDeveloperPolicy&amp;quot;, new Aws.Iam.GroupPolicyArgs
+    {
+        Group = myDevelopers.Id,
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;ec2:Describe*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.GroupPolicyArgs.html">GroupPolicyArgs</a></h4>
       <section></section>
@@ -182,6 +341,32 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
 <blockquote>
 <p><strong>NOTE:</strong> The usage of this resource conflicts with the <code>aws.iam.PolicyAttachment</code> resource and will permanently show a difference if both are defined.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @group = new Aws.Iam.Group(&amp;quot;group&amp;quot;, new Aws.Iam.GroupArgs
+    {
+    });
+    var policy = new Aws.Iam.Policy(&amp;quot;policy&amp;quot;, new Aws.Iam.PolicyArgs
+    {
+        Description = &amp;quot;A test policy&amp;quot;,
+        Policy = &amp;quot;&amp;quot;,
+    });
+    // insert policy here
+    var test_attach = new Aws.Iam.GroupPolicyAttachment(&amp;quot;test-attach&amp;quot;, new Aws.Iam.GroupPolicyAttachmentArgs
+    {
+        Group = @group.Name,
+        PolicyArn = policy.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.GroupPolicyAttachmentArgs.html">GroupPolicyAttachmentArgs</a></h4>
       <section></section>
@@ -193,6 +378,41 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.InstanceProfile.html">InstanceProfile</a></h4>
       <section><p>Provides an IAM instance profile.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var role = new Aws.Iam.Role(&amp;quot;role&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+    {
+        &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+           &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ec2.amazonaws.com&amp;quot;&amp;quot;
+        },
+        &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+    }
+]
+}
+
+&amp;quot;,
+        Path = &amp;quot;/&amp;quot;,
+    });
+    var testProfile = new Aws.Iam.InstanceProfile(&amp;quot;testProfile&amp;quot;, new Aws.Iam.InstanceProfileArgs
+    {
+        Role = role.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.InstanceProfileArgs.html">InstanceProfileArgs</a></h4>
       <section></section>
@@ -200,6 +420,27 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.OpenIdConnectProvider.html">OpenIdConnectProvider</a></h4>
       <section><p>Provides an IAM OpenID Connect provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Iam.OpenIdConnectProvider(&amp;quot;default&amp;quot;, new Aws.Iam.OpenIdConnectProviderArgs
+    {
+        ClientIdLists = 
+        {
+            &amp;quot;266362248691-342342xasdasdasda-apps.googleusercontent.com&amp;quot;,
+        },
+        ThumbprintLists = {},
+        Url = &amp;quot;https://accounts.google.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.OpenIdConnectProviderArgs.html">OpenIdConnectProviderArgs</a></h4>
       <section></section>
@@ -207,6 +448,37 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.Policy.html">Policy</a></h4>
       <section><p>Provides an IAM policy.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var policy = new Aws.Iam.Policy(&amp;quot;policy&amp;quot;, new Aws.Iam.PolicyArgs
+    {
+        Description = &amp;quot;My test policy&amp;quot;,
+        Path = &amp;quot;/&amp;quot;,
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;ec2:Describe*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
@@ -216,6 +488,76 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
 <blockquote>
 <p><strong>NOTE:</strong> The usage of this resource conflicts with the <code>aws.iam.GroupPolicyAttachment</code>, <code>aws.iam.RolePolicyAttachment</code>, and <code>aws.iam.UserPolicyAttachment</code> resources and will permanently show a difference if both are defined.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var user = new Aws.Iam.User(&amp;quot;user&amp;quot;, new Aws.Iam.UserArgs
+    {
+    });
+    var role = new Aws.Iam.Role(&amp;quot;role&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ec2.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var @group = new Aws.Iam.Group(&amp;quot;group&amp;quot;, new Aws.Iam.GroupArgs
+    {
+    });
+    var policy = new Aws.Iam.Policy(&amp;quot;policy&amp;quot;, new Aws.Iam.PolicyArgs
+    {
+        Description = &amp;quot;A test policy&amp;quot;,
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;ec2:Describe*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var test_attach = new Aws.Iam.PolicyAttachment(&amp;quot;test-attach&amp;quot;, new Aws.Iam.PolicyAttachmentArgs
+    {
+        Groups = 
+        {
+            @group.Name,
+        },
+        PolicyArn = policy.Arn,
+        Roles = 
+        {
+            role.Name,
+        },
+        Users = 
+        {
+            user.Name,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.PolicyAttachmentArgs.html">PolicyAttachmentArgs</a></h4>
       <section></section>
@@ -228,11 +570,132 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
 <blockquote>
 <p><em>NOTE:</em> If policies are attached to the role via the <a href="https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html"><code>aws.iam.PolicyAttachment</code> resource</a> and you are modifying the role <code>name</code> or <code>path</code>, the <code>force_detach_policies</code> argument must be set to <code>true</code> and applied before attempting the operation otherwise you will encounter a <code>DeleteConflict</code> error. The <a href="https://www.terraform.io/docs/providers/aws/r/iam_role_policy_attachment.html"><code>aws.iam.RolePolicyAttachment</code> resource (recommended)</a> does not have this requirement.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testRole = new Aws.Iam.Role(&amp;quot;testRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ec2.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;tag-key&amp;quot;, &amp;quot;tag-value&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-of-using-data-source-for-assume-role-policy">Example of Using Data Source for Assume Role Policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance_assume_role_policy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;sts:AssumeRole&amp;quot;,
+                },
+                Principals = 
+                {
+                    new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                    {
+                        Identifiers = 
+                        {
+                            &amp;quot;ec2.amazonaws.com&amp;quot;,
+                        },
+                        Type = &amp;quot;Service&amp;quot;,
+                    },
+                },
+            },
+        },
+    }));
+    var instance = new Aws.Iam.Role(&amp;quot;instance&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = instance_assume_role_policy.Apply(instance_assume_role_policy =&gt; instance_assume_role_policy.Json),
+        Path = &amp;quot;/system/&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.RoleArgs.html">RoleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.RolePolicy.html">RolePolicy</a></h4>
-      <section><p>Provides an IAM role policy.</p>
+      <section><p>Provides an IAM role inline policy.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testRole = new Aws.Iam.Role(&amp;quot;testRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ec2.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+&amp;quot;,
+    });
+    var testPolicy = new Aws.Iam.RolePolicy(&amp;quot;testPolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Role = testRole.Id,
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;ec2:Describe*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+]
+}
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.RolePolicyArgs.html">RolePolicyArgs</a></h4>
       <section></section>
@@ -241,6 +704,59 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
 <blockquote>
 <p><strong>NOTE:</strong> The usage of this resource conflicts with the <code>aws.iam.PolicyAttachment</code> resource and will permanently show a difference if both are defined.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var role = new Aws.Iam.Role(&amp;quot;role&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;    {
+  &amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+    {
+      &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+        &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ec2.amazonaws.com&amp;quot;&amp;quot;
+      },
+      &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+    }
+  ]
+}
+
+&amp;quot;,
+    });
+    var policy = new Aws.Iam.Policy(&amp;quot;policy&amp;quot;, new Aws.Iam.PolicyArgs
+    {
+        Description = &amp;quot;A test policy&amp;quot;,
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;ec2:Describe*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var test_attach = new Aws.Iam.RolePolicyAttachment(&amp;quot;test-attach&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = policy.Arn,
+        Role = role.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.RolePolicyAttachmentArgs.html">RolePolicyAttachmentArgs</a></h4>
       <section></section>
@@ -252,6 +768,23 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.SamlProvider.html">SamlProvider</a></h4>
       <section><p>Provides an IAM SAML provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Iam.SamlProvider(&amp;quot;default&amp;quot;, new Aws.Iam.SamlProviderArgs
+    {
+        SamlMetadataDocument = File.ReadAllText(&amp;quot;saml-metadata.xml&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.SamlProviderArgs.html">SamlProviderArgs</a></h4>
       <section></section>
@@ -272,6 +805,24 @@ Certificates][2] in AWS Documentation.</p>
 <p><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testCert = new Aws.Iam.ServerCertificate(&amp;quot;testCert&amp;quot;, new Aws.Iam.ServerCertificateArgs
+    {
+        CertificateBody = File.ReadAllText(&amp;quot;self-ca-cert.pem&amp;quot;),
+        PrivateKey = File.ReadAllText(&amp;quot;test-key.pem&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.ServerCertificateArgs.html">ServerCertificateArgs</a></h4>
       <section></section>
@@ -279,6 +830,22 @@ Certificates][2] in AWS Documentation.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.ServiceLinkedRole.html">ServiceLinkedRole</a></h4>
       <section><p>Provides an <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">IAM service-linked role</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var elasticbeanstalk = new Aws.Iam.ServiceLinkedRole(&amp;quot;elasticbeanstalk&amp;quot;, new Aws.Iam.ServiceLinkedRoleArgs
+    {
+        AwsServiceName = &amp;quot;elasticbeanstalk.amazonaws.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.ServiceLinkedRoleArgs.html">ServiceLinkedRoleArgs</a></h4>
       <section></section>
@@ -286,6 +853,28 @@ Certificates][2] in AWS Documentation.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.SshKey.html">SshKey</a></h4>
       <section><p>Uploads an SSH public key and associates it with the specified IAM user.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var userUser = new Aws.Iam.User(&amp;quot;userUser&amp;quot;, new Aws.Iam.UserArgs
+    {
+        Path = &amp;quot;/&amp;quot;,
+    });
+    var userSshKey = new Aws.Iam.SshKey(&amp;quot;userSshKey&amp;quot;, new Aws.Iam.SshKeyArgs
+    {
+        Encoding = &amp;quot;SSH&amp;quot;,
+        PublicKey = &amp;quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 mytest@mydomain.com&amp;quot;,
+        Username = userUser.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.SshKeyArgs.html">SshKeyArgs</a></h4>
       <section></section>
@@ -296,15 +885,98 @@ Certificates][2] in AWS Documentation.</p>
 <blockquote>
 <p><em>NOTE:</em> If policies are attached to the user via the <a href="https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html"><code>aws.iam.PolicyAttachment</code> resource</a> and you are modifying the user <code>name</code> or <code>path</code>, the <code>force_destroy</code> argument must be set to <code>true</code> and applied before attempting the operation otherwise you will encounter a <code>DeleteConflict</code> error. The <a href="https://www.terraform.io/docs/providers/aws/r/iam_user_policy_attachment.html"><code>aws.iam.UserPolicyAttachment</code> resource (recommended)</a> does not have this requirement.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var lbUser = new Aws.Iam.User(&amp;quot;lbUser&amp;quot;, new Aws.Iam.UserArgs
+    {
+        Path = &amp;quot;/system/&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;tag-key&amp;quot;, &amp;quot;tag-value&amp;quot; },
+        },
+    });
+    var lbAccessKey = new Aws.Iam.AccessKey(&amp;quot;lbAccessKey&amp;quot;, new Aws.Iam.AccessKeyArgs
+    {
+        User = lbUser.Name,
+    });
+    var lbRo = new Aws.Iam.UserPolicy(&amp;quot;lbRo&amp;quot;, new Aws.Iam.UserPolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;ec2:Describe*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+        User = lbUser.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.UserArgs.html">UserArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.UserGroupMembership.html">UserGroupMembership</a></h4>
-      <section><p>Provides a resource for adding an [IAM User][2] to [IAM Groups][1]. This
+      <section><p>Provides a resource for adding an <a href="https://www.terraform.io/docs/providers/aws/r/iam_user.html">IAM User</a> to <a href="https://www.terraform.io/docs/providers/aws/r/iam_group.html">IAM Groups</a>. This
 resource can be used multiple times with the same user for non-overlapping
 groups.</p>
 <p>To exclusively manage the users in a group, see the
 [<code>aws.iam.GroupMembership</code> resource][3].</p>
+<h2 id="example-usage">Example usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var user1 = new Aws.Iam.User(&amp;quot;user1&amp;quot;, new Aws.Iam.UserArgs
+    {
+    });
+    var group1 = new Aws.Iam.Group(&amp;quot;group1&amp;quot;, new Aws.Iam.GroupArgs
+    {
+    });
+    var group2 = new Aws.Iam.Group(&amp;quot;group2&amp;quot;, new Aws.Iam.GroupArgs
+    {
+    });
+    var example1 = new Aws.Iam.UserGroupMembership(&amp;quot;example1&amp;quot;, new Aws.Iam.UserGroupMembershipArgs
+    {
+        Groups = 
+        {
+            group1.Name,
+            group2.Name,
+        },
+        User = user1.Name,
+    });
+    var group3 = new Aws.Iam.Group(&amp;quot;group3&amp;quot;, new Aws.Iam.GroupArgs
+    {
+    });
+    var example2 = new Aws.Iam.UserGroupMembership(&amp;quot;example2&amp;quot;, new Aws.Iam.UserGroupMembershipArgs
+    {
+        Groups = 
+        {
+            group3.Name,
+        },
+        User = user1.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.UserGroupMembershipArgs.html">UserGroupMembershipArgs</a></h4>
       <section></section>
@@ -315,6 +987,31 @@ groups.</p>
 <blockquote>
 <p>To reset an IAM User login password via this provider, you can use delete and recreate this resource or change any of the arguments.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleUser = new Aws.Iam.User(&amp;quot;exampleUser&amp;quot;, new Aws.Iam.UserArgs
+    {
+        ForceDestroy = true,
+        Path = &amp;quot;/&amp;quot;,
+    });
+    var exampleUserLoginProfile = new Aws.Iam.UserLoginProfile(&amp;quot;exampleUserLoginProfile&amp;quot;, new Aws.Iam.UserLoginProfileArgs
+    {
+        PgpKey = &amp;quot;keybase:some_person_that_exists&amp;quot;,
+        User = exampleUser.Name,
+    });
+    this.Password = exampleUserLoginProfile.EncryptedPassword;
+}
+
+[Output(&amp;quot;password&amp;quot;)]
+public Output&amp;lt;string&gt; Password { get; set; }
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.UserLoginProfileArgs.html">UserLoginProfileArgs</a></h4>
       <section></section>
@@ -322,6 +1019,44 @@ groups.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.UserPolicy.html">UserPolicy</a></h4>
       <section><p>Provides an IAM policy attached to a user.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var lbUser = new Aws.Iam.User(&amp;quot;lbUser&amp;quot;, new Aws.Iam.UserArgs
+    {
+        Path = &amp;quot;/system/&amp;quot;,
+    });
+    var lbRo = new Aws.Iam.UserPolicy(&amp;quot;lbRo&amp;quot;, new Aws.Iam.UserPolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;ec2:Describe*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+        User = lbUser.Name,
+    });
+    var lbAccessKey = new Aws.Iam.AccessKey(&amp;quot;lbAccessKey&amp;quot;, new Aws.Iam.AccessKeyArgs
+    {
+        User = lbUser.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.UserPolicyArgs.html">UserPolicyArgs</a></h4>
       <section></section>
@@ -330,6 +1065,32 @@ groups.</p>
 <blockquote>
 <p><strong>NOTE:</strong> The usage of this resource conflicts with the <code>aws.iam.PolicyAttachment</code> resource and will permanently show a difference if both are defined.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var user = new Aws.Iam.User(&amp;quot;user&amp;quot;, new Aws.Iam.UserArgs
+    {
+    });
+    var policy = new Aws.Iam.Policy(&amp;quot;policy&amp;quot;, new Aws.Iam.PolicyArgs
+    {
+        Description = &amp;quot;A test policy&amp;quot;,
+        Policy = &amp;quot;&amp;quot;,
+    });
+    // insert policy here
+    var test_attach = new Aws.Iam.UserPolicyAttachment(&amp;quot;test-attach&amp;quot;, new Aws.Iam.UserPolicyAttachmentArgs
+    {
+        PolicyArn = policy.Arn,
+        User = user.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Iam.UserPolicyAttachmentArgs.html">UserPolicyAttachmentArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.AppMesh
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,44 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.AppMesh.Mesh.html">Mesh</a></h4>
       <section><p>Provides an AWS App Mesh service mesh resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var simple = new Aws.AppMesh.Mesh(&amp;quot;simple&amp;quot;, new Aws.AppMesh.MeshArgs
+    {
+    });
+}
+
+}
+</code></pre>
+<h3 id="egress-filter">Egress Filter</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var simple = new Aws.AppMesh.Mesh(&amp;quot;simple&amp;quot;, new Aws.AppMesh.MeshArgs
+    {
+        Spec = new Aws.AppMesh.Inputs.MeshSpecArgs
+        {
+            EgressFilter = new Aws.AppMesh.Inputs.MeshSpecEgressFilterArgs
+            {
+                Type = &amp;quot;ALLOW_ALL&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppMesh.MeshArgs.html">MeshArgs</a></h4>
       <section></section>
@@ -85,6 +123,135 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AppMesh.Route.html">Route</a></h4>
       <section><p>Provides an AWS App Mesh route resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="http-routing">HTTP Routing</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var serviceb = new Aws.AppMesh.Route(&amp;quot;serviceb&amp;quot;, new Aws.AppMesh.RouteArgs
+    {
+        MeshName = aws_appmesh_mesh.Simple.Id,
+        Spec = new Aws.AppMesh.Inputs.RouteSpecArgs
+        {
+            HttpRoute = new Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs
+            {
+                Action = new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs
+                {
+                    WeightedTarget = 
+                    {
+
+                        {
+                            { &amp;quot;virtualNode&amp;quot;, aws_appmesh_virtual_node.Serviceb1.Name },
+                            { &amp;quot;weight&amp;quot;, 90 },
+                        },
+
+                        {
+                            { &amp;quot;virtualNode&amp;quot;, aws_appmesh_virtual_node.Serviceb2.Name },
+                            { &amp;quot;weight&amp;quot;, 10 },
+                        },
+                    },
+                },
+                Match = new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs
+                {
+                    Prefix = &amp;quot;/&amp;quot;,
+                },
+            },
+        },
+        VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
+    });
+}
+
+}
+</code></pre>
+<h3 id="http-header-routing">HTTP Header Routing</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var serviceb = new Aws.AppMesh.Route(&amp;quot;serviceb&amp;quot;, new Aws.AppMesh.RouteArgs
+    {
+        MeshName = aws_appmesh_mesh.Simple.Id,
+        Spec = new Aws.AppMesh.Inputs.RouteSpecArgs
+        {
+            HttpRoute = new Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs
+            {
+                Action = new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs
+                {
+                    WeightedTarget = 
+                    {
+
+                        {
+                            { &amp;quot;virtualNode&amp;quot;, aws_appmesh_virtual_node.Serviceb.Name },
+                            { &amp;quot;weight&amp;quot;, 100 },
+                        },
+                    },
+                },
+                Match = new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs
+                {
+                    Header = 
+                    {
+
+                        {
+                            { &amp;quot;match&amp;quot;, 
+                            {
+                                { &amp;quot;prefix&amp;quot;, &amp;quot;123&amp;quot; },
+                            } },
+                            { &amp;quot;name&amp;quot;, &amp;quot;clientRequestId&amp;quot; },
+                        },
+                    },
+                    Method = &amp;quot;POST&amp;quot;,
+                    Prefix = &amp;quot;/&amp;quot;,
+                    Scheme = &amp;quot;https&amp;quot;,
+                },
+            },
+        },
+        VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
+    });
+}
+
+}
+</code></pre>
+<h3 id="tcp-routing">TCP Routing</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var serviceb = new Aws.AppMesh.Route(&amp;quot;serviceb&amp;quot;, new Aws.AppMesh.RouteArgs
+    {
+        MeshName = aws_appmesh_mesh.Simple.Id,
+        Spec = new Aws.AppMesh.Inputs.RouteSpecArgs
+        {
+            TcpRoute = new Aws.AppMesh.Inputs.RouteSpecTcpRouteArgs
+            {
+                Action = new Aws.AppMesh.Inputs.RouteSpecTcpRouteActionArgs
+                {
+                    WeightedTarget = 
+                    {
+
+                        {
+                            { &amp;quot;virtualNode&amp;quot;, aws_appmesh_virtual_node.Serviceb1.Name },
+                            { &amp;quot;weight&amp;quot;, 100 },
+                        },
+                    },
+                },
+            },
+        },
+        VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppMesh.RouteArgs.html">RouteArgs</a></h4>
       <section></section>
@@ -102,6 +269,210 @@ setting <code>virtual_service_name</code> to the name of the service.</p>
 </li>
 </ul>
 <p>The state associated with existing resources will automatically be migrated.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var serviceb1 = new Aws.AppMesh.VirtualNode(&amp;quot;serviceb1&amp;quot;, new Aws.AppMesh.VirtualNodeArgs
+    {
+        MeshName = aws_appmesh_mesh.Simple.Id,
+        Spec = new Aws.AppMesh.Inputs.VirtualNodeSpecArgs
+        {
+            Backend = 
+            {
+
+                {
+                    { &amp;quot;virtualService&amp;quot;, 
+                    {
+                        { &amp;quot;virtualServiceName&amp;quot;, &amp;quot;servicea.simpleapp.local&amp;quot; },
+                    } },
+                },
+            },
+            Listener = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerArgs
+            {
+                PortMapping = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerPortMappingArgs
+                {
+                    Port = 8080,
+                    Protocol = &amp;quot;http&amp;quot;,
+                },
+            },
+            ServiceDiscovery = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs
+            {
+                Dns = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryDnsArgs
+                {
+                    Hostname = &amp;quot;serviceb.simpleapp.local&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="aws-cloud-map-service-discovery">AWS Cloud Map Service Discovery</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ServiceDiscovery.HttpNamespace(&amp;quot;example&amp;quot;, new Aws.ServiceDiscovery.HttpNamespaceArgs
+    {
+    });
+    var serviceb1 = new Aws.AppMesh.VirtualNode(&amp;quot;serviceb1&amp;quot;, new Aws.AppMesh.VirtualNodeArgs
+    {
+        MeshName = aws_appmesh_mesh.Simple.Id,
+        Spec = new Aws.AppMesh.Inputs.VirtualNodeSpecArgs
+        {
+            Backend = 
+            {
+
+                {
+                    { &amp;quot;virtualService&amp;quot;, 
+                    {
+                        { &amp;quot;virtualServiceName&amp;quot;, &amp;quot;servicea.simpleapp.local&amp;quot; },
+                    } },
+                },
+            },
+            Listener = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerArgs
+            {
+                PortMapping = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerPortMappingArgs
+                {
+                    Port = 8080,
+                    Protocol = &amp;quot;http&amp;quot;,
+                },
+            },
+            ServiceDiscovery = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs
+            {
+                AwsCloudMap = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs
+                {
+                    Attributes = 
+                    {
+                        { &amp;quot;stack&amp;quot;, &amp;quot;blue&amp;quot; },
+                    },
+                    NamespaceName = example.Name,
+                    ServiceName = &amp;quot;serviceb1&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="listener-health-check">Listener Health Check</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var serviceb1 = new Aws.AppMesh.VirtualNode(&amp;quot;serviceb1&amp;quot;, new Aws.AppMesh.VirtualNodeArgs
+    {
+        MeshName = aws_appmesh_mesh.Simple.Id,
+        Spec = new Aws.AppMesh.Inputs.VirtualNodeSpecArgs
+        {
+            Backend = 
+            {
+
+                {
+                    { &amp;quot;virtualService&amp;quot;, 
+                    {
+                        { &amp;quot;virtualServiceName&amp;quot;, &amp;quot;servicea.simpleapp.local&amp;quot; },
+                    } },
+                },
+            },
+            Listener = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerArgs
+            {
+                HealthCheck = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerHealthCheckArgs
+                {
+                    HealthyThreshold = 2,
+                    IntervalMillis = 5000,
+                    Path = &amp;quot;/ping&amp;quot;,
+                    Protocol = &amp;quot;http&amp;quot;,
+                    TimeoutMillis = 2000,
+                    UnhealthyThreshold = 2,
+                },
+                PortMapping = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerPortMappingArgs
+                {
+                    Port = 8080,
+                    Protocol = &amp;quot;http&amp;quot;,
+                },
+            },
+            ServiceDiscovery = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs
+            {
+                Dns = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryDnsArgs
+                {
+                    Hostname = &amp;quot;serviceb.simpleapp.local&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="logging">Logging</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var serviceb1 = new Aws.AppMesh.VirtualNode(&amp;quot;serviceb1&amp;quot;, new Aws.AppMesh.VirtualNodeArgs
+    {
+        MeshName = aws_appmesh_mesh.Simple.Id,
+        Spec = new Aws.AppMesh.Inputs.VirtualNodeSpecArgs
+        {
+            Backend = 
+            {
+
+                {
+                    { &amp;quot;virtualService&amp;quot;, 
+                    {
+                        { &amp;quot;virtualServiceName&amp;quot;, &amp;quot;servicea.simpleapp.local&amp;quot; },
+                    } },
+                },
+            },
+            Listener = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerArgs
+            {
+                PortMapping = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerPortMappingArgs
+                {
+                    Port = 8080,
+                    Protocol = &amp;quot;http&amp;quot;,
+                },
+            },
+            Logging = new Aws.AppMesh.Inputs.VirtualNodeSpecLoggingArgs
+            {
+                AccessLog = new Aws.AppMesh.Inputs.VirtualNodeSpecLoggingAccessLogArgs
+                {
+                    File = new Aws.AppMesh.Inputs.VirtualNodeSpecLoggingAccessLogFileArgs
+                    {
+                        Path = &amp;quot;/dev/stdout&amp;quot;,
+                    },
+                },
+            },
+            ServiceDiscovery = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs
+            {
+                Dns = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryDnsArgs
+                {
+                    Hostname = &amp;quot;serviceb.simpleapp.local&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppMesh.VirtualNodeArgs.html">VirtualNodeArgs</a></h4>
       <section></section>
@@ -120,6 +491,33 @@ These resource can be imported using <code>import</code>.</p>
 </li>
 </ul>
 <p>The state associated with existing resources will automatically be migrated.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var serviceb = new Aws.AppMesh.VirtualRouter(&amp;quot;serviceb&amp;quot;, new Aws.AppMesh.VirtualRouterArgs
+    {
+        MeshName = aws_appmesh_mesh.Simple.Id,
+        Spec = new Aws.AppMesh.Inputs.VirtualRouterSpecArgs
+        {
+            Listener = new Aws.AppMesh.Inputs.VirtualRouterSpecListenerArgs
+            {
+                PortMapping = new Aws.AppMesh.Inputs.VirtualRouterSpecListenerPortMappingArgs
+                {
+                    Port = 8080,
+                    Protocol = &amp;quot;http&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppMesh.VirtualRouterArgs.html">VirtualRouterArgs</a></h4>
       <section></section>
@@ -127,6 +525,59 @@ These resource can be imported using <code>import</code>.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AppMesh.VirtualService.html">VirtualService</a></h4>
       <section><p>Provides an AWS App Mesh virtual service resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="virtual-node-provider">Virtual Node Provider</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var servicea = new Aws.AppMesh.VirtualService(&amp;quot;servicea&amp;quot;, new Aws.AppMesh.VirtualServiceArgs
+    {
+        MeshName = aws_appmesh_mesh.Simple.Id,
+        Spec = new Aws.AppMesh.Inputs.VirtualServiceSpecArgs
+        {
+            Provider = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderArgs
+            {
+                VirtualNode = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderVirtualNodeArgs
+                {
+                    VirtualNodeName = aws_appmesh_virtual_node.Serviceb1.Name,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="virtual-router-provider">Virtual Router Provider</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var servicea = new Aws.AppMesh.VirtualService(&amp;quot;servicea&amp;quot;, new Aws.AppMesh.VirtualServiceArgs
+    {
+        MeshName = aws_appmesh_mesh.Simple.Id,
+        Spec = new Aws.AppMesh.Inputs.VirtualServiceSpecArgs
+        {
+            Provider = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderArgs
+            {
+                VirtualRouter = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderVirtualRouterArgs
+                {
+                    VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppMesh.VirtualServiceArgs.html">VirtualServiceArgs</a></h4>
       <section></section>

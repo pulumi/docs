@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MetricAlarm
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,261 @@
   <h1 id="Pulumi_Aws_CloudWatch_MetricAlarm" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm" class="text-break">Class MetricAlarm
   </h1>
   <div class="markdown level0 summary"><p>Provides a CloudWatch Metric Alarm resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new Aws.CloudWatch.MetricAlarm(&amp;quot;foobar&amp;quot;, new Aws.CloudWatch.MetricAlarmArgs
+    {
+        AlarmDescription = &amp;quot;This metric monitors ec2 cpu utilization&amp;quot;,
+        ComparisonOperator = &amp;quot;GreaterThanOrEqualToThreshold&amp;quot;,
+        EvaluationPeriods = &amp;quot;2&amp;quot;,
+        InsufficientDataActions = {},
+        MetricName = &amp;quot;CPUUtilization&amp;quot;,
+        Namespace = &amp;quot;AWS/EC2&amp;quot;,
+        Period = &amp;quot;120&amp;quot;,
+        Statistic = &amp;quot;Average&amp;quot;,
+        Threshold = &amp;quot;80&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-in-conjunction-with-scaling-policies">Example in Conjunction with Scaling Policies</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var batPolicy = new Aws.AutoScaling.Policy(&amp;quot;batPolicy&amp;quot;, new Aws.AutoScaling.PolicyArgs
+    {
+        AdjustmentType = &amp;quot;ChangeInCapacity&amp;quot;,
+        AutoscalingGroupName = aws_autoscaling_group.Bar.Name,
+        Cooldown = 300,
+        ScalingAdjustment = 4,
+    });
+    var batMetricAlarm = new Aws.CloudWatch.MetricAlarm(&amp;quot;batMetricAlarm&amp;quot;, new Aws.CloudWatch.MetricAlarmArgs
+    {
+        AlarmActions = 
+        {
+            batPolicy.Arn,
+        },
+        AlarmDescription = &amp;quot;This metric monitors ec2 cpu utilization&amp;quot;,
+        ComparisonOperator = &amp;quot;GreaterThanOrEqualToThreshold&amp;quot;,
+        Dimensions = 
+        {
+            { &amp;quot;AutoScalingGroupName&amp;quot;, aws_autoscaling_group.Bar.Name },
+        },
+        EvaluationPeriods = &amp;quot;2&amp;quot;,
+        MetricName = &amp;quot;CPUUtilization&amp;quot;,
+        Namespace = &amp;quot;AWS/EC2&amp;quot;,
+        Period = &amp;quot;120&amp;quot;,
+        Statistic = &amp;quot;Average&amp;quot;,
+        Threshold = &amp;quot;80&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-with-an-expression">Example with an Expression</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new Aws.CloudWatch.MetricAlarm(&amp;quot;foobar&amp;quot;, new Aws.CloudWatch.MetricAlarmArgs
+    {
+        AlarmDescription = &amp;quot;Request error rate has exceeded 10%&amp;quot;,
+        ComparisonOperator = &amp;quot;GreaterThanOrEqualToThreshold&amp;quot;,
+        EvaluationPeriods = &amp;quot;2&amp;quot;,
+        InsufficientDataActions = {},
+        MetricQueries = 
+        {
+            new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryArgs
+            {
+                Expression = &amp;quot;m2/m1*100&amp;quot;,
+                Id = &amp;quot;e1&amp;quot;,
+                Label = &amp;quot;Error Rate&amp;quot;,
+                ReturnData = &amp;quot;true&amp;quot;,
+            },
+            new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryArgs
+            {
+                Id = &amp;quot;m1&amp;quot;,
+                Metric = new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryMetricArgs
+                {
+                    Dimensions = 
+                    {
+                        { &amp;quot;LoadBalancer&amp;quot;, &amp;quot;app/web&amp;quot; },
+                    },
+                    MetricName = &amp;quot;RequestCount&amp;quot;,
+                    Namespace = &amp;quot;AWS/ApplicationELB&amp;quot;,
+                    Period = &amp;quot;120&amp;quot;,
+                    Stat = &amp;quot;Sum&amp;quot;,
+                    Unit = &amp;quot;Count&amp;quot;,
+                },
+            },
+            new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryArgs
+            {
+                Id = &amp;quot;m2&amp;quot;,
+                Metric = new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryMetricArgs
+                {
+                    Dimensions = 
+                    {
+                        { &amp;quot;LoadBalancer&amp;quot;, &amp;quot;app/web&amp;quot; },
+                    },
+                    MetricName = &amp;quot;HTTPCode_ELB_5XX_Count&amp;quot;,
+                    Namespace = &amp;quot;AWS/ApplicationELB&amp;quot;,
+                    Period = &amp;quot;120&amp;quot;,
+                    Stat = &amp;quot;Sum&amp;quot;,
+                    Unit = &amp;quot;Count&amp;quot;,
+                },
+            },
+        },
+        Threshold = &amp;quot;10&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var xxAnomalyDetection = new Aws.CloudWatch.MetricAlarm(&amp;quot;xxAnomalyDetection&amp;quot;, new Aws.CloudWatch.MetricAlarmArgs
+    {
+        AlarmDescription = &amp;quot;This metric monitors ec2 cpu utilization&amp;quot;,
+        ComparisonOperator = &amp;quot;GreaterThanUpperThreshold&amp;quot;,
+        EvaluationPeriods = &amp;quot;2&amp;quot;,
+        InsufficientDataActions = {},
+        MetricQueries = 
+        {
+            new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryArgs
+            {
+                Expression = &amp;quot;ANOMALY_DETECTION_BAND(m1)&amp;quot;,
+                Id = &amp;quot;e1&amp;quot;,
+                Label = &amp;quot;CPUUtilization (Expected)&amp;quot;,
+                ReturnData = &amp;quot;true&amp;quot;,
+            },
+            new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryArgs
+            {
+                Id = &amp;quot;m1&amp;quot;,
+                Metric = new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryMetricArgs
+                {
+                    Dimensions = 
+                    {
+                        { &amp;quot;InstanceId&amp;quot;, &amp;quot;i-abc123&amp;quot; },
+                    },
+                    MetricName = &amp;quot;CPUUtilization&amp;quot;,
+                    Namespace = &amp;quot;AWS/EC2&amp;quot;,
+                    Period = &amp;quot;120&amp;quot;,
+                    Stat = &amp;quot;Average&amp;quot;,
+                    Unit = &amp;quot;Count&amp;quot;,
+                },
+                ReturnData = &amp;quot;true&amp;quot;,
+            },
+        },
+        ThresholdMetricId = &amp;quot;e1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-of-monitoring-healthy-hosts-on-nlb-using-target-group-and-nlb">Example of monitoring Healthy Hosts on NLB using Target Group and NLB</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var xxxNlbHealthyhosts = new Aws.CloudWatch.MetricAlarm(&amp;quot;xxxNlbHealthyhosts&amp;quot;, new Aws.CloudWatch.MetricAlarmArgs
+    {
+        ComparisonOperator = &amp;quot;LessThanThreshold&amp;quot;,
+        EvaluationPeriods = &amp;quot;1&amp;quot;,
+        MetricName = &amp;quot;HealthyHostCount&amp;quot;,
+        Namespace = &amp;quot;AWS/NetworkELB&amp;quot;,
+        Period = &amp;quot;60&amp;quot;,
+        Statistic = &amp;quot;Average&amp;quot;,
+        Threshold = @var.Logstash_servers_count,
+        AlarmDescription = &amp;quot;Number of XXXX nodes healthy in Target Group&amp;quot;,
+        ActionsEnabled = &amp;quot;true&amp;quot;,
+        AlarmActions = 
+        {
+            aws_sns_topic.Sns.Arn,
+        },
+        OkActions = 
+        {
+            aws_sns_topic.Sns.Arn,
+        },
+        Dimensions = 
+        {
+            { &amp;quot;TargetGroup&amp;quot;, aws_lb_target_group.Lb_tg.Arn_suffix },
+            { &amp;quot;LoadBalancer&amp;quot;, aws_lb.Lb.Arn_suffix },
+        },
+    });
+}
+
+}
+</code></pre>
+<blockquote>
+<p><strong>NOTE:</strong>  You cannot create a metric alarm consisting of both <code>statistic</code> and <code>extended_statistic</code> parameters.
+You must choose one or the other</p>
+</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">MetricAlarm</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">MetricAlarm</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CloudWatch.html">Pulumi.Aws.CloudWatch</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +337,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L397">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm__ctor_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.#ctor*"></a>
-  <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm__ctor_System_String_Pulumi_Aws_CloudWatch_MetricAlarmArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.#ctor(System.String,Pulumi.Aws.CloudWatch.MetricAlarmArgs,System.Nullable{CustomResourceOptions})">MetricAlarm(String, MetricAlarmArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm__ctor_System_String_Pulumi_Aws_CloudWatch_MetricAlarmArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.#ctor(System.String,Pulumi.Aws.CloudWatch.MetricAlarmArgs,Pulumi.CustomResourceOptions)">MetricAlarm(String, MetricAlarmArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a MetricAlarm resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MetricAlarm(string name, MetricAlarmArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public MetricAlarm(string name, MetricAlarmArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +371,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +381,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L246">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_ActionsEnabled_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.ActionsEnabled*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_ActionsEnabled" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.ActionsEnabled">ActionsEnabled</h4>
@@ -153,13 +402,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L252">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_AlarmActions_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.AlarmActions*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_AlarmActions" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.AlarmActions">AlarmActions</h4>
@@ -180,13 +429,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L258">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_AlarmDescription_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.AlarmDescription*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_AlarmDescription" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.AlarmDescription">AlarmDescription</h4>
@@ -195,7 +444,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AlarmDescription { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AlarmDescription { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +456,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L264">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_Arn_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Arn*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_Arn" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Arn">Arn</h4>
@@ -234,13 +483,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L270">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_ComparisonOperator_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.ComparisonOperator*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_ComparisonOperator" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.ComparisonOperator">ComparisonOperator</h4>
@@ -261,13 +510,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L276">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_DatapointsToAlarm_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.DatapointsToAlarm*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_DatapointsToAlarm" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.DatapointsToAlarm">DatapointsToAlarm</h4>
@@ -288,13 +537,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L282">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_Dimensions_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Dimensions*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_Dimensions" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Dimensions">Dimensions</h4>
@@ -303,7 +552,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Dimensions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Dimensions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,13 +564,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L293">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_EvaluateLowSampleCountPercentiles_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.EvaluateLowSampleCountPercentiles*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_EvaluateLowSampleCountPercentiles" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.EvaluateLowSampleCountPercentiles">EvaluateLowSampleCountPercentiles</h4>
@@ -347,13 +596,13 @@ The following values are supported: <code>ignore</code>, and <code>evaluate</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L299">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_EvaluationPeriods_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.EvaluationPeriods*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_EvaluationPeriods" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.EvaluationPeriods">EvaluationPeriods</h4>
@@ -374,13 +623,13 @@ The following values are supported: <code>ignore</code>, and <code>evaluate</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L305">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_ExtendedStatistic_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.ExtendedStatistic*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_ExtendedStatistic" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.ExtendedStatistic">ExtendedStatistic</h4>
@@ -389,7 +638,7 @@ The following values are supported: <code>ignore</code>, and <code>evaluate</cod
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ExtendedStatistic { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ExtendedStatistic { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -401,13 +650,13 @@ The following values are supported: <code>ignore</code>, and <code>evaluate</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L311">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_InsufficientDataActions_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.InsufficientDataActions*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_InsufficientDataActions" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.InsufficientDataActions">InsufficientDataActions</h4>
@@ -428,13 +677,13 @@ The following values are supported: <code>ignore</code>, and <code>evaluate</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L318">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_MetricName_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.MetricName*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_MetricName" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.MetricName">MetricName</h4>
@@ -444,7 +693,7 @@ See docs for <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/Develo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MetricName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MetricName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -456,13 +705,13 @@ See docs for <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/Develo
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L324">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_MetricQueries_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.MetricQueries*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_MetricQueries" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.MetricQueries">MetricQueries</h4>
@@ -483,13 +732,13 @@ See docs for <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/Develo
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.MetricAlarmMetricQuery.html">MetricAlarmMetricQuery</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.MetricAlarmMetricQuery.html">MetricAlarmMetricQuery</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L330">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_Name_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Name*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_Name" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Name">Name</h4>
@@ -510,13 +759,13 @@ See docs for <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/Develo
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L337">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_Namespace_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Namespace*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_Namespace" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Namespace">Namespace</h4>
@@ -526,7 +775,7 @@ See docs for <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/Develo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Namespace { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Namespace { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -538,13 +787,13 @@ See docs for <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/Develo
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L343">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_OkActions_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.OkActions*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_OkActions" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.OkActions">OkActions</h4>
@@ -565,13 +814,13 @@ See docs for <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/Develo
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L349">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_Period_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Period*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_Period" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Period">Period</h4>
@@ -592,13 +841,13 @@ See docs for <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/Develo
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L356">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_Statistic_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Statistic*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_Statistic" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Statistic">Statistic</h4>
@@ -608,7 +857,7 @@ Either of the following is supported: <code>SampleCount</code>, <code>Average</c
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Statistic { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Statistic { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -620,22 +869,22 @@ Either of the following is supported: <code>SampleCount</code>, <code>Average</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L362">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_Tags_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Tags*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_Tags" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -647,13 +896,13 @@ Either of the following is supported: <code>SampleCount</code>, <code>Average</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L368">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_Threshold_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Threshold*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_Threshold" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Threshold">Threshold</h4>
@@ -674,13 +923,13 @@ Either of the following is supported: <code>SampleCount</code>, <code>Average</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L374">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_ThresholdMetricId_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.ThresholdMetricId*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_ThresholdMetricId" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.ThresholdMetricId">ThresholdMetricId</h4>
@@ -689,7 +938,7 @@ Either of the following is supported: <code>SampleCount</code>, <code>Average</c
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ThresholdMetricId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ThresholdMetricId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -701,13 +950,13 @@ Either of the following is supported: <code>SampleCount</code>, <code>Average</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L380">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_TreatMissingData_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.TreatMissingData*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_TreatMissingData" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.TreatMissingData">TreatMissingData</h4>
@@ -716,7 +965,7 @@ Either of the following is supported: <code>SampleCount</code>, <code>Average</c
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TreatMissingData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TreatMissingData { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -728,13 +977,13 @@ Either of the following is supported: <code>SampleCount</code>, <code>Average</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L386">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_Unit_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Unit*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_Unit" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Unit">Unit</h4>
@@ -743,7 +992,7 @@ Either of the following is supported: <code>SampleCount</code>, <code>Average</c
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Unit { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Unit { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -755,7 +1004,7 @@ Either of the following is supported: <code>SampleCount</code>, <code>Average</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -763,17 +1012,17 @@ Either of the following is supported: <code>SampleCount</code>, <code>Average</c
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L201">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L427">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_MetricAlarm_Get_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Get*"></a>
-  <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_Get_System_String_Input_System_String__Pulumi_Aws_CloudWatch_MetricAlarmState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Get(System.String,Input{System.String},Pulumi.Aws.CloudWatch.MetricAlarmState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, MetricAlarmState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_CloudWatch_MetricAlarm_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_CloudWatch_MetricAlarmState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.CloudWatch.MetricAlarm.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.CloudWatch.MetricAlarmState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, MetricAlarmState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing MetricAlarm resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static MetricAlarm Get(string name, Input&lt;string&gt; id, MetricAlarmState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static MetricAlarm Get(string name, Input&lt;string&gt; id, MetricAlarmState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -792,7 +1041,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -804,7 +1053,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -833,7 +1082,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/CloudWatch/MetricAlarm.cs/#L241" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Pool
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,73 @@
   <h1 id="Pulumi_OpenStack_LoadBalancer_Pool" data-uid="Pulumi.OpenStack.LoadBalancer.Pool" class="text-break">Class Pool
   </h1>
   <div class="markdown level0 summary"><p>Manages a V2 pool resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var pool1 = new OpenStack.LoadBalancer.Pool(&amp;quot;pool1&amp;quot;, new OpenStack.LoadBalancer.PoolArgs
+    {
+        LbMethod = &amp;quot;ROUND_ROBIN&amp;quot;,
+        ListenerId = &amp;quot;d9415786-5f1a-428b-b35f-2f1523e146d2&amp;quot;,
+        Persistence = new OpenStack.LoadBalancer.Inputs.PoolPersistenceArgs
+        {
+            CookieName = &amp;quot;testCookie&amp;quot;,
+            Type = &amp;quot;APP_COOKIE&amp;quot;,
+        },
+        Protocol = &amp;quot;HTTP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Pool</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Pool</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.LoadBalancer.html">Pulumi.OpenStack.LoadBalancer</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -88,16 +149,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool__ctor_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_LoadBalancer_Pool__ctor_System_String_Pulumi_OpenStack_LoadBalancer_PoolArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.#ctor(System.String,Pulumi.OpenStack.LoadBalancer.PoolArgs,System.Nullable{CustomResourceOptions})">Pool(String, PoolArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Pool__ctor_System_String_Pulumi_OpenStack_LoadBalancer_PoolArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.#ctor(System.String,Pulumi.OpenStack.LoadBalancer.PoolArgs,Pulumi.CustomResourceOptions)">Pool(String, PoolArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Pool resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Pool(string name, PoolArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Pool(string name, PoolArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +183,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +193,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool_AdminStateUp_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.AdminStateUp*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_AdminStateUp" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.AdminStateUp">AdminStateUp</h4>
@@ -154,13 +215,13 @@ A valid value is true (UP) or false (DOWN).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool_Description_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Description*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_Description" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Description">Description</h4>
@@ -169,7 +230,7 @@ A valid value is true (UP) or false (DOWN).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,19 +242,20 @@ A valid value is true (UP) or false (DOWN).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool_LbMethod_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.LbMethod*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_LbMethod" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.LbMethod">LbMethod</h4>
   <div class="markdown level1 summary"><p>The load balancing algorithm to
 distribute traffic to the pool's members. Must be one of
-ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.</p>
+ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
+in Octavia).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -210,13 +272,13 @@ ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool_ListenerId_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.ListenerId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_ListenerId" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.ListenerId">ListenerId</h4>
@@ -227,7 +289,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ListenerId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ListenerId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,13 +301,13 @@ Note:  One of LoadbalancerID or ListenerID must be provided.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool_LoadbalancerId_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.LoadbalancerId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_LoadbalancerId" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.LoadbalancerId">LoadbalancerId</h4>
@@ -256,7 +318,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LoadbalancerId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LoadbalancerId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,13 +330,13 @@ Note:  One of LoadbalancerID or ListenerID must be provided.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool_Name_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Name*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_Name" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Name">Name</h4>
@@ -295,13 +357,13 @@ Note:  One of LoadbalancerID or ListenerID must be provided.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool_Persistence_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Persistence*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_Persistence" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Persistence">Persistence</h4>
@@ -324,13 +386,13 @@ member or not. Changing this creates a new pool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.OpenStack.LoadBalancer.Outputs.PoolPersistence.html">PoolPersistence</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.OpenStack.LoadBalancer.Outputs.PoolPersistence.html">PoolPersistence</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool_Protocol_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Protocol*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_Protocol" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Protocol">Protocol</h4>
@@ -352,13 +414,13 @@ or UDP (supported only in Octavia). Changing this creates a new pool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool_Region_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Region*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_Region" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Region">Region</h4>
@@ -382,13 +444,13 @@ pool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool_TenantId_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.TenantId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_TenantId" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.TenantId">TenantId</h4>
@@ -411,7 +473,7 @@ other than their own. Changing this creates a new pool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -419,17 +481,17 @@ other than their own. Changing this creates a new pool.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_Pool_Get_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Get*"></a>
-  <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_Get_System_String_Input_System_String__Pulumi_OpenStack_LoadBalancer_PoolState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Get(System.String,Input{System.String},Pulumi.OpenStack.LoadBalancer.PoolState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, PoolState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Pool_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_LoadBalancer_PoolState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.LoadBalancer.Pool.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.LoadBalancer.PoolState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, PoolState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Pool resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Pool Get(string name, Input&lt;string&gt; id, PoolState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Pool Get(string name, Input&lt;string&gt; id, PoolState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -448,7 +510,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -460,7 +522,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -489,7 +551,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Pool.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/LoadBalancer/Pool.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

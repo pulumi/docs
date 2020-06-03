@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetRegistryImage
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,29 +78,79 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetRegistryImage</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Docker.html">Pulumi.Docker</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Docker.dll</h6>
   <h5 id="Pulumi_Docker_GetRegistryImage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetRegistryImage : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetRegistryImage</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/GetRegistryImage.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/GetRegistryImage.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Docker_GetRegistryImage_InvokeAsync_" data-uid="Pulumi.Docker.GetRegistryImage.InvokeAsync*"></a>
-  <h4 id="Pulumi_Docker_GetRegistryImage_InvokeAsync_Pulumi_Docker_GetRegistryImageArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Docker.GetRegistryImage.InvokeAsync(Pulumi.Docker.GetRegistryImageArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetRegistryImageArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Docker_GetRegistryImage_InvokeAsync_Pulumi_Docker_GetRegistryImageArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Docker.GetRegistryImage.InvokeAsync(Pulumi.Docker.GetRegistryImageArgs,Pulumi.InvokeOptions)">InvokeAsync(GetRegistryImageArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Reads the image metadata from a Docker Registry. Used in conjunction with the
 <a href="https://www.terraform.io/docs/providers/docker/r/image.html">docker_image</a> resource to keep an image up
 to date on the latest available version of the tag.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Docker = Pulumi.Docker;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ubuntuRegistryImage = Output.Create(Docker.GetRegistryImage.InvokeAsync(new Docker.GetRegistryImageArgs
+    {
+        Name = &amp;quot;ubuntu:precise&amp;quot;,
+    }));
+    var ubuntuRemoteImage = new Docker.RemoteImage(&amp;quot;ubuntuRemoteImage&amp;quot;, new Docker.RemoteImageArgs
+    {
+        Name = ubuntuRegistryImage.Apply(ubuntuRegistryImage =&gt; ubuntuRegistryImage.Name),
+        PullTriggers = 
+        {
+            ubuntuRegistryImage.Apply(ubuntuRegistryImage =&gt; ubuntuRegistryImage.Sha256Digest),
+        },
+    });
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetRegistryImageResult&gt; InvokeAsync(GetRegistryImageArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetRegistryImageResult&gt; InvokeAsync(GetRegistryImageArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -118,7 +168,7 @@ to date on the latest available version of the tag.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -134,7 +184,7 @@ to date on the latest available version of the tag.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Docker.GetRegistryImageResult.html">GetRegistryImageResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Docker.GetRegistryImageResult.html">GetRegistryImageResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -146,7 +196,7 @@ to date on the latest available version of the tag.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/GetRegistryImage.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/GetRegistryImage.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Docker
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -88,6 +88,28 @@ The final image is always implicitly included.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Docker.Container.html">Container</a></h4>
       <section><p>Manages the lifecycle of a Docker container.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Docker = Pulumi.Docker;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Find the latest Ubuntu precise image.
+    var ubuntuRemoteImage = new Docker.RemoteImage(&amp;quot;ubuntuRemoteImage&amp;quot;, new Docker.RemoteImageArgs
+    {
+        Name = &amp;quot;ubuntu:precise&amp;quot;,
+    });
+    // Start a container
+    var ubuntuContainer = new Docker.Container(&amp;quot;ubuntuContainer&amp;quot;, new Docker.ContainerArgs
+    {
+        Image = ubuntuRemoteImage.Latest,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.ContainerArgs.html">ContainerArgs</a></h4>
       <section></section>
@@ -125,6 +147,22 @@ Azure Container Instances.</p>
       <section><p>Manages a Docker Network. This can be used alongside
 <a href="https://www.terraform.io/docs/providers/docker/r/container.html">docker_container</a>
 to create virtual networks within the docker environment.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Docker = Pulumi.Docker;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new docker network
+    var privateNetwork = new Docker.Network(&amp;quot;privateNetwork&amp;quot;, new Docker.NetworkArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.NetworkArgs.html">NetworkArgs</a></h4>
       <section></section>
@@ -143,6 +181,47 @@ construction to achieve fine-grained programmatic control over provider settings
 <p>This resource will <em>not</em> pull new layers of the image automatically unless used in
 conjunction with <a href="https://www.terraform.io/docs/providers/docker/d/registry_image.html"><code>docker..getRegistryImage</code></a>
 data source to update the <code>pull_triggers</code> field.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Docker = Pulumi.Docker;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Find the latest Ubuntu precise image.
+    var ubuntu = new Docker.RemoteImage(&amp;quot;ubuntu&amp;quot;, new Docker.RemoteImageArgs
+    {
+        Name = &amp;quot;ubuntu:precise&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="dynamic-image">Dynamic image</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Docker = Pulumi.Docker;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ubuntuRegistryImage = Output.Create(Docker.GetRegistryImage.InvokeAsync(new Docker.GetRegistryImageArgs
+    {
+        Name = &amp;quot;ubuntu:precise&amp;quot;,
+    }));
+    var ubuntuRemoteImage = new Docker.RemoteImage(&amp;quot;ubuntuRemoteImage&amp;quot;, new Docker.RemoteImageArgs
+    {
+        Name = ubuntuRegistryImage.Apply(ubuntuRegistryImage =&gt; ubuntuRegistryImage.Name),
+        PullTriggers = 
+        {
+            ubuntuRegistryImage.Apply(ubuntuRegistryImage =&gt; ubuntuRegistryImage.Sha256Digest),
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.RemoteImageArgs.html">RemoteImageArgs</a></h4>
       <section></section>
@@ -150,6 +229,24 @@ data source to update the <code>pull_triggers</code> field.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Docker.Secret.html">Secret</a></h4>
       <section><p>Manages the secrets of a Docker service in a swarm.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Docker = Pulumi.Docker;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Creates a secret
+    var fooSecret = new Docker.Secret(&amp;quot;fooSecret&amp;quot;, new Docker.SecretArgs
+    {
+        Data = &amp;quot;ewogICJzZXJsaasIfQo=&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.SecretArgs.html">SecretArgs</a></h4>
       <section></section>
@@ -161,6 +258,23 @@ data source to update the <code>pull_triggers</code> field.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Docker.ServiceConfig.html">ServiceConfig</a></h4>
       <section><p>Manages the configuration of a Docker service in a swarm.</p>
+<h2 id="basic">Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Docker = Pulumi.Docker;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Creates a config
+    var fooConfig = new Docker.ServiceConfig(&amp;quot;fooConfig&amp;quot;, new Docker.ServiceConfigArgs
+    {
+        Data = &amp;quot;ewogICJzZXJIfQo=&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.ServiceConfigArgs.html">ServiceConfigArgs</a></h4>
       <section></section>
@@ -172,6 +286,22 @@ data source to update the <code>pull_triggers</code> field.</p>
       <section><p>Creates and destroys a volume in Docker. This can be used alongside
 <a href="https://www.terraform.io/docs/providers/docker/r/container.html">docker_container</a>
 to prepare volumes that can be shared across containers.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Docker = Pulumi.Docker;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Creates a docker volume &amp;quot;shared_volume&amp;quot;.
+    var sharedVolume = new Docker.Volume(&amp;quot;sharedVolume&amp;quot;, new Docker.VolumeArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.VolumeArgs.html">VolumeArgs</a></h4>
       <section></section>

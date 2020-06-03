@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Ram
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,32 @@
 <blockquote>
 <p><strong>NOTE:</strong>  You should set the <code>secret_file</code> if you want to get the access key.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new RAM access key for user.
+    var user = new AliCloud.Ram.User(&amp;quot;user&amp;quot;, new AliCloud.Ram.UserArgs
+    {
+        Comments = &amp;quot;yoyoyo&amp;quot;,
+        DisplayName = &amp;quot;user_display_name&amp;quot;,
+        Email = &amp;quot;hello.uuu@aaa.com&amp;quot;,
+        Force = true,
+        Mobile = &amp;quot;86-18688888888&amp;quot;,
+    });
+    var ak = new AliCloud.Ram.AccessKey(&amp;quot;ak&amp;quot;, new AliCloud.Ram.AccessKeyArgs
+    {
+        SecretFile = &amp;quot;/xxx/xxx/xxx.txt&amp;quot;,
+        UserName = user.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.AccessKeyArgs.html">AccessKeyArgs</a></h4>
       <section></section>
@@ -88,6 +114,23 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.AccountAlias.html">AccountAlias</a></h4>
       <section><p>Provides a RAM cloud account alias.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a alias for cloud account.
+    var @alias = new AliCloud.Ram.AccountAlias(&amp;quot;alias&amp;quot;, new AliCloud.Ram.AccountAliasArgs
+    {
+        AccountAlias = &amp;quot;hallo&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.AccountAliasArgs.html">AccountAliasArgs</a></h4>
       <section></section>
@@ -147,6 +190,49 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.GroupMembership.html">GroupMembership</a></h4>
       <section><p>Provides a RAM Group membership resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a RAM Group membership.
+    var @group = new AliCloud.Ram.Group(&amp;quot;group&amp;quot;, new AliCloud.Ram.GroupArgs
+    {
+        Comments = &amp;quot;this is a group comments.&amp;quot;,
+        Force = true,
+    });
+    var user = new AliCloud.Ram.User(&amp;quot;user&amp;quot;, new AliCloud.Ram.UserArgs
+    {
+        Comments = &amp;quot;yoyoyo&amp;quot;,
+        DisplayName = &amp;quot;user_display_name&amp;quot;,
+        Email = &amp;quot;hello.uuu@aaa.com&amp;quot;,
+        Force = true,
+        Mobile = &amp;quot;86-18688888888&amp;quot;,
+    });
+    var user1 = new AliCloud.Ram.User(&amp;quot;user1&amp;quot;, new AliCloud.Ram.UserArgs
+    {
+        Comments = &amp;quot;yoyoyo&amp;quot;,
+        DisplayName = &amp;quot;user_display_name1&amp;quot;,
+        Email = &amp;quot;hello.uuu@aaa.com&amp;quot;,
+        Force = true,
+        Mobile = &amp;quot;86-18688888889&amp;quot;,
+    });
+    var membership = new AliCloud.Ram.GroupMembership(&amp;quot;membership&amp;quot;, new AliCloud.Ram.GroupMembershipArgs
+    {
+        GroupName = @group.Name,
+        UserNames = 
+        {
+            user.Name,
+            user1.Name,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.GroupMembershipArgs.html">GroupMembershipArgs</a></h4>
       <section></section>
@@ -154,6 +240,53 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.GroupPolicyAttachment.html">GroupPolicyAttachment</a></h4>
       <section><p>Provides a RAM Group Policy attachment resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a RAM Group Policy attachment.
+    var @group = new AliCloud.Ram.Group(&amp;quot;group&amp;quot;, new AliCloud.Ram.GroupArgs
+    {
+        Comments = &amp;quot;this is a group comments.&amp;quot;,
+        Force = true,
+    });
+    var policy = new AliCloud.Ram.Policy(&amp;quot;policy&amp;quot;, new AliCloud.Ram.PolicyArgs
+    {
+        Description = &amp;quot;this is a policy test&amp;quot;,
+        Document = @&amp;quot;    {
+  &amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+    {
+      &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+        &amp;quot;&amp;quot;oss:ListObjects&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;oss:GetObject&amp;quot;&amp;quot;
+      ],
+      &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+        &amp;quot;&amp;quot;acs:oss:*:*:mybucket&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;acs:oss:*:*:mybucket/*&amp;quot;&amp;quot;
+      ]
+    }
+  ],
+    &amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;1&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+        Force = true,
+    });
+    var attach = new AliCloud.Ram.GroupPolicyAttachment(&amp;quot;attach&amp;quot;, new AliCloud.Ram.GroupPolicyAttachmentArgs
+    {
+        GroupName = @group.Name,
+        PolicyName = policy.Name,
+        PolicyType = policy.Type,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.GroupPolicyAttachmentArgs.html">GroupPolicyAttachmentArgs</a></h4>
       <section></section>
@@ -163,6 +296,32 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.LoginProfile.html">LoginProfile</a></h4>
       <section><p>Provides a RAM User Login Profile resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a RAM login profile.
+    var user = new AliCloud.Ram.User(&amp;quot;user&amp;quot;, new AliCloud.Ram.UserArgs
+    {
+        Comments = &amp;quot;yoyoyo&amp;quot;,
+        DisplayName = &amp;quot;user_display_name&amp;quot;,
+        Email = &amp;quot;hello.uuu@aaa.com&amp;quot;,
+        Force = true,
+        Mobile = &amp;quot;86-18688888888&amp;quot;,
+    });
+    var profile = new AliCloud.Ram.LoginProfile(&amp;quot;profile&amp;quot;, new AliCloud.Ram.LoginProfileArgs
+    {
+        Password = &amp;quot;Yourpassword1234&amp;quot;,
+        UserName = user.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.LoginProfileArgs.html">LoginProfileArgs</a></h4>
       <section></section>
@@ -180,6 +339,109 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.RoleAttachment.html">RoleAttachment</a></h4>
       <section><p>Provides a RAM role attachment resource to bind role for several ECS instances.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultInstanceTypes = defaultZones.Apply(defaultZones =&gt; Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+    {
+        AvailabilityZone = defaultZones.Zones[0].Id,
+        CpuCoreCount = 2,
+        MemorySize = 4,
+    })));
+    var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+    {
+        MostRecent = true,
+        NameRegex = &amp;quot;^ubuntu_18.*64&amp;quot;,
+        Owners = &amp;quot;system&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup(&amp;quot;defaultSecurityGroup&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultSecurityGroupRule = new AliCloud.Ecs.SecurityGroupRule(&amp;quot;defaultSecurityGroupRule&amp;quot;, new AliCloud.Ecs.SecurityGroupRuleArgs
+    {
+        CidrIp = &amp;quot;172.16.0.0/24&amp;quot;,
+        IpProtocol = &amp;quot;tcp&amp;quot;,
+        NicType = &amp;quot;intranet&amp;quot;,
+        Policy = &amp;quot;accept&amp;quot;,
+        PortRange = &amp;quot;22/22&amp;quot;,
+        Priority = 1,
+        SecurityGroupId = defaultSecurityGroup.Id,
+        Type = &amp;quot;ingress&amp;quot;,
+    });
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;ecsInstanceVPCExample&amp;quot;;
+    var foo = new AliCloud.Ecs.Instance(&amp;quot;foo&amp;quot;, new AliCloud.Ecs.InstanceArgs
+    {
+        ImageId = defaultImages.Apply(defaultImages =&gt; defaultImages.Images[0].Id),
+        InstanceName = name,
+        InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes =&gt; defaultInstanceTypes.InstanceTypes[0].Id),
+        InternetChargeType = &amp;quot;PayByTraffic&amp;quot;,
+        InternetMaxBandwidthOut = 5,
+        SecurityGroups = 
+        {
+            defaultSecurityGroup.Id,
+        },
+        SystemDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var role = new AliCloud.Ram.Role(&amp;quot;role&amp;quot;, new AliCloud.Ram.RoleArgs
+    {
+        Description = &amp;quot;this is a test&amp;quot;,
+        Document = @&amp;quot;  {
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+  {
+    &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+      &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: [
+        &amp;quot;&amp;quot;ecs.aliyuncs.com&amp;quot;&amp;quot;
+      ]
+    }
+  }
+],
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;1&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+        Force = true,
+    });
+    var attach = new AliCloud.Ram.RoleAttachment(&amp;quot;attach&amp;quot;, new AliCloud.Ram.RoleAttachmentArgs
+    {
+        InstanceIds = 
+        {
+
+            {
+                foo,
+            }.Select(__item =&gt; __item.Id).ToList(),
+        },
+        RoleName = role.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.RoleAttachmentArgs.html">RoleAttachmentArgs</a></h4>
       <section></section>
@@ -187,6 +449,70 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.RolePolicyAttachment.html">RolePolicyAttachment</a></h4>
       <section><p>Provides a RAM Role attachment resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a RAM Role Policy attachment.
+    var role = new AliCloud.Ram.Role(&amp;quot;role&amp;quot;, new AliCloud.Ram.RoleArgs
+    {
+        Description = &amp;quot;this is a role test.&amp;quot;,
+        Document = @&amp;quot;    {
+  &amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+    {
+      &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+        &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: [
+          &amp;quot;&amp;quot;apigateway.aliyuncs.com&amp;quot;&amp;quot;, 
+          &amp;quot;&amp;quot;ecs.aliyuncs.com&amp;quot;&amp;quot;
+        ]
+      }
+    }
+  ],
+  &amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;1&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+        Force = true,
+    });
+    var policy = new AliCloud.Ram.Policy(&amp;quot;policy&amp;quot;, new AliCloud.Ram.PolicyArgs
+    {
+        Description = &amp;quot;this is a policy test&amp;quot;,
+        Document = @&amp;quot;  {
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+  {
+    &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+      &amp;quot;&amp;quot;oss:ListObjects&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;oss:GetObject&amp;quot;&amp;quot;
+    ],
+    &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+      &amp;quot;&amp;quot;acs:oss:*:*:mybucket&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;acs:oss:*:*:mybucket/*&amp;quot;&amp;quot;
+    ]
+  }
+],
+  &amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;1&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+        Force = true,
+    });
+    var attach = new AliCloud.Ram.RolePolicyAttachment(&amp;quot;attach&amp;quot;, new AliCloud.Ram.RolePolicyAttachmentArgs
+    {
+        PolicyName = policy.Name,
+        PolicyType = policy.Type,
+        RoleName = role.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.RolePolicyAttachmentArgs.html">RolePolicyAttachmentArgs</a></h4>
       <section></section>
@@ -200,6 +526,56 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.UserPolicyAttachment.html">UserPolicyAttachment</a></h4>
       <section><p>Provides a RAM User Policy attachment resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a RAM User Policy attachment.
+    var user = new AliCloud.Ram.User(&amp;quot;user&amp;quot;, new AliCloud.Ram.UserArgs
+    {
+        Comments = &amp;quot;yoyoyo&amp;quot;,
+        DisplayName = &amp;quot;user_display_name&amp;quot;,
+        Email = &amp;quot;hello.uuu@aaa.com&amp;quot;,
+        Force = true,
+        Mobile = &amp;quot;86-18688888888&amp;quot;,
+    });
+    var policy = new AliCloud.Ram.Policy(&amp;quot;policy&amp;quot;, new AliCloud.Ram.PolicyArgs
+    {
+        Description = &amp;quot;this is a policy test&amp;quot;,
+        Document = @&amp;quot;  {
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+  {
+    &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+      &amp;quot;&amp;quot;oss:ListObjects&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;oss:GetObject&amp;quot;&amp;quot;
+    ],
+    &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+      &amp;quot;&amp;quot;acs:oss:*:*:mybucket&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;acs:oss:*:*:mybucket/*&amp;quot;&amp;quot;
+    ]
+  }
+],
+  &amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;1&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+        Force = true,
+    });
+    var attach = new AliCloud.Ram.UserPolicyAttachment(&amp;quot;attach&amp;quot;, new AliCloud.Ram.UserPolicyAttachmentArgs
+    {
+        PolicyName = policy.Name,
+        PolicyType = policy.Type,
+        UserName = user.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ram.UserPolicyAttachmentArgs.html">UserPolicyAttachmentArgs</a></h4>
       <section></section>

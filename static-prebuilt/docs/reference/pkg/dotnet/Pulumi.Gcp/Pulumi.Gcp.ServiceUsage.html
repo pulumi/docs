@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.ServiceUsage
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,6 +86,32 @@ producer overrides, or the default limit of the service.</p>
 <li><a href="https://cloud.google.com/service-usage/docs/getting-started">Getting Started</a></li>
 <li><a href="https://cloud.google.com/service-usage/docs/reference/rest/v1beta1/services.consumerQuotaMetrics.limits.consumerOverrides">REST API documentation</a></li>
 </ul>
+<h2 id="example-usage---consumer-quota-override">Example Usage - Consumer Quota Override</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myProject = new Gcp.Organizations.Project(&amp;quot;myProject&amp;quot;, new Gcp.Organizations.ProjectArgs
+    {
+        ProjectId = &amp;quot;quota&amp;quot;,
+        OrgId = &amp;quot;123456789&amp;quot;,
+    });
+    var @override = new Gcp.ServiceUsage.ConsumerQuotaOverride(&amp;quot;override&amp;quot;, new Gcp.ServiceUsage.ConsumerQuotaOverrideArgs
+    {
+        Project = myProject.ProjectId,
+        Service = &amp;quot;servicemanagement.googleapis.com&amp;quot;,
+        Metric = &amp;quot;servicemanagement.googleapis.com%2Fdefault_requests&amp;quot;,
+        Limit = &amp;quot;%2Fmin%2Fproject&amp;quot;,
+        OverrideValue = &amp;quot;95&amp;quot;,
+        Force = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.ServiceUsage.ConsumerQuotaOverrideArgs.html">ConsumerQuotaOverrideArgs</a></h4>
       <section></section>

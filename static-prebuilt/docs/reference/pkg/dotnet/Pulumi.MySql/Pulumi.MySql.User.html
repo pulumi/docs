@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class User
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,12 +79,86 @@ obscured by an unsalted hash in the state
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.
 Care is required when using this resource, to avoid disclosing the password.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var jdoe = new MySql.User(&amp;quot;jdoe&amp;quot;, new MySql.UserArgs
+    {
+        Host = &amp;quot;example.com&amp;quot;,
+        PlaintextPassword = &amp;quot;password&amp;quot;,
+        User = &amp;quot;jdoe&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-with-an-authentication-plugin">Example Usage with an Authentication Plugin</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var nologin = new MySql.User(&amp;quot;nologin&amp;quot;, new MySql.UserArgs
+    {
+        AuthPlugin = &amp;quot;mysql_no_login&amp;quot;,
+        Host = &amp;quot;example.com&amp;quot;,
+        User = &amp;quot;nologin&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">User</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">User</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.MySql.html">Pulumi.MySql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.MySql.dll</h6>
@@ -95,16 +169,16 @@ Care is required when using this resource, to avoid disclosing the password.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/User.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/User.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_MySql_User__ctor_" data-uid="Pulumi.MySql.User.#ctor*"></a>
-  <h4 id="Pulumi_MySql_User__ctor_System_String_Pulumi_MySql_UserArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.MySql.User.#ctor(System.String,Pulumi.MySql.UserArgs,System.Nullable{CustomResourceOptions})">User(String, UserArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_MySql_User__ctor_System_String_Pulumi_MySql_UserArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.MySql.User.#ctor(System.String,Pulumi.MySql.UserArgs,Pulumi.CustomResourceOptions)">User(String, UserArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a User resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public User(string name, UserArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public User(string name, UserArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,7 +203,7 @@ Care is required when using this resource, to avoid disclosing the password.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -139,7 +213,7 @@ Care is required when using this resource, to avoid disclosing the password.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/User.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/User.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_MySql_User_AuthPlugin_" data-uid="Pulumi.MySql.User.AuthPlugin*"></a>
   <h4 id="Pulumi_MySql_User_AuthPlugin" data-uid="Pulumi.MySql.User.AuthPlugin">AuthPlugin</h4>
@@ -148,7 +222,7 @@ Care is required when using this resource, to avoid disclosing the password.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AuthPlugin { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AuthPlugin { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,13 +234,13 @@ Care is required when using this resource, to avoid disclosing the password.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/User.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/User.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_MySql_User_Host_" data-uid="Pulumi.MySql.User.Host*"></a>
   <h4 id="Pulumi_MySql_User_Host" data-uid="Pulumi.MySql.User.Host">Host</h4>
@@ -175,7 +249,7 @@ Care is required when using this resource, to avoid disclosing the password.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Host { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Host { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,13 +261,13 @@ Care is required when using this resource, to avoid disclosing the password.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/User.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/User.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_MySql_User_Password_" data-uid="Pulumi.MySql.User.Password*"></a>
   <h4 id="Pulumi_MySql_User_Password" data-uid="Pulumi.MySql.User.Password">Password</h4>
@@ -202,7 +276,7 @@ Care is required when using this resource, to avoid disclosing the password.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Password { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Password { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,13 +288,13 @@ Care is required when using this resource, to avoid disclosing the password.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/User.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/User.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_MySql_User_PlaintextPassword_" data-uid="Pulumi.MySql.User.PlaintextPassword*"></a>
   <h4 id="Pulumi_MySql_User_PlaintextPassword" data-uid="Pulumi.MySql.User.PlaintextPassword">PlaintextPassword</h4>
@@ -229,7 +303,7 @@ Care is required when using this resource, to avoid disclosing the password.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PlaintextPassword { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PlaintextPassword { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,13 +315,13 @@ Care is required when using this resource, to avoid disclosing the password.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/User.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/User.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_MySql_User_TlsOption_" data-uid="Pulumi.MySql.User.TlsOption*"></a>
   <h4 id="Pulumi_MySql_User_TlsOption" data-uid="Pulumi.MySql.User.TlsOption">TlsOption</h4>
@@ -256,7 +330,7 @@ Care is required when using this resource, to avoid disclosing the password.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TlsOption { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TlsOption { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,13 +342,13 @@ Care is required when using this resource, to avoid disclosing the password.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/User.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/User.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_MySql_User_UserName_" data-uid="Pulumi.MySql.User.UserName*"></a>
   <h4 id="Pulumi_MySql_User_UserName" data-uid="Pulumi.MySql.User.UserName">UserName</h4>
@@ -295,7 +369,7 @@ Care is required when using this resource, to avoid disclosing the password.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -303,17 +377,17 @@ Care is required when using this resource, to avoid disclosing the password.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/User.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/User.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_MySql_User_Get_" data-uid="Pulumi.MySql.User.Get*"></a>
-  <h4 id="Pulumi_MySql_User_Get_System_String_Input_System_String__Pulumi_MySql_UserState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.MySql.User.Get(System.String,Input{System.String},Pulumi.MySql.UserState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, UserState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_MySql_User_Get_System_String_Pulumi_Input_System_String__Pulumi_MySql_UserState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.MySql.User.Get(System.String,Pulumi.Input{System.String},Pulumi.MySql.UserState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, UserState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing User resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static User Get(string name, Input&lt;string&gt; id, UserState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static User Get(string name, Input&lt;string&gt; id, UserState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,7 +406,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -344,7 +418,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -373,7 +447,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/User.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/User.cs/#L65" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.PolarDB
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -109,6 +109,45 @@ databases.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Available in v1.66.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-polardb-mysql-cluster">Create a PolarDB MySQL cluster</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;polardbClusterconfig&amp;quot;;
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;PolarDB&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultCluster = new AliCloud.PolarDB.Cluster(&amp;quot;defaultCluster&amp;quot;, new AliCloud.PolarDB.ClusterArgs
+    {
+        DbNodeClass = &amp;quot;rds.mysql.s2.large&amp;quot;,
+        DbType = &amp;quot;MySQL&amp;quot;,
+        DbVersion = &amp;quot;5.6&amp;quot;,
+        Description = name,
+        PayType = &amp;quot;PostPaid&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.PolarDB.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
@@ -119,6 +158,32 @@ databases.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Available in v1.66.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cluster = new AliCloud.PolarDB.Cluster(&amp;quot;cluster&amp;quot;, new AliCloud.PolarDB.ClusterArgs
+    {
+        DbNodeClass = @var.Clusterclass,
+        DbType = &amp;quot;MySQL&amp;quot;,
+        DbVersion = &amp;quot;8.0&amp;quot;,
+        Description = &amp;quot;testDB&amp;quot;,
+        PayType = &amp;quot;PostPaid&amp;quot;,
+        VswitchId = &amp;quot;polar.mysql.x4.large&amp;quot;,
+    });
+    var @default = new AliCloud.PolarDB.Database(&amp;quot;default&amp;quot;, new AliCloud.PolarDB.DatabaseArgs
+    {
+        DbClusterId = cluster.Id,
+        DbName = &amp;quot;tftestdatabase&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.PolarDB.DatabaseArgs.html">DatabaseArgs</a></h4>
       <section></section>
@@ -137,6 +202,55 @@ To avoid unnecessary conflict, please specified a internet connection prefix bef
 <p><strong>NOTE:</strong> Available in v1.68.0+. Each PolarDB instance will allocate a intranet connection string automatically and its prefix is Cluster ID.
 To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;PolarDB&amp;quot;;
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;polardbconnectionbasic&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        VpcId = defaultNetwork.Id,
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+    });
+    var defaultCluster = new AliCloud.PolarDB.Cluster(&amp;quot;defaultCluster&amp;quot;, new AliCloud.PolarDB.ClusterArgs
+    {
+        DbType = &amp;quot;MySQL&amp;quot;,
+        DbVersion = &amp;quot;8.0&amp;quot;,
+        PayType = &amp;quot;PostPaid&amp;quot;,
+        DbNodeClass = &amp;quot;polar.mysql.x4.large&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+        Description = name,
+    });
+    var defaultEndpoints = defaultCluster.Id.Apply(id =&gt; AliCloud.PolarDB.GetEndpoints.InvokeAsync(new AliCloud.PolarDB.GetEndpointsArgs
+    {
+        DbClusterId = id,
+    }));
+    var endpoint = new AliCloud.PolarDB.EndpointAddress(&amp;quot;endpoint&amp;quot;, new AliCloud.PolarDB.EndpointAddressArgs
+    {
+        DbClusterId = defaultCluster.Id,
+        DbEndpointId = defaultEndpoints.Apply(defaultEndpoints =&gt; defaultEndpoints.Endpoints[0].DbEndpointId),
+        ConnectionPrefix = &amp;quot;testpolardbconn&amp;quot;,
+        NetType = &amp;quot;Public&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.PolarDB.EndpointAddressArgs.html">EndpointAddressArgs</a></h4>
       <section></section>
@@ -169,6 +283,12 @@ To avoid unnecessary conflict, please specified a internet connection prefix bef
       <h4><a class="xref" href="Pulumi.AliCloud.PolarDB.GetEndpointsArgs.html">GetEndpointsArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.PolarDB.GetEndpointsResult.html">GetEndpointsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.PolarDB.GetNodeClasses.html">GetNodeClasses</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.PolarDB.GetNodeClassesArgs.html">GetNodeClassesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.PolarDB.GetNodeClassesResult.html">GetNodeClassesResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.PolarDB.GetZones.html">GetZones</a></h4>
       <section></section>

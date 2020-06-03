@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.DataFactory
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,39 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.DatasetMysql.html">DatasetMysql</a></h4>
       <section><p>Manages a MySQL Dataset inside a Azure Data Factory.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleLinkedServiceMysql = new Azure.DataFactory.LinkedServiceMysql(&amp;quot;exampleLinkedServiceMysql&amp;quot;, new Azure.DataFactory.LinkedServiceMysqlArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+        ConnectionString = &amp;quot;Server=test;Port=3306;Database=test;User=test;SSLMode=1;UseSystemTrustStore=0;Password=test&amp;quot;,
+    });
+    var exampleDatasetMysql = new Azure.DataFactory.DatasetMysql(&amp;quot;exampleDatasetMysql&amp;quot;, new Azure.DataFactory.DatasetMysqlArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+        LinkedServiceName = exampleLinkedServiceMysql.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.DatasetMysqlArgs.html">DatasetMysqlArgs</a></h4>
       <section></section>
@@ -85,6 +118,39 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.DatasetPostgresql.html">DatasetPostgresql</a></h4>
       <section><p>Manages a PostgreSQL Dataset inside a Azure Data Factory.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleLinkedServicePostgresql = new Azure.DataFactory.LinkedServicePostgresql(&amp;quot;exampleLinkedServicePostgresql&amp;quot;, new Azure.DataFactory.LinkedServicePostgresqlArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+        ConnectionString = &amp;quot;Host=example;Port=5432;Database=example;UID=example;EncryptionMethod=0;Password=example&amp;quot;,
+    });
+    var exampleDatasetPostgresql = new Azure.DataFactory.DatasetPostgresql(&amp;quot;exampleDatasetPostgresql&amp;quot;, new Azure.DataFactory.DatasetPostgresqlArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+        LinkedServiceName = exampleLinkedServicePostgresql.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.DatasetPostgresqlArgs.html">DatasetPostgresqlArgs</a></h4>
       <section></section>
@@ -92,6 +158,39 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.DatasetSqlServerTable.html">DatasetSqlServerTable</a></h4>
       <section><p>Manages a SQL Server Table Dataset inside a Azure Data Factory.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleLinkedServiceSqlServer = new Azure.DataFactory.LinkedServiceSqlServer(&amp;quot;exampleLinkedServiceSqlServer&amp;quot;, new Azure.DataFactory.LinkedServiceSqlServerArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+        ConnectionString = &amp;quot;Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test&amp;quot;,
+    });
+    var exampleDatasetSqlServerTable = new Azure.DataFactory.DatasetSqlServerTable(&amp;quot;exampleDatasetSqlServerTable&amp;quot;, new Azure.DataFactory.DatasetSqlServerTableArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+        LinkedServiceName = exampleLinkedServiceSqlServer.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.DatasetSqlServerTableArgs.html">DatasetSqlServerTableArgs</a></h4>
       <section></section>
@@ -99,6 +198,27 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.Factory.html">Factory</a></h4>
       <section><p>Manages an Azure Data Factory (Version 2).</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.FactoryArgs.html">FactoryArgs</a></h4>
       <section></section>
@@ -112,6 +232,34 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.IntegrationRuntimeManaged.html">IntegrationRuntimeManaged</a></h4>
       <section><p>Manages an Azure Data Factory Managed Integration Runtime.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleIntegrationRuntimeManaged = new Azure.DataFactory.IntegrationRuntimeManaged(&amp;quot;exampleIntegrationRuntimeManaged&amp;quot;, new Azure.DataFactory.IntegrationRuntimeManagedArgs
+    {
+        DataFactoryName = exampleFactory.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        NodeSize = &amp;quot;Standard_D8_v3&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.IntegrationRuntimeManagedArgs.html">IntegrationRuntimeManagedArgs</a></h4>
       <section></section>
@@ -119,6 +267,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.html">LinkedServiceDataLakeStorageGen2</a></h4>
       <section><p>Manages a Linked Service (connection) between Data Lake Storage Gen2 and Azure Data Factory.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var exampleLinkedServiceDataLakeStorageGen2 = new Azure.DataFactory.LinkedServiceDataLakeStorageGen2(&amp;quot;exampleLinkedServiceDataLakeStorageGen2&amp;quot;, new Azure.DataFactory.LinkedServiceDataLakeStorageGen2Args
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+        ServicePrincipalId = current.Apply(current =&gt; current.ClientId),
+        ServicePrincipalKey = &amp;quot;exampleKey&amp;quot;,
+        Tenant = &amp;quot;11111111-1111-1111-1111-111111111111&amp;quot;,
+        Url = &amp;quot;https://datalakestoragegen2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2Args.html">LinkedServiceDataLakeStorageGen2Args</a></h4>
       <section></section>
@@ -126,6 +305,33 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.LinkedServiceMysql.html">LinkedServiceMysql</a></h4>
       <section><p>Manages a Linked Service (connection) between MySQL and Azure Data Factory.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleLinkedServiceMysql = new Azure.DataFactory.LinkedServiceMysql(&amp;quot;exampleLinkedServiceMysql&amp;quot;, new Azure.DataFactory.LinkedServiceMysqlArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+        ConnectionString = &amp;quot;Server=test;Port=3306;Database=test;User=test;SSLMode=1;UseSystemTrustStore=0;Password=test&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.LinkedServiceMysqlArgs.html">LinkedServiceMysqlArgs</a></h4>
       <section></section>
@@ -133,6 +339,33 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.LinkedServicePostgresql.html">LinkedServicePostgresql</a></h4>
       <section><p>Manages a Linked Service (connection) between PostgreSQL and Azure Data Factory.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleLinkedServicePostgresql = new Azure.DataFactory.LinkedServicePostgresql(&amp;quot;exampleLinkedServicePostgresql&amp;quot;, new Azure.DataFactory.LinkedServicePostgresqlArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+        ConnectionString = &amp;quot;Host=example;Port=5432;Database=example;UID=example;EncryptionMethod=0;Password=example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.LinkedServicePostgresqlArgs.html">LinkedServicePostgresqlArgs</a></h4>
       <section></section>
@@ -140,6 +373,33 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.LinkedServiceSqlServer.html">LinkedServiceSqlServer</a></h4>
       <section><p>Manages a Linked Service (connection) between a SQL Server and Azure Data Factory.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleLinkedServiceSqlServer = new Azure.DataFactory.LinkedServiceSqlServer(&amp;quot;exampleLinkedServiceSqlServer&amp;quot;, new Azure.DataFactory.LinkedServiceSqlServerArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+        ConnectionString = &amp;quot;Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.LinkedServiceSqlServerArgs.html">LinkedServiceSqlServerArgs</a></h4>
       <section></section>
@@ -147,6 +407,32 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.Pipeline.html">Pipeline</a></h4>
       <section><p>Manages a Pipeline inside a Azure Data Factory.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var examplePipeline = new Azure.DataFactory.Pipeline(&amp;quot;examplePipeline&amp;quot;, new Azure.DataFactory.PipelineArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        DataFactoryName = exampleFactory.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.PipelineArgs.html">PipelineArgs</a></h4>
       <section></section>
@@ -154,6 +440,40 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.TriggerSchedule.html">TriggerSchedule</a></h4>
       <section><p>Manages a Trigger Schedule inside a Azure Data Factory.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var testPipeline = new Azure.DataFactory.Pipeline(&amp;quot;testPipeline&amp;quot;, new Azure.DataFactory.PipelineArgs
+    {
+        ResourceGroupName = azurerm_resource_group.Test.Name,
+        DataFactoryName = azurerm_data_factory.Test.Name,
+    });
+    var testTriggerSchedule = new Azure.DataFactory.TriggerSchedule(&amp;quot;testTriggerSchedule&amp;quot;, new Azure.DataFactory.TriggerScheduleArgs
+    {
+        DataFactoryName = azurerm_data_factory.Test.Name,
+        ResourceGroupName = azurerm_resource_group.Test.Name,
+        PipelineName = testPipeline.Name,
+        Interval = 5,
+        Frequency = &amp;quot;Day&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataFactory.TriggerScheduleArgs.html">TriggerScheduleArgs</a></h4>
       <section></section>

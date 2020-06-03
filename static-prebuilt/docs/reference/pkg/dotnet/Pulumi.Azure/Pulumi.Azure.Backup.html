@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Backup
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,41 @@
 <blockquote>
 <p><strong>NOTE:</strong> Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. <a href="https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview">Read More</a></p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rg = new Azure.Core.ResourceGroup(&amp;quot;rg&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var vault = new Azure.RecoveryServices.Vault(&amp;quot;vault&amp;quot;, new Azure.RecoveryServices.VaultArgs
+    {
+        Location = rg.Location,
+        ResourceGroupName = rg.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+    });
+    var sa = new Azure.Storage.Account(&amp;quot;sa&amp;quot;, new Azure.Storage.AccountArgs
+    {
+        Location = rg.Location,
+        ResourceGroupName = rg.Name,
+        AccountTier = &amp;quot;Standard&amp;quot;,
+        AccountReplicationType = &amp;quot;LRS&amp;quot;,
+    });
+    var container = new Azure.Backup.ContainerStorageAccount(&amp;quot;container&amp;quot;, new Azure.Backup.ContainerStorageAccountArgs
+    {
+        ResourceGroupName = rg.Name,
+        RecoveryVaultName = vault.Name,
+        StorageAccountId = sa.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.ContainerStorageAccountArgs.html">ContainerStorageAccountArgs</a></h4>
       <section></section>
@@ -124,6 +159,45 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.ProtectedVM.html">ProtectedVM</a></h4>
       <section><p>Manages Azure Backup for an Azure VM</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleVault = new Azure.RecoveryServices.Vault(&amp;quot;exampleVault&amp;quot;, new Azure.RecoveryServices.VaultArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+    });
+    var examplePolicyVM = new Azure.Backup.PolicyVM(&amp;quot;examplePolicyVM&amp;quot;, new Azure.Backup.PolicyVMArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        RecoveryVaultName = exampleVault.Name,
+        Backup = new Azure.Backup.Inputs.PolicyVMBackupArgs
+        {
+            Frequency = &amp;quot;Daily&amp;quot;,
+            Time = &amp;quot;23:00&amp;quot;,
+        },
+    });
+    var vm1 = new Azure.Backup.ProtectedVM(&amp;quot;vm1&amp;quot;, new Azure.Backup.ProtectedVMArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        RecoveryVaultName = exampleVault.Name,
+        SourceVmId = azurerm_virtual_machine.Example.Id,
+        BackupPolicyId = examplePolicyVM.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.ProtectedVMArgs.html">ProtectedVMArgs</a></h4>
       <section></section>

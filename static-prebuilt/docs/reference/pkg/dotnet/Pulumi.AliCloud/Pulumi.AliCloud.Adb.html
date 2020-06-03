@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Adb
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,53 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in v1.71.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;ADB&amp;quot;;
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;adbaccountmysql&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var cluster = new AliCloud.Adb.Cluster(&amp;quot;cluster&amp;quot;, new AliCloud.Adb.ClusterArgs
+    {
+        DbClusterCategory = &amp;quot;Cluster&amp;quot;,
+        DbClusterVersion = &amp;quot;3.0&amp;quot;,
+        DbNodeClass = &amp;quot;C8&amp;quot;,
+        DbNodeCount = 2,
+        DbNodeStorage = 200,
+        Description = name,
+        PayType = &amp;quot;PostPaid&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var account = new AliCloud.Adb.Account(&amp;quot;account&amp;quot;, new AliCloud.Adb.AccountArgs
+    {
+        AccountDescription = name,
+        AccountName = &amp;quot;tftestnormal&amp;quot;,
+        AccountPassword = &amp;quot;Test12345&amp;quot;,
+        DbClusterId = cluster.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Adb.AccountArgs.html">AccountArgs</a></h4>
       <section></section>
@@ -99,10 +146,110 @@ databases.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Available in v1.71.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-adb-mysql-cluster">Create a ADB MySQL cluster</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;adbClusterconfig&amp;quot;;
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;ADB&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultCluster = new AliCloud.Adb.Cluster(&amp;quot;defaultCluster&amp;quot;, new AliCloud.Adb.ClusterArgs
+    {
+        DbClusterCategory = &amp;quot;Cluster&amp;quot;,
+        DbClusterVersion = &amp;quot;3.0&amp;quot;,
+        DbNodeClass = &amp;quot;C8&amp;quot;,
+        DbNodeCount = 2,
+        DbNodeStorage = 200,
+        Description = name,
+        PayType = &amp;quot;PostPaid&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Adb.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Adb.ClusterState.html">ClusterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Adb.Connection.html">Connection</a></h4>
+      <section><p>Provides an ADB connection resource to allocate an Internet connection string for ADB cluster.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Each ADB instance will allocate a intranet connnection string automatically and its prifix is ADB instance ID.
+To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Available in v1.81.0+.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var creation = config.Get(&amp;quot;creation&amp;quot;) ?? &amp;quot;ADB&amp;quot;;
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;adbaccountmysql&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = creation,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var cluster = new AliCloud.Adb.Cluster(&amp;quot;cluster&amp;quot;, new AliCloud.Adb.ClusterArgs
+    {
+        DbClusterCategory = &amp;quot;Cluster&amp;quot;,
+        DbClusterVersion = &amp;quot;3.0&amp;quot;,
+        DbNodeClass = &amp;quot;C8&amp;quot;,
+        DbNodeCount = 2,
+        DbNodeStorage = 200,
+        Description = name,
+        PayType = &amp;quot;PostPaid&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var connection = new AliCloud.Adb.Connection(&amp;quot;connection&amp;quot;, new AliCloud.Adb.ConnectionArgs
+    {
+        ConnectionPrefix = &amp;quot;testabc&amp;quot;,
+        DbClusterId = cluster.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Adb.ConnectionArgs.html">ConnectionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Adb.ConnectionState.html">ConnectionState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Adb.GetClusters.html">GetClusters</a></h4>
       <section></section>

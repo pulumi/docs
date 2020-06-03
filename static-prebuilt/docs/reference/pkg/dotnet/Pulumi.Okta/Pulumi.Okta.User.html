@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Okta.User
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,25 @@
       <h4><a class="xref" href="Pulumi.Okta.User.BaseSchema.html">BaseSchema</a></h4>
       <section><p>Manages a User Base Schema property.</p>
 <p>This resource allows you to configure a base user schema property.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.User.BaseSchema(&amp;quot;example&amp;quot;, new Okta.User.BaseSchemaArgs
+    {
+        Index = &amp;quot;customPropertyName&amp;quot;,
+        Master = &amp;quot;OKTA&amp;quot;,
+        Title = &amp;quot;customPropertyName&amp;quot;,
+        Type = &amp;quot;string&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.User.BaseSchemaArgs.html">BaseSchemaArgs</a></h4>
       <section></section>
@@ -103,6 +122,27 @@
       <h4><a class="xref" href="Pulumi.Okta.User.Schema.html">Schema</a></h4>
       <section><p>Creates a User Schema property.</p>
 <p>This resource allows you to create and configure a custom user schema property.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.User.Schema(&amp;quot;example&amp;quot;, new Okta.User.SchemaArgs
+    {
+        Description = &amp;quot;My custom property name&amp;quot;,
+        Index = &amp;quot;customPropertyName&amp;quot;,
+        Master = &amp;quot;OKTA&amp;quot;,
+        Scope = &amp;quot;SELF&amp;quot;,
+        Title = &amp;quot;customPropertyName&amp;quot;,
+        Type = &amp;quot;string&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.User.SchemaArgs.html">SchemaArgs</a></h4>
       <section></section>

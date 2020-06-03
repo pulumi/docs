@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetTensorflowVersions
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,27 +78,86 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetTensorflowVersions</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Tpu.html">Pulumi.Gcp.Tpu</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Tpu_GetTensorflowVersions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetTensorflowVersions : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetTensorflowVersions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/GetTensorflowVersions.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Tpu/GetTensorflowVersions.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_GetTensorflowVersions_InvokeAsync_" data-uid="Pulumi.Gcp.Tpu.GetTensorflowVersions.InvokeAsync*"></a>
-  <h4 id="Pulumi_Gcp_Tpu_GetTensorflowVersions_InvokeAsync_Pulumi_Gcp_Tpu_GetTensorflowVersionsArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Gcp.Tpu.GetTensorflowVersions.InvokeAsync(Pulumi.Gcp.Tpu.GetTensorflowVersionsArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetTensorflowVersionsArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Tpu_GetTensorflowVersions_InvokeAsync_Pulumi_Gcp_Tpu_GetTensorflowVersionsArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Gcp.Tpu.GetTensorflowVersions.InvokeAsync(Pulumi.Gcp.Tpu.GetTensorflowVersionsArgs,Pulumi.InvokeOptions)">InvokeAsync(GetTensorflowVersionsArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Get TensorFlow versions available for a project. For more information see the <a href="https://cloud.google.com/tpu/docs/">official documentation</a> and <a href="https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions">API</a>.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var available = Output.Create(Gcp.Tpu.GetTensorflowVersions.InvokeAsync());
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
+<h2 id="example-usage-configure-basic-tpu-node-with-available-version">Example Usage: Configure Basic TPU Node with available version</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var available = Output.Create(Gcp.Tpu.GetTensorflowVersions.InvokeAsync());
+    var tpu = new Gcp.Tpu.Node(&amp;quot;tpu&amp;quot;, new Gcp.Tpu.NodeArgs
+    {
+        Zone = &amp;quot;us-central1-b&amp;quot;,
+        AcceleratorType = &amp;quot;v3-8&amp;quot;,
+        TensorflowVersion = available.Apply(available =&gt; available.Versions[0]),
+        CidrBlock = &amp;quot;10.2.0.0/29&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetTensorflowVersionsResult&gt; InvokeAsync(GetTensorflowVersionsArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetTensorflowVersionsResult&gt; InvokeAsync(GetTensorflowVersionsArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,7 +175,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -132,7 +191,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Gcp.Tpu.GetTensorflowVersionsResult.html">GetTensorflowVersionsResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Gcp.Tpu.GetTensorflowVersionsResult.html">GetTensorflowVersionsResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -144,7 +203,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/GetTensorflowVersions.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Tpu/GetTensorflowVersions.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

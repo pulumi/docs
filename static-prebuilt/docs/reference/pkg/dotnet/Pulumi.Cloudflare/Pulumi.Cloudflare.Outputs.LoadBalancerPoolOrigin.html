@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LoadBalancerPoolOrigin
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">LoadBalancerPoolOrigin</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Cloudflare.Outputs.html">Pulumi.Cloudflare.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Cloudflare.dll</h6>
   <h5 id="Pulumi_Cloudflare_Outputs_LoadBalancerPoolOrigin_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class LoadBalancerPoolOrigin : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class LoadBalancerPoolOrigin</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/Outputs/LoadBalancerPoolOrigin.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Outputs/LoadBalancerPoolOrigin.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Cloudflare_Outputs_LoadBalancerPoolOrigin_Address" data-uid="Pulumi.Cloudflare.Outputs.LoadBalancerPoolOrigin.Address">Address</h4>
   <div class="markdown level1 summary"><p>The IP address (IPv4 or IPv6) of the origin, or the publicly addressable hostname. Hostnames entered here should resolve directly to the origin, and not be a hostname proxied by Cloudflare.</p>
@@ -113,7 +137,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/Outputs/LoadBalancerPoolOrigin.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Outputs/LoadBalancerPoolOrigin.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Cloudflare_Outputs_LoadBalancerPoolOrigin_Enabled" data-uid="Pulumi.Cloudflare.Outputs.LoadBalancerPoolOrigin.Enabled">Enabled</h4>
   <div class="markdown level1 summary"><p>Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.</p>
@@ -139,7 +163,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/Outputs/LoadBalancerPoolOrigin.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Outputs/LoadBalancerPoolOrigin.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Cloudflare_Outputs_LoadBalancerPoolOrigin_Name" data-uid="Pulumi.Cloudflare.Outputs.LoadBalancerPoolOrigin.Name">Name</h4>
   <div class="markdown level1 summary"><p>A human-identifiable name for the origin.</p>
@@ -165,7 +189,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/Outputs/LoadBalancerPoolOrigin.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Outputs/LoadBalancerPoolOrigin.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Cloudflare_Outputs_LoadBalancerPoolOrigin_Weight" data-uid="Pulumi.Cloudflare.Outputs.LoadBalancerPoolOrigin.Weight">Weight</h4>
   <div class="markdown level1 summary"><p>The weight (0.01 - 1.00) of this origin, relative to other origins in the pool. Equal values mean equal weighting. A weight of 0 means traffic will not be sent to this origin, but health is still checked. Default: 1.</p>
@@ -197,7 +221,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/Outputs/LoadBalancerPoolOrigin.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/Outputs/LoadBalancerPoolOrigin.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

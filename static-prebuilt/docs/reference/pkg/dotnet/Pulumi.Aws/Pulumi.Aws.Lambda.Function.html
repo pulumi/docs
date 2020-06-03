@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Function
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,14 +72,85 @@
   <h1 id="Pulumi_Aws_Lambda_Function" data-uid="Pulumi.Aws.Lambda.Function" class="text-break">Class Function
   </h1>
   <div class="markdown level0 summary"><p>Provides a Lambda Function resource. Lambda allows you to trigger execution of code in response to events in AWS, enabling serverless backend solutions. The Lambda Function itself includes source code and runtime configuration.</p>
-<p>For information about Lambda and how to use it, see [What is AWS Lambda?][1]</p>
+<p>For information about Lambda and how to use it, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda?</a></p>
 <blockquote>
 <p><strong>NOTE:</strong> Due to <a href="https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/">AWS Lambda improved VPC networking changes that began deploying in September 2019</a>, EC2 subnets and security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="lambda-layers">Lambda Layers</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleLayerVersion = new Aws.Lambda.LayerVersion(&amp;quot;exampleLayerVersion&amp;quot;, new Aws.Lambda.LayerVersionArgs
+    {
+    });
+    var exampleFunction = new Aws.Lambda.Function(&amp;quot;exampleFunction&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+        Layers = 
+        {
+            exampleLayerVersion.Arn,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="cloudwatch-logging-and-permissions">CloudWatch Logging and Permissions</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testLambda = new Aws.Lambda.Function(&amp;quot;testLambda&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+    });
+    // This is to optionally manage the CloudWatch Log Group for the Lambda Function.
+    // If skipping this resource configuration, also add &amp;quot;logs:CreateLogGroup&amp;quot; to the IAM policy below.
+    var example = new Aws.CloudWatch.LogGroup(&amp;quot;example&amp;quot;, new Aws.CloudWatch.LogGroupArgs
+    {
+        RetentionInDays = 14,
+    });
+    // See also the following AWS managed policy: AWSLambdaBasicExecutionRole
+    var lambdaLogging = new Aws.Iam.Policy(&amp;quot;lambdaLogging&amp;quot;, new Aws.Iam.PolicyArgs
+    {
+        Description = &amp;quot;IAM policy for logging from a lambda&amp;quot;,
+        Path = &amp;quot;/&amp;quot;,
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;logs:CreateLogGroup&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;logs:CreateLogStream&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;logs:PutLogEvents&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:logs:*:*:*&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var lambdaLogs = new Aws.Iam.RolePolicyAttachment(&amp;quot;lambdaLogs&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = lambdaLogging.Arn,
+        Role = aws_iam_role.Iam_for_lambda.Name,
+    });
+}
+
+}
+</code></pre>
 <h2 id="specifying-the-deployment-package">Specifying the Deployment Package</h2>
 <p>AWS Lambda expects source code to be provided as a deployment package whose structure varies depending on which <code>runtime</code> is in use.
-See [Runtimes][6] for the valid values of <code>runtime</code>. The expected structure of the deployment package can be found in
-[the AWS Lambda documentation for each runtime][8].</p>
+See <a href="https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime">Runtimes</a> for the valid values of <code>runtime</code>. The expected structure of the deployment package can be found in
+<a href="https://docs.aws.amazon.com/lambda/latest/dg/deployment-package-v2.html">the AWS Lambda documentation for each runtime</a>.</p>
 <p>Once you have created your deployment package you can specify it either directly as a local file (using the <code>filename</code> argument) or
 indirectly via Amazon S3 (using the <code>s3_bucket</code>, <code>s3_key</code> and <code>s3_object_version</code> arguments). When providing the deployment
 package via S3 it may be useful to use the <code>aws.s3.BucketObject</code> resource to upload it.</p>
@@ -90,7 +161,45 @@ large files efficiently.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Function</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Function</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Lambda.html">Pulumi.Aws.Lambda</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -101,16 +210,16 @@ large files efficiently.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L203">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L280">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function__ctor_" data-uid="Pulumi.Aws.Lambda.Function.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Lambda_Function__ctor_System_String_Pulumi_Aws_Lambda_FunctionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Lambda.Function.#ctor(System.String,Pulumi.Aws.Lambda.FunctionArgs,System.Nullable{CustomResourceOptions})">Function(String, FunctionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Lambda_Function__ctor_System_String_Pulumi_Aws_Lambda_FunctionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Lambda.Function.#ctor(System.String,Pulumi.Aws.Lambda.FunctionArgs,Pulumi.CustomResourceOptions)">Function(String, FunctionArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Function resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Function(string name, FunctionArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Function(string name, FunctionArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,7 +244,7 @@ large files efficiently.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -145,7 +254,7 @@ large files efficiently.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Arn_" data-uid="Pulumi.Aws.Lambda.Function.Arn*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Arn" data-uid="Pulumi.Aws.Lambda.Function.Arn">Arn</h4>
@@ -166,13 +275,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Code_" data-uid="Pulumi.Aws.Lambda.Function.Code*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Code" data-uid="Pulumi.Aws.Lambda.Function.Code">Code</h4>
@@ -181,7 +290,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;Archive?&gt; Code { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;Archive&gt; Code { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,13 +302,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">Archive</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="../Pulumi/Pulumi.Archive.html">Archive</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_DeadLetterConfig_" data-uid="Pulumi.Aws.Lambda.Function.DeadLetterConfig*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_DeadLetterConfig" data-uid="Pulumi.Aws.Lambda.Function.DeadLetterConfig">DeadLetterConfig</h4>
@@ -220,13 +329,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Lambda.Outputs.FunctionDeadLetterConfig.html">FunctionDeadLetterConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Lambda.Outputs.FunctionDeadLetterConfig.html">FunctionDeadLetterConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Description_" data-uid="Pulumi.Aws.Lambda.Function.Description*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Description" data-uid="Pulumi.Aws.Lambda.Function.Description">Description</h4>
@@ -235,7 +344,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,13 +356,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Environment_" data-uid="Pulumi.Aws.Lambda.Function.Environment*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Environment" data-uid="Pulumi.Aws.Lambda.Function.Environment">Environment</h4>
@@ -274,17 +383,17 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Lambda.Outputs.FunctionEnvironment.html">FunctionEnvironment</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Lambda.Outputs.FunctionEnvironment.html">FunctionEnvironment</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Handler_" data-uid="Pulumi.Aws.Lambda.Function.Handler*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Handler" data-uid="Pulumi.Aws.Lambda.Function.Handler">Handler</h4>
-  <div class="markdown level1 summary"><p>The function [entrypoint][3] in your code.</p>
+  <div class="markdown level1 summary"><p>The function <a href="https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html">entrypoint</a> in your code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -301,13 +410,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_InvokeArn_" data-uid="Pulumi.Aws.Lambda.Function.InvokeArn*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_InvokeArn" data-uid="Pulumi.Aws.Lambda.Function.InvokeArn">InvokeArn</h4>
@@ -328,22 +437,22 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_KmsKeyArn_" data-uid="Pulumi.Aws.Lambda.Function.KmsKeyArn*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_KmsKeyArn" data-uid="Pulumi.Aws.Lambda.Function.KmsKeyArn">KmsKeyArn</h4>
-  <div class="markdown level1 summary"><p>The ARN for the KMS encryption key.</p>
+  <div class="markdown level1 summary"><p>Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is used to encrypt environment variables. If this configuration is not provided when environment variables are in use, AWS Lambda uses a default service key. If this configuration is provided when environment variables are not in use, the AWS Lambda API does not save this configuration and this provider will show a perpetual difference of adding the key. To fix the perpetual difference, remove this configuration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KmsKeyArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KmsKeyArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,13 +464,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_LastModified_" data-uid="Pulumi.Aws.Lambda.Function.LastModified*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_LastModified" data-uid="Pulumi.Aws.Lambda.Function.LastModified">LastModified</h4>
@@ -382,17 +491,17 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Layers_" data-uid="Pulumi.Aws.Lambda.Function.Layers*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Layers" data-uid="Pulumi.Aws.Lambda.Function.Layers">Layers</h4>
-  <div class="markdown level1 summary"><p>List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]</p>
+  <div class="markdown level1 summary"><p>List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda Layers</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -409,17 +518,17 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_MemorySize_" data-uid="Pulumi.Aws.Lambda.Function.MemorySize*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_MemorySize" data-uid="Pulumi.Aws.Lambda.Function.MemorySize">MemorySize</h4>
-  <div class="markdown level1 summary"><p>Amount of memory in MB your Lambda Function can use at runtime. Defaults to <code>128</code>. See [Limits][5]</p>
+  <div class="markdown level1 summary"><p>Amount of memory in MB your Lambda Function can use at runtime. Defaults to <code>128</code>. See <a href="https://docs.aws.amazon.com/lambda/latest/dg/limits.html">Limits</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -436,13 +545,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Name_" data-uid="Pulumi.Aws.Lambda.Function.Name*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Name" data-uid="Pulumi.Aws.Lambda.Function.Name">Name</h4>
@@ -463,13 +572,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Publish_" data-uid="Pulumi.Aws.Lambda.Function.Publish*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Publish" data-uid="Pulumi.Aws.Lambda.Function.Publish">Publish</h4>
@@ -490,13 +599,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_QualifiedArn_" data-uid="Pulumi.Aws.Lambda.Function.QualifiedArn*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_QualifiedArn" data-uid="Pulumi.Aws.Lambda.Function.QualifiedArn">QualifiedArn</h4>
@@ -518,17 +627,17 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_ReservedConcurrentExecutions_" data-uid="Pulumi.Aws.Lambda.Function.ReservedConcurrentExecutions*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_ReservedConcurrentExecutions" data-uid="Pulumi.Aws.Lambda.Function.ReservedConcurrentExecutions">ReservedConcurrentExecutions</h4>
-  <div class="markdown level1 summary"><p>The amount of reserved concurrent executions for this lambda function. A value of <code>0</code> disables lambda from being triggered and <code>-1</code> removes any concurrency limitations. Defaults to Unreserved Concurrency Limits <code>-1</code>. See [Managing Concurrency][9]</p>
+  <div class="markdown level1 summary"><p>The amount of reserved concurrent executions for this lambda function. A value of <code>0</code> disables lambda from being triggered and <code>-1</code> removes any concurrency limitations. Defaults to Unreserved Concurrency Limits <code>-1</code>. See <a href="https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html">Managing Concurrency</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -545,17 +654,17 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Role_" data-uid="Pulumi.Aws.Lambda.Function.Role*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Role" data-uid="Pulumi.Aws.Lambda.Function.Role">Role</h4>
-  <div class="markdown level1 summary"><p>IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.</p>
+  <div class="markdown level1 summary"><p>IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See <a href="https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html">Lambda Permission Model</a> for more details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -572,17 +681,17 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Runtime_" data-uid="Pulumi.Aws.Lambda.Function.Runtime*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Runtime" data-uid="Pulumi.Aws.Lambda.Function.Runtime">Runtime</h4>
-  <div class="markdown level1 summary"><p>See [Runtimes][6] for valid values.</p>
+  <div class="markdown level1 summary"><p>See <a href="https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime">Runtimes</a> for valid values.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -599,13 +708,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L218">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_S3Bucket_" data-uid="Pulumi.Aws.Lambda.Function.S3Bucket*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_S3Bucket" data-uid="Pulumi.Aws.Lambda.Function.S3Bucket">S3Bucket</h4>
@@ -614,7 +723,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; S3Bucket { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; S3Bucket { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -626,13 +735,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_S3Key_" data-uid="Pulumi.Aws.Lambda.Function.S3Key*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_S3Key" data-uid="Pulumi.Aws.Lambda.Function.S3Key">S3Key</h4>
@@ -641,7 +750,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; S3Key { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; S3Key { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -653,13 +762,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_S3ObjectVersion_" data-uid="Pulumi.Aws.Lambda.Function.S3ObjectVersion*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_S3ObjectVersion" data-uid="Pulumi.Aws.Lambda.Function.S3ObjectVersion">S3ObjectVersion</h4>
@@ -668,7 +777,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; S3ObjectVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; S3ObjectVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -680,13 +789,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_SourceCodeHash_" data-uid="Pulumi.Aws.Lambda.Function.SourceCodeHash*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_SourceCodeHash" data-uid="Pulumi.Aws.Lambda.Function.SourceCodeHash">SourceCodeHash</h4>
@@ -707,13 +816,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_SourceCodeSize_" data-uid="Pulumi.Aws.Lambda.Function.SourceCodeSize*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_SourceCodeSize" data-uid="Pulumi.Aws.Lambda.Function.SourceCodeSize">SourceCodeSize</h4>
@@ -734,13 +843,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Tags_" data-uid="Pulumi.Aws.Lambda.Function.Tags*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Tags" data-uid="Pulumi.Aws.Lambda.Function.Tags">Tags</h4>
@@ -749,7 +858,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -761,17 +870,17 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Timeout_" data-uid="Pulumi.Aws.Lambda.Function.Timeout*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Timeout" data-uid="Pulumi.Aws.Lambda.Function.Timeout">Timeout</h4>
-  <div class="markdown level1 summary"><p>The amount of time your Lambda Function has to run in seconds. Defaults to <code>3</code>. See [Limits][5]</p>
+  <div class="markdown level1 summary"><p>The amount of time your Lambda Function has to run in seconds. Defaults to <code>3</code>. See <a href="https://docs.aws.amazon.com/lambda/latest/dg/limits.html">Limits</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -788,13 +897,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L257">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_TracingConfig_" data-uid="Pulumi.Aws.Lambda.Function.TracingConfig*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_TracingConfig" data-uid="Pulumi.Aws.Lambda.Function.TracingConfig">TracingConfig</h4>
@@ -814,13 +923,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Lambda.Outputs.FunctionTracingConfig.html">FunctionTracingConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Lambda.Outputs.FunctionTracingConfig.html">FunctionTracingConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L186">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L263">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Version_" data-uid="Pulumi.Aws.Lambda.Function.Version*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_Version" data-uid="Pulumi.Aws.Lambda.Function.Version">Version</h4>
@@ -841,17 +950,17 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L192">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L269">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_VpcConfig_" data-uid="Pulumi.Aws.Lambda.Function.VpcConfig*"></a>
   <h4 id="Pulumi_Aws_Lambda_Function_VpcConfig" data-uid="Pulumi.Aws.Lambda.Function.VpcConfig">VpcConfig</h4>
-  <div class="markdown level1 summary"><p>Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]</p>
+  <div class="markdown level1 summary"><p>Provide this to allow your function to access your VPC. Fields documented below. See <a href="http://docs.aws.amazon.com/lambda/latest/dg/vpc.html">Lambda in VPC</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -868,7 +977,7 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Lambda.Outputs.FunctionVpcConfig.html">FunctionVpcConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Lambda.Outputs.FunctionVpcConfig.html">FunctionVpcConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -876,17 +985,17 @@ large files efficiently.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L233">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L310">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_Function_Get_" data-uid="Pulumi.Aws.Lambda.Function.Get*"></a>
-  <h4 id="Pulumi_Aws_Lambda_Function_Get_System_String_Input_System_String__Pulumi_Aws_Lambda_FunctionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Lambda.Function.Get(System.String,Input{System.String},Pulumi.Aws.Lambda.FunctionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FunctionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Lambda_Function_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Lambda_FunctionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Lambda.Function.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Lambda.FunctionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, FunctionState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Function resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Function Get(string name, Input&lt;string&gt; id, FunctionState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Function Get(string name, Input&lt;string&gt; id, FunctionState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -905,7 +1014,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -917,7 +1026,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -946,7 +1055,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/Function.cs/#L33" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Lambda/Function.cs/#L110" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

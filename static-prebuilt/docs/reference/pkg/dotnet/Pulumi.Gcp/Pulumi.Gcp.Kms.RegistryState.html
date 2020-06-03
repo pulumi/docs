@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RegistryState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">RegistryState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">RegistryState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Kms.html">Pulumi.Gcp.Kms</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/Registry.cs/#L255">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Kms/Registry.cs/#L316">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_RegistryState__ctor_" data-uid="Pulumi.Gcp.Kms.RegistryState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Kms_RegistryState__ctor" data-uid="Pulumi.Gcp.Kms.RegistryState.#ctor">RegistryState()</h4>
@@ -100,11 +129,12 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/Registry.cs/#L196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Kms/Registry.cs/#L246">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_RegistryState_Credentials_" data-uid="Pulumi.Gcp.Kms.RegistryState.Credentials*"></a>
   <h4 id="Pulumi_Gcp_Kms_RegistryState_Credentials" data-uid="Pulumi.Gcp.Kms.RegistryState.Credentials">Credentials</h4>
-  <div class="markdown level1 summary"><p>List of public key certificates to authenticate devices. Structure is documented below.</p>
+  <div class="markdown level1 summary"><p>List of public key certificates to authenticate devices.
+The structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -121,18 +151,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Inputs.RegistryCredentialGetArgs.html">RegistryCredentialGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Inputs.RegistryCredentialGetArgs.html">RegistryCredentialGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/Registry.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Kms/Registry.cs/#L259">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_RegistryState_EventNotificationConfigs_" data-uid="Pulumi.Gcp.Kms.RegistryState.EventNotificationConfigs*"></a>
   <h4 id="Pulumi_Gcp_Kms_RegistryState_EventNotificationConfigs" data-uid="Pulumi.Gcp.Kms.RegistryState.EventNotificationConfigs">EventNotificationConfigs</h4>
-  <div class="markdown level1 summary"><p>List of configurations for event notification, such as
-PubSub topics to publish device events to. Structure is documented below.</p>
+  <div class="markdown level1 summary"><p>List of configurations for event notifications, such as PubSub topics
+to publish device events to.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -149,22 +179,23 @@ PubSub topics to publish device events to. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Inputs.RegistryEventNotificationConfigItemGetArgs.html">RegistryEventNotificationConfigItemGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Inputs.RegistryEventNotificationConfigItemGetArgs.html">RegistryEventNotificationConfigItemGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/Registry.cs/#L218">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Kms/Registry.cs/#L269">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_RegistryState_HttpConfig_" data-uid="Pulumi.Gcp.Kms.RegistryState.HttpConfig*"></a>
   <h4 id="Pulumi_Gcp_Kms_RegistryState_HttpConfig" data-uid="Pulumi.Gcp.Kms.RegistryState.HttpConfig">HttpConfig</h4>
-  <div class="markdown level1 summary"><p>Activate or deactivate HTTP. Structure is documented below.</p>
+  <div class="markdown level1 summary"><p>Activate or deactivate HTTP.
+The structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;RegistryHttpConfigGetArgs&gt;? HttpConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;RegistryHttpConfigGetArgs&gt; HttpConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,21 +207,26 @@ PubSub topics to publish device events to. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Inputs.RegistryHttpConfigGetArgs.html">RegistryHttpConfigGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Inputs.RegistryHttpConfigGetArgs.html">RegistryHttpConfigGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/Registry.cs/#L221">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Kms/Registry.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_RegistryState_LogLevel_" data-uid="Pulumi.Gcp.Kms.RegistryState.LogLevel*"></a>
   <h4 id="Pulumi_Gcp_Kms_RegistryState_LogLevel" data-uid="Pulumi.Gcp.Kms.RegistryState.LogLevel">LogLevel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The default logging verbosity for activity from devices in this
+registry. Specifies which events should be written to logs. For
+example, if the LogLevel is ERROR, only events that terminate in
+errors will be logged. LogLevel is inclusive; enabling INFO logging
+will also enable ERROR logging.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LogLevel { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LogLevel { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,22 +238,23 @@ PubSub topics to publish device events to. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/Registry.cs/#L227">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Kms/Registry.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_RegistryState_MqttConfig_" data-uid="Pulumi.Gcp.Kms.RegistryState.MqttConfig*"></a>
   <h4 id="Pulumi_Gcp_Kms_RegistryState_MqttConfig" data-uid="Pulumi.Gcp.Kms.RegistryState.MqttConfig">MqttConfig</h4>
-  <div class="markdown level1 summary"><p>Activate or deactivate MQTT. Structure is documented below.</p>
+  <div class="markdown level1 summary"><p>Activate or deactivate MQTT.
+The structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;RegistryMqttConfigGetArgs&gt;? MqttConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;RegistryMqttConfigGetArgs&gt; MqttConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,23 +266,22 @@ PubSub topics to publish device events to. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Inputs.RegistryMqttConfigGetArgs.html">RegistryMqttConfigGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Inputs.RegistryMqttConfigGetArgs.html">RegistryMqttConfigGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/Registry.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Kms/Registry.cs/#L292">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_RegistryState_Name_" data-uid="Pulumi.Gcp.Kms.RegistryState.Name*"></a>
   <h4 id="Pulumi_Gcp_Kms_RegistryState_Name" data-uid="Pulumi.Gcp.Kms.RegistryState.Name">Name</h4>
-  <div class="markdown level1 summary"><p>A unique name for the resource, required by device registry.
-Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>A unique name for the resource, required by device registry.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,22 +293,23 @@ Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/Registry.cs/#L240">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Kms/Registry.cs/#L299">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_RegistryState_Project_" data-uid="Pulumi.Gcp.Kms.RegistryState.Project*"></a>
   <h4 id="Pulumi_Gcp_Kms_RegistryState_Project" data-uid="Pulumi.Gcp.Kms.RegistryState.Project">Project</h4>
-  <div class="markdown level1 summary"><p>The project in which the resource belongs. If it is not provided, the provider project is used.</p>
+  <div class="markdown level1 summary"><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,22 +321,23 @@ Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/Registry.cs/#L246">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Kms/Registry.cs/#L306">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_RegistryState_Region_" data-uid="Pulumi.Gcp.Kms.RegistryState.Region*"></a>
   <h4 id="Pulumi_Gcp_Kms_RegistryState_Region" data-uid="Pulumi.Gcp.Kms.RegistryState.Region">Region</h4>
-  <div class="markdown level1 summary"><p>The Region in which the created address should reside. If it is not provided, the provider region is used.</p>
+  <div class="markdown level1 summary"><p>The region in which the created registry should reside.
+If it is not provided, the provider region is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,22 +349,23 @@ Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/Registry.cs/#L252">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Kms/Registry.cs/#L313">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_RegistryState_StateNotificationConfig_" data-uid="Pulumi.Gcp.Kms.RegistryState.StateNotificationConfig*"></a>
   <h4 id="Pulumi_Gcp_Kms_RegistryState_StateNotificationConfig" data-uid="Pulumi.Gcp.Kms.RegistryState.StateNotificationConfig">StateNotificationConfig</h4>
-  <div class="markdown level1 summary"><p>A PubSub topic to publish device state updates. Structure is documented below.</p>
+  <div class="markdown level1 summary"><p>A PubSub topic to publish device state updates.
+The structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;RegistryStateNotificationConfigGetArgs&gt;? StateNotificationConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;RegistryStateNotificationConfigGetArgs&gt; StateNotificationConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,7 +377,7 @@ Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Inputs.RegistryStateNotificationConfigGetArgs.html">RegistryStateNotificationConfigGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Inputs.RegistryStateNotificationConfigGetArgs.html">RegistryStateNotificationConfigGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -350,7 +389,7 @@ Changing this forces a new resource to be created.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/Registry.cs/#L188" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Kms/Registry.cs/#L237" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

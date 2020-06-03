@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NodeBalancer
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,7 +71,41 @@
   
   <h1 id="Pulumi_Linode_NodeBalancer" data-uid="Pulumi.Linode.NodeBalancer" class="text-break">Class NodeBalancer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides a Linode NodeBalancer resource.  This can be used to create, modify, and delete Linodes NodeBalancers in Linode's managed load balancer service.
+For more information, see <a href="https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/">Getting Started with NodeBalancers</a> and the <a href="https://developers.linode.com/api/v4#operation/createNodeBalancer">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new Linode.NodeBalancer(&amp;quot;foobar&amp;quot;, new Linode.NodeBalancerArgs
+    {
+        ClientConnThrottle = 20,
+        Label = &amp;quot;mynodebalancer&amp;quot;,
+        Region = &amp;quot;us-east&amp;quot;,
+        Tags = 
+        {
+            &amp;quot;foobar&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This resource exports the following attributes:</p>
+<ul>
+<li><p><code>hostname</code> - This NodeBalancer's hostname, ending with .nodebalancer.linode.com</p>
+</li>
+<li><p><code>ipv4</code> - The Public IPv4 Address of this NodeBalancer</p>
+</li>
+<li><p><code>ipv6</code> - The Public IPv6 Address of this NodeBalancer</p>
+</li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -125,7 +159,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer__ctor_" data-uid="Pulumi.Linode.NodeBalancer.#ctor*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer__ctor_System_String_Pulumi_Linode_NodeBalancerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.NodeBalancer.#ctor(System.String,Pulumi.Linode.NodeBalancerArgs,Pulumi.CustomResourceOptions)">NodeBalancer(String, NodeBalancerArgs, CustomResourceOptions)</h4>
@@ -169,7 +203,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer_ClientConnThrottle_" data-uid="Pulumi.Linode.NodeBalancer.ClientConnThrottle*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer_ClientConnThrottle" data-uid="Pulumi.Linode.NodeBalancer.ClientConnThrottle">ClientConnThrottle</h4>
@@ -196,7 +230,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer_Created_" data-uid="Pulumi.Linode.NodeBalancer.Created*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer_Created" data-uid="Pulumi.Linode.NodeBalancer.Created">Created</h4>
@@ -222,7 +256,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer_Hostname_" data-uid="Pulumi.Linode.NodeBalancer.Hostname*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer_Hostname" data-uid="Pulumi.Linode.NodeBalancer.Hostname">Hostname</h4>
@@ -249,7 +283,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer_Ipv4_" data-uid="Pulumi.Linode.NodeBalancer.Ipv4*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer_Ipv4" data-uid="Pulumi.Linode.NodeBalancer.Ipv4">Ipv4</h4>
@@ -276,7 +310,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer_Ipv6_" data-uid="Pulumi.Linode.NodeBalancer.Ipv6*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer_Ipv6" data-uid="Pulumi.Linode.NodeBalancer.Ipv6">Ipv6</h4>
@@ -303,7 +337,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer_Label_" data-uid="Pulumi.Linode.NodeBalancer.Label*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer_Label" data-uid="Pulumi.Linode.NodeBalancer.Label">Label</h4>
@@ -330,7 +364,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer_Region_" data-uid="Pulumi.Linode.NodeBalancer.Region*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer_Region" data-uid="Pulumi.Linode.NodeBalancer.Region">Region</h4>
@@ -357,7 +391,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer_Tags_" data-uid="Pulumi.Linode.NodeBalancer.Tags*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer_Tags" data-uid="Pulumi.Linode.NodeBalancer.Tags">Tags</h4>
@@ -384,7 +418,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer_Transfer_" data-uid="Pulumi.Linode.NodeBalancer.Transfer*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer_Transfer" data-uid="Pulumi.Linode.NodeBalancer.Transfer">Transfer</h4>
@@ -410,7 +444,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer_Updated_" data-uid="Pulumi.Linode.NodeBalancer.Updated*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer_Updated" data-uid="Pulumi.Linode.NodeBalancer.Updated">Updated</h4>
@@ -438,7 +472,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Linode_NodeBalancer_Get_" data-uid="Pulumi.Linode.NodeBalancer.Get*"></a>
   <h4 id="Pulumi_Linode_NodeBalancer_Get_System_String_Pulumi_Input_System_String__Pulumi_Linode_NodeBalancerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.NodeBalancer.Get(System.String,Pulumi.Input{System.String},Pulumi.Linode.NodeBalancerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NodeBalancerState, CustomResourceOptions)</h4>
@@ -508,7 +542,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/NodeBalancer.cs/#L53" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QueueState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">QueueState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">QueueState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Sqs.html">Pulumi.Aws.Sqs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L343">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L419">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState__ctor_" data-uid="Pulumi.Aws.Sqs.QueueState.#ctor*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState__ctor" data-uid="Pulumi.Aws.Sqs.QueueState.#ctor">QueueState()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L250">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L326">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_Arn_" data-uid="Pulumi.Aws.Sqs.QueueState.Arn*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_Arn" data-uid="Pulumi.Aws.Sqs.QueueState.Arn">Arn</h4>
@@ -109,7 +138,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,13 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L332">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_ContentBasedDeduplication_" data-uid="Pulumi.Aws.Sqs.QueueState.ContentBasedDeduplication*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_ContentBasedDeduplication" data-uid="Pulumi.Aws.Sqs.QueueState.ContentBasedDeduplication">ContentBasedDeduplication</h4>
@@ -136,7 +165,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ContentBasedDeduplication { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; ContentBasedDeduplication { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +177,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L262">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L338">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_DelaySeconds_" data-uid="Pulumi.Aws.Sqs.QueueState.DelaySeconds*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_DelaySeconds" data-uid="Pulumi.Aws.Sqs.QueueState.DelaySeconds">DelaySeconds</h4>
@@ -163,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DelaySeconds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DelaySeconds { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +204,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L268">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L344">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_FifoQueue_" data-uid="Pulumi.Aws.Sqs.QueueState.FifoQueue*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_FifoQueue" data-uid="Pulumi.Aws.Sqs.QueueState.FifoQueue">FifoQueue</h4>
@@ -190,7 +219,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? FifoQueue { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; FifoQueue { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,13 +231,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L274">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L350">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_KmsDataKeyReusePeriodSeconds_" data-uid="Pulumi.Aws.Sqs.QueueState.KmsDataKeyReusePeriodSeconds*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_KmsDataKeyReusePeriodSeconds" data-uid="Pulumi.Aws.Sqs.QueueState.KmsDataKeyReusePeriodSeconds">KmsDataKeyReusePeriodSeconds</h4>
@@ -217,7 +246,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? KmsDataKeyReusePeriodSeconds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; KmsDataKeyReusePeriodSeconds { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,13 +258,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L280">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L356">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_KmsMasterKeyId_" data-uid="Pulumi.Aws.Sqs.QueueState.KmsMasterKeyId*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_KmsMasterKeyId" data-uid="Pulumi.Aws.Sqs.QueueState.KmsMasterKeyId">KmsMasterKeyId</h4>
@@ -244,7 +273,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsMasterKeyId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsMasterKeyId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,13 +285,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L286">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L362">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_MaxMessageSize_" data-uid="Pulumi.Aws.Sqs.QueueState.MaxMessageSize*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_MaxMessageSize" data-uid="Pulumi.Aws.Sqs.QueueState.MaxMessageSize">MaxMessageSize</h4>
@@ -271,7 +300,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxMessageSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxMessageSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,13 +312,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L292">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L368">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_MessageRetentionSeconds_" data-uid="Pulumi.Aws.Sqs.QueueState.MessageRetentionSeconds*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_MessageRetentionSeconds" data-uid="Pulumi.Aws.Sqs.QueueState.MessageRetentionSeconds">MessageRetentionSeconds</h4>
@@ -298,7 +327,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MessageRetentionSeconds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MessageRetentionSeconds { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,13 +339,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L298">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L374">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_Name_" data-uid="Pulumi.Aws.Sqs.QueueState.Name*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_Name" data-uid="Pulumi.Aws.Sqs.QueueState.Name">Name</h4>
@@ -325,7 +354,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,13 +366,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L304">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L380">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_NamePrefix_" data-uid="Pulumi.Aws.Sqs.QueueState.NamePrefix*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_NamePrefix" data-uid="Pulumi.Aws.Sqs.QueueState.NamePrefix">NamePrefix</h4>
@@ -352,7 +381,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NamePrefix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NamePrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -364,13 +393,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L310">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L386">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_Policy_" data-uid="Pulumi.Aws.Sqs.QueueState.Policy*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_Policy" data-uid="Pulumi.Aws.Sqs.QueueState.Policy">Policy</h4>
@@ -379,7 +408,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Policy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Policy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -391,13 +420,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L316">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L392">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_ReceiveWaitTimeSeconds_" data-uid="Pulumi.Aws.Sqs.QueueState.ReceiveWaitTimeSeconds*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_ReceiveWaitTimeSeconds" data-uid="Pulumi.Aws.Sqs.QueueState.ReceiveWaitTimeSeconds">ReceiveWaitTimeSeconds</h4>
@@ -406,7 +435,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? ReceiveWaitTimeSeconds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; ReceiveWaitTimeSeconds { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -418,13 +447,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L322">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L398">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_RedrivePolicy_" data-uid="Pulumi.Aws.Sqs.QueueState.RedrivePolicy*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_RedrivePolicy" data-uid="Pulumi.Aws.Sqs.QueueState.RedrivePolicy">RedrivePolicy</h4>
@@ -433,7 +462,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RedrivePolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RedrivePolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -445,17 +474,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L331">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L407">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_Tags_" data-uid="Pulumi.Aws.Sqs.QueueState.Tags*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_Tags" data-uid="Pulumi.Aws.Sqs.QueueState.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the queue.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the queue.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -472,13 +501,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L340">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L416">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sqs_QueueState_VisibilityTimeoutSeconds_" data-uid="Pulumi.Aws.Sqs.QueueState.VisibilityTimeoutSeconds*"></a>
   <h4 id="Pulumi_Aws_Sqs_QueueState_VisibilityTimeoutSeconds" data-uid="Pulumi.Aws.Sqs.QueueState.VisibilityTimeoutSeconds">VisibilityTimeoutSeconds</h4>
@@ -487,7 +516,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? VisibilityTimeoutSeconds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; VisibilityTimeoutSeconds { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -499,7 +528,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -511,7 +540,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sqs/Queue.cs/#L245" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sqs/Queue.cs/#L321" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

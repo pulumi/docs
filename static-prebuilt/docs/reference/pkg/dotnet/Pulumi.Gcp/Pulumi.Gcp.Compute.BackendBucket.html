@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BackendBucket
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,12 +83,72 @@ to a virtual machine instance.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/load-balancing/http/backend-bucket">Using a Cloud Storage bucket as a load balancer backend</a></li>
 </ul>
+<h2 id="example-usage---backend-bucket-basic">Example Usage - Backend Bucket Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var imageBucket = new Gcp.Storage.Bucket(&amp;quot;imageBucket&amp;quot;, new Gcp.Storage.BucketArgs
+    {
+        Location = &amp;quot;EU&amp;quot;,
+    });
+    var imageBackend = new Gcp.Compute.BackendBucket(&amp;quot;imageBackend&amp;quot;, new Gcp.Compute.BackendBucketArgs
+    {
+        Description = &amp;quot;Contains beautiful images&amp;quot;,
+        BucketName = imageBucket.Name,
+        EnableCdn = true,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">BackendBucket</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">BackendBucket</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -99,16 +159,16 @@ to a virtual machine instance.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendBucket.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/BackendBucket.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendBucket__ctor_" data-uid="Pulumi.Gcp.Compute.BackendBucket.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_BackendBucket__ctor_System_String_Pulumi_Gcp_Compute_BackendBucketArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.BackendBucket.#ctor(System.String,Pulumi.Gcp.Compute.BackendBucketArgs,System.Nullable{CustomResourceOptions})">BackendBucket(String, BackendBucketArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_BackendBucket__ctor_System_String_Pulumi_Gcp_Compute_BackendBucketArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.BackendBucket.#ctor(System.String,Pulumi.Gcp.Compute.BackendBucketArgs,Pulumi.CustomResourceOptions)">BackendBucket(String, BackendBucketArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a BackendBucket resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BackendBucket(string name, BackendBucketArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public BackendBucket(string name, BackendBucketArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,7 +193,7 @@ to a virtual machine instance.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -143,7 +203,7 @@ to a virtual machine instance.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendBucket.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/BackendBucket.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendBucket_BucketName_" data-uid="Pulumi.Gcp.Compute.BackendBucket.BucketName*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendBucket_BucketName" data-uid="Pulumi.Gcp.Compute.BackendBucket.BucketName">BucketName</h4>
@@ -164,17 +224,17 @@ to a virtual machine instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendBucket.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/BackendBucket.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendBucket_CdnPolicy_" data-uid="Pulumi.Gcp.Compute.BackendBucket.CdnPolicy*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendBucket_CdnPolicy" data-uid="Pulumi.Gcp.Compute.BackendBucket.CdnPolicy">CdnPolicy</h4>
-  <div class="markdown level1 summary"><p>Cloud CDN configuration for this Backend Bucket.</p>
+  <div class="markdown level1 summary"><p>Cloud CDN configuration for this Backend Bucket.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -191,13 +251,13 @@ to a virtual machine instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.BackendBucketCdnPolicy.html">BackendBucketCdnPolicy</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.BackendBucketCdnPolicy.html">BackendBucketCdnPolicy</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendBucket.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/BackendBucket.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendBucket_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.BackendBucket.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendBucket_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.BackendBucket.CreationTimestamp">CreationTimestamp</h4>
@@ -218,22 +278,23 @@ to a virtual machine instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendBucket.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/BackendBucket.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendBucket_Description_" data-uid="Pulumi.Gcp.Compute.BackendBucket.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendBucket_Description" data-uid="Pulumi.Gcp.Compute.BackendBucket.Description">Description</h4>
-  <div class="markdown level1 summary"><p>An optional textual description of the resource; provided by the client when the resource is created.</p>
+  <div class="markdown level1 summary"><p>An optional textual description of the resource; provided by the
+client when the resource is created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,13 +306,13 @@ to a virtual machine instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendBucket.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/BackendBucket.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendBucket_EnableCdn_" data-uid="Pulumi.Gcp.Compute.BackendBucket.EnableCdn*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendBucket_EnableCdn" data-uid="Pulumi.Gcp.Compute.BackendBucket.EnableCdn">EnableCdn</h4>
@@ -272,20 +333,23 @@ to a virtual machine instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendBucket.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/BackendBucket.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendBucket_Name_" data-uid="Pulumi.Gcp.Compute.BackendBucket.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendBucket_Name" data-uid="Pulumi.Gcp.Compute.BackendBucket.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression <code>a-z?</code> which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -302,13 +366,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendBucket.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/BackendBucket.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendBucket_Project_" data-uid="Pulumi.Gcp.Compute.BackendBucket.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendBucket_Project" data-uid="Pulumi.Gcp.Compute.BackendBucket.Project">Project</h4>
@@ -330,13 +394,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendBucket.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/BackendBucket.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendBucket_SelfLink_" data-uid="Pulumi.Gcp.Compute.BackendBucket.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendBucket_SelfLink" data-uid="Pulumi.Gcp.Compute.BackendBucket.SelfLink">SelfLink</h4>
@@ -357,7 +421,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -365,17 +429,17 @@ If it is not provided, the provider project is used.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendBucket.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/BackendBucket.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendBucket_Get_" data-uid="Pulumi.Gcp.Compute.BackendBucket.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_BackendBucket_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_BackendBucketState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.BackendBucket.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.BackendBucketState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BackendBucketState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_BackendBucket_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_BackendBucketState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.BackendBucket.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.BackendBucketState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BackendBucketState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing BackendBucket resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BackendBucket Get(string name, Input&lt;string&gt; id, BackendBucketState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static BackendBucket Get(string name, Input&lt;string&gt; id, BackendBucketState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -394,7 +458,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -406,7 +470,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -435,7 +499,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendBucket.cs/#L28" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/BackendBucket.cs/#L54" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

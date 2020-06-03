@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ReservationState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ReservationState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">ReservationState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BigQuery.html">Pulumi.Gcp.BigQuery</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Reservation.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Reservation.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_ReservationState__ctor_" data-uid="Pulumi.Gcp.BigQuery.ReservationState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_ReservationState__ctor" data-uid="Pulumi.Gcp.BigQuery.ReservationState.#ctor">ReservationState()</h4>
@@ -100,17 +129,18 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Reservation.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Reservation.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_ReservationState_IgnoreIdleSlots_" data-uid="Pulumi.Gcp.BigQuery.ReservationState.IgnoreIdleSlots*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_ReservationState_IgnoreIdleSlots" data-uid="Pulumi.Gcp.BigQuery.ReservationState.IgnoreIdleSlots">IgnoreIdleSlots</h4>
-  <div class="markdown level1 summary"><p>If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.</p>
+  <div class="markdown level1 summary"><p>If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IgnoreIdleSlots { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IgnoreIdleSlots { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,23 +152,23 @@ true, a query using this reservation will execute with the slot capacity specifi
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Reservation.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Reservation.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_ReservationState_Location_" data-uid="Pulumi.Gcp.BigQuery.ReservationState.Location*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_ReservationState_Location" data-uid="Pulumi.Gcp.BigQuery.ReservationState.Location">Location</h4>
-  <div class="markdown level1 summary"><p>The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.</p>
+  <div class="markdown level1 summary"><p>The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +180,13 @@ US.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Reservation.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Reservation.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_ReservationState_Name_" data-uid="Pulumi.Gcp.BigQuery.ReservationState.Name*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_ReservationState_Name" data-uid="Pulumi.Gcp.BigQuery.ReservationState.Name">Name</h4>
@@ -165,7 +195,7 @@ US.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +207,13 @@ US.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Reservation.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Reservation.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_ReservationState_Project_" data-uid="Pulumi.Gcp.BigQuery.ReservationState.Project*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_ReservationState_Project" data-uid="Pulumi.Gcp.BigQuery.ReservationState.Project">Project</h4>
@@ -193,7 +223,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,23 +235,23 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Reservation.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Reservation.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_ReservationState_SlotCapacity_" data-uid="Pulumi.Gcp.BigQuery.ReservationState.SlotCapacity*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_ReservationState_SlotCapacity" data-uid="Pulumi.Gcp.BigQuery.ReservationState.SlotCapacity">SlotCapacity</h4>
-  <div class="markdown level1 summary"><p>Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</p>
+  <div class="markdown level1 summary"><p>Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? SlotCapacity { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; SlotCapacity { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,7 +263,7 @@ of parallelism. Queries using this reservation might use more slots during runti
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -245,7 +275,7 @@ of parallelism. Queries using this reservation might use more slots during runti
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Reservation.cs/#L142" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Reservation.cs/#L166" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

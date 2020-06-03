@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Cdn
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -91,6 +91,33 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Cdn.Profile.html">Profile</a></h4>
       <section><p>Manages a CDN Profile to create a collection of CDN Endpoints.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleProfile = new Azure.Cdn.Profile(&amp;quot;exampleProfile&amp;quot;, new Azure.Cdn.ProfileArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard_Verizon&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+            { &amp;quot;cost_center&amp;quot;, &amp;quot;MSFT&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Cdn.ProfileArgs.html">ProfileArgs</a></h4>
       <section></section>

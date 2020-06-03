@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.GameLift
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,27 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.GameLift.Alias.html">Alias</a></h4>
       <section><p>Provides a Gamelift Alias resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.GameLift.Alias(&amp;quot;example&amp;quot;, new Aws.GameLift.AliasArgs
+    {
+        Description = &amp;quot;Example Description&amp;quot;,
+        RoutingStrategy = new Aws.GameLift.Inputs.AliasRoutingStrategyArgs
+        {
+            Message = &amp;quot;Example Message&amp;quot;,
+            Type = &amp;quot;TERMINAL&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GameLift.AliasArgs.html">AliasArgs</a></h4>
       <section></section>
@@ -92,6 +113,35 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GameLift.Fleet.html">Fleet</a></h4>
       <section><p>Provides a Gamelift Fleet resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.GameLift.Fleet(&amp;quot;example&amp;quot;, new Aws.GameLift.FleetArgs
+    {
+        BuildId = aws_gamelift_build.Example.Id,
+        Ec2InstanceType = &amp;quot;t2.micro&amp;quot;,
+        FleetType = &amp;quot;ON_DEMAND&amp;quot;,
+        RuntimeConfiguration = new Aws.GameLift.Inputs.FleetRuntimeConfigurationArgs
+        {
+            ServerProcess = 
+            {
+
+                {
+                    { &amp;quot;concurrentExecutions&amp;quot;, 1 },
+                    { &amp;quot;launchPath&amp;quot;, &amp;quot;C:\\game\\GomokuServer.exe&amp;quot; },
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GameLift.FleetArgs.html">FleetArgs</a></h4>
       <section></section>
@@ -99,6 +149,39 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GameLift.GameSessionQueue.html">GameSessionQueue</a></h4>
       <section><p>Provides an Gamelift Game Session Queue resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Aws.GameLift.GameSessionQueue(&amp;quot;test&amp;quot;, new Aws.GameLift.GameSessionQueueArgs
+    {
+        Destinations = 
+        {
+            aws_gamelift_fleet.Us_west_2_fleet.Arn,
+            aws_gamelift_fleet.Eu_central_1_fleet.Arn,
+        },
+        PlayerLatencyPolicies = 
+        {
+            new Aws.GameLift.Inputs.GameSessionQueuePlayerLatencyPolicyArgs
+            {
+                MaximumIndividualPlayerLatencyMilliseconds = 100,
+                PolicyDurationSeconds = 5,
+            },
+            new Aws.GameLift.Inputs.GameSessionQueuePlayerLatencyPolicyArgs
+            {
+                MaximumIndividualPlayerLatencyMilliseconds = 200,
+            },
+        },
+        TimeoutInSeconds = 60,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GameLift.GameSessionQueueArgs.html">GameSessionQueueArgs</a></h4>
       <section></section>

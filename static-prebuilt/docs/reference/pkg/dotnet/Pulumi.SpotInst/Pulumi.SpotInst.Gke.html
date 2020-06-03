@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.SpotInst.Gke
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,124 @@
   </h3>
       <h4><a class="xref" href="Pulumi.SpotInst.Gke.Elastigroup.html">Elastigroup</a></h4>
       <section><p>Provides a Spotinst Elastigroup GKE resource. Please see <a href="https://api.spotinst.com/elastigroup-for-google-cloud/tutorials/import-a-gke-cluster-as-an-elastigroup/">Importing a GKE cluster</a> for detailed information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example_gke_elastigroup = new SpotInst.Gke.Elastigroup(&amp;quot;example-gke-elastigroup&amp;quot;, new SpotInst.Gke.ElastigroupArgs
+    {
+        BackendServices = 
+        {
+            new SpotInst.Gke.Inputs.ElastigroupBackendServiceArgs
+            {
+                LocationType = &amp;quot;global&amp;quot;,
+                NamedPorts = 
+                {
+                    new SpotInst.Gke.Inputs.ElastigroupBackendServiceNamedPortArgs
+                    {
+                        Name = &amp;quot;http&amp;quot;,
+                        Ports = 
+                        {
+                            80,
+                            8080,
+                        },
+                    },
+                },
+                ServiceName = &amp;quot;backend-service&amp;quot;,
+            },
+        },
+        ClusterZoneName = &amp;quot;us-central1-a&amp;quot;,
+        DesiredCapacity = 3,
+        InstanceTypesOndemand = &amp;quot;n1-standard-1&amp;quot;,
+        InstanceTypesPreemptibles = 
+        {
+            &amp;quot;n1-standard-1&amp;quot;,
+            &amp;quot;n1-standard-2&amp;quot;,
+        },
+        IntegrationGke = new SpotInst.Gke.Inputs.ElastigroupIntegrationGkeArgs
+        {
+            AutoscaleCooldown = 300,
+            AutoscaleDown = new SpotInst.Gke.Inputs.ElastigroupIntegrationGkeAutoscaleDownArgs
+            {
+                EvaluationPeriods = 300,
+            },
+            AutoscaleHeadroom = new SpotInst.Gke.Inputs.ElastigroupIntegrationGkeAutoscaleHeadroomArgs
+            {
+                CpuPerUnit = 1024,
+                MemoryPerUnit = 512,
+                NumOfUnits = 2,
+            },
+            AutoscaleIsAutoConfig = false,
+            AutoscaleIsEnabled = true,
+            AutoscaleLabels = 
+            {
+                new SpotInst.Gke.Inputs.ElastigroupIntegrationGkeAutoscaleLabelArgs
+                {
+                    Key = &amp;quot;label_key&amp;quot;,
+                    Value = &amp;quot;label_value&amp;quot;,
+                },
+            },
+            ClusterId = &amp;quot;example-cluster-id&amp;quot;,
+            Location = &amp;quot;us-central1-a&amp;quot;,
+        },
+        MaxSize = 5,
+        MinSize = 1,
+        NodeImage = &amp;quot;COS&amp;quot;,
+        PreemptiblePercentage = 100,
+    });
+}
+
+}
+</code></pre>
+<h2 id="third-party-integrations">Third-Party Integrations</h2>
+<ul>
+<li><p><code>integration_gke</code> - (Required) Describes the GKE integration.</p>
+</li>
+<li><p><code>location</code> - (Optional) The location of your GKE cluster.</p>
+</li>
+<li><p><code>cluster_id</code> - (Optional) The GKE cluster ID you wish to import.</p>
+</li>
+<li><p><code>autoscale_is_enabled</code> -  (Optional, Default: <code>false</code>) Specifies whether the auto scaling feature is enabled.</p>
+</li>
+<li><p><code>autoscale_is_autoconfig</code> - (Optional, Default: <code>false</code>) Enabling the automatic auto-scaler functionality. For more information please see: .</p>
+</li>
+<li><p><code>autoscale_cooldown</code> - (Optional, Default: <code>300</code>) The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.</p>
+</li>
+<li><p><code>autoscale_headroom</code> - (Optional) Headroom for the cluster.</p>
+<ul>
+<li><code>cpu_per_unit</code> - (Optional, Default: <code>0</code>) Cpu units for compute.</li>
+<li><code>memory_per_unit</code> - (Optional, Default: <code>0</code>) RAM units for compute.</li>
+<li><code>num_of_units</code> - (Optional, Default: <code>0</code>) Amount of units for compute.</li>
+</ul>
+</li>
+<li><p><code>autoscale_down</code> - (Optional) Enabling scale down.</p>
+<ul>
+<li><code>evaluation_periods</code> - (Optional, Default: <code>5</code>) Amount of cooldown evaluation periods for scale down.</li>
+</ul>
+</li>
+<li><p><code>autoscale_labels</code> - (Optional) Labels to assign to the resource.</p>
+<ul>
+<li><code>key</code> - (Optional) The label name.</li>
+<li><code>value</code> - (Optional) The label value.</li>
+</ul>
+</li>
+</ul>
+<p>Usage:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;diff-suppressed-parameters&quot;&gt;&lt;/a&gt;</p>
 <h2 id="diff-suppressed-parameters">Diff-suppressed Parameters</h2>
 <p>The following parameters are created remotely and imported. The diffs have been suppressed in order to maintain plan legibility. You may update the values of these
 imported parameters by defining them in your template with your desired new value (including null values).</p>
@@ -115,6 +233,114 @@ imported parameters by defining them in your template with your desired new valu
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Gke.OceanImport.html">OceanImport</a></h4>
       <section><p>Provides a Spotinst Ocean GKE import resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new SpotInst.Gke.OceanImport(&amp;quot;example&amp;quot;, new SpotInst.Gke.OceanImportArgs
+    {
+        BackendServices = 
+        {
+            new SpotInst.Gke.Inputs.OceanImportBackendServiceArgs
+            {
+                LocationType = &amp;quot;regional&amp;quot;,
+                NamedPorts = 
+                {
+                    new SpotInst.Gke.Inputs.OceanImportBackendServiceNamedPortArgs
+                    {
+                        Name = &amp;quot;http&amp;quot;,
+                        Ports = 
+                        {
+                            80,
+                            8080,
+                        },
+                    },
+                },
+                Scheme = &amp;quot;INTERNAL&amp;quot;,
+                ServiceName = &amp;quot;example-backend-service&amp;quot;,
+            },
+        },
+        ClusterName = &amp;quot;example-cluster-name&amp;quot;,
+        DesiredCapacity = 0,
+        Location = &amp;quot;us-central1-a&amp;quot;,
+        MaxSize = 2,
+        MinSize = 0,
+        Whitelists = 
+        {
+            &amp;quot;n1-standard-1&amp;quot;,
+            &amp;quot;n1-standard-2&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="scheduled-task">scheduled task</h2>
+<ul>
+<li><code>scheduled_task</code> - (Optional) Set scheduling object.</li>
+<li><code>shutdown_hours</code> - (Optional) Set shutdown hours for cluster object.
+<ul>
+<li><code>is_enabled</code> - (Optional)  Flag to enable / disable the shutdown hours.
+Example: True</li>
+<li><code>time_windows</code> - (Required) Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
+Example: Fri:15:30-Wed:14:30</li>
+</ul>
+</li>
+<li><code>tasks</code> - (Optional) The scheduling tasks for the cluster.
+<ul>
+<li><code>is_enabled</code> - (Required)  Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.</li>
+<li><code>cron_expression</code> - (Required) A valid cron expression. For example : &quot; * * * * * &quot;.The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
+Example: 0 1 * * *</li>
+<li><code>task_type</code> - (Required) Valid values: &quot;clusterRoll&quot;. Required for cluster.scheduling.tasks object.</li>
+<li><code>batch_size_percentage</code> - (Optional)  Value in % to set size of batch in roll. Valid values are 0-100
+Example: 20.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>&lt;a id=&quot;autoscaler&quot;&gt;&lt;/a&gt;</p>
+<h2 id="autoscaler">Autoscaler</h2>
+<ul>
+<li><code>autoscaler</code> - (Optional) The Ocean Kubernetes Autoscaler object.</li>
+<li><code>is_enabled</code> - (Optional, Default: <code>true</code>) Enable the Ocean Kubernetes Autoscaler.</li>
+<li><code>is_auto_config</code> - (Optional, Default: <code>true</code>) Automatically configure and optimize headroom resources.</li>
+<li><code>auto_headroom_percentage</code> - Optionally set the auto headroom percentage, set a number between 0-200 to control the headroom % from the cluster. Relevant when isAutoConfig=true.</li>
+<li><code>cooldown</code> - (Optional, Default: <code>null</code>) Cooldown period between scaling actions.</li>
+<li><code>headroom</code> - (Optional) Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.</li>
+<li><code>cpu_per_unit</code> - (Optional) Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.</li>
+<li><code>memory_per_unit</code> - (Optional) Optionally configure the amount of memory (MiB) to allocate the headroom.</li>
+<li><code>gpu_per_unit</code> - (Optional) How much GPU allocate for headroom unit.</li>
+<li><code>num_of_units</code> - (Optional) The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.</li>
+<li><code>down</code> - (Optional) Auto Scaling scale down operations.</li>
+<li><code>evaluation_periods</code> - (Optional, Default: <code>null</code>) The number of evaluation periods that should accumulate before a scale down action takes place.</li>
+<li><code>max_scale_down_percentage</code> - (Optional) Would represent the maximum % to scale-down. Number between 1-100.</li>
+<li><code>resource_limits</code> - (Optional) Optionally set upper and lower bounds on the resource usage of the cluster.</li>
+<li><code>max_vcpu</code> - (Optional) The maximum cpu in vCpu units that can be allocated to the cluster.</li>
+<li><code>max_memory_gib</code> - (Optional) The maximum memory in GiB units that can be allocated to the cluster.</li>
+</ul>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SpotInst.Gke.OceanImportArgs.html">OceanImportArgs</a></h4>
       <section></section>
@@ -122,11 +348,80 @@ imported parameters by defining them in your template with your desired new valu
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Gke.OceanLaunchSpec.html">OceanLaunchSpec</a></h4>
       <section><p>Provides a custom Spotinst Ocean GKE Launch Spec resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new SpotInst.Gke.OceanLaunchSpec(&amp;quot;example&amp;quot;, new SpotInst.Gke.OceanLaunchSpecArgs
+    {
+        AutoscaleHeadrooms = 
+        {
+            new SpotInst.Gke.Inputs.OceanLaunchSpecAutoscaleHeadroomArgs
+            {
+                CpuPerUnit = 1000,
+                GpuPerUnit = 0,
+                MemoryPerUnit = 2048,
+                NumOfUnits = 5,
+            },
+        },
+        Labels = 
+        {
+            new SpotInst.Gke.Inputs.OceanLaunchSpecLabelArgs
+            {
+                Key = &amp;quot;labelKey&amp;quot;,
+                Value = &amp;quot;labelVal&amp;quot;,
+            },
+        },
+        Metadatas = 
+        {
+            new SpotInst.Gke.Inputs.OceanLaunchSpecMetadataArgs
+            {
+                Key = &amp;quot;gci-update-strategy&amp;quot;,
+                Value = &amp;quot;update_disabled&amp;quot;,
+            },
+        },
+        OceanId = &amp;quot;o-123456&amp;quot;,
+        SourceImage = &amp;quot;image&amp;quot;,
+        Taints = 
+        {
+            new SpotInst.Gke.Inputs.OceanLaunchSpecTaintArgs
+            {
+                Effect = &amp;quot;taintEffect&amp;quot;,
+                Key = &amp;quot;taintKey&amp;quot;,
+                Value = &amp;quot;taintVal&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SpotInst.Gke.OceanLaunchSpecArgs.html">OceanLaunchSpecArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Gke.OceanLaunchSpecImport.html">OceanLaunchSpecImport</a></h4>
       <section><p>Provides a custom Spotinst Ocean GKE Launch Spec Import resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new SpotInst.Gke.OceanLaunchSpecImport(&amp;quot;example&amp;quot;, new SpotInst.Gke.OceanLaunchSpecImportArgs
+    {
+        NodePoolName = &amp;quot;default-pool&amp;quot;,
+        OceanId = &amp;quot;o-123456&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SpotInst.Gke.OceanLaunchSpecImportArgs.html">OceanLaunchSpecImportArgs</a></h4>
       <section></section>

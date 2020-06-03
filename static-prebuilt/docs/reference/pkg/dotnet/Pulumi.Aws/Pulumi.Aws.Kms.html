@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Kms
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,6 +80,25 @@
       <section><p>Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,
 but API (hence this provider too) allows you to create as many aliases as
 the <a href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">account limits</a> allow you.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var key = new Aws.Kms.Key(&amp;quot;key&amp;quot;, new Aws.Kms.KeyArgs
+    {
+    });
+    var @alias = new Aws.Kms.Alias(&amp;quot;alias&amp;quot;, new Aws.Kms.AliasArgs
+    {
+        TargetKeyId = key.KeyId,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.AliasArgs.html">AliasArgs</a></h4>
       <section></section>
@@ -94,6 +113,33 @@ the <a href="https://www.terraform.io/docs/providers/aws/d/kms_ciphertext.html">
 <p><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var oauthConfig = new Aws.Kms.Key(&amp;quot;oauthConfig&amp;quot;, new Aws.Kms.KeyArgs
+    {
+        Description = &amp;quot;oauth config&amp;quot;,
+        IsEnabled = true,
+    });
+    var oauth = new Aws.Kms.Ciphertext(&amp;quot;oauth&amp;quot;, new Aws.Kms.CiphertextArgs
+    {
+        KeyId = oauthConfig.KeyId,
+        Plaintext = @&amp;quot;{
+&amp;quot;&amp;quot;client_id&amp;quot;&amp;quot;: &amp;quot;&amp;quot;e587dbae22222f55da22&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;client_secret&amp;quot;&amp;quot;: &amp;quot;&amp;quot;8289575d00000ace55e1815ec13673955721b8a5&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.CiphertextArgs.html">CiphertextArgs</a></h4>
       <section></section>
@@ -104,6 +150,22 @@ the <a href="https://www.terraform.io/docs/providers/aws/d/kms_ciphertext.html">
 <blockquote>
 <p><strong>Note:</strong> All arguments including the key material will be stored in the raw state as plain-text. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Kms.ExternalKey(&amp;quot;example&amp;quot;, new Aws.Kms.ExternalKeyArgs
+    {
+        Description = &amp;quot;KMS EXTERNAL for AMI encryption&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.ExternalKeyArgs.html">ExternalKeyArgs</a></h4>
       <section></section>
@@ -141,6 +203,60 @@ the <a href="https://www.terraform.io/docs/providers/aws/d/kms_ciphertext.html">
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.Grant.html">Grant</a></h4>
       <section><p>Provides a resource-based access control mechanism for a KMS customer master key.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var key = new Aws.Kms.Key(&amp;quot;key&amp;quot;, new Aws.Kms.KeyArgs
+    {
+    });
+    var role = new Aws.Iam.Role(&amp;quot;role&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;lambda.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var grant = new Aws.Kms.Grant(&amp;quot;grant&amp;quot;, new Aws.Kms.GrantArgs
+    {
+        Constraints = 
+        {
+            new Aws.Kms.Inputs.GrantConstraintArgs
+            {
+                EncryptionContextEquals = 
+                {
+                    { &amp;quot;Department&amp;quot;, &amp;quot;Finance&amp;quot; },
+                },
+            },
+        },
+        GranteePrincipal = role.Arn,
+        KeyId = key.KeyId,
+        Operations = 
+        {
+            &amp;quot;Encrypt&amp;quot;,
+            &amp;quot;Decrypt&amp;quot;,
+            &amp;quot;GenerateDataKey&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GrantArgs.html">GrantArgs</a></h4>
       <section></section>
@@ -148,6 +264,23 @@ the <a href="https://www.terraform.io/docs/providers/aws/d/kms_ciphertext.html">
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.Key.html">Key</a></h4>
       <section><p>Provides a KMS customer master key.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var key = new Aws.Kms.Key(&amp;quot;key&amp;quot;, new Aws.Kms.KeyArgs
+    {
+        DeletionWindowInDays = 10,
+        Description = &amp;quot;KMS key 1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.KeyArgs.html">KeyArgs</a></h4>
       <section></section>

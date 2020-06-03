@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Rancher2
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -93,6 +93,30 @@
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigAdfs.html">AuthConfigAdfs</a></h4>
       <section><p>Provides a Rancher v2 Auth Config ADFS resource. This can be used to configure and enable Auth Config ADFS for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Auth Config ADFS
+    var adfs = new Rancher2.AuthConfigAdfs(&amp;quot;adfs&amp;quot;, new Rancher2.AuthConfigAdfsArgs
+    {
+        DisplayNameField = &amp;quot;&amp;lt;DISPLAY_NAME_FIELD&gt;&amp;quot;,
+        GroupsField = &amp;quot;&amp;lt;GROUPS_FIELD&gt;&amp;quot;,
+        IdpMetadataContent = &amp;quot;&amp;lt;IDP_METADATA_CONTENT&gt;&amp;quot;,
+        RancherApiHost = &amp;quot;https://&amp;lt;RANCHER_API_HOST&gt;&amp;quot;,
+        SpCert = &amp;quot;&amp;lt;SP_CERT&gt;&amp;quot;,
+        SpKey = &amp;quot;&amp;lt;SP_KEY&gt;&amp;quot;,
+        UidField = &amp;quot;&amp;lt;UID_FIELD&gt;&amp;quot;,
+        UserNameField = &amp;quot;&amp;lt;USER_NAME_FIELD&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigAdfsArgs.html">AuthConfigAdfsArgs</a></h4>
       <section></section>
@@ -101,6 +125,29 @@
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigAzureAd.html">AuthConfigAzureAd</a></h4>
       <section><p>Provides a Rancher v2 Auth Config AzureAD resource. This can be used to configure and enable Auth Config AzureAD for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Auth Config AzureAD
+    var azuread = new Rancher2.AuthConfigAzureAd(&amp;quot;azuread&amp;quot;, new Rancher2.AuthConfigAzureAdArgs
+    {
+        ApplicationId = &amp;quot;&amp;lt;AZUREAD_APP_ID&gt;&amp;quot;,
+        ApplicationSecret = &amp;quot;&amp;lt;AZUREAD_APP_SECRET&gt;&amp;quot;,
+        AuthEndpoint = &amp;quot;&amp;lt;AZUREAD_AUTH_ENDPOINT&gt;&amp;quot;,
+        GraphEndpoint = &amp;quot;&amp;lt;AZUREAD_GRAPH_ENDPOINT&gt;&amp;quot;,
+        RancherUrl = &amp;quot;&amp;lt;RANCHER_URL&gt;&amp;quot;,
+        TenantId = &amp;quot;&amp;lt;AZUREAD_TENANT_ID&gt;&amp;quot;,
+        TokenEndpoint = &amp;quot;&amp;lt;AZUREAD_TOKEN_ENDPOINT&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigAzureAdArgs.html">AuthConfigAzureAdArgs</a></h4>
       <section></section>
@@ -117,6 +164,24 @@
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigGithub.html">AuthConfigGithub</a></h4>
       <section><p>Provides a Rancher v2 Auth Config Github resource. This can be used to configure and enable Auth Config Github for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Auth Config Github
+    var github = new Rancher2.AuthConfigGithub(&amp;quot;github&amp;quot;, new Rancher2.AuthConfigGithubArgs
+    {
+        ClientId = &amp;quot;&amp;lt;GITHUB_CLIENT_ID&gt;&amp;quot;,
+        ClientSecret = &amp;quot;&amp;lt;GITHUB_CLIENT_SECRET&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigGithubArgs.html">AuthConfigGithubArgs</a></h4>
       <section></section>
@@ -125,6 +190,30 @@
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigKeycloak.html">AuthConfigKeycloak</a></h4>
       <section><p>Provides a Rancher v2 Auth Config KeyCloak resource. This can be used to configure and enable Auth Config KeyCloak for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Auth Config KeyCloak
+    var keycloak = new Rancher2.AuthConfigKeycloak(&amp;quot;keycloak&amp;quot;, new Rancher2.AuthConfigKeycloakArgs
+    {
+        DisplayNameField = &amp;quot;&amp;lt;DISPLAY_NAME_FIELD&gt;&amp;quot;,
+        GroupsField = &amp;quot;&amp;lt;GROUPS_FIELD&gt;&amp;quot;,
+        IdpMetadataContent = &amp;quot;&amp;lt;IDP_METADATA_CONTENT&gt;&amp;quot;,
+        RancherApiHost = &amp;quot;https://&amp;lt;RANCHER_API_HOST&gt;&amp;quot;,
+        SpCert = &amp;quot;&amp;lt;SP_CERT&gt;&amp;quot;,
+        SpKey = &amp;quot;&amp;lt;SP_KEY&gt;&amp;quot;,
+        UidField = &amp;quot;&amp;lt;UID_FIELD&gt;&amp;quot;,
+        UserNameField = &amp;quot;&amp;lt;USER_NAME_FIELD&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigKeycloakArgs.html">AuthConfigKeycloakArgs</a></h4>
       <section></section>
@@ -133,6 +222,30 @@
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigOkta.html">AuthConfigOkta</a></h4>
       <section><p>Provides a Rancher v2 Auth Config OKTA resource. This can be used to configure and enable Auth Config OKTA for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Auth Config OKTA
+    var okta = new Rancher2.AuthConfigOkta(&amp;quot;okta&amp;quot;, new Rancher2.AuthConfigOktaArgs
+    {
+        DisplayNameField = &amp;quot;&amp;lt;DISPLAY_NAME_FIELD&gt;&amp;quot;,
+        GroupsField = &amp;quot;&amp;lt;GROUPS_FIELD&gt;&amp;quot;,
+        IdpMetadataContent = &amp;quot;&amp;lt;IDP_METADATA_CONTENT&gt;&amp;quot;,
+        RancherApiHost = &amp;quot;https://&amp;lt;RANCHER_API_HOST&gt;&amp;quot;,
+        SpCert = &amp;quot;&amp;lt;SP_CERT&gt;&amp;quot;,
+        SpKey = &amp;quot;&amp;lt;SP_KEY&gt;&amp;quot;,
+        UidField = &amp;quot;&amp;lt;UID_FIELD&gt;&amp;quot;,
+        UserNameField = &amp;quot;&amp;lt;USER_NAME_FIELD&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigOktaArgs.html">AuthConfigOktaArgs</a></h4>
       <section></section>
@@ -149,6 +262,30 @@
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigPing.html">AuthConfigPing</a></h4>
       <section><p>Provides a Rancher v2 Auth Config Ping resource. This can be used to configure and enable Auth Config Ping for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Auth Config Ping
+    var ping = new Rancher2.AuthConfigPing(&amp;quot;ping&amp;quot;, new Rancher2.AuthConfigPingArgs
+    {
+        DisplayNameField = &amp;quot;&amp;lt;DISPLAY_NAME_FIELD&gt;&amp;quot;,
+        GroupsField = &amp;quot;&amp;lt;GROUPS_FIELD&gt;&amp;quot;,
+        IdpMetadataContent = &amp;quot;&amp;lt;IDP_METADATA_CONTENT&gt;&amp;quot;,
+        RancherApiHost = &amp;quot;https://&amp;lt;RANCHER_API_HOST&gt;&amp;quot;,
+        SpCert = &amp;quot;&amp;lt;SP_CERT&gt;&amp;quot;,
+        SpKey = &amp;quot;&amp;lt;SP_KEY&gt;&amp;quot;,
+        UidField = &amp;quot;&amp;lt;UID_FIELD&gt;&amp;quot;,
+        UserNameField = &amp;quot;&amp;lt;USER_NAME_FIELD&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.AuthConfigPingArgs.html">AuthConfigPingArgs</a></h4>
       <section></section>
@@ -162,6 +299,35 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.Catalog.html">Catalog</a></h4>
       <section><p>Provides a Rancher v2 Catalog resource. This can be used to create cluster, global and/or project catalogs for Rancher v2 environments and retrieve their information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Rancher2 Global Catalog
+    var foo_global = new Rancher2.Catalog(&amp;quot;foo-global&amp;quot;, new Rancher2.CatalogArgs
+    {
+        Url = &amp;quot;https://&amp;lt;CATALOG_URL&gt;&amp;quot;,
+    });
+    // Create a new Rancher2 Cluster Catalog
+    var foo_cluster = new Rancher2.Catalog(&amp;quot;foo-cluster&amp;quot;, new Rancher2.CatalogArgs
+    {
+        Scope = &amp;quot;cluster&amp;quot;,
+        Url = &amp;quot;https://&amp;lt;CATALOG_URL&gt;&amp;quot;,
+    });
+    // Create a new Rancher2 Project Catalog
+    var foo_project = new Rancher2.Catalog(&amp;quot;foo-project&amp;quot;, new Rancher2.CatalogArgs
+    {
+        Scope = &amp;quot;project&amp;quot;,
+        Url = &amp;quot;https://&amp;lt;CATALOG_URL&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.CatalogArgs.html">CatalogArgs</a></h4>
       <section></section>
@@ -182,6 +348,28 @@
       <h4><a class="xref" href="Pulumi.Rancher2.CloudCredential.html">CloudCredential</a></h4>
       <section><p>Provides a Rancher v2 Cloud Credential resource. This can be used to create Cloud Credential for Rancher v2.2.x and retrieve their information.</p>
 <p>amazonec2, azure, digitalocean, linode, openstack and vsphere credentials config are supported for Cloud Credential.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Cloud Credential
+    var foo = new Rancher2.CloudCredential(&amp;quot;foo&amp;quot;, new Rancher2.CloudCredentialArgs
+    {
+        Amazonec2CredentialConfig = new Rancher2.Inputs.CloudCredentialAmazonec2CredentialConfigArgs
+        {
+            AccessKey = &amp;quot;&amp;lt;AWS_ACCESS_KEY&gt;&amp;quot;,
+            SecretKey = &amp;quot;&amp;lt;AWS_SECRET_KEY&gt;&amp;quot;,
+        },
+        Description = &amp;quot;foo test&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.CloudCredentialArgs.html">CloudCredentialArgs</a></h4>
       <section></section>
@@ -191,15 +379,13 @@
       <section><p>Provides a Rancher v2 Cluster resource. This can be used to create Clusters for Rancher v2 environments and retrieve their information.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterAlterGroup.html">ClusterAlterGroup</a></h4>
-      <section><p>Provides a Rancher v2 Cluster Alert Group resource. This can be used to create Cluster Alert Group for Rancher v2 environments and retrieve their information.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterAlterGroupArgs.html">ClusterAlterGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterAlterGroupState.html">ClusterAlterGroupState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterAlterRule.html">ClusterAlterRule</a></h4>
-      <section><p>Provides a Rancher v2 Cluster Alert Rule resource. This can be used to create Cluster Alert Rule for Rancher v2 environments and retrieve their information.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterAlterRuleArgs.html">ClusterAlterRuleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterAlterRuleState.html">ClusterAlterRuleState</a></h4>
@@ -215,6 +401,31 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterLogging.html">ClusterLogging</a></h4>
       <section><p>Provides a Rancher v2 Cluster Logging resource. This can be used to configure Cluster Logging for Rancher v2 environments and retrieve their information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Rancher2 Cluster Logging
+    var foo = new Rancher2.ClusterLogging(&amp;quot;foo&amp;quot;, new Rancher2.ClusterLoggingArgs
+    {
+        ClusterId = &amp;quot;&amp;lt;cluster_id&gt;&amp;quot;,
+        Kind = &amp;quot;syslog&amp;quot;,
+        SyslogConfig = new Rancher2.Inputs.ClusterLoggingSyslogConfigArgs
+        {
+            Endpoint = &amp;quot;&amp;lt;syslog_endpoint&gt;&amp;quot;,
+            Protocol = &amp;quot;udp&amp;quot;,
+            Severity = &amp;quot;notice&amp;quot;,
+            SslVerify = false,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterLoggingArgs.html">ClusterLoggingArgs</a></h4>
       <section></section>
@@ -222,6 +433,25 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterRoleTemplateBinding.html">ClusterRoleTemplateBinding</a></h4>
       <section><p>Provides a Rancher v2 Cluster Role Template Binding resource. This can be used to create Cluster Role Template Bindings for Rancher v2 environments and retrieve their information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Rancher2 Cluster Role Template Binding
+    var foo = new Rancher2.ClusterRoleTemplateBinding(&amp;quot;foo&amp;quot;, new Rancher2.ClusterRoleTemplateBindingArgs
+    {
+        ClusterId = &amp;quot;&amp;lt;cluster_id&gt;&amp;quot;,
+        RoleTemplateId = &amp;quot;&amp;lt;role_template_id&gt;&amp;quot;,
+        UserId = &amp;quot;&amp;lt;user_id&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterRoleTemplateBindingArgs.html">ClusterRoleTemplateBindingArgs</a></h4>
       <section></section>
@@ -236,9 +466,7 @@
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterSyncState.html">ClusterSyncState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterTemplate.html">ClusterTemplate</a></h4>
-      <section><p>Provides a Rancher v2 Cluster Template resource. This can be used to create Cluster Templates for Rancher v2 RKE clusters and retrieve their information.</p>
-<p>Cluster Templates are available from Rancher v2.3.x and above.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterTemplateArgs.html">ClusterTemplateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ClusterTemplateState.html">ClusterTemplateState</a></h4>
@@ -445,6 +673,30 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.GlobalRoleBinding.html">GlobalRoleBinding</a></h4>
       <section><p>Provides a Rancher v2 Global Role Binding resource. This can be used to create Global Role Bindings for Rancher v2 environments and retrieve their information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Global Role Binding using user_id
+    var foo = new Rancher2.GlobalRoleBinding(&amp;quot;foo&amp;quot;, new Rancher2.GlobalRoleBindingArgs
+    {
+        GlobalRoleId = &amp;quot;admin&amp;quot;,
+        UserId = &amp;quot;user-XXXXX&amp;quot;,
+    });
+    // Create a new rancher2 Global Role Binding using group_principal_id
+    var foo2 = new Rancher2.GlobalRoleBinding(&amp;quot;foo2&amp;quot;, new Rancher2.GlobalRoleBindingArgs
+    {
+        GlobalRoleId = &amp;quot;admin&amp;quot;,
+        GroupPrincipalId = &amp;quot;local://g-XXXXX&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.GlobalRoleBindingArgs.html">GlobalRoleBindingArgs</a></h4>
       <section></section>
@@ -458,6 +710,40 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.Namespace.html">Namespace</a></h4>
       <section><p>Provides a Rancher v2 Namespace resource. This can be used to create namespaces for Rancher v2 environments and retrieve their information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Namespace
+    var foo = new Rancher2.Namespace(&amp;quot;foo&amp;quot;, new Rancher2.NamespaceArgs
+    {
+        ContainerResourceLimit = new Rancher2.Inputs.NamespaceContainerResourceLimitArgs
+        {
+            LimitsCpu = &amp;quot;20m&amp;quot;,
+            LimitsMemory = &amp;quot;20Mi&amp;quot;,
+            RequestsCpu = &amp;quot;1m&amp;quot;,
+            RequestsMemory = &amp;quot;1Mi&amp;quot;,
+        },
+        Description = &amp;quot;foo namespace&amp;quot;,
+        ProjectId = &amp;quot;&amp;lt;PROJECT_ID&gt;&amp;quot;,
+        ResourceQuota = new Rancher2.Inputs.NamespaceResourceQuotaArgs
+        {
+            Limit = new Rancher2.Inputs.NamespaceResourceQuotaLimitArgs
+            {
+                LimitsCpu = &amp;quot;100m&amp;quot;,
+                LimitsMemory = &amp;quot;100Mi&amp;quot;,
+                RequestsStorage = &amp;quot;1Gi&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.NamespaceArgs.html">NamespaceArgs</a></h4>
       <section></section>
@@ -465,6 +751,33 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.NodeDriver.html">NodeDriver</a></h4>
       <section><p>Provides a Rancher v2 Node Driver resource. This can be used to create Node Driver for Rancher v2 RKE clusters and retrieve their information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Node Driver
+    var foo = new Rancher2.NodeDriver(&amp;quot;foo&amp;quot;, new Rancher2.NodeDriverArgs
+    {
+        Active = true,
+        Builtin = false,
+        Checksum = &amp;quot;0x0&amp;quot;,
+        Description = &amp;quot;Foo description&amp;quot;,
+        ExternalId = &amp;quot;foo_external&amp;quot;,
+        UiUrl = &amp;quot;local://ui&amp;quot;,
+        Url = &amp;quot;local://&amp;quot;,
+        WhitelistDomains = 
+        {
+            &amp;quot;*.foo.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.NodeDriverArgs.html">NodeDriverArgs</a></h4>
       <section></section>
@@ -481,38 +794,104 @@
       <section><p>Provides a Rancher v2 Node Template resource. This can be used to create Node Template for Rancher v2 and retrieve their information.</p>
 <p>amazonec2, azure, digitalocean, linode, opennebula, openstack, and vsphere drivers are supported for node templates.</p>
 <p><strong>Note</strong> If you are upgrading to Rancher v2.3.3, please take a look to final section</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Node Template up to Rancher 2.1.x
+    var foo = new Rancher2.NodeTemplate(&amp;quot;foo&amp;quot;, new Rancher2.NodeTemplateArgs
+    {
+        Amazonec2Config = new Rancher2.Inputs.NodeTemplateAmazonec2ConfigArgs
+        {
+            AccessKey = &amp;quot;AWS_ACCESS_KEY&amp;quot;,
+            Ami = &amp;quot;&amp;lt;AMI_ID&gt;&amp;quot;,
+            Region = &amp;quot;&amp;lt;REGION&gt;&amp;quot;,
+            SecretKey = &amp;quot;&amp;lt;AWS_SECRET_KEY&gt;&amp;quot;,
+            SecurityGroup = 
+            {
+                &amp;quot;&amp;lt;AWS_SECURITY_GROUP&gt;&amp;quot;,
+            },
+            SubnetId = &amp;quot;&amp;lt;SUBNET_ID&gt;&amp;quot;,
+            VpcId = &amp;quot;&amp;lt;VPC_ID&gt;&amp;quot;,
+            Zone = &amp;quot;&amp;lt;ZONE&gt;&amp;quot;,
+        },
+        Description = &amp;quot;foo test&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.NodeTemplateArgs.html">NodeTemplateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.NodeTemplateState.html">NodeTemplateState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.Notifier.html">Notifier</a></h4>
-      <section><p>Provides a Rancher v2 Notifier resource. This can be used to create notifiers for Rancher v2 environments and retrieve their information.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.NotifierArgs.html">NotifierArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.NotifierState.html">NotifierState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.PodSecurityPolicyTemplate.html">PodSecurityPolicyTemplate</a></h4>
-      <section><p>Provides a Rancher v2 PodSecurityPolicyTemplate resource. This can be used to create PodSecurityPolicyTemplates for Rancher v2 environments and retrieve their information.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.PodSecurityPolicyTemplateArgs.html">PodSecurityPolicyTemplateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.PodSecurityPolicyTemplateState.html">PodSecurityPolicyTemplateState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.Project.html">Project</a></h4>
       <section><p>Provides a Rancher v2 Project resource. This can be used to create projects for Rancher v2 environments and retrieve their information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Project
+    var foo = new Rancher2.Project(&amp;quot;foo&amp;quot;, new Rancher2.ProjectArgs
+    {
+        ClusterId = &amp;quot;&amp;lt;CLUSTER_ID&gt;&amp;quot;,
+        ContainerResourceLimit = new Rancher2.Inputs.ProjectContainerResourceLimitArgs
+        {
+            LimitsCpu = &amp;quot;20m&amp;quot;,
+            LimitsMemory = &amp;quot;20Mi&amp;quot;,
+            RequestsCpu = &amp;quot;1m&amp;quot;,
+            RequestsMemory = &amp;quot;1Mi&amp;quot;,
+        },
+        ResourceQuota = new Rancher2.Inputs.ProjectResourceQuotaArgs
+        {
+            NamespaceDefaultLimit = new Rancher2.Inputs.ProjectResourceQuotaNamespaceDefaultLimitArgs
+            {
+                LimitsCpu = &amp;quot;2000m&amp;quot;,
+                LimitsMemory = &amp;quot;500Mi&amp;quot;,
+                RequestsStorage = &amp;quot;1Gi&amp;quot;,
+            },
+            ProjectLimit = new Rancher2.Inputs.ProjectResourceQuotaProjectLimitArgs
+            {
+                LimitsCpu = &amp;quot;2000m&amp;quot;,
+                LimitsMemory = &amp;quot;2000Mi&amp;quot;,
+                RequestsStorage = &amp;quot;2Gi&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.ProjectAlertGroup.html">ProjectAlertGroup</a></h4>
-      <section><p>Provides a Rancher v2 Project Alert Group resource. This can be used to create Project Alert Group for Rancher v2 environments and retrieve their information.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ProjectAlertGroupArgs.html">ProjectAlertGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ProjectAlertGroupState.html">ProjectAlertGroupState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ProjectAlertRule.html">ProjectAlertRule</a></h4>
-      <section><p>Provides a Rancher v2 Project Alert Rule resource. This can be used to create Project Alert Rule for Rancher v2 environments and retrieve their information.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ProjectAlertRuleArgs.html">ProjectAlertRuleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ProjectAlertRuleState.html">ProjectAlertRuleState</a></h4>
@@ -521,6 +900,31 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ProjectLogging.html">ProjectLogging</a></h4>
       <section><p>Provides a Rancher v2 Project Logging resource. This can be used to create Project Logging for Rancher v2 environments and retrieve their information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Project Logging
+    var foo = new Rancher2.ProjectLogging(&amp;quot;foo&amp;quot;, new Rancher2.ProjectLoggingArgs
+    {
+        Kind = &amp;quot;syslog&amp;quot;,
+        ProjectId = &amp;quot;&amp;lt;project_id&gt;&amp;quot;,
+        SyslogConfig = new Rancher2.Inputs.ProjectLoggingSyslogConfigArgs
+        {
+            Endpoint = &amp;quot;&amp;lt;syslog_endpoint&gt;&amp;quot;,
+            Protocol = &amp;quot;udp&amp;quot;,
+            Severity = &amp;quot;notice&amp;quot;,
+            SslVerify = false,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.ProjectLoggingArgs.html">ProjectLoggingArgs</a></h4>
       <section></section>
@@ -528,6 +932,25 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.ProjectRoleTemplateBinding.html">ProjectRoleTemplateBinding</a></h4>
       <section><p>Provides a Rancher v2 Project Role Template Binding resource. This can be used to create Project Role Template Bindings for Rancher v2 environments and retrieve their information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Project Role Template Binding
+    var foo = new Rancher2.ProjectRoleTemplateBinding(&amp;quot;foo&amp;quot;, new Rancher2.ProjectRoleTemplateBindingArgs
+    {
+        ProjectId = &amp;quot;&amp;lt;project_id&gt;&amp;quot;,
+        RoleTemplateId = &amp;quot;&amp;lt;role_template_id&gt;&amp;quot;,
+        UserId = &amp;quot;&amp;lt;user_id&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.ProjectRoleTemplateBindingArgs.html">ProjectRoleTemplateBindingArgs</a></h4>
       <section></section>
@@ -544,21 +967,13 @@ construction to achieve fine-grained programmatic control over provider settings
       <h4><a class="xref" href="Pulumi.Rancher2.ProviderArgs.html">ProviderArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.Registry.html">Registry</a></h4>
-      <section><p>Provides a Rancher v2 Registry resource. This can be used to create docker registries for Rancher v2 environments and retrieve their information.</p>
-<p>Depending of the availability, there are 2 types of Rancher v2 docker registries:</p>
-<ul>
-<li>Project registry: Available to all namespaces in the <code>project_id</code></li>
-<li>Namespaced regitry: Available to just <code>namespace_id</code> in the <code>project_id</code></li>
-</ul>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.RegistryArgs.html">RegistryArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.RegistryState.html">RegistryState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.RoleTempalte.html">RoleTempalte</a></h4>
-      <section><p>Provides a Rancher v2 Role Template resource. This can be used to create Role Template for Rancher v2 and retrieve their information.</p>
-<p><code>cluster</code> and <code>project</code> scopes are supported for role templates.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.RoleTempalteArgs.html">RoleTempalteArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Rancher2.RoleTempalteState.html">RoleTempalteState</a></h4>
@@ -579,6 +994,23 @@ construction to achieve fine-grained programmatic control over provider settings
       <section><p>Provides a Rancher v2 Setting resource. This can be used to create settings for Rancher v2 environments and retrieve their information.</p>
 <p>On create, if setting already exists, provider will import it and update its value.</p>
 <p>On destroy, if setting is a system setting like <code>server-url</code>, provider'll not delete it from Rancher, it'll just update setting value to default and remove it from tfstate.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Setting
+    var foo = new Rancher2.Setting(&amp;quot;foo&amp;quot;, new Rancher2.SettingArgs
+    {
+        Value = &amp;quot;&amp;lt;VALUE&gt;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.SettingArgs.html">SettingArgs</a></h4>
       <section></section>
@@ -592,6 +1024,25 @@ construction to achieve fine-grained programmatic control over provider settings
 <li>scoped: valid for just a specific cluster (<code>cluster_id</code> should be provided).</li>
 </ul>
 <p>Tokens can't be updated once created. Any diff in token data will recreate the token. If any token expire, Rancher2 provider will generate a diff to regenerate it.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 Token scoped
+    var foo = new Rancher2.Token(&amp;quot;foo&amp;quot;, new Rancher2.TokenArgs
+    {
+        ClusterId = &amp;quot;&amp;lt;cluster-id&gt;&amp;quot;,
+        Description = &amp;quot;foo token&amp;quot;,
+        Ttl = 1200,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.TokenArgs.html">TokenArgs</a></h4>
       <section></section>
@@ -600,6 +1051,31 @@ construction to achieve fine-grained programmatic control over provider settings
       <h4><a class="xref" href="Pulumi.Rancher2.User.html">User</a></h4>
       <section><p>Provides a Rancher v2 User resource. This can be used to create Users for Rancher v2 environments and retrieve their information.</p>
 <p>When a Rancher User is created, it doesn't have a global role binding. At least, <code>user-base</code> global role binding in needed in order to enable user login.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new rancher2 User
+    var fooUser = new Rancher2.User(&amp;quot;fooUser&amp;quot;, new Rancher2.UserArgs
+    {
+        Enabled = true,
+        Password = &amp;quot;changeme&amp;quot;,
+        Username = &amp;quot;foo&amp;quot;,
+    });
+    // Create a new rancher2 global_role_binding for User
+    var fooGlobalRoleBinding = new Rancher2.GlobalRoleBinding(&amp;quot;fooGlobalRoleBinding&amp;quot;, new Rancher2.GlobalRoleBindingArgs
+    {
+        GlobalRoleId = &amp;quot;user-base&amp;quot;,
+        UserId = fooUser.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Rancher2.UserArgs.html">UserArgs</a></h4>
       <section></section>

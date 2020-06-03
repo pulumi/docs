@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.LightSail
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,6 +85,22 @@ this parameter to manage the DNS records for that domain.</p>
 <blockquote>
 <p><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">&quot;Regions and Availability Zones in Amazon Lightsail&quot;</a> for more details</p>
 </blockquote>
+<h2 id="example-usage-creating-a-new-domain">Example Usage, creating a new domain</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var domainTest = new Aws.LightSail.Domain(&amp;quot;domainTest&amp;quot;, new Aws.LightSail.DomainArgs
+    {
+        DomainName = &amp;quot;mydomain.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.LightSail.DomainArgs.html">DomainArgs</a></h4>
       <section></section>
@@ -97,6 +113,30 @@ for more information.</p>
 <blockquote>
 <p><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">&quot;Regions and Availability Zones in Amazon Lightsail&quot;</a> for more details</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new GitLab Lightsail Instance
+    var gitlabTest = new Aws.LightSail.Instance(&amp;quot;gitlabTest&amp;quot;, new Aws.LightSail.InstanceArgs
+    {
+        AvailabilityZone = &amp;quot;us-east-1b&amp;quot;,
+        BlueprintId = &amp;quot;string&amp;quot;,
+        BundleId = &amp;quot;string&amp;quot;,
+        KeyPairName = &amp;quot;some_key_name&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="availability-zones">Availability Zones</h2>
 <p>Lightsail currently supports the following Availability Zones (e.g. <code>us-east-1a</code>):</p>
 <ul>
@@ -185,6 +225,55 @@ Lightsail.</p>
 <blockquote>
 <p><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">&quot;Regions and Availability Zones in Amazon Lightsail&quot;</a> for more details</p>
 </blockquote>
+<h2 id="example-usage-creating-a-new-key-pair">Example Usage, creating a new Key Pair</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Lightsail Key Pair
+    var lgKeyPair = new Aws.LightSail.KeyPair(&amp;quot;lgKeyPair&amp;quot;, new Aws.LightSail.KeyPairArgs
+    {
+    });
+}
+
+}
+</code></pre>
+<h2 id="create-new-key-pair-encrypting-the-private-key-with-a-pgp-key">Create new Key Pair, encrypting the private key with a PGP Key</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var lgKeyPair = new Aws.LightSail.KeyPair(&amp;quot;lgKeyPair&amp;quot;, new Aws.LightSail.KeyPairArgs
+    {
+        PgpKey = &amp;quot;keybase:keybaseusername&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="import-an-existing-public-key">Import an existing public key</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var lgKeyPair = new Aws.LightSail.KeyPair(&amp;quot;lgKeyPair&amp;quot;, new Aws.LightSail.KeyPairArgs
+    {
+        PublicKey = File.ReadAllText(&amp;quot;~/.ssh/id_rsa.pub&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.LightSail.KeyPairArgs.html">KeyPairArgs</a></h4>
       <section></section>
@@ -195,6 +284,21 @@ Lightsail.</p>
 <blockquote>
 <p><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">&quot;Regions and Availability Zones in Amazon Lightsail&quot;</a> for more details</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Aws.LightSail.StaticIp(&amp;quot;test&amp;quot;, new Aws.LightSail.StaticIpArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.LightSail.StaticIpArgs.html">StaticIpArgs</a></h4>
       <section></section>
@@ -203,6 +307,33 @@ Lightsail.</p>
 <blockquote>
 <p><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">&quot;Regions and Availability Zones in Amazon Lightsail&quot;</a> for more details</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testStaticIp = new Aws.LightSail.StaticIp(&amp;quot;testStaticIp&amp;quot;, new Aws.LightSail.StaticIpArgs
+    {
+    });
+    var testInstance = new Aws.LightSail.Instance(&amp;quot;testInstance&amp;quot;, new Aws.LightSail.InstanceArgs
+    {
+        AvailabilityZone = &amp;quot;us-east-1b&amp;quot;,
+        BlueprintId = &amp;quot;string&amp;quot;,
+        BundleId = &amp;quot;string&amp;quot;,
+        KeyPairName = &amp;quot;some_key_name&amp;quot;,
+    });
+    var testStaticIpAttachment = new Aws.LightSail.StaticIpAttachment(&amp;quot;testStaticIpAttachment&amp;quot;, new Aws.LightSail.StaticIpAttachmentArgs
+    {
+        InstanceName = testInstance.Id,
+        StaticIpName = testStaticIp.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.LightSail.StaticIpAttachmentArgs.html">StaticIpAttachmentArgs</a></h4>
       <section></section>

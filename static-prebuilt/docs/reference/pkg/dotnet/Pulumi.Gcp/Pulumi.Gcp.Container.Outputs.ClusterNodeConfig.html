@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ClusterNodeConfig
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ClusterNodeConfig</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.Outputs.html">Pulumi.Gcp.Container.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClusterNodeConfig : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ClusterNodeConfig</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_BootDiskKmsKey" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.BootDiskKmsKey">BootDiskKmsKey</h4>
   <div class="markdown level1 summary"><p>The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p>
@@ -95,7 +119,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? BootDiskKmsKey</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string BootDiskKmsKey</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -107,13 +131,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L24">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_DiskSizeGb" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.DiskSizeGb">DiskSizeGb</h4>
   <div class="markdown level1 summary"><p>Size of the disk attached to each node, specified
@@ -140,7 +164,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L29">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_DiskType" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.DiskType">DiskType</h4>
   <div class="markdown level1 summary"><p>Type of the disk attached to each node
@@ -149,7 +173,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DiskType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DiskType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,13 +185,13 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L34">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_GuestAccelerators" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.GuestAccelerators">GuestAccelerators</h4>
   <div class="markdown level1 summary"><p>List of the type and count of accelerator cards attached to the instance.
@@ -188,13 +212,13 @@ Structure documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterNodeConfigGuestAccelerator.html">ClusterNodeConfigGuestAccelerator</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterNodeConfigGuestAccelerator.html">ClusterNodeConfigGuestAccelerator</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_ImageType" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.ImageType">ImageType</h4>
   <div class="markdown level1 summary"><p>The image type to use for this node. Note that changing the image type
@@ -203,7 +227,7 @@ will delete and recreate all nodes in the node pool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ImageType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ImageType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -215,13 +239,13 @@ will delete and recreate all nodes in the node pool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_Labels" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.Labels">Labels</h4>
   <div class="markdown level1 summary"><p>The Kubernetes labels (key/value pairs) to be applied to each node.</p>
@@ -229,7 +253,7 @@ will delete and recreate all nodes in the node pool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt;? Labels</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; Labels</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,13 +265,13 @@ will delete and recreate all nodes in the node pool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L48">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_LocalSsdCount" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.LocalSsdCount">LocalSsdCount</h4>
   <div class="markdown level1 summary"><p>The amount of local SSD disks that will be
@@ -274,7 +298,7 @@ attached to each cluster node. Defaults to 0.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L54">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_MachineType" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.MachineType">MachineType</h4>
   <div class="markdown level1 summary"><p>The name of a Google Compute Engine machine type.
@@ -284,7 +308,7 @@ Defaults to <code>n1-standard-1</code>. To create a custom machine type, value s
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? MachineType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string MachineType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -296,13 +320,13 @@ Defaults to <code>n1-standard-1</code>. To create a custom machine type, value s
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L62">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_Metadata" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.Metadata">Metadata</h4>
   <div class="markdown level1 summary"><p>The metadata key/value pairs assigned to instances in
@@ -314,7 +338,7 @@ value in your config.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt;? Metadata</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; Metadata</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -326,13 +350,13 @@ value in your config.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L70">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_MinCpuPlatform" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.MinCpuPlatform">MinCpuPlatform</h4>
   <div class="markdown level1 summary"><p>Minimum CPU platform to be used by this instance.
@@ -344,7 +368,7 @@ for more information.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? MinCpuPlatform</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string MinCpuPlatform</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -356,13 +380,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_OauthScopes" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.OauthScopes">OauthScopes</h4>
   <div class="markdown level1 summary"><p>The set of Google API scopes to be made available
@@ -385,13 +409,13 @@ the correct functioning of the cluster:</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L83">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_Preemptible" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.Preemptible">Preemptible</h4>
   <div class="markdown level1 summary"><p>A boolean that represents whether or not the underlying node VMs
@@ -419,7 +443,7 @@ for more information. Defaults to false.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L88">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_SandboxConfig" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.SandboxConfig">SandboxConfig</h4>
   <div class="markdown level1 summary"><p><a href="https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods">GKE Sandbox</a> configuration. When enabling this feature you must specify <code>image_type = &amp;quot;COS_CONTAINERD&amp;quot;</code> and <code>node_version = &amp;quot;1.12.7-gke.17&amp;quot;</code> or later to use it.
@@ -446,7 +470,7 @@ Structure is documented below.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L96">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_ServiceAccount" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.ServiceAccount">ServiceAccount</h4>
   <div class="markdown level1 summary"><p>The service account to be used by the Node VMs.
@@ -458,7 +482,7 @@ In order to use the configured <code>oauth_scopes</code> for logging and monitor
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ServiceAccount</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ServiceAccount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -470,13 +494,13 @@ In order to use the configured <code>oauth_scopes</code> for logging and monitor
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L100">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_ShieldedInstanceConfig" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.ShieldedInstanceConfig">ShieldedInstanceConfig</h4>
   <div class="markdown level1 summary"><p>Shielded Instance options. Structure is documented below.</p>
@@ -502,7 +526,7 @@ In order to use the configured <code>oauth_scopes</code> for logging and monitor
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L105">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_Tags" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>The list of instance tags applied to all nodes. Tags are used to identify
@@ -523,13 +547,13 @@ valid sources or targets for network firewalls.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L116">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_Taints" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.Taints">Taints</h4>
   <div class="markdown level1 summary"><p>A list of <a href="https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/">Kubernetes taints</a>
@@ -556,13 +580,13 @@ recommended. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterNodeConfigTaint.html">ClusterNodeConfigTaint</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterNodeConfigTaint.html">ClusterNodeConfigTaint</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L121">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfig_WorkloadMetadataConfig" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.WorkloadMetadataConfig">WorkloadMetadataConfig</h4>
   <div class="markdown level1 summary"><p>Metadata configuration to expose to workloads on the node pool.
@@ -595,7 +619,7 @@ Structure is documented below.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Container/Outputs/ClusterNodeConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

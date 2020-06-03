@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FloatingIp
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,66 @@
 that can be used for load balancers.
 These are similar to Nova (compute) floating IP resources,
 but only compute floating IPs can be used with compute instances.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var floatip1 = new OpenStack.Networking.FloatingIp(&amp;quot;floatip1&amp;quot;, new OpenStack.Networking.FloatingIpArgs
+    {
+        Pool = &amp;quot;public&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">FloatingIp</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">FloatingIp</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Networking.html">Pulumi.OpenStack.Networking</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -91,16 +145,16 @@ but only compute floating IPs can be used with compute instances.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L148">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp__ctor_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_Networking_FloatingIp__ctor_System_String_Pulumi_OpenStack_Networking_FloatingIpArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.FloatingIp.#ctor(System.String,Pulumi.OpenStack.Networking.FloatingIpArgs,System.Nullable{CustomResourceOptions})">FloatingIp(String, FloatingIpArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Networking_FloatingIp__ctor_System_String_Pulumi_OpenStack_Networking_FloatingIpArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.#ctor(System.String,Pulumi.OpenStack.Networking.FloatingIpArgs,Pulumi.CustomResourceOptions)">FloatingIp(String, FloatingIpArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a FloatingIp resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FloatingIp(string name, FloatingIpArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public FloatingIp(string name, FloatingIpArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +179,7 @@ but only compute floating IPs can be used with compute instances.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +189,7 @@ but only compute floating IPs can be used with compute instances.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_Address_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Address*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_Address" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Address">Address</h4>
@@ -159,13 +213,13 @@ user or project.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_AllTags_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.AllTags*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_AllTags" data-uid="Pulumi.OpenStack.Networking.FloatingIp.AllTags">AllTags</h4>
@@ -187,13 +241,13 @@ been explicitly and implicitly added.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_Description_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Description*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_Description" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Description">Description</h4>
@@ -202,7 +256,7 @@ been explicitly and implicitly added.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,13 +268,13 @@ been explicitly and implicitly added.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_DnsDomain_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.DnsDomain*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_DnsDomain" data-uid="Pulumi.OpenStack.Networking.FloatingIp.DnsDomain">DnsDomain</h4>
@@ -244,13 +298,13 @@ service. Changing this creates a new floating IP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_DnsName_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.DnsName*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_DnsName" data-uid="Pulumi.OpenStack.Networking.FloatingIp.DnsName">DnsName</h4>
@@ -274,13 +328,13 @@ service. Changing this creates a new floating IP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_FixedIp_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.FixedIp*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_FixedIp" data-uid="Pulumi.OpenStack.Networking.FloatingIp.FixedIp">FixedIp</h4>
@@ -302,13 +356,13 @@ the port has multiple fixed IPs.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_Pool_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Pool*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_Pool" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Pool">Pool</h4>
@@ -330,13 +384,13 @@ IP. Changing this creates a new floating IP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_PortId_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.PortId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_PortId" data-uid="Pulumi.OpenStack.Networking.FloatingIp.PortId">PortId</h4>
@@ -358,13 +412,13 @@ associate with this floating IP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_Region_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Region*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_Region" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Region">Region</h4>
@@ -389,13 +443,13 @@ floating IP (which may or may not have a different address).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_SubnetId_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.SubnetId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_SubnetId" data-uid="Pulumi.OpenStack.Networking.FloatingIp.SubnetId">SubnetId</h4>
@@ -405,7 +459,7 @@ the floating IP network has multiple subnets.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubnetId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SubnetId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -417,13 +471,13 @@ the floating IP network has multiple subnets.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_Tags_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Tags*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_Tags" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Tags">Tags</h4>
@@ -444,13 +498,13 @@ the floating IP network has multiple subnets.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_TenantId_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.TenantId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_TenantId" data-uid="Pulumi.OpenStack.Networking.FloatingIp.TenantId">TenantId</h4>
@@ -474,13 +528,13 @@ may or may not have a different address)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_ValueSpecs_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.ValueSpecs*"></a>
   <h4 id="Pulumi_OpenStack_Networking_FloatingIp_ValueSpecs" data-uid="Pulumi.OpenStack.Networking.FloatingIp.ValueSpecs">ValueSpecs</h4>
@@ -489,7 +543,7 @@ may or may not have a different address)</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; ValueSpecs { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; ValueSpecs { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -501,7 +555,7 @@ may or may not have a different address)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -509,17 +563,17 @@ may or may not have a different address)</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_FloatingIp_Get_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Get*"></a>
-  <h4 id="Pulumi_OpenStack_Networking_FloatingIp_Get_System_String_Input_System_String__Pulumi_OpenStack_Networking_FloatingIpState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Get(System.String,Input{System.String},Pulumi.OpenStack.Networking.FloatingIpState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FloatingIpState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Networking_FloatingIp_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_Networking_FloatingIpState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Networking.FloatingIp.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.Networking.FloatingIpState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, FloatingIpState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing FloatingIp resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static FloatingIp Get(string name, Input&lt;string&gt; id, FloatingIpState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static FloatingIp Get(string name, Input&lt;string&gt; id, FloatingIpState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -538,7 +592,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -550,7 +604,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -579,7 +633,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/FloatingIp.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/FloatingIp.cs/#L39" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

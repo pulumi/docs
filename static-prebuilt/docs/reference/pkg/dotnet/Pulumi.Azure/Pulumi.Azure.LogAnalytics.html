@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.LogAnalytics
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,38 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.LogAnalytics.DataSourceWindowsEvent.html">DataSourceWindowsEvent</a></h4>
       <section><p>Manages a Log Analytics Windows Event DataSource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAnalyticsWorkspace = new Azure.OperationalInsights.AnalyticsWorkspace(&amp;quot;exampleAnalyticsWorkspace&amp;quot;, new Azure.OperationalInsights.AnalyticsWorkspaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;PerGB2018&amp;quot;,
+    });
+    var exampleDataSourceWindowsEvent = new Azure.LogAnalytics.DataSourceWindowsEvent(&amp;quot;exampleDataSourceWindowsEvent&amp;quot;, new Azure.LogAnalytics.DataSourceWindowsEventArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        WorkspaceName = exampleAnalyticsWorkspace.Name,
+        EventLogName = &amp;quot;Application&amp;quot;,
+        EventTypes = 
+        {
+            &amp;quot;error&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.LogAnalytics.DataSourceWindowsEventArgs.html">DataSourceWindowsEventArgs</a></h4>
       <section></section>
@@ -85,6 +117,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.LogAnalytics.DataSourceWindowsPerformanceCounter.html">DataSourceWindowsPerformanceCounter</a></h4>
       <section><p>Manages a Log Analytics (formally Operational Insights) Windows Performance Counter DataSource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAnalyticsWorkspace = new Azure.OperationalInsights.AnalyticsWorkspace(&amp;quot;exampleAnalyticsWorkspace&amp;quot;, new Azure.OperationalInsights.AnalyticsWorkspaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;PerGB2018&amp;quot;,
+    });
+    var exampleDataSourceWindowsPerformanceCounter = new Azure.LogAnalytics.DataSourceWindowsPerformanceCounter(&amp;quot;exampleDataSourceWindowsPerformanceCounter&amp;quot;, new Azure.LogAnalytics.DataSourceWindowsPerformanceCounterArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        WorkspaceName = exampleAnalyticsWorkspace.Name,
+        ObjectName = &amp;quot;CPU&amp;quot;,
+        InstanceName = &amp;quot;*&amp;quot;,
+        CounterName = &amp;quot;CPU&amp;quot;,
+        IntervalSeconds = 10,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.LogAnalytics.DataSourceWindowsPerformanceCounterArgs.html">DataSourceWindowsPerformanceCounterArgs</a></h4>
       <section></section>

@@ -1,0 +1,746 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Gcp.ServiceDirectory
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Gcp.ServiceDirectory
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Gcp.ServiceDirectory">
+  
+  <h1 id="Pulumi_Gcp_ServiceDirectory" data-uid="Pulumi.Gcp.ServiceDirectory" class="text-break">Namespace Pulumi.Gcp.ServiceDirectory
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.Endpoint.html">Endpoint</a></h4>
+      <section><p>An individual endpoint that provides a service.</p>
+<p>To get more information about Endpoint, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/service-directory/docs/reference/rest/v1beta1/projects.locations.namespaces.services.endpoints">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_an_endpoint">Configuring an endpoint</a></li>
+</ul>
+<h2 id="example-usage---service-directory-endpoint-basic">Example Usage - Service Directory Endpoint Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleNamespace = new Gcp.ServiceDirectory.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Gcp.ServiceDirectory.NamespaceArgs
+    {
+        NamespaceId = &amp;quot;example-namespace&amp;quot;,
+        Location = &amp;quot;us-central1&amp;quot;,
+    });
+    var exampleService = new Gcp.ServiceDirectory.Service(&amp;quot;exampleService&amp;quot;, new Gcp.ServiceDirectory.ServiceArgs
+    {
+        ServiceId = &amp;quot;example-service&amp;quot;,
+        Namespace = exampleNamespace.Id,
+    });
+    var exampleEndpoint = new Gcp.ServiceDirectory.Endpoint(&amp;quot;exampleEndpoint&amp;quot;, new Gcp.ServiceDirectory.EndpointArgs
+    {
+        EndpointId = &amp;quot;example-endpoint&amp;quot;,
+        Service = exampleService.Id,
+        Metadata = 
+        {
+            { &amp;quot;stage&amp;quot;, &amp;quot;prod&amp;quot; },
+            { &amp;quot;region&amp;quot;, &amp;quot;us-central1&amp;quot; },
+        },
+        Address = &amp;quot;1.2.3.4&amp;quot;,
+        Port = 5353,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.EndpointArgs.html">EndpointArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.EndpointState.html">EndpointState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.Namespace.html">Namespace</a></h4>
+      <section><p>A container for <code>services</code>. Namespaces allow administrators to group services
+together and define permissions for a collection of services.</p>
+<p>To get more information about Namespace, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/service-directory/docs/reference/rest/v1beta1/projects.locations.namespaces">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_namespace">Configuring a namespace</a></li>
+</ul>
+<h2 id="example-usage---service-directory-namespace-basic">Example Usage - Service Directory Namespace Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Gcp.ServiceDirectory.Namespace(&amp;quot;example&amp;quot;, new Gcp.ServiceDirectory.NamespaceArgs
+    {
+        NamespaceId = &amp;quot;example-namespace&amp;quot;,
+        Location = &amp;quot;us-central1&amp;quot;,
+        Labels = 
+        {
+            { &amp;quot;key&amp;quot;, &amp;quot;value&amp;quot; },
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.NamespaceArgs.html">NamespaceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.NamespaceIamBinding.html">NamespaceIamBinding</a></h4>
+      <section><p>Three different resources help you manage your IAM policy for Service Directory Namespace. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.servicedirectory.NamespaceIamPolicy</code>: Authoritative. Sets the IAM policy for the namespace and replaces any existing policy already attached.</li>
+<li><code>gcp.servicedirectory.NamespaceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the namespace are preserved.</li>
+<li><code>gcp.servicedirectory.NamespaceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the namespace are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.NamespaceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.servicedirectory.NamespaceIamBinding</code> and <code>gcp.servicedirectory.NamespaceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.NamespaceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.servicedirectory.NamespaceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<h2 id="google_service_directory_namespace_iam_policy">google_service_directory_namespace_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.ServiceDirectory.NamespaceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.ServiceDirectory.NamespaceIamPolicyArgs
+    {
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_namespace_iam_binding">google_service_directory_namespace_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.ServiceDirectory.NamespaceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.ServiceDirectory.NamespaceIamBindingArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_namespace_iam_member">google_service_directory_namespace_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.ServiceDirectory.NamespaceIamMember(&amp;quot;member&amp;quot;, new Gcp.ServiceDirectory.NamespaceIamMemberArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.NamespaceIamBindingArgs.html">NamespaceIamBindingArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.NamespaceIamBindingState.html">NamespaceIamBindingState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.NamespaceIamMember.html">NamespaceIamMember</a></h4>
+      <section><p>Three different resources help you manage your IAM policy for Service Directory Namespace. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.servicedirectory.NamespaceIamPolicy</code>: Authoritative. Sets the IAM policy for the namespace and replaces any existing policy already attached.</li>
+<li><code>gcp.servicedirectory.NamespaceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the namespace are preserved.</li>
+<li><code>gcp.servicedirectory.NamespaceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the namespace are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.NamespaceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.servicedirectory.NamespaceIamBinding</code> and <code>gcp.servicedirectory.NamespaceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.NamespaceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.servicedirectory.NamespaceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<h2 id="google_service_directory_namespace_iam_policy">google_service_directory_namespace_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.ServiceDirectory.NamespaceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.ServiceDirectory.NamespaceIamPolicyArgs
+    {
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_namespace_iam_binding">google_service_directory_namespace_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.ServiceDirectory.NamespaceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.ServiceDirectory.NamespaceIamBindingArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_namespace_iam_member">google_service_directory_namespace_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.ServiceDirectory.NamespaceIamMember(&amp;quot;member&amp;quot;, new Gcp.ServiceDirectory.NamespaceIamMemberArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.NamespaceIamMemberArgs.html">NamespaceIamMemberArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.NamespaceIamMemberState.html">NamespaceIamMemberState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.NamespaceIamPolicy.html">NamespaceIamPolicy</a></h4>
+      <section><p>Three different resources help you manage your IAM policy for Service Directory Namespace. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.servicedirectory.NamespaceIamPolicy</code>: Authoritative. Sets the IAM policy for the namespace and replaces any existing policy already attached.</li>
+<li><code>gcp.servicedirectory.NamespaceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the namespace are preserved.</li>
+<li><code>gcp.servicedirectory.NamespaceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the namespace are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.NamespaceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.servicedirectory.NamespaceIamBinding</code> and <code>gcp.servicedirectory.NamespaceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.NamespaceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.servicedirectory.NamespaceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<h2 id="google_service_directory_namespace_iam_policy">google_service_directory_namespace_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.ServiceDirectory.NamespaceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.ServiceDirectory.NamespaceIamPolicyArgs
+    {
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_namespace_iam_binding">google_service_directory_namespace_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.ServiceDirectory.NamespaceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.ServiceDirectory.NamespaceIamBindingArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_namespace_iam_member">google_service_directory_namespace_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.ServiceDirectory.NamespaceIamMember(&amp;quot;member&amp;quot;, new Gcp.ServiceDirectory.NamespaceIamMemberArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.NamespaceIamPolicyArgs.html">NamespaceIamPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.NamespaceIamPolicyState.html">NamespaceIamPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.NamespaceState.html">NamespaceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.Service.html">Service</a></h4>
+      <section><p>An individual service. A service contains a name and optional metadata.</p>
+<p>To get more information about Service, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/service-directory/docs/reference/rest/v1beta1/projects.locations.namespaces.services">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_service">Configuring a service</a></li>
+</ul>
+<h2 id="example-usage---service-directory-service-basic">Example Usage - Service Directory Service Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleNamespace = new Gcp.ServiceDirectory.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Gcp.ServiceDirectory.NamespaceArgs
+    {
+        NamespaceId = &amp;quot;example-namespace&amp;quot;,
+        Location = &amp;quot;us-central1&amp;quot;,
+    });
+    var exampleService = new Gcp.ServiceDirectory.Service(&amp;quot;exampleService&amp;quot;, new Gcp.ServiceDirectory.ServiceArgs
+    {
+        ServiceId = &amp;quot;example-service&amp;quot;,
+        Namespace = exampleNamespace.Id,
+        Metadata = 
+        {
+            { &amp;quot;stage&amp;quot;, &amp;quot;prod&amp;quot; },
+            { &amp;quot;region&amp;quot;, &amp;quot;us-central1&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.ServiceArgs.html">ServiceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.ServiceIamBinding.html">ServiceIamBinding</a></h4>
+      <section><p>Three different resources help you manage your IAM policy for Service Directory Service. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.servicedirectory.ServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</li>
+<li><code>gcp.servicedirectory.ServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</li>
+<li><code>gcp.servicedirectory.ServiceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.ServiceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.servicedirectory.ServiceIamBinding</code> and <code>gcp.servicedirectory.ServiceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.ServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.servicedirectory.ServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<h2 id="google_service_directory_service_iam_policy">google_service_directory_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.ServiceDirectory.ServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.ServiceDirectory.ServiceIamPolicyArgs
+    {
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_service_iam_binding">google_service_directory_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.ServiceDirectory.ServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.ServiceDirectory.ServiceIamBindingArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_service_iam_member">google_service_directory_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.ServiceDirectory.ServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.ServiceDirectory.ServiceIamMemberArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.ServiceIamBindingArgs.html">ServiceIamBindingArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.ServiceIamBindingState.html">ServiceIamBindingState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.ServiceIamMember.html">ServiceIamMember</a></h4>
+      <section><p>Three different resources help you manage your IAM policy for Service Directory Service. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.servicedirectory.ServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</li>
+<li><code>gcp.servicedirectory.ServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</li>
+<li><code>gcp.servicedirectory.ServiceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.ServiceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.servicedirectory.ServiceIamBinding</code> and <code>gcp.servicedirectory.ServiceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.ServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.servicedirectory.ServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<h2 id="google_service_directory_service_iam_policy">google_service_directory_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.ServiceDirectory.ServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.ServiceDirectory.ServiceIamPolicyArgs
+    {
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_service_iam_binding">google_service_directory_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.ServiceDirectory.ServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.ServiceDirectory.ServiceIamBindingArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_service_iam_member">google_service_directory_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.ServiceDirectory.ServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.ServiceDirectory.ServiceIamMemberArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.ServiceIamMemberArgs.html">ServiceIamMemberArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.ServiceIamMemberState.html">ServiceIamMemberState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.ServiceIamPolicy.html">ServiceIamPolicy</a></h4>
+      <section><p>Three different resources help you manage your IAM policy for Service Directory Service. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.servicedirectory.ServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</li>
+<li><code>gcp.servicedirectory.ServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</li>
+<li><code>gcp.servicedirectory.ServiceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.ServiceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.servicedirectory.ServiceIamBinding</code> and <code>gcp.servicedirectory.ServiceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.servicedirectory.ServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.servicedirectory.ServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<h2 id="google_service_directory_service_iam_policy">google_service_directory_service_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.ServiceDirectory.ServiceIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.ServiceDirectory.ServiceIamPolicyArgs
+    {
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_service_iam_binding">google_service_directory_service_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.ServiceDirectory.ServiceIamBinding(&amp;quot;binding&amp;quot;, new Gcp.ServiceDirectory.ServiceIamBindingArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_service_directory_service_iam_member">google_service_directory_service_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.ServiceDirectory.ServiceIamMember(&amp;quot;member&amp;quot;, new Gcp.ServiceDirectory.ServiceIamMemberArgs
+    {
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.ServiceIamPolicyArgs.html">ServiceIamPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.ServiceIamPolicyState.html">ServiceIamPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.ServiceDirectory.ServiceState.html">ServiceState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

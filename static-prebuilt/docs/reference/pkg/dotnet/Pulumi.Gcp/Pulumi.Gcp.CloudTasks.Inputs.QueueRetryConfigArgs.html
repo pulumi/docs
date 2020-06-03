@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QueueRetryConfigArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">QueueRetryConfigArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">QueueRetryConfigArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.CloudTasks.Inputs.html">Pulumi.Gcp.CloudTasks.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs__ctor_" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs__ctor" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.#ctor">QueueRetryConfigArgs()</h4>
@@ -100,15 +129,22 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs_MaxAttempts_" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.MaxAttempts*"></a>
   <h4 id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs_MaxAttempts" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.MaxAttempts">MaxAttempts</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of attempts per task.
+Cloud Tasks will attempt the task maxAttempts times (that is, if
+the first attempt fails, then there will be maxAttempts - 1
+retries). Must be &gt;= -1.
+If unspecified when the queue is created, Cloud Tasks will pick
+the default.
+-1 indicates unlimited attempts.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxAttempts { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxAttempts { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,21 +156,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs_MaxBackoff_" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.MaxBackoff*"></a>
   <h4 id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs_MaxBackoff" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.MaxBackoff">MaxBackoff</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue's RetryConfig
+specifies that the task should be retried.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MaxBackoff { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MaxBackoff { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,21 +185,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs_MaxDoublings_" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.MaxDoublings*"></a>
   <h4 id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs_MaxDoublings" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.MaxDoublings">MaxDoublings</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The time between retries will double maxDoublings times.
+A task's retry interval starts at minBackoff, then doubles maxDoublings times,
+then increases linearly, and finally retries retries at intervals of maxBackoff
+up to maxAttempts times.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxDoublings { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxDoublings { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,21 +215,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs_MaxRetryDuration_" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.MaxRetryDuration*"></a>
   <h4 id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs_MaxRetryDuration" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.MaxRetryDuration">MaxRetryDuration</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If positive, maxRetryDuration specifies the time limit for
+retrying a failed task, measured from when the task was first
+attempted. Once maxRetryDuration time has passed and the task has
+been attempted maxAttempts times, no further attempts will be
+made and the task will be deleted.
+If zero, then the task age is unlimited.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MaxRetryDuration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MaxRetryDuration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,21 +247,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs_MinBackoff_" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.MinBackoff*"></a>
   <h4 id="Pulumi_Gcp_CloudTasks_Inputs_QueueRetryConfigArgs_MinBackoff" data-uid="Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.MinBackoff">MinBackoff</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue's RetryConfig
+specifies that the task should be retried.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MinBackoff { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MinBackoff { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,7 +276,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -236,7 +288,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudTasks/Inputs/QueueRetryConfigArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

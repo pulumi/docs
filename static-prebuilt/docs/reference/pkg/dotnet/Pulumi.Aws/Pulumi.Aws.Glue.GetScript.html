@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetScript
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,27 +78,316 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetScript</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Glue.html">Pulumi.Aws.Glue</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Glue_GetScript_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetScript : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetScript</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/GetScript.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Glue/GetScript.cs/#L292">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_GetScript_InvokeAsync_" data-uid="Pulumi.Aws.Glue.GetScript.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_Glue_GetScript_InvokeAsync_Pulumi_Aws_Glue_GetScriptArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.Glue.GetScript.InvokeAsync(Pulumi.Aws.Glue.GetScriptArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetScriptArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Glue_GetScript_InvokeAsync_Pulumi_Aws_Glue_GetScriptArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.Glue.GetScript.InvokeAsync(Pulumi.Aws.Glue.GetScriptArgs,Pulumi.InvokeOptions)">InvokeAsync(GetScriptArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<h3 id="generate-python-script">Generate Python Script</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = Output.Create(Aws.Glue.GetScript.InvokeAsync(new Aws.Glue.GetScriptArgs
+    {
+        DagEdges = 
+        {
+            new Aws.Glue.Inputs.GetScriptDagEdgeArgs
+            {
+                Source = &amp;quot;datasource0&amp;quot;,
+                Target = &amp;quot;applymapping1&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagEdgeArgs
+            {
+                Source = &amp;quot;applymapping1&amp;quot;,
+                Target = &amp;quot;selectfields2&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagEdgeArgs
+            {
+                Source = &amp;quot;selectfields2&amp;quot;,
+                Target = &amp;quot;resolvechoice3&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagEdgeArgs
+            {
+                Source = &amp;quot;resolvechoice3&amp;quot;,
+                Target = &amp;quot;datasink4&amp;quot;,
+            },
+        },
+        DagNodes = 
+        {
+            new Aws.Glue.Inputs.GetScriptDagNodeArgs
+            {
+                Args = 
+                {
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;database&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_database.Source.Name}\&amp;quot;&amp;quot;,
+                    },
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;table_name&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_table.Source.Name}\&amp;quot;&amp;quot;,
+                    },
+                },
+                Id = &amp;quot;datasource0&amp;quot;,
+                NodeType = &amp;quot;DataSource&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagNodeArgs
+            {
+                Args = 
+                {
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;mapping&amp;quot;,
+                        Value = &amp;quot;[(\&amp;quot;column1\&amp;quot;, \&amp;quot;string\&amp;quot;, \&amp;quot;column1\&amp;quot;, \&amp;quot;string\&amp;quot;)]&amp;quot;,
+                    },
+                },
+                Id = &amp;quot;applymapping1&amp;quot;,
+                NodeType = &amp;quot;ApplyMapping&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagNodeArgs
+            {
+                Args = 
+                {
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;paths&amp;quot;,
+                        Value = &amp;quot;[\&amp;quot;column1\&amp;quot;]&amp;quot;,
+                    },
+                },
+                Id = &amp;quot;selectfields2&amp;quot;,
+                NodeType = &amp;quot;SelectFields&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagNodeArgs
+            {
+                Args = 
+                {
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;choice&amp;quot;,
+                        Value = &amp;quot;\&amp;quot;MATCH_CATALOG\&amp;quot;&amp;quot;,
+                    },
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;database&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_database.Destination.Name}\&amp;quot;&amp;quot;,
+                    },
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;table_name&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_table.Destination.Name}\&amp;quot;&amp;quot;,
+                    },
+                },
+                Id = &amp;quot;resolvechoice3&amp;quot;,
+                NodeType = &amp;quot;ResolveChoice&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagNodeArgs
+            {
+                Args = 
+                {
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;database&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_database.Destination.Name}\&amp;quot;&amp;quot;,
+                    },
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;table_name&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_table.Destination.Name}\&amp;quot;&amp;quot;,
+                    },
+                },
+                Id = &amp;quot;datasink4&amp;quot;,
+                NodeType = &amp;quot;DataSink&amp;quot;,
+            },
+        },
+        Language = &amp;quot;PYTHON&amp;quot;,
+    }));
+    this.PythonScript = example.Apply(example =&gt; example.PythonScript);
+}
+
+[Output(&amp;quot;pythonScript&amp;quot;)]
+public Output&amp;lt;string&gt; PythonScript { get; set; }
+}
+</code></pre>
+<p>{{% /example %}}
+{{% example %}}</p>
+<h3 id="generate-scala-code">Generate Scala Code</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = Output.Create(Aws.Glue.GetScript.InvokeAsync(new Aws.Glue.GetScriptArgs
+    {
+        DagEdges = 
+        {
+            new Aws.Glue.Inputs.GetScriptDagEdgeArgs
+            {
+                Source = &amp;quot;datasource0&amp;quot;,
+                Target = &amp;quot;applymapping1&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagEdgeArgs
+            {
+                Source = &amp;quot;applymapping1&amp;quot;,
+                Target = &amp;quot;selectfields2&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagEdgeArgs
+            {
+                Source = &amp;quot;selectfields2&amp;quot;,
+                Target = &amp;quot;resolvechoice3&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagEdgeArgs
+            {
+                Source = &amp;quot;resolvechoice3&amp;quot;,
+                Target = &amp;quot;datasink4&amp;quot;,
+            },
+        },
+        DagNodes = 
+        {
+            new Aws.Glue.Inputs.GetScriptDagNodeArgs
+            {
+                Args = 
+                {
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;database&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_database.Source.Name}\&amp;quot;&amp;quot;,
+                    },
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;table_name&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_table.Source.Name}\&amp;quot;&amp;quot;,
+                    },
+                },
+                Id = &amp;quot;datasource0&amp;quot;,
+                NodeType = &amp;quot;DataSource&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagNodeArgs
+            {
+                Args = 
+                {
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;mappings&amp;quot;,
+                        Value = &amp;quot;[(\&amp;quot;column1\&amp;quot;, \&amp;quot;string\&amp;quot;, \&amp;quot;column1\&amp;quot;, \&amp;quot;string\&amp;quot;)]&amp;quot;,
+                    },
+                },
+                Id = &amp;quot;applymapping1&amp;quot;,
+                NodeType = &amp;quot;ApplyMapping&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagNodeArgs
+            {
+                Args = 
+                {
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;paths&amp;quot;,
+                        Value = &amp;quot;[\&amp;quot;column1\&amp;quot;]&amp;quot;,
+                    },
+                },
+                Id = &amp;quot;selectfields2&amp;quot;,
+                NodeType = &amp;quot;SelectFields&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagNodeArgs
+            {
+                Args = 
+                {
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;choice&amp;quot;,
+                        Value = &amp;quot;\&amp;quot;MATCH_CATALOG\&amp;quot;&amp;quot;,
+                    },
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;database&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_database.Destination.Name}\&amp;quot;&amp;quot;,
+                    },
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;table_name&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_table.Destination.Name}\&amp;quot;&amp;quot;,
+                    },
+                },
+                Id = &amp;quot;resolvechoice3&amp;quot;,
+                NodeType = &amp;quot;ResolveChoice&amp;quot;,
+            },
+            new Aws.Glue.Inputs.GetScriptDagNodeArgs
+            {
+                Args = 
+                {
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;database&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_database.Destination.Name}\&amp;quot;&amp;quot;,
+                    },
+                    new Aws.Glue.Inputs.GetScriptDagNodeArgArgs
+                    {
+                        Name = &amp;quot;table_name&amp;quot;,
+                        Value = $&amp;quot;\&amp;quot;{aws_glue_catalog_table.Destination.Name}\&amp;quot;&amp;quot;,
+                    },
+                },
+                Id = &amp;quot;datasink4&amp;quot;,
+                NodeType = &amp;quot;DataSink&amp;quot;,
+            },
+        },
+        Language = &amp;quot;SCALA&amp;quot;,
+    }));
+    this.ScalaCode = example.Apply(example =&gt; example.ScalaCode);
+}
+
+[Output(&amp;quot;scalaCode&amp;quot;)]
+public Output&amp;lt;string&gt; ScalaCode { get; set; }
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetScriptResult&gt; InvokeAsync(GetScriptArgs args, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetScriptResult&gt; InvokeAsync(GetScriptArgs args, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,7 +405,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -132,7 +421,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.GetScriptResult.html">GetScriptResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.GetScriptResult.html">GetScriptResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -144,7 +433,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/GetScript.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Glue/GetScript.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

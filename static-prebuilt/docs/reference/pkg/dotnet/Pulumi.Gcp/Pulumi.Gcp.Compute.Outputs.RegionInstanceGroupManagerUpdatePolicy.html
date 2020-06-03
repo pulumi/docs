@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RegionInstanceGroupManagerUpdatePolicy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RegionInstanceGroupManagerUpdatePolicy</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_RegionInstanceGroupManagerUpdatePolicy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RegionInstanceGroupManagerUpdatePolicy : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RegionInstanceGroupManagerUpdatePolicy</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionInstanceGroupManagerUpdatePolicy_InstanceRedistributionType" data-uid="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerUpdatePolicy.InstanceRedistributionType">InstanceRedistributionType</h4>
   <div class="markdown level1 summary"><ul>
@@ -97,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? InstanceRedistributionType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string InstanceRedistributionType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -109,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionInstanceGroupManagerUpdatePolicy_MaxSurgeFixed" data-uid="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerUpdatePolicy.MaxSurgeFixed">MaxSurgeFixed</h4>
   <div class="markdown level1 summary"><p>, The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with <code>max_surge_percent</code>. It has to be either 0 or at least equal to the number of zones.  If fixed values are used, at least one of <code>max_unavailable_fixed</code> or <code>max_surge_fixed</code> must be greater than 0.</p>
@@ -141,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionInstanceGroupManagerUpdatePolicy_MaxSurgePercent" data-uid="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerUpdatePolicy.MaxSurgePercent">MaxSurgePercent</h4>
   <div class="markdown level1 summary"><p>, The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with <code>max_surge_fixed</code>. Percent value is only allowed for regional managed instance groups with size at least 10.</p>
@@ -167,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionInstanceGroupManagerUpdatePolicy_MaxUnavailableFixed" data-uid="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerUpdatePolicy.MaxUnavailableFixed">MaxUnavailableFixed</h4>
   <div class="markdown level1 summary"><p>, The maximum number of instances that can be unavailable during the update process. Conflicts with <code>max_unavailable_percent</code>. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of <code>max_unavailable_fixed</code> or <code>max_surge_fixed</code> must be greater than 0.</p>
@@ -193,7 +217,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionInstanceGroupManagerUpdatePolicy_MaxUnavailablePercent" data-uid="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerUpdatePolicy.MaxUnavailablePercent">MaxUnavailablePercent</h4>
   <div class="markdown level1 summary"><p>, The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with <code>max_unavailable_fixed</code>. Percent value is only allowed for regional managed instance groups with size at least 10.</p>
@@ -219,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L44">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionInstanceGroupManagerUpdatePolicy_MinimalAction" data-uid="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerUpdatePolicy.MinimalAction">MinimalAction</h4>
   <div class="markdown level1 summary"><ul>
@@ -247,7 +271,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L40">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionInstanceGroupManagerUpdatePolicy_MinReadySec" data-uid="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerUpdatePolicy.MinReadySec">MinReadySec</h4>
   <div class="markdown level1 summary"><p>, Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]</p>
@@ -274,7 +298,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L48">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionInstanceGroupManagerUpdatePolicy_Type" data-uid="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerUpdatePolicy.Type">Type</h4>
   <div class="markdown level1 summary"><ul>
@@ -308,7 +332,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionInstanceGroupManagerUpdatePolicy.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

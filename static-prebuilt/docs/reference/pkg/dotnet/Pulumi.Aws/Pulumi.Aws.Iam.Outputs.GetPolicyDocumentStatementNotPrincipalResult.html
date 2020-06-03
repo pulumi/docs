@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetPolicyDocumentStatementNotPrincipalResult
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,20 +78,44 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetPolicyDocumentStatementNotPrincipalResult</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Iam.Outputs.html">Pulumi.Aws.Iam.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Iam_Outputs_GetPolicyDocumentStatementNotPrincipalResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetPolicyDocumentStatementNotPrincipalResult : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetPolicyDocumentStatementNotPrincipalResult</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/Outputs/GetPolicyDocumentStatementNotPrincipalResult.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/Outputs/GetPolicyDocumentStatementNotPrincipalResult.cs/#L20">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Iam_Outputs_GetPolicyDocumentStatementNotPrincipalResult_Identifiers" data-uid="Pulumi.Aws.Iam.Outputs.GetPolicyDocumentStatementNotPrincipalResult.Identifiers">Identifiers</h4>
   <div class="markdown level1 summary"><p>List of identifiers for principals. When <code>type</code>
-is &quot;AWS&quot;, these are IAM user or role ARNs.  When <code>type</code> is &quot;Service&quot;, these are AWS Service roles e.g. <code>lambda.amazonaws.com</code>.</p>
+is &quot;AWS&quot;, these are IAM user or role ARNs.  When <code>type</code> is &quot;Service&quot;, these are AWS Service roles e.g. <code>lambda.amazonaws.com</code>. When <code>type</code> is &quot;Federated&quot;, these are web identity users or SAML provider ARNs.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -108,16 +132,16 @@ is &quot;AWS&quot;, these are IAM user or role ARNs.  When <code>type</code> is 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/Outputs/GetPolicyDocumentStatementNotPrincipalResult.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/Outputs/GetPolicyDocumentStatementNotPrincipalResult.cs/#L24">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Iam_Outputs_GetPolicyDocumentStatementNotPrincipalResult_Type" data-uid="Pulumi.Aws.Iam.Outputs.GetPolicyDocumentStatementNotPrincipalResult.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The type of principal. For AWS ARNs this is &quot;AWS&quot;.  For AWS services (e.g. Lambda), this is &quot;Service&quot;.</p>
+  <div class="markdown level1 summary"><p>The type of principal. For AWS ARNs this is &quot;AWS&quot;.  For AWS services (e.g. Lambda), this is &quot;Service&quot;. For Federated access the type is &quot;Federated&quot;.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -146,7 +170,7 @@ is &quot;AWS&quot;, these are IAM user or role ARNs.  When <code>type</code> is 
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/Outputs/GetPolicyDocumentStatementNotPrincipalResult.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/Outputs/GetPolicyDocumentStatementNotPrincipalResult.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

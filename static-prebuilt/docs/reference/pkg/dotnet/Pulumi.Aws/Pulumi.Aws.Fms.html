@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Fms
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,21 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Fms.AdminAccount.html">AdminAccount</a></h4>
       <section><p>Provides a resource to associate/disassociate an AWS Firewall Manager administrator account. This operation must be performed in the <code>us-east-1</code> region.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Fms.AdminAccount(&amp;quot;example&amp;quot;, new Aws.Fms.AdminAccountArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Fms.AdminAccountArgs.html">AdminAccountArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.F5BigIP.Ltm
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,36 @@
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.DataGroup.html">DataGroup</a></h4>
       <section><p><code>f5bigip.ltm.DataGroup</code> Manages internal (in-line) datagroup configuration</p>
 <p>Resource should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource, for example /Common/my-datagroup.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var datagroup = new F5BigIP.Ltm.DataGroup(&amp;quot;datagroup&amp;quot;, new F5BigIP.Ltm.DataGroupArgs
+    {
+        Name = &amp;quot;/Common/dgx2&amp;quot;,
+        Records = 
+        {
+            new F5BigIP.Ltm.Inputs.DataGroupRecordArgs
+            {
+                Data = &amp;quot;pool1&amp;quot;,
+                Name = &amp;quot;abc.com&amp;quot;,
+            },
+            new F5BigIP.Ltm.Inputs.DataGroupRecordArgs
+            {
+                Data = &amp;quot;123&amp;quot;,
+                Name = &amp;quot;test&amp;quot;,
+            },
+        },
+        Type = &amp;quot;string&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.DataGroupArgs.html">DataGroupArgs</a></h4>
       <section></section>
@@ -93,93 +123,37 @@
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.IRuleState.html">IRuleState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.Monitor.html">Monitor</a></h4>
-      <section><p><code>f5bigip.ltm.Monitor</code> Configures a custom monitor for use by health checks.</p>
-<p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.MonitorArgs.html">MonitorArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.MonitorState.html">MonitorState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.Node.html">Node</a></h4>
-      <section><p><code>f5bigip.ltm.Node</code> Manages a node configuration</p>
-<p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.NodeArgs.html">NodeArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.NodeState.html">NodeState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.html">PersistenceProfileCookie</a></h4>
-      <section><p>Configures a cookie persistence profile</p>
-<h2 id="reference">Reference</h2>
-<p><code>name</code> - (Required) Name of the virtual address</p>
-<p><code>defaults_from</code> - (Required) Parent cookie persistence profile</p>
-<p><code>match_across_pools</code> (Optional) (enabled or disabled) match across pools with given persistence record</p>
-<p><code>match_across_services</code> (Optional) (enabled or disabled) match across services with given persistence record</p>
-<p><code>match_across_virtuals</code> (Optional) (enabled or disabled) match across virtual servers with given persistence record</p>
-<p><code>mirror</code> (Optional) (enabled or disabled) mirror persistence record</p>
-<p><code>timeout</code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
-<p><code>override_conn_limit</code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
-<p><code>always_send</code> (Optional) (enabled or disabled) always send cookies</p>
-<p><code>cookie_encryption</code> (Optional) (required, preferred, or disabled) To required, preferred, or disabled policy for cookie encryption</p>
-<p><code>cookie_encryption_passphrase</code> (Optional) (required, preferred, or disabled) Passphrase for encrypted cookies. The field is encrypted on the server and will always return differently then set.
-If this is configured specify <code>ignore_changes</code> under the <code>lifecycle</code> block to ignore returned encrypted value.</p>
-<p><code>cookie_name</code> (Optional) Name of the cookie to track persistence</p>
-<p><code>expiration</code> (Optional) Expiration TTL for cookie specified in DAY:HOUR:MIN:SECONDS (Examples: 1:0:0:0 one day, 1:0:0 one hour, 30:0 thirty minutes)</p>
-<p><code>hash_length</code> (Optional) (Integer) Length of hash to apply to cookie</p>
-<p><code>hash_offset</code> (Optional) (Integer) Number of characters to skip in the cookie for the hash</p>
-<p><code>httponly</code> (Optional) (enabled or disabled) Sending only over http</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileCookieArgs.html">PersistenceProfileCookieArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileCookieState.html">PersistenceProfileCookieState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileDstAddr.html">PersistenceProfileDstAddr</a></h4>
-      <section><p>Configures a cookie persistence profile</p>
-<h2 id="reference">Reference</h2>
-<p><code>name</code> - (Required) Name of the virtual address</p>
-<p><code>defaults_from</code> - (Optional) Specifies the existing profile from which the system imports settings for the new profile.</p>
-<p><code>match_across_pools</code> (Optional) (enabled or disabled) match across pools with given persistence record</p>
-<p><code>match_across_services</code> (Optional) (enabled or disabled) match across services with given persistence record</p>
-<p><code>match_across_virtuals</code> (Optional) (enabled or disabled) match across virtual servers with given persistence record</p>
-<p><code>mirror</code> (Optional) (enabled or disabled) mirror persistence record</p>
-<p><code>timeout</code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
-<p><code>override_conn_limit</code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileDstAddrArgs.html">PersistenceProfileDstAddrArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileDstAddrState.html">PersistenceProfileDstAddrState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.html">PersistenceProfileSrcAddr</a></h4>
-      <section><p>Configures a source address persistence profile</p>
-<h2 id="reference">Reference</h2>
-<p><code>name</code> - (Required) Name of the virtual address</p>
-<p><code>defaults_from</code> - (Required) Parent cookie persistence profile</p>
-<p><code>match_across_pools</code> (Optional) (enabled or disabled) match across pools with given persistence record</p>
-<p><code>match_across_services</code> (Optional) (enabled or disabled) match across services with given persistence record</p>
-<p><code>match_across_virtuals</code> (Optional) (enabled or disabled) match across virtual servers with given persistence record</p>
-<p><code>mirror</code> (Optional) (enabled or disabled) mirror persistence record</p>
-<p><code>timeout</code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
-<p><code>override_conn_limit</code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
-<p><code>hash_algorithm</code> (Optional) Specify the hash algorithm</p>
-<p><code>mask</code> (Optional) Identify a range of source IP addresses to manage together as a single source address affinity persistent connection when connecting to the pool. Must be a valid IPv4 or IPv6 mask.</p>
-<p><code>map_proxies</code> (Optional) (enabled or disabled) Directs all to the same single pool member</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddrArgs.html">PersistenceProfileSrcAddrArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddrState.html">PersistenceProfileSrcAddrState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileSsl.html">PersistenceProfileSsl</a></h4>
-      <section><p>Configures an SSL persistence profile</p>
-<h2 id="reference">Reference</h2>
-<p><code>name</code> - (Required) Name of the virtual address</p>
-<p><code>defaults_from</code> - (Required) Parent cookie persistence profile</p>
-<p><code>match_across_pools</code> (Optional) (enabled or disabled) match across pools with given persistence record</p>
-<p><code>match_across_services</code> (Optional) (enabled or disabled) match across services with given persistence record</p>
-<p><code>match_across_virtuals</code> (Optional) (enabled or disabled) match across virtual servers with given persistence record</p>
-<p><code>mirror</code> (Optional) (enabled or disabled) mirror persistence record</p>
-<p><code>timeout</code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
-<p><code>override_conn_limit</code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileSslArgs.html">PersistenceProfileSslArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileSslState.html">PersistenceProfileSslState</a></h4>
@@ -193,16 +167,11 @@ If this is configured specify <code>ignore_changes</code> under the <code>lifecy
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PolicyState.html">PolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.Pool.html">Pool</a></h4>
-      <section><p><code>f5bigip.ltm.Pool</code> Manages a pool configuration.</p>
-<p>Resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PoolArgs.html">PoolArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PoolAttachment.html">PoolAttachment</a></h4>
-      <section><p><code>f5bigip.ltm.PoolAttachment</code> Manages nodes membership in pools</p>
-<p>Resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<p>Note: node must be the full path to the node followed by the port. For example /Common/my-node:80</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PoolAttachmentArgs.html">PoolAttachmentArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.PoolAttachmentState.html">PoolAttachmentState</a></h4>
@@ -211,6 +180,26 @@ If this is configured specify <code>ignore_changes</code> under the <code>lifecy
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileClientSsl.html">ProfileClientSsl</a></h4>
       <section><p><code>f5bigip.ltm.ProfileClientSsl</code> Manages client SSL profiles on a BIG-IP</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test_ClientSsl = new F5BigIP.Ltm.ProfileClientSsl(&amp;quot;test-ClientSsl&amp;quot;, new F5BigIP.Ltm.ProfileClientSslArgs
+    {
+        Authenticate = &amp;quot;always&amp;quot;,
+        Ciphers = &amp;quot;DEFAULT&amp;quot;,
+        DefaultsFrom = &amp;quot;/Common/clientssl&amp;quot;,
+        Name = &amp;quot;/Common/test-ClientSsl&amp;quot;,
+        Partition = &amp;quot;Common&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileClientSslArgs.html">ProfileClientSslArgs</a></h4>
       <section></section>
@@ -219,6 +208,32 @@ If this is configured specify <code>ignore_changes</code> under the <code>lifecy
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileFastHttp.html">ProfileFastHttp</a></h4>
       <section><p><code>f5bigip.ltm.ProfileFastHttp</code> Configures a custom profile_fasthttp for use by health checks.</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var sjfasthttpprofile = new F5BigIP.Ltm.ProfileFastHttp(&amp;quot;sjfasthttpprofile&amp;quot;, new F5BigIP.Ltm.ProfileFastHttpArgs
+    {
+        ConnpoolMaxreuse = 2,
+        ConnpoolMaxsize = 2048,
+        ConnpoolMinsize = 0,
+        ConnpoolReplenish = &amp;quot;enabled&amp;quot;,
+        ConnpoolStep = 4,
+        ConnpoolidleTimeoutoverride = 0,
+        DefaultsFrom = &amp;quot;/Common/fasthttp&amp;quot;,
+        Forcehttp10response = &amp;quot;disabled&amp;quot;,
+        IdleTimeout = 300,
+        MaxheaderSize = 32768,
+        Name = &amp;quot;sjfasthttpprofile&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileFastHttpArgs.html">ProfileFastHttpArgs</a></h4>
       <section></section>
@@ -227,6 +242,31 @@ If this is configured specify <code>ignore_changes</code> under the <code>lifecy
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileFastL4.html">ProfileFastL4</a></h4>
       <section><p><code>f5bigip.ltm.ProfileFastL4</code> Configures a custom profile_fastl4 for use by health checks.</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var profileFastl4 = new F5BigIP.Ltm.ProfileFastL4(&amp;quot;profileFastl4&amp;quot;, new F5BigIP.Ltm.ProfileFastL4Args
+    {
+        ClientTimeout = 40,
+        DefaultsFrom = &amp;quot;/Common/fastL4&amp;quot;,
+        ExplicitflowMigration = &amp;quot;enabled&amp;quot;,
+        HardwareSyncookie = &amp;quot;enabled&amp;quot;,
+        IdleTimeout = &amp;quot;200&amp;quot;,
+        IptosToclient = &amp;quot;pass-through&amp;quot;,
+        IptosToserver = &amp;quot;pass-through&amp;quot;,
+        KeepaliveInterval = &amp;quot;disabled&amp;quot;,
+        Name = &amp;quot;/Common/sjfastl4profile&amp;quot;,
+        Partition = &amp;quot;Common&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileFastL4Args.html">ProfileFastL4Args</a></h4>
       <section></section>
@@ -235,10 +275,59 @@ If this is configured specify <code>ignore_changes</code> under the <code>lifecy
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileHttp.html">ProfileHttp</a></h4>
       <section><p><code>f5bigip.ltm.ProfileHttp</code> Configures a custom profile_http for use by health checks.</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var sanjose_http = new F5BigIP.Ltm.ProfileHttp(&amp;quot;sanjose-http&amp;quot;, new F5BigIP.Ltm.ProfileHttpArgs
+    {
+        DefaultsFrom = &amp;quot;/Common/http&amp;quot;,
+        Description = &amp;quot;some http&amp;quot;,
+        FallbackHost = &amp;quot;titanic&amp;quot;,
+        FallbackStatusCodes = 
+        {
+            &amp;quot;400&amp;quot;,
+            &amp;quot;500&amp;quot;,
+            &amp;quot;300&amp;quot;,
+        },
+        Name = &amp;quot;/Common/sanjose-http&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileHttp2.html">ProfileHttp2</a></h4>
       <section><p><code>f5bigip.ltm.ProfileHttp2</code> Configures a custom profile_http2 for use by health checks.</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var nyhttp2 = new F5BigIP.Ltm.ProfileHttp2(&amp;quot;nyhttp2&amp;quot;, new F5BigIP.Ltm.ProfileHttp2Args
+    {
+        ActivationModes = 
+        {
+            &amp;quot;alpn&amp;quot;,
+            &amp;quot;npn&amp;quot;,
+        },
+        ConcurrentStreamsPerConnection = 10,
+        ConnectionIdleTimeout = 30,
+        DefaultsFrom = &amp;quot;/Common/http2&amp;quot;,
+        Name = &amp;quot;/Common/NewYork_http2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileHttp2Args.html">ProfileHttp2Args</a></h4>
       <section></section>
@@ -249,6 +338,40 @@ If this is configured specify <code>ignore_changes</code> under the <code>lifecy
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileHttpCompress.html">ProfileHttpCompress</a></h4>
       <section><p><code>f5bigip.ltm.ProfileHttpCompress</code>  Virtual server HTTP compression profile configuration</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var sjhttpcompression = new F5BigIP.Ltm.ProfileHttpCompress(&amp;quot;sjhttpcompression&amp;quot;, new F5BigIP.Ltm.ProfileHttpCompressArgs
+    {
+        ContentTypeExcludes = 
+        {
+            &amp;quot;nicecontentexclude.com&amp;quot;,
+        },
+        ContentTypeIncludes = 
+        {
+            &amp;quot;nicecontent.com&amp;quot;,
+        },
+        DefaultsFrom = &amp;quot;/Common/httpcompression&amp;quot;,
+        Name = &amp;quot;/Common/sjhttpcompression2&amp;quot;,
+        UriExcludes = 
+        {
+            &amp;quot;www.abc.f5.com&amp;quot;,
+            &amp;quot;www.abc2.f5.com&amp;quot;,
+        },
+        UriIncludes = 
+        {
+            &amp;quot;www.xyzbc.cisco.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileHttpCompressArgs.html">ProfileHttpCompressArgs</a></h4>
       <section></section>
@@ -259,6 +382,30 @@ If this is configured specify <code>ignore_changes</code> under the <code>lifecy
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileOneConnect.html">ProfileOneConnect</a></h4>
       <section><p><code>f5bigip.ltm.ProfileOneConnect</code> Configures a custom profile_oneconnect for use by health checks.</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var oneconnect_sanjose = new F5BigIP.Ltm.ProfileOneConnect(&amp;quot;oneconnect-sanjose&amp;quot;, new F5BigIP.Ltm.ProfileOneConnectArgs
+    {
+        DefaultsFrom = &amp;quot;/Common/oneconnect&amp;quot;,
+        IdleTimeoutOverride = &amp;quot;disabled&amp;quot;,
+        MaxAge = 3600,
+        MaxReuse = 1000,
+        MaxSize = 1000,
+        Name = &amp;quot;sanjose&amp;quot;,
+        Partition = &amp;quot;Common&amp;quot;,
+        SharePools = &amp;quot;disabled&amp;quot;,
+        SourceMask = &amp;quot;255.255.255.255&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileOneConnectArgs.html">ProfileOneConnectArgs</a></h4>
       <section></section>
@@ -266,6 +413,26 @@ If this is configured specify <code>ignore_changes</code> under the <code>lifecy
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileServerSsl.html">ProfileServerSsl</a></h4>
       <section><p><code>f5bigip.ltm.ProfileServerSsl</code> Manages server SSL profiles on a BIG-IP</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test_ServerSsl = new F5BigIP.Ltm.ProfileServerSsl(&amp;quot;test-ServerSsl&amp;quot;, new F5BigIP.Ltm.ProfileServerSslArgs
+    {
+        Authenticate = &amp;quot;always&amp;quot;,
+        Ciphers = &amp;quot;DEFAULT&amp;quot;,
+        DefaultsFrom = &amp;quot;/Common/serverssl&amp;quot;,
+        Name = &amp;quot;/Common/test-ServerSsl&amp;quot;,
+        Partition = &amp;quot;Common&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileServerSslArgs.html">ProfileServerSslArgs</a></h4>
       <section></section>
@@ -274,6 +441,29 @@ If this is configured specify <code>ignore_changes</code> under the <code>lifecy
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileTcp.html">ProfileTcp</a></h4>
       <section><p><code>f5bigip.ltm.ProfileTcp</code> Configures a custom profile_tcp for use by health checks.</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var sanjose_tcp_lan_profile = new F5BigIP.Ltm.ProfileTcp(&amp;quot;sanjose-tcp-lan-profile&amp;quot;, new F5BigIP.Ltm.ProfileTcpArgs
+    {
+        CloseWaitTimeout = 5,
+        DeferredAccept = &amp;quot;enabled&amp;quot;,
+        FastOpen = &amp;quot;enabled&amp;quot;,
+        Finwait2timeout = 5,
+        FinwaitTimeout = 300,
+        IdleTimeout = 200,
+        KeepaliveInterval = 1700,
+        Name = &amp;quot;sanjose-tcp-lan-profile&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.ProfileTcpArgs.html">ProfileTcpArgs</a></h4>
       <section></section>
@@ -282,12 +472,66 @@ If this is configured specify <code>ignore_changes</code> under the <code>lifecy
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.Snat.html">Snat</a></h4>
       <section><p><code>f5bigip.ltm.Snat</code> Manages a snat configuration</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test_snat = new F5BigIP.Ltm.Snat(&amp;quot;test-snat&amp;quot;, new F5BigIP.Ltm.SnatArgs
+    {
+        Autolasthop = &amp;quot;default&amp;quot;,
+        FullPath = &amp;quot;/Common/test-snat&amp;quot;,
+        Mirror = &amp;quot;disabled&amp;quot;,
+        Name = &amp;quot;TEST_SNAT_NAME&amp;quot;,
+        Origins = 
+        {
+            new F5BigIP.Ltm.Inputs.SnatOriginArgs
+            {
+                Name = &amp;quot;2.2.2.2&amp;quot;,
+            },
+            new F5BigIP.Ltm.Inputs.SnatOriginArgs
+            {
+                Name = &amp;quot;3.3.3.3&amp;quot;,
+            },
+        },
+        Partition = &amp;quot;Common&amp;quot;,
+        Translation = &amp;quot;/Common/136.1.1.1&amp;quot;,
+        Vlansdisabled = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.SnatArgs.html">SnatArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.SnatPool.html">SnatPool</a></h4>
       <section><p><code>f5bigip.ltm.SnatPool</code> Collections of SNAT translation addresses</p>
 <p>Resource should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource, for example /Common/my-snatpool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var snatpoolSanjose = new F5BigIP.Ltm.SnatPool(&amp;quot;snatpoolSanjose&amp;quot;, new F5BigIP.Ltm.SnatPoolArgs
+    {
+        Members = 
+        {
+            &amp;quot;191.1.1.1&amp;quot;,
+            &amp;quot;194.2.2.2&amp;quot;,
+        },
+        Name = &amp;quot;/Common/snatpool_sanjose&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.SnatPoolArgs.html">SnatPoolArgs</a></h4>
       <section></section>
@@ -298,15 +542,30 @@ If this is configured specify <code>ignore_changes</code> under the <code>lifecy
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.VirtualAddress.html">VirtualAddress</a></h4>
       <section><p><code>f5bigip.ltm.VirtualAddress</code> Configures Virtual Server</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var vsVa = new F5BigIP.Ltm.VirtualAddress(&amp;quot;vsVa&amp;quot;, new F5BigIP.Ltm.VirtualAddressArgs
+    {
+        AdvertizeRoute = true,
+        Name = &amp;quot;/Common/vs_va&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.VirtualAddressArgs.html">VirtualAddressArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.VirtualAddressState.html">VirtualAddressState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.VirtualServer.html">VirtualServer</a></h4>
-      <section><p><code>f5bigip.ltm.VirtualServer</code> Configures Virtual Server</p>
-<p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.VirtualServerArgs.html">VirtualServerArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.F5BigIP.Ltm.VirtualServerState.html">VirtualServerState</a></h4>

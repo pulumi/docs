@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.ServiceBus
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -96,25 +96,165 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.Namespace.html">Namespace</a></h4>
       <section><p>Manages a ServiceBus Namespace.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleNamespace = new Azure.ServiceBus.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.ServiceBus.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;source&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.NamespaceArgs.html">NamespaceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.NamespaceAuthorizationRule.html">NamespaceAuthorizationRule</a></h4>
       <section><p>Manages a ServiceBus Namespace authorization Rule within a ServiceBus.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleNamespace = new Azure.ServiceBus.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.ServiceBus.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;source&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleNamespaceAuthorizationRule = new Azure.ServiceBus.NamespaceAuthorizationRule(&amp;quot;exampleNamespaceAuthorizationRule&amp;quot;, new Azure.ServiceBus.NamespaceAuthorizationRuleArgs
+    {
+        NamespaceName = exampleNamespace.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Listen = true,
+        Send = true,
+        Manage = false,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.NamespaceAuthorizationRuleArgs.html">NamespaceAuthorizationRuleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.NamespaceAuthorizationRuleState.html">NamespaceAuthorizationRuleState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.ServiceBus.NamespaceNetworkRuleSet.html">NamespaceNetworkRuleSet</a></h4>
+      <section><p>Manages a ServiceBus Namespace Network Rule Set Set.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.ServiceBus.NamespaceNetworkRuleSetArgs.html">NamespaceNetworkRuleSetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.ServiceBus.NamespaceNetworkRuleSetState.html">NamespaceNetworkRuleSetState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.NamespaceState.html">NamespaceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.Queue.html">Queue</a></h4>
       <section><p>Manages a ServiceBus Queue.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleNamespace = new Azure.ServiceBus.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.ServiceBus.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;source&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleQueue = new Azure.ServiceBus.Queue(&amp;quot;exampleQueue&amp;quot;, new Azure.ServiceBus.QueueArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+        EnablePartitioning = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.QueueArgs.html">QueueArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.QueueAuthorizationRule.html">QueueAuthorizationRule</a></h4>
       <section><p>Manages an Authorization Rule for a ServiceBus Queue.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleNamespace = new Azure.ServiceBus.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.ServiceBus.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;source&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleQueue = new Azure.ServiceBus.Queue(&amp;quot;exampleQueue&amp;quot;, new Azure.ServiceBus.QueueArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+        EnablePartitioning = true,
+    });
+    var exampleQueueAuthorizationRule = new Azure.ServiceBus.QueueAuthorizationRule(&amp;quot;exampleQueueAuthorizationRule&amp;quot;, new Azure.ServiceBus.QueueAuthorizationRuleArgs
+    {
+        NamespaceName = exampleNamespace.Name,
+        QueueName = exampleQueue.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Listen = true,
+        Send = true,
+        Manage = false,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.QueueAuthorizationRuleArgs.html">QueueAuthorizationRuleArgs</a></h4>
       <section></section>
@@ -124,11 +264,98 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.Subscription.html">Subscription</a></h4>
       <section><p>Manages a ServiceBus Subscription.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleNamespace = new Azure.ServiceBus.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.ServiceBus.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;source&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleTopic = new Azure.ServiceBus.Topic(&amp;quot;exampleTopic&amp;quot;, new Azure.ServiceBus.TopicArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+        EnablePartitioning = true,
+    });
+    var exampleSubscription = new Azure.ServiceBus.Subscription(&amp;quot;exampleSubscription&amp;quot;, new Azure.ServiceBus.SubscriptionArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+        TopicName = exampleTopic.Name,
+        MaxDeliveryCount = 1,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.SubscriptionArgs.html">SubscriptionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.SubscriptionRule.html">SubscriptionRule</a></h4>
       <section><p>Manages a ServiceBus Subscription Rule.</p>
+<h2 id="example-usage-sql-filter">Example Usage (SQL Filter)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleNamespace = new Azure.ServiceBus.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.ServiceBus.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;source&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleTopic = new Azure.ServiceBus.Topic(&amp;quot;exampleTopic&amp;quot;, new Azure.ServiceBus.TopicArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+        EnablePartitioning = true,
+    });
+    var exampleSubscription = new Azure.ServiceBus.Subscription(&amp;quot;exampleSubscription&amp;quot;, new Azure.ServiceBus.SubscriptionArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+        TopicName = exampleTopic.Name,
+        MaxDeliveryCount = 1,
+    });
+    var exampleSubscriptionRule = new Azure.ServiceBus.SubscriptionRule(&amp;quot;exampleSubscriptionRule&amp;quot;, new Azure.ServiceBus.SubscriptionRuleArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+        TopicName = exampleTopic.Name,
+        SubscriptionName = exampleSubscription.Name,
+        FilterType = &amp;quot;SqlFilter&amp;quot;,
+        SqlFilter = &amp;quot;colour = &amp;apos;red&amp;apos;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.SubscriptionRuleArgs.html">SubscriptionRuleArgs</a></h4>
       <section></section>
@@ -139,11 +366,83 @@
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.Topic.html">Topic</a></h4>
       <section><p>Manages a ServiceBus Topic.</p>
 <p><strong>Note</strong> Topics can only be created in Namespaces with an SKU of <code>standard</code> or higher.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleNamespace = new Azure.ServiceBus.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.ServiceBus.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;source&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleTopic = new Azure.ServiceBus.Topic(&amp;quot;exampleTopic&amp;quot;, new Azure.ServiceBus.TopicArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+        EnablePartitioning = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.TopicArgs.html">TopicArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.TopicAuthorizationRule.html">TopicAuthorizationRule</a></h4>
       <section><p>Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleNamespace = new Azure.ServiceBus.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.ServiceBus.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;source&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleTopic = new Azure.ServiceBus.Topic(&amp;quot;exampleTopic&amp;quot;, new Azure.ServiceBus.TopicArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+    });
+    var exampleTopicAuthorizationRule = new Azure.ServiceBus.TopicAuthorizationRule(&amp;quot;exampleTopicAuthorizationRule&amp;quot;, new Azure.ServiceBus.TopicAuthorizationRuleArgs
+    {
+        NamespaceName = exampleNamespace.Name,
+        TopicName = exampleTopic.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Listen = true,
+        Send = false,
+        Manage = false,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ServiceBus.TopicAuthorizationRuleArgs.html">TopicAuthorizationRuleArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.RedShift
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,6 +82,27 @@
 <p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.RedShift.Cluster(&amp;quot;default&amp;quot;, new Aws.RedShift.ClusterArgs
+    {
+        ClusterIdentifier = &amp;quot;tf-redshift-cluster&amp;quot;,
+        ClusterType = &amp;quot;single-node&amp;quot;,
+        DatabaseName = &amp;quot;mydb&amp;quot;,
+        MasterPassword = &amp;quot;Mustbe8characters&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+        NodeType = &amp;quot;dc1.large&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
@@ -89,6 +110,47 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.EventSubscription.html">EventSubscription</a></h4>
       <section><p>Provides a Redshift event subscription resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultCluster = new Aws.RedShift.Cluster(&amp;quot;defaultCluster&amp;quot;, new Aws.RedShift.ClusterArgs
+    {
+        ClusterIdentifier = &amp;quot;default&amp;quot;,
+        DatabaseName = &amp;quot;default&amp;quot;,
+    });
+    var defaultTopic = new Aws.Sns.Topic(&amp;quot;defaultTopic&amp;quot;, new Aws.Sns.TopicArgs
+    {
+    });
+    var defaultEventSubscription = new Aws.RedShift.EventSubscription(&amp;quot;defaultEventSubscription&amp;quot;, new Aws.RedShift.EventSubscriptionArgs
+    {
+        EventCategories = 
+        {
+            &amp;quot;configuration&amp;quot;,
+            &amp;quot;management&amp;quot;,
+            &amp;quot;monitoring&amp;quot;,
+            &amp;quot;security&amp;quot;,
+        },
+        Severity = &amp;quot;INFO&amp;quot;,
+        SnsTopicArn = defaultTopic.Arn,
+        SourceIds = 
+        {
+            defaultCluster.Id,
+        },
+        SourceType = &amp;quot;cluster&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;default&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="attributes">Attributes</h2>
 <p>The following additional atttributes are provided:</p>
 <ul>
@@ -115,6 +177,40 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.ParameterGroup.html">ParameterGroup</a></h4>
       <section><p>Provides a Redshift Cluster parameter group resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bar = new Aws.RedShift.ParameterGroup(&amp;quot;bar&amp;quot;, new Aws.RedShift.ParameterGroupArgs
+    {
+        Family = &amp;quot;redshift-1.0&amp;quot;,
+        Parameters = 
+        {
+            new Aws.RedShift.Inputs.ParameterGroupParameterArgs
+            {
+                Name = &amp;quot;require_ssl&amp;quot;,
+                Value = &amp;quot;true&amp;quot;,
+            },
+            new Aws.RedShift.Inputs.ParameterGroupParameterArgs
+            {
+                Name = &amp;quot;query_group&amp;quot;,
+                Value = &amp;quot;example&amp;quot;,
+            },
+            new Aws.RedShift.Inputs.ParameterGroupParameterArgs
+            {
+                Name = &amp;quot;enable_user_activity_logging&amp;quot;,
+                Value = &amp;quot;true&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.ParameterGroupArgs.html">ParameterGroupArgs</a></h4>
       <section></section>
@@ -122,6 +218,28 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SecurityGroup.html">SecurityGroup</a></h4>
       <section><p>Creates a new Amazon Redshift security group. You use security groups to control access to non-VPC clusters</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.RedShift.SecurityGroup(&amp;quot;default&amp;quot;, new Aws.RedShift.SecurityGroupArgs
+    {
+        Ingress = 
+        {
+            new Aws.RedShift.Inputs.SecurityGroupIngressArgs
+            {
+                Cidr = &amp;quot;10.0.0.0/24&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SecurityGroupArgs.html">SecurityGroupArgs</a></h4>
       <section></section>
@@ -130,17 +248,95 @@
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SnapshotCopyGrant.html">SnapshotCopyGrant</a></h4>
       <section><p>Creates a snapshot copy grant that allows AWS Redshift to encrypt copied snapshots with a customer master key from AWS KMS in a destination region.</p>
 <p>Note that the grant must exist in the destination region, and not in the region of the cluster.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testSnapshotCopyGrant = new Aws.RedShift.SnapshotCopyGrant(&amp;quot;testSnapshotCopyGrant&amp;quot;, new Aws.RedShift.SnapshotCopyGrantArgs
+    {
+        SnapshotCopyGrantName = &amp;quot;my-grant&amp;quot;,
+    });
+    var testCluster = new Aws.RedShift.Cluster(&amp;quot;testCluster&amp;quot;, new Aws.RedShift.ClusterArgs
+    {
+        SnapshotCopy = new Aws.RedShift.Inputs.ClusterSnapshotCopyArgs
+        {
+            DestinationRegion = &amp;quot;us-east-2&amp;quot;,
+            GrantName = testSnapshotCopyGrant.SnapshotCopyGrantName,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SnapshotCopyGrantArgs.html">SnapshotCopyGrantArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SnapshotCopyGrantState.html">SnapshotCopyGrantState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SnapshotSchedule.html">SnapshotSchedule</a></h4>
-      <section></section>
+      <section><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.RedShift.SnapshotSchedule(&amp;quot;default&amp;quot;, new Aws.RedShift.SnapshotScheduleArgs
+    {
+        Definitions = 
+        {
+            &amp;quot;rate(12 hours)&amp;quot;,
+        },
+        Identifier = &amp;quot;tf-redshift-snapshot-schedule&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SnapshotScheduleArgs.html">SnapshotScheduleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SnapshotScheduleAssociation.html">SnapshotScheduleAssociation</a></h4>
-      <section></section>
+      <section><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultCluster = new Aws.RedShift.Cluster(&amp;quot;defaultCluster&amp;quot;, new Aws.RedShift.ClusterArgs
+    {
+        ClusterIdentifier = &amp;quot;tf-redshift-cluster&amp;quot;,
+        ClusterType = &amp;quot;single-node&amp;quot;,
+        DatabaseName = &amp;quot;mydb&amp;quot;,
+        MasterPassword = &amp;quot;Mustbe8characters&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+        NodeType = &amp;quot;dc1.large&amp;quot;,
+    });
+    var defaultSnapshotSchedule = new Aws.RedShift.SnapshotSchedule(&amp;quot;defaultSnapshotSchedule&amp;quot;, new Aws.RedShift.SnapshotScheduleArgs
+    {
+        Definitions = 
+        {
+            &amp;quot;rate(12 hours)&amp;quot;,
+        },
+        Identifier = &amp;quot;tf-redshift-snapshot-schedule&amp;quot;,
+    });
+    var defaultSnapshotScheduleAssociation = new Aws.RedShift.SnapshotScheduleAssociation(&amp;quot;defaultSnapshotScheduleAssociation&amp;quot;, new Aws.RedShift.SnapshotScheduleAssociationArgs
+    {
+        ClusterIdentifier = defaultCluster.Id,
+        ScheduleIdentifier = defaultSnapshotSchedule.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SnapshotScheduleAssociationArgs.html">SnapshotScheduleAssociationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SnapshotScheduleAssociationState.html">SnapshotScheduleAssociationState</a></h4>
@@ -149,6 +345,54 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SubnetGroup.html">SubnetGroup</a></h4>
       <section><p>Creates a new Amazon Redshift subnet group. You must provide a list of one or more subnets in your existing Amazon Virtual Private Cloud (Amazon VPC) when creating Amazon Redshift subnet group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fooVpc = new Aws.Ec2.Vpc(&amp;quot;fooVpc&amp;quot;, new Aws.Ec2.VpcArgs
+    {
+        CidrBlock = &amp;quot;10.1.0.0/16&amp;quot;,
+    });
+    var fooSubnet = new Aws.Ec2.Subnet(&amp;quot;fooSubnet&amp;quot;, new Aws.Ec2.SubnetArgs
+    {
+        AvailabilityZone = &amp;quot;us-west-2a&amp;quot;,
+        CidrBlock = &amp;quot;10.1.1.0/24&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;tf-dbsubnet-test-1&amp;quot; },
+        },
+        VpcId = fooVpc.Id,
+    });
+    var bar = new Aws.Ec2.Subnet(&amp;quot;bar&amp;quot;, new Aws.Ec2.SubnetArgs
+    {
+        AvailabilityZone = &amp;quot;us-west-2b&amp;quot;,
+        CidrBlock = &amp;quot;10.1.2.0/24&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;tf-dbsubnet-test-2&amp;quot; },
+        },
+        VpcId = fooVpc.Id,
+    });
+    var fooSubnetGroup = new Aws.RedShift.SubnetGroup(&amp;quot;fooSubnetGroup&amp;quot;, new Aws.RedShift.SubnetGroupArgs
+    {
+        SubnetIds = 
+        {
+            fooSubnet.Id,
+            bar.Id,
+        },
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.RedShift.SubnetGroupArgs.html">SubnetGroupArgs</a></h4>
       <section></section>

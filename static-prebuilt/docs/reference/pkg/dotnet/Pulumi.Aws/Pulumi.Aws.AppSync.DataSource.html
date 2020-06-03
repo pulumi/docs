@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DataSource
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,127 @@
   <h1 id="Pulumi_Aws_AppSync_DataSource" data-uid="Pulumi.Aws.AppSync.DataSource" class="text-break">Class DataSource
   </h1>
   <div class="markdown level0 summary"><p>Provides an AppSync DataSource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleTable = new Aws.DynamoDB.Table(&amp;quot;exampleTable&amp;quot;, new Aws.DynamoDB.TableArgs
+    {
+        Attributes = 
+        {
+            new Aws.DynamoDB.Inputs.TableAttributeArgs
+            {
+                Name = &amp;quot;UserId&amp;quot;,
+                Type = &amp;quot;S&amp;quot;,
+            },
+        },
+        HashKey = &amp;quot;UserId&amp;quot;,
+        ReadCapacity = 1,
+        WriteCapacity = 1,
+    });
+    var exampleRole = new Aws.Iam.Role(&amp;quot;exampleRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;appsync.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var exampleRolePolicy = new Aws.Iam.RolePolicy(&amp;quot;exampleRolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = exampleTable.Arn.Apply(arn =&gt; @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;dynamodb:*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;{arn}&amp;quot;&amp;quot;
+  ]
+}}
+]
+}}
+
+&amp;quot;),
+        Role = exampleRole.Id,
+    });
+    var exampleGraphQLApi = new Aws.AppSync.GraphQLApi(&amp;quot;exampleGraphQLApi&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;API_KEY&amp;quot;,
+    });
+    var exampleDataSource = new Aws.AppSync.DataSource(&amp;quot;exampleDataSource&amp;quot;, new Aws.AppSync.DataSourceArgs
+    {
+        ApiId = exampleGraphQLApi.Id,
+        DynamodbConfig = new Aws.AppSync.Inputs.DataSourceDynamodbConfigArgs
+        {
+            TableName = exampleTable.Name,
+        },
+        ServiceRoleArn = exampleRole.Arn,
+        Type = &amp;quot;AMAZON_DYNAMODB&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DataSource</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">DataSource</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.AppSync.html">Pulumi.Aws.AppSync</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +203,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource__ctor_" data-uid="Pulumi.Aws.AppSync.DataSource.#ctor*"></a>
-  <h4 id="Pulumi_Aws_AppSync_DataSource__ctor_System_String_Pulumi_Aws_AppSync_DataSourceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.AppSync.DataSource.#ctor(System.String,Pulumi.Aws.AppSync.DataSourceArgs,System.Nullable{CustomResourceOptions})">DataSource(String, DataSourceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_AppSync_DataSource__ctor_System_String_Pulumi_Aws_AppSync_DataSourceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.AppSync.DataSource.#ctor(System.String,Pulumi.Aws.AppSync.DataSourceArgs,Pulumi.CustomResourceOptions)">DataSource(String, DataSourceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a DataSource resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DataSource(string name, DataSourceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public DataSource(string name, DataSourceArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +237,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +247,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource_ApiId_" data-uid="Pulumi.Aws.AppSync.DataSource.ApiId*"></a>
   <h4 id="Pulumi_Aws_AppSync_DataSource_ApiId" data-uid="Pulumi.Aws.AppSync.DataSource.ApiId">ApiId</h4>
@@ -153,13 +268,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource_Arn_" data-uid="Pulumi.Aws.AppSync.DataSource.Arn*"></a>
   <h4 id="Pulumi_Aws_AppSync_DataSource_Arn" data-uid="Pulumi.Aws.AppSync.DataSource.Arn">Arn</h4>
@@ -180,13 +295,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource_Description_" data-uid="Pulumi.Aws.AppSync.DataSource.Description*"></a>
   <h4 id="Pulumi_Aws_AppSync_DataSource_Description" data-uid="Pulumi.Aws.AppSync.DataSource.Description">Description</h4>
@@ -195,7 +310,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +322,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource_DynamodbConfig_" data-uid="Pulumi.Aws.AppSync.DataSource.DynamodbConfig*"></a>
   <h4 id="Pulumi_Aws_AppSync_DataSource_DynamodbConfig" data-uid="Pulumi.Aws.AppSync.DataSource.DynamodbConfig">DynamodbConfig</h4>
@@ -234,13 +349,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.DataSourceDynamodbConfig.html">DataSourceDynamodbConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.DataSourceDynamodbConfig.html">DataSourceDynamodbConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource_ElasticsearchConfig_" data-uid="Pulumi.Aws.AppSync.DataSource.ElasticsearchConfig*"></a>
   <h4 id="Pulumi_Aws_AppSync_DataSource_ElasticsearchConfig" data-uid="Pulumi.Aws.AppSync.DataSource.ElasticsearchConfig">ElasticsearchConfig</h4>
@@ -261,13 +376,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.DataSourceElasticsearchConfig.html">DataSourceElasticsearchConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.DataSourceElasticsearchConfig.html">DataSourceElasticsearchConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource_HttpConfig_" data-uid="Pulumi.Aws.AppSync.DataSource.HttpConfig*"></a>
   <h4 id="Pulumi_Aws_AppSync_DataSource_HttpConfig" data-uid="Pulumi.Aws.AppSync.DataSource.HttpConfig">HttpConfig</h4>
@@ -288,13 +403,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.DataSourceHttpConfig.html">DataSourceHttpConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.DataSourceHttpConfig.html">DataSourceHttpConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource_LambdaConfig_" data-uid="Pulumi.Aws.AppSync.DataSource.LambdaConfig*"></a>
   <h4 id="Pulumi_Aws_AppSync_DataSource_LambdaConfig" data-uid="Pulumi.Aws.AppSync.DataSource.LambdaConfig">LambdaConfig</h4>
@@ -315,13 +430,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.DataSourceLambdaConfig.html">DataSourceLambdaConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AppSync.Outputs.DataSourceLambdaConfig.html">DataSourceLambdaConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource_Name_" data-uid="Pulumi.Aws.AppSync.DataSource.Name*"></a>
   <h4 id="Pulumi_Aws_AppSync_DataSource_Name" data-uid="Pulumi.Aws.AppSync.DataSource.Name">Name</h4>
@@ -342,13 +457,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource_ServiceRoleArn_" data-uid="Pulumi.Aws.AppSync.DataSource.ServiceRoleArn*"></a>
   <h4 id="Pulumi_Aws_AppSync_DataSource_ServiceRoleArn" data-uid="Pulumi.Aws.AppSync.DataSource.ServiceRoleArn">ServiceRoleArn</h4>
@@ -357,7 +472,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ServiceRoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServiceRoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,13 +484,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource_Type_" data-uid="Pulumi.Aws.AppSync.DataSource.Type*"></a>
   <h4 id="Pulumi_Aws_AppSync_DataSource_Type" data-uid="Pulumi.Aws.AppSync.DataSource.Type">Type</h4>
@@ -396,7 +511,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -404,17 +519,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L197">View Source</a>
   </span>
   <a id="Pulumi_Aws_AppSync_DataSource_Get_" data-uid="Pulumi.Aws.AppSync.DataSource.Get*"></a>
-  <h4 id="Pulumi_Aws_AppSync_DataSource_Get_System_String_Input_System_String__Pulumi_Aws_AppSync_DataSourceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.AppSync.DataSource.Get(System.String,Input{System.String},Pulumi.Aws.AppSync.DataSourceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DataSourceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_AppSync_DataSource_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_AppSync_DataSourceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.AppSync.DataSource.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.AppSync.DataSourceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DataSourceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing DataSource resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DataSource Get(string name, Input&lt;string&gt; id, DataSourceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static DataSource Get(string name, Input&lt;string&gt; id, DataSourceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -433,7 +548,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -445,7 +560,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -474,7 +589,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/DataSource.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/AppSync/DataSource.cs/#L97" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

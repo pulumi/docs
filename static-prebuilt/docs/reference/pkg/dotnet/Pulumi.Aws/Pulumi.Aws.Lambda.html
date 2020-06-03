@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Lambda
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,8 +78,33 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.Alias.html">Alias</a></h4>
       <section><p>Creates a Lambda function alias. Creates an alias that points to the specified Lambda function version.</p>
-<p>For information about Lambda and how to use it, see [What is AWS Lambda?][1]
-For information about function aliases, see [CreateAlias][2] and [AliasRoutingConfiguration][3] in the API docs.</p>
+<p>For information about Lambda and how to use it, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda?</a>
+For information about function aliases, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/API_CreateAlias.html">CreateAlias</a> and <a href="https://docs.aws.amazon.com/lambda/latest/dg/API_AliasRoutingConfiguration.html">AliasRoutingConfiguration</a> in the API docs.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testAlias = new Aws.Lambda.Alias(&amp;quot;testAlias&amp;quot;, new Aws.Lambda.AliasArgs
+    {
+        Description = &amp;quot;a sample description&amp;quot;,
+        FunctionName = aws_lambda_function.Lambda_function_test.Arn,
+        FunctionVersion = &amp;quot;1&amp;quot;,
+        RoutingConfig = new Aws.Lambda.Inputs.AliasRoutingConfigArgs
+        {
+            AdditionalVersionWeights = 
+            {
+                { &amp;quot;2&amp;quot;, 0.5 },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.AliasArgs.html">AliasArgs</a></h4>
       <section></section>
@@ -87,8 +112,62 @@ For information about function aliases, see [CreateAlias][2] and [AliasRoutingCo
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.EventSourceMapping.html">EventSourceMapping</a></h4>
       <section><p>Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB and SQS.</p>
-<p>For information about Lambda and how to use it, see [What is AWS Lambda?][1].
-For information about event source mappings, see [CreateEventSourceMapping][2] in the API docs.</p>
+<p>For information about Lambda and how to use it, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda?</a>.
+For information about event source mappings, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/API_CreateEventSourceMapping.html">CreateEventSourceMapping</a> in the API docs.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="dynamodb">DynamoDB</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Lambda.EventSourceMapping(&amp;quot;example&amp;quot;, new Aws.Lambda.EventSourceMappingArgs
+    {
+        EventSourceArn = aws_dynamodb_table.Example.Stream_arn,
+        FunctionName = aws_lambda_function.Example.Arn,
+        StartingPosition = &amp;quot;LATEST&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="kinesis">Kinesis</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Lambda.EventSourceMapping(&amp;quot;example&amp;quot;, new Aws.Lambda.EventSourceMappingArgs
+    {
+        EventSourceArn = aws_kinesis_stream.Example.Arn,
+        FunctionName = aws_lambda_function.Example.Arn,
+        StartingPosition = &amp;quot;LATEST&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="sqs">SQS</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Lambda.EventSourceMapping(&amp;quot;example&amp;quot;, new Aws.Lambda.EventSourceMappingArgs
+    {
+        EventSourceArn = aws_sqs_queue.Sqs_queue_test.Arn,
+        FunctionName = aws_lambda_function.Example.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.EventSourceMappingArgs.html">EventSourceMappingArgs</a></h4>
       <section></section>
@@ -96,14 +175,85 @@ For information about event source mappings, see [CreateEventSourceMapping][2] i
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.Function.html">Function</a></h4>
       <section><p>Provides a Lambda Function resource. Lambda allows you to trigger execution of code in response to events in AWS, enabling serverless backend solutions. The Lambda Function itself includes source code and runtime configuration.</p>
-<p>For information about Lambda and how to use it, see [What is AWS Lambda?][1]</p>
+<p>For information about Lambda and how to use it, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda?</a></p>
 <blockquote>
 <p><strong>NOTE:</strong> Due to <a href="https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/">AWS Lambda improved VPC networking changes that began deploying in September 2019</a>, EC2 subnets and security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="lambda-layers">Lambda Layers</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleLayerVersion = new Aws.Lambda.LayerVersion(&amp;quot;exampleLayerVersion&amp;quot;, new Aws.Lambda.LayerVersionArgs
+    {
+    });
+    var exampleFunction = new Aws.Lambda.Function(&amp;quot;exampleFunction&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+        Layers = 
+        {
+            exampleLayerVersion.Arn,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="cloudwatch-logging-and-permissions">CloudWatch Logging and Permissions</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testLambda = new Aws.Lambda.Function(&amp;quot;testLambda&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+    });
+    // This is to optionally manage the CloudWatch Log Group for the Lambda Function.
+    // If skipping this resource configuration, also add &amp;quot;logs:CreateLogGroup&amp;quot; to the IAM policy below.
+    var example = new Aws.CloudWatch.LogGroup(&amp;quot;example&amp;quot;, new Aws.CloudWatch.LogGroupArgs
+    {
+        RetentionInDays = 14,
+    });
+    // See also the following AWS managed policy: AWSLambdaBasicExecutionRole
+    var lambdaLogging = new Aws.Iam.Policy(&amp;quot;lambdaLogging&amp;quot;, new Aws.Iam.PolicyArgs
+    {
+        Description = &amp;quot;IAM policy for logging from a lambda&amp;quot;,
+        Path = &amp;quot;/&amp;quot;,
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;logs:CreateLogGroup&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;logs:CreateLogStream&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;logs:PutLogEvents&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:logs:*:*:*&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var lambdaLogs = new Aws.Iam.RolePolicyAttachment(&amp;quot;lambdaLogs&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = lambdaLogging.Arn,
+        Role = aws_iam_role.Iam_for_lambda.Name,
+    });
+}
+
+}
+</code></pre>
 <h2 id="specifying-the-deployment-package">Specifying the Deployment Package</h2>
 <p>AWS Lambda expects source code to be provided as a deployment package whose structure varies depending on which <code>runtime</code> is in use.
-See [Runtimes][6] for the valid values of <code>runtime</code>. The expected structure of the deployment package can be found in
-[the AWS Lambda documentation for each runtime][8].</p>
+See <a href="https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime">Runtimes</a> for the valid values of <code>runtime</code>. The expected structure of the deployment package can be found in
+<a href="https://docs.aws.amazon.com/lambda/latest/dg/deployment-package-v2.html">the AWS Lambda documentation for each runtime</a>.</p>
 <p>Once you have created your deployment package you can specify it either directly as a local file (using the <code>filename</code> argument) or
 indirectly via Amazon S3 (using the <code>s3_bucket</code>, <code>s3_key</code> and <code>s3_object_version</code> arguments). When providing the deployment
 package via S3 it may be useful to use the <code>aws.s3.BucketObject</code> resource to upload it.</p>
@@ -114,6 +264,79 @@ large files efficiently.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.FunctionEventInvokeConfig.html">FunctionEventInvokeConfig</a></h4>
       <section><p>Manages an asynchronous invocation configuration for a Lambda Function or Alias. More information about asynchronous invocations and the configurable values can be found in the <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html">Lambda Developer Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="error-handling-configuration">Error Handling Configuration</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Lambda.FunctionEventInvokeConfig(&amp;quot;example&amp;quot;, new Aws.Lambda.FunctionEventInvokeConfigArgs
+    {
+        FunctionName = aws_lambda_alias.Example.Function_name,
+        MaximumEventAgeInSeconds = 60,
+        MaximumRetryAttempts = 0,
+    });
+}
+
+}
+</code></pre>
+<h3 id="configuration-for-alias-name">Configuration for Alias Name</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Lambda.FunctionEventInvokeConfig(&amp;quot;example&amp;quot;, new Aws.Lambda.FunctionEventInvokeConfigArgs
+    {
+        FunctionName = aws_lambda_alias.Example.Function_name,
+        Qualifier = aws_lambda_alias.Example.Name,
+    });
+    // ... other configuration ...
+}
+
+}
+</code></pre>
+<h3 id="configuration-for-function-latest-unpublished-version">Configuration for Function Latest Unpublished Version</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Lambda.FunctionEventInvokeConfig(&amp;quot;example&amp;quot;, new Aws.Lambda.FunctionEventInvokeConfigArgs
+    {
+        FunctionName = aws_lambda_function.Example.Function_name,
+        Qualifier = &amp;quot;$LATEST&amp;quot;,
+    });
+    // ... other configuration ...
+}
+
+}
+</code></pre>
+<h3 id="configuration-for-function-published-version">Configuration for Function Published Version</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Lambda.FunctionEventInvokeConfig(&amp;quot;example&amp;quot;, new Aws.Lambda.FunctionEventInvokeConfigArgs
+    {
+        FunctionName = aws_lambda_function.Example.Function_name,
+        Qualifier = aws_lambda_function.Example.Version,
+    });
+    // ... other configuration ...
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.FunctionEventInvokeConfigArgs.html">FunctionEventInvokeConfigArgs</a></h4>
       <section></section>
@@ -147,10 +370,31 @@ large files efficiently.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.LayerVersion.html">LayerVersion</a></h4>
       <section><p>Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions.</p>
-<p>For information about Lambda Layers and how to use them, see [AWS Lambda Layers][1]</p>
+<p>For information about Lambda Layers and how to use them, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda Layers</a></p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var lambdaLayer = new Aws.Lambda.LayerVersion(&amp;quot;lambdaLayer&amp;quot;, new Aws.Lambda.LayerVersionArgs
+    {
+        CompatibleRuntimes = 
+        {
+            &amp;quot;nodejs8.10&amp;quot;,
+        },
+        Code = new FileArchive(&amp;quot;lambda_layer_payload.zip&amp;quot;),
+        LayerName = &amp;quot;lambda_layer_name&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h2 id="specifying-the-deployment-package">Specifying the Deployment Package</h2>
 <p>AWS Lambda Layers expect source code to be provided as a deployment package whose structure varies depending on which <code>compatible_runtimes</code> this layer specifies.
-See [Runtimes][2] for the valid values of <code>compatible_runtimes</code>.</p>
+See <a href="https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes">Runtimes</a> for the valid values of <code>compatible_runtimes</code>.</p>
 <p>Once you have created your deployment package you can specify it either directly as a local file (using the <code>filename</code> argument) or
 indirectly via Amazon S3 (using the <code>s3_bucket</code>, <code>s3_key</code> and <code>s3_object_version</code> arguments). When providing the deployment
 package via S3 it may be useful to use the <code>aws.s3.BucketObject</code> resource to upload it.</p>
@@ -164,6 +408,133 @@ large files efficiently.</p>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.Permission.html">Permission</a></h4>
       <section><p>Creates a Lambda permission to allow external sources invoking the Lambda function
 (e.g. CloudWatch Event Rule, SNS or S3).</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var iamForLambda = new Aws.Iam.Role(&amp;quot;iamForLambda&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;lambda.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var testLambda = new Aws.Lambda.Function(&amp;quot;testLambda&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+        Code = new FileArchive(&amp;quot;lambdatest.zip&amp;quot;),
+        Handler = &amp;quot;exports.handler&amp;quot;,
+        Role = iamForLambda.Arn,
+        Runtime = &amp;quot;nodejs8.10&amp;quot;,
+    });
+    var testAlias = new Aws.Lambda.Alias(&amp;quot;testAlias&amp;quot;, new Aws.Lambda.AliasArgs
+    {
+        Description = &amp;quot;a sample description&amp;quot;,
+        FunctionName = testLambda.Name,
+        FunctionVersion = &amp;quot;$$LATEST&amp;quot;,
+    });
+    var allowCloudwatch = new Aws.Lambda.Permission(&amp;quot;allowCloudwatch&amp;quot;, new Aws.Lambda.PermissionArgs
+    {
+        Action = &amp;quot;lambda:InvokeFunction&amp;quot;,
+        Function = testLambda.Name,
+        Principal = &amp;quot;events.amazonaws.com&amp;quot;,
+        Qualifier = testAlias.Name,
+        SourceArn = &amp;quot;arn:aws:events:eu-west-1:111122223333:rule/RunDaily&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="usage-with-sns">Usage with SNS</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultTopic = new Aws.Sns.Topic(&amp;quot;defaultTopic&amp;quot;, new Aws.Sns.TopicArgs
+    {
+    });
+    var defaultRole = new Aws.Iam.Role(&amp;quot;defaultRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;lambda.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var func = new Aws.Lambda.Function(&amp;quot;func&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+        Code = new FileArchive(&amp;quot;lambdatest.zip&amp;quot;),
+        Handler = &amp;quot;exports.handler&amp;quot;,
+        Role = defaultRole.Arn,
+        Runtime = &amp;quot;python2.7&amp;quot;,
+    });
+    var withSns = new Aws.Lambda.Permission(&amp;quot;withSns&amp;quot;, new Aws.Lambda.PermissionArgs
+    {
+        Action = &amp;quot;lambda:InvokeFunction&amp;quot;,
+        Function = func.Name,
+        Principal = &amp;quot;sns.amazonaws.com&amp;quot;,
+        SourceArn = defaultTopic.Arn,
+    });
+    var lambda = new Aws.Sns.TopicSubscription(&amp;quot;lambda&amp;quot;, new Aws.Sns.TopicSubscriptionArgs
+    {
+        Endpoint = func.Arn,
+        Protocol = &amp;quot;lambda&amp;quot;,
+        Topic = defaultTopic.Arn,
+    });
+}
+
+}
+</code></pre>
+<h2 id="specify-lambda-permissions-for-api-gateway-rest-api">Specify Lambda permissions for API Gateway REST API</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myDemoAPI = new Aws.ApiGateway.RestApi(&amp;quot;myDemoAPI&amp;quot;, new Aws.ApiGateway.RestApiArgs
+    {
+        Description = &amp;quot;This is my API for demonstration purposes&amp;quot;,
+    });
+    var lambdaPermission = new Aws.Lambda.Permission(&amp;quot;lambdaPermission&amp;quot;, new Aws.Lambda.PermissionArgs
+    {
+        Action = &amp;quot;lambda:InvokeFunction&amp;quot;,
+        Function = &amp;quot;MyDemoFunction&amp;quot;,
+        Principal = &amp;quot;apigateway.amazonaws.com&amp;quot;,
+        SourceArn = myDemoAPI.ExecutionArn.Apply(executionArn =&gt; $&amp;quot;{executionArn}/*/*/*&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.PermissionArgs.html">PermissionArgs</a></h4>
       <section></section>
@@ -171,6 +542,43 @@ large files efficiently.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.ProvisionedConcurrencyConfig.html">ProvisionedConcurrencyConfig</a></h4>
       <section><p>Manages a Lambda Provisioned Concurrency Configuration.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="alias-name">Alias Name</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Lambda.ProvisionedConcurrencyConfig(&amp;quot;example&amp;quot;, new Aws.Lambda.ProvisionedConcurrencyConfigArgs
+    {
+        FunctionName = aws_lambda_alias.Example.Function_name,
+        ProvisionedConcurrentExecutions = 1,
+        Qualifier = aws_lambda_alias.Example.Name,
+    });
+}
+
+}
+</code></pre>
+<h3 id="function-version">Function Version</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Lambda.ProvisionedConcurrencyConfig(&amp;quot;example&amp;quot;, new Aws.Lambda.ProvisionedConcurrencyConfigArgs
+    {
+        FunctionName = aws_lambda_function.Example.Function_name,
+        ProvisionedConcurrentExecutions = 1,
+        Qualifier = aws_lambda_function.Example.Version,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.ProvisionedConcurrencyConfigArgs.html">ProvisionedConcurrencyConfigArgs</a></h4>
       <section></section>

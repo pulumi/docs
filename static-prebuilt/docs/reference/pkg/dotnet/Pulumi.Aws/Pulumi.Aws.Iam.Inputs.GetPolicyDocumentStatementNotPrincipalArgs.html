@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetPolicyDocumentStatementNotPrincipalArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GetPolicyDocumentStatementNotPrincipalArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html">InvokeArgs</a></div>
+    <div class="level3"><span class="xref">GetPolicyDocumentStatementNotPrincipalArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs_Empty">InvokeArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Iam.Inputs.html">Pulumi.Aws.Iam.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/Inputs/GetPolicyDocumentStatementNotPrincipalArgs.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/Inputs/GetPolicyDocumentStatementNotPrincipalArgs.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Aws_Iam_Inputs_GetPolicyDocumentStatementNotPrincipalArgs__ctor_" data-uid="Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementNotPrincipalArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Iam_Inputs_GetPolicyDocumentStatementNotPrincipalArgs__ctor" data-uid="Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementNotPrincipalArgs.#ctor">GetPolicyDocumentStatementNotPrincipalArgs()</h4>
@@ -100,12 +129,12 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/Inputs/GetPolicyDocumentStatementNotPrincipalArgs.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/Inputs/GetPolicyDocumentStatementNotPrincipalArgs.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Aws_Iam_Inputs_GetPolicyDocumentStatementNotPrincipalArgs_Identifiers_" data-uid="Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementNotPrincipalArgs.Identifiers*"></a>
   <h4 id="Pulumi_Aws_Iam_Inputs_GetPolicyDocumentStatementNotPrincipalArgs_Identifiers" data-uid="Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementNotPrincipalArgs.Identifiers">Identifiers</h4>
   <div class="markdown level1 summary"><p>List of identifiers for principals. When <code>type</code>
-is &quot;AWS&quot;, these are IAM user or role ARNs.  When <code>type</code> is &quot;Service&quot;, these are AWS Service roles e.g. <code>lambda.amazonaws.com</code>.</p>
+is &quot;AWS&quot;, these are IAM user or role ARNs.  When <code>type</code> is &quot;Service&quot;, these are AWS Service roles e.g. <code>lambda.amazonaws.com</code>. When <code>type</code> is &quot;Federated&quot;, these are web identity users or SAML provider ARNs.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -122,17 +151,17 @@ is &quot;AWS&quot;, these are IAM user or role ARNs.  When <code>type</code> is 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/Inputs/GetPolicyDocumentStatementNotPrincipalArgs.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/Inputs/GetPolicyDocumentStatementNotPrincipalArgs.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Aws_Iam_Inputs_GetPolicyDocumentStatementNotPrincipalArgs_Type_" data-uid="Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementNotPrincipalArgs.Type*"></a>
   <h4 id="Pulumi_Aws_Iam_Inputs_GetPolicyDocumentStatementNotPrincipalArgs_Type" data-uid="Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementNotPrincipalArgs.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The type of principal. For AWS ARNs this is &quot;AWS&quot;.  For AWS services (e.g. Lambda), this is &quot;Service&quot;.</p>
+  <div class="markdown level1 summary"><p>The type of principal. For AWS ARNs this is &quot;AWS&quot;.  For AWS services (e.g. Lambda), this is &quot;Service&quot;. For Federated access the type is &quot;Federated&quot;.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -161,7 +190,7 @@ is &quot;AWS&quot;, these are IAM user or role ARNs.  When <code>type</code> is 
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/Inputs/GetPolicyDocumentStatementNotPrincipalArgs.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/Inputs/GetPolicyDocumentStatementNotPrincipalArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetOrganization
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,27 +78,141 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetOrganization</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Organizations.html">Pulumi.Aws.Organizations</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Organizations_GetOrganization_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetOrganization : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetOrganization</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Organizations/GetOrganization.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_GetOrganization_InvokeAsync_" data-uid="Pulumi.Aws.Organizations.GetOrganization.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_Organizations_GetOrganization_InvokeAsync_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.Organizations.GetOrganization.InvokeAsync(System.Nullable{InvokeOptions})">InvokeAsync(Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Organizations_GetOrganization_InvokeAsync_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.Organizations.GetOrganization.InvokeAsync(Pulumi.InvokeOptions)">InvokeAsync(InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Get information about the organization that the user's account belongs to</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<h3 id="list-all-account-ids-for-the-organization">List all account IDs for the organization</h3>
+<pre><code class="lang-csharp">using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = Output.Create(Aws.Organizations.GetOrganization.InvokeAsync());
+    this.AccountIds = example.Apply(example =&gt; example.Accounts.Select(__item =&gt; __item.Id).ToList());
+}
+
+[Output(&amp;quot;accountIds&amp;quot;)]
+public Output&amp;lt;string&gt; AccountIds { get; set; }
+}
+</code></pre>
+<p>{{% /example %}}
+{{% example %}}</p>
+<h3 id="sns-topic-that-can-be-interacted-by-the-organization-only">SNS topic that can be interacted by the organization only</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = Output.Create(Aws.Organizations.GetOrganization.InvokeAsync());
+    var snsTopic = new Aws.Sns.Topic(&amp;quot;snsTopic&amp;quot;, new Aws.Sns.TopicArgs
+    {
+    });
+    var snsTopicPolicyPolicyDocument = Output.Tuple(example, snsTopic.Arn).Apply(values =&gt;
+    {
+        var example = values.Item1;
+        var arn = values.Item2;
+        return Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        &amp;quot;SNS:Subscribe&amp;quot;,
+                        &amp;quot;SNS:Publish&amp;quot;,
+                    },
+                    Condition = 
+                    {
+
+                        {
+                            { &amp;quot;test&amp;quot;, &amp;quot;StringEquals&amp;quot; },
+                            { &amp;quot;values&amp;quot;, 
+                            {
+                                example.Id,
+                            } },
+                            { &amp;quot;variable&amp;quot;, &amp;quot;aws:PrincipalOrgID&amp;quot; },
+                        },
+                    },
+                    Effect = &amp;quot;Allow&amp;quot;,
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Identifiers = 
+                            {
+                                &amp;quot;*&amp;quot;,
+                            },
+                            Type = &amp;quot;AWS&amp;quot;,
+                        },
+                    },
+                    Resources = 
+                    {
+                        arn,
+                    },
+                },
+            },
+        });
+    });
+    var snsTopicPolicyTopicPolicy = new Aws.Sns.TopicPolicy(&amp;quot;snsTopicPolicyTopicPolicy&amp;quot;, new Aws.Sns.TopicPolicyArgs
+    {
+        Arn = snsTopic.Arn,
+        Policy = snsTopicPolicyPolicyDocument.Apply(snsTopicPolicyPolicyDocument =&gt; snsTopicPolicyPolicyDocument.Json),
+    });
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetOrganizationResult&gt; InvokeAsync(InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetOrganizationResult&gt; InvokeAsync(InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -111,7 +225,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -127,7 +241,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.Organizations.GetOrganizationResult.html">GetOrganizationResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.Organizations.GetOrganizationResult.html">GetOrganizationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -139,7 +253,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Organizations/GetOrganization.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

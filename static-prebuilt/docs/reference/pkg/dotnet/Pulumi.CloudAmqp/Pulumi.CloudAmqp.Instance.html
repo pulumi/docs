@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Instance
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,45 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Instance</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Instance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.CloudAmqp.html">Pulumi.CloudAmqp</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.CloudAmqp.dll</h6>
@@ -87,16 +125,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance__ctor_" data-uid="Pulumi.CloudAmqp.Instance.#ctor*"></a>
-  <h4 id="Pulumi_CloudAmqp_Instance__ctor_System_String_Pulumi_CloudAmqp_InstanceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.CloudAmqp.Instance.#ctor(System.String,Pulumi.CloudAmqp.InstanceArgs,System.Nullable{CustomResourceOptions})">Instance(String, InstanceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_CloudAmqp_Instance__ctor_System_String_Pulumi_CloudAmqp_InstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.CloudAmqp.Instance.#ctor(System.String,Pulumi.CloudAmqp.InstanceArgs,Pulumi.CustomResourceOptions)">Instance(String, InstanceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Instance resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +159,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -131,7 +169,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_Apikey_" data-uid="Pulumi.CloudAmqp.Instance.Apikey*"></a>
   <h4 id="Pulumi_CloudAmqp_Instance_Apikey" data-uid="Pulumi.CloudAmqp.Instance.Apikey">Apikey</h4>
@@ -152,13 +190,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_Host_" data-uid="Pulumi.CloudAmqp.Instance.Host*"></a>
   <h4 id="Pulumi_CloudAmqp_Instance_Host" data-uid="Pulumi.CloudAmqp.Instance.Host">Host</h4>
@@ -179,13 +217,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_Name_" data-uid="Pulumi.CloudAmqp.Instance.Name*"></a>
   <h4 id="Pulumi_CloudAmqp_Instance_Name" data-uid="Pulumi.CloudAmqp.Instance.Name">Name</h4>
@@ -206,13 +244,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_Nodes_" data-uid="Pulumi.CloudAmqp.Instance.Nodes*"></a>
   <h4 id="Pulumi_CloudAmqp_Instance_Nodes" data-uid="Pulumi.CloudAmqp.Instance.Nodes">Nodes</h4>
@@ -233,13 +271,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_Plan_" data-uid="Pulumi.CloudAmqp.Instance.Plan*"></a>
   <h4 id="Pulumi_CloudAmqp_Instance_Plan" data-uid="Pulumi.CloudAmqp.Instance.Plan">Plan</h4>
@@ -260,13 +298,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_CloudAmqp_Instance_Ready_" data-uid="Pulumi.CloudAmqp.Instance.Ready*"></a>
+  <h4 id="Pulumi_CloudAmqp_Instance_Ready" data-uid="Pulumi.CloudAmqp.Instance.Ready">Ready</h4>
+  <div class="markdown level1 summary"><p>Flag describing if the resource is ready</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Ready { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_Region_" data-uid="Pulumi.CloudAmqp.Instance.Region*"></a>
   <h4 id="Pulumi_CloudAmqp_Instance_Region" data-uid="Pulumi.CloudAmqp.Instance.Region">Region</h4>
@@ -287,13 +352,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_RmqVersion_" data-uid="Pulumi.CloudAmqp.Instance.RmqVersion*"></a>
   <h4 id="Pulumi_CloudAmqp_Instance_RmqVersion" data-uid="Pulumi.CloudAmqp.Instance.RmqVersion">RmqVersion</h4>
@@ -302,7 +367,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RmqVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RmqVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -314,13 +379,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_Tags_" data-uid="Pulumi.CloudAmqp.Instance.Tags*"></a>
   <h4 id="Pulumi_CloudAmqp_Instance_Tags" data-uid="Pulumi.CloudAmqp.Instance.Tags">Tags</h4>
@@ -341,13 +406,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_Url_" data-uid="Pulumi.CloudAmqp.Instance.Url*"></a>
   <h4 id="Pulumi_CloudAmqp_Instance_Url" data-uid="Pulumi.CloudAmqp.Instance.Url">Url</h4>
@@ -368,13 +433,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_Vhost_" data-uid="Pulumi.CloudAmqp.Instance.Vhost*"></a>
   <h4 id="Pulumi_CloudAmqp_Instance_Vhost" data-uid="Pulumi.CloudAmqp.Instance.Vhost">Vhost</h4>
@@ -395,13 +460,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_VpcSubnet_" data-uid="Pulumi.CloudAmqp.Instance.VpcSubnet*"></a>
   <h4 id="Pulumi_CloudAmqp_Instance_VpcSubnet" data-uid="Pulumi.CloudAmqp.Instance.VpcSubnet">VpcSubnet</h4>
@@ -410,7 +475,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VpcSubnet { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VpcSubnet { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -422,7 +487,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -430,17 +495,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_CloudAmqp_Instance_Get_" data-uid="Pulumi.CloudAmqp.Instance.Get*"></a>
-  <h4 id="Pulumi_CloudAmqp_Instance_Get_System_String_Input_System_String__Pulumi_CloudAmqp_InstanceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.CloudAmqp.Instance.Get(System.String,Input{System.String},Pulumi.CloudAmqp.InstanceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, InstanceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_CloudAmqp_Instance_Get_System_String_Pulumi_Input_System_String__Pulumi_CloudAmqp_InstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.CloudAmqp.Instance.Get(System.String,Pulumi.Input{System.String},Pulumi.CloudAmqp.InstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, InstanceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Instance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -459,7 +524,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -471,7 +536,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -500,7 +565,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/17f7c8d8bb7e95449ee6650362d5720ca9e7f62f/sdk/dotnet/Instance.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/master/sdk/dotnet/Instance.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

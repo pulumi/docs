@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class InstanceBootDisk
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">InstanceBootDisk</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_InstanceBootDisk_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class InstanceBootDisk : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class InstanceBootDisk</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L20">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceBootDisk_AutoDelete" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceBootDisk.AutoDelete">AutoDelete</h4>
   <div class="markdown level1 summary"><p>Whether the disk will be auto-deleted when the instance
@@ -114,7 +138,7 @@ is deleted. Defaults to true.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L25">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceBootDisk_DeviceName" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceBootDisk.DeviceName">DeviceName</h4>
   <div class="markdown level1 summary"><p>Name with which the attached disk will be accessible
@@ -123,7 +147,7 @@ under <code>/dev/disk/by-id/google-*</code></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DeviceName</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DeviceName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,13 +159,13 @@ under <code>/dev/disk/by-id/google-*</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L32">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceBootDisk_DiskEncryptionKeyRaw" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceBootDisk.DiskEncryptionKeyRaw">DiskEncryptionKeyRaw</h4>
   <div class="markdown level1 summary"><p>A 256-bit [customer-supplied encryption key]
@@ -152,7 +176,7 @@ to encrypt this disk. Only one of <code>kms_key_self_link</code> and <code>disk_
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DiskEncryptionKeyRaw</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DiskEncryptionKeyRaw</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,20 +188,20 @@ to encrypt this disk. Only one of <code>kms_key_self_link</code> and <code>disk_
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L33">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceBootDisk_DiskEncryptionKeySha256" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceBootDisk.DiskEncryptionKeySha256">DiskEncryptionKeySha256</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DiskEncryptionKeySha256</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DiskEncryptionKeySha256</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,13 +213,13 @@ to encrypt this disk. Only one of <code>kms_key_self_link</code> and <code>disk_
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceBootDisk_InitializeParams" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceBootDisk.InitializeParams">InitializeParams</h4>
   <div class="markdown level1 summary"><p>Parameters for a new disk that will be created
@@ -223,7 +247,7 @@ Structure is documented below.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L45">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceBootDisk_KmsKeySelfLink" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceBootDisk.KmsKeySelfLink">KmsKeySelfLink</h4>
   <div class="markdown level1 summary"><p>The self_link of the encryption key that is
@@ -233,7 +257,7 @@ and <code>disk_encryption_key_raw</code> may be set.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? KmsKeySelfLink</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string KmsKeySelfLink</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,13 +269,13 @@ and <code>disk_encryption_key_raw</code> may be set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L52">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceBootDisk_Mode" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceBootDisk.Mode">Mode</h4>
   <div class="markdown level1 summary"><p>Either &quot;READ_ONLY&quot; or &quot;READ_WRITE&quot;, defaults to &quot;READ_WRITE&quot;
@@ -262,7 +286,7 @@ attach it to one or more instances in read-only mode.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Mode</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Mode</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -274,13 +298,13 @@ attach it to one or more instances in read-only mode.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L56">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceBootDisk_Source" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceBootDisk.Source">Source</h4>
   <div class="markdown level1 summary"><p>The name or self_link of the disk to attach to this instance.</p>
@@ -288,7 +312,7 @@ attach it to one or more instances in read-only mode.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Source</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Source</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -300,7 +324,7 @@ attach it to one or more instances in read-only mode.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -312,7 +336,7 @@ attach it to one or more instances in read-only mode.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/InstanceBootDisk.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

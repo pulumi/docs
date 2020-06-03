@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Random
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -95,6 +95,35 @@ type-4 UUID.</p>
 the <code>create_before_destroy</code> lifecycle flag set to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var serverRandomId = new Random.RandomId(&amp;quot;serverRandomId&amp;quot;, new Random.RandomIdArgs
+    {
+        ByteLength = 8,
+        Keepers = 
+        {
+            { &amp;quot;ami_id&amp;quot;, @var.Ami_id },
+        },
+    });
+    var serverInstance = new Aws.Ec2.Instance(&amp;quot;serverInstance&amp;quot;, new Aws.Ec2.InstanceArgs
+    {
+        Ami = serverRandomId.Keepers.Apply(keepers =&gt; keepers.AmiId),
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, serverRandomId.Hex.Apply(hex =&gt; $&amp;quot;web-server {hex}&amp;quot;) },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Random.RandomIdArgs.html">RandomIdArgs</a></h4>
       <section></section>
@@ -106,6 +135,41 @@ exist concurrently.</p>
 the <code>create_before_destroy</code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var priority = new Random.RandomInteger(&amp;quot;priority&amp;quot;, new Random.RandomIntegerArgs
+    {
+        Keepers = 
+        {
+            { &amp;quot;listener_arn&amp;quot;, @var.Listener_arn },
+        },
+        Max = 50000,
+        Min = 1,
+    });
+    var main = new Aws.Alb.ListenerRule(&amp;quot;main&amp;quot;, new Aws.Alb.ListenerRuleArgs
+    {
+        Actions = 
+        {
+            new Aws.Alb.Inputs.ListenerRuleActionArgs
+            {
+                TargetGroupArn = @var.Target_group_arn,
+                Type = &amp;quot;forward&amp;quot;,
+            },
+        },
+        ListenerArn = @var.Listener_arn,
+        Priority = priority.Result,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Random.RandomIntegerArgs.html">RandomIntegerArgs</a></h4>
       <section></section>
@@ -123,6 +187,33 @@ the raw state as plain-text. <a href="https://www.terraform.io/docs/state/sensit
 state</a>.</p>
 </blockquote>
 <p>This resource <em>does</em> use a cryptographic random number generator.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var password = new Random.RandomPassword(&amp;quot;password&amp;quot;, new Random.RandomPasswordArgs
+    {
+        Length = 16,
+        Special = true,
+        OverrideSpecial = &amp;quot;_%@&amp;quot;,
+    });
+    var example = new Aws.Rds.Instance(&amp;quot;example&amp;quot;, new Aws.Rds.InstanceArgs
+    {
+        InstanceClass = &amp;quot;db.t3.micro&amp;quot;,
+        AllocatedStorage = 64,
+        Engine = &amp;quot;mysql&amp;quot;,
+        Username = &amp;quot;someone&amp;quot;,
+        Password = random_string.Password.Result,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Random.RandomPasswordArgs.html">RandomPasswordArgs</a></h4>
       <section></section>
@@ -135,6 +226,34 @@ used as unique identifiers for other resources.</p>
 the <code>create_before_destroy</code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var serverRandomPet = new Random.RandomPet(&amp;quot;serverRandomPet&amp;quot;, new Random.RandomPetArgs
+    {
+        Keepers = 
+        {
+            { &amp;quot;ami_id&amp;quot;, @var.Ami_id },
+        },
+    });
+    var serverInstance = new Aws.Ec2.Instance(&amp;quot;serverInstance&amp;quot;, new Aws.Ec2.InstanceArgs
+    {
+        Ami = serverRandomPet.Keepers.Apply(keepers =&gt; keepers.AmiId),
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, serverRandomPet.Id.Apply(id =&gt; $&amp;quot;web-server-{id}&amp;quot;) },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Random.RandomPetArgs.html">RandomPetArgs</a></h4>
       <section></section>
@@ -143,6 +262,34 @@ exist concurrently.</p>
       <h4><a class="xref" href="Pulumi.Random.RandomShuffle.html">RandomShuffle</a></h4>
       <section><p>The resource <code>random..RandomShuffle</code> generates a random permutation of a list
 of strings given as an argument.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var az = new Random.RandomShuffle(&amp;quot;az&amp;quot;, new Random.RandomShuffleArgs
+    {
+        Inputs = 
+        {
+            &amp;quot;us-west-1a&amp;quot;,
+            &amp;quot;us-west-1c&amp;quot;,
+            &amp;quot;us-west-1d&amp;quot;,
+            &amp;quot;us-west-1e&amp;quot;,
+        },
+        ResultCount = 2,
+    });
+    var example = new Aws.Elb.LoadBalancer(&amp;quot;example&amp;quot;, new Aws.Elb.LoadBalancerArgs
+    {
+        AvailabilityZones = az.Results,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Random.RandomShuffleArgs.html">RandomShuffleArgs</a></h4>
       <section></section>
@@ -156,6 +303,24 @@ characters and optionally special characters.</p>
 used it in a password. For backwards compatibility it will
 continue to exist. For unique ids please use random_id, for sensitive
 random values please use random_password.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var random = new Random.RandomString(&amp;quot;random&amp;quot;, new Random.RandomStringArgs
+    {
+        Length = 16,
+        OverrideSpecial = &amp;quot;/@£$$&amp;quot;,
+        Special = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Random.RandomStringArgs.html">RandomStringArgs</a></h4>
       <section></section>
@@ -166,6 +331,26 @@ random values please use random_password.</p>
 used as unique identifiers for other resources.</p>
 <p>This resource uses the <code>hashicorp/go-uuid</code> to generate a UUID-formatted string
 for use with services needed a unique string identifier.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testRandomUuid = new Random.RandomUuid(&amp;quot;testRandomUuid&amp;quot;, new Random.RandomUuidArgs
+    {
+    });
+    var testResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;testResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;Central US&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Random.RandomUuidArgs.html">RandomUuidArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AnalyticsApplication
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,13 +73,106 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides a Kinesis Analytics Application resource. Kinesis Analytics is a managed service that
 allows processing and analyzing streaming data using standard SQL.</p>
-<p>For more details, see the [Amazon Kinesis Analytics Documentation][1].</p>
+<p>For more details, see the <a href="https://docs.aws.amazon.com/kinesisanalytics/latest/dev/what-is.html">Amazon Kinesis Analytics Documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testStream = new Aws.Kinesis.Stream(&amp;quot;testStream&amp;quot;, new Aws.Kinesis.StreamArgs
+    {
+        ShardCount = 1,
+    });
+    var testApplication = new Aws.Kinesis.AnalyticsApplication(&amp;quot;testApplication&amp;quot;, new Aws.Kinesis.AnalyticsApplicationArgs
+    {
+        Inputs = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsArgs
+        {
+            KinesisStream = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsKinesisStreamArgs
+            {
+                ResourceArn = testStream.Arn,
+                RoleArn = aws_iam_role.Test.Arn,
+            },
+            NamePrefix = &amp;quot;test_prefix&amp;quot;,
+            Parallelism = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsParallelismArgs
+            {
+                Count = 1,
+            },
+            Schema = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaArgs
+            {
+                RecordColumns = 
+                {
+                    new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordColumnArgs
+                    {
+                        Mapping = &amp;quot;$$.test&amp;quot;,
+                        Name = &amp;quot;test&amp;quot;,
+                        SqlType = &amp;quot;VARCHAR(8)&amp;quot;,
+                    },
+                },
+                RecordEncoding = &amp;quot;UTF-8&amp;quot;,
+                RecordFormat = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatArgs
+                {
+                    MappingParameters = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs
+                    {
+                        Json = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs
+                        {
+                            RecordRowPath = &amp;quot;$$&amp;quot;,
+                        },
+                    },
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AnalyticsApplication</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AnalyticsApplication</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Kinesis.html">Pulumi.Aws.Kinesis</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -90,16 +183,16 @@ allows processing and analyzing streaming data using standard SQL.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication__ctor_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication__ctor_System_String_Pulumi_Aws_Kinesis_AnalyticsApplicationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.#ctor(System.String,Pulumi.Aws.Kinesis.AnalyticsApplicationArgs,System.Nullable{CustomResourceOptions})">AnalyticsApplication(String, AnalyticsApplicationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication__ctor_System_String_Pulumi_Aws_Kinesis_AnalyticsApplicationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.#ctor(System.String,Pulumi.Aws.Kinesis.AnalyticsApplicationArgs,Pulumi.CustomResourceOptions)">AnalyticsApplication(String, AnalyticsApplicationArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a AnalyticsApplication resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AnalyticsApplication(string name, AnalyticsApplicationArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AnalyticsApplication(string name, AnalyticsApplicationArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +217,7 @@ allows processing and analyzing streaming data using standard SQL.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -134,7 +227,7 @@ allows processing and analyzing streaming data using standard SQL.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_Arn_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Arn*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_Arn" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Arn">Arn</h4>
@@ -155,13 +248,13 @@ allows processing and analyzing streaming data using standard SQL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_CloudwatchLoggingOptions_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.CloudwatchLoggingOptions*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_CloudwatchLoggingOptions" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.CloudwatchLoggingOptions">CloudwatchLoggingOptions</h4>
@@ -183,13 +276,13 @@ See CloudWatch Logging Options below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationCloudwatchLoggingOptions.html">AnalyticsApplicationCloudwatchLoggingOptions</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationCloudwatchLoggingOptions.html">AnalyticsApplicationCloudwatchLoggingOptions</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_Code_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Code*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_Code" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Code">Code</h4>
@@ -198,7 +291,7 @@ See CloudWatch Logging Options below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Code { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Code { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,13 +303,13 @@ See CloudWatch Logging Options below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_CreateTimestamp_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.CreateTimestamp*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_CreateTimestamp" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.CreateTimestamp">CreateTimestamp</h4>
@@ -237,13 +330,13 @@ See CloudWatch Logging Options below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_Description_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Description*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_Description" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Description">Description</h4>
@@ -252,7 +345,7 @@ See CloudWatch Logging Options below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,13 +357,13 @@ See CloudWatch Logging Options below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_Inputs_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Inputs*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_Inputs" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Inputs">Inputs</h4>
@@ -291,13 +384,13 @@ See CloudWatch Logging Options below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.html">AnalyticsApplicationInputs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.html">AnalyticsApplicationInputs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_LastUpdateTimestamp_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.LastUpdateTimestamp*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_LastUpdateTimestamp" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.LastUpdateTimestamp">LastUpdateTimestamp</h4>
@@ -318,13 +411,13 @@ See CloudWatch Logging Options below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_Name_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Name*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_Name" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Name">Name</h4>
@@ -345,13 +438,13 @@ See CloudWatch Logging Options below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_Outputs_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Outputs*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_Outputs" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Outputs">Outputs</h4>
@@ -372,13 +465,13 @@ See CloudWatch Logging Options below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationOutput.html">AnalyticsApplicationOutput</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationOutput.html">AnalyticsApplicationOutput</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_ReferenceDataSources_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.ReferenceDataSources*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_ReferenceDataSources" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.ReferenceDataSources">ReferenceDataSources</h4>
@@ -400,13 +493,13 @@ See Reference Data Sources below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationReferenceDataSources.html">AnalyticsApplicationReferenceDataSources</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationReferenceDataSources.html">AnalyticsApplicationReferenceDataSources</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_Status_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Status*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_Status" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Status">Status</h4>
@@ -427,22 +520,22 @@ See Reference Data Sources below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_Tags_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Tags*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_Tags" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>Key-value mapping of tags for the Kinesis Analytics Application.</p>
+  <div class="markdown level1 summary"><p>Key-value map of tags for the Kinesis Analytics Application.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -454,13 +547,13 @@ See Reference Data Sources below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_Version_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Version*"></a>
   <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_Version" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Version">Version</h4>
@@ -481,7 +574,7 @@ See Reference Data Sources below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -489,17 +582,17 @@ See Reference Data Sources below for more details.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L198">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_AnalyticsApplication_Get_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Get*"></a>
-  <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_Get_System_String_Input_System_String__Pulumi_Aws_Kinesis_AnalyticsApplicationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Get(System.String,Input{System.String},Pulumi.Aws.Kinesis.AnalyticsApplicationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AnalyticsApplicationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Kinesis_AnalyticsApplication_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Kinesis_AnalyticsApplicationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Kinesis.AnalyticsApplication.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Kinesis.AnalyticsApplicationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AnalyticsApplicationState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing AnalyticsApplication resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AnalyticsApplication Get(string name, Input&lt;string&gt; id, AnalyticsApplicationState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AnalyticsApplication Get(string name, Input&lt;string&gt; id, AnalyticsApplicationState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -518,7 +611,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -530,7 +623,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -559,7 +652,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L78" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

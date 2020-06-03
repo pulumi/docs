@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Token
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,7 +71,39 @@
   
   <h1 id="Pulumi_Linode_Token" data-uid="Pulumi.Linode.Token" class="text-break">Class Token
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides a Linode Token resource.  This can be used to create, modify, and delete Linode API Personal Access Tokens.  Personal Access Tokens proxy user credentials for Linode API access.  This is necessary for tools, to interact with Linode services on a user's behalf.</p>
+<p>It is common for the provider itself to be configured with broadly scoped Personal Access Tokens.  Provisioning scripts or tools configured within a Linode Instance should follow the principle of least privilege to afford only the required roles for tools to perform their necessary tasks.  The <code>linode..Token</code> resource allows for the management of Personal Access Tokens with scopes mirroring or narrowing the scope of the parent token.</p>
+<p>For more information, see the <a href="https://developers.linode.com/api/v4#operation/getTokens">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fooToken = new Linode.Token(&amp;quot;fooToken&amp;quot;, new Linode.TokenArgs
+    {
+        Expiry = &amp;quot;2100-01-02T03:04:05Z&amp;quot;,
+        Label = &amp;quot;token&amp;quot;,
+        Scopes = &amp;quot;linodes:read_only&amp;quot;,
+    });
+    var fooInstance = new Linode.Instance(&amp;quot;fooInstance&amp;quot;, new Linode.InstanceArgs
+    {
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This resource exports the following attributes:</p>
+<ul>
+<li><p><code>token</code> - The token used to access the API.</p>
+</li>
+<li><p><code>created</code> - The date this Token was created.</p>
+</li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -125,7 +157,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Linode_Token__ctor_" data-uid="Pulumi.Linode.Token.#ctor*"></a>
   <h4 id="Pulumi_Linode_Token__ctor_System_String_Pulumi_Linode_TokenArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.Token.#ctor(System.String,Pulumi.Linode.TokenArgs,Pulumi.CustomResourceOptions)">Token(String, TokenArgs, CustomResourceOptions)</h4>
@@ -169,7 +201,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Linode_Token_Created_" data-uid="Pulumi.Linode.Token.Created*"></a>
   <h4 id="Pulumi_Linode_Token_Created" data-uid="Pulumi.Linode.Token.Created">Created</h4>
@@ -196,7 +228,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Linode_Token_Expiry_" data-uid="Pulumi.Linode.Token.Expiry*"></a>
   <h4 id="Pulumi_Linode_Token_Expiry" data-uid="Pulumi.Linode.Token.Expiry">Expiry</h4>
@@ -223,7 +255,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Linode_Token_Label_" data-uid="Pulumi.Linode.Token.Label*"></a>
   <h4 id="Pulumi_Linode_Token_Label" data-uid="Pulumi.Linode.Token.Label">Label</h4>
@@ -250,7 +282,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Linode_Token_Scopes_" data-uid="Pulumi.Linode.Token.Scopes*"></a>
   <h4 id="Pulumi_Linode_Token_Scopes" data-uid="Pulumi.Linode.Token.Scopes">Scopes</h4>
@@ -277,7 +309,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Linode_Token_TokenName_" data-uid="Pulumi.Linode.Token.TokenName*"></a>
   <h4 id="Pulumi_Linode_Token_TokenName" data-uid="Pulumi.Linode.Token.TokenName">TokenName</h4>
@@ -306,7 +338,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Linode_Token_Get_" data-uid="Pulumi.Linode.Token.Get*"></a>
   <h4 id="Pulumi_Linode_Token_Get_System_String_Pulumi_Input_System_String__Pulumi_Linode_TokenState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.Token.Get(System.String,Pulumi.Input{System.String},Pulumi.Linode.TokenState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TokenState, CustomResourceOptions)</h4>
@@ -376,7 +408,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Token.cs/#L53" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.NewRelic
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,174 @@
   </h3>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertChannel.html">AlertChannel</a></h4>
       <section><p>Use this resource to create and manage New Relic alert policies.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="email">Email</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new NewRelic.AlertChannel(&amp;quot;foo&amp;quot;, new NewRelic.AlertChannelArgs
+    {
+        Config = new NewRelic.Inputs.AlertChannelConfigArgs
+        {
+            IncludeJsonAttachment = &amp;quot;1&amp;quot;,
+            Recipients = &amp;quot;foo@example.com&amp;quot;,
+        },
+        Type = &amp;quot;email&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="additional-examples">Additional Examples</h2>
+<h5 id="slack">Slack</h5>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new NewRelic.AlertChannel(&amp;quot;foo&amp;quot;, new NewRelic.AlertChannelArgs
+    {
+        Config = new NewRelic.Inputs.AlertChannelConfigArgs
+        {
+            Channel = &amp;quot;example-alerts-channel&amp;quot;,
+            Url = &amp;quot;https://&amp;lt;YourOrganization&gt;.slack.com&amp;quot;,
+        },
+        Type = &amp;quot;slack&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h5 id="opsgenie">OpsGenie</h5>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new NewRelic.AlertChannel(&amp;quot;foo&amp;quot;, new NewRelic.AlertChannelArgs
+    {
+        Config = new NewRelic.Inputs.AlertChannelConfigArgs
+        {
+            ApiKey = &amp;quot;abc123&amp;quot;,
+            Recipients = &amp;quot;user1@domain.com, user2@domain.com&amp;quot;,
+            Tags = &amp;quot;tag1, tag2&amp;quot;,
+            Teams = &amp;quot;team1, team2&amp;quot;,
+        },
+        Type = &amp;quot;opsgenie&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h5 id="pagerduty">PagerDuty</h5>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new NewRelic.AlertChannel(&amp;quot;foo&amp;quot;, new NewRelic.AlertChannelArgs
+    {
+        Config = new NewRelic.Inputs.AlertChannelConfigArgs
+        {
+            ServiceKey = &amp;quot;abc123&amp;quot;,
+        },
+        Type = &amp;quot;pagerduty&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h5 id="victorops">VictorOps</h5>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new NewRelic.AlertChannel(&amp;quot;foo&amp;quot;, new NewRelic.AlertChannelArgs
+    {
+        Config = new NewRelic.Inputs.AlertChannelConfigArgs
+        {
+            Key = &amp;quot;abc123&amp;quot;,
+            RouteKey = &amp;quot;/example&amp;quot;,
+        },
+        Type = &amp;quot;victorops&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h5 id="webhook">Webhook</h5>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new NewRelic.AlertChannel(&amp;quot;foo&amp;quot;, new NewRelic.AlertChannelArgs
+    {
+        Type = &amp;quot;webhook&amp;quot;,
+        Config = new NewRelic.Inputs.AlertChannelConfigArgs
+        {
+            BaseUrl = &amp;quot;http://www.test.com&amp;quot;,
+            PayloadType = &amp;quot;application/json&amp;quot;,
+            Payload = 
+            {
+                { &amp;quot;condition_name&amp;quot;, &amp;quot;$CONDITION_NAME&amp;quot; },
+                { &amp;quot;policy_name&amp;quot;, &amp;quot;$POLICY_NAME&amp;quot; },
+            },
+            Headers = 
+            {
+                { &amp;quot;header1&amp;quot;, value1 },
+                { &amp;quot;header2&amp;quot;, value2 },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h5 id="webhook-with-complex-payload">Webhook with complex payload</h5>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new NewRelic.AlertChannel(&amp;quot;foo&amp;quot;, new NewRelic.AlertChannelArgs
+    {
+        Config = new NewRelic.Inputs.AlertChannelConfigArgs
+        {
+            BaseUrl = &amp;quot;http://www.test.com&amp;quot;,
+            PayloadString = @&amp;quot;{
+&amp;quot;&amp;quot;my_custom_values&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;condition_name&amp;quot;&amp;quot;: &amp;quot;&amp;quot;$$CONDITION_NAME&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;policy_name&amp;quot;&amp;quot;: &amp;quot;&amp;quot;$$POLICY_NAME&amp;quot;&amp;quot;
+}
+}
+
+&amp;quot;,
+            PayloadType = &amp;quot;application/json&amp;quot;,
+        },
+        Type = &amp;quot;webhook&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertChannelArgs.html">AlertChannelArgs</a></h4>
       <section></section>
@@ -101,11 +269,132 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertPolicy.html">AlertPolicy</a></h4>
       <section><p>Use this resource to create and manage New Relic alert policies.</p>
+<h2 id="additional-examples">Additional Examples</h2>
+<h5 id="provision-multiple-notification-channels-and-add-those-channels-to-a-policy">Provision multiple notification channels and add those channels to a policy</h5>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Provision a Slack notification channel.
+    var slackChannel = new NewRelic.AlertChannel(&amp;quot;slackChannel&amp;quot;, new NewRelic.AlertChannelArgs
+    {
+        Type = &amp;quot;slack&amp;quot;,
+        Config = new NewRelic.Inputs.AlertChannelConfigArgs
+        {
+            Url = &amp;quot;https://hooks.slack.com/services/&amp;lt;*****&gt;/&amp;lt;*****&gt;&amp;quot;,
+            Channel = &amp;quot;example-alerts-channel&amp;quot;,
+        },
+    });
+    // Provision an email notification channel.
+    var emailChannel = new NewRelic.AlertChannel(&amp;quot;emailChannel&amp;quot;, new NewRelic.AlertChannelArgs
+    {
+        Type = &amp;quot;email&amp;quot;,
+        Config = new NewRelic.Inputs.AlertChannelConfigArgs
+        {
+            Recipients = &amp;quot;example@testing.com&amp;quot;,
+            IncludeJsonAttachment = &amp;quot;1&amp;quot;,
+        },
+    });
+    // Provision the alert policy.
+    var policyWithChannels = new NewRelic.AlertPolicy(&amp;quot;policyWithChannels&amp;quot;, new NewRelic.AlertPolicyArgs
+    {
+        IncidentPreference = &amp;quot;PER_CONDITION&amp;quot;,
+        ChannelIds = 
+        {
+            slackChannel.Id,
+            emailChannel.Id,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>&lt;br&gt;</p>
+<h5 id="reference-existing-notification-channels-and-add-those-channel-to-a-policy">Reference existing notification channels and add those channel to a policy</h5>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var slackChannel = Output.Create(NewRelic.GetAlertChannel.InvokeAsync(new NewRelic.GetAlertChannelArgs
+    {
+        Name = &amp;quot;slack-channel-notification&amp;quot;,
+    }));
+    var emailChannel = Output.Create(NewRelic.GetAlertChannel.InvokeAsync(new NewRelic.GetAlertChannelArgs
+    {
+        Name = &amp;quot;test@example.com&amp;quot;,
+    }));
+    // Provision the alert policy.
+    var policyWithChannels = new NewRelic.AlertPolicy(&amp;quot;policyWithChannels&amp;quot;, new NewRelic.AlertPolicyArgs
+    {
+        IncidentPreference = &amp;quot;PER_CONDITION&amp;quot;,
+        ChannelIds = 
+        {
+            slackChannel.Apply(slackChannel =&gt; slackChannel.Id),
+            emailChannel.Apply(emailChannel =&gt; emailChannel.Id),
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertPolicyArgs.html">AlertPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertPolicyChannel.html">AlertPolicyChannel</a></h4>
       <section><p>Use this resource to map alert policies to alert channels in New Relic.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var examplePolicy = Output.Create(NewRelic.GetAlertPolicy.InvokeAsync(new NewRelic.GetAlertPolicyArgs
+    {
+        Name = &amp;quot;my-alert-policy&amp;quot;,
+    }));
+    // Creates an email alert channel.
+    var emailChannel = new NewRelic.AlertChannel(&amp;quot;emailChannel&amp;quot;, new NewRelic.AlertChannelArgs
+    {
+        Type = &amp;quot;email&amp;quot;,
+        Config = new NewRelic.Inputs.AlertChannelConfigArgs
+        {
+            Recipients = &amp;quot;foo@example.com&amp;quot;,
+            IncludeJsonAttachment = &amp;quot;1&amp;quot;,
+        },
+    });
+    // Creates a Slack alert channel.
+    var slackChannel = new NewRelic.AlertChannel(&amp;quot;slackChannel&amp;quot;, new NewRelic.AlertChannelArgs
+    {
+        Type = &amp;quot;slack&amp;quot;,
+        Config = new NewRelic.Inputs.AlertChannelConfigArgs
+        {
+            Channel = &amp;quot;#example-channel&amp;quot;,
+            Url = &amp;quot;http://example-org.slack.com&amp;quot;,
+        },
+    });
+    // Applies the created channels above to the alert policy
+    // referenced at the top of the config.
+    var foo = new NewRelic.AlertPolicyChannel(&amp;quot;foo&amp;quot;, new NewRelic.AlertPolicyChannelArgs
+    {
+        PolicyId = newrelic_alert_policy.Example_policy.Id,
+        ChannelIds = 
+        {
+            emailChannel.Id,
+            slackChannel.Id,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertPolicyChannelArgs.html">AlertPolicyChannelArgs</a></h4>
       <section></section>
@@ -202,6 +491,82 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.InfraAlertCondition.html">InfraAlertCondition</a></h4>
       <section><p>Use this resource to create and manage Infrastructure alert conditions in New Relic.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new NewRelic.AlertPolicy(&amp;quot;foo&amp;quot;, new NewRelic.AlertPolicyArgs
+    {
+    });
+    var highDiskUsage = new NewRelic.InfraAlertCondition(&amp;quot;highDiskUsage&amp;quot;, new NewRelic.InfraAlertConditionArgs
+    {
+        PolicyId = foo.Id,
+        Type = &amp;quot;infra_metric&amp;quot;,
+        Event = &amp;quot;StorageSample&amp;quot;,
+        Select = &amp;quot;diskUsedPercent&amp;quot;,
+        Comparison = &amp;quot;above&amp;quot;,
+        Where = &amp;quot;(`hostname` LIKE &amp;apos;%frontend%&amp;apos;)&amp;quot;,
+        Critical = new NewRelic.Inputs.InfraAlertConditionCriticalArgs
+        {
+            Duration = 25,
+            Value = 90,
+            TimeFunction = &amp;quot;all&amp;quot;,
+        },
+        Warning = new NewRelic.Inputs.InfraAlertConditionWarningArgs
+        {
+            Duration = 10,
+            Value = 90,
+            TimeFunction = &amp;quot;all&amp;quot;,
+        },
+    });
+    var highDbConnCount = new NewRelic.InfraAlertCondition(&amp;quot;highDbConnCount&amp;quot;, new NewRelic.InfraAlertConditionArgs
+    {
+        PolicyId = foo.Id,
+        Type = &amp;quot;infra_metric&amp;quot;,
+        Event = &amp;quot;DatastoreSample&amp;quot;,
+        Select = &amp;quot;provider.databaseConnections.Average&amp;quot;,
+        Comparison = &amp;quot;above&amp;quot;,
+        Where = &amp;quot;(`hostname` LIKE &amp;apos;%db%&amp;apos;)&amp;quot;,
+        IntegrationProvider = &amp;quot;RdsDbInstance&amp;quot;,
+        Critical = new NewRelic.Inputs.InfraAlertConditionCriticalArgs
+        {
+            Duration = 25,
+            Value = 90,
+            TimeFunction = &amp;quot;all&amp;quot;,
+        },
+    });
+    var processNotRunning = new NewRelic.InfraAlertCondition(&amp;quot;processNotRunning&amp;quot;, new NewRelic.InfraAlertConditionArgs
+    {
+        PolicyId = foo.Id,
+        Type = &amp;quot;infra_process_running&amp;quot;,
+        Comparison = &amp;quot;equal&amp;quot;,
+        ProcessWhere = &amp;quot;`commandName` = &amp;apos;/usr/bin/ruby&amp;apos;&amp;quot;,
+        Critical = new NewRelic.Inputs.InfraAlertConditionCriticalArgs
+        {
+            Duration = 5,
+            Value = 0,
+        },
+    });
+    var hostNotReporting = new NewRelic.InfraAlertCondition(&amp;quot;hostNotReporting&amp;quot;, new NewRelic.InfraAlertConditionArgs
+    {
+        PolicyId = foo.Id,
+        Type = &amp;quot;infra_host_not_reporting&amp;quot;,
+        Event = &amp;quot;StorageSample&amp;quot;,
+        Select = &amp;quot;diskUsedPercent&amp;quot;,
+        Where = &amp;quot;(`hostname` LIKE &amp;apos;%frontend%&amp;apos;)&amp;quot;,
+        Critical = new NewRelic.Inputs.InfraAlertConditionCriticalArgs
+        {
+            Duration = 5,
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="thresholds">Thresholds</h2>
 <p>The <code>critical</code> and <code>warning</code> threshold mapping supports the following arguments:</p>
 <ul>

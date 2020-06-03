@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class User
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,15 +71,79 @@
   
   <h1 id="Pulumi_Vault_GitHub_User" data-uid="Pulumi.Vault.GitHub.User" class="text-break">Class User
   </h1>
-  <div class="markdown level0 summary"><p>Manages policy mappings for Github Users authenticated via Github. See the <a href="https://www.vaultproject.io/docs/auth/github.html">Vault
+  <div class="markdown level0 summary"><p>Manages policy mappings for Github Users authenticated via Github. See the <a href="https://www.vaultproject.io/docs/auth/github/">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Vault.GitHub.AuthBackend(&amp;quot;example&amp;quot;, new Vault.GitHub.AuthBackendArgs
+    {
+        Organization = &amp;quot;myorg&amp;quot;,
+    });
+    var tfUser = new Vault.GitHub.User(&amp;quot;tfUser&amp;quot;, new Vault.GitHub.UserArgs
+    {
+        Backend = example.Id,
+        User = &amp;quot;john.doe&amp;quot;,
+        TokenPolicies = 
+        {
+            &amp;quot;developer&amp;quot;,
+            &amp;quot;read-only&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">User</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">User</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Vault.GitHub.html">Pulumi.Vault.GitHub</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Vault.dll</h6>
@@ -90,16 +154,16 @@ information.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User__ctor_" data-uid="Pulumi.Vault.GitHub.User.#ctor*"></a>
-  <h4 id="Pulumi_Vault_GitHub_User__ctor_System_String_Pulumi_Vault_GitHub_UserArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.GitHub.User.#ctor(System.String,Pulumi.Vault.GitHub.UserArgs,System.Nullable{CustomResourceOptions})">User(String, UserArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_GitHub_User__ctor_System_String_Pulumi_Vault_GitHub_UserArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.GitHub.User.#ctor(System.String,Pulumi.Vault.GitHub.UserArgs,Pulumi.CustomResourceOptions)">User(String, UserArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a User resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public User(string name, UserArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public User(string name, UserArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +188,7 @@ information.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -134,7 +198,7 @@ information.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_Backend_" data-uid="Pulumi.Vault.GitHub.User.Backend*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_Backend" data-uid="Pulumi.Vault.GitHub.User.Backend">Backend</h4>
@@ -144,7 +208,7 @@ if not specified.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Backend { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Backend { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +220,13 @@ if not specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_Policies_" data-uid="Pulumi.Vault.GitHub.User.Policies*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_Policies" data-uid="Pulumi.Vault.GitHub.User.Policies">Policies</h4>
@@ -184,13 +248,13 @@ using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_TokenBoundCidrs_" data-uid="Pulumi.Vault.GitHub.User.TokenBoundCidrs*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_TokenBoundCidrs" data-uid="Pulumi.Vault.GitHub.User.TokenBoundCidrs">TokenBoundCidrs</h4>
@@ -211,13 +275,13 @@ using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_TokenExplicitMaxTtl_" data-uid="Pulumi.Vault.GitHub.User.TokenExplicitMaxTtl*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_TokenExplicitMaxTtl" data-uid="Pulumi.Vault.GitHub.User.TokenExplicitMaxTtl">TokenExplicitMaxTtl</h4>
@@ -238,13 +302,13 @@ using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_TokenMaxTtl_" data-uid="Pulumi.Vault.GitHub.User.TokenMaxTtl*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_TokenMaxTtl" data-uid="Pulumi.Vault.GitHub.User.TokenMaxTtl">TokenMaxTtl</h4>
@@ -265,13 +329,13 @@ using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_TokenNoDefaultPolicy_" data-uid="Pulumi.Vault.GitHub.User.TokenNoDefaultPolicy*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_TokenNoDefaultPolicy" data-uid="Pulumi.Vault.GitHub.User.TokenNoDefaultPolicy">TokenNoDefaultPolicy</h4>
@@ -292,13 +356,13 @@ using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_TokenNumUses_" data-uid="Pulumi.Vault.GitHub.User.TokenNumUses*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_TokenNumUses" data-uid="Pulumi.Vault.GitHub.User.TokenNumUses">TokenNumUses</h4>
@@ -319,13 +383,13 @@ using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_TokenPeriod_" data-uid="Pulumi.Vault.GitHub.User.TokenPeriod*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_TokenPeriod" data-uid="Pulumi.Vault.GitHub.User.TokenPeriod">TokenPeriod</h4>
@@ -346,13 +410,13 @@ using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_TokenPolicies_" data-uid="Pulumi.Vault.GitHub.User.TokenPolicies*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_TokenPolicies" data-uid="Pulumi.Vault.GitHub.User.TokenPolicies">TokenPolicies</h4>
@@ -373,13 +437,13 @@ using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_TokenTtl_" data-uid="Pulumi.Vault.GitHub.User.TokenTtl*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_TokenTtl" data-uid="Pulumi.Vault.GitHub.User.TokenTtl">TokenTtl</h4>
@@ -400,13 +464,13 @@ using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_TokenType_" data-uid="Pulumi.Vault.GitHub.User.TokenType*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_TokenType" data-uid="Pulumi.Vault.GitHub.User.TokenType">TokenType</h4>
@@ -415,7 +479,7 @@ using this role.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TokenType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TokenType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -427,13 +491,13 @@ using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_UserName_" data-uid="Pulumi.Vault.GitHub.User.UserName*"></a>
   <h4 id="Pulumi_Vault_GitHub_User_UserName" data-uid="Pulumi.Vault.GitHub.User.UserName">UserName</h4>
@@ -454,7 +518,7 @@ using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -462,17 +526,17 @@ using this role.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Vault_GitHub_User_Get_" data-uid="Pulumi.Vault.GitHub.User.Get*"></a>
-  <h4 id="Pulumi_Vault_GitHub_User_Get_System_String_Input_System_String__Pulumi_Vault_GitHub_UserState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.GitHub.User.Get(System.String,Input{System.String},Pulumi.Vault.GitHub.UserState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, UserState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_GitHub_User_Get_System_String_Pulumi_Input_System_String__Pulumi_Vault_GitHub_UserState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.GitHub.User.Get(System.String,Pulumi.Input{System.String},Pulumi.Vault.GitHub.UserState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, UserState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing User resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static User Get(string name, Input&lt;string&gt; id, UserState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static User Get(string name, Input&lt;string&gt; id, UserState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -491,7 +555,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -503,7 +567,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -532,7 +596,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/GitHub/User.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/GitHub/User.cs/#L48" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

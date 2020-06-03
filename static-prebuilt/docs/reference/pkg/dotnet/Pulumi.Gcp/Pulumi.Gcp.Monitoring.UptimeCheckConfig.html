@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UptimeCheckConfig
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,12 +78,132 @@
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/monitoring/uptime-checks/">Official Documentation</a></li>
 </ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>http_check.auth_info.password</code> will be stored in the raw
+state as plain-text. <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
+</blockquote>
+<h2 id="example-usage---uptime-check-config-http">Example Usage - Uptime Check Config Http</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http = new Gcp.Monitoring.UptimeCheckConfig(&amp;quot;http&amp;quot;, new Gcp.Monitoring.UptimeCheckConfigArgs
+    {
+        ContentMatchers = 
+        {
+            new Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs
+            {
+                Content = &amp;quot;example&amp;quot;,
+            },
+        },
+        DisplayName = &amp;quot;http-uptime-check&amp;quot;,
+        HttpCheck = new Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs
+        {
+            Path = &amp;quot;/some-path&amp;quot;,
+            Port = &amp;quot;8010&amp;quot;,
+        },
+        MonitoredResource = new Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs
+        {
+            Labels = 
+            {
+                { &amp;quot;host&amp;quot;, &amp;quot;192.168.1.1&amp;quot; },
+                { &amp;quot;project_id&amp;quot;, &amp;quot;my-project-name&amp;quot; },
+            },
+            Type = &amp;quot;uptime_url&amp;quot;,
+        },
+        Timeout = &amp;quot;60s&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---uptime-check-config-https">Example Usage - Uptime Check Config Https</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var https = new Gcp.Monitoring.UptimeCheckConfig(&amp;quot;https&amp;quot;, new Gcp.Monitoring.UptimeCheckConfigArgs
+    {
+        ContentMatchers = 
+        {
+            new Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs
+            {
+                Content = &amp;quot;example&amp;quot;,
+            },
+        },
+        DisplayName = &amp;quot;https-uptime-check&amp;quot;,
+        HttpCheck = new Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs
+        {
+            Path = &amp;quot;/some-path&amp;quot;,
+            Port = &amp;quot;443&amp;quot;,
+            UseSsl = true,
+            ValidateSsl = true,
+        },
+        MonitoredResource = new Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs
+        {
+            Labels = 
+            {
+                { &amp;quot;host&amp;quot;, &amp;quot;192.168.1.1&amp;quot; },
+                { &amp;quot;project_id&amp;quot;, &amp;quot;my-project-name&amp;quot; },
+            },
+            Type = &amp;quot;uptime_url&amp;quot;,
+        },
+        Timeout = &amp;quot;60s&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UptimeCheckConfig</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">UptimeCheckConfig</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Monitoring.html">Pulumi.Gcp.Monitoring</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -94,16 +214,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig__ctor_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig__ctor_System_String_Pulumi_Gcp_Monitoring_UptimeCheckConfigArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.#ctor(System.String,Pulumi.Gcp.Monitoring.UptimeCheckConfigArgs,System.Nullable{CustomResourceOptions})">UptimeCheckConfig(String, UptimeCheckConfigArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig__ctor_System_String_Pulumi_Gcp_Monitoring_UptimeCheckConfigArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.#ctor(System.String,Pulumi.Gcp.Monitoring.UptimeCheckConfigArgs,Pulumi.CustomResourceOptions)">UptimeCheckConfig(String, UptimeCheckConfigArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a UptimeCheckConfig resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UptimeCheckConfig(string name, UptimeCheckConfigArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public UptimeCheckConfig(string name, UptimeCheckConfigArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,7 +248,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -138,13 +258,11 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_ContentMatchers_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.ContentMatchers*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_ContentMatchers" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.ContentMatchers">ContentMatchers</h4>
-  <div class="markdown level1 summary"><p>The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and
-other entries will be ignored. The server will look for an exact match of the string in the page response's content.
-This field is optional and should only be specified if a content match is required.</p>
+  <div class="markdown level1 summary"><p>The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -161,18 +279,17 @@ This field is optional and should only be specified if a content match is requir
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigContentMatcher.html">UptimeCheckConfigContentMatcher</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigContentMatcher.html">UptimeCheckConfigContentMatcher</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_DisplayName_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.DisplayName*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_DisplayName" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.DisplayName">DisplayName</h4>
-  <div class="markdown level1 summary"><p>A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver
-Workspace in order to make it easier to identify; however, uniqueness is not enforced.</p>
+  <div class="markdown level1 summary"><p>A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -189,17 +306,17 @@ Workspace in order to make it easier to identify; however, uniqueness is not enf
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_HttpCheck_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.HttpCheck*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_HttpCheck" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.HttpCheck">HttpCheck</h4>
-  <div class="markdown level1 summary"><p>Contains information needed to make an HTTP or HTTPS check.</p>
+  <div class="markdown level1 summary"><p>Contains information needed to make an HTTP or HTTPS check.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -216,19 +333,17 @@ Workspace in order to make it easier to identify; however, uniqueness is not enf
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheck.html">UptimeCheckConfigHttpCheck</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheck.html">UptimeCheckConfigHttpCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_MonitoredResource_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.MonitoredResource*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_MonitoredResource" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.MonitoredResource">MonitoredResource</h4>
-  <div class="markdown level1 summary"><p>The monitored resource (<a href="https://cloud.google.com/monitoring/api/resources">https://cloud.google.com/monitoring/api/resources</a>) associated with the configuration. The
-following monitored resource types are supported for uptime checks: uptime_url gce_instance gae_app aws_ec2_instance
-aws_elb_load_balancer</p>
+  <div class="markdown level1 summary"><p>The monitored resource (<a href="https://cloud.google.com/monitoring/api/resources">https://cloud.google.com/monitoring/api/resources</a>) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -245,13 +360,13 @@ aws_elb_load_balancer</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigMonitoredResource.html">UptimeCheckConfigMonitoredResource</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigMonitoredResource.html">UptimeCheckConfigMonitoredResource</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_Name_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.Name*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_Name" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.Name">Name</h4>
@@ -273,23 +388,22 @@ projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_Period_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.Period*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_Period" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.Period">Period</h4>
-  <div class="markdown level1 summary"><p>How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5
-minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.</p>
+  <div class="markdown level1 summary"><p>How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Period { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Period { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,13 +415,13 @@ minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_Project_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.Project*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_Project" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.Project">Project</h4>
@@ -329,17 +443,17 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_ResourceGroup_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.ResourceGroup*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_ResourceGroup" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.ResourceGroup">ResourceGroup</h4>
-  <div class="markdown level1 summary"><p>The group resource associated with the configuration.</p>
+  <div class="markdown level1 summary"><p>The group resource associated with the configuration.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -356,19 +470,17 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigResourceGroup.html">UptimeCheckConfigResourceGroup</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigResourceGroup.html">UptimeCheckConfigResourceGroup</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_SelectedRegions_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.SelectedRegions*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_SelectedRegions" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.SelectedRegions">SelectedRegions</h4>
-  <div class="markdown level1 summary"><p>The list of regions from which the check will be run. Some regions contain one location, and others contain more than
-one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error
-message is returned. Not specifying this field will result in uptime checks running from all regions.</p>
+  <div class="markdown level1 summary"><p>The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -385,17 +497,17 @@ message is returned. Not specifying this field will result in uptime checks runn
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_TcpCheck_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.TcpCheck*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_TcpCheck" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.TcpCheck">TcpCheck</h4>
-  <div class="markdown level1 summary"><p>Contains information needed to make a TCP check.</p>
+  <div class="markdown level1 summary"><p>Contains information needed to make a TCP check.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -412,18 +524,17 @@ message is returned. Not specifying this field will result in uptime checks runn
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigTcpCheck.html">UptimeCheckConfigTcpCheck</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigTcpCheck.html">UptimeCheckConfigTcpCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_Timeout_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.Timeout*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_Timeout" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.Timeout">Timeout</h4>
-  <div class="markdown level1 summary"><p>The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats
-<a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration">https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration</a></p>
+  <div class="markdown level1 summary"><p>The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats <a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration">https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -440,13 +551,13 @@ message is returned. Not specifying this field will result in uptime checks runn
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_UptimeCheckId_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.UptimeCheckId*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_UptimeCheckId" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.UptimeCheckId">UptimeCheckId</h4>
@@ -467,7 +578,7 @@ message is returned. Not specifying this field will result in uptime checks runn
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -475,17 +586,17 @@ message is returned. Not specifying this field will result in uptime checks runn
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_Get_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.Get*"></a>
-  <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_Get_System_String_Input_System_String__Pulumi_Gcp_Monitoring_UptimeCheckConfigState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.Get(System.String,Input{System.String},Pulumi.Gcp.Monitoring.UptimeCheckConfigState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, UptimeCheckConfigState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Monitoring_UptimeCheckConfig_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Monitoring_UptimeCheckConfigState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Monitoring.UptimeCheckConfig.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Monitoring.UptimeCheckConfigState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, UptimeCheckConfigState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing UptimeCheckConfig resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static UptimeCheckConfig Get(string name, Input&lt;string&gt; id, UptimeCheckConfigState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static UptimeCheckConfig Get(string name, Input&lt;string&gt; id, UptimeCheckConfigState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -504,7 +615,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -516,7 +627,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -545,7 +656,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/UptimeCheckConfig.cs/#L110" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

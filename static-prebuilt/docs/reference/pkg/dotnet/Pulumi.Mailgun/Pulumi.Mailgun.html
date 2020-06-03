@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Mailgun
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,9 +82,24 @@
       <section><p>Provides a Mailgun App resource. This can be used to
 create and manage applications on Mailgun.</p>
 <p>After DNS records are set, domain verification should be triggered manually using <a href="https://documentation.mailgun.com/en/latest/api-domains.html#domains">PUT /domains/&amp;lt;domain&gt;/verify</a></p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-mailgun/blob/master/website/docs/r/domain.html.markdown">https://github.com/terraform-providers/terraform-provider-mailgun/blob/master/website/docs/r/domain.html.markdown</a>.</p>
-</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Mailgun = Pulumi.Mailgun;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Mailgun domain
+    var @default = new Mailgun.Domain(&amp;quot;default&amp;quot;, new Mailgun.DomainArgs
+    {
+        Region = &amp;quot;us&amp;quot;,
+        SpamAction = &amp;quot;disabled&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Mailgun.DomainArgs.html">DomainArgs</a></h4>
       <section></section>
@@ -95,17 +110,35 @@ create and manage applications on Mailgun.</p>
 settings, however an explicit <code>Provider</code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-mailgun/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-mailgun/blob/master/website/docs/index.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Mailgun.ProviderArgs.html">ProviderArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Mailgun.Route.html">Route</a></h4>
       <section><p>Provides a Mailgun Route resource. This can be used to create and manage routes on Mailgun.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-mailgun/blob/master/website/docs/r/route.html.markdown">https://github.com/terraform-providers/terraform-provider-mailgun/blob/master/website/docs/r/route.html.markdown</a>.</p>
-</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Mailgun = Pulumi.Mailgun;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Mailgun route
+    var @default = new Mailgun.Route(&amp;quot;default&amp;quot;, new Mailgun.RouteArgs
+    {
+        Actions = 
+        {
+            &amp;quot;forward(&amp;apos;http://example.com/api/v1/foos/&amp;apos;)&amp;quot;,
+            &amp;quot;stop()&amp;quot;,
+        },
+        Description = &amp;quot;inbound&amp;quot;,
+        Expression = &amp;quot;match_recipient(&amp;apos;.*@foo.example.com&amp;apos;)&amp;quot;,
+        Priority = &amp;quot;0&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Mailgun.RouteArgs.html">RouteArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Grant
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,73 @@
 <blockquote>
 <p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
 </blockquote>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var readonlyTables = new PostgreSql.Grant(&amp;quot;readonlyTables&amp;quot;, new PostgreSql.GrantArgs
+    {
+        Database = &amp;quot;test_db&amp;quot;,
+        ObjectType = &amp;quot;table&amp;quot;,
+        Privileges = 
+        {
+            &amp;quot;SELECT&amp;quot;,
+        },
+        Role = &amp;quot;test_role&amp;quot;,
+        Schema = &amp;quot;public&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Grant</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Grant</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.PostgreSql.html">Pulumi.PostgreSql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.PostgreSql.dll</h6>
@@ -91,16 +152,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Grant.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Grant.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_Grant__ctor_" data-uid="Pulumi.PostgreSql.Grant.#ctor*"></a>
-  <h4 id="Pulumi_PostgreSql_Grant__ctor_System_String_Pulumi_PostgreSql_GrantArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.PostgreSql.Grant.#ctor(System.String,Pulumi.PostgreSql.GrantArgs,System.Nullable{CustomResourceOptions})">Grant(String, GrantArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_PostgreSql_Grant__ctor_System_String_Pulumi_PostgreSql_GrantArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.PostgreSql.Grant.#ctor(System.String,Pulumi.PostgreSql.GrantArgs,Pulumi.CustomResourceOptions)">Grant(String, GrantArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Grant resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Grant(string name, GrantArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Grant(string name, GrantArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +186,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +196,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Grant.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Grant.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_Grant_Database_" data-uid="Pulumi.PostgreSql.Grant.Database*"></a>
   <h4 id="Pulumi_PostgreSql_Grant_Database" data-uid="Pulumi.PostgreSql.Grant.Database">Database</h4>
@@ -156,13 +217,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Grant.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Grant.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_Grant_ObjectType_" data-uid="Pulumi.PostgreSql.Grant.ObjectType*"></a>
   <h4 id="Pulumi_PostgreSql_Grant_ObjectType" data-uid="Pulumi.PostgreSql.Grant.ObjectType">ObjectType</h4>
@@ -183,13 +244,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Grant.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Grant.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_Grant_Privileges_" data-uid="Pulumi.PostgreSql.Grant.Privileges*"></a>
   <h4 id="Pulumi_PostgreSql_Grant_Privileges" data-uid="Pulumi.PostgreSql.Grant.Privileges">Privileges</h4>
@@ -210,13 +271,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Grant.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Grant.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_Grant_Role_" data-uid="Pulumi.PostgreSql.Grant.Role*"></a>
   <h4 id="Pulumi_PostgreSql_Grant_Role" data-uid="Pulumi.PostgreSql.Grant.Role">Role</h4>
@@ -237,13 +298,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Grant.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Grant.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_Grant_Schema_" data-uid="Pulumi.PostgreSql.Grant.Schema*"></a>
   <h4 id="Pulumi_PostgreSql_Grant_Schema" data-uid="Pulumi.PostgreSql.Grant.Schema">Schema</h4>
@@ -264,7 +325,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Grant.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Grant_WithGrantOption_" data-uid="Pulumi.PostgreSql.Grant.WithGrantOption*"></a>
+  <h4 id="Pulumi_PostgreSql_Grant_WithGrantOption" data-uid="Pulumi.PostgreSql.Grant.WithGrantOption">WithGrantOption</h4>
+  <div class="markdown level1 summary"><p>Permit the grant recipient to grant it to others</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; WithGrantOption { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -272,17 +360,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Grant.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Grant.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_Grant_Get_" data-uid="Pulumi.PostgreSql.Grant.Get*"></a>
-  <h4 id="Pulumi_PostgreSql_Grant_Get_System_String_Input_System_String__Pulumi_PostgreSql_GrantState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.PostgreSql.Grant.Get(System.String,Input{System.String},Pulumi.PostgreSql.GrantState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GrantState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_PostgreSql_Grant_Get_System_String_Pulumi_Input_System_String__Pulumi_PostgreSql_GrantState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.PostgreSql.Grant.Get(System.String,Pulumi.Input{System.String},Pulumi.PostgreSql.GrantState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, GrantState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Grant resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Grant Get(string name, Input&lt;string&gt; id, GrantState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Grant Get(string name, Input&lt;string&gt; id, GrantState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,7 +389,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -313,7 +401,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -342,7 +430,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Grant.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Grant.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Organizations
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,6 +82,22 @@
 <p><strong>Note:</strong> Account management must be done from the organization's master account.</p>
 </blockquote>
 <p>!&gt; <strong>WARNING:</strong> Deleting this resource will only remove an AWS account from an organization. This provider will not close the account. The member account must be prepared to be a standalone account beforehand. See the <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html">AWS Organizations documentation</a> for more information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var account = new Aws.Organizations.Account(&amp;quot;account&amp;quot;, new Aws.Organizations.AccountArgs
+    {
+        Email = &amp;quot;john@doe.org&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Organizations.AccountArgs.html">AccountArgs</a></h4>
       <section></section>
@@ -99,9 +115,46 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Organizations.Organization.html">Organization</a></h4>
       <section><p>Provides a resource to create an organization.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var org = new Aws.Organizations.Organization(&amp;quot;org&amp;quot;, new Aws.Organizations.OrganizationArgs
+    {
+        AwsServiceAccessPrincipals = 
+        {
+            &amp;quot;cloudtrail.amazonaws.com&amp;quot;,
+            &amp;quot;config.amazonaws.com&amp;quot;,
+        },
+        FeatureSet = &amp;quot;ALL&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Organizations.OrganizationalUnit.html">OrganizationalUnit</a></h4>
       <section><p>Provides a resource to create an organizational unit.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Organizations.OrganizationalUnit(&amp;quot;example&amp;quot;, new Aws.Organizations.OrganizationalUnitArgs
+    {
+        ParentId = aws_organizations_organization.Example.Roots[0].Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Organizations.OrganizationalUnitArgs.html">OrganizationalUnitArgs</a></h4>
       <section></section>
@@ -113,11 +166,88 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Organizations.Policy.html">Policy</a></h4>
       <section><p>Provides a resource to manage an <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html">AWS Organizations policy</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Organizations.Policy(&amp;quot;example&amp;quot;, new Aws.Organizations.PolicyArgs
+    {
+        Content = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Organizations.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Organizations.PolicyAttachment.html">PolicyAttachment</a></h4>
       <section><p>Provides a resource to attach an AWS Organizations policy to an organization account, root, or unit.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="organization-account">Organization Account</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var account = new Aws.Organizations.PolicyAttachment(&amp;quot;account&amp;quot;, new Aws.Organizations.PolicyAttachmentArgs
+    {
+        PolicyId = aws_organizations_policy.Example.Id,
+        TargetId = &amp;quot;123456789012&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="organization-root">Organization Root</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var root = new Aws.Organizations.PolicyAttachment(&amp;quot;root&amp;quot;, new Aws.Organizations.PolicyAttachmentArgs
+    {
+        PolicyId = aws_organizations_policy.Example.Id,
+        TargetId = aws_organizations_organization.Example.Roots[0].Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="organization-unit">Organization Unit</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var unit = new Aws.Organizations.PolicyAttachment(&amp;quot;unit&amp;quot;, new Aws.Organizations.PolicyAttachmentArgs
+    {
+        PolicyId = aws_organizations_policy.Example.Id,
+        TargetId = aws_organizations_organizational_unit.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Organizations.PolicyAttachmentArgs.html">PolicyAttachmentArgs</a></h4>
       <section></section>

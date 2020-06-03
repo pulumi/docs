@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetObjectSignedUrl
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,28 +78,100 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetObjectSignedUrl</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Storage.html">Pulumi.Gcp.Storage</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Storage_GetObjectSignedUrl_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetObjectSignedUrl : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetObjectSignedUrl</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/GetObjectSignedUrl.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/GetObjectSignedUrl.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_GetObjectSignedUrl_InvokeAsync_" data-uid="Pulumi.Gcp.Storage.GetObjectSignedUrl.InvokeAsync*"></a>
-  <h4 id="Pulumi_Gcp_Storage_GetObjectSignedUrl_InvokeAsync_Pulumi_Gcp_Storage_GetObjectSignedUrlArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Gcp.Storage.GetObjectSignedUrl.InvokeAsync(Pulumi.Gcp.Storage.GetObjectSignedUrlArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetObjectSignedUrlArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Storage_GetObjectSignedUrl_InvokeAsync_Pulumi_Gcp_Storage_GetObjectSignedUrlArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Gcp.Storage.GetObjectSignedUrl.InvokeAsync(Pulumi.Gcp.Storage.GetObjectSignedUrlArgs,Pulumi.InvokeOptions)">InvokeAsync(GetObjectSignedUrlArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>The Google Cloud storage signed URL data source generates a signed URL for a given storage object. Signed URLs provide a way to give time-limited read or write access to anyone in possession of the URL, regardless of whether they have a Google account.</p>
 <p>For more info about signed URL's is available <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">here</a>.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var artifact = Output.Create(Gcp.Storage.GetObjectSignedUrl.InvokeAsync(new Gcp.Storage.GetObjectSignedUrlArgs
+    {
+        Bucket = &amp;quot;install_binaries&amp;quot;,
+        Path = &amp;quot;path/to/install_file.bin&amp;quot;,
+    }));
+    var vm = new Gcp.Compute.Instance(&amp;quot;vm&amp;quot;, new Gcp.Compute.InstanceArgs
+    {
+    });
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
+<h2 id="full-example">Full Example</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var getUrl = Output.Create(Gcp.Storage.GetObjectSignedUrl.InvokeAsync(new Gcp.Storage.GetObjectSignedUrlArgs
+    {
+        Bucket = &amp;quot;fried_chicken&amp;quot;,
+        Path = &amp;quot;path/to/file&amp;quot;,
+        ContentMd5 = &amp;quot;pRviqwS4c4OTJRTe03FD1w==&amp;quot;,
+        ContentType = &amp;quot;text/plain&amp;quot;,
+        Duration = &amp;quot;2d&amp;quot;,
+        Credentials = File.ReadAllText(&amp;quot;path/to/credentials.json&amp;quot;),
+        ExtensionHeaders = 
+        {
+            { &amp;quot;x-goog-if-generation-match&amp;quot;, 1 },
+        },
+    }));
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetObjectSignedUrlResult&gt; InvokeAsync(GetObjectSignedUrlArgs args, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetObjectSignedUrlResult&gt; InvokeAsync(GetObjectSignedUrlArgs args, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,7 +189,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -133,7 +205,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.GetObjectSignedUrlResult.html">GetObjectSignedUrlResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.GetObjectSignedUrlResult.html">GetObjectSignedUrlResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -145,7 +217,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/GetObjectSignedUrl.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/GetObjectSignedUrl.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

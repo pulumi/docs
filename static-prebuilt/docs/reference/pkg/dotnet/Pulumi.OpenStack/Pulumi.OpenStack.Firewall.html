@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.Firewall
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,46 @@
   </h3>
       <h4><a class="xref" href="Pulumi.OpenStack.Firewall.Firewall.html">Firewall</a></h4>
       <section><p>Manages a v1 firewall resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rule1 = new OpenStack.Firewall.Rule(&amp;quot;rule1&amp;quot;, new OpenStack.Firewall.RuleArgs
+    {
+        Action = &amp;quot;deny&amp;quot;,
+        Description = &amp;quot;drop TELNET traffic&amp;quot;,
+        DestinationPort = &amp;quot;23&amp;quot;,
+        Enabled = &amp;quot;true&amp;quot;,
+        Protocol = &amp;quot;tcp&amp;quot;,
+    });
+    var rule2 = new OpenStack.Firewall.Rule(&amp;quot;rule2&amp;quot;, new OpenStack.Firewall.RuleArgs
+    {
+        Action = &amp;quot;deny&amp;quot;,
+        Description = &amp;quot;drop NTP traffic&amp;quot;,
+        DestinationPort = &amp;quot;123&amp;quot;,
+        Enabled = &amp;quot;false&amp;quot;,
+        Protocol = &amp;quot;udp&amp;quot;,
+    });
+    var policy1 = new OpenStack.Firewall.Policy(&amp;quot;policy1&amp;quot;, new OpenStack.Firewall.PolicyArgs
+    {
+        Rules = 
+        {
+            rule1.Id,
+            rule2.Id,
+        },
+    });
+    var firewall1 = new OpenStack.Firewall.Firewall(&amp;quot;firewall1&amp;quot;, new OpenStack.Firewall.FirewallArgs
+    {
+        PolicyId = policy1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Firewall.FirewallArgs.html">FirewallArgs</a></h4>
       <section></section>
@@ -91,6 +131,42 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Firewall.Policy.html">Policy</a></h4>
       <section><p>Manages a v1 firewall policy resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rule1 = new OpenStack.Firewall.Rule(&amp;quot;rule1&amp;quot;, new OpenStack.Firewall.RuleArgs
+    {
+        Action = &amp;quot;deny&amp;quot;,
+        Description = &amp;quot;drop TELNET traffic&amp;quot;,
+        DestinationPort = &amp;quot;23&amp;quot;,
+        Enabled = &amp;quot;true&amp;quot;,
+        Protocol = &amp;quot;tcp&amp;quot;,
+    });
+    var rule2 = new OpenStack.Firewall.Rule(&amp;quot;rule2&amp;quot;, new OpenStack.Firewall.RuleArgs
+    {
+        Action = &amp;quot;deny&amp;quot;,
+        Description = &amp;quot;drop NTP traffic&amp;quot;,
+        DestinationPort = &amp;quot;123&amp;quot;,
+        Enabled = &amp;quot;false&amp;quot;,
+        Protocol = &amp;quot;udp&amp;quot;,
+    });
+    var policy1 = new OpenStack.Firewall.Policy(&amp;quot;policy1&amp;quot;, new OpenStack.Firewall.PolicyArgs
+    {
+        Rules = 
+        {
+            rule1.Id,
+            rule2.Id,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Firewall.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
@@ -98,6 +174,26 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Firewall.Rule.html">Rule</a></h4>
       <section><p>Manages a v1 firewall rule resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rule1 = new OpenStack.Firewall.Rule(&amp;quot;rule1&amp;quot;, new OpenStack.Firewall.RuleArgs
+    {
+        Action = &amp;quot;deny&amp;quot;,
+        Description = &amp;quot;drop TELNET traffic&amp;quot;,
+        DestinationPort = &amp;quot;23&amp;quot;,
+        Enabled = &amp;quot;true&amp;quot;,
+        Protocol = &amp;quot;tcp&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Firewall.RuleArgs.html">RuleArgs</a></h4>
       <section></section>

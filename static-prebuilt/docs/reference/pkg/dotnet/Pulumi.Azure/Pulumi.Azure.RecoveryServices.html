@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.RecoveryServices
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,29 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.RecoveryServices.Vault.html">Vault</a></h4>
       <section><p>Manages an Recovery Services Vault.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rg = new Azure.Core.ResourceGroup(&amp;quot;rg&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var vault = new Azure.RecoveryServices.Vault(&amp;quot;vault&amp;quot;, new Azure.RecoveryServices.VaultArgs
+    {
+        Location = rg.Location,
+        ResourceGroupName = rg.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+        SoftDeleteEnabled = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.RecoveryServices.VaultArgs.html">VaultArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.ElasticSearch
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -96,6 +96,36 @@
 <blockquote>
 <p><strong>NOTE:</strong> At present, <code>version</code> can not be modified once instance has been created.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new AliCloud.ElasticSearch.Instance(&amp;quot;instance&amp;quot;, new AliCloud.ElasticSearch.InstanceArgs
+    {
+        InstanceChargeType = &amp;quot;PostPaid&amp;quot;,
+        DataNodeAmount = &amp;quot;2&amp;quot;,
+        DataNodeSpec = &amp;quot;elasticsearch.sn2ne.large&amp;quot;,
+        DataNodeDiskSize = &amp;quot;20&amp;quot;,
+        DataNodeDiskType = &amp;quot;cloud_ssd&amp;quot;,
+        VswitchId = &amp;quot;some vswitch id&amp;quot;,
+        Password = &amp;quot;Your password&amp;quot;,
+        Version = &amp;quot;5.5.3_with_X-Pack&amp;quot;,
+        Description = &amp;quot;description&amp;quot;,
+        ZoneCount = &amp;quot;2&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;key1&amp;quot;, &amp;quot;value1&amp;quot; },
+            { &amp;quot;key2&amp;quot;, &amp;quot;value2&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.ElasticSearch.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Grant
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,135 @@
   </h1>
   <div class="markdown level0 summary"><p>The <code>mysql..Grant</code> resource creates and manages privileges given to
 a user on a MySQL server.</p>
+<h2 id="granting-privileges-to-a-user">Granting Privileges to a User</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var jdoeUser = new MySql.User(&amp;quot;jdoeUser&amp;quot;, new MySql.UserArgs
+    {
+        Host = &amp;quot;example.com&amp;quot;,
+        PlaintextPassword = &amp;quot;password&amp;quot;,
+        User = &amp;quot;jdoe&amp;quot;,
+    });
+    var jdoeGrant = new MySql.Grant(&amp;quot;jdoeGrant&amp;quot;, new MySql.GrantArgs
+    {
+        Database = &amp;quot;app&amp;quot;,
+        Host = jdoeUser.Host,
+        Privileges = 
+        {
+            &amp;quot;SELECT&amp;quot;,
+            &amp;quot;UPDATE&amp;quot;,
+        },
+        User = jdoeUser.UserName,
+    });
+}
+
+}
+</code></pre>
+<h2 id="granting-privileges-to-a-role">Granting Privileges to a Role</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var developerRole = new MySql.Role(&amp;quot;developerRole&amp;quot;, new MySql.RoleArgs
+    {
+    });
+    var developerGrant = new MySql.Grant(&amp;quot;developerGrant&amp;quot;, new MySql.GrantArgs
+    {
+        Database = &amp;quot;app&amp;quot;,
+        Privileges = 
+        {
+            &amp;quot;SELECT&amp;quot;,
+            &amp;quot;UPDATE&amp;quot;,
+        },
+        Role = developerRole.Name,
+    });
+}
+
+}
+</code></pre>
+<h2 id="adding-a-role-to-a-user">Adding a Role to a User</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var jdoe = new MySql.User(&amp;quot;jdoe&amp;quot;, new MySql.UserArgs
+    {
+        Host = &amp;quot;example.com&amp;quot;,
+        PlaintextPassword = &amp;quot;password&amp;quot;,
+        User = &amp;quot;jdoe&amp;quot;,
+    });
+    var developerRole = new MySql.Role(&amp;quot;developerRole&amp;quot;, new MySql.RoleArgs
+    {
+    });
+    var developerGrant = new MySql.Grant(&amp;quot;developerGrant&amp;quot;, new MySql.GrantArgs
+    {
+        Database = &amp;quot;app&amp;quot;,
+        Host = jdoe.Host,
+        Roles = 
+        {
+            developerRole.Name,
+        },
+        User = jdoe.UserName,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Grant</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Grant</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.MySql.html">Pulumi.MySql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.MySql.dll</h6>
@@ -89,16 +212,16 @@ a user on a MySQL server.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_MySql_Grant__ctor_" data-uid="Pulumi.MySql.Grant.#ctor*"></a>
-  <h4 id="Pulumi_MySql_Grant__ctor_System_String_Pulumi_MySql_GrantArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.MySql.Grant.#ctor(System.String,Pulumi.MySql.GrantArgs,System.Nullable{CustomResourceOptions})">Grant(String, GrantArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_MySql_Grant__ctor_System_String_Pulumi_MySql_GrantArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.MySql.Grant.#ctor(System.String,Pulumi.MySql.GrantArgs,Pulumi.CustomResourceOptions)">Grant(String, GrantArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Grant resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Grant(string name, GrantArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Grant(string name, GrantArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +246,7 @@ a user on a MySQL server.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +256,7 @@ a user on a MySQL server.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_MySql_Grant_Database_" data-uid="Pulumi.MySql.Grant.Database*"></a>
   <h4 id="Pulumi_MySql_Grant_Database" data-uid="Pulumi.MySql.Grant.Database">Database</h4>
@@ -154,13 +277,13 @@ a user on a MySQL server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_MySql_Grant_GrantName_" data-uid="Pulumi.MySql.Grant.GrantName*"></a>
   <h4 id="Pulumi_MySql_Grant_GrantName" data-uid="Pulumi.MySql.Grant.GrantName">GrantName</h4>
@@ -181,13 +304,13 @@ a user on a MySQL server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_MySql_Grant_Host_" data-uid="Pulumi.MySql.Grant.Host*"></a>
   <h4 id="Pulumi_MySql_Grant_Host" data-uid="Pulumi.MySql.Grant.Host">Host</h4>
@@ -196,7 +319,7 @@ a user on a MySQL server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Host { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Host { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +331,13 @@ a user on a MySQL server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_MySql_Grant_Privileges_" data-uid="Pulumi.MySql.Grant.Privileges*"></a>
   <h4 id="Pulumi_MySql_Grant_Privileges" data-uid="Pulumi.MySql.Grant.Privileges">Privileges</h4>
@@ -235,13 +358,13 @@ a user on a MySQL server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_MySql_Grant_Role_" data-uid="Pulumi.MySql.Grant.Role*"></a>
   <h4 id="Pulumi_MySql_Grant_Role" data-uid="Pulumi.MySql.Grant.Role">Role</h4>
@@ -250,7 +373,7 @@ a user on a MySQL server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Role { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Role { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +385,13 @@ a user on a MySQL server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_MySql_Grant_Roles_" data-uid="Pulumi.MySql.Grant.Roles*"></a>
   <h4 id="Pulumi_MySql_Grant_Roles" data-uid="Pulumi.MySql.Grant.Roles">Roles</h4>
@@ -289,13 +412,13 @@ a user on a MySQL server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_MySql_Grant_Table_" data-uid="Pulumi.MySql.Grant.Table*"></a>
   <h4 id="Pulumi_MySql_Grant_Table" data-uid="Pulumi.MySql.Grant.Table">Table</h4>
@@ -304,7 +427,7 @@ a user on a MySQL server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Table { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Table { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,13 +439,13 @@ a user on a MySQL server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_MySql_Grant_TlsOption_" data-uid="Pulumi.MySql.Grant.TlsOption*"></a>
   <h4 id="Pulumi_MySql_Grant_TlsOption" data-uid="Pulumi.MySql.Grant.TlsOption">TlsOption</h4>
@@ -331,7 +454,7 @@ a user on a MySQL server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TlsOption { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TlsOption { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,13 +466,13 @@ a user on a MySQL server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_MySql_Grant_User_" data-uid="Pulumi.MySql.Grant.User*"></a>
   <h4 id="Pulumi_MySql_Grant_User" data-uid="Pulumi.MySql.Grant.User">User</h4>
@@ -358,7 +481,7 @@ a user on a MySQL server.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; User { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; User { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -370,7 +493,7 @@ a user on a MySQL server.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -378,17 +501,17 @@ a user on a MySQL server.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_MySql_Grant_Get_" data-uid="Pulumi.MySql.Grant.Get*"></a>
-  <h4 id="Pulumi_MySql_Grant_Get_System_String_Input_System_String__Pulumi_MySql_GrantState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.MySql.Grant.Get(System.String,Input{System.String},Pulumi.MySql.GrantState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GrantState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_MySql_Grant_Get_System_String_Pulumi_Input_System_String__Pulumi_MySql_GrantState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.MySql.Grant.Get(System.String,Pulumi.Input{System.String},Pulumi.MySql.GrantState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, GrantState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Grant resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Grant Get(string name, Input&lt;string&gt; id, GrantState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Grant Get(string name, Input&lt;string&gt; id, GrantState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -407,7 +530,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -419,7 +542,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -448,7 +571,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-mysql/blob/c53e36765587de626a55914e9509b32fb6976310/sdk/dotnet/Grant.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-mysql/blob/master/sdk/dotnet/Grant.cs/#L110" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

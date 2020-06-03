@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Linode
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,12 +79,71 @@
       <h4><a class="xref" href="Pulumi.Linode.Config.html">Config</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.Domain.html">Domain</a></h4>
-      <section></section>
+      <section><p>Provides a Linode Domain resource.  This can be used to create, modify, and delete Linode Domains through Linode's managed DNS service.
+For more information, see <a href="https://www.linode.com/docs/platform/manager/dns-manager/">DNS Manager</a> and the <a href="https://developers.linode.com/api/v4#operation/createDomain">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobarDomain = new Linode.Domain(&amp;quot;foobarDomain&amp;quot;, new Linode.DomainArgs
+    {
+        Domain = &amp;quot;foobar.example&amp;quot;,
+        SoaEmail = &amp;quot;example@foobar.example&amp;quot;,
+        Tags = 
+        {
+            &amp;quot;foo&amp;quot;,
+            &amp;quot;bar&amp;quot;,
+        },
+        Type = &amp;quot;master&amp;quot;,
+    });
+    var foobarDomainRecord = new Linode.DomainRecord(&amp;quot;foobarDomainRecord&amp;quot;, new Linode.DomainRecordArgs
+    {
+        DomainId = foobarDomain.Id,
+        Name = &amp;quot;www&amp;quot;,
+        RecordType = &amp;quot;CNAME&amp;quot;,
+        Target = &amp;quot;foobar.example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This resource exports no additional attributes, however <code>status</code> may reflect degraded states.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Linode.DomainArgs.html">DomainArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.DomainRecord.html">DomainRecord</a></h4>
       <section><p>Provides a Linode Domain Record resource.  This can be used to create, modify, and delete Linodes Domain Records.
 For more information, see <a href="https://www.linode.com/docs/platform/manager/dns-manager/">DNS Manager</a> and the <a href="https://developers.linode.com/api/v4#operation/createDomainRecord">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobarDomain = new Linode.Domain(&amp;quot;foobarDomain&amp;quot;, new Linode.DomainArgs
+    {
+        Domain = &amp;quot;foobar.example&amp;quot;,
+        SoaEmail = &amp;quot;example@foobar.example&amp;quot;,
+        Type = &amp;quot;master&amp;quot;,
+    });
+    var foobarDomainRecord = new Linode.DomainRecord(&amp;quot;foobarDomainRecord&amp;quot;, new Linode.DomainRecordArgs
+    {
+        DomainId = foobarDomain.Id,
+        Name = &amp;quot;www&amp;quot;,
+        RecordType = &amp;quot;CNAME&amp;quot;,
+        Target = &amp;quot;foobar.example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h2 id="attributes">Attributes</h2>
 <p>This resource exports no additional attributes.</p>
 </section>
@@ -93,6 +152,16 @@ For more information, see <a href="https://www.linode.com/docs/platform/manager/
       <h4><a class="xref" href="Pulumi.Linode.DomainRecordState.html">DomainRecordState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.DomainState.html">DomainState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Linode.Firewall.html">Firewall</a></h4>
+      <section><blockquote>
+<p><strong>NOTICE:</strong> The Firewall feature is currently available through early access.</p>
+</blockquote>
+<p>Manages a Linode Firewall.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Linode.FirewallArgs.html">FirewallArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Linode.FirewallState.html">FirewallState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.GetAccount.html">GetAccount</a></h4>
       <section></section>
@@ -171,6 +240,36 @@ For more information, see <a href="https://www.linode.com/docs/platform/manager/
       <h4><a class="xref" href="Pulumi.Linode.Image.html">Image</a></h4>
       <section><p>Provides a Linode Image resource.  This can be used to create, modify, and delete Linodes Images.  Linode Images are snapshots of a Linode Instance Disk which can then be used to provision more Linode Instances.  Images can be used across regions.</p>
 <p>For more information, see <a href="https://www.linode.com/docs/platform/disk-images/linode-images/">Linode's documentation on Images</a> and the <a href="https://developers.linode.com/api/v4#operation/createImage">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Linode.Instance(&amp;quot;foo&amp;quot;, new Linode.InstanceArgs
+    {
+        Region = &amp;quot;us-central&amp;quot;,
+        Type = &amp;quot;g6-nanode-1&amp;quot;,
+    });
+    var bar = new Linode.Image(&amp;quot;bar&amp;quot;, new Linode.ImageArgs
+    {
+        Description = &amp;quot;Image taken from foo&amp;quot;,
+        DiskId = foo.Disks.Apply(disks =&gt; disks[0].Id),
+        Label = &amp;quot;foo-sda-image&amp;quot;,
+        LinodeId = foo.Id,
+    });
+    var barBased = new Linode.Instance(&amp;quot;barBased&amp;quot;, new Linode.InstanceArgs
+    {
+        Image = bar.Id,
+        Region = &amp;quot;eu-west&amp;quot;,
+        Type = foo.Type,
+    });
+}
+
+}
+</code></pre>
 <h2 id="attributes">Attributes</h2>
 <p>This resource exports the following attributes:</p>
 <ul>
@@ -199,23 +298,349 @@ For more information, see <a href="https://www.linode.com/docs/platform/manager/
       <h4><a class="xref" href="Pulumi.Linode.ImageState.html">ImageState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.Instance.html">Instance</a></h4>
-      <section></section>
+      <section><p>Provides a Linode Instance resource.  This can be used to create, modify, and delete Linodes.
+For more information, see <a href="https://linode.com/docs/getting-started/">Getting Started with Linode</a> and the <a href="https://developers.linode.com/api/v4#operation/createLinodeInstance">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="simple-linode-instance">Simple Linode Instance</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var web = new Linode.Instance(&amp;quot;web&amp;quot;, new Linode.InstanceArgs
+    {
+        AuthorizedKeys = 
+        {
+            &amp;quot;ssh-rsa AAAA...Gw== user@example.local&amp;quot;,
+        },
+        Group = &amp;quot;foo&amp;quot;,
+        Image = &amp;quot;linode/ubuntu18.04&amp;quot;,
+        Label = &amp;quot;simple_instance&amp;quot;,
+        PrivateIp = true,
+        Region = &amp;quot;us-central&amp;quot;,
+        RootPass = &amp;quot;terr4form-test&amp;quot;,
+        SwapSize = 256,
+        Tags = 
+        {
+            &amp;quot;foo&amp;quot;,
+        },
+        Type = &amp;quot;g6-standard-1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="linode-instance-with-explicit-configs-and-disks">Linode Instance with explicit Configs and Disks</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var me = Output.Create(Linode.GetProfile.InvokeAsync());
+    var webVolume = new Linode.Volume(&amp;quot;webVolume&amp;quot;, new Linode.VolumeArgs
+    {
+        Label = &amp;quot;web_volume&amp;quot;,
+        Region = &amp;quot;us-central&amp;quot;,
+        Size = 20,
+    });
+    var web = new Linode.Instance(&amp;quot;web&amp;quot;, new Linode.InstanceArgs
+    {
+        BootConfigLabel = &amp;quot;boot_config&amp;quot;,
+        Configs = 
+        {
+            new Linode.Inputs.InstanceConfigArgs
+            {
+                Devices = new Linode.Inputs.InstanceConfigDevicesArgs
+                {
+                    Sda = new Linode.Inputs.InstanceConfigDevicesSdaArgs
+                    {
+                        DiskLabel = &amp;quot;boot&amp;quot;,
+                    },
+                    Sdb = new Linode.Inputs.InstanceConfigDevicesSdbArgs
+                    {
+                        VolumeId = webVolume.Id,
+                    },
+                },
+                Kernel = &amp;quot;linode/latest-64bit&amp;quot;,
+                Label = &amp;quot;boot_config&amp;quot;,
+                RootDevice = &amp;quot;/dev/sda&amp;quot;,
+            },
+        },
+        Disks = 
+        {
+            new Linode.Inputs.InstanceDiskArgs
+            {
+                AuthorizedKeys = 
+                {
+                    &amp;quot;ssh-rsa AAAA...Gw== user@example.local&amp;quot;,
+                },
+                AuthorizedUsers = 
+                {
+                    me.Apply(me =&gt; me.Username),
+                },
+                Image = &amp;quot;linode/ubuntu18.04&amp;quot;,
+                Label = &amp;quot;boot&amp;quot;,
+                RootPass = &amp;quot;terr4form-test&amp;quot;,
+                Size = 3000,
+            },
+        },
+        Group = &amp;quot;foo&amp;quot;,
+        Label = &amp;quot;complex_instance&amp;quot;,
+        PrivateIp = true,
+        Region = &amp;quot;us-central&amp;quot;,
+        Tags = 
+        {
+            &amp;quot;foo&amp;quot;,
+        },
+        Type = &amp;quot;g6-nanode-1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This Linode Instance resource exports the following attributes:</p>
+<ul>
+<li><p><code>status</code> - The status of the instance, indicating the current readiness state. (<code>running</code>, <code>offline</code>, ...)</p>
+</li>
+<li><p><code>ip_address</code> - A string containing the Linode's public IP address.</p>
+</li>
+<li><p><code>private_ip_address</code> - This Linode's Private IPv4 Address, if enabled.  The regional private IP address range, 192.168.128.0/17, is shared by all Linode Instances in a region.</p>
+</li>
+<li><p><code>ipv6</code> - This Linode's IPv6 SLAAC addresses. This address is specific to a Linode, and may not be shared.  The prefix (<code>/64</code>) is included in this attribute.</p>
+</li>
+<li><p><code>ipv4</code> - This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may get a single private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.</p>
+</li>
+<li><p><code>specs.0.disk</code> -  The amount of storage space, in GB. this Linode has access to. A typical Linode will divide this space between a primary disk with an image deployed to it, and a swap disk, usually 512 MB. This is the default configuration created when deploying a Linode with an image through POST /linode/instances.</p>
+</li>
+<li><p><code>specs.0.memory</code> - The amount of RAM, in MB, this Linode has access to. Typically a Linode will choose to boot with all of its available RAM, but this can be configured in a Config profile.</p>
+</li>
+<li><p><code>specs.0.vcpus</code> - The number of vcpus this Linode has access to. Typically a Linode will choose to boot with all of its available vcpus, but this can be configured in a Config Profile.</p>
+</li>
+<li><p><code>specs.0.transfer</code> - The amount of network transfer this Linode is allotted each month.</p>
+</li>
+<li><p><code>backups</code> - Information about this Linode's backups status.</p>
+</li>
+<li><p><code>enabled</code> - If this Linode has the Backup service enabled.</p>
+</li>
+<li><p><code>schedule</code></p>
+</li>
+<li><p><code>day</code> -  The day of the week that your Linode's weekly Backup is taken. If not set manually, a day will be chosen for you. Backups are taken every day, but backups taken on this day are preferred when selecting backups to retain for a longer period.  If not set manually, then when backups are initially enabled, this may come back as &quot;Scheduling&quot; until the day is automatically selected.</p>
+</li>
+<li><p><code>window</code> - The window ('W0'-'W22') in which your backups will be taken, in UTC. A backups window is a two-hour span of time in which the backup may occur. For example, 'W10' indicates that your backups should be taken between 10:00 and 12:00. If you do not choose a backup window, one will be selected for you automatically.  If not set manually, when backups are initially enabled this may come back as Scheduling until the window is automatically selected.</p>
+</li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Linode.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.InstanceState.html">InstanceState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Linode.NodeBalancer.html">NodeBalancer</a></h4>
+      <h4><a class="xref" href="Pulumi.Linode.LkeCluster.html">LkeCluster</a></h4>
+      <section><p>Manages an LKE cluster.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_cluster = new Linode.LkeCluster(&amp;quot;my-cluster&amp;quot;, new Linode.LkeClusterArgs
+    {
+        K8sVersion = &amp;quot;1.17&amp;quot;,
+        Label = &amp;quot;my-cluster&amp;quot;,
+        Pools = 
+        {
+            new Linode.Inputs.LkeClusterPoolArgs
+            {
+                Count = 3,
+                Type = &amp;quot;g6-standard-2&amp;quot;,
+            },
+        },
+        Region = &amp;quot;us-central&amp;quot;,
+        Tags = 
+        {
+            &amp;quot;prod&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Linode.LkeClusterArgs.html">LkeClusterArgs</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Linode.LkeClusterState.html">LkeClusterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Linode.NodeBalancer.html">NodeBalancer</a></h4>
+      <section><p>Provides a Linode NodeBalancer resource.  This can be used to create, modify, and delete Linodes NodeBalancers in Linode's managed load balancer service.
+For more information, see <a href="https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/">Getting Started with NodeBalancers</a> and the <a href="https://developers.linode.com/api/v4#operation/createNodeBalancer">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new Linode.NodeBalancer(&amp;quot;foobar&amp;quot;, new Linode.NodeBalancerArgs
+    {
+        ClientConnThrottle = 20,
+        Label = &amp;quot;mynodebalancer&amp;quot;,
+        Region = &amp;quot;us-east&amp;quot;,
+        Tags = 
+        {
+            &amp;quot;foobar&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This resource exports the following attributes:</p>
+<ul>
+<li><p><code>hostname</code> - This NodeBalancer's hostname, ending with .nodebalancer.linode.com</p>
+</li>
+<li><p><code>ipv4</code> - The Public IPv4 Address of this NodeBalancer</p>
+</li>
+<li><p><code>ipv6</code> - The Public IPv6 Address of this NodeBalancer</p>
+</li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Linode.NodeBalancerArgs.html">NodeBalancerArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.NodeBalancerConfig.html">NodeBalancerConfig</a></h4>
-      <section></section>
+      <section><p>Provides a Linode NodeBalancer Config resource.  This can be used to create, modify, and delete Linodes NodeBalancer Configs.
+For more information, see <a href="https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/">Getting Started with NodeBalancers</a> and the <a href="https://developers.linode.com/api/v4#operation/createNodeBalancerConfig">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new Linode.NodeBalancer(&amp;quot;foobar&amp;quot;, new Linode.NodeBalancerArgs
+    {
+        ClientConnThrottle = 20,
+        Label = &amp;quot;mynodebalancer&amp;quot;,
+        Region = &amp;quot;us-east&amp;quot;,
+    });
+    var foofig = new Linode.NodeBalancerConfig(&amp;quot;foofig&amp;quot;, new Linode.NodeBalancerConfigArgs
+    {
+        Algorithm = &amp;quot;source&amp;quot;,
+        Check = &amp;quot;http&amp;quot;,
+        CheckAttempts = 3,
+        CheckPath = &amp;quot;/foo&amp;quot;,
+        CheckTimeout = 30,
+        NodebalancerId = foobar.Id,
+        Port = 8088,
+        Protocol = &amp;quot;http&amp;quot;,
+        Stickiness = &amp;quot;http_cookie&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This resource exports the following attributes:</p>
+<ul>
+<li><p><code>ssl_commonname</code> - The common name for the SSL certification this port is serving if this port is not configured to use SSL.</p>
+</li>
+<li><p><code>ssl_fingerprint</code> - The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.</p>
+</li>
+<li><p><code>node_status_up</code> - The number of backends considered to be 'UP' and healthy, and that are serving requests.</p>
+</li>
+<li><p><code>node_status_down</code> - The number of backends considered to be 'DOWN' and unhealthy. These are not in rotation, and not serving requests.</p>
+</li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Linode.NodeBalancerConfigArgs.html">NodeBalancerConfigArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.NodeBalancerConfigState.html">NodeBalancerConfigState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.NodeBalancerNode.html">NodeBalancerNode</a></h4>
-      <section></section>
+      <section><p>Provides a Linode NodeBalancer Node resource.  This can be used to create, modify, and delete Linodes NodeBalancer Nodes.
+For more information, see <a href="https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/">Getting Started with NodeBalancers</a> and the <a href="https://developers.linode.com/api/v4#operation/createNodeBalancerNode">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var web = new List&amp;lt;Linode.Instance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 3; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        web.Add(new Linode.Instance($&amp;quot;web-{range.Value}&amp;quot;, new Linode.InstanceArgs
+        {
+            AuthorizedKeys = 
+            {
+                &amp;quot;ssh-rsa AAAA...Gw== user@example.local&amp;quot;,
+            },
+            Image = &amp;quot;linode/ubuntu18.04&amp;quot;,
+            Label = $&amp;quot;web-{range.Value + 1}&amp;quot;,
+            PrivateIp = true,
+            Region = &amp;quot;us-east&amp;quot;,
+            RootPass = &amp;quot;test&amp;quot;,
+            Type = &amp;quot;g6-standard-1&amp;quot;,
+        }));
+    }
+    var foobar = new Linode.NodeBalancer(&amp;quot;foobar&amp;quot;, new Linode.NodeBalancerArgs
+    {
+        ClientConnThrottle = 20,
+        Label = &amp;quot;mynodebalancer&amp;quot;,
+        Region = &amp;quot;us-east&amp;quot;,
+    });
+    var foofig = new Linode.NodeBalancerConfig(&amp;quot;foofig&amp;quot;, new Linode.NodeBalancerConfigArgs
+    {
+        Algorithm = &amp;quot;source&amp;quot;,
+        Check = &amp;quot;http&amp;quot;,
+        CheckAttempts = 3,
+        CheckPath = &amp;quot;/foo&amp;quot;,
+        CheckTimeout = 30,
+        NodebalancerId = foobar.Id,
+        Port = 80,
+        Protocol = &amp;quot;http&amp;quot;,
+        Stickiness = &amp;quot;http_cookie&amp;quot;,
+    });
+    var foonode = new List&amp;lt;Linode.NodeBalancerNode&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 3; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        foonode.Add(new Linode.NodeBalancerNode($&amp;quot;foonode-{range.Value}&amp;quot;, new Linode.NodeBalancerNodeArgs
+        {
+            Address = web.Select(__item =&gt; __item.PrivateIpAddress).ToList()[range.Value].Apply(privateIpAddresses =&gt; $&amp;quot;{privateIpAddresses}:80&amp;quot;),
+            ConfigId = foofig.Id,
+            Label = &amp;quot;mynodebalancernode&amp;quot;,
+            NodebalancerId = foobar.Id,
+            Weight = 50,
+        }));
+    }
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This resource exports the following attributes:</p>
+<ul>
+<li><p><code>status</code> - The current status of this node, based on the configured checks of its NodeBalancer Config. (unknown, UP, DOWN).</p>
+</li>
+<li><p><code>config_id</code> - The ID of the NodeBalancerConfig this NodeBalancerNode is attached to.</p>
+</li>
+<li><p><code>nodebalancer_id</code> - The ID of the NodeBalancer this NodeBalancerNode is attached to.</p>
+</li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Linode.NodeBalancerNodeArgs.html">NodeBalancerNodeArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.NodeBalancerNodeState.html">NodeBalancerNodeState</a></h4>
@@ -224,6 +649,27 @@ For more information, see <a href="https://www.linode.com/docs/platform/manager/
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.ObjectStorageBucket.html">ObjectStorageBucket</a></h4>
       <section><p>Provides a Linode Object Storage Bucket resource. This can be used to create, modify, and delete Linodes Object Storage Buckets.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primary = Output.Create(Linode.GetObjectStorageCluster.InvokeAsync(new Linode.GetObjectStorageClusterArgs
+    {
+        Id = &amp;quot;us-east-1&amp;quot;,
+    }));
+    var foobar = new Linode.ObjectStorageBucket(&amp;quot;foobar&amp;quot;, new Linode.ObjectStorageBucketArgs
+    {
+        Cluster = primary.Apply(primary =&gt; primary.Id),
+        Label = &amp;quot;%s&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Linode.ObjectStorageBucketArgs.html">ObjectStorageBucketArgs</a></h4>
       <section></section>
@@ -231,6 +677,22 @@ For more information, see <a href="https://www.linode.com/docs/platform/manager/
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.ObjectStorageKey.html">ObjectStorageKey</a></h4>
       <section><p>Provides a Linode Object Storage Key resource. This can be used to create, modify, and delete Linodes Object Storage Keys.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Linode.ObjectStorageKey(&amp;quot;foo&amp;quot;, new Linode.ObjectStorageKeyArgs
+    {
+        Label = &amp;quot;image-access&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h2 id="attributes">Attributes</h2>
 <p>This resource exports the following attributes:</p>
 <ul>
@@ -275,13 +737,122 @@ For more information, see the <a href="https://developers.linode.com/api/v4#oper
       <h4><a class="xref" href="Pulumi.Linode.SshKeyState.html">SshKeyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.StackScript.html">StackScript</a></h4>
-      <section></section>
+      <section><p>Provides a Linode StackScript resource.  This can be used to create, modify, and delete Linode StackScripts.  StackScripts are private or public managed scripts which run within an instance during startup.  StackScripts can include variables whose values are specified when the Instance is created.</p>
+<p>For more information, see <a href="https://www.linode.com/docs/platform/stackscripts/">Automate Deployment with StackScripts</a> and the <a href="https://developers.linode.com/api/v4#tag/StackScripts">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fooStackScript = new Linode.StackScript(&amp;quot;fooStackScript&amp;quot;, new Linode.StackScriptArgs
+    {
+        Description = &amp;quot;Installs a Package&amp;quot;,
+        Images = 
+        {
+            &amp;quot;linode/ubuntu18.04&amp;quot;,
+            &amp;quot;linode/ubuntu16.04lts&amp;quot;,
+        },
+        Label = &amp;quot;foo&amp;quot;,
+        RevNote = &amp;quot;initial version&amp;quot;,
+        Script = @&amp;quot;#!/bin/bash
+# &amp;lt;UDF name=&amp;quot;&amp;quot;package&amp;quot;&amp;quot; label=&amp;quot;&amp;quot;System Package to Install&amp;quot;&amp;quot; example=&amp;quot;&amp;quot;nginx&amp;quot;&amp;quot; default=&amp;quot;&amp;quot;&amp;quot;&amp;quot;&gt;
+apt-get -q update &amp;amp;&amp;amp; apt-get -q -y install $$PACKAGE
+
+&amp;quot;,
+    });
+    var fooInstance = new Linode.Instance(&amp;quot;fooInstance&amp;quot;, new Linode.InstanceArgs
+    {
+        AuthorizedKeys = 
+        {
+            &amp;quot;...&amp;quot;,
+        },
+        Image = &amp;quot;linode/ubuntu18.04&amp;quot;,
+        Label = &amp;quot;foo&amp;quot;,
+        Region = &amp;quot;us-east&amp;quot;,
+        RootPass = &amp;quot;...&amp;quot;,
+        StackscriptData = 
+        {
+            { &amp;quot;package&amp;quot;, &amp;quot;nginx&amp;quot; },
+        },
+        StackscriptId = linode_stackscript.Install_nginx.Id,
+        Type = &amp;quot;g6-nanode-1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This resource exports the following attributes:</p>
+<ul>
+<li><p><code>deployments_active</code> - Count of currently active, deployed Linodes created from this StackScript.</p>
+</li>
+<li><p><code>user_gravatar_id</code> - The Gravatar ID for the User who created the StackScript.</p>
+</li>
+<li><p><code>deployments_total</code> - The total number of times this StackScript has been deployed.</p>
+</li>
+<li><p><code>username</code> - The User who created the StackScript.</p>
+</li>
+<li><p><code>created</code> - The date this StackScript was created.</p>
+</li>
+<li><p><code>updated</code> - The date this StackScript was updated.</p>
+</li>
+<li><p><code>user_defined_fields</code> - This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized parameters during deployment.</p>
+</li>
+<li><p><code>label</code> - A human-readable label for the field that will serve as the input prompt for entering the value during deployment.</p>
+</li>
+<li><p><code>name</code> - The name of the field.</p>
+</li>
+<li><p><code>example</code> - An example value for the field.</p>
+</li>
+<li><p><code>one_of</code> - A list of acceptable single values for the field.</p>
+</li>
+<li><p><code>many_of</code> - A list of acceptable values for the field in any quantity, combination or order.</p>
+</li>
+<li><p><code>default</code> - The default value. If not specified, this value will be used.</p>
+</li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Linode.StackScriptArgs.html">StackScriptArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.StackScriptState.html">StackScriptState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.Token.html">Token</a></h4>
-      <section></section>
+      <section><p>Provides a Linode Token resource.  This can be used to create, modify, and delete Linode API Personal Access Tokens.  Personal Access Tokens proxy user credentials for Linode API access.  This is necessary for tools, to interact with Linode services on a user's behalf.</p>
+<p>It is common for the provider itself to be configured with broadly scoped Personal Access Tokens.  Provisioning scripts or tools configured within a Linode Instance should follow the principle of least privilege to afford only the required roles for tools to perform their necessary tasks.  The <code>linode..Token</code> resource allows for the management of Personal Access Tokens with scopes mirroring or narrowing the scope of the parent token.</p>
+<p>For more information, see the <a href="https://developers.linode.com/api/v4#operation/getTokens">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fooToken = new Linode.Token(&amp;quot;fooToken&amp;quot;, new Linode.TokenArgs
+    {
+        Expiry = &amp;quot;2100-01-02T03:04:05Z&amp;quot;,
+        Label = &amp;quot;token&amp;quot;,
+        Scopes = &amp;quot;linodes:read_only&amp;quot;,
+    });
+    var fooInstance = new Linode.Instance(&amp;quot;fooInstance&amp;quot;, new Linode.InstanceArgs
+    {
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This resource exports the following attributes:</p>
+<ul>
+<li><p><code>token</code> - The token used to access the API.</p>
+</li>
+<li><p><code>created</code> - The date this Token was created.</p>
+</li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Linode.TokenArgs.html">TokenArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Linode.TokenState.html">TokenState</a></h4>
@@ -289,6 +860,34 @@ For more information, see the <a href="https://developers.linode.com/api/v4#oper
       <h4><a class="xref" href="Pulumi.Linode.Volume.html">Volume</a></h4>
       <section><p>Provides a Linode Volume resource.  This can be used to create, modify, and delete Linodes Block Storage Volumes.  Block Storage Volumes are removable storage disks that persist outside the life-cycle of Linode Instances. These volumes can be attached to and detached from Linode instances throughout a region.</p>
 <p>For more information, see <a href="https://www.linode.com/docs/platform/block-storage/how-to-use-block-storage-with-your-linode/">How to Use Block Storage with Your Linode</a> and the <a href="https://developers.linode.com/api/v4#operation/createVolume">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobaz = new Linode.Instance(&amp;quot;foobaz&amp;quot;, new Linode.InstanceArgs
+    {
+        Region = &amp;quot;us-west&amp;quot;,
+        RootPass = &amp;quot;3X4mp13&amp;quot;,
+        Tags = 
+        {
+            &amp;quot;foobaz&amp;quot;,
+        },
+        Type = &amp;quot;g6-nanode-1&amp;quot;,
+    });
+    var foobar = new Linode.Volume(&amp;quot;foobar&amp;quot;, new Linode.VolumeArgs
+    {
+        Label = &amp;quot;foo-volume&amp;quot;,
+        LinodeId = foobaz.Id,
+        Region = foobaz.Region,
+    });
+}
+
+}
+</code></pre>
 <h2 id="attributes">Attributes</h2>
 <p>This resource exports the following attributes:</p>
 <ul>

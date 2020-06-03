@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Neptune
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,13 +85,70 @@ window. Because of this, this provider may report a difference in its planning
 phase because a modification has not yet taken place. You can use the
 <code>apply_immediately</code> flag to instruct the service to apply the change immediately
 (see documentation below).</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Neptune.Cluster(&amp;quot;default&amp;quot;, new Aws.Neptune.ClusterArgs
+    {
+        ApplyImmediately = true,
+        BackupRetentionPeriod = 5,
+        ClusterIdentifier = &amp;quot;neptune-cluster-demo&amp;quot;,
+        Engine = &amp;quot;neptune&amp;quot;,
+        IamDatabaseAuthenticationEnabled = true,
+        PreferredBackupWindow = &amp;quot;07:00-09:00&amp;quot;,
+        SkipFinalSnapshot = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.ClusterInstance.html">ClusterInstance</a></h4>
       <section><p>A Cluster Instance Resource defines attributes that are specific to a single instance in a Neptune Cluster.</p>
-<p>You can simply add neptune instances and Neptune manages the replication. You can use the [count][1]
+<p>You can simply add neptune instances and Neptune manages the replication. You can use the <a href="https://www.terraform.io/docs/configuration/resources.html#count">count</a>
 meta-parameter to make multiple instances and join them all to the same Neptune Cluster, or you may specify different Cluster Instance resources with various <code>instance_class</code> sizes.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Neptune.Cluster(&amp;quot;default&amp;quot;, new Aws.Neptune.ClusterArgs
+    {
+        ApplyImmediately = true,
+        BackupRetentionPeriod = 5,
+        ClusterIdentifier = &amp;quot;neptune-cluster-demo&amp;quot;,
+        Engine = &amp;quot;neptune&amp;quot;,
+        IamDatabaseAuthenticationEnabled = true,
+        PreferredBackupWindow = &amp;quot;07:00-09:00&amp;quot;,
+        SkipFinalSnapshot = true,
+    });
+    var example = new List&amp;lt;Aws.Neptune.ClusterInstance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 2; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        example.Add(new Aws.Neptune.ClusterInstance($&amp;quot;example-{range.Value}&amp;quot;, new Aws.Neptune.ClusterInstanceArgs
+        {
+            ApplyImmediately = true,
+            ClusterIdentifier = @default.Id,
+            Engine = &amp;quot;neptune&amp;quot;,
+            InstanceClass = &amp;quot;db.r4.large&amp;quot;,
+        }));
+    }
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.ClusterInstanceArgs.html">ClusterInstanceArgs</a></h4>
       <section></section>
@@ -99,6 +156,31 @@ meta-parameter to make multiple instances and join them all to the same Neptune 
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.ClusterParameterGroup.html">ClusterParameterGroup</a></h4>
       <section><p>Manages a Neptune Cluster Parameter Group</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Neptune.ClusterParameterGroup(&amp;quot;example&amp;quot;, new Aws.Neptune.ClusterParameterGroupArgs
+    {
+        Description = &amp;quot;neptune cluster parameter group&amp;quot;,
+        Family = &amp;quot;neptune1&amp;quot;,
+        Parameters = 
+        {
+            new Aws.Neptune.Inputs.ClusterParameterGroupParameterArgs
+            {
+                Name = &amp;quot;neptune_enable_audit_log&amp;quot;,
+                Value = 1,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.ClusterParameterGroupArgs.html">ClusterParameterGroupArgs</a></h4>
       <section></section>
@@ -106,6 +188,23 @@ meta-parameter to make multiple instances and join them all to the same Neptune 
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.ClusterSnapshot.html">ClusterSnapshot</a></h4>
       <section><p>Manages a Neptune database cluster snapshot.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Neptune.ClusterSnapshot(&amp;quot;example&amp;quot;, new Aws.Neptune.ClusterSnapshotArgs
+    {
+        DbClusterIdentifier = aws_neptune_cluster.Example.Id,
+        DbClusterSnapshotIdentifier = &amp;quot;resourcetestsnapshot1234&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.ClusterSnapshotArgs.html">ClusterSnapshotArgs</a></h4>
       <section></section>
@@ -114,7 +213,67 @@ meta-parameter to make multiple instances and join them all to the same Neptune 
       <h4><a class="xref" href="Pulumi.Aws.Neptune.ClusterState.html">ClusterState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.EventSubscription.html">EventSubscription</a></h4>
-      <section><h2 id="attributes">Attributes</h2>
+      <section><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultCluster = new Aws.Neptune.Cluster(&amp;quot;defaultCluster&amp;quot;, new Aws.Neptune.ClusterArgs
+    {
+        ApplyImmediately = &amp;quot;true&amp;quot;,
+        BackupRetentionPeriod = 5,
+        ClusterIdentifier = &amp;quot;neptune-cluster-demo&amp;quot;,
+        Engine = &amp;quot;neptune&amp;quot;,
+        IamDatabaseAuthenticationEnabled = &amp;quot;true&amp;quot;,
+        PreferredBackupWindow = &amp;quot;07:00-09:00&amp;quot;,
+        SkipFinalSnapshot = true,
+    });
+    var example = new Aws.Neptune.ClusterInstance(&amp;quot;example&amp;quot;, new Aws.Neptune.ClusterInstanceArgs
+    {
+        ApplyImmediately = &amp;quot;true&amp;quot;,
+        ClusterIdentifier = defaultCluster.Id,
+        Engine = &amp;quot;neptune&amp;quot;,
+        InstanceClass = &amp;quot;db.r4.large&amp;quot;,
+    });
+    var defaultTopic = new Aws.Sns.Topic(&amp;quot;defaultTopic&amp;quot;, new Aws.Sns.TopicArgs
+    {
+    });
+    var defaultEventSubscription = new Aws.Neptune.EventSubscription(&amp;quot;defaultEventSubscription&amp;quot;, new Aws.Neptune.EventSubscriptionArgs
+    {
+        EventCategories = 
+        {
+            &amp;quot;maintenance&amp;quot;,
+            &amp;quot;availability&amp;quot;,
+            &amp;quot;creation&amp;quot;,
+            &amp;quot;backup&amp;quot;,
+            &amp;quot;restoration&amp;quot;,
+            &amp;quot;recovery&amp;quot;,
+            &amp;quot;deletion&amp;quot;,
+            &amp;quot;failover&amp;quot;,
+            &amp;quot;failure&amp;quot;,
+            &amp;quot;notification&amp;quot;,
+            &amp;quot;configuration change&amp;quot;,
+            &amp;quot;read replica&amp;quot;,
+        },
+        SnsTopicArn = defaultTopic.Arn,
+        SourceIds = 
+        {
+            example.Id,
+        },
+        SourceType = &amp;quot;db-instance&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;env&amp;quot;, &amp;quot;test&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
 <p>The following additional atttributes are provided:</p>
 <ul>
 <li><code>id</code> - The name of the Neptune event notification subscription.</li>
@@ -128,6 +287,30 @@ meta-parameter to make multiple instances and join them all to the same Neptune 
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.ParameterGroup.html">ParameterGroup</a></h4>
       <section><p>Manages a Neptune Parameter Group</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Neptune.ParameterGroup(&amp;quot;example&amp;quot;, new Aws.Neptune.ParameterGroupArgs
+    {
+        Family = &amp;quot;neptune1&amp;quot;,
+        Parameters = 
+        {
+            new Aws.Neptune.Inputs.ParameterGroupParameterArgs
+            {
+                Name = &amp;quot;neptune_query_timeout&amp;quot;,
+                Value = &amp;quot;25&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.ParameterGroupArgs.html">ParameterGroupArgs</a></h4>
       <section></section>
@@ -135,6 +318,30 @@ meta-parameter to make multiple instances and join them all to the same Neptune 
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.SubnetGroup.html">SubnetGroup</a></h4>
       <section><p>Provides an Neptune subnet group resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Neptune.SubnetGroup(&amp;quot;default&amp;quot;, new Aws.Neptune.SubnetGroupArgs
+    {
+        SubnetIds = 
+        {
+            aws_subnet.Frontend.Id,
+            aws_subnet.Backend.Id,
+        },
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;My neptune subnet group&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Neptune.SubnetGroupArgs.html">SubnetGroupArgs</a></h4>
       <section></section>

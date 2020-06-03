@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Cur
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,6 +90,36 @@
 <blockquote>
 <p><em>NOTE:</em> If AWS Organizations is enabled, only the master account can use this resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleCurReportDefinition = new Aws.Cur.ReportDefinition(&amp;quot;exampleCurReportDefinition&amp;quot;, new Aws.Cur.ReportDefinitionArgs
+    {
+        AdditionalArtifacts = 
+        {
+            &amp;quot;REDSHIFT&amp;quot;,
+            &amp;quot;QUICKSIGHT&amp;quot;,
+        },
+        AdditionalSchemaElements = 
+        {
+            &amp;quot;RESOURCES&amp;quot;,
+        },
+        Compression = &amp;quot;GZIP&amp;quot;,
+        Format = &amp;quot;textORcsv&amp;quot;,
+        ReportName = &amp;quot;example-cur-report-definition&amp;quot;,
+        S3Bucket = &amp;quot;example-bucket-name&amp;quot;,
+        S3Region = &amp;quot;us-east-1&amp;quot;,
+        TimeUnit = &amp;quot;HOURLY&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cur.ReportDefinitionArgs.html">ReportDefinitionArgs</a></h4>
       <section></section>

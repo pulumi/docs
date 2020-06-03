@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Container
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,133 @@
   <h1 id="Pulumi_OpenStack_ObjectStorage_Container" data-uid="Pulumi.OpenStack.ObjectStorage.Container" class="text-break">Class Container
   </h1>
   <div class="markdown level0 summary"><p>Manages a V1 container resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-container">Basic Container</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var container1 = new OpenStack.ObjectStorage.Container(&amp;quot;container1&amp;quot;, new OpenStack.ObjectStorage.ContainerArgs
+    {
+        ContentType = &amp;quot;application/json&amp;quot;,
+        Metadata = 
+        {
+            { &amp;quot;test&amp;quot;, &amp;quot;true&amp;quot; },
+        },
+        Region = &amp;quot;RegionOne&amp;quot;,
+        Versioning = new OpenStack.ObjectStorage.Inputs.ContainerVersioningArgs
+        {
+            Location = &amp;quot;tf-test-container-versions&amp;quot;,
+            Type = &amp;quot;versions&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="global-read-access">Global Read Access</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var container1 = new OpenStack.ObjectStorage.Container(&amp;quot;container1&amp;quot;, new OpenStack.ObjectStorage.ContainerArgs
+    {
+        ContainerRead = &amp;quot;.r:*&amp;quot;,
+        Region = &amp;quot;RegionOne&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="global-read-and-list-access">Global Read and List Access</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var container1 = new OpenStack.ObjectStorage.Container(&amp;quot;container1&amp;quot;, new OpenStack.ObjectStorage.ContainerArgs
+    {
+        ContainerRead = &amp;quot;.r:*,.rlistings&amp;quot;,
+        Region = &amp;quot;RegionOne&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="write-only-access-for-a-user">Write-Only Access for a User</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(OpenStack.Identity.GetAuthScope.InvokeAsync(new OpenStack.Identity.GetAuthScopeArgs
+    {
+        Name = &amp;quot;current&amp;quot;,
+    }));
+    var container1 = new OpenStack.ObjectStorage.Container(&amp;quot;container1&amp;quot;, new OpenStack.ObjectStorage.ContainerArgs
+    {
+        ContainerRead = $&amp;quot;.r:-{@var.Username}&amp;quot;,
+        ContainerWrite = current.Apply(current =&gt; $&amp;quot;{current.ProjectId}:{@var.Username}&amp;quot;),
+        Region = &amp;quot;RegionOne&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Container</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Container</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.ObjectStorage.html">Pulumi.OpenStack.ObjectStorage</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -88,16 +209,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L192">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container__ctor_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_ObjectStorage_Container__ctor_System_String_Pulumi_OpenStack_ObjectStorage_ContainerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.ObjectStorage.Container.#ctor(System.String,Pulumi.OpenStack.ObjectStorage.ContainerArgs,System.Nullable{CustomResourceOptions})">Container(String, ContainerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_Container__ctor_System_String_Pulumi_OpenStack_ObjectStorage_ContainerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.#ctor(System.String,Pulumi.OpenStack.ObjectStorage.ContainerArgs,Pulumi.CustomResourceOptions)">Container(String, ContainerArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Container resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Container(string name, ContainerArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Container(string name, ContainerArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +243,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +253,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container_ContainerRead_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ContainerRead*"></a>
   <h4 id="Pulumi_OpenStack_ObjectStorage_Container_ContainerRead" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ContainerRead">ContainerRead</h4>
@@ -144,7 +265,7 @@ container). Changing this updates the access control list read access.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContainerRead { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContainerRead { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +277,13 @@ container). Changing this updates the access control list read access.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container_ContainerSyncKey_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ContainerSyncKey*"></a>
   <h4 id="Pulumi_OpenStack_ObjectStorage_Container_ContainerSyncKey" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ContainerSyncKey">ContainerSyncKey</h4>
@@ -172,7 +293,7 @@ Changing this updates container synchronization.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContainerSyncKey { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContainerSyncKey { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,13 +305,13 @@ Changing this updates container synchronization.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container_ContainerSyncTo_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ContainerSyncTo*"></a>
   <h4 id="Pulumi_OpenStack_ObjectStorage_Container_ContainerSyncTo" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ContainerSyncTo">ContainerSyncTo</h4>
@@ -200,7 +321,7 @@ Changing this updates container synchronization.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContainerSyncTo { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContainerSyncTo { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -212,13 +333,13 @@ Changing this updates container synchronization.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container_ContainerWrite_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ContainerWrite*"></a>
   <h4 id="Pulumi_OpenStack_ObjectStorage_Container_ContainerWrite" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ContainerWrite">ContainerWrite</h4>
@@ -228,7 +349,7 @@ Changing this updates the access control list write access.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContainerWrite { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContainerWrite { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -240,13 +361,13 @@ Changing this updates the access control list write access.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container_ContentType_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ContentType*"></a>
   <h4 id="Pulumi_OpenStack_ObjectStorage_Container_ContentType" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ContentType">ContentType</h4>
@@ -256,7 +377,7 @@ updates the MIME type.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContentType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContentType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,13 +389,13 @@ updates the MIME type.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container_ForceDestroy_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ForceDestroy*"></a>
   <h4 id="Pulumi_OpenStack_ObjectStorage_Container_ForceDestroy" data-uid="Pulumi.OpenStack.ObjectStorage.Container.ForceDestroy">ForceDestroy</h4>
@@ -295,13 +416,13 @@ updates the MIME type.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container_Metadata_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.Metadata*"></a>
   <h4 id="Pulumi_OpenStack_ObjectStorage_Container_Metadata" data-uid="Pulumi.OpenStack.ObjectStorage.Container.Metadata">Metadata</h4>
@@ -311,7 +432,7 @@ Changing this updates the existing container metadata.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Metadata { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Metadata { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -323,13 +444,13 @@ Changing this updates the existing container metadata.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container_Name_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.Name*"></a>
   <h4 id="Pulumi_OpenStack_ObjectStorage_Container_Name" data-uid="Pulumi.OpenStack.ObjectStorage.Container.Name">Name</h4>
@@ -351,13 +472,13 @@ new container.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container_Region_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.Region*"></a>
   <h4 id="Pulumi_OpenStack_ObjectStorage_Container_Region" data-uid="Pulumi.OpenStack.ObjectStorage.Container.Region">Region</h4>
@@ -380,13 +501,13 @@ creates a new container.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container_Versioning_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.Versioning*"></a>
   <h4 id="Pulumi_OpenStack_ObjectStorage_Container_Versioning" data-uid="Pulumi.OpenStack.ObjectStorage.Container.Versioning">Versioning</h4>
@@ -407,7 +528,7 @@ creates a new container.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.OpenStack.ObjectStorage.Outputs.ContainerVersioning.html">ContainerVersioning</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.OpenStack.ObjectStorage.Outputs.ContainerVersioning.html">ContainerVersioning</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -415,17 +536,17 @@ creates a new container.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_ObjectStorage_Container_Get_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.Get*"></a>
-  <h4 id="Pulumi_OpenStack_ObjectStorage_Container_Get_System_String_Input_System_String__Pulumi_OpenStack_ObjectStorage_ContainerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.ObjectStorage.Container.Get(System.String,Input{System.String},Pulumi.OpenStack.ObjectStorage.ContainerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ContainerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_Container_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_ObjectStorage_ContainerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.ObjectStorage.Container.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.ObjectStorage.ContainerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ContainerState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Container resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Container Get(string name, Input&lt;string&gt; id, ContainerState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Container Get(string name, Input&lt;string&gt; id, ContainerState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -444,7 +565,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -456,7 +577,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -485,7 +606,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/ObjectStorage/Container.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/ObjectStorage/Container.cs/#L111" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.SignalFx.PagerDuty
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,23 @@
 <blockquote>
 <p><strong>NOTE</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var pagerdutyMyteam = new SignalFx.PagerDuty.Integration(&amp;quot;pagerdutyMyteam&amp;quot;, new SignalFx.PagerDuty.IntegrationArgs
+    {
+        ApiKey = &amp;quot;1234567890&amp;quot;,
+        Enabled = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SignalFx.PagerDuty.IntegrationArgs.html">IntegrationArgs</a></h4>
       <section></section>

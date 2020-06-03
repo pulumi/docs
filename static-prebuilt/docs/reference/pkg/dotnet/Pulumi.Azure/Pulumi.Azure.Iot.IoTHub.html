@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class IoTHub
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,7 +86,45 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">IoTHub</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">IoTHub</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Iot.html">Pulumi.Azure.Iot</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -97,16 +135,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub__ctor_" data-uid="Pulumi.Azure.Iot.IoTHub.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Iot_IoTHub__ctor_System_String_Pulumi_Azure_Iot_IoTHubArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Iot.IoTHub.#ctor(System.String,Pulumi.Azure.Iot.IoTHubArgs,System.Nullable{CustomResourceOptions})">IoTHub(String, IoTHubArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Iot_IoTHub__ctor_System_String_Pulumi_Azure_Iot_IoTHubArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Iot.IoTHub.#ctor(System.String,Pulumi.Azure.Iot.IoTHubArgs,Pulumi.CustomResourceOptions)">IoTHub(String, IoTHubArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a IoTHub resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IoTHub(string name, IoTHubArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IoTHub(string name, IoTHubArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,7 +169,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -141,7 +179,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_Endpoints_" data-uid="Pulumi.Azure.Iot.IoTHub.Endpoints*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_Endpoints" data-uid="Pulumi.Azure.Iot.IoTHub.Endpoints">Endpoints</h4>
@@ -162,13 +200,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubEndpoint.html">IoTHubEndpoint</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubEndpoint.html">IoTHubEndpoint</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_EventHubEventsEndpoint_" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubEventsEndpoint*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_EventHubEventsEndpoint" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubEventsEndpoint">EventHubEventsEndpoint</h4>
@@ -189,13 +227,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_EventHubEventsPath_" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubEventsPath*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_EventHubEventsPath" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubEventsPath">EventHubEventsPath</h4>
@@ -216,13 +254,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_EventHubOperationsEndpoint_" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubOperationsEndpoint*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_EventHubOperationsEndpoint" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubOperationsEndpoint">EventHubOperationsEndpoint</h4>
@@ -243,13 +281,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_EventHubOperationsPath_" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubOperationsPath*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_EventHubOperationsPath" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubOperationsPath">EventHubOperationsPath</h4>
@@ -270,13 +308,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_EventHubPartitionCount_" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubPartitionCount*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_EventHubPartitionCount" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubPartitionCount">EventHubPartitionCount</h4>
@@ -297,13 +335,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_EventHubRetentionInDays_" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubRetentionInDays*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_EventHubRetentionInDays" data-uid="Pulumi.Azure.Iot.IoTHub.EventHubRetentionInDays">EventHubRetentionInDays</h4>
@@ -324,13 +362,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_FallbackRoute_" data-uid="Pulumi.Azure.Iot.IoTHub.FallbackRoute*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_FallbackRoute" data-uid="Pulumi.Azure.Iot.IoTHub.FallbackRoute">FallbackRoute</h4>
@@ -351,13 +389,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubFallbackRoute.html">IoTHubFallbackRoute</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubFallbackRoute.html">IoTHubFallbackRoute</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_FileUpload_" data-uid="Pulumi.Azure.Iot.IoTHub.FileUpload*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_FileUpload" data-uid="Pulumi.Azure.Iot.IoTHub.FileUpload">FileUpload</h4>
@@ -378,13 +416,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubFileUpload.html">IoTHubFileUpload</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubFileUpload.html">IoTHubFileUpload</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_Hostname_" data-uid="Pulumi.Azure.Iot.IoTHub.Hostname*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_Hostname" data-uid="Pulumi.Azure.Iot.IoTHub.Hostname">Hostname</h4>
@@ -405,13 +443,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_IpFilterRules_" data-uid="Pulumi.Azure.Iot.IoTHub.IpFilterRules*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_IpFilterRules" data-uid="Pulumi.Azure.Iot.IoTHub.IpFilterRules">IpFilterRules</h4>
@@ -432,13 +470,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubIpFilterRule.html">IoTHubIpFilterRule</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubIpFilterRule.html">IoTHubIpFilterRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_Location_" data-uid="Pulumi.Azure.Iot.IoTHub.Location*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_Location" data-uid="Pulumi.Azure.Iot.IoTHub.Location">Location</h4>
@@ -459,13 +497,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_Name_" data-uid="Pulumi.Azure.Iot.IoTHub.Name*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_Name" data-uid="Pulumi.Azure.Iot.IoTHub.Name">Name</h4>
@@ -486,13 +524,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_ResourceGroupName_" data-uid="Pulumi.Azure.Iot.IoTHub.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_ResourceGroupName" data-uid="Pulumi.Azure.Iot.IoTHub.ResourceGroupName">ResourceGroupName</h4>
@@ -513,13 +551,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_Routes_" data-uid="Pulumi.Azure.Iot.IoTHub.Routes*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_Routes" data-uid="Pulumi.Azure.Iot.IoTHub.Routes">Routes</h4>
@@ -540,13 +578,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubRoute.html">IoTHubRoute</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubRoute.html">IoTHubRoute</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_SharedAccessPolicies_" data-uid="Pulumi.Azure.Iot.IoTHub.SharedAccessPolicies*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_SharedAccessPolicies" data-uid="Pulumi.Azure.Iot.IoTHub.SharedAccessPolicies">SharedAccessPolicies</h4>
@@ -567,13 +605,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubSharedAccessPolicy.html">IoTHubSharedAccessPolicy</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubSharedAccessPolicy.html">IoTHubSharedAccessPolicy</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_Sku_" data-uid="Pulumi.Azure.Iot.IoTHub.Sku*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_Sku" data-uid="Pulumi.Azure.Iot.IoTHub.Sku">Sku</h4>
@@ -594,13 +632,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubSku.html">IoTHubSku</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Iot.Outputs.IoTHubSku.html">IoTHubSku</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_Tags_" data-uid="Pulumi.Azure.Iot.IoTHub.Tags*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_Tags" data-uid="Pulumi.Azure.Iot.IoTHub.Tags">Tags</h4>
@@ -609,7 +647,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -621,13 +659,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_Type_" data-uid="Pulumi.Azure.Iot.IoTHub.Type*"></a>
   <h4 id="Pulumi_Azure_Iot_IoTHub_Type" data-uid="Pulumi.Azure.Iot.IoTHub.Type">Type</h4>
@@ -648,7 +686,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -656,17 +694,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_IoTHub_Get_" data-uid="Pulumi.Azure.Iot.IoTHub.Get*"></a>
-  <h4 id="Pulumi_Azure_Iot_IoTHub_Get_System_String_Input_System_String__Pulumi_Azure_Iot_IoTHubState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Iot.IoTHub.Get(System.String,Input{System.String},Pulumi.Azure.Iot.IoTHubState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IoTHubState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Iot_IoTHub_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Iot_IoTHubState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Iot.IoTHub.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Iot.IoTHubState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, IoTHubState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing IoTHub resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IoTHub Get(string name, Input&lt;string&gt; id, IoTHubState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IoTHub Get(string name, Input&lt;string&gt; id, IoTHubState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -685,7 +723,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -697,7 +735,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -726,7 +764,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/IoTHub.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

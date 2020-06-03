@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AuthBackendRoleState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AuthBackendRoleState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">AuthBackendRoleState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Vault.Jwt.html">Pulumi.Vault.Jwt</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Vault.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L904">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L942">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState__ctor_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.#ctor*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState__ctor" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.#ctor">AuthBackendRoleState()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L615">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L653">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_AllowedRedirectUris_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.AllowedRedirectUris*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_AllowedRedirectUris" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.AllowedRedirectUris">AllowedRedirectUris</h4>
@@ -122,13 +151,13 @@ Required for OIDC roles</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L625">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L663">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_Backend_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.Backend*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_Backend" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.Backend">Backend</h4>
@@ -138,7 +167,7 @@ Defaults to <code>jwt</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Backend { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Backend { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,18 +179,18 @@ Defaults to <code>jwt</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L635">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L673">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_BoundAudiences_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.BoundAudiences*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_BoundAudiences" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.BoundAudiences">BoundAudiences</h4>
-  <div class="markdown level1 summary"><p>List of <code>aud</code> claims to match
-against. Any match is sufficient.</p>
+  <div class="markdown level1 summary"><p>(Required for roles of type <code>jwt</code>, optional for roles of
+type <code>oidc</code>) List of <code>aud</code> claims to match against. Any match is sufficient.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -178,13 +207,13 @@ against. Any match is sufficient.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L648">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L686">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_BoundCidrs_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.BoundCidrs*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_BoundCidrs" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.BoundCidrs">BoundCidrs</h4>
@@ -194,7 +223,8 @@ CIDRs valid as the source address for login requests. This value is also encoded
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; BoundCidrs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2&quot;)]
+public InputList&lt;string&gt; BoundCidrs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +236,13 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L662">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L700">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_BoundClaims_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.BoundClaims*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_BoundClaims" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.BoundClaims">BoundClaims</h4>
@@ -234,13 +264,13 @@ The expected value may be a single string or a list of strings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L672">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L710">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_BoundSubject_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.BoundSubject*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_BoundSubject" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.BoundSubject">BoundSubject</h4>
@@ -250,7 +280,7 @@ this value.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? BoundSubject { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; BoundSubject { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +292,13 @@ this value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L682">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L720">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_ClaimMappings_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.ClaimMappings*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_ClaimMappings" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.ClaimMappings">ClaimMappings</h4>
@@ -290,13 +320,13 @@ to specified metadata fields (values).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L693">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L731">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_ClockSkewLeeway_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.ClockSkewLeeway*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_ClockSkewLeeway" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.ClockSkewLeeway">ClockSkewLeeway</h4>
@@ -307,7 +337,7 @@ Only applicable with &quot;jwt&quot; roles.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? ClockSkewLeeway { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; ClockSkewLeeway { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -319,13 +349,13 @@ Only applicable with &quot;jwt&quot; roles.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L701">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L739">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_ExpirationLeeway_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.ExpirationLeeway*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_ExpirationLeeway" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.ExpirationLeeway">ExpirationLeeway</h4>
@@ -336,7 +366,7 @@ Only applicable with &quot;jwt&quot; roles.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? ExpirationLeeway { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; ExpirationLeeway { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -348,13 +378,13 @@ Only applicable with &quot;jwt&quot; roles.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L710">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L748">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_GroupsClaim_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.GroupsClaim*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_GroupsClaim" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.GroupsClaim">GroupsClaim</h4>
@@ -366,7 +396,7 @@ value must be a list of strings.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? GroupsClaim { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; GroupsClaim { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,13 +408,13 @@ value must be a list of strings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L724">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L762">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_GroupsClaimDelimiterPattern_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.GroupsClaimDelimiterPattern*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_GroupsClaimDelimiterPattern" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.GroupsClaimDelimiterPattern">GroupsClaimDelimiterPattern</h4>
@@ -401,7 +431,7 @@ via nested structures of meta, user, name, and groups.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? GroupsClaimDelimiterPattern { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; GroupsClaimDelimiterPattern { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -413,13 +443,13 @@ via nested structures of meta, user, name, and groups.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L731">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L769">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_MaxTtl_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.MaxTtl*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_MaxTtl" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.MaxTtl">MaxTtl</h4>
@@ -429,7 +459,7 @@ issued using this role, provided as a number of seconds.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxTtl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxTtl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -441,13 +471,13 @@ issued using this role, provided as a number of seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L739">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L777">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_NotBeforeLeeway_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.NotBeforeLeeway*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_NotBeforeLeeway" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.NotBeforeLeeway">NotBeforeLeeway</h4>
@@ -458,7 +488,7 @@ Only applicable with &quot;jwt&quot; roles.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? NotBeforeLeeway { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; NotBeforeLeeway { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -470,13 +500,13 @@ Only applicable with &quot;jwt&quot; roles.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L746">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L784">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_NumUses_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.NumUses*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_NumUses" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.NumUses">NumUses</h4>
@@ -486,7 +516,7 @@ limitation on the issued token.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? NumUses { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; NumUses { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -498,13 +528,13 @@ limitation on the issued token.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L756">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L794">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_OidcScopes_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.OidcScopes*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_OidcScopes" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.OidcScopes">OidcScopes</h4>
@@ -526,13 +556,13 @@ The standard scope &quot;openid&quot; is automatically included and need not be 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L768">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L806">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_Period_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.Period*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_Period" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.Period">Period</h4>
@@ -544,7 +574,7 @@ value of this field. Specified in seconds.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Period { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Period { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -556,13 +586,13 @@ value of this field. Specified in seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L778">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L816">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_Policies_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.Policies*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_Policies" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.Policies">Policies</h4>
@@ -572,7 +602,8 @@ specifying the policies to be set on tokens issued using this role.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; Policies { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;use `token_policies` instead if you are running Vault &gt;= 1.2&quot;)]
+public InputList&lt;string&gt; Policies { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -584,13 +615,13 @@ specifying the policies to be set on tokens issued using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L788">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L826">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_RoleName_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.RoleName*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_RoleName" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.RoleName">RoleName</h4>
@@ -599,7 +630,7 @@ specifying the policies to be set on tokens issued using this role.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RoleName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RoleName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -611,13 +642,13 @@ specifying the policies to be set on tokens issued using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L794">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L832">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_RoleType_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.RoleType*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_RoleType" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.RoleType">RoleType</h4>
@@ -626,7 +657,7 @@ specifying the policies to be set on tokens issued using this role.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RoleType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RoleType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -638,13 +669,13 @@ specifying the policies to be set on tokens issued using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L805">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L843">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenBoundCidrs_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenBoundCidrs*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenBoundCidrs" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenBoundCidrs">TokenBoundCidrs</h4>
@@ -667,13 +698,13 @@ as well.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L817">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L855">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenExplicitMaxTtl_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenExplicitMaxTtl*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenExplicitMaxTtl" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenExplicitMaxTtl">TokenExplicitMaxTtl</h4>
@@ -685,7 +716,7 @@ onto the token in number of seconds. This is a hard cap even if <code>token_ttl<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TokenExplicitMaxTtl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; TokenExplicitMaxTtl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -697,13 +728,13 @@ onto the token in number of seconds. This is a hard cap even if <code>token_ttl<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L824">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L862">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenMaxTtl_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenMaxTtl*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenMaxTtl" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenMaxTtl">TokenMaxTtl</h4>
@@ -713,7 +744,7 @@ Its current value will be referenced at renewal time.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TokenMaxTtl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; TokenMaxTtl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -725,13 +756,13 @@ Its current value will be referenced at renewal time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L831">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L869">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenNoDefaultPolicy_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenNoDefaultPolicy*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenNoDefaultPolicy" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenNoDefaultPolicy">TokenNoDefaultPolicy</h4>
@@ -741,7 +772,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? TokenNoDefaultPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; TokenNoDefaultPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -753,13 +784,13 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L839">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L877">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenNumUses_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenNumUses*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenNumUses" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenNumUses">TokenNumUses</h4>
@@ -770,7 +801,7 @@ if any, in number of seconds to set on the token.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TokenNumUses { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; TokenNumUses { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -782,13 +813,13 @@ if any, in number of seconds to set on the token.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L848">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L886">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenPeriod_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenPeriod*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenPeriod" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenPeriod">TokenPeriod</h4>
@@ -800,7 +831,7 @@ value of this field. Specified in seconds.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TokenPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; TokenPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -812,13 +843,13 @@ value of this field. Specified in seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L858">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L896">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenPolicies_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenPolicies*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenPolicies" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenPolicies">TokenPolicies</h4>
@@ -840,13 +871,13 @@ on the auth method, this list may be supplemented by user/group/other values.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L868">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L906">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenTtl_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenTtl*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenTtl" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenTtl">TokenTtl</h4>
@@ -856,7 +887,7 @@ Its current value will be referenced at renewal time.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TokenTtl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; TokenTtl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -868,13 +899,13 @@ Its current value will be referenced at renewal time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L878">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L916">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenType_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenType*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_TokenType" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.TokenType">TokenType</h4>
@@ -887,7 +918,7 @@ requests a different type at generation time.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TokenType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TokenType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -899,13 +930,13 @@ requests a different type at generation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L885">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L923">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_Ttl_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.Ttl*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_Ttl" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.Ttl">Ttl</h4>
@@ -915,7 +946,7 @@ using this role, provided as a number of seconds.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Ttl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Ttl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -927,13 +958,13 @@ using this role, provided as a number of seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L893">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L931">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_UserClaim_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.UserClaim*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_UserClaim" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.UserClaim">UserClaim</h4>
@@ -944,7 +975,7 @@ due to a successful login.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserClaim { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; UserClaim { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -956,13 +987,13 @@ due to a successful login.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L901">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L939">View Source</a>
   </span>
   <a id="Pulumi_Vault_Jwt_AuthBackendRoleState_VerboseOidcLogging_" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.VerboseOidcLogging*"></a>
   <h4 id="Pulumi_Vault_Jwt_AuthBackendRoleState_VerboseOidcLogging" data-uid="Pulumi.Vault.Jwt.AuthBackendRoleState.VerboseOidcLogging">VerboseOidcLogging</h4>
@@ -973,7 +1004,7 @@ in OIDC responses.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? VerboseOidcLogging { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; VerboseOidcLogging { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -985,7 +1016,7 @@ in OIDC responses.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -997,7 +1028,7 @@ in OIDC responses.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Jwt/AuthBackendRole.cs/#L606" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Jwt/AuthBackendRole.cs/#L644" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

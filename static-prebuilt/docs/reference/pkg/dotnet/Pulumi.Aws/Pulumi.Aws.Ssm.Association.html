@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Association
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,76 @@
   <h1 id="Pulumi_Aws_Ssm_Association" data-uid="Pulumi.Aws.Ssm.Association" class="text-break">Class Association
   </h1>
   <div class="markdown level0 summary"><p>Associates an SSM Document to an instance or EC2 tag.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ssm.Association(&amp;quot;example&amp;quot;, new Aws.Ssm.AssociationArgs
+    {
+        Targets = 
+        {
+            new Aws.Ssm.Inputs.AssociationTargetArgs
+            {
+                Key = &amp;quot;InstanceIds&amp;quot;,
+                Values = 
+                {
+                    aws_instance.Example.Id,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Association</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Association</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ssm.html">Pulumi.Aws.Ssm</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +152,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association__ctor_" data-uid="Pulumi.Aws.Ssm.Association.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ssm_Association__ctor_System_String_Pulumi_Aws_Ssm_AssociationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ssm.Association.#ctor(System.String,Pulumi.Aws.Ssm.AssociationArgs,System.Nullable{CustomResourceOptions})">Association(String, AssociationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ssm_Association__ctor_System_String_Pulumi_Aws_Ssm_AssociationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ssm.Association.#ctor(System.String,Pulumi.Aws.Ssm.AssociationArgs,Pulumi.CustomResourceOptions)">Association(String, AssociationArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Association resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Association(string name, AssociationArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Association(string name, AssociationArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +186,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +196,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_AssociationId_" data-uid="Pulumi.Aws.Ssm.Association.AssociationId*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_AssociationId" data-uid="Pulumi.Aws.Ssm.Association.AssociationId">AssociationId</h4>
@@ -153,13 +217,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_AssociationName_" data-uid="Pulumi.Aws.Ssm.Association.AssociationName*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_AssociationName" data-uid="Pulumi.Aws.Ssm.Association.AssociationName">AssociationName</h4>
@@ -168,7 +232,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AssociationName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AssociationName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +244,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_AutomationTargetParameterName_" data-uid="Pulumi.Aws.Ssm.Association.AutomationTargetParameterName*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_AutomationTargetParameterName" data-uid="Pulumi.Aws.Ssm.Association.AutomationTargetParameterName">AutomationTargetParameterName</h4>
@@ -195,7 +259,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AutomationTargetParameterName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AutomationTargetParameterName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +271,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_ComplianceSeverity_" data-uid="Pulumi.Aws.Ssm.Association.ComplianceSeverity*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_ComplianceSeverity" data-uid="Pulumi.Aws.Ssm.Association.ComplianceSeverity">ComplianceSeverity</h4>
@@ -222,7 +286,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ComplianceSeverity { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ComplianceSeverity { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +298,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_DocumentVersion_" data-uid="Pulumi.Aws.Ssm.Association.DocumentVersion*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_DocumentVersion" data-uid="Pulumi.Aws.Ssm.Association.DocumentVersion">DocumentVersion</h4>
@@ -261,13 +325,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_InstanceId_" data-uid="Pulumi.Aws.Ssm.Association.InstanceId*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_InstanceId" data-uid="Pulumi.Aws.Ssm.Association.InstanceId">InstanceId</h4>
@@ -276,7 +340,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InstanceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -288,13 +352,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_MaxConcurrency_" data-uid="Pulumi.Aws.Ssm.Association.MaxConcurrency*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_MaxConcurrency" data-uid="Pulumi.Aws.Ssm.Association.MaxConcurrency">MaxConcurrency</h4>
@@ -303,7 +367,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MaxConcurrency { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MaxConcurrency { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,13 +379,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_MaxErrors_" data-uid="Pulumi.Aws.Ssm.Association.MaxErrors*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_MaxErrors" data-uid="Pulumi.Aws.Ssm.Association.MaxErrors">MaxErrors</h4>
@@ -330,7 +394,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MaxErrors { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MaxErrors { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,13 +406,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_Name_" data-uid="Pulumi.Aws.Ssm.Association.Name*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_Name" data-uid="Pulumi.Aws.Ssm.Association.Name">Name</h4>
@@ -369,13 +433,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_OutputLocation_" data-uid="Pulumi.Aws.Ssm.Association.OutputLocation*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_OutputLocation" data-uid="Pulumi.Aws.Ssm.Association.OutputLocation">OutputLocation</h4>
@@ -396,13 +460,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.AssociationOutputLocation.html">AssociationOutputLocation</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.AssociationOutputLocation.html">AssociationOutputLocation</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_Parameters_" data-uid="Pulumi.Aws.Ssm.Association.Parameters*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_Parameters" data-uid="Pulumi.Aws.Ssm.Association.Parameters">Parameters</h4>
@@ -423,13 +487,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_ScheduleExpression_" data-uid="Pulumi.Aws.Ssm.Association.ScheduleExpression*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_ScheduleExpression" data-uid="Pulumi.Aws.Ssm.Association.ScheduleExpression">ScheduleExpression</h4>
@@ -438,7 +502,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ScheduleExpression { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ScheduleExpression { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,13 +514,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_Targets_" data-uid="Pulumi.Aws.Ssm.Association.Targets*"></a>
   <h4 id="Pulumi_Aws_Ssm_Association_Targets" data-uid="Pulumi.Aws.Ssm.Association.Targets">Targets</h4>
@@ -477,7 +541,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.AssociationTarget.html">AssociationTarget</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.AssociationTarget.html">AssociationTarget</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -485,17 +549,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Association_Get_" data-uid="Pulumi.Aws.Ssm.Association.Get*"></a>
-  <h4 id="Pulumi_Aws_Ssm_Association_Get_System_String_Input_System_String__Pulumi_Aws_Ssm_AssociationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ssm.Association.Get(System.String,Input{System.String},Pulumi.Aws.Ssm.AssociationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AssociationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ssm_Association_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ssm_AssociationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ssm.Association.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ssm.AssociationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AssociationState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Association resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Association Get(string name, Input&lt;string&gt; id, AssociationState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Association Get(string name, Input&lt;string&gt; id, AssociationState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -514,7 +578,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -526,7 +590,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -555,7 +619,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Association.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ssm/Association.cs/#L46" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

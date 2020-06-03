@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.SignalFx.Jira
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,32 @@
 <blockquote>
 <p><strong>NOTE</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var jiraMyteamXX = new SignalFx.Jira.Integration(&amp;quot;jiraMyteamXX&amp;quot;, new SignalFx.Jira.IntegrationArgs
+    {
+        ApiToken = &amp;quot;abc123&amp;quot;,
+        AssigneeDisplayName = &amp;quot;Testy Testerson&amp;quot;,
+        AssigneeName = &amp;quot;testytesterson&amp;quot;,
+        AuthMethod = &amp;quot;EmailAndToken&amp;quot;,
+        BaseUrl = &amp;quot;https://www.example.com&amp;quot;,
+        Enabled = false,
+        IssueType = &amp;quot;Story&amp;quot;,
+        Password = &amp;quot;paasword&amp;quot;,
+        ProjectKey = &amp;quot;TEST&amp;quot;,
+        UserEmail = &amp;quot;yoosername@example.com&amp;quot;,
+        Username = &amp;quot;yoosername&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SignalFx.Jira.IntegrationArgs.html">IntegrationArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Environment
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,93 @@
   <h1 id="Pulumi_Azure_AppService_Environment" data-uid="Pulumi.Azure.AppService.Environment" class="text-break">Class Environment
   </h1>
   <div class="markdown level0 summary"><p>Manages an App Service Environment.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;westeurope&amp;quot;,
+    });
+    var exampleVirtualNetwork = new Azure.Network.VirtualNetwork(&amp;quot;exampleVirtualNetwork&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AddressSpaces = 
+        {
+            &amp;quot;10.0.0.0/16&amp;quot;,
+        },
+    });
+    var ase = new Azure.Network.Subnet(&amp;quot;ase&amp;quot;, new Azure.Network.SubnetArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        VirtualNetworkName = exampleVirtualNetwork.Name,
+        AddressPrefix = &amp;quot;10.0.1.0/24&amp;quot;,
+    });
+    var gateway = new Azure.Network.Subnet(&amp;quot;gateway&amp;quot;, new Azure.Network.SubnetArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        VirtualNetworkName = exampleVirtualNetwork.Name,
+        AddressPrefix = &amp;quot;10.0.2.0/24&amp;quot;,
+    });
+    var exampleEnvironment = new Azure.AppService.Environment(&amp;quot;exampleEnvironment&amp;quot;, new Azure.AppService.EnvironmentArgs
+    {
+        SubnetId = ase.Id,
+        PricingTier = &amp;quot;I2&amp;quot;,
+        FrontEndScaleFactor = 10,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Environment</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Environment</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.AppService.html">Pulumi.Azure.AppService</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -88,16 +169,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Environment.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/Environment.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Environment__ctor_" data-uid="Pulumi.Azure.AppService.Environment.#ctor*"></a>
-  <h4 id="Pulumi_Azure_AppService_Environment__ctor_System_String_Pulumi_Azure_AppService_EnvironmentArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.AppService.Environment.#ctor(System.String,Pulumi.Azure.AppService.EnvironmentArgs,System.Nullable{CustomResourceOptions})">Environment(String, EnvironmentArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_AppService_Environment__ctor_System_String_Pulumi_Azure_AppService_EnvironmentArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.AppService.Environment.#ctor(System.String,Pulumi.Azure.AppService.EnvironmentArgs,Pulumi.CustomResourceOptions)">Environment(String, EnvironmentArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Environment resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Environment(string name, EnvironmentArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Environment(string name, EnvironmentArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +203,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +213,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Environment.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/Environment.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Environment_FrontEndScaleFactor_" data-uid="Pulumi.Azure.AppService.Environment.FrontEndScaleFactor*"></a>
   <h4 id="Pulumi_Azure_AppService_Environment_FrontEndScaleFactor" data-uid="Pulumi.Azure.AppService.Environment.FrontEndScaleFactor">FrontEndScaleFactor</h4>
@@ -153,13 +234,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Environment.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/Environment.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Environment_InternalLoadBalancingMode_" data-uid="Pulumi.Azure.AppService.Environment.InternalLoadBalancingMode*"></a>
   <h4 id="Pulumi_Azure_AppService_Environment_InternalLoadBalancingMode" data-uid="Pulumi.Azure.AppService.Environment.InternalLoadBalancingMode">InternalLoadBalancingMode</h4>
@@ -167,7 +248,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InternalLoadBalancingMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InternalLoadBalancingMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +260,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Environment.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/Environment.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Environment_Location_" data-uid="Pulumi.Azure.AppService.Environment.Location*"></a>
   <h4 id="Pulumi_Azure_AppService_Environment_Location" data-uid="Pulumi.Azure.AppService.Environment.Location">Location</h4>
@@ -206,13 +287,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Environment.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/Environment.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Environment_Name_" data-uid="Pulumi.Azure.AppService.Environment.Name*"></a>
   <h4 id="Pulumi_Azure_AppService_Environment_Name" data-uid="Pulumi.Azure.AppService.Environment.Name">Name</h4>
@@ -233,13 +314,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Environment.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/Environment.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Environment_PricingTier_" data-uid="Pulumi.Azure.AppService.Environment.PricingTier*"></a>
   <h4 id="Pulumi_Azure_AppService_Environment_PricingTier" data-uid="Pulumi.Azure.AppService.Environment.PricingTier">PricingTier</h4>
@@ -248,7 +329,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PricingTier { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PricingTier { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -260,17 +341,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Environment.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/Environment.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Environment_ResourceGroupName_" data-uid="Pulumi.Azure.AppService.Environment.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_AppService_Environment_ResourceGroupName" data-uid="Pulumi.Azure.AppService.Environment.ResourceGroupName">ResourceGroupName</h4>
-  <div class="markdown level1 summary"><p>The name of the Resource Group where the App Service Environment exists.</p>
+  <div class="markdown level1 summary"><p>The name of the Resource Group where the App Service Environment exists. Defaults to the Resource Group of the Subnet (specified by <code>subnet_id</code>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -287,13 +368,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Environment.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/Environment.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Environment_SubnetId_" data-uid="Pulumi.Azure.AppService.Environment.SubnetId*"></a>
   <h4 id="Pulumi_Azure_AppService_Environment_SubnetId" data-uid="Pulumi.Azure.AppService.Environment.SubnetId">SubnetId</h4>
@@ -314,21 +395,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Environment.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/Environment.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Environment_Tags_" data-uid="Pulumi.Azure.AppService.Environment.Tags*"></a>
   <h4 id="Pulumi_Azure_AppService_Environment_Tags" data-uid="Pulumi.Azure.AppService.Environment.Tags">Tags</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -340,7 +422,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -348,17 +430,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Environment.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/Environment.cs/#L148">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Environment_Get_" data-uid="Pulumi.Azure.AppService.Environment.Get*"></a>
-  <h4 id="Pulumi_Azure_AppService_Environment_Get_System_String_Input_System_String__Pulumi_Azure_AppService_EnvironmentState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.AppService.Environment.Get(System.String,Input{System.String},Pulumi.Azure.AppService.EnvironmentState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, EnvironmentState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_AppService_Environment_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_AppService_EnvironmentState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.AppService.Environment.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.AppService.EnvironmentState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, EnvironmentState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Environment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Environment Get(string name, Input&lt;string&gt; id, EnvironmentState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Environment Get(string name, Input&lt;string&gt; id, EnvironmentState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -377,7 +459,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -389,7 +471,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -418,7 +500,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Environment.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/AppService/Environment.cs/#L63" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

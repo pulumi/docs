@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Mq
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -93,6 +93,42 @@ brief downtime as the broker reboots.</p>
 <p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Mq.Broker(&amp;quot;example&amp;quot;, new Aws.Mq.BrokerArgs
+    {
+        BrokerName = &amp;quot;example&amp;quot;,
+        Configuration = new Aws.Mq.Inputs.BrokerConfigurationArgs
+        {
+            Id = aws_mq_configuration.Test.Id,
+            Revision = aws_mq_configuration.Test.Latest_revision,
+        },
+        EngineType = &amp;quot;ActiveMQ&amp;quot;,
+        EngineVersion = &amp;quot;5.15.0&amp;quot;,
+        HostInstanceType = &amp;quot;mq.t2.micro&amp;quot;,
+        SecurityGroups = 
+        {
+            aws_security_group.Test.Id,
+        },
+        Users = 
+        {
+            new Aws.Mq.Inputs.BrokerUserArgs
+            {
+                Password = &amp;quot;MindTheGap&amp;quot;,
+                Username = &amp;quot;ExampleUser&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Mq.BrokerArgs.html">BrokerArgs</a></h4>
       <section></section>
@@ -101,6 +137,34 @@ brief downtime as the broker reboots.</p>
       <h4><a class="xref" href="Pulumi.Aws.Mq.Configuration.html">Configuration</a></h4>
       <section><p>Provides an MQ Configuration Resource.</p>
 <p>For more information on Amazon MQ, see <a href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html">Amazon MQ documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Mq.Configuration(&amp;quot;example&amp;quot;, new Aws.Mq.ConfigurationArgs
+    {
+        Data = @&amp;quot;&amp;lt;?xml version=&amp;quot;&amp;quot;1.0&amp;quot;&amp;quot; encoding=&amp;quot;&amp;quot;UTF-8&amp;quot;&amp;quot; standalone=&amp;quot;&amp;quot;yes&amp;quot;&amp;quot;?&gt;
+&amp;lt;broker xmlns=&amp;quot;&amp;quot;http://activemq.apache.org/schema/core&amp;quot;&amp;quot;&gt;
+&amp;lt;plugins&gt;
+&amp;lt;forcePersistencyModeBrokerPlugin persistenceFlag=&amp;quot;&amp;quot;true&amp;quot;&amp;quot;/&gt;
+&amp;lt;statisticsBrokerPlugin/&gt;
+&amp;lt;timeStampingBrokerPlugin ttlCeiling=&amp;quot;&amp;quot;86400000&amp;quot;&amp;quot; zeroExpirationOverride=&amp;quot;&amp;quot;86400000&amp;quot;&amp;quot;/&gt;
+&amp;lt;/plugins&gt;
+&amp;lt;/broker&gt;
+
+&amp;quot;,
+        Description = &amp;quot;Example Configuration&amp;quot;,
+        EngineType = &amp;quot;ActiveMQ&amp;quot;,
+        EngineVersion = &amp;quot;5.15.0&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Mq.ConfigurationArgs.html">ConfigurationArgs</a></h4>
       <section></section>

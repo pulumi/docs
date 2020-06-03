@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Network
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,6 +85,31 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.ApplicationSecurityGroup.html">ApplicationSecurityGroup</a></h4>
       <section><p>Manages an Application Security Group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleApplicationSecurityGroup = new Azure.Network.ApplicationSecurityGroup(&amp;quot;exampleApplicationSecurityGroup&amp;quot;, new Azure.Network.ApplicationSecurityGroupArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Tags = 
+        {
+            { &amp;quot;Hello&amp;quot;, &amp;quot;World&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.ApplicationSecurityGroupArgs.html">ApplicationSecurityGroupArgs</a></h4>
       <section></section>
@@ -95,6 +120,27 @@
 <blockquote>
 <p><strong>NOTE</strong> Azure only allows <code>one</code> DDoS Protection Plan per region.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleDdosProtectionPlan = new Azure.Network.DdosProtectionPlan(&amp;quot;exampleDdosProtectionPlan&amp;quot;, new Azure.Network.DdosProtectionPlanArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.DdosProtectionPlanArgs.html">DdosProtectionPlanArgs</a></h4>
       <section></section>
@@ -102,11 +148,83 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.ExpressRouteCircuit.html">ExpressRouteCircuit</a></h4>
       <section><p>Manages an ExpressRoute circuit.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleExpressRouteCircuit = new Azure.Network.ExpressRouteCircuit(&amp;quot;exampleExpressRouteCircuit&amp;quot;, new Azure.Network.ExpressRouteCircuitArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        ServiceProviderName = &amp;quot;Equinix&amp;quot;,
+        PeeringLocation = &amp;quot;Silicon Valley&amp;quot;,
+        BandwidthInMbps = 50,
+        Sku = new Azure.Network.Inputs.ExpressRouteCircuitSkuArgs
+        {
+            Tier = &amp;quot;Standard&amp;quot;,
+            Family = &amp;quot;MeteredData&amp;quot;,
+        },
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.ExpressRouteCircuitArgs.html">ExpressRouteCircuitArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.ExpressRouteCircuitAuthorization.html">ExpressRouteCircuitAuthorization</a></h4>
       <section><p>Manages an ExpressRoute Circuit Authorization.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleExpressRouteCircuit = new Azure.Network.ExpressRouteCircuit(&amp;quot;exampleExpressRouteCircuit&amp;quot;, new Azure.Network.ExpressRouteCircuitArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        ServiceProviderName = &amp;quot;Equinix&amp;quot;,
+        PeeringLocation = &amp;quot;Silicon Valley&amp;quot;,
+        BandwidthInMbps = 50,
+        Sku = new Azure.Network.Inputs.ExpressRouteCircuitSkuArgs
+        {
+            Tier = &amp;quot;Standard&amp;quot;,
+            Family = &amp;quot;MeteredData&amp;quot;,
+        },
+        AllowClassicOperations = false,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+    var exampleExpressRouteCircuitAuthorization = new Azure.Network.ExpressRouteCircuitAuthorization(&amp;quot;exampleExpressRouteCircuitAuthorization&amp;quot;, new Azure.Network.ExpressRouteCircuitAuthorizationArgs
+    {
+        ExpressRouteCircuitName = exampleExpressRouteCircuit.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.ExpressRouteCircuitAuthorizationArgs.html">ExpressRouteCircuitAuthorizationArgs</a></h4>
       <section></section>
@@ -123,6 +241,45 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.ExpressRouteGateway.html">ExpressRouteGateway</a></h4>
       <section><p>Manages an ExpressRoute gateway.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleVirtualWan = new Azure.Network.VirtualWan(&amp;quot;exampleVirtualWan&amp;quot;, new Azure.Network.VirtualWanArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+    var exampleVirtualHub = new Azure.Network.VirtualHub(&amp;quot;exampleVirtualHub&amp;quot;, new Azure.Network.VirtualHubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        VirtualWanId = exampleVirtualWan.Id,
+        AddressPrefix = &amp;quot;10.0.1.0/24&amp;quot;,
+    });
+    var exampleExpressRouteGateway = new Azure.Network.ExpressRouteGateway(&amp;quot;exampleExpressRouteGateway&amp;quot;, new Azure.Network.ExpressRouteGatewayArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        VirtualHubId = exampleVirtualHub.Id,
+        ScaleUnits = 1,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.ExpressRouteGatewayArgs.html">ExpressRouteGatewayArgs</a></h4>
       <section></section>
@@ -272,6 +429,32 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.LocalNetworkGateway.html">LocalNetworkGateway</a></h4>
       <section><p>Manages a local network gateway connection over which specific connections can be configured.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Core.ResourceGroup(&amp;quot;example&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var home = new Azure.Network.LocalNetworkGateway(&amp;quot;home&amp;quot;, new Azure.Network.LocalNetworkGatewayArgs
+    {
+        ResourceGroupName = example.Name,
+        Location = example.Location,
+        GatewayAddress = &amp;quot;12.13.14.15&amp;quot;,
+        AddressSpaces = 
+        {
+            &amp;quot;10.0.0.0/16&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.LocalNetworkGatewayArgs.html">LocalNetworkGatewayArgs</a></h4>
       <section></section>
@@ -279,8 +462,105 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.NatGateway.html">NatGateway</a></h4>
       <section><p>Manages a Azure NAT Gateway.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;eastus2&amp;quot;,
+    });
+    var examplePublicIp = new Azure.Network.PublicIp(&amp;quot;examplePublicIp&amp;quot;, new Azure.Network.PublicIpArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AllocationMethod = &amp;quot;Static&amp;quot;,
+        Sku = &amp;quot;Standard&amp;quot;,
+        Zones = 
+        {
+            &amp;quot;1&amp;quot;,
+        },
+    });
+    var examplePublicIpPrefix = new Azure.Network.PublicIpPrefix(&amp;quot;examplePublicIpPrefix&amp;quot;, new Azure.Network.PublicIpPrefixArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PrefixLength = 30,
+        Zones = 
+        {
+            &amp;quot;1&amp;quot;,
+        },
+    });
+    var exampleNatGateway = new Azure.Network.NatGateway(&amp;quot;exampleNatGateway&amp;quot;, new Azure.Network.NatGatewayArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublicIpAddressIds = 
+        {
+            examplePublicIp.Id,
+        },
+        PublicIpPrefixIds = 
+        {
+            examplePublicIpPrefix.Id,
+        },
+        SkuName = &amp;quot;Standard&amp;quot;,
+        IdleTimeoutInMinutes = 10,
+        Zones = 
+        {
+            &amp;quot;1&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.NatGatewayArgs.html">NatGatewayArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Network.NatGatewayPublicIpAssociation.html">NatGatewayPublicIpAssociation</a></h4>
+      <section><p>Manages the association between a Nat Gateway and a Public IP.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var examplePublicIp = new Azure.Network.PublicIp(&amp;quot;examplePublicIp&amp;quot;, new Azure.Network.PublicIpArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AllocationMethod = &amp;quot;Static&amp;quot;,
+        Sku = &amp;quot;Standard&amp;quot;,
+    });
+    var exampleNatGateway = new Azure.Network.NatGateway(&amp;quot;exampleNatGateway&amp;quot;, new Azure.Network.NatGatewayArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        SkuName = &amp;quot;Standard&amp;quot;,
+    });
+    var exampleNatGatewayPublicIpAssociation = new Azure.Network.NatGatewayPublicIpAssociation(&amp;quot;exampleNatGatewayPublicIpAssociation&amp;quot;, new Azure.Network.NatGatewayPublicIpAssociationArgs
+    {
+        NatGatewayId = exampleNatGateway.Id,
+        PublicIpAddressId = examplePublicIp.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Network.NatGatewayPublicIpAssociationArgs.html">NatGatewayPublicIpAssociationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Network.NatGatewayPublicIpAssociationState.html">NatGatewayPublicIpAssociationState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.NatGatewayState.html">NatGatewayState</a></h4>
       <section></section>
@@ -359,6 +639,40 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 provides both a standalone Network Security Rule resource, and allows for Network Security Rules to be defined in-line within the Network Security Group resource.
 At this time you cannot use a Network Security Group with in-line Network Security Rules in conjunction with any Network Security Rule resources. Doing so will cause a conflict of rule settings and will overwrite rules.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleNetworkSecurityGroup = new Azure.Network.NetworkSecurityGroup(&amp;quot;exampleNetworkSecurityGroup&amp;quot;, new Azure.Network.NetworkSecurityGroupArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleNetworkSecurityRule = new Azure.Network.NetworkSecurityRule(&amp;quot;exampleNetworkSecurityRule&amp;quot;, new Azure.Network.NetworkSecurityRuleArgs
+    {
+        Priority = 100,
+        Direction = &amp;quot;Outbound&amp;quot;,
+        Access = &amp;quot;Allow&amp;quot;,
+        Protocol = &amp;quot;Tcp&amp;quot;,
+        SourcePortRange = &amp;quot;*&amp;quot;,
+        DestinationPortRange = &amp;quot;*&amp;quot;,
+        SourceAddressPrefix = &amp;quot;*&amp;quot;,
+        DestinationAddressPrefix = &amp;quot;*&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        NetworkSecurityGroupName = exampleNetworkSecurityGroup.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.NetworkSecurityRuleArgs.html">NetworkSecurityRuleArgs</a></h4>
       <section></section>
@@ -366,6 +680,27 @@ At this time you cannot use a Network Security Group with in-line Network Securi
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.NetworkWatcher.html">NetworkWatcher</a></h4>
       <section><p>Manages a Network Watcher.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleNetworkWatcher = new Azure.Network.NetworkWatcher(&amp;quot;exampleNetworkWatcher&amp;quot;, new Azure.Network.NetworkWatcherArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.NetworkWatcherArgs.html">NetworkWatcherArgs</a></h4>
       <section></section>
@@ -390,6 +725,26 @@ At this time you cannot use a Network Security Group with in-line Network Securi
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.PointToPointVpnGateway.html">PointToPointVpnGateway</a></h4>
       <section><p>Manages a Point-to-Site VPN Gateway.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Network.PointToPointVpnGateway(&amp;quot;example&amp;quot;, new Azure.Network.PointToPointVpnGatewayArgs
+    {
+        Location = azurerm_resource_group.Example.Location,
+        ResourceGroupName = azurerm_resource_group.Example.Resource_group_name,
+        VirtualHubId = azurerm_virtual_hub.Example.Id,
+        VpnServerConfigurationId = azurerm_vpn_server_configuration.Example.Id,
+        ScaleUnit = 1,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.PointToPointVpnGatewayArgs.html">PointToPointVpnGatewayArgs</a></h4>
       <section></section>
@@ -404,11 +759,63 @@ At this time you cannot use a Network Security Group with in-line Network Securi
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.PublicIp.html">PublicIp</a></h4>
       <section><p>Manages a Public IP Address.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var examplePublicIp = new Azure.Network.PublicIp(&amp;quot;examplePublicIp&amp;quot;, new Azure.Network.PublicIpArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        AllocationMethod = &amp;quot;Static&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.PublicIpArgs.html">PublicIpArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.PublicIpPrefix.html">PublicIpPrefix</a></h4>
       <section><p>Manages a Public IP Prefix.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var examplePublicIpPrefix = new Azure.Network.PublicIpPrefix(&amp;quot;examplePublicIpPrefix&amp;quot;, new Azure.Network.PublicIpPrefixArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PrefixLength = 31,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.PublicIpPrefixArgs.html">PublicIpPrefixArgs</a></h4>
       <section></section>
@@ -423,6 +830,34 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 provides both a standalone Route resource, and allows for Routes to be defined in-line within the Route Table resource.
 At this time you cannot use a Route Table with in-line Routes in conjunction with any Route resources. Doing so will cause a conflict of Route configurations and will overwrite Routes.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleRouteTable = new Azure.Network.RouteTable(&amp;quot;exampleRouteTable&amp;quot;, new Azure.Network.RouteTableArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleRoute = new Azure.Network.Route(&amp;quot;exampleRoute&amp;quot;, new Azure.Network.RouteArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        RouteTableName = exampleRouteTable.Name,
+        AddressPrefix = &amp;quot;10.1.0.0/16&amp;quot;,
+        NextHopType = &amp;quot;vnetlocal&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.RouteArgs.html">RouteArgs</a></h4>
       <section></section>
@@ -430,6 +865,10 @@ At this time you cannot use a Route Table with in-line Routes in conjunction wit
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.RouteTable.html">RouteTable</a></h4>
       <section><p>Manages a Route Table</p>
+<blockquote>
+<p><strong>NOTE on Route Tables and Routes:</strong> There is both a standalone <code>route</code> resource, and allows for Routes to be defined in-line within the <code>route_table</code> resource.
+At this time you cannot use a Route Table with in-line Routes in conjunction with any Route resources. Doing so will cause a conflict of Route configurations and will overwrite Routes.</p>
+</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.RouteTableArgs.html">RouteTableArgs</a></h4>
       <section></section>
@@ -447,6 +886,47 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.SubnetNatGatewayAssociation.html">SubnetNatGatewayAssociation</a></h4>
       <section><p>Associates a NAT Gateway with a Subnet within a Virtual Network.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US 2&amp;quot;,
+    });
+    var exampleVirtualNetwork = new Azure.Network.VirtualNetwork(&amp;quot;exampleVirtualNetwork&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        AddressSpaces = 
+        {
+            &amp;quot;10.0.0.0/16&amp;quot;,
+        },
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleSubnet = new Azure.Network.Subnet(&amp;quot;exampleSubnet&amp;quot;, new Azure.Network.SubnetArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        VirtualNetworkName = exampleVirtualNetwork.Name,
+        AddressPrefix = &amp;quot;10.0.2.0/24&amp;quot;,
+    });
+    var exampleNatGateway = new Azure.Network.NatGateway(&amp;quot;exampleNatGateway&amp;quot;, new Azure.Network.NatGatewayArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var exampleSubnetNatGatewayAssociation = new Azure.Network.SubnetNatGatewayAssociation(&amp;quot;exampleSubnetNatGatewayAssociation&amp;quot;, new Azure.Network.SubnetNatGatewayAssociationArgs
+    {
+        SubnetId = exampleSubnet.Id,
+        NatGatewayId = exampleNatGateway.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.SubnetNatGatewayAssociationArgs.html">SubnetNatGatewayAssociationArgs</a></h4>
       <section></section>
@@ -484,11 +964,81 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.VirtualHub.html">VirtualHub</a></h4>
       <section><p>Manages a Virtual Hub within a Virtual WAN.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleVirtualWan = new Azure.Network.VirtualWan(&amp;quot;exampleVirtualWan&amp;quot;, new Azure.Network.VirtualWanArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+    var exampleVirtualHub = new Azure.Network.VirtualHub(&amp;quot;exampleVirtualHub&amp;quot;, new Azure.Network.VirtualHubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        VirtualWanId = exampleVirtualWan.Id,
+        AddressPrefix = &amp;quot;10.0.1.0/24&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.VirtualHubArgs.html">VirtualHubArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.VirtualHubConnection.html">VirtualHubConnection</a></h4>
       <section><p>Manages a Connection for a Virtual Hub.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleVirtualNetwork = new Azure.Network.VirtualNetwork(&amp;quot;exampleVirtualNetwork&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        AddressSpaces = 
+        {
+            &amp;quot;172.0.0.0/16&amp;quot;,
+        },
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var test = new Azure.Network.VirtualWan(&amp;quot;test&amp;quot;, new Azure.Network.VirtualWanArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+    var exampleVirtualHub = new Azure.Network.VirtualHub(&amp;quot;exampleVirtualHub&amp;quot;, new Azure.Network.VirtualHubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        VirtualWanId = azurerm_virtual_wan.Example.Id,
+        AddressPrefix = &amp;quot;10.0.1.0/24&amp;quot;,
+    });
+    var exampleVirtualHubConnection = new Azure.Network.VirtualHubConnection(&amp;quot;exampleVirtualHubConnection&amp;quot;, new Azure.Network.VirtualHubConnectionArgs
+    {
+        VirtualHubId = exampleVirtualHub.Id,
+        RemoteVirtualNetworkId = exampleVirtualNetwork.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.VirtualHubConnectionArgs.html">VirtualHubConnectionArgs</a></h4>
       <section></section>
@@ -527,6 +1077,52 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
       <h4><a class="xref" href="Pulumi.Azure.Network.VirtualNetworkPeering.html">VirtualNetworkPeering</a></h4>
       <section><p>Manages a virtual network peering which allows resources to access other
 resources in the linked virtual network.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Core.ResourceGroup(&amp;quot;example&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var example_1VirtualNetwork = new Azure.Network.VirtualNetwork(&amp;quot;example-1VirtualNetwork&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        ResourceGroupName = example.Name,
+        AddressSpaces = 
+        {
+            &amp;quot;10.0.1.0/24&amp;quot;,
+        },
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var example_2VirtualNetwork = new Azure.Network.VirtualNetwork(&amp;quot;example-2VirtualNetwork&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        ResourceGroupName = example.Name,
+        AddressSpaces = 
+        {
+            &amp;quot;10.0.2.0/24&amp;quot;,
+        },
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var example_1VirtualNetworkPeering = new Azure.Network.VirtualNetworkPeering(&amp;quot;example-1VirtualNetworkPeering&amp;quot;, new Azure.Network.VirtualNetworkPeeringArgs
+    {
+        ResourceGroupName = example.Name,
+        VirtualNetworkName = example_1VirtualNetwork.Name,
+        RemoteVirtualNetworkId = example_2VirtualNetwork.Id,
+    });
+    var example_2VirtualNetworkPeering = new Azure.Network.VirtualNetworkPeering(&amp;quot;example-2VirtualNetworkPeering&amp;quot;, new Azure.Network.VirtualNetworkPeeringArgs
+    {
+        ResourceGroupName = example.Name,
+        VirtualNetworkName = example_2VirtualNetwork.Name,
+        RemoteVirtualNetworkId = example_1VirtualNetwork.Id,
+    });
+}
+
+}
+</code></pre>
 <h2 id="note">Note</h2>
 <p>Virtual Network peerings cannot be created, updated or deleted concurrently.</p>
 </section>
@@ -538,6 +1134,27 @@ resources in the linked virtual network.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.VirtualWan.html">VirtualWan</a></h4>
       <section><p>Manages a Virtual WAN.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleVirtualWan = new Azure.Network.VirtualWan(&amp;quot;exampleVirtualWan&amp;quot;, new Azure.Network.VirtualWanArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.VirtualWanArgs.html">VirtualWanArgs</a></h4>
       <section></section>
@@ -545,6 +1162,49 @@ resources in the linked virtual network.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Network.VpnGateway.html">VpnGateway</a></h4>
       <section><p>Manages a VPN Gateway within a Virtual Hub, which enables Site-to-Site communication.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleVirtualNetwork = new Azure.Network.VirtualNetwork(&amp;quot;exampleVirtualNetwork&amp;quot;, new Azure.Network.VirtualNetworkArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AddressSpaces = 
+        {
+            &amp;quot;10.0.0.0/16&amp;quot;,
+        },
+    });
+    var exampleVirtualWan = new Azure.Network.VirtualWan(&amp;quot;exampleVirtualWan&amp;quot;, new Azure.Network.VirtualWanArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+    var exampleVirtualHub = new Azure.Network.VirtualHub(&amp;quot;exampleVirtualHub&amp;quot;, new Azure.Network.VirtualHubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        VirtualWanId = exampleVirtualWan.Id,
+        AddressPrefix = &amp;quot;10.0.1.0/24&amp;quot;,
+    });
+    var exampleVpnGateway = new Azure.Network.VpnGateway(&amp;quot;exampleVpnGateway&amp;quot;, new Azure.Network.VpnGatewayArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        VirtualHubId = exampleVirtualHub.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Network.VpnGatewayArgs.html">VpnGatewayArgs</a></h4>
       <section></section>

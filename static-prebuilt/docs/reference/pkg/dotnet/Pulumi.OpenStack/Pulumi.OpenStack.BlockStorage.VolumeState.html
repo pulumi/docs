@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VolumeState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">VolumeState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">VolumeState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.BlockStorage.html">Pulumi.OpenStack.BlockStorage</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L395">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L451">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState__ctor_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState__ctor" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.#ctor">VolumeState()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L286">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L329">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_Attachments_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Attachments*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_Attachments" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Attachments">Attachments</h4>
@@ -123,13 +152,13 @@ sees it.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.OpenStack.BlockStorage.Inputs.VolumeAttachmentGetArgs.html">VolumeAttachmentGetArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.OpenStack.BlockStorage.Inputs.VolumeAttachmentGetArgs.html">VolumeAttachmentGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L296">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L339">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_AvailabilityZone_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.AvailabilityZone*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_AvailabilityZone" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.AvailabilityZone">AvailabilityZone</h4>
@@ -139,7 +168,7 @@ Changing this creates a new volume.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AvailabilityZone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AvailabilityZone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +180,13 @@ Changing this creates a new volume.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L303">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L346">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_ConsistencyGroupId_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.ConsistencyGroupId*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_ConsistencyGroupId" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.ConsistencyGroupId">ConsistencyGroupId</h4>
@@ -167,7 +196,7 @@ in.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ConsistencyGroupId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ConsistencyGroupId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +208,13 @@ in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L310">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L353">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_Description_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Description*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_Description" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Description">Description</h4>
@@ -195,7 +224,7 @@ the volume's description.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +236,13 @@ the volume's description.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L361">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_EnableOnlineResize_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.EnableOnlineResize*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_EnableOnlineResize" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.EnableOnlineResize">EnableOnlineResize</h4>
@@ -224,7 +253,7 @@ support for version 3.42 and a compatible storage driver.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableOnlineResize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableOnlineResize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,13 +265,13 @@ support for version 3.42 and a compatible storage driver.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L325">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L368">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_ImageId_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.ImageId*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_ImageId" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.ImageId">ImageId</h4>
@@ -252,7 +281,7 @@ Changing this creates a new volume.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ImageId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ImageId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,13 +293,13 @@ Changing this creates a new volume.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L335">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L378">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_Metadata_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Metadata*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_Metadata" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Metadata">Metadata</h4>
@@ -292,13 +321,13 @@ Changing this updates the existing volume metadata.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L344">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L387">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_Multiattach_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Multiattach*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_Multiattach" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Multiattach">Multiattach</h4>
@@ -307,7 +336,7 @@ Changing this updates the existing volume metadata.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Multiattach { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Multiattach { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -319,13 +348,13 @@ Changing this updates the existing volume metadata.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L351">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L394">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_Name_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Name*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_Name" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Name">Name</h4>
@@ -335,7 +364,7 @@ volume's name.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,13 +376,13 @@ volume's name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L359">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L402">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_Region_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Region*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_Region" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Region">Region</h4>
@@ -364,7 +393,7 @@ creates a new volume.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -376,13 +405,41 @@ creates a new volume.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L365">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L412">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_VolumeState_SchedulerHints_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.SchedulerHints*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_SchedulerHints" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.SchedulerHints">SchedulerHints</h4>
+  <div class="markdown level1 summary"><p>Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;VolumeSchedulerHintGetArgs&gt; SchedulerHints { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.OpenStack.BlockStorage.Inputs.VolumeSchedulerHintGetArgs.html">VolumeSchedulerHintGetArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L421">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_Size_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Size*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_Size" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.Size">Size</h4>
@@ -391,7 +448,7 @@ creates a new volume.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Size { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Size { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -403,13 +460,13 @@ creates a new volume.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L372">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L428">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_SnapshotId_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.SnapshotId*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_SnapshotId" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.SnapshotId">SnapshotId</h4>
@@ -419,7 +476,7 @@ Changing this creates a new volume.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SnapshotId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SnapshotId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -431,13 +488,13 @@ Changing this creates a new volume.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L378">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L434">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_SourceReplica_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.SourceReplica*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_SourceReplica" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.SourceReplica">SourceReplica</h4>
@@ -446,7 +503,7 @@ Changing this creates a new volume.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SourceReplica { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SourceReplica { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -458,13 +515,13 @@ Changing this creates a new volume.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L385">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L441">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_SourceVolId_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.SourceVolId*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_SourceVolId" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.SourceVolId">SourceVolId</h4>
@@ -474,7 +531,7 @@ Changing this creates a new volume.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SourceVolId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SourceVolId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -486,13 +543,13 @@ Changing this creates a new volume.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L392">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L448">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeState_VolumeType_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.VolumeType*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeState_VolumeType" data-uid="Pulumi.OpenStack.BlockStorage.VolumeState.VolumeType">VolumeType</h4>
@@ -502,7 +559,7 @@ Changing this creates a new volume.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VolumeType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VolumeType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -514,7 +571,7 @@ Changing this creates a new volume.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -526,7 +583,7 @@ Changing this creates a new volume.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L276" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/Volume.cs/#L319" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

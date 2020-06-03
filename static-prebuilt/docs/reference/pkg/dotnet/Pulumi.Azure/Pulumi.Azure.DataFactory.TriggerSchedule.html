@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TriggerSchedule
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,84 @@
   <h1 id="Pulumi_Azure_DataFactory_TriggerSchedule" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule" class="text-break">Class TriggerSchedule
   </h1>
   <div class="markdown level0 summary"><p>Manages a Trigger Schedule inside a Azure Data Factory.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleFactory = new Azure.DataFactory.Factory(&amp;quot;exampleFactory&amp;quot;, new Azure.DataFactory.FactoryArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+    var testPipeline = new Azure.DataFactory.Pipeline(&amp;quot;testPipeline&amp;quot;, new Azure.DataFactory.PipelineArgs
+    {
+        ResourceGroupName = azurerm_resource_group.Test.Name,
+        DataFactoryName = azurerm_data_factory.Test.Name,
+    });
+    var testTriggerSchedule = new Azure.DataFactory.TriggerSchedule(&amp;quot;testTriggerSchedule&amp;quot;, new Azure.DataFactory.TriggerScheduleArgs
+    {
+        DataFactoryName = azurerm_data_factory.Test.Name,
+        ResourceGroupName = azurerm_resource_group.Test.Name,
+        PipelineName = testPipeline.Name,
+        Interval = 5,
+        Frequency = &amp;quot;Day&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TriggerSchedule</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">TriggerSchedule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.DataFactory.html">Pulumi.Azure.DataFactory</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -88,16 +160,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule__ctor_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.#ctor*"></a>
-  <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule__ctor_System_String_Pulumi_Azure_DataFactory_TriggerScheduleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.#ctor(System.String,Pulumi.Azure.DataFactory.TriggerScheduleArgs,System.Nullable{CustomResourceOptions})">TriggerSchedule(String, TriggerScheduleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule__ctor_System_String_Pulumi_Azure_DataFactory_TriggerScheduleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.#ctor(System.String,Pulumi.Azure.DataFactory.TriggerScheduleArgs,Pulumi.CustomResourceOptions)">TriggerSchedule(String, TriggerScheduleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a TriggerSchedule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TriggerSchedule(string name, TriggerScheduleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public TriggerSchedule(string name, TriggerScheduleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +194,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +204,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule_Annotations_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.Annotations*"></a>
   <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_Annotations" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.Annotations">Annotations</h4>
@@ -153,13 +225,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule_DataFactoryName_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.DataFactoryName*"></a>
   <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_DataFactoryName" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.DataFactoryName">DataFactoryName</h4>
@@ -180,13 +252,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule_EndTime_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.EndTime*"></a>
   <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_EndTime" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.EndTime">EndTime</h4>
@@ -195,7 +267,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EndTime { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EndTime { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +279,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule_Frequency_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.Frequency*"></a>
   <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_Frequency" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.Frequency">Frequency</h4>
@@ -222,7 +294,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Frequency { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Frequency { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +306,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule_Interval_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.Interval*"></a>
   <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_Interval" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.Interval">Interval</h4>
@@ -261,13 +333,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule_Name_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.Name*"></a>
   <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_Name" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.Name">Name</h4>
@@ -288,13 +360,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule_PipelineName_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.PipelineName*"></a>
   <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_PipelineName" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.PipelineName">PipelineName</h4>
@@ -315,13 +387,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule_PipelineParameters_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.PipelineParameters*"></a>
   <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_PipelineParameters" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.PipelineParameters">PipelineParameters</h4>
@@ -330,7 +402,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; PipelineParameters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; PipelineParameters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,13 +414,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule_ResourceGroupName_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_ResourceGroupName" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.ResourceGroupName">ResourceGroupName</h4>
@@ -369,13 +441,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule_StartTime_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.StartTime*"></a>
   <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_StartTime" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.StartTime">StartTime</h4>
@@ -396,7 +468,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -404,17 +476,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_Azure_DataFactory_TriggerSchedule_Get_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.Get*"></a>
-  <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_Get_System_String_Input_System_String__Pulumi_Azure_DataFactory_TriggerScheduleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.Get(System.String,Input{System.String},Pulumi.Azure.DataFactory.TriggerScheduleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TriggerScheduleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_DataFactory_TriggerSchedule_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_DataFactory_TriggerScheduleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.DataFactory.TriggerSchedule.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.DataFactory.TriggerScheduleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TriggerScheduleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing TriggerSchedule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TriggerSchedule Get(string name, Input&lt;string&gt; id, TriggerScheduleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static TriggerSchedule Get(string name, Input&lt;string&gt; id, TriggerScheduleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -433,7 +505,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -445,7 +517,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -474,7 +546,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/DataFactory/TriggerSchedule.cs/#L54" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

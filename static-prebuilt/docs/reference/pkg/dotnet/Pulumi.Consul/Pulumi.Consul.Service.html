@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Service
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,12 +77,75 @@ can be used to create services addressable by Consul that cannot be registered
 with a <a href="https://www.consul.io/docs/agent/basics.html">local agent</a>.</p>
 <p>If the Consul agent is running on the node where this service is registered, it is
 not recommended to use this resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var compute = new Consul.Node(&amp;quot;compute&amp;quot;, new Consul.NodeArgs
+    {
+        Address = &amp;quot;www.google.com&amp;quot;,
+    });
+    var google = new Consul.Service(&amp;quot;google&amp;quot;, new Consul.ServiceArgs
+    {
+        Node = compute.Name,
+        Port = 80,
+        Tags = 
+        {
+            &amp;quot;tag0&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Service</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Service</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Consul.html">Pulumi.Consul</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Consul.dll</h6>
@@ -93,16 +156,16 @@ not recommended to use this resource.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service__ctor_" data-uid="Pulumi.Consul.Service.#ctor*"></a>
-  <h4 id="Pulumi_Consul_Service__ctor_System_String_Pulumi_Consul_ServiceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.Service.#ctor(System.String,Pulumi.Consul.ServiceArgs,System.Nullable{CustomResourceOptions})">Service(String, ServiceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Consul_Service__ctor_System_String_Pulumi_Consul_ServiceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Consul.Service.#ctor(System.String,Pulumi.Consul.ServiceArgs,Pulumi.CustomResourceOptions)">Service(String, ServiceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Service resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Service(string name, ServiceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Service(string name, ServiceArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,7 +190,7 @@ not recommended to use this resource.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -137,7 +200,7 @@ not recommended to use this resource.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_Address_" data-uid="Pulumi.Consul.Service.Address*"></a>
   <h4 id="Pulumi_Consul_Service_Address" data-uid="Pulumi.Consul.Service.Address">Address</h4>
@@ -159,13 +222,13 @@ address of the node.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_Checks_" data-uid="Pulumi.Consul.Service.Checks*"></a>
   <h4 id="Pulumi_Consul_Service_Checks" data-uid="Pulumi.Consul.Service.Checks">Checks</h4>
@@ -185,13 +248,13 @@ address of the node.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Consul.Outputs.ServiceCheck.html">ServiceCheck</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Consul.Outputs.ServiceCheck.html">ServiceCheck</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_Datacenter_" data-uid="Pulumi.Consul.Service.Datacenter*"></a>
   <h4 id="Pulumi_Consul_Service_Datacenter" data-uid="Pulumi.Consul.Service.Datacenter">Datacenter</h4>
@@ -213,13 +276,13 @@ agent's default datacenter and the datacenter in the provider setup.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_External_" data-uid="Pulumi.Consul.Service.External*"></a>
   <h4 id="Pulumi_Consul_Service_External" data-uid="Pulumi.Consul.Service.External">External</h4>
@@ -239,13 +302,13 @@ agent's default datacenter and the datacenter in the provider setup.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_Meta_" data-uid="Pulumi.Consul.Service.Meta*"></a>
   <h4 id="Pulumi_Consul_Service_Meta" data-uid="Pulumi.Consul.Service.Meta">Meta</h4>
@@ -255,7 +318,7 @@ instance.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Meta { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Meta { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -267,13 +330,13 @@ instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_Name_" data-uid="Pulumi.Consul.Service.Name*"></a>
   <h4 id="Pulumi_Consul_Service_Name" data-uid="Pulumi.Consul.Service.Name">Name</h4>
@@ -294,13 +357,13 @@ instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_Namespace_" data-uid="Pulumi.Consul.Service.Namespace*"></a>
   <h4 id="Pulumi_Consul_Service_Namespace" data-uid="Pulumi.Consul.Service.Namespace">Namespace</h4>
@@ -309,7 +372,7 @@ instance.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Namespace { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Namespace { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -321,13 +384,13 @@ instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_Node_" data-uid="Pulumi.Consul.Service.Node*"></a>
   <h4 id="Pulumi_Consul_Service_Node" data-uid="Pulumi.Consul.Service.Node">Node</h4>
@@ -348,13 +411,13 @@ instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_Port_" data-uid="Pulumi.Consul.Service.Port*"></a>
   <h4 id="Pulumi_Consul_Service_Port" data-uid="Pulumi.Consul.Service.Port">Port</h4>
@@ -375,17 +438,20 @@ instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_ServiceId_" data-uid="Pulumi.Consul.Service.ServiceId*"></a>
   <h4 id="Pulumi_Consul_Service_ServiceId" data-uid="Pulumi.Consul.Service.ServiceId">ServiceId</h4>
-  <div class="markdown level1 summary"><p>The ID of the service.</p>
+  <div class="markdown level1 summary"><ul>
+<li>If the service ID is not provided, it will be defaulted to the value
+of the <code>name</code> attribute.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -402,13 +468,13 @@ instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_Tags_" data-uid="Pulumi.Consul.Service.Tags*"></a>
   <h4 id="Pulumi_Consul_Service_Tags" data-uid="Pulumi.Consul.Service.Tags">Tags</h4>
@@ -430,7 +496,7 @@ but can be used to distinguish between services or nodes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -438,17 +504,17 @@ but can be used to distinguish between services or nodes.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Consul_Service_Get_" data-uid="Pulumi.Consul.Service.Get*"></a>
-  <h4 id="Pulumi_Consul_Service_Get_System_String_Input_System_String__Pulumi_Consul_ServiceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.Service.Get(System.String,Input{System.String},Pulumi.Consul.ServiceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ServiceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Consul_Service_Get_System_String_Pulumi_Input_System_String__Pulumi_Consul_ServiceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Consul.Service.Get(System.String,Pulumi.Input{System.String},Pulumi.Consul.ServiceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ServiceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Service resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Service Get(string name, Input&lt;string&gt; id, ServiceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Service Get(string name, Input&lt;string&gt; id, ServiceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -467,7 +533,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -479,7 +545,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -508,7 +574,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L51" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

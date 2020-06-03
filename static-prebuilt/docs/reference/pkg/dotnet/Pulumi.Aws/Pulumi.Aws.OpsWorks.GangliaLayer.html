@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GangliaLayer
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,67 @@
   <h1 id="Pulumi_Aws_OpsWorks_GangliaLayer" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer" class="text-break">Class GangliaLayer
   </h1>
   <div class="markdown level0 summary"><p>Provides an OpsWorks Ganglia layer resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var monitor = new Aws.OpsWorks.GangliaLayer(&amp;quot;monitor&amp;quot;, new Aws.OpsWorks.GangliaLayerArgs
+    {
+        Password = &amp;quot;foobarbaz&amp;quot;,
+        StackId = aws_opsworks_stack.Main.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GangliaLayer</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">GangliaLayer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.OpsWorks.html">Pulumi.Aws.OpsWorks</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +143,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer__ctor_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.#ctor*"></a>
-  <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer__ctor_System_String_Pulumi_Aws_OpsWorks_GangliaLayerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.#ctor(System.String,Pulumi.Aws.OpsWorks.GangliaLayerArgs,System.Nullable{CustomResourceOptions})">GangliaLayer(String, GangliaLayerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer__ctor_System_String_Pulumi_Aws_OpsWorks_GangliaLayerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.#ctor(System.String,Pulumi.Aws.OpsWorks.GangliaLayerArgs,Pulumi.CustomResourceOptions)">GangliaLayer(String, GangliaLayerArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a GangliaLayer resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GangliaLayer(string name, GangliaLayerArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public GangliaLayer(string name, GangliaLayerArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +177,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +187,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_Arn_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Arn*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_Arn" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Arn">Arn</h4>
@@ -153,13 +208,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_AutoAssignElasticIps_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.AutoAssignElasticIps*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_AutoAssignElasticIps" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.AutoAssignElasticIps">AutoAssignElasticIps</h4>
@@ -180,13 +235,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_AutoAssignPublicIps_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.AutoAssignPublicIps*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_AutoAssignPublicIps" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.AutoAssignPublicIps">AutoAssignPublicIps</h4>
@@ -207,13 +262,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_AutoHealing_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.AutoHealing*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_AutoHealing" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.AutoHealing">AutoHealing</h4>
@@ -234,13 +289,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomConfigureRecipes_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomConfigureRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomConfigureRecipes" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomConfigureRecipes">CustomConfigureRecipes</h4>
@@ -260,13 +315,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomDeployRecipes_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomDeployRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomDeployRecipes" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomDeployRecipes">CustomDeployRecipes</h4>
@@ -286,13 +341,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomInstanceProfileArn_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomInstanceProfileArn*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomInstanceProfileArn" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomInstanceProfileArn">CustomInstanceProfileArn</h4>
@@ -301,7 +356,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CustomInstanceProfileArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CustomInstanceProfileArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,13 +368,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomJson_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomJson*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomJson" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomJson">CustomJson</h4>
@@ -328,7 +383,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CustomJson { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CustomJson { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -340,13 +395,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomSecurityGroupIds_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomSecurityGroupIds" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomSecurityGroupIds">CustomSecurityGroupIds</h4>
@@ -367,13 +422,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomSetupRecipes_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomSetupRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomSetupRecipes" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomSetupRecipes">CustomSetupRecipes</h4>
@@ -393,13 +448,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomShutdownRecipes_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomShutdownRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomShutdownRecipes" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomShutdownRecipes">CustomShutdownRecipes</h4>
@@ -419,13 +474,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomUndeployRecipes_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomUndeployRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_CustomUndeployRecipes" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.CustomUndeployRecipes">CustomUndeployRecipes</h4>
@@ -445,13 +500,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_DrainElbOnShutdown_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.DrainElbOnShutdown*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_DrainElbOnShutdown" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.DrainElbOnShutdown">DrainElbOnShutdown</h4>
@@ -472,13 +527,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_EbsVolumes_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.EbsVolumes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_EbsVolumes" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.EbsVolumes">EbsVolumes</h4>
@@ -499,13 +554,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Outputs.GangliaLayerEbsVolume.html">GangliaLayerEbsVolume</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Outputs.GangliaLayerEbsVolume.html">GangliaLayerEbsVolume</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_ElasticLoadBalancer_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.ElasticLoadBalancer*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_ElasticLoadBalancer" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.ElasticLoadBalancer">ElasticLoadBalancer</h4>
@@ -514,7 +569,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ElasticLoadBalancer { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ElasticLoadBalancer { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -526,13 +581,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_InstallUpdatesOnBoot_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.InstallUpdatesOnBoot*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_InstallUpdatesOnBoot" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.InstallUpdatesOnBoot">InstallUpdatesOnBoot</h4>
@@ -553,13 +608,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_InstanceShutdownTimeout_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.InstanceShutdownTimeout*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_InstanceShutdownTimeout" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.InstanceShutdownTimeout">InstanceShutdownTimeout</h4>
@@ -580,13 +635,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_Name_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Name*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_Name" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Name">Name</h4>
@@ -607,13 +662,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_Password_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Password*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_Password" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Password">Password</h4>
@@ -634,13 +689,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_StackId_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.StackId*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_StackId" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.StackId">StackId</h4>
@@ -661,13 +716,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_SystemPackages_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.SystemPackages*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_SystemPackages" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.SystemPackages">SystemPackages</h4>
@@ -688,22 +743,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_Tags_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Tags*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_Tags" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -715,13 +770,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_Url_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Url*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_Url" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Url">Url</h4>
@@ -730,7 +785,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Url { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Url { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -742,13 +797,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_UseEbsOptimizedInstances_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.UseEbsOptimizedInstances*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_UseEbsOptimizedInstances" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.UseEbsOptimizedInstances">UseEbsOptimizedInstances</h4>
@@ -769,13 +824,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_Username_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Username*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_Username" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Username">Username</h4>
@@ -784,7 +839,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Username { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Username { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -796,7 +851,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -804,17 +859,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_GangliaLayer_Get_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Get*"></a>
-  <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_Get_System_String_Input_System_String__Pulumi_Aws_OpsWorks_GangliaLayerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Get(System.String,Input{System.String},Pulumi.Aws.OpsWorks.GangliaLayerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GangliaLayerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_OpsWorks_GangliaLayer_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_OpsWorks_GangliaLayerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.OpsWorks.GangliaLayer.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.OpsWorks.GangliaLayerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, GangliaLayerState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing GangliaLayer resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static GangliaLayer Get(string name, Input&lt;string&gt; id, GangliaLayerState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static GangliaLayer Get(string name, Input&lt;string&gt; id, GangliaLayerState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -833,7 +888,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -845,7 +900,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -874,7 +929,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/OpsWorks/GangliaLayer.cs/#L37" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.AliKafka
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,6 +85,48 @@
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka consumer group.
 [<code>cn-hangzhou</code>,<code>cn-beijing</code>,<code>cn-shenzhen</code>,<code>cn-shanghai</code>,<code>cn-qingdao</code>,<code>cn-hongkong</code>,<code>cn-huhehaote</code>,<code>cn-zhangjiakou</code>,<code>ap-southeast-1</code>,<code>ap-south-1</code>,<code>ap-southeast-5</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var consumerId = config.Get(&amp;quot;consumerId&amp;quot;) ?? &amp;quot;CID-alikafkaGroupDatasourceName&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new AliCloud.AliKafka.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.AliKafka.InstanceArgs
+    {
+        DeployType = &amp;quot;5&amp;quot;,
+        DiskSize = &amp;quot;500&amp;quot;,
+        DiskType = &amp;quot;1&amp;quot;,
+        IoMax = &amp;quot;20&amp;quot;,
+        TopicQuota = &amp;quot;50&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultConsumerGroup = new AliCloud.AliKafka.ConsumerGroup(&amp;quot;defaultConsumerGroup&amp;quot;, new AliCloud.AliKafka.ConsumerGroupArgs
+    {
+        ConsumerId = consumerId,
+        InstanceId = defaultInstance.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.AliKafka.ConsumerGroupArgs.html">ConsumerGroupArgs</a></h4>
       <section></section>
@@ -106,6 +148,43 @@
 <p><strong>NOTE:</strong> Only the following regions support create alikafka post paid instance.
 [<code>cn-hangzhou</code>,<code>cn-beijing</code>,<code>cn-shenzhen</code>,<code>cn-shanghai</code>,<code>cn-qingdao</code>,<code>cn-hongkong</code>,<code>cn-huhehaote</code>,<code>cn-zhangjiakou</code>,<code>ap-southeast-1</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var instanceName = config.Get(&amp;quot;instanceName&amp;quot;) ?? &amp;quot;alikafkaInstanceName&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new AliCloud.AliKafka.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.AliKafka.InstanceArgs
+    {
+        DeployType = &amp;quot;4&amp;quot;,
+        DiskSize = &amp;quot;500&amp;quot;,
+        DiskType = &amp;quot;1&amp;quot;,
+        IoMax = &amp;quot;20&amp;quot;,
+        TopicQuota = &amp;quot;50&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.AliKafka.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
@@ -120,6 +199,65 @@
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka sasl user.
 [<code>cn-hangzhou</code>,<code>cn-beijing</code>,<code>cn-shenzhen</code>,<code>cn-shanghai</code>,<code>cn-qingdao</code>,<code>cn-hongkong</code>,<code>cn-huhehaote</code>,<code>cn-zhangjiakou</code>,<code>ap-southeast-1</code>,<code>ap-south-1</code>,<code>ap-southeast-5</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var username = config.Get(&amp;quot;username&amp;quot;) ?? &amp;quot;testusername&amp;quot;;
+    var password = config.Get(&amp;quot;password&amp;quot;) ?? &amp;quot;testpassword&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new AliCloud.AliKafka.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.AliKafka.InstanceArgs
+    {
+        DeployType = &amp;quot;5&amp;quot;,
+        DiskSize = &amp;quot;500&amp;quot;,
+        DiskType = &amp;quot;1&amp;quot;,
+        IoMax = &amp;quot;20&amp;quot;,
+        TopicQuota = &amp;quot;50&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultTopic = new AliCloud.AliKafka.Topic(&amp;quot;defaultTopic&amp;quot;, new AliCloud.AliKafka.TopicArgs
+    {
+        InstanceId = defaultInstance.Id,
+        Remark = &amp;quot;topic-remark&amp;quot;,
+        Topic = &amp;quot;test-topic&amp;quot;,
+    });
+    var defaultSaslUser = new AliCloud.AliKafka.SaslUser(&amp;quot;defaultSaslUser&amp;quot;, new AliCloud.AliKafka.SaslUserArgs
+    {
+        InstanceId = defaultInstance.Id,
+        Password = password,
+        Username = username,
+    });
+    var defaultSaslAcl = new AliCloud.AliKafka.SaslAcl(&amp;quot;defaultSaslAcl&amp;quot;, new AliCloud.AliKafka.SaslAclArgs
+    {
+        AclOperationType = &amp;quot;Write&amp;quot;,
+        AclResourceName = defaultTopic.TopicName,
+        AclResourcePatternType = &amp;quot;LITERAL&amp;quot;,
+        AclResourceType = &amp;quot;Topic&amp;quot;,
+        InstanceId = defaultInstance.Id,
+        Username = defaultSaslUser.Username,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.AliKafka.SaslAclArgs.html">SaslAclArgs</a></h4>
       <section></section>
@@ -134,6 +272,50 @@
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka sasl user.
 [<code>cn-hangzhou</code>,<code>cn-beijing</code>,<code>cn-shenzhen</code>,<code>cn-shanghai</code>,<code>cn-qingdao</code>,<code>cn-hongkong</code>,<code>cn-huhehaote</code>,<code>cn-zhangjiakou</code>,<code>ap-southeast-1</code>,<code>ap-south-1</code>,<code>ap-southeast-5</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var username = config.Get(&amp;quot;username&amp;quot;) ?? &amp;quot;testusername&amp;quot;;
+    var password = config.Get(&amp;quot;password&amp;quot;) ?? &amp;quot;testpassword&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new AliCloud.AliKafka.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.AliKafka.InstanceArgs
+    {
+        DeployType = &amp;quot;5&amp;quot;,
+        DiskSize = &amp;quot;500&amp;quot;,
+        DiskType = &amp;quot;1&amp;quot;,
+        IoMax = &amp;quot;20&amp;quot;,
+        TopicQuota = &amp;quot;50&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultSaslUser = new AliCloud.AliKafka.SaslUser(&amp;quot;defaultSaslUser&amp;quot;, new AliCloud.AliKafka.SaslUserArgs
+    {
+        InstanceId = defaultInstance.Id,
+        Password = password,
+        Username = username,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.AliKafka.SaslUserArgs.html">SaslUserArgs</a></h4>
       <section></section>
@@ -148,6 +330,52 @@
 <p><strong>NOTE:</strong>  Only the following regions support create alikafka topic.
 [<code>cn-hangzhou</code>,<code>cn-beijing</code>,<code>cn-shenzhen</code>,<code>cn-shanghai</code>,<code>cn-qingdao</code>,<code>cn-hongkong</code>,<code>cn-huhehaote</code>,<code>cn-zhangjiakou</code>,<code>ap-southeast-1</code>,<code>ap-south-1</code>,<code>ap-southeast-5</code>]</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new AliCloud.AliKafka.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.AliKafka.InstanceArgs
+    {
+        DeployType = &amp;quot;5&amp;quot;,
+        DiskSize = &amp;quot;500&amp;quot;,
+        DiskType = &amp;quot;1&amp;quot;,
+        IoMax = &amp;quot;20&amp;quot;,
+        TopicQuota = &amp;quot;50&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var config = new Config();
+    var topic = config.Get(&amp;quot;topic&amp;quot;) ?? &amp;quot;alikafkaTopicName&amp;quot;;
+    var defaultTopic = new AliCloud.AliKafka.Topic(&amp;quot;defaultTopic&amp;quot;, new AliCloud.AliKafka.TopicArgs
+    {
+        CompactTopic = &amp;quot;false&amp;quot;,
+        InstanceId = defaultInstance.Id,
+        LocalTopic = &amp;quot;false&amp;quot;,
+        PartitionNum = &amp;quot;12&amp;quot;,
+        Remark = &amp;quot;dafault_kafka_topic_remark&amp;quot;,
+        Topic = topic,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.AliKafka.TopicArgs.html">TopicArgs</a></h4>
       <section></section>

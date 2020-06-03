@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.GameServices
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -110,6 +110,23 @@
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/game-servers/docs">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---game-service-deployment-basic">Example Usage - Game Service Deployment Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.GameServices.GameServerDeployment(&amp;quot;default&amp;quot;, new Gcp.GameServices.GameServerDeploymentArgs
+    {
+        DeploymentId = &amp;quot;tf-test-deployment&amp;quot;,
+        Description = &amp;quot;a deployment description&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.GameServices.GameServerDeploymentArgs.html">GameServerDeploymentArgs</a></h4>
       <section></section>
@@ -137,6 +154,25 @@ deployment.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/game-servers/docs">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---game-service-realm-basic">Example Usage - Game Service Realm Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.GameServices.Realm(&amp;quot;default&amp;quot;, new Gcp.GameServices.RealmArgs
+    {
+        RealmId = &amp;quot;tf-test-realm&amp;quot;,
+        TimeZone = &amp;quot;EST&amp;quot;,
+        Location = &amp;quot;global&amp;quot;,
+        Description = &amp;quot;one of the nine&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.GameServices.RealmArgs.html">RealmArgs</a></h4>
       <section></section>

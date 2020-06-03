@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AuthBackendRole
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,12 +76,106 @@ instances or principals that can perform the login operation against the
 backend. See the <a href="https://www.vaultproject.io/docs/auth/aws.html">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var aws = new Vault.AuthBackend(&amp;quot;aws&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Type = &amp;quot;aws&amp;quot;,
+    });
+    var example = new Vault.Aws.AuthBackendRole(&amp;quot;example&amp;quot;, new Vault.Aws.AuthBackendRoleArgs
+    {
+        Backend = aws.Path,
+        Role = &amp;quot;test-role&amp;quot;,
+        AuthType = &amp;quot;iam&amp;quot;,
+        BoundAmiIds = 
+        {
+            &amp;quot;ami-8c1be5f6&amp;quot;,
+        },
+        BoundAccountIds = 
+        {
+            &amp;quot;123456789012&amp;quot;,
+        },
+        BoundVpcIds = 
+        {
+            &amp;quot;vpc-b61106d4&amp;quot;,
+        },
+        BoundSubnetIds = 
+        {
+            &amp;quot;vpc-133128f1&amp;quot;,
+        },
+        BoundIamRoleArns = 
+        {
+            &amp;quot;arn:aws:iam::123456789012:role/MyRole&amp;quot;,
+        },
+        BoundIamInstanceProfileArns = 
+        {
+            &amp;quot;arn:aws:iam::123456789012:instance-profile/MyProfile&amp;quot;,
+        },
+        InferredEntityType = &amp;quot;ec2_instance&amp;quot;,
+        InferredAwsRegion = &amp;quot;us-east-1&amp;quot;,
+        TokenTtl = 60,
+        TokenMaxTtl = 120,
+        TokenPolicies = 
+        {
+            &amp;quot;default&amp;quot;,
+            &amp;quot;dev&amp;quot;,
+            &amp;quot;prod&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AuthBackendRole</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AuthBackendRole</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Vault.Aws.html">Pulumi.Vault.Aws</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Vault.dll</h6>
@@ -92,16 +186,16 @@ information.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L289">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L350">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole__ctor_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.#ctor*"></a>
-  <h4 id="Pulumi_Vault_Aws_AuthBackendRole__ctor_System_String_Pulumi_Vault_Aws_AuthBackendRoleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.Aws.AuthBackendRole.#ctor(System.String,Pulumi.Vault.Aws.AuthBackendRoleArgs,System.Nullable{CustomResourceOptions})">AuthBackendRole(String, AuthBackendRoleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_Aws_AuthBackendRole__ctor_System_String_Pulumi_Vault_Aws_AuthBackendRoleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.#ctor(System.String,Pulumi.Vault.Aws.AuthBackendRoleArgs,Pulumi.CustomResourceOptions)">AuthBackendRole(String, AuthBackendRoleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a AuthBackendRole resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AuthBackendRole(string name, AuthBackendRoleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AuthBackendRole(string name, AuthBackendRoleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,7 +220,7 @@ information.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -136,7 +230,7 @@ information.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_AllowInstanceMigration_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.AllowInstanceMigration*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_AllowInstanceMigration" data-uid="Pulumi.Vault.Aws.AuthBackendRole.AllowInstanceMigration">AllowInstanceMigration</h4>
@@ -158,13 +252,13 @@ the underlying instance where the client resides.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_AuthType_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.AuthType*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_AuthType" data-uid="Pulumi.Vault.Aws.AuthBackendRole.AuthType">AuthType</h4>
@@ -174,7 +268,7 @@ are <code>ec2</code> and <code>iam</code>. Defaults to <code>iam</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AuthType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AuthType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,13 +280,13 @@ are <code>ec2</code> and <code>iam</code>. Defaults to <code>iam</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_Backend_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Backend*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_Backend" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Backend">Backend</h4>
@@ -201,7 +295,7 @@ are <code>ec2</code> and <code>iam</code>. Defaults to <code>iam</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Backend { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Backend { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,13 +307,13 @@ are <code>ec2</code> and <code>iam</code>. Defaults to <code>iam</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_BoundAccountIds_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundAccountIds*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_BoundAccountIds" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundAccountIds">BoundAccountIds</h4>
@@ -243,13 +337,13 @@ account ID specified by this field. <code>auth_type</code> must be set to <code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_BoundAmiIds_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundAmiIds*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_BoundAmiIds" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundAmiIds">BoundAmiIds</h4>
@@ -273,13 +367,13 @@ specified by this field. <code>auth_type</code> must be set to <code>ec2</code> 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_BoundEc2InstanceIds_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundEc2InstanceIds*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_BoundEc2InstanceIds" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundEc2InstanceIds">BoundEc2InstanceIds</h4>
@@ -300,13 +394,13 @@ specified by this field. <code>auth_type</code> must be set to <code>ec2</code> 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_BoundIamInstanceProfileArns_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundIamInstanceProfileArns*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_BoundIamInstanceProfileArns" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundIamInstanceProfileArns">BoundIamInstanceProfileArns</h4>
@@ -332,13 +426,13 @@ were a glob ending in <code>*</code>. <code>auth_type</code> must be set to <cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_BoundIamPrincipalArns_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundIamPrincipalArns*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_BoundIamPrincipalArns" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundIamPrincipalArns">BoundIamPrincipalArns</h4>
@@ -361,13 +455,13 @@ supported at the end of the ARN.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_BoundIamRoleArns_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundIamRoleArns*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_BoundIamRoleArns" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundIamRoleArns">BoundIamRoleArns</h4>
@@ -391,13 +485,13 @@ role ARN specified by this field. <code>auth_type</code> must be set to <code>ec
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_BoundRegions_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundRegions*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_BoundRegions" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundRegions">BoundRegions</h4>
@@ -422,13 +516,13 @@ constraint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_BoundSubnetIds_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundSubnetIds*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_BoundSubnetIds" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundSubnetIds">BoundSubnetIds</h4>
@@ -453,13 +547,13 @@ to use this constraint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_BoundVpcIds_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundVpcIds*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_BoundVpcIds" data-uid="Pulumi.Vault.Aws.AuthBackendRole.BoundVpcIds">BoundVpcIds</h4>
@@ -484,13 +578,13 @@ constraint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_DisallowReauthentication_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.DisallowReauthentication*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_DisallowReauthentication" data-uid="Pulumi.Vault.Aws.AuthBackendRole.DisallowReauthentication">DisallowReauthentication</h4>
@@ -513,13 +607,13 @@ single token to be granted per instance ID. This can only be set when
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L198">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_InferredAwsRegion_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.InferredAwsRegion*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_InferredAwsRegion" data-uid="Pulumi.Vault.Aws.AuthBackendRole.InferredAwsRegion">InferredAwsRegion</h4>
@@ -531,7 +625,7 @@ is the region to search for the inferred entities. Required if
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InferredAwsRegion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InferredAwsRegion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -543,13 +637,13 @@ is the region to search for the inferred entities. Required if
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_InferredEntityType_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.InferredEntityType*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_InferredEntityType" data-uid="Pulumi.Vault.Aws.AuthBackendRole.InferredEntityType">InferredEntityType</h4>
@@ -561,7 +655,7 @@ This only applies when <code>auth_type</code> is set to <code>iam</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InferredEntityType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InferredEntityType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -573,13 +667,13 @@ This only applies when <code>auth_type</code> is set to <code>iam</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L214">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_MaxTtl_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.MaxTtl*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_MaxTtl" data-uid="Pulumi.Vault.Aws.AuthBackendRole.MaxTtl">MaxTtl</h4>
@@ -601,13 +695,13 @@ issued using this role, provided as a number of seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L162">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L223">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_Period_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Period*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_Period" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Period">Period</h4>
@@ -631,13 +725,13 @@ value of this field. Specified in seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_Policies_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Policies*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_Policies" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Policies">Policies</h4>
@@ -659,13 +753,13 @@ specifying the policies to be set on tokens issued using this role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L245">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_ResolveAwsUniqueIds_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.ResolveAwsUniqueIds*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_ResolveAwsUniqueIds" data-uid="Pulumi.Vault.Aws.AuthBackendRole.ResolveAwsUniqueIds">ResolveAwsUniqueIds</h4>
@@ -695,13 +789,13 @@ Once set to <code>true</code>, this cannot be changed to <code>false</code> with
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L251">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_Role_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Role*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_Role" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Role">Role</h4>
@@ -722,13 +816,13 @@ Once set to <code>true</code>, this cannot be changed to <code>false</code> with
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L199">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L260">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_RoleTag_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.RoleTag*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_RoleTag" data-uid="Pulumi.Vault.Aws.AuthBackendRole.RoleTag">RoleTag</h4>
@@ -740,7 +834,7 @@ to use this constraint.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RoleTag { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RoleTag { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -752,13 +846,13 @@ to use this constraint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L268">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_TokenBoundCidrs_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenBoundCidrs*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_TokenBoundCidrs" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenBoundCidrs">TokenBoundCidrs</h4>
@@ -781,13 +875,13 @@ as well.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L216">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L277">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_TokenExplicitMaxTtl_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenExplicitMaxTtl*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_TokenExplicitMaxTtl" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenExplicitMaxTtl">TokenExplicitMaxTtl</h4>
@@ -811,13 +905,13 @@ onto the token in number of seconds. This is a hard cap even if <code>token_ttl<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L284">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_TokenMaxTtl_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenMaxTtl*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_TokenMaxTtl" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenMaxTtl">TokenMaxTtl</h4>
@@ -839,13 +933,13 @@ Its current value will be referenced at renewal time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L230">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L291">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_TokenNoDefaultPolicy_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenNoDefaultPolicy*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_TokenNoDefaultPolicy" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenNoDefaultPolicy">TokenNoDefaultPolicy</h4>
@@ -867,13 +961,13 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L238">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L299">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_TokenNumUses_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenNumUses*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_TokenNumUses" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenNumUses">TokenNumUses</h4>
@@ -896,13 +990,13 @@ if any, in number of seconds to set on the token.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L308">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_TokenPeriod_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenPeriod*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_TokenPeriod" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenPeriod">TokenPeriod</h4>
@@ -926,13 +1020,13 @@ value of this field. Specified in seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L254">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L315">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_TokenPolicies_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenPolicies*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_TokenPolicies" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenPolicies">TokenPolicies</h4>
@@ -954,13 +1048,13 @@ on the auth method, this list may be supplemented by user/group/other values.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L261">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L322">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_TokenTtl_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenTtl*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_TokenTtl" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenTtl">TokenTtl</h4>
@@ -982,13 +1076,13 @@ Its current value will be referenced at renewal time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L271">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L332">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_TokenType_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenType*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_TokenType" data-uid="Pulumi.Vault.Aws.AuthBackendRole.TokenType">TokenType</h4>
@@ -1001,7 +1095,7 @@ requests a different type at generation time.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TokenType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TokenType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1013,13 +1107,13 @@ requests a different type at generation time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L278">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L339">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_Ttl_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Ttl*"></a>
   <h4 id="Pulumi_Vault_Aws_AuthBackendRole_Ttl" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Ttl">Ttl</h4>
@@ -1041,7 +1135,7 @@ using this role, provided as a number of seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1049,17 +1143,17 @@ using this role, provided as a number of seconds.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L319">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L380">View Source</a>
   </span>
   <a id="Pulumi_Vault_Aws_AuthBackendRole_Get_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Get*"></a>
-  <h4 id="Pulumi_Vault_Aws_AuthBackendRole_Get_System_String_Input_System_String__Pulumi_Vault_Aws_AuthBackendRoleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Get(System.String,Input{System.String},Pulumi.Vault.Aws.AuthBackendRoleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AuthBackendRoleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_Aws_AuthBackendRole_Get_System_String_Pulumi_Input_System_String__Pulumi_Vault_Aws_AuthBackendRoleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.Aws.AuthBackendRole.Get(System.String,Pulumi.Input{System.String},Pulumi.Vault.Aws.AuthBackendRoleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AuthBackendRoleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing AuthBackendRole resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AuthBackendRole Get(string name, Input&lt;string&gt; id, AuthBackendRoleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AuthBackendRole Get(string name, Input&lt;string&gt; id, AuthBackendRoleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1078,7 +1172,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1090,7 +1184,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1119,7 +1213,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Aws/AuthBackendRole.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Aws/AuthBackendRole.cs/#L80" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

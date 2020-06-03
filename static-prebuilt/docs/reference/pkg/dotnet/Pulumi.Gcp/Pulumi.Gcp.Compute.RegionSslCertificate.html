@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RegionSslCertificate
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,12 +80,75 @@ the load balancer to serve secure connections from the user.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/load-balancing/docs/ssl-certificates">Official Documentation</a></li>
 </ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>certificate</code> and <code>private_key</code> will be stored in the raw
+state as plain-text. <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
+</blockquote>
+<h2 id="example-usage---region-ssl-certificate-basic">Example Usage - Region Ssl Certificate Basic</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.RegionSslCertificate(&amp;quot;default&amp;quot;, new Gcp.Compute.RegionSslCertificateArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        NamePrefix = &amp;quot;my-certificate-&amp;quot;,
+        Description = &amp;quot;a description&amp;quot;,
+        PrivateKey = File.ReadAllText(&amp;quot;path/to/private.key&amp;quot;),
+        Certificate = File.ReadAllText(&amp;quot;path/to/certificate.crt&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">RegionSslCertificate</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">RegionSslCertificate</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -96,16 +159,16 @@ the load balancer to serve secure connections from the user.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate__ctor_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate__ctor_System_String_Pulumi_Gcp_Compute_RegionSslCertificateArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.#ctor(System.String,Pulumi.Gcp.Compute.RegionSslCertificateArgs,System.Nullable{CustomResourceOptions})">RegionSslCertificate(String, RegionSslCertificateArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate__ctor_System_String_Pulumi_Gcp_Compute_RegionSslCertificateArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.#ctor(System.String,Pulumi.Gcp.Compute.RegionSslCertificateArgs,Pulumi.CustomResourceOptions)">RegionSslCertificate(String, RegionSslCertificateArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a RegionSslCertificate resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RegionSslCertificate(string name, RegionSslCertificateArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public RegionSslCertificate(string name, RegionSslCertificateArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,7 +193,7 @@ the load balancer to serve secure connections from the user.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -140,12 +203,13 @@ the load balancer to serve secure connections from the user.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate_Certificate_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Certificate*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_Certificate" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Certificate">Certificate</h4>
-  <div class="markdown level1 summary"><p>The certificate in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at
-least one intermediate cert.</p>
+  <div class="markdown level1 summary"><p>The certificate in PEM format.
+The certificate chain must be no greater than 5 certs long.
+The chain must include at least one intermediate cert.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -162,13 +226,13 @@ least one intermediate cert.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate_CertificateId_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.CertificateId*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_CertificateId" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.CertificateId">CertificateId</h4>
@@ -189,13 +253,13 @@ least one intermediate cert.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.CreationTimestamp">CreationTimestamp</h4>
@@ -216,13 +280,13 @@ least one intermediate cert.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate_Description_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_Description" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Description">Description</h4>
@@ -231,7 +295,7 @@ least one intermediate cert.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -243,21 +307,23 @@ least one intermediate cert.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate_Name_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_Name" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-namespace as the managed SSL certificates.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression <code>a-z?</code> which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -274,13 +340,13 @@ namespace as the managed SSL certificates.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate_NamePrefix_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.NamePrefix*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_NamePrefix" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.NamePrefix">NamePrefix</h4>
@@ -302,17 +368,17 @@ specified prefix. Conflicts with <code>name</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate_PrivateKey_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.PrivateKey*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_PrivateKey" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.PrivateKey">PrivateKey</h4>
-  <div class="markdown level1 summary"><p>The write-only private key in PEM format.</p>
+  <div class="markdown level1 summary"><p>The write-only private key in PEM format.  <strong>Note</strong>: This property is sensitive and will not be displayed in the plan.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -329,13 +395,13 @@ specified prefix. Conflicts with <code>name</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate_Project_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_Project" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Project">Project</h4>
@@ -357,18 +423,18 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate_Region_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_Region" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Region">Region</h4>
-  <div class="markdown level1 summary"><p>The Region in which the created regional ssl certificate should reside. If it is not provided, the provider region is
-used.</p>
+  <div class="markdown level1 summary"><p>The Region in which the created regional ssl certificate should reside.
+If it is not provided, the provider region is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -385,13 +451,13 @@ used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate_SelfLink_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_SelfLink" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.SelfLink">SelfLink</h4>
@@ -412,7 +478,7 @@ used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -420,17 +486,17 @@ used.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionSslCertificate_Get_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_RegionSslCertificateState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.RegionSslCertificateState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RegionSslCertificateState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_RegionSslCertificate_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_RegionSslCertificateState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.RegionSslCertificate.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.RegionSslCertificateState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RegionSslCertificateState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing RegionSslCertificate resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RegionSslCertificate Get(string name, Input&lt;string&gt; id, RegionSslCertificateState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RegionSslCertificate Get(string name, Input&lt;string&gt; id, RegionSslCertificateState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -449,7 +515,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -461,7 +527,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -490,7 +556,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionSslCertificate.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionSslCertificate.cs/#L52" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

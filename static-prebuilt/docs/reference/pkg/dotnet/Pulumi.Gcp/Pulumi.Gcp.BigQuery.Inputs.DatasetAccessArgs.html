@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatasetAccessArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DatasetAccessArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">DatasetAccessArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.html">Pulumi.Gcp.BigQuery.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs__ctor_" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs__ctor" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.#ctor">DatasetAccessArgs()</h4>
@@ -100,15 +129,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L19">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_Domain_" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.Domain*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_Domain" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.Domain">Domain</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Domain { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Domain { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,21 +151,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_GroupByEmail_" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.GroupByEmail*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_GroupByEmail" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.GroupByEmail">GroupByEmail</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An email address of a Google Group to grant access to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? GroupByEmail { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; GroupByEmail { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,21 +178,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_Role_" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.Role*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_Role" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.Role">Role</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts. See
+<a href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Role { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Role { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,21 +210,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_SpecialGroup_" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.SpecialGroup*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_SpecialGroup" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.SpecialGroup">SpecialGroup</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A special group to grant access to. Possible values include:</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SpecialGroup { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SpecialGroup { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,21 +237,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_UserByEmail_" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.UserByEmail*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_UserByEmail" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.UserByEmail">UserByEmail</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An email address of a user to grant access to. For example:
+fred@example.com</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserByEmail { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; UserByEmail { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,21 +265,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_View_" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.View*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_DatasetAccessArgs_View" data-uid="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessArgs.View">View</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DatasetAccessViewArgs&gt;? View { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DatasetAccessViewArgs&gt; View { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,7 +296,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessViewArgs.html">DatasetAccessViewArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessViewArgs.html">DatasetAccessViewArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -262,7 +308,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BigQuery/Inputs/DatasetAccessArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

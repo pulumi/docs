@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class KeyState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">KeyState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">KeyState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Kms.html">Pulumi.AliCloud.Kms</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Kms/Key.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L377">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Kms_KeyState__ctor_" data-uid="Pulumi.AliCloud.Kms.KeyState.#ctor*"></a>
   <h4 id="Pulumi_AliCloud_Kms_KeyState__ctor" data-uid="Pulumi.AliCloud.Kms.KeyState.#ctor">KeyState()</h4>
@@ -100,16 +129,21 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Kms/Key.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L275">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Kms_KeyState_Arn_" data-uid="Pulumi.AliCloud.Kms.KeyState.Arn*"></a>
   <h4 id="Pulumi_AliCloud_Kms_KeyState_Arn" data-uid="Pulumi.AliCloud.Kms.KeyState.Arn">Arn</h4>
   <div class="markdown level1 summary"><p>The Alicloud Resource Name (ARN) of the key.</p>
+<ul>
+<li><code>creation_date</code> -The date and time when the CMK was created. The time is displayed in UTC.</li>
+<li><code>creator</code> -The creator of the CMK.</li>
+<li><code>delete_date</code> -The scheduled date to delete CMK. The time is displayed in UTC. This value is returned only when the KeyState value is PendingDeletion.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,23 +155,127 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Kms/Key.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L281">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_AutomaticRotation_" data-uid="Pulumi.AliCloud.Kms.KeyState.AutomaticRotation*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_AutomaticRotation" data-uid="Pulumi.AliCloud.Kms.KeyState.AutomaticRotation">AutomaticRotation</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to enable automatic key rotation. Default:&quot;Disabled&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AutomaticRotation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L284">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_CreationDate_" data-uid="Pulumi.AliCloud.Kms.KeyState.CreationDate*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_CreationDate" data-uid="Pulumi.AliCloud.Kms.KeyState.CreationDate">CreationDate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CreationDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L287">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_Creator_" data-uid="Pulumi.AliCloud.Kms.KeyState.Creator*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_Creator" data-uid="Pulumi.AliCloud.Kms.KeyState.Creator">Creator</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Creator { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L290">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_DeleteDate_" data-uid="Pulumi.AliCloud.Kms.KeyState.DeleteDate*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_DeleteDate" data-uid="Pulumi.AliCloud.Kms.KeyState.DeleteDate">DeleteDate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DeleteDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L296">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Kms_KeyState_DeletionWindowInDays_" data-uid="Pulumi.AliCloud.Kms.KeyState.DeletionWindowInDays*"></a>
   <h4 id="Pulumi_AliCloud_Kms_KeyState_DeletionWindowInDays" data-uid="Pulumi.AliCloud.Kms.KeyState.DeletionWindowInDays">DeletionWindowInDays</h4>
-  <div class="markdown level1 summary"><p>Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p>
+  <div class="markdown level1 summary"><p>Field 'deletion_window_in_days' has been deprecated from provider version 1.85.0. New field 'pending_window_in_days' instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DeletionWindowInDays { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DeletionWindowInDays { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,22 +287,22 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Kms/Key.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L302">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Kms_KeyState_Description_" data-uid="Pulumi.AliCloud.Kms.KeyState.Description*"></a>
   <h4 id="Pulumi_AliCloud_Kms_KeyState_Description" data-uid="Pulumi.AliCloud.Kms.KeyState.Description">Description</h4>
-  <div class="markdown level1 summary"><p>The description of the key.</p>
+  <div class="markdown level1 summary"><p>The description of the key as viewed in Alicloud console.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,22 +314,22 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Kms/Key.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L308">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Kms_KeyState_IsEnabled_" data-uid="Pulumi.AliCloud.Kms.KeyState.IsEnabled*"></a>
   <h4 id="Pulumi_AliCloud_Kms_KeyState_IsEnabled" data-uid="Pulumi.AliCloud.Kms.KeyState.IsEnabled">IsEnabled</h4>
-  <div class="markdown level1 summary"><p>Specifies whether the key is enabled. Defaults to true.</p>
+  <div class="markdown level1 summary"><p>Field 'is_enabled' has been deprecated from provider version 1.85.0. New field 'key_state' instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IsEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IsEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,13 +341,67 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Kms/Key.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L314">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_KeySpec_" data-uid="Pulumi.AliCloud.Kms.KeyState.KeySpec*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_KeySpec" data-uid="Pulumi.AliCloud.Kms.KeyState.KeySpec">KeySpec</h4>
+  <div class="markdown level1 summary"><p>The type of the CMK.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KeySpec { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L320">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_KeyStatus_" data-uid="Pulumi.AliCloud.Kms.KeyState.KeyStatus*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_KeyStatus" data-uid="Pulumi.AliCloud.Kms.KeyState.KeyStatus">KeyStatus</h4>
+  <div class="markdown level1 summary"><p>The status of CMK. Defaults to Enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KeyStatus { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L326">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Kms_KeyState_KeyUsage_" data-uid="Pulumi.AliCloud.Kms.KeyState.KeyUsage*"></a>
   <h4 id="Pulumi_AliCloud_Kms_KeyState_KeyUsage" data-uid="Pulumi.AliCloud.Kms.KeyState.KeyUsage">KeyUsage</h4>
@@ -218,7 +410,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KeyUsage { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KeyUsage { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,7 +422,223 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L332">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_LastRotationDate_" data-uid="Pulumi.AliCloud.Kms.KeyState.LastRotationDate*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_LastRotationDate" data-uid="Pulumi.AliCloud.Kms.KeyState.LastRotationDate">LastRotationDate</h4>
+  <div class="markdown level1 summary"><p>The date and time the last rotation was performed. The time is displayed in UTC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LastRotationDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L338">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_MaterialExpireTime_" data-uid="Pulumi.AliCloud.Kms.KeyState.MaterialExpireTime*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_MaterialExpireTime" data-uid="Pulumi.AliCloud.Kms.KeyState.MaterialExpireTime">MaterialExpireTime</h4>
+  <div class="markdown level1 summary"><p>The time and date the key material for the CMK expires. The time is displayed in UTC. If the value is empty, the key material for the CMK does not expire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MaterialExpireTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L344">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_NextRotationDate_" data-uid="Pulumi.AliCloud.Kms.KeyState.NextRotationDate*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_NextRotationDate" data-uid="Pulumi.AliCloud.Kms.KeyState.NextRotationDate">NextRotationDate</h4>
+  <div class="markdown level1 summary"><p>The time the next rotation is scheduled for execution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NextRotationDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L350">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_Origin_" data-uid="Pulumi.AliCloud.Kms.KeyState.Origin*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_Origin" data-uid="Pulumi.AliCloud.Kms.KeyState.Origin">Origin</h4>
+  <div class="markdown level1 summary"><p>The source of the key material for the CMK. Defaults to &quot;Aliyun_KMS&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Origin { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L356">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_PendingWindowInDays_" data-uid="Pulumi.AliCloud.Kms.KeyState.PendingWindowInDays*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_PendingWindowInDays" data-uid="Pulumi.AliCloud.Kms.KeyState.PendingWindowInDays">PendingWindowInDays</h4>
+  <div class="markdown level1 summary"><p>Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; PendingWindowInDays { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L362">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_PrimaryKeyVersion_" data-uid="Pulumi.AliCloud.Kms.KeyState.PrimaryKeyVersion*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_PrimaryKeyVersion" data-uid="Pulumi.AliCloud.Kms.KeyState.PrimaryKeyVersion">PrimaryKeyVersion</h4>
+  <div class="markdown level1 summary"><p>The ID of the current primary key version of the symmetric CMK.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PrimaryKeyVersion { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L368">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_ProtectionLevel_" data-uid="Pulumi.AliCloud.Kms.KeyState.ProtectionLevel*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_ProtectionLevel" data-uid="Pulumi.AliCloud.Kms.KeyState.ProtectionLevel">ProtectionLevel</h4>
+  <div class="markdown level1 summary"><p>The protection level of the CMK. Defaults to &quot;SOFTWARE&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ProtectionLevel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L374">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Kms_KeyState_RotationInterval_" data-uid="Pulumi.AliCloud.Kms.KeyState.RotationInterval*"></a>
+  <h4 id="Pulumi_AliCloud_Kms_KeyState_RotationInterval" data-uid="Pulumi.AliCloud.Kms.KeyState.RotationInterval">RotationInterval</h4>
+  <div class="markdown level1 summary"><p>The period of automatic key rotation. Unit: seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RotationInterval { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -242,7 +650,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Kms/Key.cs/#L124" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Kms/Key.cs/#L267" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

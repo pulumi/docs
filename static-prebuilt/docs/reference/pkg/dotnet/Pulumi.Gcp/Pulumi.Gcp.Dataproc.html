@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Dataproc
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,6 +89,136 @@
 <p>!&gt; <strong>Warning:</strong> Due to limitations of the API, all arguments except
 <code>labels</code>,<code>cluster_config.worker_config.num_instances</code> and <code>cluster_config.preemptible_worker_config.num_instances</code> are non-updatable. Changing others will cause recreation of the
 whole cluster!</p>
+<h2 id="example-usage---basic">Example Usage - Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var simplecluster = new Gcp.Dataproc.Cluster(&amp;quot;simplecluster&amp;quot;, new Gcp.Dataproc.ClusterArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---advanced">Example Usage - Advanced</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var mycluster = new Gcp.Dataproc.Cluster(&amp;quot;mycluster&amp;quot;, new Gcp.Dataproc.ClusterArgs
+    {
+        ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
+        {
+            GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
+            {
+                ServiceAccountScopes = 
+                {
+                    &amp;quot;https://www.googleapis.com/auth/monitoring&amp;quot;,
+                    &amp;quot;useraccounts-ro&amp;quot;,
+                    &amp;quot;storage-rw&amp;quot;,
+                    &amp;quot;logging-write&amp;quot;,
+                },
+                Tags = 
+                {
+                    &amp;quot;foo&amp;quot;,
+                    &amp;quot;bar&amp;quot;,
+                },
+            },
+            InitializationAction = 
+            {
+
+                {
+                    { &amp;quot;script&amp;quot;, &amp;quot;gs://dataproc-initialization-actions/stackdriver/stackdriver.sh&amp;quot; },
+                    { &amp;quot;timeoutSec&amp;quot;, 500 },
+                },
+            },
+            MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
+            {
+                DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs
+                {
+                    BootDiskSizeGb = 15,
+                    BootDiskType = &amp;quot;pd-ssd&amp;quot;,
+                },
+                MachineType = &amp;quot;n1-standard-1&amp;quot;,
+                NumInstances = 1,
+            },
+            PreemptibleWorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigArgs
+            {
+                NumInstances = 0,
+            },
+            SoftwareConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigSoftwareConfigArgs
+            {
+                ImageVersion = &amp;quot;1.3.7-deb9&amp;quot;,
+                OverrideProperties = 
+                {
+                    { &amp;quot;dataproc:dataproc.allow.zero.workers&amp;quot;, &amp;quot;true&amp;quot; },
+                },
+            },
+            StagingBucket = &amp;quot;dataproc-staging-bucket&amp;quot;,
+            WorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs
+            {
+                DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs
+                {
+                    BootDiskSizeGb = 15,
+                    NumLocalSsds = 1,
+                },
+                MachineType = &amp;quot;n1-standard-1&amp;quot;,
+                MinCpuPlatform = &amp;quot;Intel Skylake&amp;quot;,
+                NumInstances = 2,
+            },
+        },
+        Labels = 
+        {
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+        Region = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---using-a-gpu-accelerator">Example Usage - Using a GPU accelerator</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var acceleratedCluster = new Gcp.Dataproc.Cluster(&amp;quot;acceleratedCluster&amp;quot;, new Gcp.Dataproc.ClusterArgs
+    {
+        ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
+        {
+            GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
+            {
+                Zone = &amp;quot;us-central1-a&amp;quot;,
+            },
+            MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
+            {
+                Accelerators = 
+                {
+                    new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigAcceleratorArgs
+                    {
+                        AcceleratorCount = &amp;quot;1&amp;quot;,
+                        AcceleratorType = &amp;quot;nvidia-tesla-k80&amp;quot;,
+                    },
+                },
+            },
+        },
+        Region = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
@@ -105,6 +235,78 @@ whole cluster!</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.dataproc.ClusterIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.ClusterIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_subscription_iam_policy">google_pubsub_subscription_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.Dataproc.ClusterIAMPolicy(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.ClusterIAMPolicyArgs
+    {
+        Project = &amp;quot;your-project&amp;quot;,
+        Region = &amp;quot;your-region&amp;quot;,
+        Cluster = &amp;quot;your-dataproc-cluster&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_binding">google_pubsub_subscription_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.ClusterIAMBinding(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.ClusterIAMBindingArgs
+    {
+        Cluster = &amp;quot;your-dataproc-cluster&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_member">google_pubsub_subscription_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.ClusterIAMMember(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.ClusterIAMMemberArgs
+    {
+        Cluster = &amp;quot;your-dataproc-cluster&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMBindingArgs.html">ClusterIAMBindingArgs</a></h4>
       <section></section>
@@ -123,6 +325,78 @@ whole cluster!</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.dataproc.ClusterIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.ClusterIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_subscription_iam_policy">google_pubsub_subscription_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.Dataproc.ClusterIAMPolicy(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.ClusterIAMPolicyArgs
+    {
+        Project = &amp;quot;your-project&amp;quot;,
+        Region = &amp;quot;your-region&amp;quot;,
+        Cluster = &amp;quot;your-dataproc-cluster&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_binding">google_pubsub_subscription_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.ClusterIAMBinding(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.ClusterIAMBindingArgs
+    {
+        Cluster = &amp;quot;your-dataproc-cluster&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_member">google_pubsub_subscription_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.ClusterIAMMember(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.ClusterIAMMemberArgs
+    {
+        Cluster = &amp;quot;your-dataproc-cluster&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMMemberArgs.html">ClusterIAMMemberArgs</a></h4>
       <section></section>
@@ -141,6 +415,78 @@ whole cluster!</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.dataproc.ClusterIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.ClusterIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_subscription_iam_policy">google_pubsub_subscription_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.Dataproc.ClusterIAMPolicy(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.ClusterIAMPolicyArgs
+    {
+        Project = &amp;quot;your-project&amp;quot;,
+        Region = &amp;quot;your-region&amp;quot;,
+        Cluster = &amp;quot;your-dataproc-cluster&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_binding">google_pubsub_subscription_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.ClusterIAMBinding(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.ClusterIAMBindingArgs
+    {
+        Cluster = &amp;quot;your-dataproc-cluster&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_member">google_pubsub_subscription_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.ClusterIAMMember(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.ClusterIAMMemberArgs
+    {
+        Cluster = &amp;quot;your-dataproc-cluster&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMPolicyArgs.html">ClusterIAMPolicyArgs</a></h4>
       <section></section>
@@ -168,6 +514,78 @@ whole cluster!</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.dataproc.JobIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.JobIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_subscription_iam_policy">google_pubsub_subscription_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.Dataproc.JobIAMPolicy(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.JobIAMPolicyArgs
+    {
+        Project = &amp;quot;your-project&amp;quot;,
+        Region = &amp;quot;your-region&amp;quot;,
+        JobId = &amp;quot;your-dataproc-job&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_binding">google_pubsub_subscription_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.JobIAMBinding(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.JobIAMBindingArgs
+    {
+        JobId = &amp;quot;your-dataproc-job&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_member">google_pubsub_subscription_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.JobIAMMember(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.JobIAMMemberArgs
+    {
+        JobId = &amp;quot;your-dataproc-job&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMBindingArgs.html">JobIAMBindingArgs</a></h4>
       <section></section>
@@ -186,6 +604,78 @@ whole cluster!</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.dataproc.JobIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.JobIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_subscription_iam_policy">google_pubsub_subscription_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.Dataproc.JobIAMPolicy(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.JobIAMPolicyArgs
+    {
+        Project = &amp;quot;your-project&amp;quot;,
+        Region = &amp;quot;your-region&amp;quot;,
+        JobId = &amp;quot;your-dataproc-job&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_binding">google_pubsub_subscription_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.JobIAMBinding(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.JobIAMBindingArgs
+    {
+        JobId = &amp;quot;your-dataproc-job&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_member">google_pubsub_subscription_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.JobIAMMember(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.JobIAMMemberArgs
+    {
+        JobId = &amp;quot;your-dataproc-job&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMMemberArgs.html">JobIAMMemberArgs</a></h4>
       <section></section>
@@ -204,6 +694,78 @@ whole cluster!</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.dataproc.JobIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.JobIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_pubsub_subscription_iam_policy">google_pubsub_subscription_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var editor = new Gcp.Dataproc.JobIAMPolicy(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.JobIAMPolicyArgs
+    {
+        Project = &amp;quot;your-project&amp;quot;,
+        Region = &amp;quot;your-region&amp;quot;,
+        JobId = &amp;quot;your-dataproc-job&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_binding">google_pubsub_subscription_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.JobIAMBinding(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.JobIAMBindingArgs
+    {
+        JobId = &amp;quot;your-dataproc-job&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_pubsub_subscription_iam_member">google_pubsub_subscription_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var editor = new Gcp.Dataproc.JobIAMMember(&amp;quot;editor&amp;quot;, new Gcp.Dataproc.JobIAMMemberArgs
+    {
+        JobId = &amp;quot;your-dataproc-job&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMPolicyArgs.html">JobIAMPolicyArgs</a></h4>
       <section></section>

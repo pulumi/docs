@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SchemaArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SchemaArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">SchemaArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.PostgreSql.html">Pulumi.PostgreSql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.PostgreSql.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Schema.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Schema.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_SchemaArgs__ctor_" data-uid="Pulumi.PostgreSql.SchemaArgs.#ctor*"></a>
   <h4 id="Pulumi_PostgreSql_SchemaArgs__ctor" data-uid="Pulumi.PostgreSql.SchemaArgs.#ctor">SchemaArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Schema.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Schema.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_SchemaArgs_Database_" data-uid="Pulumi.PostgreSql.SchemaArgs.Database*"></a>
   <h4 id="Pulumi_PostgreSql_SchemaArgs_Database" data-uid="Pulumi.PostgreSql.SchemaArgs.Database">Database</h4>
@@ -109,7 +138,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Database { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Database { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,13 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Schema.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Schema.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_SchemaArgs_DropCascade_" data-uid="Pulumi.PostgreSql.SchemaArgs.DropCascade*"></a>
   <h4 id="Pulumi_PostgreSql_SchemaArgs_DropCascade" data-uid="Pulumi.PostgreSql.SchemaArgs.DropCascade">DropCascade</h4>
@@ -136,7 +165,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DropCascade { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DropCascade { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +177,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Schema.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Schema.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_SchemaArgs_IfNotExists_" data-uid="Pulumi.PostgreSql.SchemaArgs.IfNotExists*"></a>
   <h4 id="Pulumi_PostgreSql_SchemaArgs_IfNotExists" data-uid="Pulumi.PostgreSql.SchemaArgs.IfNotExists">IfNotExists</h4>
@@ -163,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IfNotExists { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IfNotExists { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +204,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Schema.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Schema.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_SchemaArgs_Name_" data-uid="Pulumi.PostgreSql.SchemaArgs.Name*"></a>
   <h4 id="Pulumi_PostgreSql_SchemaArgs_Name" data-uid="Pulumi.PostgreSql.SchemaArgs.Name">Name</h4>
@@ -191,7 +220,7 @@ database instance where it is configured.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,13 +232,13 @@ database instance where it is configured.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Schema.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Schema.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_SchemaArgs_Owner_" data-uid="Pulumi.PostgreSql.SchemaArgs.Owner*"></a>
   <h4 id="Pulumi_PostgreSql_SchemaArgs_Owner" data-uid="Pulumi.PostgreSql.SchemaArgs.Owner">Owner</h4>
@@ -218,7 +247,7 @@ database instance where it is configured.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Owner { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Owner { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,13 +259,13 @@ database instance where it is configured.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Schema.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Schema.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_SchemaArgs_Policies_" data-uid="Pulumi.PostgreSql.SchemaArgs.Policies*"></a>
   <h4 id="Pulumi_PostgreSql_SchemaArgs_Policies" data-uid="Pulumi.PostgreSql.SchemaArgs.Policies">Policies</h4>
@@ -258,7 +287,7 @@ policy block supports fields documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.PostgreSql.Inputs.SchemaPolicyArgs.html">SchemaPolicyArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.PostgreSql.Inputs.SchemaPolicyArgs.html">SchemaPolicyArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -270,7 +299,7 @@ policy block supports fields documented below.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Schema.cs/#L101" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Schema.cs/#L150" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RegionHealthCheck
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,16 +83,302 @@ successfully to some number of consecutive probes, it is marked
 healthy again and can receive new connections.</p>
 <p>To get more information about RegionHealthCheck, see:</p>
 <ul>
-<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/regionHealthChecks">API documentation</a></li>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/regionHealthChecks">API documentation</a></li>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/load-balancing/docs/health-checks">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---region-health-check-tcp">Example Usage - Region Health Check Tcp</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tcp_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;tcp-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+        {
+            Port = &amp;quot;80&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-tcp-full">Example Usage - Region Health Check Tcp Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tcp_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;tcp-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via tcp&amp;quot;,
+        HealthyThreshold = 4,
+        TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+        {
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            Request = &amp;quot;ARE YOU HEALTHY?&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-ssl">Example Usage - Region Health Check Ssl</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ssl_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;ssl-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        SslHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckSslHealthCheckArgs
+        {
+            Port = &amp;quot;443&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-ssl-full">Example Usage - Region Health Check Ssl Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ssl_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;ssl-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via ssl&amp;quot;,
+        HealthyThreshold = 4,
+        SslHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckSslHealthCheckArgs
+        {
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            Request = &amp;quot;ARE YOU HEALTHY?&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-http">Example Usage - Region Health Check Http</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;http-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+        {
+            Port = &amp;quot;80&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-http-full">Example Usage - Region Health Check Http Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;http-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via http&amp;quot;,
+        HealthyThreshold = 4,
+        HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+        {
+            Host = &amp;quot;1.2.3.4&amp;quot;,
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            RequestPath = &amp;quot;/mypath&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-https">Example Usage - Region Health Check Https</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var https_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;https-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        HttpsHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpsHealthCheckArgs
+        {
+            Port = &amp;quot;443&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-https-full">Example Usage - Region Health Check Https Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var https_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;https-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via https&amp;quot;,
+        HealthyThreshold = 4,
+        HttpsHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpsHealthCheckArgs
+        {
+            Host = &amp;quot;1.2.3.4&amp;quot;,
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            RequestPath = &amp;quot;/mypath&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-http2">Example Usage - Region Health Check Http2</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http2_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;http2-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Http2HealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttp2HealthCheckArgs
+        {
+            Port = &amp;quot;443&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-http2-full">Example Usage - Region Health Check Http2 Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http2_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;http2-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via http2&amp;quot;,
+        HealthyThreshold = 4,
+        Http2HealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttp2HealthCheckArgs
+        {
+            Host = &amp;quot;1.2.3.4&amp;quot;,
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            RequestPath = &amp;quot;/mypath&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">RegionHealthCheck</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">RegionHealthCheck</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -103,16 +389,16 @@ healthy again and can receive new connections.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L437">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck__ctor_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck__ctor_System_String_Pulumi_Gcp_Compute_RegionHealthCheckArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.#ctor(System.String,Pulumi.Gcp.Compute.RegionHealthCheckArgs,System.Nullable{CustomResourceOptions})">RegionHealthCheck(String, RegionHealthCheckArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck__ctor_System_String_Pulumi_Gcp_Compute_RegionHealthCheckArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.#ctor(System.String,Pulumi.Gcp.Compute.RegionHealthCheckArgs,Pulumi.CustomResourceOptions)">RegionHealthCheck(String, RegionHealthCheckArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a RegionHealthCheck resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RegionHealthCheck(string name, RegionHealthCheckArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public RegionHealthCheck(string name, RegionHealthCheckArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,7 +423,7 @@ healthy again and can receive new connections.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -147,11 +433,12 @@ healthy again and can receive new connections.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L317">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_CheckIntervalSec_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.CheckIntervalSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_CheckIntervalSec" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.CheckIntervalSec">CheckIntervalSec</h4>
-  <div class="markdown level1 summary"><p>How often (in seconds) to send a health check. The default value is 5 seconds.</p>
+  <div class="markdown level1 summary"><p>How often (in seconds) to send a health check. The default value is 5
+seconds.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -168,13 +455,13 @@ healthy again and can receive new connections.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L323">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.CreationTimestamp">CreationTimestamp</h4>
@@ -195,22 +482,23 @@ healthy again and can receive new connections.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L330">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_Description_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_Description" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Description">Description</h4>
-  <div class="markdown level1 summary"><p>An optional description of this resource. Provide this property when you create the resource.</p>
+  <div class="markdown level1 summary"><p>An optional description of this resource. Provide this property when
+you create the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -222,17 +510,18 @@ healthy again and can receive new connections.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L337">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_HealthyThreshold_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.HealthyThreshold*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_HealthyThreshold" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.HealthyThreshold">HealthyThreshold</h4>
-  <div class="markdown level1 summary"><p>A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.</p>
+  <div class="markdown level1 summary"><p>A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -249,17 +538,17 @@ healthy again and can receive new connections.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L343">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_Http2HealthCheck_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Http2HealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_Http2HealthCheck" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Http2HealthCheck">Http2HealthCheck</h4>
-  <div class="markdown level1 summary"><p>A nested object resource</p>
+  <div class="markdown level1 summary"><p>A nested object resource  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -276,17 +565,17 @@ healthy again and can receive new connections.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttp2HealthCheck.html">RegionHealthCheckHttp2HealthCheck</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttp2HealthCheck.html">RegionHealthCheckHttp2HealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L349">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_HttpHealthCheck_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.HttpHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_HttpHealthCheck" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.HttpHealthCheck">HttpHealthCheck</h4>
-  <div class="markdown level1 summary"><p>A nested object resource</p>
+  <div class="markdown level1 summary"><p>A nested object resource  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -303,17 +592,17 @@ healthy again and can receive new connections.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpHealthCheck.html">RegionHealthCheckHttpHealthCheck</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpHealthCheck.html">RegionHealthCheckHttpHealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L355">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_HttpsHealthCheck_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.HttpsHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_HttpsHealthCheck" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.HttpsHealthCheck">HttpsHealthCheck</h4>
-  <div class="markdown level1 summary"><p>A nested object resource</p>
+  <div class="markdown level1 summary"><p>A nested object resource  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -330,20 +619,50 @@ healthy again and can receive new connections.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpsHealthCheck.html">RegionHealthCheckHttpsHealthCheck</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpsHealthCheck.html">RegionHealthCheckHttpsHealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L361">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_RegionHealthCheck_LogConfig_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.LogConfig*"></a>
+  <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_LogConfig" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.LogConfig">LogConfig</h4>
+  <div class="markdown level1 summary"><p>Configure logging on this health check.  Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;RegionHealthCheckLogConfig&gt; LogConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckLogConfig.html">RegionHealthCheckLogConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L373">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_Name_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_Name" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression <code>a-z?</code> which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -360,13 +679,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L380">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_Project_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_Project" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Project">Project</h4>
@@ -388,17 +707,18 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L387">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_Region_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_Region" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Region">Region</h4>
-  <div class="markdown level1 summary"><p>The Region in which the created health check should reside. If it is not provided, the provider region is used.</p>
+  <div class="markdown level1 summary"><p>The Region in which the created health check should reside.
+If it is not provided, the provider region is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -415,13 +735,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L393">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_SelfLink_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_SelfLink" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.SelfLink">SelfLink</h4>
@@ -442,17 +762,17 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L399">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_SslHealthCheck_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.SslHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_SslHealthCheck" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.SslHealthCheck">SslHealthCheck</h4>
-  <div class="markdown level1 summary"><p>A nested object resource</p>
+  <div class="markdown level1 summary"><p>A nested object resource  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -469,17 +789,17 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckSslHealthCheck.html">RegionHealthCheckSslHealthCheck</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckSslHealthCheck.html">RegionHealthCheckSslHealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L405">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_TcpHealthCheck_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.TcpHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_TcpHealthCheck" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.TcpHealthCheck">TcpHealthCheck</h4>
-  <div class="markdown level1 summary"><p>A nested object resource</p>
+  <div class="markdown level1 summary"><p>A nested object resource  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -496,18 +816,19 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckTcpHealthCheck.html">RegionHealthCheckTcpHealthCheck</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionHealthCheckTcpHealthCheck.html">RegionHealthCheckTcpHealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L413">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_TimeoutSec_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.TimeoutSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_TimeoutSec" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.TimeoutSec">TimeoutSec</h4>
-  <div class="markdown level1 summary"><p>How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.</p>
+  <div class="markdown level1 summary"><p>How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -524,13 +845,13 @@ have greater value than checkIntervalSec.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L419">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_Type_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Type*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_Type" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Type">Type</h4>
@@ -551,17 +872,18 @@ have greater value than checkIntervalSec.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L426">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_UnhealthyThreshold_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.UnhealthyThreshold*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_UnhealthyThreshold" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.UnhealthyThreshold">UnhealthyThreshold</h4>
-  <div class="markdown level1 summary"><p>A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.</p>
+  <div class="markdown level1 summary"><p>A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -578,7 +900,7 @@ have greater value than checkIntervalSec.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -586,17 +908,17 @@ have greater value than checkIntervalSec.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L173">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L467">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheck_Get_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_RegionHealthCheckState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.RegionHealthCheckState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RegionHealthCheckState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_RegionHealthCheck_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_RegionHealthCheckState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheck.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.RegionHealthCheckState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RegionHealthCheckState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing RegionHealthCheck resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RegionHealthCheck Get(string name, Input&lt;string&gt; id, RegionHealthCheckState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RegionHealthCheck Get(string name, Input&lt;string&gt; id, RegionHealthCheckState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -615,7 +937,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -627,7 +949,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -656,7 +978,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L32" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionHealthCheck.cs/#L311" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.ResourceManager
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,32 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Gcp.ResourceManager.Lien.html">Lien</a></h4>
       <section><p>A Lien represents an encumbrance on the actions that can be performed on a resource.</p>
+<h2 id="example-usage---resource-manager-lien">Example Usage - Resource Manager Lien</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var project = new Gcp.Organizations.Project(&amp;quot;project&amp;quot;, new Gcp.Organizations.ProjectArgs
+    {
+        ProjectId = &amp;quot;staging-project&amp;quot;,
+    });
+    var lien = new Gcp.ResourceManager.Lien(&amp;quot;lien&amp;quot;, new Gcp.ResourceManager.LienArgs
+    {
+        Origin = &amp;quot;machine-readable-explanation&amp;quot;,
+        Parent = project.Number.Apply(number =&gt; $&amp;quot;projects/{number}&amp;quot;),
+        Reason = &amp;quot;This project is an important environment&amp;quot;,
+        Restrictions = 
+        {
+            &amp;quot;resourcemanager.projects.delete&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.ResourceManager.LienArgs.html">LienArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Policy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,64 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.Policy.Assignment.html">Assignment</a></h4>
       <section><p>Configures the specified Policy Definition at the specified Scope. Also, Policy Set Definitions are supported.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleDefinition = new Azure.Policy.Definition(&amp;quot;exampleDefinition&amp;quot;, new Azure.Policy.DefinitionArgs
+    {
+        PolicyType = &amp;quot;Custom&amp;quot;,
+        Mode = &amp;quot;All&amp;quot;,
+        DisplayName = &amp;quot;my-policy-definition&amp;quot;,
+        PolicyRule = @&amp;quot;	{
+&amp;quot;&amp;quot;if&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;not&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;field&amp;quot;&amp;quot;: &amp;quot;&amp;quot;location&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;in&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[parameters(&amp;apos;allowedLocations&amp;apos;)]&amp;quot;&amp;quot;
+  }
+},
+&amp;quot;&amp;quot;then&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;audit&amp;quot;&amp;quot;
+}
+}
+&amp;quot;,
+        Parameters = @&amp;quot;	{
+&amp;quot;&amp;quot;allowedLocations&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Array&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;metadata&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;description&amp;quot;&amp;quot;: &amp;quot;&amp;quot;The list of allowed locations for resources.&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;displayName&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allowed locations&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;strongType&amp;quot;&amp;quot;: &amp;quot;&amp;quot;location&amp;quot;&amp;quot;
+  }
+}
+}
+&amp;quot;,
+    });
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAssignment = new Azure.Policy.Assignment(&amp;quot;exampleAssignment&amp;quot;, new Azure.Policy.AssignmentArgs
+    {
+        Scope = exampleResourceGroup.Id,
+        PolicyDefinitionId = exampleDefinition.Id,
+        Description = &amp;quot;Policy Assignment created via an Acceptance Test&amp;quot;,
+        DisplayName = &amp;quot;My Example Policy Assignment&amp;quot;,
+        Parameters = @&amp;quot;{
+&amp;quot;&amp;quot;allowedLocations&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;value&amp;quot;&amp;quot;: [ &amp;quot;&amp;quot;West Europe&amp;quot;&amp;quot; ]
+}
+}
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Policy.AssignmentArgs.html">AssignmentArgs</a></h4>
       <section></section>
@@ -86,6 +144,55 @@
       <h4><a class="xref" href="Pulumi.Azure.Policy.Definition.html">Definition</a></h4>
       <section><p>Manages a policy rule definition on a management group or your provider subscription.</p>
 <p>Policy definitions do not take effect until they are assigned to a scope using a Policy Assignment.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var policy = new Azure.Policy.Definition(&amp;quot;policy&amp;quot;, new Azure.Policy.DefinitionArgs
+    {
+        DisplayName = &amp;quot;acceptance test policy definition&amp;quot;,
+        Metadata = @&amp;quot;    {
+&amp;quot;&amp;quot;category&amp;quot;&amp;quot;: &amp;quot;&amp;quot;General&amp;quot;&amp;quot;
+}
+
+
+&amp;quot;,
+        Mode = &amp;quot;Indexed&amp;quot;,
+        Parameters = @&amp;quot;	{
+&amp;quot;&amp;quot;allowedLocations&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Array&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;metadata&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;description&amp;quot;&amp;quot;: &amp;quot;&amp;quot;The list of allowed locations for resources.&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;displayName&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allowed locations&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;strongType&amp;quot;&amp;quot;: &amp;quot;&amp;quot;location&amp;quot;&amp;quot;
+  }
+}
+}
+
+&amp;quot;,
+        PolicyRule = @&amp;quot;	{
+&amp;quot;&amp;quot;if&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;not&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;field&amp;quot;&amp;quot;: &amp;quot;&amp;quot;location&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;in&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[parameters(&amp;apos;allowedLocations&amp;apos;)]&amp;quot;&amp;quot;
+  }
+},
+&amp;quot;&amp;quot;then&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;audit&amp;quot;&amp;quot;
+}
+}
+
+&amp;quot;,
+        PolicyType = &amp;quot;Custom&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Policy.DefinitionArgs.html">DefinitionArgs</a></h4>
       <section></section>
@@ -108,6 +215,47 @@
 <blockquote>
 <p><strong>NOTE:</strong>  Policy set definitions (also known as policy initiatives) do not take effect until they are assigned to a scope using a Policy Set Assignment.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Policy.PolicySetDefinition(&amp;quot;example&amp;quot;, new Azure.Policy.PolicySetDefinitionArgs
+    {
+        DisplayName = &amp;quot;Test Policy Set&amp;quot;,
+        Parameters = @&amp;quot;    {
+    &amp;quot;&amp;quot;allowedLocations&amp;quot;&amp;quot;: {
+        &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Array&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;metadata&amp;quot;&amp;quot;: {
+            &amp;quot;&amp;quot;description&amp;quot;&amp;quot;: &amp;quot;&amp;quot;The list of allowed locations for resources.&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;displayName&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allowed locations&amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;strongType&amp;quot;&amp;quot;: &amp;quot;&amp;quot;location&amp;quot;&amp;quot;
+        }
+    }
+}
+
+&amp;quot;,
+        PolicyDefinitions = @&amp;quot;    [
+    {
+        &amp;quot;&amp;quot;parameters&amp;quot;&amp;quot;: {
+            &amp;quot;&amp;quot;listOfAllowedLocations&amp;quot;&amp;quot;: {
+                &amp;quot;&amp;quot;value&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[parameters(&amp;apos;allowedLocations&amp;apos;)]&amp;quot;&amp;quot;
+            }
+        },
+        &amp;quot;&amp;quot;policyDefinitionId&amp;quot;&amp;quot;: &amp;quot;&amp;quot;/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988&amp;quot;&amp;quot;
+    }
+]
+
+&amp;quot;,
+        PolicyType = &amp;quot;Custom&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Policy.PolicySetDefinitionArgs.html">PolicySetDefinitionArgs</a></h4>
       <section></section>
@@ -115,6 +263,73 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Policy.Remediation.html">Remediation</a></h4>
       <section><p>Manages an Azure Policy Remediation at the specified Scope.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleDefinition = new Azure.Policy.Definition(&amp;quot;exampleDefinition&amp;quot;, new Azure.Policy.DefinitionArgs
+    {
+        PolicyType = &amp;quot;Custom&amp;quot;,
+        Mode = &amp;quot;All&amp;quot;,
+        DisplayName = &amp;quot;my-policy-definition&amp;quot;,
+        PolicyRule = @&amp;quot;    {
+&amp;quot;&amp;quot;if&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;not&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;field&amp;quot;&amp;quot;: &amp;quot;&amp;quot;location&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;in&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[parameters(&amp;apos;allowedLocations&amp;apos;)]&amp;quot;&amp;quot;
+  }
+},
+&amp;quot;&amp;quot;then&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;audit&amp;quot;&amp;quot;
+}
+}
+&amp;quot;,
+        Parameters = @&amp;quot;    {
+&amp;quot;&amp;quot;allowedLocations&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Array&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;metadata&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;description&amp;quot;&amp;quot;: &amp;quot;&amp;quot;The list of allowed locations for resources.&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;displayName&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allowed locations&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;strongType&amp;quot;&amp;quot;: &amp;quot;&amp;quot;location&amp;quot;&amp;quot;
+  }
+}
+}
+&amp;quot;,
+    });
+    var exampleAssignment = new Azure.Policy.Assignment(&amp;quot;exampleAssignment&amp;quot;, new Azure.Policy.AssignmentArgs
+    {
+        Scope = exampleResourceGroup.Id,
+        PolicyDefinitionId = exampleDefinition.Id,
+        Description = &amp;quot;Policy Assignment created via an Acceptance Test&amp;quot;,
+        DisplayName = &amp;quot;My Example Policy Assignment&amp;quot;,
+        Parameters = @&amp;quot;{
+&amp;quot;&amp;quot;allowedLocations&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;value&amp;quot;&amp;quot;: [ &amp;quot;&amp;quot;West Europe&amp;quot;&amp;quot; ]
+}
+}
+&amp;quot;,
+    });
+    var exampleRemediation = new Azure.Policy.Remediation(&amp;quot;exampleRemediation&amp;quot;, new Azure.Policy.RemediationArgs
+    {
+        Scope = exampleAssignment.Scope,
+        PolicyAssignmentId = exampleAssignment.Id,
+        LocationFilters = 
+        {
+            &amp;quot;West Europe&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Policy.RemediationArgs.html">RemediationArgs</a></h4>
       <section></section>

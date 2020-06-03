@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.SpotInst
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,6 +80,34 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.HealthCheck.html">HealthCheck</a></h4>
       <section><p>Provides a Spotinst Health Check resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var httpCheck = new SpotInst.HealthCheck(&amp;quot;httpCheck&amp;quot;, new SpotInst.HealthCheckArgs
+    {
+        Check = new SpotInst.Inputs.HealthCheckCheckArgs
+        {
+            Endpoint = &amp;quot;http://endpoint.com&amp;quot;,
+            Healthy = 1,
+            Interval = 10,
+            Port = 1337,
+            Protocol = &amp;quot;http&amp;quot;,
+            Timeout = 10,
+            Unhealthy = 1,
+        },
+        ProxyAddress = &amp;quot;http://proxy.com&amp;quot;,
+        ProxyPort = 80,
+        ResourceId = &amp;quot;sig-123&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SpotInst.HealthCheckArgs.html">HealthCheckArgs</a></h4>
       <section></section>
@@ -95,6 +123,34 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Subscription.html">Subscription</a></h4>
       <section><p>Provides a Spotinst subscription resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a Subscription
+    var default_subscription = new SpotInst.Subscription(&amp;quot;default-subscription&amp;quot;, new SpotInst.SubscriptionArgs
+    {
+        Endpoint = &amp;quot;http://endpoint.com&amp;quot;,
+        EventType = &amp;quot;AWS_EC2_INSTANCE_LAUNCH&amp;quot;,
+        Format = 
+        {
+            { &amp;quot;event&amp;quot;, &amp;quot;%event%&amp;quot; },
+            { &amp;quot;instance_id&amp;quot;, &amp;quot;%instance-id%&amp;quot; },
+            { &amp;quot;resource_id&amp;quot;, &amp;quot;%resource-id%&amp;quot; },
+            { &amp;quot;resource_name&amp;quot;, &amp;quot;%resource-name%&amp;quot; },
+            { &amp;quot;tags&amp;quot;, &amp;quot;foo,baz,baz&amp;quot; },
+        },
+        Protocol = &amp;quot;http&amp;quot;,
+        ResourceId = spotinst_elastigroup_aws.My_eg.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SpotInst.SubscriptionArgs.html">SubscriptionArgs</a></h4>
       <section></section>

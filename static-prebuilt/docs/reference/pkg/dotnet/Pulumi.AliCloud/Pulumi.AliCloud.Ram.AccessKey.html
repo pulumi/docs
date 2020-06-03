@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AccessKey
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,76 @@
 <blockquote>
 <p><strong>NOTE:</strong>  You should set the <code>secret_file</code> if you want to get the access key.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new RAM access key for user.
+    var user = new AliCloud.Ram.User(&amp;quot;user&amp;quot;, new AliCloud.Ram.UserArgs
+    {
+        Comments = &amp;quot;yoyoyo&amp;quot;,
+        DisplayName = &amp;quot;user_display_name&amp;quot;,
+        Email = &amp;quot;hello.uuu@aaa.com&amp;quot;,
+        Force = true,
+        Mobile = &amp;quot;86-18688888888&amp;quot;,
+    });
+    var ak = new AliCloud.Ram.AccessKey(&amp;quot;ak&amp;quot;, new AliCloud.Ram.AccessKeyArgs
+    {
+        SecretFile = &amp;quot;/xxx/xxx/xxx.txt&amp;quot;,
+        UserName = user.Name,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AccessKey</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AccessKey</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Ram.html">Pulumi.AliCloud.Ram</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -91,16 +155,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/AccessKey.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/AccessKey.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_AccessKey__ctor_" data-uid="Pulumi.AliCloud.Ram.AccessKey.#ctor*"></a>
-  <h4 id="Pulumi_AliCloud_Ram_AccessKey__ctor_System_String_Pulumi_AliCloud_Ram_AccessKeyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Ram.AccessKey.#ctor(System.String,Pulumi.AliCloud.Ram.AccessKeyArgs,System.Nullable{CustomResourceOptions})">AccessKey(String, AccessKeyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Ram_AccessKey__ctor_System_String_Pulumi_AliCloud_Ram_AccessKeyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Ram.AccessKey.#ctor(System.String,Pulumi.AliCloud.Ram.AccessKeyArgs,Pulumi.CustomResourceOptions)">AccessKey(String, AccessKeyArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a AccessKey resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AccessKey(string name, AccessKeyArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AccessKey(string name, AccessKeyArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +189,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +199,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/AccessKey.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/AccessKey.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_AccessKey_EncryptedSecret_" data-uid="Pulumi.AliCloud.Ram.AccessKey.EncryptedSecret*"></a>
   <h4 id="Pulumi_AliCloud_Ram_AccessKey_EncryptedSecret" data-uid="Pulumi.AliCloud.Ram.AccessKey.EncryptedSecret">EncryptedSecret</h4>
@@ -155,13 +219,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/AccessKey.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/AccessKey.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_AccessKey_KeyFingerprint_" data-uid="Pulumi.AliCloud.Ram.AccessKey.KeyFingerprint*"></a>
   <h4 id="Pulumi_AliCloud_Ram_AccessKey_KeyFingerprint" data-uid="Pulumi.AliCloud.Ram.AccessKey.KeyFingerprint">KeyFingerprint</h4>
@@ -182,13 +246,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/AccessKey.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/AccessKey.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_AccessKey_PgpKey_" data-uid="Pulumi.AliCloud.Ram.AccessKey.PgpKey*"></a>
   <h4 id="Pulumi_AliCloud_Ram_AccessKey_PgpKey" data-uid="Pulumi.AliCloud.Ram.AccessKey.PgpKey">PgpKey</h4>
@@ -197,7 +261,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PgpKey { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PgpKey { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +273,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/AccessKey.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/AccessKey.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_AccessKey_SecretFile_" data-uid="Pulumi.AliCloud.Ram.AccessKey.SecretFile*"></a>
   <h4 id="Pulumi_AliCloud_Ram_AccessKey_SecretFile" data-uid="Pulumi.AliCloud.Ram.AccessKey.SecretFile">SecretFile</h4>
@@ -224,7 +288,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SecretFile { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecretFile { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,13 +300,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/AccessKey.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/AccessKey.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_AccessKey_Status_" data-uid="Pulumi.AliCloud.Ram.AccessKey.Status*"></a>
   <h4 id="Pulumi_AliCloud_Ram_AccessKey_Status" data-uid="Pulumi.AliCloud.Ram.AccessKey.Status">Status</h4>
@@ -251,7 +315,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Status { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +327,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/AccessKey.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/AccessKey.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_AccessKey_UserName_" data-uid="Pulumi.AliCloud.Ram.AccessKey.UserName*"></a>
   <h4 id="Pulumi_AliCloud_Ram_AccessKey_UserName" data-uid="Pulumi.AliCloud.Ram.AccessKey.UserName">UserName</h4>
@@ -278,7 +342,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,7 +354,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -298,17 +362,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/AccessKey.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/AccessKey.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ram_AccessKey_Get_" data-uid="Pulumi.AliCloud.Ram.AccessKey.Get*"></a>
-  <h4 id="Pulumi_AliCloud_Ram_AccessKey_Get_System_String_Input_System_String__Pulumi_AliCloud_Ram_AccessKeyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Ram.AccessKey.Get(System.String,Input{System.String},Pulumi.AliCloud.Ram.AccessKeyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AccessKeyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Ram_AccessKey_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Ram_AccessKeyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Ram.AccessKey.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Ram.AccessKeyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AccessKeyState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing AccessKey resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AccessKey Get(string name, Input&lt;string&gt; id, AccessKeyState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AccessKey Get(string name, Input&lt;string&gt; id, AccessKeyState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -327,7 +391,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -339,7 +403,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -368,7 +432,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ram/AccessKey.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ram/AccessKey.cs/#L48" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.CloudTrail
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,6 +90,166 @@
 <blockquote>
 <p><em>NOTE:</em> For an organization trail, this resource must be in the master account of the organization.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+    var foo = new Aws.S3.Bucket(&amp;quot;foo&amp;quot;, new Aws.S3.BucketArgs
+    {
+        ForceDestroy = true,
+        Policy = current.Apply(current =&gt; @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+    {{
+        &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;AWSCloudTrailAclCheck&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {{
+          &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;cloudtrail.amazonaws.com&amp;quot;&amp;quot;
+        }},
+        &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;s3:GetBucketAcl&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:s3:::tf-test-trail&amp;quot;&amp;quot;
+    }},
+    {{
+        &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;AWSCloudTrailWrite&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {{
+          &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;cloudtrail.amazonaws.com&amp;quot;&amp;quot;
+        }},
+        &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;s3:PutObject&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:s3:::tf-test-trail/prefix/AWSLogs/{current.AccountId}/*&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {{
+            &amp;quot;&amp;quot;StringEquals&amp;quot;&amp;quot;: {{
+                &amp;quot;&amp;quot;s3:x-amz-acl&amp;quot;&amp;quot;: &amp;quot;&amp;quot;bucket-owner-full-control&amp;quot;&amp;quot;
+            }}
+        }}
+    }}
+]
+}}
+
+&amp;quot;),
+    });
+    var foobar = new Aws.CloudTrail.Trail(&amp;quot;foobar&amp;quot;, new Aws.CloudTrail.TrailArgs
+    {
+        IncludeGlobalServiceEvents = false,
+        S3BucketName = foo.Id,
+        S3KeyPrefix = &amp;quot;prefix&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="logging-all-lambda-function-invocations">Logging All Lambda Function Invocations</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.CloudTrail.Trail(&amp;quot;example&amp;quot;, new Aws.CloudTrail.TrailArgs
+    {
+        EventSelectors = 
+        {
+            new Aws.CloudTrail.Inputs.TrailEventSelectorArgs
+            {
+                DataResource = 
+                {
+
+                    {
+                        { &amp;quot;type&amp;quot;, &amp;quot;AWS::Lambda::Function&amp;quot; },
+                        { &amp;quot;values&amp;quot;, 
+                        {
+                            &amp;quot;arn:aws:lambda&amp;quot;,
+                        } },
+                    },
+                },
+                IncludeManagementEvents = true,
+                ReadWriteType = &amp;quot;All&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="logging-all-s3-bucket-object-events">Logging All S3 Bucket Object Events</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.CloudTrail.Trail(&amp;quot;example&amp;quot;, new Aws.CloudTrail.TrailArgs
+    {
+        EventSelectors = 
+        {
+            new Aws.CloudTrail.Inputs.TrailEventSelectorArgs
+            {
+                DataResource = 
+                {
+
+                    {
+                        { &amp;quot;type&amp;quot;, &amp;quot;AWS::S3::Object&amp;quot; },
+                        { &amp;quot;values&amp;quot;, 
+                        {
+                            &amp;quot;arn:aws:s3:::&amp;quot;,
+                        } },
+                    },
+                },
+                IncludeManagementEvents = true,
+                ReadWriteType = &amp;quot;All&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="logging-individual-s3-bucket-events">Logging Individual S3 Bucket Events</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var important_bucket = Output.Create(Aws.S3.GetBucket.InvokeAsync(new Aws.S3.GetBucketArgs
+    {
+        Bucket = &amp;quot;important-bucket&amp;quot;,
+    }));
+    var example = new Aws.CloudTrail.Trail(&amp;quot;example&amp;quot;, new Aws.CloudTrail.TrailArgs
+    {
+        EventSelectors = 
+        {
+            new Aws.CloudTrail.Inputs.TrailEventSelectorArgs
+            {
+                DataResource = 
+                {
+
+                    {
+                        { &amp;quot;type&amp;quot;, &amp;quot;AWS::S3::Object&amp;quot; },
+                        { &amp;quot;values&amp;quot;, 
+                        {
+                            important_bucket.Apply(important_bucket =&gt; $&amp;quot;{important_bucket.Arn}/&amp;quot;),
+                        } },
+                    },
+                },
+                IncludeManagementEvents = true,
+                ReadWriteType = &amp;quot;All&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CloudTrail.TrailArgs.html">TrailArgs</a></h4>
       <section></section>

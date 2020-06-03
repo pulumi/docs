@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.DevTest
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -88,8 +88,42 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DevTest.GetVirtualNetworkResult.html">GetVirtualNetworkResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.DevTest.GlobalVMShutdownSchedule.html">GlobalVMShutdownSchedule</a></h4>
+      <section><p>Manages automated shutdown schedules for Azure VMs that are not within an Azure DevTest Lab. While this is part of the DevTest Labs service in Azure,
+this resource applies only to standard VMs, not DevTest Lab VMs. To manage automated shutdown schedules for DevTest Lab VMs, reference the
+<code>azure.devtest.Schedule</code> resource</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.DevTest.GlobalVMShutdownScheduleArgs.html">GlobalVMShutdownScheduleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.DevTest.GlobalVMShutdownScheduleState.html">GlobalVMShutdownScheduleState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DevTest.Lab.html">Lab</a></h4>
       <section><p>Manages a Dev Test Lab.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleLab = new Azure.DevTest.Lab(&amp;quot;exampleLab&amp;quot;, new Azure.DevTest.LabArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Tags = 
+        {
+            { &amp;quot;Sydney&amp;quot;, &amp;quot;Australia&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DevTest.LabArgs.html">LabArgs</a></h4>
       <section></section>
@@ -104,6 +138,44 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DevTest.Policy.html">Policy</a></h4>
       <section><p>Manages a Policy within a Dev Test Policy Set.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleLab = new Azure.DevTest.Lab(&amp;quot;exampleLab&amp;quot;, new Azure.DevTest.LabArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Tags = 
+        {
+            { &amp;quot;Sydney&amp;quot;, &amp;quot;Australia&amp;quot; },
+        },
+    });
+    var examplePolicy = new Azure.DevTest.Policy(&amp;quot;examplePolicy&amp;quot;, new Azure.DevTest.PolicyArgs
+    {
+        PolicySetName = &amp;quot;default&amp;quot;,
+        LabName = exampleLab.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        FactData = &amp;quot;&amp;quot;,
+        Threshold = &amp;quot;999&amp;quot;,
+        EvaluatorType = &amp;quot;MaxValuePolicy&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Acceptance&amp;quot;, &amp;quot;Test&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DevTest.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
@@ -118,6 +190,41 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DevTest.VirtualNetwork.html">VirtualNetwork</a></h4>
       <section><p>Manages a Virtual Network within a DevTest Lab.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleLab = new Azure.DevTest.Lab(&amp;quot;exampleLab&amp;quot;, new Azure.DevTest.LabArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Tags = 
+        {
+            { &amp;quot;Sydney&amp;quot;, &amp;quot;Australia&amp;quot; },
+        },
+    });
+    var exampleVirtualNetwork = new Azure.DevTest.VirtualNetwork(&amp;quot;exampleVirtualNetwork&amp;quot;, new Azure.DevTest.VirtualNetworkArgs
+    {
+        LabName = exampleLab.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Subnet = new Azure.DevTest.Inputs.VirtualNetworkSubnetArgs
+        {
+            UsePublicIpAddress = &amp;quot;Allow&amp;quot;,
+            UseInVirtualMachineCreation = &amp;quot;Allow&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DevTest.VirtualNetworkArgs.html">VirtualNetworkArgs</a></h4>
       <section></section>

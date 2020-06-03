@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VirtualMachineDisk
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">VirtualMachineDisk</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.Outputs.html">Pulumi.VSphere.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
   <h5 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class VirtualMachineDisk : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class VirtualMachineDisk</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L21">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_Attach" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.Attach">Attach</h4>
   <div class="markdown level1 summary"><p>Attach an external disk instead of creating a new one.
@@ -115,7 +139,7 @@ Implies and conflicts with <code>keep_on_remove</code>. If set, you cannot set <
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L26">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_DatastoreId" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.DatastoreId">DatastoreId</h4>
   <div class="markdown level1 summary"><p>The datastore ID that the ISO is located in.
@@ -124,7 +148,7 @@ Requried for using a datastore ISO. Conflicts with <code>client_device</code>.</
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DatastoreId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DatastoreId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -136,20 +160,24 @@ Requried for using a datastore ISO. Conflicts with <code>client_device</code>.</
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L33">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_DeviceAddress" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.DeviceAddress">DeviceAddress</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An address internal to this provider that helps locate the
+device when <code>key</code> is unavailable. This follows a convention of
+<code>CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER</code>. Example: <code>scsi:0:1</code> means device
+unit 1 on SCSI bus 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DeviceAddress</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DeviceAddress</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,13 +189,13 @@ Requried for using a datastore ISO. Conflicts with <code>client_device</code>.</
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L41">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_DiskMode" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.DiskMode">DiskMode</h4>
   <div class="markdown level1 summary"><p>The mode of this this virtual disk for purposes of
@@ -179,7 +207,7 @@ Default: <code>persistent</code>. For an explanation of options, click
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DiskMode</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DiskMode</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,13 +219,13 @@ Default: <code>persistent</code>. For an explanation of options, click
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L46">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_DiskSharing" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.DiskSharing">DiskSharing</h4>
   <div class="markdown level1 summary"><p>The sharing mode of this virtual disk. Can be one
@@ -206,7 +234,7 @@ of <code>sharingMultiWriter</code> or <code>sharingNone</code>. Default: <code>s
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DiskSharing</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DiskSharing</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -218,13 +246,13 @@ of <code>sharingMultiWriter</code> or <code>sharingNone</code>. Default: <code>s
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_EagerlyScrub" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.EagerlyScrub">EagerlyScrub</h4>
   <div class="markdown level1 summary"><p>If set to <code>true</code>, the disk space is zeroed out
@@ -253,7 +281,7 @@ on picking a disk type.  Default: <code>false</code>.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L58">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_IoLimit" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.IoLimit">IoLimit</h4>
   <div class="markdown level1 summary"><p>The upper limit of IOPS that this disk can use. The
@@ -280,7 +308,7 @@ default is no limit.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L63">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_IoReservation" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.IoReservation">IoReservation</h4>
   <div class="markdown level1 summary"><p>The I/O reservation (guarantee) that this disk
@@ -307,7 +335,7 @@ has, in IOPS.  The default is no reservation.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L68">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_IoShareCount" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.IoShareCount">IoShareCount</h4>
   <div class="markdown level1 summary"><p>The share count for this disk when the share
@@ -334,7 +362,7 @@ level is <code>custom</code>.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_IoShareLevel" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.IoShareLevel">IoShareLevel</h4>
   <div class="markdown level1 summary"><p>The share allocation level for this disk. Can
@@ -343,7 +371,7 @@ be one of <code>low</code>, <code>normal</code>, <code>high</code>, or <code>cus
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? IoShareLevel</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string IoShareLevel</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,13 +383,13 @@ be one of <code>low</code>, <code>normal</code>, <code>high</code>, or <code>cus
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L78">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_KeepOnRemove" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.KeepOnRemove">KeepOnRemove</h4>
   <div class="markdown level1 summary"><p>Keep this disk when removing the device or
@@ -388,7 +416,7 @@ destroying the virtual machine. Default: <code>false</code>.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L82">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_Key" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.Key">Key</h4>
   <div class="markdown level1 summary"><p>The ID of the device within the virtual machine.</p>
@@ -414,7 +442,7 @@ destroying the virtual machine. Default: <code>false</code>.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_Label" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.Label">Label</h4>
   <div class="markdown level1 summary"><p>A label for the disk. Forces a new disk if changed.</p>
@@ -422,7 +450,7 @@ destroying the virtual machine. Default: <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Label</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Label</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -434,13 +462,13 @@ destroying the virtual machine. Default: <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L91">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_Name" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.Name">Name</h4>
   <div class="markdown level1 summary"><p>An alias for both <code>label</code> and <code>path</code>, the latter when
@@ -449,7 +477,7 @@ using <code>attach</code>. Required if not using <code>label</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Name</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Name</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -461,13 +489,13 @@ using <code>attach</code>. Required if not using <code>label</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L96">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_Path" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.Path">Path</h4>
   <div class="markdown level1 summary"><p>The path to the ISO file. Required for using a datastore
@@ -476,7 +504,7 @@ ISO. Conflicts with <code>client_device</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Path</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Path</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -488,13 +516,13 @@ ISO. Conflicts with <code>client_device</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L100">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_Size" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.Size">Size</h4>
   <div class="markdown level1 summary"><p>The size of the disk, in GB.</p>
@@ -520,7 +548,7 @@ ISO. Conflicts with <code>client_device</code>.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L104">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_StoragePolicyId" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.StoragePolicyId">StoragePolicyId</h4>
   <div class="markdown level1 summary"><p>The UUID of the storage policy to assign to this disk.</p>
@@ -528,7 +556,7 @@ ISO. Conflicts with <code>client_device</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? StoragePolicyId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string StoragePolicyId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -540,13 +568,13 @@ ISO. Conflicts with <code>client_device</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L111">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_ThinProvisioned" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.ThinProvisioned">ThinProvisioned</h4>
   <div class="markdown level1 summary"><p>If <code>true</code>, this disk is thin provisioned,
@@ -575,7 +603,7 @@ type. Default: <code>true</code>.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L119">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_UnitNumber" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.UnitNumber">UnitNumber</h4>
   <div class="markdown level1 summary"><p>The disk number on the SCSI bus. The maximum value
@@ -605,7 +633,7 @@ for which one disk must be set to. Duplicate unit numbers are not allowed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L124">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_Uuid" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.Uuid">Uuid</h4>
   <div class="markdown level1 summary"><p>The UUID of the virtual disk's VMDK file. This is used to track the
@@ -614,7 +642,7 @@ virtual disk on the virtual machine.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Uuid</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Uuid</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -626,13 +654,13 @@ virtual disk on the virtual machine.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L130">View Source</a>
   </span>
   <h4 id="Pulumi_VSphere_Outputs_VirtualMachineDisk_WriteThrough" data-uid="Pulumi.VSphere.Outputs.VirtualMachineDisk.WriteThrough">WriteThrough</h4>
   <div class="markdown level1 summary"><p>If <code>true</code>, writes for this disk are sent
@@ -666,7 +694,7 @@ directly to the filesystem immediately instead of being buffered. Default:
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Outputs/VirtualMachineDisk.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

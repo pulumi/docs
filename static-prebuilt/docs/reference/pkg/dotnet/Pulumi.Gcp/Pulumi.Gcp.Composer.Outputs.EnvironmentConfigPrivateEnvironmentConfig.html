@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EnvironmentConfigPrivateEnvironmentConfig
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,19 +78,73 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">EnvironmentConfigPrivateEnvironmentConfig</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Composer.Outputs.html">Pulumi.Gcp.Composer.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigPrivateEnvironmentConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class EnvironmentConfigPrivateEnvironmentConfig : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class EnvironmentConfigPrivateEnvironmentConfig</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigPrivateEnvironmentConfig.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigPrivateEnvironmentConfig.cs/#L19">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigPrivateEnvironmentConfig_CloudSqlIpv4CidrBlock" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigPrivateEnvironmentConfig.CloudSqlIpv4CidrBlock">CloudSqlIpv4CidrBlock</h4>
+  <div class="markdown level1 summary"><p>The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from <code>web_server_ipv4_cidr_block</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string CloudSqlIpv4CidrBlock</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigPrivateEnvironmentConfig.cs/#L24">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigPrivateEnvironmentConfig_EnablePrivateEndpoint" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigPrivateEnvironmentConfig.EnablePrivateEndpoint">EnablePrivateEndpoint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><ul>
+<li></li>
+</ul>
+<p>If true, access to the public endpoint of the GKE cluster is denied.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -112,14 +166,19 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigPrivateEnvironmentConfig.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigPrivateEnvironmentConfig.cs/#L32">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigPrivateEnvironmentConfig_MasterIpv4CidrBlock" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigPrivateEnvironmentConfig.MasterIpv4CidrBlock">MasterIpv4CidrBlock</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IP range in CIDR notation to use for the hosted master network. This range is used
+for assigning internal IP addresses to the cluster master or set of masters and to the
+internal load balancer virtual IP. This range must not overlap with any other ranges
+in use within the cluster's network.
+If left blank, the default value of '172.16.0.0/28' is used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? MasterIpv4CidrBlock</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string MasterIpv4CidrBlock</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,7 +190,33 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigPrivateEnvironmentConfig.cs/#L36">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_Composer_Outputs_EnvironmentConfigPrivateEnvironmentConfig_WebServerIpv4CidrBlock" data-uid="Pulumi.Gcp.Composer.Outputs.EnvironmentConfigPrivateEnvironmentConfig.WebServerIpv4CidrBlock">WebServerIpv4CidrBlock</h4>
+  <div class="markdown level1 summary"><p>The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from <code>master_ipv4_cidr_block</code> and <code>cloud_sql_ipv4_cidr_block</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string WebServerIpv4CidrBlock</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -143,7 +228,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Outputs/EnvironmentConfigPrivateEnvironmentConfig.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Composer/Outputs/EnvironmentConfigPrivateEnvironmentConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

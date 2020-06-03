@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Image
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,12 +84,75 @@
 <blockquote>
 <p><strong>NOTE:</strong>  Available in 1.64.0+</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new AliCloud.Ecs.Image(&amp;quot;default&amp;quot;, new AliCloud.Ecs.ImageArgs
+    {
+        Architecture = &amp;quot;x86_64&amp;quot;,
+        Description = &amp;quot;test-image&amp;quot;,
+        ImageName = &amp;quot;test-image&amp;quot;,
+        InstanceId = &amp;quot;i-bp1g6zv0ce8oghu7k***&amp;quot;,
+        Platform = &amp;quot;CentOS&amp;quot;,
+        ResourceGroupId = &amp;quot;rg-bp67acfmxazb4ph***&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;FinanceDept&amp;quot;, &amp;quot;FinanceDeptJoshua&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Image</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Image</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Ecs.html">Pulumi.AliCloud.Ecs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -100,16 +163,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image__ctor_" data-uid="Pulumi.AliCloud.Ecs.Image.#ctor*"></a>
-  <h4 id="Pulumi_AliCloud_Ecs_Image__ctor_System_String_Pulumi_AliCloud_Ecs_ImageArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Ecs.Image.#ctor(System.String,Pulumi.AliCloud.Ecs.ImageArgs,System.Nullable{CustomResourceOptions})">Image(String, ImageArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Ecs_Image__ctor_System_String_Pulumi_AliCloud_Ecs_ImageArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Ecs.Image.#ctor(System.String,Pulumi.AliCloud.Ecs.ImageArgs,Pulumi.CustomResourceOptions)">Image(String, ImageArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Image resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Image(string name, ImageArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Image(string name, ImageArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,7 +197,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -144,7 +207,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_Architecture_" data-uid="Pulumi.AliCloud.Ecs.Image.Architecture*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_Image_Architecture" data-uid="Pulumi.AliCloud.Ecs.Image.Architecture">Architecture</h4>
@@ -153,7 +216,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Architecture { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Architecture { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,13 +228,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_Description_" data-uid="Pulumi.AliCloud.Ecs.Image.Description*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_Image_Description" data-uid="Pulumi.AliCloud.Ecs.Image.Description">Description</h4>
@@ -180,7 +243,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -192,13 +255,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_DiskDeviceMappings_" data-uid="Pulumi.AliCloud.Ecs.Image.DiskDeviceMappings*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_Image_DiskDeviceMappings" data-uid="Pulumi.AliCloud.Ecs.Image.DiskDeviceMappings">DiskDeviceMappings</h4>
@@ -219,13 +282,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Ecs.Outputs.ImageDiskDeviceMapping.html">ImageDiskDeviceMapping</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Ecs.Outputs.ImageDiskDeviceMapping.html">ImageDiskDeviceMapping</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_Force_" data-uid="Pulumi.AliCloud.Ecs.Image.Force*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_Image_Force" data-uid="Pulumi.AliCloud.Ecs.Image.Force">Force</h4>
@@ -250,13 +313,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_ImageName_" data-uid="Pulumi.AliCloud.Ecs.Image.ImageName*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_Image_ImageName" data-uid="Pulumi.AliCloud.Ecs.Image.ImageName">ImageName</h4>
@@ -277,13 +340,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_InstanceId_" data-uid="Pulumi.AliCloud.Ecs.Image.InstanceId*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_Image_InstanceId" data-uid="Pulumi.AliCloud.Ecs.Image.InstanceId">InstanceId</h4>
@@ -292,7 +355,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InstanceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -304,13 +367,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_Name_" data-uid="Pulumi.AliCloud.Ecs.Image.Name*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_Image_Name" data-uid="Pulumi.AliCloud.Ecs.Image.Name">Name</h4>
@@ -330,13 +393,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_Platform_" data-uid="Pulumi.AliCloud.Ecs.Image.Platform*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_Image_Platform" data-uid="Pulumi.AliCloud.Ecs.Image.Platform">Platform</h4>
@@ -345,7 +408,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Platform { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Platform { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -357,13 +420,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_ResourceGroupId_" data-uid="Pulumi.AliCloud.Ecs.Image.ResourceGroupId*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_Image_ResourceGroupId" data-uid="Pulumi.AliCloud.Ecs.Image.ResourceGroupId">ResourceGroupId</h4>
@@ -372,7 +435,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ResourceGroupId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -384,13 +447,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_SnapshotId_" data-uid="Pulumi.AliCloud.Ecs.Image.SnapshotId*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_Image_SnapshotId" data-uid="Pulumi.AliCloud.Ecs.Image.SnapshotId">SnapshotId</h4>
@@ -399,7 +462,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SnapshotId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SnapshotId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,13 +474,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_Tags_" data-uid="Pulumi.AliCloud.Ecs.Image.Tags*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_Image_Tags" data-uid="Pulumi.AliCloud.Ecs.Image.Tags">Tags</h4>
@@ -426,7 +489,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -438,7 +501,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -446,17 +509,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_Image_Get_" data-uid="Pulumi.AliCloud.Ecs.Image.Get*"></a>
-  <h4 id="Pulumi_AliCloud_Ecs_Image_Get_System_String_Input_System_String__Pulumi_AliCloud_Ecs_ImageState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Ecs.Image.Get(System.String,Input{System.String},Pulumi.AliCloud.Ecs.ImageState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ImageState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Ecs_Image_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Ecs_ImageState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Ecs.Image.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Ecs.ImageState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ImageState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Image resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Image Get(string name, Input&lt;string&gt; id, ImageState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Image Get(string name, Input&lt;string&gt; id, ImageState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -475,7 +538,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -487,7 +550,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -516,7 +579,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Image.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Ecs/Image.cs/#L53" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Ec2TransitGateway
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,6 +82,12 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.GetDirectConnectGatewayAttachmentResult.html">GetDirectConnectGatewayAttachmentResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.GetPeeringAttachment.html">GetPeeringAttachment</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.GetPeeringAttachmentArgs.html">GetPeeringAttachmentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.GetPeeringAttachmentResult.html">GetPeeringAttachmentResult</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.GetRouteTable.html">GetRouteTable</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.GetRouteTableArgs.html">GetRouteTableArgs</a></h4>
@@ -106,8 +112,99 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.GetVpnAttachmentResult.html">GetVpnAttachmentResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.PeeringAttachment.html">PeeringAttachment</a></h4>
+      <section><p>Manages an EC2 Transit Gateway Peering Attachment.
+For examples of custom route table association and propagation, see the <a href="https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html">EC2 Transit Gateway Networking Examples Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var local = new Aws.Provider(&amp;quot;local&amp;quot;, new Aws.ProviderArgs
+    {
+        Region = &amp;quot;us-east-1&amp;quot;,
+    });
+    var peer = new Aws.Provider(&amp;quot;peer&amp;quot;, new Aws.ProviderArgs
+    {
+        Region = &amp;quot;us-west-2&amp;quot;,
+    });
+    var peerRegion = Output.Create(Aws.GetRegion.InvokeAsync());
+    var localTransitGateway = new Aws.Ec2TransitGateway.TransitGateway(&amp;quot;localTransitGateway&amp;quot;, new Aws.Ec2TransitGateway.TransitGatewayArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;Local TGW&amp;quot; },
+        },
+    });
+    var peerTransitGateway = new Aws.Ec2TransitGateway.TransitGateway(&amp;quot;peerTransitGateway&amp;quot;, new Aws.Ec2TransitGateway.TransitGatewayArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;Peer TGW&amp;quot; },
+        },
+    });
+    var example = new Aws.Ec2TransitGateway.PeeringAttachment(&amp;quot;example&amp;quot;, new Aws.Ec2TransitGateway.PeeringAttachmentArgs
+    {
+        PeerAccountId = peerTransitGateway.OwnerId,
+        PeerRegion = peerRegion.Apply(peerRegion =&gt; peerRegion.Name),
+        PeerTransitGatewayId = peerTransitGateway.Id,
+        TransitGatewayId = localTransitGateway.Id,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;TGW Peering Requestor&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.PeeringAttachmentArgs.html">PeeringAttachmentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.PeeringAttachmentState.html">PeeringAttachmentState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.Route.html">Route</a></h4>
       <section><p>Manages an EC2 Transit Gateway Route.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="standard-usage">Standard usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ec2TransitGateway.Route(&amp;quot;example&amp;quot;, new Aws.Ec2TransitGateway.RouteArgs
+    {
+        DestinationCidrBlock = &amp;quot;0.0.0.0/0&amp;quot;,
+        TransitGatewayAttachmentId = aws_ec2_transit_gateway_vpc_attachment.Example.Id,
+        TransitGatewayRouteTableId = aws_ec2_transit_gateway.Example.Association_default_route_table_id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="blackhole-route">Blackhole route</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ec2TransitGateway.Route(&amp;quot;example&amp;quot;, new Aws.Ec2TransitGateway.RouteArgs
+    {
+        Blackhole = true,
+        DestinationCidrBlock = &amp;quot;0.0.0.0/0&amp;quot;,
+        TransitGatewayRouteTableId = aws_ec2_transit_gateway.Example.Association_default_route_table_id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.RouteArgs.html">RouteArgs</a></h4>
       <section></section>
@@ -115,11 +212,44 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.RouteTable.html">RouteTable</a></h4>
       <section><p>Manages an EC2 Transit Gateway Route Table.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ec2TransitGateway.RouteTable(&amp;quot;example&amp;quot;, new Aws.Ec2TransitGateway.RouteTableArgs
+    {
+        TransitGatewayId = aws_ec2_transit_gateway.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.RouteTableArgs.html">RouteTableArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.RouteTableAssociation.html">RouteTableAssociation</a></h4>
       <section><p>Manages an EC2 Transit Gateway Route Table association.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ec2TransitGateway.RouteTableAssociation(&amp;quot;example&amp;quot;, new Aws.Ec2TransitGateway.RouteTableAssociationArgs
+    {
+        TransitGatewayAttachmentId = aws_ec2_transit_gateway_vpc_attachment.Example.Id,
+        TransitGatewayRouteTableId = aws_ec2_transit_gateway_route_table.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.RouteTableAssociationArgs.html">RouteTableAssociationArgs</a></h4>
       <section></section>
@@ -127,6 +257,23 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.RouteTablePropagation.html">RouteTablePropagation</a></h4>
       <section><p>Manages an EC2 Transit Gateway Route Table propagation.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ec2TransitGateway.RouteTablePropagation(&amp;quot;example&amp;quot;, new Aws.Ec2TransitGateway.RouteTablePropagationArgs
+    {
+        TransitGatewayAttachmentId = aws_ec2_transit_gateway_vpc_attachment.Example.Id,
+        TransitGatewayRouteTableId = aws_ec2_transit_gateway_route_table.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.RouteTablePropagationArgs.html">RouteTablePropagationArgs</a></h4>
       <section></section>
@@ -136,6 +283,22 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.TransitGateway.html">TransitGateway</a></h4>
       <section><p>Manages an EC2 Transit Gateway.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ec2TransitGateway.TransitGateway(&amp;quot;example&amp;quot;, new Aws.Ec2TransitGateway.TransitGatewayArgs
+    {
+        Description = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.TransitGatewayArgs.html">TransitGatewayArgs</a></h4>
       <section></section>
@@ -143,6 +306,27 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.VpcAttachment.html">VpcAttachment</a></h4>
       <section><p>Manages an EC2 Transit Gateway VPC Attachment. For examples of custom route table association and propagation, see the EC2 Transit Gateway Networking Examples Guide.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ec2TransitGateway.VpcAttachment(&amp;quot;example&amp;quot;, new Aws.Ec2TransitGateway.VpcAttachmentArgs
+    {
+        SubnetIds = 
+        {
+            aws_subnet.Example.Id,
+        },
+        TransitGatewayId = aws_ec2_transit_gateway.Example.Id,
+        VpcId = aws_vpc.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.VpcAttachmentAccepter.html">VpcAttachmentAccepter</a></h4>
       <section><p>Manages the accepter's side of an EC2 Transit Gateway VPC Attachment.</p>
@@ -151,6 +335,26 @@ is created, an EC2 Transit Gateway VPC Attachment resource is automatically crea
 The requester can use the <code>aws.ec2transitgateway.VpcAttachment</code> resource to manage its side of the connection
 and the accepter can use the <code>aws.ec2transitgateway.VpcAttachmentAccepter</code> resource to &quot;adopt&quot; its side of the
 connection into management.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ec2TransitGateway.VpcAttachmentAccepter(&amp;quot;example&amp;quot;, new Aws.Ec2TransitGateway.VpcAttachmentAccepterArgs
+    {
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;Example cross-account attachment&amp;quot; },
+        },
+        TransitGatewayAttachmentId = aws_ec2_transit_gateway_vpc_attachment.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ec2TransitGateway.VpcAttachmentAccepterArgs.html">VpcAttachmentAccepterArgs</a></h4>
       <section></section>

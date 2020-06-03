@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class OAuth
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,79 @@
   </h1>
   <div class="markdown level0 summary"><p>Creates an OIDC Application.</p>
 <p>This resource allows you to create and configure an OIDC Application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.OAuth(&amp;quot;example&amp;quot;, new Okta.App.OAuthArgs
+    {
+        GrantTypes = 
+        {
+            &amp;quot;authorization_code&amp;quot;,
+        },
+        Label = &amp;quot;example&amp;quot;,
+        RedirectUris = 
+        {
+            &amp;quot;https://example.com/&amp;quot;,
+        },
+        ResponseTypes = 
+        {
+            &amp;quot;code&amp;quot;,
+        },
+        Type = &amp;quot;web&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">OAuth</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">OAuth</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Okta.App.html">Pulumi.Okta.App</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Okta.dll</h6>
@@ -89,16 +156,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L201">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L235">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth__ctor_" data-uid="Pulumi.Okta.App.OAuth.#ctor*"></a>
-  <h4 id="Pulumi_Okta_App_OAuth__ctor_System_String_Pulumi_Okta_App_OAuthArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.App.OAuth.#ctor(System.String,Pulumi.Okta.App.OAuthArgs,System.Nullable{CustomResourceOptions})">OAuth(String, OAuthArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_App_OAuth__ctor_System_String_Pulumi_Okta_App_OAuthArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.App.OAuth.#ctor(System.String,Pulumi.Okta.App.OAuthArgs,Pulumi.CustomResourceOptions)">OAuth(String, OAuthArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a OAuth resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OAuth(string name, OAuthArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public OAuth(string name, OAuthArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +190,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +200,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_AutoKeyRotation_" data-uid="Pulumi.Okta.App.OAuth.AutoKeyRotation*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_AutoKeyRotation" data-uid="Pulumi.Okta.App.OAuth.AutoKeyRotation">AutoKeyRotation</h4>
@@ -154,13 +221,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_AutoSubmitToolbar_" data-uid="Pulumi.Okta.App.OAuth.AutoSubmitToolbar*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_AutoSubmitToolbar" data-uid="Pulumi.Okta.App.OAuth.AutoSubmitToolbar">AutoSubmitToolbar</h4>
@@ -181,13 +248,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_ClientBasicSecret_" data-uid="Pulumi.Okta.App.OAuth.ClientBasicSecret*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_ClientBasicSecret" data-uid="Pulumi.Okta.App.OAuth.ClientBasicSecret">ClientBasicSecret</h4>
@@ -196,7 +263,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClientBasicSecret { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClientBasicSecret { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +275,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_ClientId_" data-uid="Pulumi.Okta.App.OAuth.ClientId*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_ClientId" data-uid="Pulumi.Okta.App.OAuth.ClientId">ClientId</h4>
@@ -235,13 +302,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_ClientSecret_" data-uid="Pulumi.Okta.App.OAuth.ClientSecret*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_ClientSecret" data-uid="Pulumi.Okta.App.OAuth.ClientSecret">ClientSecret</h4>
@@ -262,13 +329,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_ClientUri_" data-uid="Pulumi.Okta.App.OAuth.ClientUri*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_ClientUri" data-uid="Pulumi.Okta.App.OAuth.ClientUri">ClientUri</h4>
@@ -277,7 +344,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClientUri { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClientUri { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,13 +356,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_ConsentMethod_" data-uid="Pulumi.Okta.App.OAuth.ConsentMethod*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_ConsentMethod" data-uid="Pulumi.Okta.App.OAuth.ConsentMethod">ConsentMethod</h4>
@@ -304,7 +371,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ConsentMethod { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ConsentMethod { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,13 +383,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_CustomClientId_" data-uid="Pulumi.Okta.App.OAuth.CustomClientId*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_CustomClientId" data-uid="Pulumi.Okta.App.OAuth.CustomClientId">CustomClientId</h4>
@@ -331,7 +398,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CustomClientId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CustomClientId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,13 +410,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_GrantTypes_" data-uid="Pulumi.Okta.App.OAuth.GrantTypes*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_GrantTypes" data-uid="Pulumi.Okta.App.OAuth.GrantTypes">GrantTypes</h4>
@@ -370,13 +437,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_Groups_" data-uid="Pulumi.Okta.App.OAuth.Groups*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_Groups" data-uid="Pulumi.Okta.App.OAuth.Groups">Groups</h4>
@@ -397,13 +464,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_HideIos_" data-uid="Pulumi.Okta.App.OAuth.HideIos*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_HideIos" data-uid="Pulumi.Okta.App.OAuth.HideIos">HideIos</h4>
@@ -424,13 +491,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_HideWeb_" data-uid="Pulumi.Okta.App.OAuth.HideWeb*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_HideWeb" data-uid="Pulumi.Okta.App.OAuth.HideWeb">HideWeb</h4>
@@ -451,13 +518,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_IssuerMode_" data-uid="Pulumi.Okta.App.OAuth.IssuerMode*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_IssuerMode" data-uid="Pulumi.Okta.App.OAuth.IssuerMode">IssuerMode</h4>
@@ -466,7 +533,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IssuerMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IssuerMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -478,13 +545,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_Label_" data-uid="Pulumi.Okta.App.OAuth.Label*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_Label" data-uid="Pulumi.Okta.App.OAuth.Label">Label</h4>
@@ -505,13 +572,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_LoginUri_" data-uid="Pulumi.Okta.App.OAuth.LoginUri*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_LoginUri" data-uid="Pulumi.Okta.App.OAuth.LoginUri">LoginUri</h4>
@@ -520,7 +587,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LoginUri { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LoginUri { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -532,13 +599,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_LogoUri_" data-uid="Pulumi.Okta.App.OAuth.LogoUri*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_LogoUri" data-uid="Pulumi.Okta.App.OAuth.LogoUri">LogoUri</h4>
@@ -547,7 +614,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LogoUri { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LogoUri { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -559,13 +626,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_Name_" data-uid="Pulumi.Okta.App.OAuth.Name*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_Name" data-uid="Pulumi.Okta.App.OAuth.Name">Name</h4>
@@ -586,13 +653,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_OmitSecret_" data-uid="Pulumi.Okta.App.OAuth.OmitSecret*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_OmitSecret" data-uid="Pulumi.Okta.App.OAuth.OmitSecret">OmitSecret</h4>
@@ -613,13 +680,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_PolicyUri_" data-uid="Pulumi.Okta.App.OAuth.PolicyUri*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_PolicyUri" data-uid="Pulumi.Okta.App.OAuth.PolicyUri">PolicyUri</h4>
@@ -628,7 +695,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PolicyUri { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PolicyUri { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -640,13 +707,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_PostLogoutRedirectUris_" data-uid="Pulumi.Okta.App.OAuth.PostLogoutRedirectUris*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_PostLogoutRedirectUris" data-uid="Pulumi.Okta.App.OAuth.PostLogoutRedirectUris">PostLogoutRedirectUris</h4>
@@ -667,13 +734,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_Profile_" data-uid="Pulumi.Okta.App.OAuth.Profile*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_Profile" data-uid="Pulumi.Okta.App.OAuth.Profile">Profile</h4>
@@ -682,7 +749,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Profile { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Profile { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -694,13 +761,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_RedirectUris_" data-uid="Pulumi.Okta.App.OAuth.RedirectUris*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_RedirectUris" data-uid="Pulumi.Okta.App.OAuth.RedirectUris">RedirectUris</h4>
@@ -721,13 +788,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_ResponseTypes_" data-uid="Pulumi.Okta.App.OAuth.ResponseTypes*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_ResponseTypes" data-uid="Pulumi.Okta.App.OAuth.ResponseTypes">ResponseTypes</h4>
@@ -748,13 +815,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_SignOnMode_" data-uid="Pulumi.Okta.App.OAuth.SignOnMode*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_SignOnMode" data-uid="Pulumi.Okta.App.OAuth.SignOnMode">SignOnMode</h4>
@@ -775,13 +842,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_Status_" data-uid="Pulumi.Okta.App.OAuth.Status*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_Status" data-uid="Pulumi.Okta.App.OAuth.Status">Status</h4>
@@ -790,7 +857,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Status { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -802,13 +869,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_TokenEndpointAuthMethod_" data-uid="Pulumi.Okta.App.OAuth.TokenEndpointAuthMethod*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_TokenEndpointAuthMethod" data-uid="Pulumi.Okta.App.OAuth.TokenEndpointAuthMethod">TokenEndpointAuthMethod</h4>
@@ -817,7 +884,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TokenEndpointAuthMethod { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TokenEndpointAuthMethod { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -829,13 +896,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_TosUri_" data-uid="Pulumi.Okta.App.OAuth.TosUri*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_TosUri" data-uid="Pulumi.Okta.App.OAuth.TosUri">TosUri</h4>
@@ -844,7 +911,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TosUri { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TosUri { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -856,13 +923,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L218">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_Type_" data-uid="Pulumi.Okta.App.OAuth.Type*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_Type" data-uid="Pulumi.Okta.App.OAuth.Type">Type</h4>
@@ -883,13 +950,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_Users_" data-uid="Pulumi.Okta.App.OAuth.Users*"></a>
   <h4 id="Pulumi_Okta_App_OAuth_Users" data-uid="Pulumi.Okta.App.OAuth.Users">Users</h4>
@@ -910,7 +977,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.App.Outputs.OAuthUser.html">OAuthUser</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.App.Outputs.OAuthUser.html">OAuthUser</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -918,17 +985,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L231">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L265">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_OAuth_Get_" data-uid="Pulumi.Okta.App.OAuth.Get*"></a>
-  <h4 id="Pulumi_Okta_App_OAuth_Get_System_String_Input_System_String__Pulumi_Okta_App_OAuthState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.App.OAuth.Get(System.String,Input{System.String},Pulumi.Okta.App.OAuthState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, OAuthState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_App_OAuth_Get_System_String_Pulumi_Input_System_String__Pulumi_Okta_App_OAuthState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.App.OAuth.Get(System.String,Pulumi.Input{System.String},Pulumi.Okta.App.OAuthState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, OAuthState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing OAuth resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OAuth Get(string name, Input&lt;string&gt; id, OAuthState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static OAuth Get(string name, Input&lt;string&gt; id, OAuthState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -947,7 +1014,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -959,7 +1026,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -988,7 +1055,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/OAuth.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/OAuth.cs/#L51" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UserGroupMembershipArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UserGroupMembershipArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">UserGroupMembershipArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Iam.html">Pulumi.Aws.Iam</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/UserGroupMembership.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/UserGroupMembership.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_Aws_Iam_UserGroupMembershipArgs__ctor_" data-uid="Pulumi.Aws.Iam.UserGroupMembershipArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Iam_UserGroupMembershipArgs__ctor" data-uid="Pulumi.Aws.Iam.UserGroupMembershipArgs.#ctor">UserGroupMembershipArgs()</h4>
@@ -100,11 +129,11 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/UserGroupMembership.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/UserGroupMembership.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Aws_Iam_UserGroupMembershipArgs_Groups_" data-uid="Pulumi.Aws.Iam.UserGroupMembershipArgs.Groups*"></a>
   <h4 id="Pulumi_Aws_Iam_UserGroupMembershipArgs_Groups" data-uid="Pulumi.Aws.Iam.UserGroupMembershipArgs.Groups">Groups</h4>
-  <div class="markdown level1 summary"><p>A list of [IAM Groups][1] to add the user to</p>
+  <div class="markdown level1 summary"><p>A list of <a href="https://www.terraform.io/docs/providers/aws/r/iam_group.html">IAM Groups</a> to add the user to</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -121,17 +150,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/UserGroupMembership.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/UserGroupMembership.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Aws_Iam_UserGroupMembershipArgs_User_" data-uid="Pulumi.Aws.Iam.UserGroupMembershipArgs.User*"></a>
   <h4 id="Pulumi_Aws_Iam_UserGroupMembershipArgs_User" data-uid="Pulumi.Aws.Iam.UserGroupMembershipArgs.User">User</h4>
-  <div class="markdown level1 summary"><p>The name of the [IAM User][2] to add to groups</p>
+  <div class="markdown level1 summary"><p>The name of the <a href="https://www.terraform.io/docs/providers/aws/r/iam_user.html">IAM User</a> to add to groups</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -148,7 +177,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -160,7 +189,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/UserGroupMembership.cs/#L78" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Iam/UserGroupMembership.cs/#L122" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

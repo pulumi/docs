@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SiteConnection
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,72 @@
   <h1 id="Pulumi_OpenStack_VPNaaS_SiteConnection" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection" class="text-break">Class SiteConnection
   </h1>
   <div class="markdown level0 summary"><p>Manages a V2 Neutron IPSec site connection resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var conn1 = new OpenStack.VPNaaS.SiteConnection(&amp;quot;conn1&amp;quot;, new OpenStack.VPNaaS.SiteConnectionArgs
+    {
+        IkepolicyId = openstack_vpnaas_ike_policy_v2.Policy_2.Id,
+        IpsecpolicyId = openstack_vpnaas_ipsec_policy_v2.Policy_1.Id,
+        LocalEpGroupId = openstack_vpnaas_endpoint_group_v2.Group_2.Id,
+        PeerAddress = &amp;quot;192.168.10.1&amp;quot;,
+        PeerEpGroupId = openstack_vpnaas_endpoint_group_v2.Group_1.Id,
+        Psk = &amp;quot;secret&amp;quot;,
+        VpnserviceId = openstack_vpnaas_service_v2.Service_1.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SiteConnection</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">SiteConnection</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.VPNaaS.html">Pulumi.OpenStack.VPNaaS</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -88,16 +148,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection__ctor_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection__ctor_System_String_Pulumi_OpenStack_VPNaaS_SiteConnectionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.#ctor(System.String,Pulumi.OpenStack.VPNaaS.SiteConnectionArgs,System.Nullable{CustomResourceOptions})">SiteConnection(String, SiteConnectionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection__ctor_System_String_Pulumi_OpenStack_VPNaaS_SiteConnectionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.#ctor(System.String,Pulumi.OpenStack.VPNaaS.SiteConnectionArgs,Pulumi.CustomResourceOptions)">SiteConnection(String, SiteConnectionArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a SiteConnection resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SiteConnection(string name, SiteConnectionArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SiteConnection(string name, SiteConnectionArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +182,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +192,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_AdminStateUp_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.AdminStateUp*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_AdminStateUp" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.AdminStateUp">AdminStateUp</h4>
@@ -154,13 +214,13 @@ Changing this updates the administrative state of the existing connection.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Description_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Description*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Description" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Description">Description</h4>
@@ -170,7 +230,7 @@ Changing this updates the description of the existing connection.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,13 +242,13 @@ Changing this updates the description of the existing connection.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Dpds_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Dpds*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Dpds" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Dpds">Dpds</h4>
@@ -214,13 +274,13 @@ Default value is hold.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.VPNaaS.Outputs.SiteConnectionDpd.html">SiteConnectionDpd</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.VPNaaS.Outputs.SiteConnectionDpd.html">SiteConnectionDpd</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_IkepolicyId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.IkepolicyId*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_IkepolicyId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.IkepolicyId">IkepolicyId</h4>
@@ -241,13 +301,13 @@ Default value is hold.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Initiator_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Initiator*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Initiator" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Initiator">Initiator</h4>
@@ -268,13 +328,13 @@ Default value is hold.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_IpsecpolicyId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.IpsecpolicyId*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_IpsecpolicyId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.IpsecpolicyId">IpsecpolicyId</h4>
@@ -295,13 +355,13 @@ Default value is hold.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_LocalEpGroupId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.LocalEpGroupId*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_LocalEpGroupId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.LocalEpGroupId">LocalEpGroupId</h4>
@@ -313,7 +373,7 @@ Changing this updates the existing connection.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LocalEpGroupId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LocalEpGroupId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -325,13 +385,13 @@ Changing this updates the existing connection.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_LocalId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.LocalId*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_LocalId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.LocalId">LocalId</h4>
@@ -342,7 +402,7 @@ If this is not configured then the external IP address will be used as the ID.</
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LocalId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LocalId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -354,13 +414,13 @@ If this is not configured then the external IP address will be used as the ID.</
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Mtu_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Mtu*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Mtu" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Mtu">Mtu</h4>
@@ -382,13 +442,13 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Name_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Name*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Name" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Name">Name</h4>
@@ -410,13 +470,13 @@ the existing connection.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerAddress_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerAddress*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerAddress" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerAddress">PeerAddress</h4>
@@ -437,13 +497,13 @@ the existing connection.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerCidrs_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerCidrs*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerCidrs" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerCidrs">PeerCidrs</h4>
@@ -464,13 +524,13 @@ the existing connection.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerEpGroupId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerEpGroupId*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerEpGroupId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerEpGroupId">PeerEpGroupId</h4>
@@ -481,7 +541,7 @@ where peer_cidrs is provided with a subnet_id for the VPN service.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PeerEpGroupId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PeerEpGroupId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -493,13 +553,13 @@ where peer_cidrs is provided with a subnet_id for the VPN service.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerId*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerId">PeerId</h4>
@@ -522,13 +582,13 @@ Changing this updates the existing policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Psk_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Psk*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Psk" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Psk">Psk</h4>
@@ -549,13 +609,13 @@ Changing this updates the existing policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Region_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Region*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Region" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Region">Region</h4>
@@ -579,13 +639,13 @@ site connection.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_TenantId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.TenantId*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_TenantId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.TenantId">TenantId</h4>
@@ -607,13 +667,13 @@ create a connection for another project. Changing this creates a new connection.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_ValueSpecs_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.ValueSpecs*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_ValueSpecs" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.ValueSpecs">ValueSpecs</h4>
@@ -622,7 +682,7 @@ create a connection for another project. Changing this creates a new connection.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; ValueSpecs { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; ValueSpecs { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -634,13 +694,13 @@ create a connection for another project. Changing this creates a new connection.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_VpnserviceId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.VpnserviceId*"></a>
   <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_VpnserviceId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.VpnserviceId">VpnserviceId</h4>
@@ -661,7 +721,7 @@ create a connection for another project. Changing this creates a new connection.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -669,17 +729,17 @@ create a connection for another project. Changing this creates a new connection.
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Get_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Get*"></a>
-  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Get_System_String_Input_System_String__Pulumi_OpenStack_VPNaaS_SiteConnectionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Get(System.String,Input{System.String},Pulumi.OpenStack.VPNaaS.SiteConnectionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SiteConnectionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_VPNaaS_SiteConnectionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.VPNaaS.SiteConnectionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SiteConnectionState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing SiteConnection resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SiteConnection Get(string name, Input&lt;string&gt; id, SiteConnectionState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SiteConnection Get(string name, Input&lt;string&gt; id, SiteConnectionState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -698,7 +758,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -710,7 +770,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -739,7 +799,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/VPNaaS/SiteConnection.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/VPNaaS/SiteConnection.cs/#L42" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

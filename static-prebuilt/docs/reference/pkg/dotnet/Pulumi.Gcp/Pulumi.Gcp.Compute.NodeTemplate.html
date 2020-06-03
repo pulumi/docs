@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NodeTemplate
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,12 +80,71 @@ requirements, node affinity labels, and region.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/nodes/">Sole-Tenant Nodes</a></li>
 </ul>
+<h2 id="example-usage---node-template-basic">Example Usage - Node Template Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var central1a = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
+    {
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+    }));
+    var template = new Gcp.Compute.NodeTemplate(&amp;quot;template&amp;quot;, new Gcp.Compute.NodeTemplateArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        NodeType = central1a.Apply(central1a =&gt; central1a.Names[0]),
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">NodeTemplate</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">NodeTemplate</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -96,16 +155,16 @@ requirements, node affinity labels, and region.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate__ctor_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_NodeTemplate__ctor_System_String_Pulumi_Gcp_Compute_NodeTemplateArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.NodeTemplate.#ctor(System.String,Pulumi.Gcp.Compute.NodeTemplateArgs,System.Nullable{CustomResourceOptions})">NodeTemplate(String, NodeTemplateArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_NodeTemplate__ctor_System_String_Pulumi_Gcp_Compute_NodeTemplateArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.#ctor(System.String,Pulumi.Gcp.Compute.NodeTemplateArgs,Pulumi.CustomResourceOptions)">NodeTemplate(String, NodeTemplateArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a NodeTemplate resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NodeTemplate(string name, NodeTemplateArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public NodeTemplate(string name, NodeTemplateArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,7 +189,7 @@ requirements, node affinity labels, and region.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -140,7 +199,7 @@ requirements, node affinity labels, and region.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeTemplate_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.NodeTemplate.CreationTimestamp">CreationTimestamp</h4>
@@ -161,13 +220,13 @@ requirements, node affinity labels, and region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate_Description_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeTemplate_Description" data-uid="Pulumi.Gcp.Compute.NodeTemplate.Description">Description</h4>
@@ -176,7 +235,7 @@ requirements, node affinity labels, and region.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -188,13 +247,13 @@ requirements, node affinity labels, and region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate_Name_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeTemplate_Name" data-uid="Pulumi.Gcp.Compute.NodeTemplate.Name">Name</h4>
@@ -215,22 +274,23 @@ requirements, node affinity labels, and region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate_NodeAffinityLabels_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.NodeAffinityLabels*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeTemplate_NodeAffinityLabels" data-uid="Pulumi.Gcp.Compute.NodeTemplate.NodeAffinityLabels">NodeAffinityLabels</h4>
-  <div class="markdown level1 summary"><p>Labels to use for node affinity, which will be used in instance scheduling.</p>
+  <div class="markdown level1 summary"><p>Labels to use for node affinity, which will be used in
+instance scheduling.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; NodeAffinityLabels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; NodeAffinityLabels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,23 +302,23 @@ requirements, node affinity labels, and region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate_NodeType_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.NodeType*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeTemplate_NodeType" data-uid="Pulumi.Gcp.Compute.NodeTemplate.NodeType">NodeType</h4>
-  <div class="markdown level1 summary"><p>Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.</p>
+  <div class="markdown level1 summary"><p>Node type to use for nodes group that are created from this template.
+Only one of nodeTypeFlexibility and nodeType can be specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NodeType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NodeType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -270,18 +330,20 @@ be specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate_NodeTypeFlexibility_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.NodeTypeFlexibility*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeTemplate_NodeTypeFlexibility" data-uid="Pulumi.Gcp.Compute.NodeTemplate.NodeTypeFlexibility">NodeTypeFlexibility</h4>
-  <div class="markdown level1 summary"><p>Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.</p>
+  <div class="markdown level1 summary"><p>Flexible properties for the desired node type. Node groups that
+use this node template will create nodes of a type that matches
+these properties. Only one of nodeTypeFlexibility and nodeType can
+be specified.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -298,13 +360,13 @@ matches these properties. Only one of nodeTypeFlexibility and nodeType can be sp
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.NodeTemplateNodeTypeFlexibility.html">NodeTemplateNodeTypeFlexibility</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.NodeTemplateNodeTypeFlexibility.html">NodeTemplateNodeTypeFlexibility</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate_Project_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeTemplate_Project" data-uid="Pulumi.Gcp.Compute.NodeTemplate.Project">Project</h4>
@@ -326,17 +388,18 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate_Region_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeTemplate_Region" data-uid="Pulumi.Gcp.Compute.NodeTemplate.Region">Region</h4>
-  <div class="markdown level1 summary"><p>Region where nodes using the node template will be created. If it is not provided, the provider region is used.</p>
+  <div class="markdown level1 summary"><p>Region where nodes using the node template will be created.
+If it is not provided, the provider region is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -353,13 +416,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate_SelfLink_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeTemplate_SelfLink" data-uid="Pulumi.Gcp.Compute.NodeTemplate.SelfLink">SelfLink</h4>
@@ -380,18 +443,18 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate_ServerBinding_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.ServerBinding*"></a>
   <h4 id="Pulumi_Gcp_Compute_NodeTemplate_ServerBinding" data-uid="Pulumi.Gcp.Compute.NodeTemplate.ServerBinding">ServerBinding</h4>
-  <div class="markdown level1 summary"><p>The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.</p>
+  <div class="markdown level1 summary"><p>The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -408,7 +471,7 @@ maintenance event.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.NodeTemplateServerBinding.html">NodeTemplateServerBinding</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.NodeTemplateServerBinding.html">NodeTemplateServerBinding</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -416,17 +479,17 @@ maintenance event.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_NodeTemplate_Get_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_NodeTemplate_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_NodeTemplateState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.NodeTemplate.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.NodeTemplateState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NodeTemplateState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_NodeTemplate_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_NodeTemplateState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.NodeTemplate.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.NodeTemplateState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NodeTemplateState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing NodeTemplate resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NodeTemplate Get(string name, Input&lt;string&gt; id, NodeTemplateState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NodeTemplate Get(string name, Input&lt;string&gt; id, NodeTemplateState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -445,7 +508,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -457,7 +520,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -486,7 +549,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/NodeTemplate.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/NodeTemplate.cs/#L49" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

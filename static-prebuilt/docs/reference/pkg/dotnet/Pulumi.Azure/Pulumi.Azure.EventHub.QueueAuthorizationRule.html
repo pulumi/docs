@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QueueAuthorizationRule
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,32 +72,112 @@
   <h1 id="Pulumi_Azure_EventHub_QueueAuthorizationRule" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule" class="text-break">Class QueueAuthorizationRule
   </h1>
   <div class="markdown level0 summary"><p>Manages an Authorization Rule for a ServiceBus Queue.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleNamespace = new Azure.ServiceBus.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.ServiceBus.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;source&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleQueue = new Azure.ServiceBus.Queue(&amp;quot;exampleQueue&amp;quot;, new Azure.ServiceBus.QueueArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+        EnablePartitioning = true,
+    });
+    var exampleQueueAuthorizationRule = new Azure.ServiceBus.QueueAuthorizationRule(&amp;quot;exampleQueueAuthorizationRule&amp;quot;, new Azure.ServiceBus.QueueAuthorizationRuleArgs
+    {
+        NamespaceName = exampleNamespace.Name,
+        QueueName = exampleQueue.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Listen = true,
+        Send = true,
+        Manage = false,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">QueueAuthorizationRule</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">QueueAuthorizationRule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.EventHub.html">Pulumi.Azure.EventHub</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class QueueAuthorizationRule : CustomResource</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;azure.eventhub.QueueAuthorizationRule has been deprecated in favor of azure.servicebus.QueueAuthorizationRule&quot;)]
+public class QueueAuthorizationRule : CustomResource</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule__ctor_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.#ctor*"></a>
-  <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule__ctor_System_String_Pulumi_Azure_EventHub_QueueAuthorizationRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.#ctor(System.String,Pulumi.Azure.EventHub.QueueAuthorizationRuleArgs,System.Nullable{CustomResourceOptions})">QueueAuthorizationRule(String, QueueAuthorizationRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule__ctor_System_String_Pulumi_Azure_EventHub_QueueAuthorizationRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.#ctor(System.String,Pulumi.Azure.EventHub.QueueAuthorizationRuleArgs,Pulumi.CustomResourceOptions)">QueueAuthorizationRule(String, QueueAuthorizationRuleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a QueueAuthorizationRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public QueueAuthorizationRule(string name, QueueAuthorizationRuleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public QueueAuthorizationRule(string name, QueueAuthorizationRuleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +202,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +212,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_Listen_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.Listen*"></a>
   <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_Listen" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.Listen">Listen</h4>
@@ -153,13 +233,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_Manage_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.Manage*"></a>
   <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_Manage" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.Manage">Manage</h4>
@@ -180,13 +260,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_Name_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.Name*"></a>
   <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_Name" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.Name">Name</h4>
@@ -207,13 +287,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_NamespaceName_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.NamespaceName*"></a>
   <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_NamespaceName" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.NamespaceName">NamespaceName</h4>
@@ -234,13 +314,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_PrimaryConnectionString_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.PrimaryConnectionString*"></a>
   <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_PrimaryConnectionString" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.PrimaryConnectionString">PrimaryConnectionString</h4>
@@ -261,13 +341,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_PrimaryKey_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.PrimaryKey*"></a>
   <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_PrimaryKey" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.PrimaryKey">PrimaryKey</h4>
@@ -288,13 +368,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_QueueName_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.QueueName*"></a>
   <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_QueueName" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.QueueName">QueueName</h4>
@@ -315,13 +395,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_ResourceGroupName_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_ResourceGroupName" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.ResourceGroupName">ResourceGroupName</h4>
@@ -342,13 +422,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_SecondaryConnectionString_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.SecondaryConnectionString*"></a>
   <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_SecondaryConnectionString" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.SecondaryConnectionString">SecondaryConnectionString</h4>
@@ -369,13 +449,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_SecondaryKey_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.SecondaryKey*"></a>
   <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_SecondaryKey" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.SecondaryKey">SecondaryKey</h4>
@@ -396,13 +476,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_Send_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.Send*"></a>
   <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_Send" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.Send">Send</h4>
@@ -423,7 +503,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -431,17 +511,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_QueueAuthorizationRule_Get_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.Get*"></a>
-  <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_Get_System_String_Input_System_String__Pulumi_Azure_EventHub_QueueAuthorizationRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.Get(System.String,Input{System.String},Pulumi.Azure.EventHub.QueueAuthorizationRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, QueueAuthorizationRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_EventHub_QueueAuthorizationRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_EventHub_QueueAuthorizationRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.EventHub.QueueAuthorizationRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.EventHub.QueueAuthorizationRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, QueueAuthorizationRuleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing QueueAuthorizationRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static QueueAuthorizationRule Get(string name, Input&lt;string&gt; id, QueueAuthorizationRuleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static QueueAuthorizationRule Get(string name, Input&lt;string&gt; id, QueueAuthorizationRuleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,7 +540,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -472,7 +552,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -501,7 +581,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/EventHub/QueueAuthorizationRule.cs/#L61" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.ApiManagement
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,47 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.Api.html">Api</a></h4>
       <section><p>Manages an API within an API Management Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;My Company&amp;quot;,
+        PublisherEmail = &amp;quot;company@exmaple.com&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleApi = new Azure.ApiManagement.Api(&amp;quot;exampleApi&amp;quot;, new Azure.ApiManagement.ApiArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApiManagementName = exampleService.Name,
+        Revision = &amp;quot;1&amp;quot;,
+        DisplayName = &amp;quot;Example API&amp;quot;,
+        Path = &amp;quot;example&amp;quot;,
+        Protocols = 
+        {
+            &amp;quot;https&amp;quot;,
+        },
+        Import = new Azure.ApiManagement.Inputs.ApiImportArgs
+        {
+            ContentFormat = &amp;quot;swagger-link-json&amp;quot;,
+            ContentValue = &amp;quot;http://conferenceapi.azurewebsites.net/?format=json&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ApiArgs.html">ApiArgs</a></h4>
       <section></section>
@@ -88,6 +129,35 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ApiOperationPolicy.html">ApiOperationPolicy</a></h4>
       <section><p>Manages an API Management API Operation Policy</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleApiOperation = new Azure.ApiManagement.ApiOperation(&amp;quot;exampleApiOperation&amp;quot;, new Azure.ApiManagement.ApiOperationArgs
+    {
+    });
+    //...
+    var exampleApiOperationPolicy = new Azure.ApiManagement.ApiOperationPolicy(&amp;quot;exampleApiOperationPolicy&amp;quot;, new Azure.ApiManagement.ApiOperationPolicyArgs
+    {
+        ApiName = exampleApiOperation.ApiName,
+        ApiManagementName = exampleApiOperation.ApiManagementName,
+        ResourceGroupName = exampleApiOperation.ResourceGroupName,
+        OperationId = exampleApiOperation.OperationId,
+        XmlContent = @&amp;quot;&amp;lt;policies&gt;
+&amp;lt;inbound&gt;
+&amp;lt;find-and-replace from=&amp;quot;&amp;quot;xyz&amp;quot;&amp;quot; to=&amp;quot;&amp;quot;abc&amp;quot;&amp;quot; /&gt;
+&amp;lt;/inbound&gt;
+&amp;lt;/policies&gt;
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ApiOperationPolicyArgs.html">ApiOperationPolicyArgs</a></h4>
       <section></section>
@@ -104,6 +174,35 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ApiSchema.html">ApiSchema</a></h4>
       <section><p>Manages an API Schema within an API Management Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleApi = Output.Create(Azure.ApiManagement.GetApi.InvokeAsync(new Azure.ApiManagement.GetApiArgs
+    {
+        Name = &amp;quot;search-api&amp;quot;,
+        ApiManagementName = &amp;quot;search-api-management&amp;quot;,
+        ResourceGroupName = &amp;quot;search-service&amp;quot;,
+        Revision = &amp;quot;2&amp;quot;,
+    }));
+    var exampleApiSchema = new Azure.ApiManagement.ApiSchema(&amp;quot;exampleApiSchema&amp;quot;, new Azure.ApiManagement.ApiSchemaArgs
+    {
+        ApiName = exampleApi.Apply(exampleApi =&gt; exampleApi.Name),
+        ApiManagementName = exampleApi.Apply(exampleApi =&gt; exampleApi.ApiManagementName),
+        ResourceGroupName = exampleApi.Apply(exampleApi =&gt; exampleApi.ResourceGroupName),
+        SchemaId = &amp;quot;example-sche,a&amp;quot;,
+        ContentType = &amp;quot;application/vnd.ms-azure-apim.xsd+xml&amp;quot;,
+        Value = File.ReadAllText(&amp;quot;api_management_api_schema.xml&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ApiSchemaArgs.html">ApiSchemaArgs</a></h4>
       <section></section>
@@ -113,6 +212,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ApiVersionSet.html">ApiVersionSet</a></h4>
       <section><p>Manages an API Version Set within an API Management Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;pub1&amp;quot;,
+        PublisherEmail = &amp;quot;pub1@email.com&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleApiVersionSet = new Azure.ApiManagement.ApiVersionSet(&amp;quot;exampleApiVersionSet&amp;quot;, new Azure.ApiManagement.ApiVersionSetArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApiManagementName = exampleService.Name,
+        DisplayName = &amp;quot;ExampleAPIVersionSet&amp;quot;,
+        VersioningScheme = &amp;quot;Segment&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ApiVersionSetArgs.html">ApiVersionSetArgs</a></h4>
       <section></section>
@@ -120,6 +250,38 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.AuthorizationServer.html">AuthorizationServer</a></h4>
       <section><p>Manages an Authorization Server within an API Management Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleApi = Output.Create(Azure.ApiManagement.GetApi.InvokeAsync(new Azure.ApiManagement.GetApiArgs
+    {
+        Name = &amp;quot;search-api&amp;quot;,
+        ApiManagementName = &amp;quot;search-api-management&amp;quot;,
+        ResourceGroupName = &amp;quot;search-service&amp;quot;,
+        Revision = &amp;quot;2&amp;quot;,
+    }));
+    var exampleAuthorizationServer = new Azure.ApiManagement.AuthorizationServer(&amp;quot;exampleAuthorizationServer&amp;quot;, new Azure.ApiManagement.AuthorizationServerArgs
+    {
+        ApiManagementName = data.Azurerm_api_management.Example.Name,
+        ResourceGroupName = data.Azurerm_api_management.Example.Resource_group_name,
+        DisplayName = &amp;quot;Test Server&amp;quot;,
+        AuthorizationEndpoint = &amp;quot;https://example.mydomain.com/client/authorize&amp;quot;,
+        ClientId = &amp;quot;42424242-4242-4242-4242-424242424242&amp;quot;,
+        ClientRegistrationEndpoint = &amp;quot;https://example.mydomain.com/client/register&amp;quot;,
+        GrantTypes = 
+        {
+            &amp;quot;authorizationCode&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.AuthorizationServerArgs.html">AuthorizationServerArgs</a></h4>
       <section></section>
@@ -184,6 +346,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.Group.html">Group</a></h4>
       <section><p>Manages an API Management Group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;pub1&amp;quot;,
+        PublisherEmail = &amp;quot;pub1@email.com&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleGroup = new Azure.ApiManagement.Group(&amp;quot;exampleGroup&amp;quot;, new Azure.ApiManagement.GroupArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApiManagementName = exampleService.Name,
+        DisplayName = &amp;quot;Example Group&amp;quot;,
+        Description = &amp;quot;This is an example API management group.&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.GroupArgs.html">GroupArgs</a></h4>
       <section></section>
@@ -191,6 +384,31 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.GroupUser.html">GroupUser</a></h4>
       <section><p>Manages an API Management User Assignment to a Group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleUser = Output.Create(Azure.ApiManagement.GetUser.InvokeAsync(new Azure.ApiManagement.GetUserArgs
+    {
+        UserId = &amp;quot;my-user&amp;quot;,
+        ApiManagementName = &amp;quot;example-apim&amp;quot;,
+        ResourceGroupName = &amp;quot;search-service&amp;quot;,
+    }));
+    var exampleGroupUser = new Azure.ApiManagement.GroupUser(&amp;quot;exampleGroupUser&amp;quot;, new Azure.ApiManagement.GroupUserArgs
+    {
+        UserId = exampleUser.Apply(exampleUser =&gt; exampleUser.Id),
+        GroupName = &amp;quot;example-group&amp;quot;,
+        ResourceGroupName = exampleUser.Apply(exampleUser =&gt; exampleUser.ResourceGroupName),
+        ApiManagementName = exampleUser.Apply(exampleUser =&gt; exampleUser.ApiManagementName),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.GroupUserArgs.html">GroupUserArgs</a></h4>
       <section></section>
@@ -198,6 +416,41 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.IdentityProviderAad.html">IdentityProviderAad</a></h4>
       <section><p>Manages an API Management AAD Identity Provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;My Company&amp;quot;,
+        PublisherEmail = &amp;quot;company@mycompany.io&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleIdentityProviderAad = new Azure.ApiManagement.IdentityProviderAad(&amp;quot;exampleIdentityProviderAad&amp;quot;, new Azure.ApiManagement.IdentityProviderAadArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApiManagementName = exampleService.Name,
+        ClientId = &amp;quot;00000000-0000-0000-0000-000000000000&amp;quot;,
+        ClientSecret = &amp;quot;00000000000000000000000000000000&amp;quot;,
+        AllowedTenants = 
+        {
+            &amp;quot;00000000-0000-0000-0000-000000000000&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.IdentityProviderAadArgs.html">IdentityProviderAadArgs</a></h4>
       <section></section>
@@ -205,6 +458,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.IdentityProviderFacebook.html">IdentityProviderFacebook</a></h4>
       <section><p>Manages an API Management Facebook Identity Provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;My Company&amp;quot;,
+        PublisherEmail = &amp;quot;company@mycompany.io&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleIdentityProviderFacebook = new Azure.ApiManagement.IdentityProviderFacebook(&amp;quot;exampleIdentityProviderFacebook&amp;quot;, new Azure.ApiManagement.IdentityProviderFacebookArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApiManagementName = exampleService.Name,
+        AppId = &amp;quot;00000000000000000000000000000000&amp;quot;,
+        AppSecret = &amp;quot;00000000000000000000000000000000&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.IdentityProviderFacebookArgs.html">IdentityProviderFacebookArgs</a></h4>
       <section></section>
@@ -212,6 +496,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.IdentityProviderGoogle.html">IdentityProviderGoogle</a></h4>
       <section><p>Manages an API Management Google Identity Provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;My Company&amp;quot;,
+        PublisherEmail = &amp;quot;company@mycompany.io&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleIdentityProviderGoogle = new Azure.ApiManagement.IdentityProviderGoogle(&amp;quot;exampleIdentityProviderGoogle&amp;quot;, new Azure.ApiManagement.IdentityProviderGoogleArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApiManagementName = exampleService.Name,
+        ClientId = &amp;quot;00000000.apps.googleusercontent.com&amp;quot;,
+        ClientSecret = &amp;quot;00000000000000000000000000000000&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.IdentityProviderGoogleArgs.html">IdentityProviderGoogleArgs</a></h4>
       <section></section>
@@ -219,6 +534,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.IdentityProviderMicrosoft.html">IdentityProviderMicrosoft</a></h4>
       <section><p>Manages an API Management Microsoft Identity Provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;My Company&amp;quot;,
+        PublisherEmail = &amp;quot;company@mycompany.io&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleIdentityProviderMicrosoft = new Azure.ApiManagement.IdentityProviderMicrosoft(&amp;quot;exampleIdentityProviderMicrosoft&amp;quot;, new Azure.ApiManagement.IdentityProviderMicrosoftArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApiManagementName = exampleService.Name,
+        ClientId = &amp;quot;00000000-0000-0000-0000-000000000000&amp;quot;,
+        ClientSecret = &amp;quot;00000000000000000000000000000000&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.IdentityProviderMicrosoftArgs.html">IdentityProviderMicrosoftArgs</a></h4>
       <section></section>
@@ -226,6 +572,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.IdentityProviderTwitter.html">IdentityProviderTwitter</a></h4>
       <section><p>Manages an API Management Twitter Identity Provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;My Company&amp;quot;,
+        PublisherEmail = &amp;quot;company@mycompany.io&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleIdentityProviderTwitter = new Azure.ApiManagement.IdentityProviderTwitter(&amp;quot;exampleIdentityProviderTwitter&amp;quot;, new Azure.ApiManagement.IdentityProviderTwitterArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApiManagementName = exampleService.Name,
+        ApiKey = &amp;quot;00000000000000000000000000000000&amp;quot;,
+        ApiSecretKey = &amp;quot;00000000000000000000000000000000&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.IdentityProviderTwitterArgs.html">IdentityProviderTwitterArgs</a></h4>
       <section></section>
@@ -238,8 +615,78 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.LoggerState.html">LoggerState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.ApiManagement.NamedValue.html">NamedValue</a></h4>
+      <section><p>Manages an API Management Named Value.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;pub1&amp;quot;,
+        PublisherEmail = &amp;quot;pub1@email.com&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleNamedValue = new Azure.ApiManagement.NamedValue(&amp;quot;exampleNamedValue&amp;quot;, new Azure.ApiManagement.NamedValueArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApiManagementName = exampleService.Name,
+        DisplayName = &amp;quot;ExampleProperty&amp;quot;,
+        Value = &amp;quot;Example Value&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.ApiManagement.NamedValueArgs.html">NamedValueArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.ApiManagement.NamedValueState.html">NamedValueState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.OpenIdConnectProvider.html">OpenIdConnectProvider</a></h4>
       <section><p>Manages an OpenID Connect Provider within a API Management Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;My Company&amp;quot;,
+        PublisherEmail = &amp;quot;company@exmaple.com&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleOpenIdConnectProvider = new Azure.ApiManagement.OpenIdConnectProvider(&amp;quot;exampleOpenIdConnectProvider&amp;quot;, new Azure.ApiManagement.OpenIdConnectProviderArgs
+    {
+        ApiManagementName = exampleService.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        ClientId = &amp;quot;00001111-2222-3333-4444-555566667777&amp;quot;,
+        DisplayName = &amp;quot;Example Provider&amp;quot;,
+        MetadataEndpoint = &amp;quot;https://example.com/example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.OpenIdConnectProviderArgs.html">OpenIdConnectProviderArgs</a></h4>
       <section></section>
@@ -247,9 +694,90 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.Product.html">Product</a></h4>
       <section><p>Manages an API Management Product.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;My Company&amp;quot;,
+        PublisherEmail = &amp;quot;company@exmaple.com&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleProduct = new Azure.ApiManagement.Product(&amp;quot;exampleProduct&amp;quot;, new Azure.ApiManagement.ProductArgs
+    {
+        ProductId = &amp;quot;test-product&amp;quot;,
+        ApiManagementName = exampleService.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        DisplayName = &amp;quot;Test Product&amp;quot;,
+        SubscriptionRequired = true,
+        ApprovalRequired = true,
+        Published = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ProductApi.html">ProductApi</a></h4>
       <section><p>Manages an API Management API Assignment to a Product.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleService = Output.Create(Azure.ApiManagement.GetService.InvokeAsync(new Azure.ApiManagement.GetServiceArgs
+    {
+        Name = &amp;quot;example-api&amp;quot;,
+        ResourceGroupName = &amp;quot;example-resources&amp;quot;,
+    }));
+    var exampleApi = Output.Tuple(exampleService, exampleService).Apply(values =&gt;
+    {
+        var exampleService = values.Item1;
+        var exampleService1 = values.Item2;
+        return Output.Create(Azure.ApiManagement.GetApi.InvokeAsync(new Azure.ApiManagement.GetApiArgs
+        {
+            Name = &amp;quot;search-api&amp;quot;,
+            ApiManagementName = exampleService.Name,
+            ResourceGroupName = exampleService1.ResourceGroupName,
+            Revision = &amp;quot;2&amp;quot;,
+        }));
+    });
+    var exampleProduct = Output.Tuple(exampleService, exampleService).Apply(values =&gt;
+    {
+        var exampleService = values.Item1;
+        var exampleService1 = values.Item2;
+        return Output.Create(Azure.ApiManagement.GetProduct.InvokeAsync(new Azure.ApiManagement.GetProductArgs
+        {
+            ProductId = &amp;quot;my-product&amp;quot;,
+            ApiManagementName = exampleService.Name,
+            ResourceGroupName = exampleService1.ResourceGroupName,
+        }));
+    });
+    var exampleProductApi = new Azure.ApiManagement.ProductApi(&amp;quot;exampleProductApi&amp;quot;, new Azure.ApiManagement.ProductApiArgs
+    {
+        ApiName = exampleApi.Apply(exampleApi =&gt; exampleApi.Name),
+        ProductId = exampleProduct.Apply(exampleProduct =&gt; exampleProduct.ProductId),
+        ApiManagementName = exampleService.Apply(exampleService =&gt; exampleService.Name),
+        ResourceGroupName = exampleService.Apply(exampleService =&gt; exampleService.ResourceGroupName),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ProductApiArgs.html">ProductApiArgs</a></h4>
       <section></section>
@@ -259,6 +787,52 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ProductGroup.html">ProductGroup</a></h4>
       <section><p>Manages an API Management Product Assignment to a Group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleService = Output.Create(Azure.ApiManagement.GetService.InvokeAsync(new Azure.ApiManagement.GetServiceArgs
+    {
+        Name = &amp;quot;example-api&amp;quot;,
+        ResourceGroupName = &amp;quot;example-resources&amp;quot;,
+    }));
+    var exampleProduct = Output.Tuple(exampleService, exampleService).Apply(values =&gt;
+    {
+        var exampleService = values.Item1;
+        var exampleService1 = values.Item2;
+        return Output.Create(Azure.ApiManagement.GetProduct.InvokeAsync(new Azure.ApiManagement.GetProductArgs
+        {
+            ProductId = &amp;quot;my-product&amp;quot;,
+            ApiManagementName = exampleService.Name,
+            ResourceGroupName = exampleService1.ResourceGroupName,
+        }));
+    });
+    var exampleGroup = Output.Tuple(exampleService, exampleService).Apply(values =&gt;
+    {
+        var exampleService = values.Item1;
+        var exampleService1 = values.Item2;
+        return Output.Create(Azure.ApiManagement.GetGroup.InvokeAsync(new Azure.ApiManagement.GetGroupArgs
+        {
+            Name = &amp;quot;my-group&amp;quot;,
+            ApiManagementName = exampleService.Name,
+            ResourceGroupName = exampleService1.ResourceGroupName,
+        }));
+    });
+    var exampleProductGroup = new Azure.ApiManagement.ProductGroup(&amp;quot;exampleProductGroup&amp;quot;, new Azure.ApiManagement.ProductGroupArgs
+    {
+        ProductId = exampleProduct.Apply(exampleProduct =&gt; exampleProduct.ProductId),
+        GroupName = exampleGroup.Apply(exampleGroup =&gt; exampleGroup.Name),
+        ApiManagementName = exampleService.Apply(exampleService =&gt; exampleService.Name),
+        ResourceGroupName = exampleService.Apply(exampleService =&gt; exampleService.ResourceGroupName),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ProductGroupArgs.html">ProductGroupArgs</a></h4>
       <section></section>
@@ -266,6 +840,36 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ProductPolicy.html">ProductPolicy</a></h4>
       <section><p>Manages an API Management Product Policy</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleProduct = Output.Create(Azure.ApiManagement.GetProduct.InvokeAsync(new Azure.ApiManagement.GetProductArgs
+    {
+        ProductId = &amp;quot;my-product&amp;quot;,
+        ApiManagementName = &amp;quot;example-apim&amp;quot;,
+        ResourceGroupName = &amp;quot;search-service&amp;quot;,
+    }));
+    var exampleProductPolicy = new Azure.ApiManagement.ProductPolicy(&amp;quot;exampleProductPolicy&amp;quot;, new Azure.ApiManagement.ProductPolicyArgs
+    {
+        ProductId = exampleProduct.Apply(exampleProduct =&gt; exampleProduct.ProductId),
+        ApiManagementName = exampleProduct.Apply(exampleProduct =&gt; exampleProduct.ApiManagementName),
+        ResourceGroupName = exampleProduct.Apply(exampleProduct =&gt; exampleProduct.ResourceGroupName),
+        XmlContent = @&amp;quot;&amp;lt;policies&gt;
+&amp;lt;inbound&gt;
+&amp;lt;find-and-replace from=&amp;quot;&amp;quot;xyz&amp;quot;&amp;quot; to=&amp;quot;&amp;quot;abc&amp;quot;&amp;quot; /&gt;
+&amp;lt;/inbound&gt;
+&amp;lt;/policies&gt;
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ProductPolicyArgs.html">ProductPolicyArgs</a></h4>
       <section></section>
@@ -275,6 +879,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.Property.html">Property</a></h4>
       <section><p>Manages an API Management Property.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;pub1&amp;quot;,
+        PublisherEmail = &amp;quot;pub1@email.com&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleProperty = new Azure.ApiManagement.Property(&amp;quot;exampleProperty&amp;quot;, new Azure.ApiManagement.PropertyArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ApiManagementName = exampleService.Name,
+        DisplayName = &amp;quot;ExampleProperty&amp;quot;,
+        Value = &amp;quot;Example Value&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.PropertyArgs.html">PropertyArgs</a></h4>
       <section></section>
@@ -282,6 +917,40 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.Service.html">Service</a></h4>
       <section><p>Manages an API Management Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;My Company&amp;quot;,
+        PublisherEmail = &amp;quot;company@exmaple.com&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+        Policy = new Azure.ApiManagement.Inputs.ServicePolicyArgs
+        {
+            XmlContent = @&amp;quot;    &amp;lt;policies&gt;
+  &amp;lt;inbound /&gt;
+  &amp;lt;backend /&gt;
+  &amp;lt;outbound /&gt;
+  &amp;lt;on-error /&gt;
+&amp;lt;/policies&gt;
+&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.ServiceArgs.html">ServiceArgs</a></h4>
       <section></section>
@@ -289,6 +958,53 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.Subscription.html">Subscription</a></h4>
       <section><p>Manages a Subscription within a API Management Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleService = Output.Create(Azure.ApiManagement.GetService.InvokeAsync(new Azure.ApiManagement.GetServiceArgs
+    {
+        Name = &amp;quot;example-apim&amp;quot;,
+        ResourceGroupName = &amp;quot;example-resources&amp;quot;,
+    }));
+    var exampleProduct = Output.Tuple(exampleService, exampleService).Apply(values =&gt;
+    {
+        var exampleService = values.Item1;
+        var exampleService1 = values.Item2;
+        return Output.Create(Azure.ApiManagement.GetProduct.InvokeAsync(new Azure.ApiManagement.GetProductArgs
+        {
+            ProductId = &amp;quot;00000000-0000-0000-0000-000000000000&amp;quot;,
+            ApiManagementName = exampleService.Name,
+            ResourceGroupName = exampleService1.ResourceGroupName,
+        }));
+    });
+    var exampleUser = Output.Tuple(exampleService, exampleService).Apply(values =&gt;
+    {
+        var exampleService = values.Item1;
+        var exampleService1 = values.Item2;
+        return Output.Create(Azure.ApiManagement.GetUser.InvokeAsync(new Azure.ApiManagement.GetUserArgs
+        {
+            UserId = &amp;quot;11111111-1111-1111-1111-111111111111&amp;quot;,
+            ApiManagementName = exampleService.Name,
+            ResourceGroupName = exampleService1.ResourceGroupName,
+        }));
+    });
+    var exampleSubscription = new Azure.ApiManagement.Subscription(&amp;quot;exampleSubscription&amp;quot;, new Azure.ApiManagement.SubscriptionArgs
+    {
+        ApiManagementName = exampleService.Apply(exampleService =&gt; exampleService.Name),
+        ResourceGroupName = exampleService.Apply(exampleService =&gt; exampleService.ResourceGroupName),
+        UserId = exampleUser.Apply(exampleUser =&gt; exampleUser.Id),
+        ProductId = exampleProduct.Apply(exampleProduct =&gt; exampleProduct.Id),
+        DisplayName = &amp;quot;Parser API&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.SubscriptionArgs.html">SubscriptionArgs</a></h4>
       <section></section>
@@ -296,6 +1012,40 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.User.html">User</a></h4>
       <section><p>Manages an API Management User.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleService = new Azure.ApiManagement.Service(&amp;quot;exampleService&amp;quot;, new Azure.ApiManagement.ServiceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PublisherName = &amp;quot;My Company&amp;quot;,
+        PublisherEmail = &amp;quot;company@exmaple.com&amp;quot;,
+        SkuName = &amp;quot;Developer_1&amp;quot;,
+    });
+    var exampleUser = new Azure.ApiManagement.User(&amp;quot;exampleUser&amp;quot;, new Azure.ApiManagement.UserArgs
+    {
+        UserId = &amp;quot;5931a75ae4bbd512288c680b&amp;quot;,
+        ApiManagementName = exampleService.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        FirstName = &amp;quot;Example&amp;quot;,
+        LastName = &amp;quot;User&amp;quot;,
+        Email = &amp;quot;user@example.com&amp;quot;,
+        State = &amp;quot;active&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.ApiManagement.UserArgs.html">UserArgs</a></h4>
       <section></section>

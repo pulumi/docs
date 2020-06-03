@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class InstanceArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">InstanceArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">InstanceArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L499">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L578">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs__ctor_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs__ctor" data-uid="Pulumi.Gcp.Compute.InstanceArgs.#ctor">InstanceArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L285">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L358">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_AllowStoppingForUpdate_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.AllowStoppingForUpdate*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_AllowStoppingForUpdate" data-uid="Pulumi.Gcp.Compute.InstanceArgs.AllowStoppingForUpdate">AllowStoppingForUpdate</h4>
@@ -110,7 +139,7 @@ If you try to update a property that requires stopping the instance without sett
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AllowStoppingForUpdate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AllowStoppingForUpdate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,13 +151,13 @@ If you try to update a property that requires stopping the instance without sett
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L294">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L367">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_AttachedDisks_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.AttachedDisks*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_AttachedDisks" data-uid="Pulumi.Gcp.Compute.InstanceArgs.AttachedDisks">AttachedDisks</h4>
@@ -149,13 +178,13 @@ If you try to update a property that requires stopping the instance without sett
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceAttachedDiskArgs.html">InstanceAttachedDiskArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceAttachedDiskArgs.html">InstanceAttachedDiskArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L304">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L377">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_BootDisk_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.BootDisk*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_BootDisk" data-uid="Pulumi.Gcp.Compute.InstanceArgs.BootDisk">BootDisk</h4>
@@ -177,13 +206,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskArgs.html">InstanceBootDiskArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskArgs.html">InstanceBootDiskArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L312">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L385">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_CanIpForward_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.CanIpForward*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_CanIpForward" data-uid="Pulumi.Gcp.Compute.InstanceArgs.CanIpForward">CanIpForward</h4>
@@ -194,7 +223,7 @@ This defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? CanIpForward { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; CanIpForward { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +235,13 @@ This defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L319">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L392">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_DeletionProtection_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.DeletionProtection*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_DeletionProtection" data-uid="Pulumi.Gcp.Compute.InstanceArgs.DeletionProtection">DeletionProtection</h4>
@@ -222,7 +251,7 @@ This defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DeletionProtection { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DeletionProtection { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +263,13 @@ This defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L325">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L398">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_Description_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_Description" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Description">Description</h4>
@@ -249,7 +278,7 @@ This defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +290,13 @@ This defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L332">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L405">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_DesiredStatus_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.DesiredStatus*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_DesiredStatus" data-uid="Pulumi.Gcp.Compute.InstanceArgs.DesiredStatus">DesiredStatus</h4>
@@ -277,7 +306,7 @@ This defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DesiredStatus { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DesiredStatus { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,13 +318,13 @@ This defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L339">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L412">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_EnableDisplay_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.EnableDisplay*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_EnableDisplay" data-uid="Pulumi.Gcp.Compute.InstanceArgs.EnableDisplay">EnableDisplay</h4>
@@ -305,7 +334,7 @@ This defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableDisplay { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableDisplay { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -317,13 +346,13 @@ This defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L349">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L422">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_GuestAccelerators_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.GuestAccelerators*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_GuestAccelerators" data-uid="Pulumi.Gcp.Compute.InstanceArgs.GuestAccelerators">GuestAccelerators</h4>
@@ -345,13 +374,13 @@ This defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceGuestAcceleratorArgs.html">InstanceGuestAcceleratorArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceGuestAcceleratorArgs.html">InstanceGuestAcceleratorArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L360">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L433">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_Hostname_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Hostname*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_Hostname" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Hostname">Hostname</h4>
@@ -362,7 +391,7 @@ The entire hostname must not exceed 253 characters. Changing this forces a new r
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Hostname { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Hostname { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -374,13 +403,13 @@ The entire hostname must not exceed 253 characters. Changing this forces a new r
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L369">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L442">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_Labels_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Labels*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_Labels" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Labels">Labels</h4>
@@ -401,13 +430,13 @@ The entire hostname must not exceed 253 characters. Changing this forces a new r
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L378">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L451">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_MachineType_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.MachineType*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_MachineType" data-uid="Pulumi.Gcp.Compute.InstanceArgs.MachineType">MachineType</h4>
@@ -428,13 +457,13 @@ The entire hostname must not exceed 253 characters. Changing this forces a new r
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L389">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L462">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_Metadata_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Metadata*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_Metadata" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Metadata">Metadata</h4>
@@ -457,13 +486,13 @@ Add them to your config in order to keep them attached to your instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L408">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L481">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_MetadataStartupScript_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.MetadataStartupScript*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_MetadataStartupScript" data-uid="Pulumi.Gcp.Compute.InstanceArgs.MetadataStartupScript">MetadataStartupScript</h4>
@@ -482,7 +511,7 @@ using <code>pulumi stack</code> commands, depending on your use case.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MetadataStartupScript { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MetadataStartupScript { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -494,13 +523,13 @@ using <code>pulumi stack</code> commands, depending on your use case.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L416">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L489">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_MinCpuPlatform_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.MinCpuPlatform*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_MinCpuPlatform" data-uid="Pulumi.Gcp.Compute.InstanceArgs.MinCpuPlatform">MinCpuPlatform</h4>
@@ -511,7 +540,7 @@ using <code>pulumi stack</code> commands, depending on your use case.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MinCpuPlatform { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MinCpuPlatform { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -523,13 +552,13 @@ using <code>pulumi stack</code> commands, depending on your use case.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L423">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L496">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_Name_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_Name" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Name">Name</h4>
@@ -539,7 +568,7 @@ Changing this forces a new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -551,13 +580,13 @@ Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L433">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L506">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_NetworkInterfaces_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.NetworkInterfaces*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_NetworkInterfaces" data-uid="Pulumi.Gcp.Compute.InstanceArgs.NetworkInterfaces">NetworkInterfaces</h4>
@@ -579,13 +608,13 @@ be specified multiple times. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs.html">InstanceNetworkInterfaceArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs.html">InstanceNetworkInterfaceArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L443">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L516">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_Project_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_Project" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Project">Project</h4>
@@ -595,7 +624,7 @@ is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -607,13 +636,40 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L450">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L522">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceArgs_ResourcePolicies_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.ResourcePolicies*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceArgs_ResourcePolicies" data-uid="Pulumi.Gcp.Compute.InstanceArgs.ResourcePolicies">ResourcePolicies</h4>
+  <div class="markdown level1 summary"><p>-- A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourcePolicies { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L529">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_Scheduling_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Scheduling*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_Scheduling" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Scheduling">Scheduling</h4>
@@ -623,7 +679,7 @@ this configuration option are detailed below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InstanceSchedulingArgs&gt;? Scheduling { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InstanceSchedulingArgs&gt; Scheduling { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -635,13 +691,13 @@ this configuration option are detailed below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceSchedulingArgs.html">InstanceSchedulingArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceSchedulingArgs.html">InstanceSchedulingArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L460">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L539">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_ScratchDisks_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.ScratchDisks*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_ScratchDisks" data-uid="Pulumi.Gcp.Compute.InstanceArgs.ScratchDisks">ScratchDisks</h4>
@@ -663,13 +719,13 @@ specified multiple times for multiple scratch disks. Structure is documented bel
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceScratchDiskArgs.html">InstanceScratchDiskArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceScratchDiskArgs.html">InstanceScratchDiskArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L471">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L550">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_ServiceAccount_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.ServiceAccount*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_ServiceAccount" data-uid="Pulumi.Gcp.Compute.InstanceArgs.ServiceAccount">ServiceAccount</h4>
@@ -680,7 +736,7 @@ Structure is documented below.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InstanceServiceAccountArgs&gt;? ServiceAccount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InstanceServiceAccountArgs&gt; ServiceAccount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -692,13 +748,13 @@ Structure is documented below.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceServiceAccountArgs.html">InstanceServiceAccountArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceServiceAccountArgs.html">InstanceServiceAccountArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L478">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L557">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_ShieldedInstanceConfig_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.ShieldedInstanceConfig*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_ShieldedInstanceConfig" data-uid="Pulumi.Gcp.Compute.InstanceArgs.ShieldedInstanceConfig">ShieldedInstanceConfig</h4>
@@ -708,7 +764,7 @@ Structure is documented below.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InstanceShieldedInstanceConfigArgs&gt;? ShieldedInstanceConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InstanceShieldedInstanceConfigArgs&gt; ShieldedInstanceConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -720,13 +776,13 @@ Structure is documented below.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceShieldedInstanceConfigArgs.html">InstanceShieldedInstanceConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceShieldedInstanceConfigArgs.html">InstanceShieldedInstanceConfigArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L487">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L566">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_Tags_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Tags*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_Tags" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Tags">Tags</h4>
@@ -747,13 +803,13 @@ Structure is documented below.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L496">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L575">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceArgs_Zone_" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Zone*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceArgs_Zone" data-uid="Pulumi.Gcp.Compute.InstanceArgs.Zone">Zone</h4>
@@ -762,7 +818,7 @@ Structure is documented below.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Zone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Zone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -774,7 +830,7 @@ Structure is documented below.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -786,7 +842,7 @@ Structure is documented below.
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Instance.cs/#L279" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Instance.cs/#L352" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

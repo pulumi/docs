@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.SecurityHub
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,21 @@
 <blockquote>
 <p><strong>NOTE:</strong> Destroying this resource will disable Security Hub for this AWS account.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.SecurityHub.Account(&amp;quot;example&amp;quot;, new Aws.SecurityHub.AccountArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.SecurityHub.AccountArgs.html">AccountArgs</a></h4>
       <section></section>
@@ -88,6 +103,27 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.SecurityHub.Member.html">Member</a></h4>
       <section><p>Provides a Security Hub member resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleAccount = new Aws.SecurityHub.Account(&amp;quot;exampleAccount&amp;quot;, new Aws.SecurityHub.AccountArgs
+    {
+    });
+    var exampleMember = new Aws.SecurityHub.Member(&amp;quot;exampleMember&amp;quot;, new Aws.SecurityHub.MemberArgs
+    {
+        AccountId = &amp;quot;123456789012&amp;quot;,
+        Email = &amp;quot;example@example.com&amp;quot;,
+        Invite = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.SecurityHub.MemberArgs.html">MemberArgs</a></h4>
       <section></section>
@@ -95,6 +131,26 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.SecurityHub.ProductSubscription.html">ProductSubscription</a></h4>
       <section><p>Subscribes to a Security Hub product.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleAccount = new Aws.SecurityHub.Account(&amp;quot;exampleAccount&amp;quot;, new Aws.SecurityHub.AccountArgs
+    {
+    });
+    var current = Output.Create(Aws.GetRegion.InvokeAsync());
+    var exampleProductSubscription = new Aws.SecurityHub.ProductSubscription(&amp;quot;exampleProductSubscription&amp;quot;, new Aws.SecurityHub.ProductSubscriptionArgs
+    {
+        ProductArn = current.Apply(current =&gt; $&amp;quot;arn:aws:securityhub:{current.Name}:733251395267:product/alertlogic/althreatmanagement&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.SecurityHub.ProductSubscriptionArgs.html">ProductSubscriptionArgs</a></h4>
       <section></section>
@@ -102,6 +158,29 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.SecurityHub.StandardsSubscription.html">StandardsSubscription</a></h4>
       <section><p>Subscribes to a Security Hub standard.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.SecurityHub.Account(&amp;quot;example&amp;quot;, new Aws.SecurityHub.AccountArgs
+    {
+    });
+    var cis = new Aws.SecurityHub.StandardsSubscription(&amp;quot;cis&amp;quot;, new Aws.SecurityHub.StandardsSubscriptionArgs
+    {
+        StandardsArn = &amp;quot;arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0&amp;quot;,
+    });
+    var pci321 = new Aws.SecurityHub.StandardsSubscription(&amp;quot;pci321&amp;quot;, new Aws.SecurityHub.StandardsSubscriptionArgs
+    {
+        StandardsArn = &amp;quot;arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.SecurityHub.StandardsSubscriptionArgs.html">StandardsSubscriptionArgs</a></h4>
       <section></section>

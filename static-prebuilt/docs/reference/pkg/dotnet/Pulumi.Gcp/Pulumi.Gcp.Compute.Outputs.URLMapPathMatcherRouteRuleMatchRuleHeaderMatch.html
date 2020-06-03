@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,23 +78,50 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">URLMapPathMatcherRouteRuleMatchRuleHeaderMatch</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherRouteRuleMatchRuleHeaderMatch_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L21">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherRouteRuleMatchRuleHeaderMatch_ExactMatch" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.ExactMatch">ExactMatch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The queryParameterMatch matches if the value of the parameter exactly matches
+the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? ExactMatch</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ExactMatch</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -106,16 +133,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L25">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherRouteRuleMatchRuleHeaderMatch_HeaderName" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.HeaderName">HeaderName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the header.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -137,10 +165,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherRouteRuleMatchRuleHeaderMatch_InvertMatch" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.InvertMatch">InvertMatch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If set to false, the headerMatch is considered a match if the match criteria
+above are met. If set to true, the headerMatch is considered a match if the
+match criteria above are NOT met. Defaults to false.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -162,14 +193,17 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L37">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherRouteRuleMatchRuleHeaderMatch_PrefixMatch" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.PrefixMatch">PrefixMatch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The value of the header must start with the contents of prefixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? PrefixMatch</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string PrefixMatch</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,16 +215,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherRouteRuleMatchRuleHeaderMatch_PresentMatch" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.PresentMatch">PresentMatch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies that the queryParameterMatch matches if the request contains the query
+parameter, irrespective of whether the parameter has a value or not. Only one of
+presentMatch, exactMatch and regexMatch must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -212,10 +249,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L52">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherRouteRuleMatchRuleHeaderMatch_RangeMatch" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.RangeMatch">RangeMatch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The header value must be an integer and its value must be in the range specified
+in rangeMatch. If the header does not contain an integer, number or is empty,
+the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
+not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -237,14 +280,18 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherRouteRuleMatchRuleHeaderMatch_RegexMatch" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.RegexMatch">RegexMatch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? RegexMatch</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string RegexMatch</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,20 +303,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcherRouteRuleMatchRuleHeaderMatch_SuffixMatch" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.SuffixMatch">SuffixMatch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The value of the header must end with the contents of suffixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? SuffixMatch</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string SuffixMatch</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -281,7 +331,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -293,7 +343,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

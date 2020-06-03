@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Slb
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,37 +77,7 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.AliCloud.Slb.Acl.html">Acl</a></h4>
-      <section><p>An access control list contains multiple IP addresses or CIDR blocks.
-The access control list can help you to define multiple instance listening dimension,
-and to meet the multiple usage for single access control list.</p>
-<p>Server Load Balancer allows you to configure access control for listeners.
-You can configure different whitelists or blacklists for different listeners.</p>
-<p>You can configure access control
-when you create a listener or change access control configuration after a listener is created.</p>
-<blockquote>
-<p><strong>NOTE:</strong> One access control list can be attached to many Listeners in different load balancer as whitelists or blacklists.</p>
-</blockquote>
-<blockquote>
-<p><strong>NOTE:</strong> The maximum number of access control lists per region  is 50.</p>
-</blockquote>
-<blockquote>
-<p><strong>NOTE:</strong> The maximum number of IP addresses added each time is 50.</p>
-</blockquote>
-<blockquote>
-<p><strong>NOTE:</strong> The maximum number of entries per access control list is 300.</p>
-</blockquote>
-<blockquote>
-<p><strong>NOTE:</strong> The maximum number of listeners that an access control list can be added to is 50.</p>
-</blockquote>
-<p>For information about slb and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
-<p>For information about acl and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/85978.htm">Configure an access control list</a>.</p>
-<h2 id="entry-block">Entry Block</h2>
-<p>The entry mapping supports the following:</p>
-<ul>
-<li><code>entry</code> - (Required) An IP addresses or CIDR blocks.</li>
-<li><code>comment</code> - (Optional) the comment of the entry.</li>
-</ul>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Slb.AclArgs.html">AclArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Slb.AclState.html">AclState</a></h4>
@@ -123,6 +93,95 @@ when you create a listener or change access control configuration after a listen
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.53.0+</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;slbbackendservertest&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultInstanceTypes = defaultZones.Apply(defaultZones =&gt; Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+    {
+        AvailabilityZone = defaultZones.Zones[0].Id,
+        CpuCoreCount = 1,
+        MemorySize = 2,
+    })));
+    var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+    {
+        MostRecent = true,
+        NameRegex = &amp;quot;^ubuntu_18.*64&amp;quot;,
+        Owners = &amp;quot;system&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup(&amp;quot;defaultSecurityGroup&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new List&amp;lt;AliCloud.Ecs.Instance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 2; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        defaultInstance.Add(new AliCloud.Ecs.Instance($&amp;quot;defaultInstance-{range.Value}&amp;quot;, new AliCloud.Ecs.InstanceArgs
+        {
+            AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+            ImageId = defaultImages.Apply(defaultImages =&gt; defaultImages.Images[0].Id),
+            InstanceChargeType = &amp;quot;PostPaid&amp;quot;,
+            InstanceName = name,
+            InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes =&gt; defaultInstanceTypes.InstanceTypes[0].Id),
+            InternetChargeType = &amp;quot;PayByTraffic&amp;quot;,
+            InternetMaxBandwidthOut = &amp;quot;10&amp;quot;,
+            SecurityGroups = 
+            {
+                defaultSecurityGroup,
+            }.Select(__item =&gt; __item.Id).ToList(),
+            SystemDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+            VswitchId = defaultSwitch.Id,
+        }));
+    }
+    var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer(&amp;quot;defaultLoadBalancer&amp;quot;, new AliCloud.Slb.LoadBalancerArgs
+    {
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultBackendServer = new AliCloud.Slb.BackendServer(&amp;quot;defaultBackendServer&amp;quot;, new AliCloud.Slb.BackendServerArgs
+    {
+        BackendServers = 
+        {
+            new AliCloud.Slb.Inputs.BackendServerBackendServerArgs
+            {
+                ServerId = defaultInstance[0].Id,
+                Weight = 100,
+            },
+            new AliCloud.Slb.Inputs.BackendServerBackendServerArgs
+            {
+                ServerId = defaultInstance[1].Id,
+                Weight = 100,
+            },
+        },
+        LoadBalancerId = defaultLoadBalancer.Id,
+    });
+}
+
+}
+</code></pre>
 <h2 id="block-servers">Block servers</h2>
 <p>The servers mapping supports the following:</p>
 <ul>
@@ -139,6 +198,26 @@ when you create a listener or change access control configuration after a listen
       <section><p>A Load Balancer CA Certificate is used by the listener of the protocol https.</p>
 <p>For information about slb and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
 <p>For information about CA Certificate and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/85968.htm">Configure CA Certificate</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // create a CA certificate
+    var foo = new AliCloud.Slb.CaCertificate(&amp;quot;foo&amp;quot;, new AliCloud.Slb.CaCertificateArgs
+    {
+        CaCertificate = @&amp;quot;-----BEGIN CERTIFICATE-----
+MIIDRjCCAq+gAwIBAgIJAJnI******90EAxEG/bJJyOm5LqoiA=
+-----END CERTIFICATE-----
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Slb.CaCertificateArgs.html">CaCertificateArgs</a></h4>
       <section></section>
@@ -153,6 +232,104 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
 <blockquote>
 <p><strong>NOTE:</strong> The instance with shared loadBalancerSpec doesn't support domainExtension.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new AliCloud.Slb.LoadBalancer(&amp;quot;instance&amp;quot;, new AliCloud.Slb.LoadBalancerArgs
+    {
+        Internet = &amp;quot;true&amp;quot;,
+        InternetChargeType = &amp;quot;PayByTraffic&amp;quot;,
+    });
+    var foo = new AliCloud.Slb.ServerCertificate(&amp;quot;foo&amp;quot;, new AliCloud.Slb.ServerCertificateArgs
+    {
+        PrivateKey = @&amp;quot;-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEAyjCheapjf7qDI3R9w/Gj0XFDgNLPK2aWIRvM25BdY/IB2KAf
+xQ7zOxu3X1bMo2zMCzsSrwIVrxx0qRM/7e4AfkHcKwDIjCcBprQp164dhFol4GpT
+HtcuGv0+Ue6vpuE9cxQE3/pG5x1n5EhheFu2+lAaGh/vUrUPeQp6szX/9qfzn+/k
+tF8wsRV8PBiFc2ZNMRXupRyc2qtOn95r86w/uK6TuerU1L64E2P5+tYLBWT+39Ai
+diUIenjURThFEn8Srvw8v/iLEMaKwiWNkOfWQH96166gzddOI8PT5cJy5an2c90T
+DgzegVo8RPK70bU9KjH7gH79YIwXVmTdIVGAUQIDAQABAoIBAE1J4a/8biR5S3/W
+G+03BYQeY8tuyjqw8FqfoeOcf9agwAvqybouSNQjeCk9qOQfxq/UWQQFK/zQR9gJ
+v7pX7GBXFK5rkj3g+0SaQhRsPmRFgY0Tl8qGPt2aSKRRNVv5ZeADmwlzRn86QmiF
+Mp0rkfqFfDTYWEepZszCML0ouzuxsW/9tq7rvtSjsgATNt31B3vFa3D3JBi31jUh
+5nfR9A3bATze7mQw3byEDiVl5ASRDgYyur403P1fDnMy9DBHZ8NaPOsFF6OBpJal
+BJsG5z00hll5PFN2jfmBQKlvAeU7wfwqdaSnGHOfqf2DeTTaFjIQ4gUhRn/m6pLo
+6kXttLECgYEA9sng0Qz/TcPFfM4tQ1gyvB1cKnnGIwg1FP8sfUjbbEgjaHhA224S
+k3BxtX2Kq6fhTXuwusAFc6OVMAZ76FgrQ5K4Ci7+DTsrF28z4b8td+p+lO/DxgP9
+lTgN+ddsiTOV4fUef9Z3yY0Zr0CnBUMbQYRaV2UIbCdiB0G4V/bt9TsCgYEA0bya
+Oo9wGI0RJV0bYP7qwO74Ra1/i1viWbRlS7jU37Q+AZstrlKcQ5CTPzOjKFKMiUzl
+4miWacZ0/q2n+Mvd7NbXGXTLijahnyOYKaHJYyh4oBymfkgAifRstE0Ki9gdvArb
+/I+emC0GvLSyfGN8UUeDJs4NmqdEXGqjo2JOV+MCgYALFv1MR5o9Y1u/hQBRs2fs
+PiGDIx+9OUQxYloccyaxEfjNXAIGGkcpavchIbgWiJ++PJ2vdquIC8TLeK8evL+M
+9M3iX0Q5UfxYvD2HmnCvn9D6Xl/cyRcfGnq+TGjrLW9BzSMGuZt+aiHKV0xqFx7l
+bc4leTvMqGRmURS4lzcQOwKBgQCDzA/i4sYfN25h21tcHXSpnsG3D2rJyQi5NCo/
+ZjunA92/JqOTGuiFcLGHEszhhtY3ZXJET1LNz18vtzKJnpqrvOnYXlOVW/U+SqDQ
+8JDb1c/PVZGuY1KrXkR9HLiW3kz5IJ3S3PFdUVYdeTN8BQxXCyg4V12nJJtJs912
+y0zN3wKBgGDS6YttCN6aI4EOABYE8fI1EYQ7vhfiYsaWGWSR1l6bQey7KR6M1ACz
+ZzMASNyytVt12yXE4/Emv6/pYqigbDLfL1zQJSLJ3EHJYTh2RxjR+AaGDudYFG/T
+liQ9YXhV5Iu2x1pNwrtFnssDdaaGpfA7l3xC00BL7Z+SAJyI4QKA
+-----END RSA PRIVATE KEY-----
+&amp;quot;,
+        ServerCertificate = @&amp;quot;-----BEGIN CERTIFICATE-----
+MIIDdjCCAl4CCQCcm+erkcKN7DANBgkqhkiG9w0BAQsFADB9MQswCQYDVQQGEwJj
+bjELMAkGA1UECAwCYmoxEDAOBgNVBAcMB2JlaWppbmcxDzANBgNVBAoMBmFsaXl1
+bjELMAkGA1UECwwCc2MxFTATBgNVBAMMDHd3dy50ZXN0LmNvbTEaMBgGCSqGSIb3
+DQEJARYLMTIzQDEyMy5jb20wHhcNMTkwNDI2MDM0ODAxWhcNMjQwNDI1MDM0ODAx
+WjB9MQswCQYDVQQGEwJjbjELMAkGA1UECAwCYmoxEDAOBgNVBAcMB2JlaWppbmcx
+DzANBgNVBAoMBmFsaXl1bjELMAkGA1UECwwCc2MxFTATBgNVBAMMDHd3dy50ZXN0
+LmNvbTEaMBgGCSqGSIb3DQEJARYLMTIzQDEyMy5jb20wggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQDKMKF5qmN/uoMjdH3D8aPRcUOA0s8rZpYhG8zbkF1j
+8gHYoB/FDvM7G7dfVsyjbMwLOxKvAhWvHHSpEz/t7gB+QdwrAMiMJwGmtCnXrh2E
+WiXgalMe1y4a/T5R7q+m4T1zFATf+kbnHWfkSGF4W7b6UBoaH+9StQ95CnqzNf/2
+p/Of7+S0XzCxFXw8GIVzZk0xFe6lHJzaq06f3mvzrD+4rpO56tTUvrgTY/n61gsF
+ZP7f0CJ2JQh6eNRFOEUSfxKu/Dy/+IsQxorCJY2Q59ZAf3rXrqDN104jw9PlwnLl
+qfZz3RMODN6BWjxE8rvRtT0qMfuAfv1gjBdWZN0hUYBRAgMBAAEwDQYJKoZIhvcN
+AQELBQADggEBAABzo82TxGp5poVkd5pLWj5ACgcBv8Cs6oH9D+4Jz9BmyuBUsQXh
+2aG0hQAe1mU61C9konsl/GTW8umJQ4M4lYEztXXwMf5PlBMGwebM0ZbSGg6jKtZg
+WCgJ3eP/FMmyXGL5Jji5+e09eObhUDVle4tdi0On97zBoz85W02rgWFAqZJwiEAP
+t+c7jX7uOSBq2/38iGStlrX5yB1at/gJXXiA5CL5OtlR3Okvb0/QH37efO1Nu39m
+lFi0ODPAVyXjVypAiLguDxPn6AtDTdk9Iw9B19OD4NrzNRWgSSX5vuxo/VcRcgWk
+3gEe9Ca0ZKN20q9XgthAiFFjl1S9ZgdA6Zc=
+-----END CERTIFICATE-----
+&amp;quot;,
+    });
+    var https = new AliCloud.Slb.Listener(&amp;quot;https&amp;quot;, new AliCloud.Slb.ListenerArgs
+    {
+        BackendPort = 80,
+        Bandwidth = 10,
+        Cookie = &amp;quot;testslblistenercookie&amp;quot;,
+        CookieTimeout = 86400,
+        FrontendPort = 443,
+        HealthCheck = &amp;quot;on&amp;quot;,
+        HealthCheckConnectPort = 20,
+        HealthCheckHttpCode = &amp;quot;http_2xx,http_3xx&amp;quot;,
+        HealthCheckInterval = 5,
+        HealthCheckTimeout = 8,
+        HealthCheckUri = &amp;quot;/cons&amp;quot;,
+        HealthyThreshold = 8,
+        LoadBalancerId = instance.Id,
+        Protocol = &amp;quot;https&amp;quot;,
+        SslCertificateId = foo.Id,
+        StickySession = &amp;quot;on&amp;quot;,
+        StickySessionType = &amp;quot;insert&amp;quot;,
+        UnhealthyThreshold = 8,
+    });
+    var example1 = new AliCloud.Slb.DomainExtension(&amp;quot;example1&amp;quot;, new AliCloud.Slb.DomainExtensionArgs
+    {
+        Domain = &amp;quot;www.test.com&amp;quot;,
+        FrontendPort = https.FrontendPort,
+        LoadBalancerId = instance.Id,
+        ServerCertificateId = foo.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Slb.DomainExtensionArgs.html">DomainExtensionArgs</a></h4>
       <section></section>
@@ -240,6 +417,74 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
 <li><a href="https://www.alibabacloud.com/help/doc-detail/27594.htm">Configure a TCP Listener</a>.</li>
 <li><a href="https://www.alibabacloud.com/help/doc-detail/27595.htm">Configure a UDP Listener</a>.</li>
 </ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;testcreatehttplistener&amp;quot;;
+    var ipVersion = config.Get(&amp;quot;ipVersion&amp;quot;) ?? &amp;quot;ipv4&amp;quot;;
+    var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer(&amp;quot;defaultLoadBalancer&amp;quot;, new AliCloud.Slb.LoadBalancerArgs
+    {
+        Internet = true,
+        InternetChargeType = &amp;quot;PayByTraffic&amp;quot;,
+    });
+    var defaultAcl = new AliCloud.Slb.Acl(&amp;quot;defaultAcl&amp;quot;, new AliCloud.Slb.AclArgs
+    {
+        EntryLists = 
+        {
+            new AliCloud.Slb.Inputs.AclEntryListArgs
+            {
+                Comment = &amp;quot;first&amp;quot;,
+                Entry = &amp;quot;10.10.10.0/24&amp;quot;,
+            },
+            new AliCloud.Slb.Inputs.AclEntryListArgs
+            {
+                Comment = &amp;quot;second&amp;quot;,
+                Entry = &amp;quot;168.10.10.0/24&amp;quot;,
+            },
+        },
+        IpVersion = ipVersion,
+    });
+    var defaultListener = new AliCloud.Slb.Listener(&amp;quot;defaultListener&amp;quot;, new AliCloud.Slb.ListenerArgs
+    {
+        AclId = defaultAcl.Id,
+        AclStatus = &amp;quot;on&amp;quot;,
+        AclType = &amp;quot;white&amp;quot;,
+        BackendPort = 80,
+        Bandwidth = 10,
+        Cookie = &amp;quot;testslblistenercookie&amp;quot;,
+        CookieTimeout = 86400,
+        FrontendPort = 80,
+        HealthCheck = &amp;quot;on&amp;quot;,
+        HealthCheckConnectPort = 20,
+        HealthCheckDomain = &amp;quot;ali.com&amp;quot;,
+        HealthCheckHttpCode = &amp;quot;http_2xx,http_3xx&amp;quot;,
+        HealthCheckInterval = 5,
+        HealthCheckTimeout = 8,
+        HealthCheckUri = &amp;quot;/cons&amp;quot;,
+        HealthyThreshold = 8,
+        IdleTimeout = 30,
+        LoadBalancerId = defaultLoadBalancer.Id,
+        Protocol = &amp;quot;http&amp;quot;,
+        RequestTimeout = 80,
+        StickySession = &amp;quot;on&amp;quot;,
+        StickySessionType = &amp;quot;insert&amp;quot;,
+        UnhealthyThreshold = 8,
+        XForwardedFor = new AliCloud.Slb.Inputs.ListenerXForwardedForArgs
+        {
+            RetriveSlbId = true,
+            RetriveSlbIp = true,
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="listener-fields-and-protocol-mapping">Listener fields and protocol mapping</h2>
 <p>load balance support 4 protocal to listen on, they are <code>http</code>,<code>https</code>,<code>tcp</code>,<code>udp</code>, the every listener support which portocal following:</p>
 <table>
@@ -425,15 +670,7 @@ Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.
       <h4><a class="xref" href="Pulumi.AliCloud.Slb.ListenerState.html">ListenerState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Slb.LoadBalancer.html">LoadBalancer</a></h4>
-      <section><p>Provides an Application Load Balancer resource.</p>
-<blockquote>
-<p><strong>NOTE:</strong> At present, to avoid some unnecessary regulation confusion, SLB can not support alicloud international account to create &quot;paybybandwidth&quot; instance.</p>
-</blockquote>
-<blockquote>
-<p><strong>NOTE:</strong> The supported specifications vary by region. Currently not all regions support guaranteed-performance instances.
-For more details about guaranteed-performance instance, see <a href="https://www.alibabacloud.com/help/doc-detail/27657.htm">Guaranteed-performance instances</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Slb.LoadBalancerArgs.html">LoadBalancerArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Slb.LoadBalancerState.html">LoadBalancerState</a></h4>
@@ -461,6 +698,141 @@ For more details about guaranteed-performance instance, see <a href="https://www
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.54.0+</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultInstanceTypes = defaultZones.Apply(defaultZones =&gt; Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+    {
+        AvailabilityZone = defaultZones.Zones[0].Id,
+        EniAmount = 2,
+    })));
+    var image = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+    {
+        MostRecent = true,
+        NameRegex = &amp;quot;^ubuntu_18.*64&amp;quot;,
+        Owners = &amp;quot;system&amp;quot;,
+    }));
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;tf-testAccSlbMasterSlaveServerGroupVpc&amp;quot;;
+    var number = config.Get(&amp;quot;number&amp;quot;) ?? &amp;quot;1&amp;quot;;
+    var mainNetwork = new AliCloud.Vpc.Network(&amp;quot;mainNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var mainSwitch = new AliCloud.Vpc.Switch(&amp;quot;mainSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+        VpcId = mainNetwork.Id,
+    });
+    var groupSecurityGroup = new AliCloud.Ecs.SecurityGroup(&amp;quot;groupSecurityGroup&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        VpcId = mainNetwork.Id,
+    });
+    var instanceInstance = new List&amp;lt;AliCloud.Ecs.Instance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 2; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        instanceInstance.Add(new AliCloud.Ecs.Instance($&amp;quot;instanceInstance-{range.Value}&amp;quot;, new AliCloud.Ecs.InstanceArgs
+        {
+            AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+            ImageId = image.Apply(image =&gt; image.Images[0].Id),
+            InstanceChargeType = &amp;quot;PostPaid&amp;quot;,
+            InstanceName = name,
+            InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes =&gt; defaultInstanceTypes.InstanceTypes[0].Id),
+            InternetChargeType = &amp;quot;PayByTraffic&amp;quot;,
+            InternetMaxBandwidthOut = &amp;quot;10&amp;quot;,
+            SecurityGroups = 
+            {
+                groupSecurityGroup.Id,
+            },
+            SystemDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+            VswitchId = mainSwitch.Id,
+        }));
+    }
+    var instanceLoadBalancer = new AliCloud.Slb.LoadBalancer(&amp;quot;instanceLoadBalancer&amp;quot;, new AliCloud.Slb.LoadBalancerArgs
+    {
+        Specification = &amp;quot;slb.s2.small&amp;quot;,
+        VswitchId = mainSwitch.Id,
+    });
+    var defaultNetworkInterface = new List&amp;lt;AliCloud.Vpc.NetworkInterface&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; number; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        defaultNetworkInterface.Add(new AliCloud.Vpc.NetworkInterface($&amp;quot;defaultNetworkInterface-{range.Value}&amp;quot;, new AliCloud.Vpc.NetworkInterfaceArgs
+        {
+            SecurityGroups = 
+            {
+                groupSecurityGroup.Id,
+            },
+            VswitchId = mainSwitch.Id,
+        }));
+    }
+    var defaultNetworkInterfaceAttachment = new List&amp;lt;AliCloud.Vpc.NetworkInterfaceAttachment&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; number; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        defaultNetworkInterfaceAttachment.Add(new AliCloud.Vpc.NetworkInterfaceAttachment($&amp;quot;defaultNetworkInterfaceAttachment-{range.Value}&amp;quot;, new AliCloud.Vpc.NetworkInterfaceAttachmentArgs
+        {
+            InstanceId = instanceInstance[0].Id,
+            NetworkInterfaceId = defaultNetworkInterface.Select(__item =&gt; __item.Id).ToList()[range.Index],
+        }));
+    }
+    var groupMasterSlaveServerGroup = new AliCloud.Slb.MasterSlaveServerGroup(&amp;quot;groupMasterSlaveServerGroup&amp;quot;, new AliCloud.Slb.MasterSlaveServerGroupArgs
+    {
+        LoadBalancerId = instanceLoadBalancer.Id,
+        Servers = 
+        {
+            new AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs
+            {
+                Port = 100,
+                ServerId = instanceInstance[0].Id,
+                ServerType = &amp;quot;Master&amp;quot;,
+                Weight = 100,
+            },
+            new AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs
+            {
+                Port = 100,
+                ServerId = instanceInstance[1].Id,
+                ServerType = &amp;quot;Slave&amp;quot;,
+                Weight = 100,
+            },
+        },
+    });
+    var tcp = new AliCloud.Slb.Listener(&amp;quot;tcp&amp;quot;, new AliCloud.Slb.ListenerArgs
+    {
+        Bandwidth = &amp;quot;10&amp;quot;,
+        EstablishedTimeout = 600,
+        FrontendPort = &amp;quot;22&amp;quot;,
+        HealthCheckConnectPort = 20,
+        HealthCheckHttpCode = &amp;quot;http_2xx&amp;quot;,
+        HealthCheckInterval = 5,
+        HealthCheckTimeout = 8,
+        HealthCheckType = &amp;quot;tcp&amp;quot;,
+        HealthCheckUri = &amp;quot;/console&amp;quot;,
+        HealthyThreshold = 8,
+        LoadBalancerId = instanceLoadBalancer.Id,
+        MasterSlaveServerGroupId = groupMasterSlaveServerGroup.Id,
+        PersistenceTimeout = 3600,
+        Protocol = &amp;quot;tcp&amp;quot;,
+        UnhealthyThreshold = 8,
+    });
+}
+
+}
+</code></pre>
 <h2 id="block-servers">Block servers</h2>
 <p>The servers mapping supports the following:</p>
 <ul>
@@ -494,6 +866,120 @@ You can add forwarding rules to a listener to forward requests based on the doma
 <blockquote>
 <p><strong>NOTE:</strong> Only rule's virtual server group can be modified.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;slbrulebasicconfig&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultInstanceTypes = defaultZones.Apply(defaultZones =&gt; Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+    {
+        AvailabilityZone = defaultZones.Zones[0].Id,
+        CpuCoreCount = 1,
+        MemorySize = 2,
+    })));
+    var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+    {
+        MostRecent = true,
+        NameRegex = &amp;quot;^ubuntu_18.*64&amp;quot;,
+        Owners = &amp;quot;system&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup(&amp;quot;defaultSecurityGroup&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new AliCloud.Ecs.Instance(&amp;quot;defaultInstance&amp;quot;, new AliCloud.Ecs.InstanceArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        ImageId = defaultImages.Apply(defaultImages =&gt; defaultImages.Images[0].Id),
+        InstanceChargeType = &amp;quot;PostPaid&amp;quot;,
+        InstanceName = name,
+        InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes =&gt; defaultInstanceTypes.InstanceTypes[0].Id),
+        InternetChargeType = &amp;quot;PayByTraffic&amp;quot;,
+        InternetMaxBandwidthOut = &amp;quot;10&amp;quot;,
+        SecurityGroups = 
+        {
+            defaultSecurityGroup,
+        }.Select(__item =&gt; __item.Id).ToList(),
+        SystemDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer(&amp;quot;defaultLoadBalancer&amp;quot;, new AliCloud.Slb.LoadBalancerArgs
+    {
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultListener = new AliCloud.Slb.Listener(&amp;quot;defaultListener&amp;quot;, new AliCloud.Slb.ListenerArgs
+    {
+        BackendPort = 22,
+        Bandwidth = 5,
+        FrontendPort = 22,
+        HealthCheckConnectPort = &amp;quot;20&amp;quot;,
+        LoadBalancerId = defaultLoadBalancer.Id,
+        Protocol = &amp;quot;http&amp;quot;,
+    });
+    var defaultServerGroup = new AliCloud.Slb.ServerGroup(&amp;quot;defaultServerGroup&amp;quot;, new AliCloud.Slb.ServerGroupArgs
+    {
+        LoadBalancerId = defaultLoadBalancer.Id,
+        Servers = 
+        {
+            new AliCloud.Slb.Inputs.ServerGroupServerArgs
+            {
+                Port = 80,
+                ServerIds = 
+                {
+                    defaultInstance,
+                }.Select(__item =&gt; __item.Id).ToList(),
+                Weight = 100,
+            },
+        },
+    });
+    var defaultRule = new AliCloud.Slb.Rule(&amp;quot;defaultRule&amp;quot;, new AliCloud.Slb.RuleArgs
+    {
+        Cookie = &amp;quot;23ffsa&amp;quot;,
+        CookieTimeout = 100,
+        Domain = &amp;quot;*.aliyun.com&amp;quot;,
+        FrontendPort = defaultListener.FrontendPort,
+        HealthCheck = &amp;quot;on&amp;quot;,
+        HealthCheckConnectPort = 80,
+        HealthCheckDomain = &amp;quot;test&amp;quot;,
+        HealthCheckHttpCode = &amp;quot;http_2xx&amp;quot;,
+        HealthCheckInterval = 10,
+        HealthCheckTimeout = 30,
+        HealthCheckUri = &amp;quot;/test&amp;quot;,
+        HealthyThreshold = 3,
+        ListenerSync = &amp;quot;off&amp;quot;,
+        LoadBalancerId = defaultLoadBalancer.Id,
+        Scheduler = &amp;quot;rr&amp;quot;,
+        ServerGroupId = defaultServerGroup.Id,
+        StickySession = &amp;quot;on&amp;quot;,
+        StickySessionType = &amp;quot;server&amp;quot;,
+        UnhealthyThreshold = 5,
+        Url = &amp;quot;/image&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Slb.RuleArgs.html">RuleArgs</a></h4>
       <section></section>
@@ -503,6 +989,30 @@ You can add forwarding rules to a listener to forward requests based on the doma
       <section><p>A Load Balancer Server Certificate is an ssl Certificate used by the listener of the protocol https.</p>
 <p>For information about slb and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
 <p>For information about Server Certificate and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/85968.htm">Configure Server Certificate</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // create a server certificate
+    var foo = new AliCloud.Slb.ServerCertificate(&amp;quot;foo&amp;quot;, new AliCloud.Slb.ServerCertificateArgs
+    {
+        PrivateKey = @&amp;quot;-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQDO0knDrlNdiys******ErVpjsckAaOW/JDG5PCSwkaMxk=
+-----END RSA PRIVATE KEY-----
+&amp;quot;,
+        ServerCertificate = @&amp;quot;-----BEGIN CERTIFICATE-----
+MIIDRjCCAq+gAwIBAgI+OuMs******XTtI90EAxEG/bJJyOm5LqoiA=
+-----END CERTIFICATE-----
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Slb.ServerCertificateArgs.html">ServerCertificateArgs</a></h4>
       <section></section>
@@ -526,6 +1036,101 @@ and to meet the personalized requirements of domain name and URL forwarding.</p>
 <blockquote>
 <p><strong>NOTE:</strong> One VPC load balancer, its virtual server group can only add the same VPC ECS instances.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;slbservergroupvpc&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultInstanceTypes = defaultZones.Apply(defaultZones =&gt; Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+    {
+        AvailabilityZone = defaultZones.Zones[0].Id,
+        CpuCoreCount = 1,
+        MemorySize = 2,
+    })));
+    var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+    {
+        MostRecent = true,
+        NameRegex = &amp;quot;^ubuntu_18.*64&amp;quot;,
+        Owners = &amp;quot;system&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup(&amp;quot;defaultSecurityGroup&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        VpcId = defaultNetwork.Id,
+    });
+    var instance = new List&amp;lt;AliCloud.Ecs.Instance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 2; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        instance.Add(new AliCloud.Ecs.Instance($&amp;quot;instance-{range.Value}&amp;quot;, new AliCloud.Ecs.InstanceArgs
+        {
+            AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+            ImageId = defaultImages.Apply(defaultImages =&gt; defaultImages.Images[0].Id),
+            InstanceChargeType = &amp;quot;PostPaid&amp;quot;,
+            InstanceName = name,
+            InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes =&gt; defaultInstanceTypes.InstanceTypes[0].Id),
+            InternetChargeType = &amp;quot;PayByTraffic&amp;quot;,
+            InternetMaxBandwidthOut = &amp;quot;10&amp;quot;,
+            SecurityGroups = 
+            {
+                defaultSecurityGroup,
+            }.Select(__item =&gt; __item.Id).ToList(),
+            SystemDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+            VswitchId = defaultSwitch.Id,
+        }));
+    }
+    var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer(&amp;quot;defaultLoadBalancer&amp;quot;, new AliCloud.Slb.LoadBalancerArgs
+    {
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultServerGroup = new AliCloud.Slb.ServerGroup(&amp;quot;defaultServerGroup&amp;quot;, new AliCloud.Slb.ServerGroupArgs
+    {
+        LoadBalancerId = defaultLoadBalancer.Id,
+        Servers = 
+        {
+            new AliCloud.Slb.Inputs.ServerGroupServerArgs
+            {
+                Port = 100,
+                ServerIds = 
+                {
+                    instance[0].Id,
+                    instance[1].Id,
+                },
+                Weight = 10,
+            },
+            new AliCloud.Slb.Inputs.ServerGroupServerArgs
+            {
+                Port = 80,
+                ServerIds = instance.Select(__item =&gt; __item.Id).ToList(),
+                Weight = 100,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="block-servers">Block servers</h2>
 <p>The servers mapping supports the following:</p>
 <ul>

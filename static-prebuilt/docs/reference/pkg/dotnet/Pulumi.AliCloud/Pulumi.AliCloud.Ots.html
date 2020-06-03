@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Ots
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,11 +79,77 @@
       <h4><a class="xref" href="Pulumi.AliCloud.Ots.Instance.html">Instance</a></h4>
       <section><p>This resource will help you to manager a <a href="https://www.alibabacloud.com/help/doc-detail/27280.htm">Table Store</a> Instance.
 It is foundation of creating data table.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create an OTS instance
+    var foo = new AliCloud.Ots.Instance(&amp;quot;foo&amp;quot;, new AliCloud.Ots.InstanceArgs
+    {
+        AccessedBy = &amp;quot;Vpc&amp;quot;,
+        Description = &amp;quot;for table&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Created&amp;quot;, &amp;quot;TF&amp;quot; },
+            { &amp;quot;For&amp;quot;, &amp;quot;Building table&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ots.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ots.InstanceAttachment.html">InstanceAttachment</a></h4>
       <section><p>This resource will help you to bind a VPC to an OTS instance.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create an OTS instance
+    var fooInstance = new AliCloud.Ots.Instance(&amp;quot;fooInstance&amp;quot;, new AliCloud.Ots.InstanceArgs
+    {
+        AccessedBy = &amp;quot;Vpc&amp;quot;,
+        Description = &amp;quot;for table&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Created&amp;quot;, &amp;quot;TF&amp;quot; },
+            { &amp;quot;For&amp;quot;, &amp;quot;Building table&amp;quot; },
+        },
+    });
+    var fooZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var fooNetwork = new AliCloud.Vpc.Network(&amp;quot;fooNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var fooSwitch = new AliCloud.Vpc.Switch(&amp;quot;fooSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = fooZones.Apply(fooZones =&gt; fooZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.1.0/24&amp;quot;,
+        VpcId = fooNetwork.Id,
+    });
+    var fooInstanceAttachment = new AliCloud.Ots.InstanceAttachment(&amp;quot;fooInstanceAttachment&amp;quot;, new AliCloud.Ots.InstanceAttachmentArgs
+    {
+        InstanceName = fooInstance.Name,
+        VpcName = &amp;quot;attachment1&amp;quot;,
+        VswitchId = fooSwitch.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ots.InstanceAttachmentArgs.html">InstanceAttachmentArgs</a></h4>
       <section></section>
@@ -92,12 +158,7 @@ It is foundation of creating data table.</p>
       <h4><a class="xref" href="Pulumi.AliCloud.Ots.InstanceState.html">InstanceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ots.Table.html">Table</a></h4>
-      <section><p>Provides an OTS table resource.</p>
-<blockquote>
-<p><strong>NOTE:</strong> From Provider version 1.10.0, the provider field 'ots_instance_name' has been deprecated and
-you should use resource alicloud_ots_table's new field 'instance_name' and 'table_name' to re-import this resource.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ots.TableArgs.html">TableArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ots.TableState.html">TableState</a></h4>

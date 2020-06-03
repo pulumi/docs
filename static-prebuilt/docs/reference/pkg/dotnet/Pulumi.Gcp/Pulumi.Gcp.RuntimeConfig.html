@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.RuntimeConfig
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,11 +81,27 @@
 <a href="https://cloud.google.com/deployment-manager/runtime-configurator/">official documentation</a>,
 or the
 <a href="https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/">JSON API</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_runtime_config = new Gcp.RuntimeConfig.Config(&amp;quot;my-runtime-config&amp;quot;, new Gcp.RuntimeConfig.ConfigArgs
+    {
+        Description = &amp;quot;Runtime configuration values for my service&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigArgs.html">ConfigArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamBinding.html">ConfigIamBinding</a></h4>
-      <section><p>Three different resources help you manage your IAM policy for Cloud Runtime Configuration Config. Each of these resources serves a different use case:</p>
+      <section><p>Three different resources help you manage your IAM policy for Runtime Configurator Config. Each of these resources serves a different use case:</p>
 <ul>
 <li><code>gcp.runtimeconfig.ConfigIamPolicy</code>: Authoritative. Sets the IAM policy for the config and replaces any existing policy already attached.</li>
 <li><code>gcp.runtimeconfig.ConfigIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the config are preserved.</li>
@@ -97,13 +113,86 @@ or the
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.runtimeconfig.ConfigIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.runtimeconfig.ConfigIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_runtimeconfig_config_iam_policy">google_runtimeconfig_config_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.RuntimeConfig.ConfigIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.RuntimeConfig.ConfigIamPolicyArgs
+    {
+        Project = google_runtimeconfig_config.Config.Project,
+        Config = google_runtimeconfig_config.Config.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_runtimeconfig_config_iam_binding">google_runtimeconfig_config_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.RuntimeConfig.ConfigIamBinding(&amp;quot;binding&amp;quot;, new Gcp.RuntimeConfig.ConfigIamBindingArgs
+    {
+        Project = google_runtimeconfig_config.Config.Project,
+        Config = google_runtimeconfig_config.Config.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_runtimeconfig_config_iam_member">google_runtimeconfig_config_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.RuntimeConfig.ConfigIamMember(&amp;quot;member&amp;quot;, new Gcp.RuntimeConfig.ConfigIamMemberArgs
+    {
+        Project = google_runtimeconfig_config.Config.Project,
+        Config = google_runtimeconfig_config.Config.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamBindingArgs.html">ConfigIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamBindingState.html">ConfigIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamMember.html">ConfigIamMember</a></h4>
-      <section><p>Three different resources help you manage your IAM policy for Cloud Runtime Configuration Config. Each of these resources serves a different use case:</p>
+      <section><p>Three different resources help you manage your IAM policy for Runtime Configurator Config. Each of these resources serves a different use case:</p>
 <ul>
 <li><code>gcp.runtimeconfig.ConfigIamPolicy</code>: Authoritative. Sets the IAM policy for the config and replaces any existing policy already attached.</li>
 <li><code>gcp.runtimeconfig.ConfigIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the config are preserved.</li>
@@ -115,13 +204,86 @@ or the
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.runtimeconfig.ConfigIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.runtimeconfig.ConfigIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_runtimeconfig_config_iam_policy">google_runtimeconfig_config_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.RuntimeConfig.ConfigIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.RuntimeConfig.ConfigIamPolicyArgs
+    {
+        Project = google_runtimeconfig_config.Config.Project,
+        Config = google_runtimeconfig_config.Config.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_runtimeconfig_config_iam_binding">google_runtimeconfig_config_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.RuntimeConfig.ConfigIamBinding(&amp;quot;binding&amp;quot;, new Gcp.RuntimeConfig.ConfigIamBindingArgs
+    {
+        Project = google_runtimeconfig_config.Config.Project,
+        Config = google_runtimeconfig_config.Config.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_runtimeconfig_config_iam_member">google_runtimeconfig_config_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.RuntimeConfig.ConfigIamMember(&amp;quot;member&amp;quot;, new Gcp.RuntimeConfig.ConfigIamMemberArgs
+    {
+        Project = google_runtimeconfig_config.Config.Project,
+        Config = google_runtimeconfig_config.Config.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamMemberArgs.html">ConfigIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamMemberState.html">ConfigIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamPolicy.html">ConfigIamPolicy</a></h4>
-      <section><p>Three different resources help you manage your IAM policy for Cloud Runtime Configuration Config. Each of these resources serves a different use case:</p>
+      <section><p>Three different resources help you manage your IAM policy for Runtime Configurator Config. Each of these resources serves a different use case:</p>
 <ul>
 <li><code>gcp.runtimeconfig.ConfigIamPolicy</code>: Authoritative. Sets the IAM policy for the config and replaces any existing policy already attached.</li>
 <li><code>gcp.runtimeconfig.ConfigIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the config are preserved.</li>
@@ -133,6 +295,79 @@ or the
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.runtimeconfig.ConfigIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.runtimeconfig.ConfigIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_runtimeconfig_config_iam_policy">google_runtimeconfig_config_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/viewer&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.RuntimeConfig.ConfigIamPolicy(&amp;quot;policy&amp;quot;, new Gcp.RuntimeConfig.ConfigIamPolicyArgs
+    {
+        Project = google_runtimeconfig_config.Config.Project,
+        Config = google_runtimeconfig_config.Config.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_runtimeconfig_config_iam_binding">google_runtimeconfig_config_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.RuntimeConfig.ConfigIamBinding(&amp;quot;binding&amp;quot;, new Gcp.RuntimeConfig.ConfigIamBindingArgs
+    {
+        Project = google_runtimeconfig_config.Config.Project,
+        Config = google_runtimeconfig_config.Config.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_runtimeconfig_config_iam_member">google_runtimeconfig_config_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.RuntimeConfig.ConfigIamMember(&amp;quot;member&amp;quot;, new Gcp.RuntimeConfig.ConfigIamMemberArgs
+    {
+        Project = google_runtimeconfig_config.Config.Project,
+        Config = google_runtimeconfig_config.Config.Name,
+        Role = &amp;quot;roles/viewer&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamPolicyArgs.html">ConfigIamPolicyArgs</a></h4>
       <section></section>

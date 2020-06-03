@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LoadBalancerMonitor
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,109 @@
   <h1 id="Pulumi_Cloudflare_LoadBalancerMonitor" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor" class="text-break">Class LoadBalancerMonitor
   </h1>
   <div class="markdown level0 summary"><p>If you're using Cloudflare's Load Balancing to load-balance across multiple origin servers or data centers, you configure one of these Monitors to actively check the availability of those servers over HTTP(S) or TCP.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="http-monitor">HTTP Monitor</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var httpMonitor = new Cloudflare.LoadBalancerMonitor(&amp;quot;httpMonitor&amp;quot;, new Cloudflare.LoadBalancerMonitorArgs
+    {
+        AllowInsecure = false,
+        Description = &amp;quot;example http load balancer&amp;quot;,
+        ExpectedBody = &amp;quot;alive&amp;quot;,
+        ExpectedCodes = &amp;quot;2xx&amp;quot;,
+        FollowRedirects = true,
+        Headers = 
+        {
+            new Cloudflare.Inputs.LoadBalancerMonitorHeaderArgs
+            {
+                Header = &amp;quot;Host&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;example.com&amp;quot;,
+                },
+            },
+        },
+        Interval = 60,
+        Method = &amp;quot;GET&amp;quot;,
+        Path = &amp;quot;/health&amp;quot;,
+        Retries = 5,
+        Timeout = 7,
+        Type = &amp;quot;http&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="tcp-monitor">TCP Monitor</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tcpMonitor = new Cloudflare.LoadBalancerMonitor(&amp;quot;tcpMonitor&amp;quot;, new Cloudflare.LoadBalancerMonitorArgs
+    {
+        Description = &amp;quot;example tcp load balancer&amp;quot;,
+        Interval = 60,
+        Method = &amp;quot;connection_established&amp;quot;,
+        Retries = 5,
+        Timeout = 7,
+        Type = &amp;quot;tcp&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">LoadBalancerMonitor</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">LoadBalancerMonitor</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Cloudflare.html">Pulumi.Cloudflare</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Cloudflare.dll</h6>
@@ -88,16 +185,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor__ctor_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.#ctor*"></a>
-  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor__ctor_System_String_Pulumi_Cloudflare_LoadBalancerMonitorArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.#ctor(System.String,Pulumi.Cloudflare.LoadBalancerMonitorArgs,System.Nullable{CustomResourceOptions})">LoadBalancerMonitor(String, LoadBalancerMonitorArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor__ctor_System_String_Pulumi_Cloudflare_LoadBalancerMonitorArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.#ctor(System.String,Pulumi.Cloudflare.LoadBalancerMonitorArgs,Pulumi.CustomResourceOptions)">LoadBalancerMonitor(String, LoadBalancerMonitorArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a LoadBalancerMonitor resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LoadBalancerMonitor(string name, LoadBalancerMonitorArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public LoadBalancerMonitor(string name, LoadBalancerMonitorArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +219,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +229,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_AllowInsecure_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.AllowInsecure*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_AllowInsecure" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.AllowInsecure">AllowInsecure</h4>
@@ -153,13 +250,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_CreatedOn_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.CreatedOn*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_CreatedOn" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.CreatedOn">CreatedOn</h4>
@@ -180,13 +277,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Description_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Description*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Description" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Description">Description</h4>
@@ -195,7 +292,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +304,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_ExpectedBody_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ExpectedBody*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_ExpectedBody" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ExpectedBody">ExpectedBody</h4>
@@ -222,7 +319,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ExpectedBody { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ExpectedBody { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +331,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_ExpectedCodes_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ExpectedCodes*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_ExpectedCodes" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ExpectedCodes">ExpectedCodes</h4>
@@ -249,7 +346,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ExpectedCodes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ExpectedCodes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +358,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_FollowRedirects_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.FollowRedirects*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_FollowRedirects" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.FollowRedirects">FollowRedirects</h4>
@@ -288,13 +385,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Headers_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Headers*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Headers" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Headers">Headers</h4>
@@ -315,13 +412,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.LoadBalancerMonitorHeader.html">LoadBalancerMonitorHeader</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.LoadBalancerMonitorHeader.html">LoadBalancerMonitorHeader</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Interval_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Interval*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Interval" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Interval">Interval</h4>
@@ -342,13 +439,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Method_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Method*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Method" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Method">Method</h4>
@@ -369,13 +466,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_ModifiedOn_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ModifiedOn*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_ModifiedOn" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ModifiedOn">ModifiedOn</h4>
@@ -396,13 +493,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Path_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Path*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Path" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Path">Path</h4>
@@ -423,13 +520,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Port_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Port*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Port" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Port">Port</h4>
@@ -449,13 +546,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Retries_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Retries*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Retries" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Retries">Retries</h4>
@@ -476,13 +573,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Timeout_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Timeout*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Timeout" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Timeout">Timeout</h4>
@@ -503,13 +600,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Type_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Type*"></a>
   <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Type" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Type">Type</h4>
@@ -518,7 +615,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -530,7 +627,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -538,17 +635,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Get_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Get*"></a>
-  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Get_System_String_Input_System_String__Pulumi_Cloudflare_LoadBalancerMonitorState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Get(System.String,Input{System.String},Pulumi.Cloudflare.LoadBalancerMonitorState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, LoadBalancerMonitorState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Get_System_String_Pulumi_Input_System_String__Pulumi_Cloudflare_LoadBalancerMonitorState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Get(System.String,Pulumi.Input{System.String},Pulumi.Cloudflare.LoadBalancerMonitorState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, LoadBalancerMonitorState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing LoadBalancerMonitor resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static LoadBalancerMonitor Get(string name, Input&lt;string&gt; id, LoadBalancerMonitorState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static LoadBalancerMonitor Get(string name, Input&lt;string&gt; id, LoadBalancerMonitorState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -567,7 +664,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -579,7 +676,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -608,7 +705,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/LoadBalancerMonitor.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L81" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

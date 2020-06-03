@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Dlm
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,103 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Dlm.LifecyclePolicy.html">LifecyclePolicy</a></h4>
       <section><p>Provides a <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html">Data Lifecycle Manager (DLM) lifecycle policy</a> for managing snapshots.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dlmLifecycleRole = new Aws.Iam.Role(&amp;quot;dlmLifecycleRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;dlm.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var dlmLifecycle = new Aws.Iam.RolePolicy(&amp;quot;dlmLifecycle&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+  {
+     &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+     &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+        &amp;quot;&amp;quot;ec2:CreateSnapshot&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;ec2:DeleteSnapshot&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;ec2:DescribeVolumes&amp;quot;&amp;quot;,
+        &amp;quot;&amp;quot;ec2:DescribeSnapshots&amp;quot;&amp;quot;
+     ],
+     &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+  },
+  {
+     &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+     &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+        &amp;quot;&amp;quot;ec2:CreateTags&amp;quot;&amp;quot;
+     ],
+     &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:ec2:*::snapshot/*&amp;quot;&amp;quot;
+  }
+]
+}
+
+&amp;quot;,
+        Role = dlmLifecycleRole.Id,
+    });
+    var example = new Aws.Dlm.LifecyclePolicy(&amp;quot;example&amp;quot;, new Aws.Dlm.LifecyclePolicyArgs
+    {
+        Description = &amp;quot;example DLM lifecycle policy&amp;quot;,
+        ExecutionRoleArn = dlmLifecycleRole.Arn,
+        PolicyDetails = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsArgs
+        {
+            ResourceTypes = 
+            {
+                &amp;quot;VOLUME&amp;quot;,
+            },
+            Schedule = 
+            {
+
+                {
+                    { &amp;quot;copyTags&amp;quot;, false },
+                    { &amp;quot;createRule&amp;quot;, 
+                    {
+                        { &amp;quot;interval&amp;quot;, 24 },
+                        { &amp;quot;intervalUnit&amp;quot;, &amp;quot;HOURS&amp;quot; },
+                        { &amp;quot;times&amp;quot;, &amp;quot;23:45&amp;quot; },
+                    } },
+                    { &amp;quot;name&amp;quot;, &amp;quot;2 weeks of daily snapshots&amp;quot; },
+                    { &amp;quot;retainRule&amp;quot;, 
+                    {
+                        { &amp;quot;count&amp;quot;, 14 },
+                    } },
+                    { &amp;quot;tagsToAdd&amp;quot;, 
+                    {
+                        { &amp;quot;SnapshotCreator&amp;quot;, &amp;quot;DLM&amp;quot; },
+                    } },
+                },
+            },
+            TargetTags = 
+            {
+                { &amp;quot;Snapshot&amp;quot;, &amp;quot;true&amp;quot; },
+            },
+        },
+        State = &amp;quot;ENABLED&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Dlm.LifecyclePolicyArgs.html">LifecyclePolicyArgs</a></h4>
       <section></section>

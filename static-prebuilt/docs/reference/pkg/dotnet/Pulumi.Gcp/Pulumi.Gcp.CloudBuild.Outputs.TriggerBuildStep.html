@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TriggerBuildStep
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,19 +78,48 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TriggerBuildStep</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.CloudBuild.Outputs.html">Pulumi.Gcp.CloudBuild.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class TriggerBuildStep : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class TriggerBuildStep</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_Args" data-uid="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.Args">Args</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of arguments that will be presented to the step when it is started.
+If the image used to run the step's container has an entrypoint, the args
+are used as arguments to that entrypoint. If the image does not define an
+entrypoint, the first element in args is used as the entrypoint, and the
+remainder will be used as arguments.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -106,20 +135,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_Dir" data-uid="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.Dir">Dir</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a <code>volume</code> for that path is specified.
+If the build specifies a <code>RepoSource</code> with <code>dir</code> and a step with a
+<code>dir</code>,
+which specifies an absolute path, the <code>RepoSource</code> <code>dir</code> is ignored
+for the step's execution.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Dir</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Dir</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,20 +169,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L41">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_Entrypoint" data-uid="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.Entrypoint">Entrypoint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Entrypoint to be used instead of the build step image's
+default entrypoint.
+If unset, the image's default entrypoint is used</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Entrypoint</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Entrypoint</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,16 +197,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L48">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_Envs" data-uid="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.Envs">Envs</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of environment variable definitions to be used when
+running a step.
+The elements are of the form &quot;KEY=VALUE&quot; for the environment variable
+&quot;KEY&quot; being given the value &quot;VALUE&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -181,21 +226,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_Id" data-uid="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.Id">Id</h4>
-  <div class="markdown level1 summary"><p>an identifier for the resource with format <code>projects/{{project}}/triggers/{{trigger_id}}</code></p>
+  <div class="markdown level1 summary"><p>Unique identifier for this build step, used in <code>wait_for</code> to
+reference this build step as a dependency.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Id</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Id</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,16 +253,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_Name" data-uid="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -238,10 +287,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L66">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_SecretEnvs" data-uid="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.SecretEnvs">SecretEnvs</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of environment variables which are encrypted using
+a Cloud Key
+Management Service crypto key. These values must be specified in
+the build's <code>Secret</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -257,20 +310,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_Timeout" data-uid="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.Timeout">Timeout</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Time limit for executing this build step. If not defined,
+the step has no
+time limit and will be allowed to continue to run until either it
+completes or the build itself times out.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Timeout</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Timeout</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -282,20 +339,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L78">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_Timing" data-uid="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.Timing">Timing</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Output only. Stores timing information for executing this
+build step.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Timing</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Timing</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -307,16 +366,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L87">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_Volumes" data-uid="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.Volumes">Volumes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>List of volumes to mount into the build step.
+Each volume is created as an empty volume prior to execution of the
+build step. Upon completion of the build, volumes and their contents
+are discarded.
+Using a named volume in only one step is not valid as it is
+indicative of a build request with an incorrect configuration.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -332,16 +397,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStepVolume.html">TriggerBuildStepVolume</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStepVolume.html">TriggerBuildStepVolume</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L95">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudBuild_Outputs_TriggerBuildStep_WaitFors" data-uid="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.WaitFors">WaitFors</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID(s) of the step(s) that this build step depends on.
+This build step will not start until all the build steps in <code>wait_for</code>
+have completed successfully. If <code>wait_for</code> is empty, this build step
+will start when all previous build steps in the <code>Build.Steps</code> list
+have completed successfully.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -357,7 +427,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -369,7 +439,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudBuild/Outputs/TriggerBuildStep.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

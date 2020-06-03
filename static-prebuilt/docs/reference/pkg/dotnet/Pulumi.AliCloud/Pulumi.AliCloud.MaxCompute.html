@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.MaxCompute
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,23 @@
       <h4><a class="xref" href="Pulumi.AliCloud.MaxCompute.Project.html">Project</a></h4>
       <section><p>The project is the basic unit of operation in maxcompute. It is similar to the concept of Database or Schema in traditional databases, and sets the boundary for maxcompute multi-user isolation and access control. <a href="https://www.alibabacloud.com/help/doc-detail/27818.html">Refer to details</a>.</p>
 <p>-&gt;<strong>NOTE:</strong> Available in 1.77.0+.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new AliCloud.MaxCompute.Project(&amp;quot;example&amp;quot;, new AliCloud.MaxCompute.ProjectArgs
+    {
+        OrderType = &amp;quot;PayAsYouGo&amp;quot;,
+        SpecificationType = &amp;quot;OdpsStandard&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.MaxCompute.ProjectArgs.html">ProjectArgs</a></h4>
       <section></section>

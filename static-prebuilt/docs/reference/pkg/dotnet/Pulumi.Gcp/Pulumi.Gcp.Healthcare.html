@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Healthcare
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,10 +80,27 @@
       <section><p>A Healthcare <code>Dataset</code> is a toplevel logical grouping of <code>dicomStores</code>, <code>fhirStores</code> and <code>hl7V2Stores</code>.</p>
 <p>To get more information about Dataset, see:</p>
 <ul>
-<li><a href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets">API documentation</a></li>
+<li><a href="https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets">API documentation</a></li>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/healthcare/docs/how-tos/datasets">Creating a dataset</a></li>
 </ul>
+<h2 id="example-usage---healthcare-dataset-basic">Example Usage - Healthcare Dataset Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Healthcare.Dataset(&amp;quot;default&amp;quot;, new Gcp.Healthcare.DatasetArgs
+    {
+        Location = &amp;quot;us-central1&amp;quot;,
+        TimeZone = &amp;quot;UTC&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.DatasetArgs.html">DatasetArgs</a></h4>
       <section></section>
@@ -100,6 +117,76 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.DatasetIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.DatasetIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_dataset_iam_policy">google_healthcare_dataset_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var dataset = new Gcp.Healthcare.DatasetIamPolicy(&amp;quot;dataset&amp;quot;, new Gcp.Healthcare.DatasetIamPolicyArgs
+    {
+        DatasetId = &amp;quot;your-dataset-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dataset_iam_binding">google_healthcare_dataset_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dataset = new Gcp.Healthcare.DatasetIamBinding(&amp;quot;dataset&amp;quot;, new Gcp.Healthcare.DatasetIamBindingArgs
+    {
+        DatasetId = &amp;quot;your-dataset-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dataset_iam_member">google_healthcare_dataset_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dataset = new Gcp.Healthcare.DatasetIamMember(&amp;quot;dataset&amp;quot;, new Gcp.Healthcare.DatasetIamMemberArgs
+    {
+        DatasetId = &amp;quot;your-dataset-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.DatasetIamBindingArgs.html">DatasetIamBindingArgs</a></h4>
       <section></section>
@@ -118,6 +205,76 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.DatasetIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.DatasetIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_dataset_iam_policy">google_healthcare_dataset_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var dataset = new Gcp.Healthcare.DatasetIamPolicy(&amp;quot;dataset&amp;quot;, new Gcp.Healthcare.DatasetIamPolicyArgs
+    {
+        DatasetId = &amp;quot;your-dataset-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dataset_iam_binding">google_healthcare_dataset_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dataset = new Gcp.Healthcare.DatasetIamBinding(&amp;quot;dataset&amp;quot;, new Gcp.Healthcare.DatasetIamBindingArgs
+    {
+        DatasetId = &amp;quot;your-dataset-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dataset_iam_member">google_healthcare_dataset_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dataset = new Gcp.Healthcare.DatasetIamMember(&amp;quot;dataset&amp;quot;, new Gcp.Healthcare.DatasetIamMemberArgs
+    {
+        DatasetId = &amp;quot;your-dataset-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.DatasetIamMemberArgs.html">DatasetIamMemberArgs</a></h4>
       <section></section>
@@ -136,6 +293,76 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.DatasetIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.DatasetIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_dataset_iam_policy">google_healthcare_dataset_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var dataset = new Gcp.Healthcare.DatasetIamPolicy(&amp;quot;dataset&amp;quot;, new Gcp.Healthcare.DatasetIamPolicyArgs
+    {
+        DatasetId = &amp;quot;your-dataset-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dataset_iam_binding">google_healthcare_dataset_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dataset = new Gcp.Healthcare.DatasetIamBinding(&amp;quot;dataset&amp;quot;, new Gcp.Healthcare.DatasetIamBindingArgs
+    {
+        DatasetId = &amp;quot;your-dataset-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dataset_iam_member">google_healthcare_dataset_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dataset = new Gcp.Healthcare.DatasetIamMember(&amp;quot;dataset&amp;quot;, new Gcp.Healthcare.DatasetIamMemberArgs
+    {
+        DatasetId = &amp;quot;your-dataset-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.DatasetIamPolicyArgs.html">DatasetIamPolicyArgs</a></h4>
       <section></section>
@@ -148,7 +375,7 @@
 (<a href="https://www.dicomstandard.org/about/">https://www.dicomstandard.org/about/</a>) standard for Healthcare information exchange</p>
 <p>To get more information about DicomStore, see:</p>
 <ul>
-<li><a href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.dicomStores">API documentation</a></li>
+<li><a href="https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.dicomStores">API documentation</a></li>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/healthcare/docs/how-tos/dicom">Creating a DICOM store</a></li>
 </ul>
@@ -168,6 +395,76 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.DicomStoreIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.DicomStoreIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_dicom_store_iam_policy">google_healthcare_dicom_store_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var dicomStore = new Gcp.Healthcare.DicomStoreIamPolicy(&amp;quot;dicomStore&amp;quot;, new Gcp.Healthcare.DicomStoreIamPolicyArgs
+    {
+        DicomStoreId = &amp;quot;your-dicom-store-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dicom_store_iam_binding">google_healthcare_dicom_store_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dicomStore = new Gcp.Healthcare.DicomStoreIamBinding(&amp;quot;dicomStore&amp;quot;, new Gcp.Healthcare.DicomStoreIamBindingArgs
+    {
+        DicomStoreId = &amp;quot;your-dicom-store-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dicom_store_iam_member">google_healthcare_dicom_store_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dicomStore = new Gcp.Healthcare.DicomStoreIamMember(&amp;quot;dicomStore&amp;quot;, new Gcp.Healthcare.DicomStoreIamMemberArgs
+    {
+        DicomStoreId = &amp;quot;your-dicom-store-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.DicomStoreIamBindingArgs.html">DicomStoreIamBindingArgs</a></h4>
       <section></section>
@@ -186,6 +483,76 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.DicomStoreIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.DicomStoreIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_dicom_store_iam_policy">google_healthcare_dicom_store_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var dicomStore = new Gcp.Healthcare.DicomStoreIamPolicy(&amp;quot;dicomStore&amp;quot;, new Gcp.Healthcare.DicomStoreIamPolicyArgs
+    {
+        DicomStoreId = &amp;quot;your-dicom-store-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dicom_store_iam_binding">google_healthcare_dicom_store_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dicomStore = new Gcp.Healthcare.DicomStoreIamBinding(&amp;quot;dicomStore&amp;quot;, new Gcp.Healthcare.DicomStoreIamBindingArgs
+    {
+        DicomStoreId = &amp;quot;your-dicom-store-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dicom_store_iam_member">google_healthcare_dicom_store_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dicomStore = new Gcp.Healthcare.DicomStoreIamMember(&amp;quot;dicomStore&amp;quot;, new Gcp.Healthcare.DicomStoreIamMemberArgs
+    {
+        DicomStoreId = &amp;quot;your-dicom-store-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.DicomStoreIamMemberArgs.html">DicomStoreIamMemberArgs</a></h4>
       <section></section>
@@ -204,6 +571,76 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.DicomStoreIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.DicomStoreIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_dicom_store_iam_policy">google_healthcare_dicom_store_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var dicomStore = new Gcp.Healthcare.DicomStoreIamPolicy(&amp;quot;dicomStore&amp;quot;, new Gcp.Healthcare.DicomStoreIamPolicyArgs
+    {
+        DicomStoreId = &amp;quot;your-dicom-store-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dicom_store_iam_binding">google_healthcare_dicom_store_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dicomStore = new Gcp.Healthcare.DicomStoreIamBinding(&amp;quot;dicomStore&amp;quot;, new Gcp.Healthcare.DicomStoreIamBindingArgs
+    {
+        DicomStoreId = &amp;quot;your-dicom-store-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_dicom_store_iam_member">google_healthcare_dicom_store_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dicomStore = new Gcp.Healthcare.DicomStoreIamMember(&amp;quot;dicomStore&amp;quot;, new Gcp.Healthcare.DicomStoreIamMemberArgs
+    {
+        DicomStoreId = &amp;quot;your-dicom-store-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.DicomStoreIamPolicyArgs.html">DicomStoreIamPolicyArgs</a></h4>
       <section></section>
@@ -216,7 +653,7 @@
 standard for Healthcare information exchange</p>
 <p>To get more information about FhirStore, see:</p>
 <ul>
-<li><a href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores">API documentation</a></li>
+<li><a href="https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.fhirStores">API documentation</a></li>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/healthcare/docs/how-tos/fhir">Creating a FHIR store</a></li>
 </ul>
@@ -236,6 +673,76 @@ standard for Healthcare information exchange</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.FhirStoreIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.FhirStoreIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_fhir_store_iam_policy">google_healthcare_fhir_store_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var fhirStore = new Gcp.Healthcare.FhirStoreIamPolicy(&amp;quot;fhirStore&amp;quot;, new Gcp.Healthcare.FhirStoreIamPolicyArgs
+    {
+        FhirStoreId = &amp;quot;your-fhir-store-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_fhir_store_iam_binding">google_healthcare_fhir_store_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fhirStore = new Gcp.Healthcare.FhirStoreIamBinding(&amp;quot;fhirStore&amp;quot;, new Gcp.Healthcare.FhirStoreIamBindingArgs
+    {
+        FhirStoreId = &amp;quot;your-fhir-store-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_fhir_store_iam_member">google_healthcare_fhir_store_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fhirStore = new Gcp.Healthcare.FhirStoreIamMember(&amp;quot;fhirStore&amp;quot;, new Gcp.Healthcare.FhirStoreIamMemberArgs
+    {
+        FhirStoreId = &amp;quot;your-fhir-store-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.FhirStoreIamBindingArgs.html">FhirStoreIamBindingArgs</a></h4>
       <section></section>
@@ -254,6 +761,76 @@ standard for Healthcare information exchange</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.FhirStoreIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.FhirStoreIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_fhir_store_iam_policy">google_healthcare_fhir_store_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var fhirStore = new Gcp.Healthcare.FhirStoreIamPolicy(&amp;quot;fhirStore&amp;quot;, new Gcp.Healthcare.FhirStoreIamPolicyArgs
+    {
+        FhirStoreId = &amp;quot;your-fhir-store-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_fhir_store_iam_binding">google_healthcare_fhir_store_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fhirStore = new Gcp.Healthcare.FhirStoreIamBinding(&amp;quot;fhirStore&amp;quot;, new Gcp.Healthcare.FhirStoreIamBindingArgs
+    {
+        FhirStoreId = &amp;quot;your-fhir-store-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_fhir_store_iam_member">google_healthcare_fhir_store_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fhirStore = new Gcp.Healthcare.FhirStoreIamMember(&amp;quot;fhirStore&amp;quot;, new Gcp.Healthcare.FhirStoreIamMemberArgs
+    {
+        FhirStoreId = &amp;quot;your-fhir-store-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.FhirStoreIamMemberArgs.html">FhirStoreIamMemberArgs</a></h4>
       <section></section>
@@ -272,6 +849,76 @@ standard for Healthcare information exchange</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.FhirStoreIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.FhirStoreIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_fhir_store_iam_policy">google_healthcare_fhir_store_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var fhirStore = new Gcp.Healthcare.FhirStoreIamPolicy(&amp;quot;fhirStore&amp;quot;, new Gcp.Healthcare.FhirStoreIamPolicyArgs
+    {
+        FhirStoreId = &amp;quot;your-fhir-store-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_fhir_store_iam_binding">google_healthcare_fhir_store_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fhirStore = new Gcp.Healthcare.FhirStoreIamBinding(&amp;quot;fhirStore&amp;quot;, new Gcp.Healthcare.FhirStoreIamBindingArgs
+    {
+        FhirStoreId = &amp;quot;your-fhir-store-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_fhir_store_iam_member">google_healthcare_fhir_store_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fhirStore = new Gcp.Healthcare.FhirStoreIamMember(&amp;quot;fhirStore&amp;quot;, new Gcp.Healthcare.FhirStoreIamMemberArgs
+    {
+        FhirStoreId = &amp;quot;your-fhir-store-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.FhirStoreIamPolicyArgs.html">FhirStoreIamPolicyArgs</a></h4>
       <section></section>
@@ -284,7 +931,7 @@ standard for Healthcare information exchange</p>
 standard for Healthcare information exchange</p>
 <p>To get more information about Hl7V2Store, see:</p>
 <ul>
-<li><a href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.hl7V2Stores">API documentation</a></li>
+<li><a href="https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.hl7V2Stores">API documentation</a></li>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/healthcare/docs/how-tos/hl7v2">Creating a HL7v2 Store</a></li>
 </ul>
@@ -304,6 +951,76 @@ standard for Healthcare information exchange</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.Hl7StoreIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.Hl7StoreIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_hl7_v2_store_iam_policy">google_healthcare_hl7_v2_store_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamPolicy(&amp;quot;hl7V2Store&amp;quot;, new Gcp.Healthcare.Hl7StoreIamPolicyArgs
+    {
+        Hl7V2StoreId = &amp;quot;your-hl7-v2-store-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_hl7_v2_store_iam_binding">google_healthcare_hl7_v2_store_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamBinding(&amp;quot;hl7V2Store&amp;quot;, new Gcp.Healthcare.Hl7StoreIamBindingArgs
+    {
+        Hl7V2StoreId = &amp;quot;your-hl7-v2-store-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_hl7_v2_store_iam_member">google_healthcare_hl7_v2_store_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamMember(&amp;quot;hl7V2Store&amp;quot;, new Gcp.Healthcare.Hl7StoreIamMemberArgs
+    {
+        Hl7V2StoreId = &amp;quot;your-hl7-v2-store-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.Hl7StoreIamBindingArgs.html">Hl7StoreIamBindingArgs</a></h4>
       <section></section>
@@ -322,6 +1039,76 @@ standard for Healthcare information exchange</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.Hl7StoreIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.Hl7StoreIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_hl7_v2_store_iam_policy">google_healthcare_hl7_v2_store_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamPolicy(&amp;quot;hl7V2Store&amp;quot;, new Gcp.Healthcare.Hl7StoreIamPolicyArgs
+    {
+        Hl7V2StoreId = &amp;quot;your-hl7-v2-store-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_hl7_v2_store_iam_binding">google_healthcare_hl7_v2_store_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamBinding(&amp;quot;hl7V2Store&amp;quot;, new Gcp.Healthcare.Hl7StoreIamBindingArgs
+    {
+        Hl7V2StoreId = &amp;quot;your-hl7-v2-store-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_hl7_v2_store_iam_member">google_healthcare_hl7_v2_store_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamMember(&amp;quot;hl7V2Store&amp;quot;, new Gcp.Healthcare.Hl7StoreIamMemberArgs
+    {
+        Hl7V2StoreId = &amp;quot;your-hl7-v2-store-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.Hl7StoreIamMemberArgs.html">Hl7StoreIamMemberArgs</a></h4>
       <section></section>
@@ -340,6 +1127,76 @@ standard for Healthcare information exchange</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.healthcare.Hl7StoreIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.Hl7StoreIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_healthcare_hl7_v2_store_iam_policy">google_healthcare_hl7_v2_store_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamPolicy(&amp;quot;hl7V2Store&amp;quot;, new Gcp.Healthcare.Hl7StoreIamPolicyArgs
+    {
+        Hl7V2StoreId = &amp;quot;your-hl7-v2-store-id&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_hl7_v2_store_iam_binding">google_healthcare_hl7_v2_store_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamBinding(&amp;quot;hl7V2Store&amp;quot;, new Gcp.Healthcare.Hl7StoreIamBindingArgs
+    {
+        Hl7V2StoreId = &amp;quot;your-hl7-v2-store-id&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_healthcare_hl7_v2_store_iam_member">google_healthcare_hl7_v2_store_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var hl7V2Store = new Gcp.Healthcare.Hl7StoreIamMember(&amp;quot;hl7V2Store&amp;quot;, new Gcp.Healthcare.Hl7StoreIamMemberArgs
+    {
+        Hl7V2StoreId = &amp;quot;your-hl7-v2-store-id&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/editor&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Healthcare.Hl7StoreIamPolicyArgs.html">Hl7StoreIamPolicyArgs</a></h4>
       <section></section>

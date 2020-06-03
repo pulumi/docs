@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Cluster
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,12 +76,71 @@
 <p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.RedShift.Cluster(&amp;quot;default&amp;quot;, new Aws.RedShift.ClusterArgs
+    {
+        ClusterIdentifier = &amp;quot;tf-redshift-cluster&amp;quot;,
+        ClusterType = &amp;quot;single-node&amp;quot;,
+        DatabaseName = &amp;quot;mydb&amp;quot;,
+        MasterPassword = &amp;quot;Mustbe8characters&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+        NodeType = &amp;quot;dc1.large&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Cluster</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Cluster</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.RedShift.html">Pulumi.Aws.RedShift</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -92,16 +151,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L251">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L277">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster__ctor_" data-uid="Pulumi.Aws.RedShift.Cluster.#ctor*"></a>
-  <h4 id="Pulumi_Aws_RedShift_Cluster__ctor_System_String_Pulumi_Aws_RedShift_ClusterArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.RedShift.Cluster.#ctor(System.String,Pulumi.Aws.RedShift.ClusterArgs,System.Nullable{CustomResourceOptions})">Cluster(String, ClusterArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_RedShift_Cluster__ctor_System_String_Pulumi_Aws_RedShift_ClusterArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.RedShift.Cluster.#ctor(System.String,Pulumi.Aws.RedShift.ClusterArgs,Pulumi.CustomResourceOptions)">Cluster(String, ClusterArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Cluster resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,7 +185,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -136,7 +195,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_AllowVersionUpgrade_" data-uid="Pulumi.Aws.RedShift.Cluster.AllowVersionUpgrade*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_AllowVersionUpgrade" data-uid="Pulumi.Aws.RedShift.Cluster.AllowVersionUpgrade">AllowVersionUpgrade</h4>
@@ -157,13 +216,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_Arn_" data-uid="Pulumi.Aws.RedShift.Cluster.Arn*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_Arn" data-uid="Pulumi.Aws.RedShift.Cluster.Arn">Arn</h4>
@@ -184,13 +243,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_AutomatedSnapshotRetentionPeriod_" data-uid="Pulumi.Aws.RedShift.Cluster.AutomatedSnapshotRetentionPeriod*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_AutomatedSnapshotRetentionPeriod" data-uid="Pulumi.Aws.RedShift.Cluster.AutomatedSnapshotRetentionPeriod">AutomatedSnapshotRetentionPeriod</h4>
@@ -211,13 +270,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_AvailabilityZone_" data-uid="Pulumi.Aws.RedShift.Cluster.AvailabilityZone*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_AvailabilityZone" data-uid="Pulumi.Aws.RedShift.Cluster.AvailabilityZone">AvailabilityZone</h4>
@@ -238,13 +297,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_ClusterIdentifier_" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterIdentifier*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_ClusterIdentifier" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterIdentifier">ClusterIdentifier</h4>
@@ -266,13 +325,13 @@ string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_ClusterParameterGroupName_" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterParameterGroupName*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_ClusterParameterGroupName" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterParameterGroupName">ClusterParameterGroupName</h4>
@@ -293,13 +352,13 @@ string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_ClusterPublicKey_" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterPublicKey*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_ClusterPublicKey" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterPublicKey">ClusterPublicKey</h4>
@@ -320,13 +379,13 @@ string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_ClusterRevisionNumber_" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterRevisionNumber*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_ClusterRevisionNumber" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterRevisionNumber">ClusterRevisionNumber</h4>
@@ -347,13 +406,13 @@ string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_ClusterSecurityGroups_" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterSecurityGroups*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_ClusterSecurityGroups" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterSecurityGroups">ClusterSecurityGroups</h4>
@@ -374,13 +433,13 @@ string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_ClusterSubnetGroupName_" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterSubnetGroupName*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_ClusterSubnetGroupName" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterSubnetGroupName">ClusterSubnetGroupName</h4>
@@ -401,13 +460,13 @@ string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_ClusterType_" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterType*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_ClusterType" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterType">ClusterType</h4>
@@ -428,13 +487,13 @@ string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_ClusterVersion_" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterVersion*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_ClusterVersion" data-uid="Pulumi.Aws.RedShift.Cluster.ClusterVersion">ClusterVersion</h4>
@@ -444,7 +503,7 @@ The version selected runs on all the nodes in the cluster.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClusterVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClusterVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -456,13 +515,13 @@ The version selected runs on all the nodes in the cluster.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_DatabaseName_" data-uid="Pulumi.Aws.RedShift.Cluster.DatabaseName*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_DatabaseName" data-uid="Pulumi.Aws.RedShift.Cluster.DatabaseName">DatabaseName</h4>
@@ -484,13 +543,13 @@ If you do not provide a name, Amazon Redshift will create a default database cal
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_DnsName_" data-uid="Pulumi.Aws.RedShift.Cluster.DnsName*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_DnsName" data-uid="Pulumi.Aws.RedShift.Cluster.DnsName">DnsName</h4>
@@ -511,13 +570,13 @@ If you do not provide a name, Amazon Redshift will create a default database cal
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_ElasticIp_" data-uid="Pulumi.Aws.RedShift.Cluster.ElasticIp*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_ElasticIp" data-uid="Pulumi.Aws.RedShift.Cluster.ElasticIp">ElasticIp</h4>
@@ -526,7 +585,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ElasticIp { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ElasticIp { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -538,13 +597,13 @@ If you do not provide a name, Amazon Redshift will create a default database cal
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_Encrypted_" data-uid="Pulumi.Aws.RedShift.Cluster.Encrypted*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_Encrypted" data-uid="Pulumi.Aws.RedShift.Cluster.Encrypted">Encrypted</h4>
@@ -565,13 +624,13 @@ If you do not provide a name, Amazon Redshift will create a default database cal
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L148">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_Endpoint_" data-uid="Pulumi.Aws.RedShift.Cluster.Endpoint*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_Endpoint" data-uid="Pulumi.Aws.RedShift.Cluster.Endpoint">Endpoint</h4>
@@ -592,13 +651,13 @@ If you do not provide a name, Amazon Redshift will create a default database cal
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_EnhancedVpcRouting_" data-uid="Pulumi.Aws.RedShift.Cluster.EnhancedVpcRouting*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_EnhancedVpcRouting" data-uid="Pulumi.Aws.RedShift.Cluster.EnhancedVpcRouting">EnhancedVpcRouting</h4>
@@ -619,13 +678,13 @@ If you do not provide a name, Amazon Redshift will create a default database cal
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_FinalSnapshotIdentifier_" data-uid="Pulumi.Aws.RedShift.Cluster.FinalSnapshotIdentifier*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_FinalSnapshotIdentifier" data-uid="Pulumi.Aws.RedShift.Cluster.FinalSnapshotIdentifier">FinalSnapshotIdentifier</h4>
@@ -634,7 +693,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; FinalSnapshotIdentifier { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FinalSnapshotIdentifier { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -646,13 +705,13 @@ If you do not provide a name, Amazon Redshift will create a default database cal
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_IamRoles_" data-uid="Pulumi.Aws.RedShift.Cluster.IamRoles*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_IamRoles" data-uid="Pulumi.Aws.RedShift.Cluster.IamRoles">IamRoles</h4>
@@ -673,13 +732,13 @@ If you do not provide a name, Amazon Redshift will create a default database cal
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_KmsKeyId_" data-uid="Pulumi.Aws.RedShift.Cluster.KmsKeyId*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_KmsKeyId" data-uid="Pulumi.Aws.RedShift.Cluster.KmsKeyId">KmsKeyId</h4>
@@ -700,13 +759,13 @@ If you do not provide a name, Amazon Redshift will create a default database cal
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L152">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_Logging_" data-uid="Pulumi.Aws.RedShift.Cluster.Logging*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_Logging" data-uid="Pulumi.Aws.RedShift.Cluster.Logging">Logging</h4>
@@ -727,13 +786,13 @@ If you do not provide a name, Amazon Redshift will create a default database cal
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.RedShift.Outputs.ClusterLogging.html">ClusterLogging</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.RedShift.Outputs.ClusterLogging.html">ClusterLogging</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_MasterPassword_" data-uid="Pulumi.Aws.RedShift.Cluster.MasterPassword*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_MasterPassword" data-uid="Pulumi.Aws.RedShift.Cluster.MasterPassword">MasterPassword</h4>
@@ -744,7 +803,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MasterPassword { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MasterPassword { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -756,13 +815,13 @@ contain at least one uppercase letter, one lowercase letter, and one number.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L192">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_MasterUsername_" data-uid="Pulumi.Aws.RedShift.Cluster.MasterUsername*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_MasterUsername" data-uid="Pulumi.Aws.RedShift.Cluster.MasterUsername">MasterUsername</h4>
@@ -771,7 +830,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MasterUsername { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MasterUsername { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -783,13 +842,13 @@ contain at least one uppercase letter, one lowercase letter, and one number.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L198">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_NodeType_" data-uid="Pulumi.Aws.RedShift.Cluster.NodeType*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_NodeType" data-uid="Pulumi.Aws.RedShift.Cluster.NodeType">NodeType</h4>
@@ -810,13 +869,13 @@ contain at least one uppercase letter, one lowercase letter, and one number.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_NumberOfNodes_" data-uid="Pulumi.Aws.RedShift.Cluster.NumberOfNodes*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_NumberOfNodes" data-uid="Pulumi.Aws.RedShift.Cluster.NumberOfNodes">NumberOfNodes</h4>
@@ -837,13 +896,13 @@ contain at least one uppercase letter, one lowercase letter, and one number.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L210">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_OwnerAccount_" data-uid="Pulumi.Aws.RedShift.Cluster.OwnerAccount*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_OwnerAccount" data-uid="Pulumi.Aws.RedShift.Cluster.OwnerAccount">OwnerAccount</h4>
@@ -852,7 +911,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OwnerAccount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OwnerAccount { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -864,13 +923,13 @@ contain at least one uppercase letter, one lowercase letter, and one number.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L217">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_Port_" data-uid="Pulumi.Aws.RedShift.Cluster.Port*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_Port" data-uid="Pulumi.Aws.RedShift.Cluster.Port">Port</h4>
@@ -892,13 +951,13 @@ The cluster is accessible only via the JDBC and ODBC connection strings. Part of
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_PreferredMaintenanceWindow_" data-uid="Pulumi.Aws.RedShift.Cluster.PreferredMaintenanceWindow*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_PreferredMaintenanceWindow" data-uid="Pulumi.Aws.RedShift.Cluster.PreferredMaintenanceWindow">PreferredMaintenanceWindow</h4>
@@ -920,13 +979,13 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_PubliclyAccessible_" data-uid="Pulumi.Aws.RedShift.Cluster.PubliclyAccessible*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_PubliclyAccessible" data-uid="Pulumi.Aws.RedShift.Cluster.PubliclyAccessible">PubliclyAccessible</h4>
@@ -947,13 +1006,13 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L210">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_SkipFinalSnapshot_" data-uid="Pulumi.Aws.RedShift.Cluster.SkipFinalSnapshot*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_SkipFinalSnapshot" data-uid="Pulumi.Aws.RedShift.Cluster.SkipFinalSnapshot">SkipFinalSnapshot</h4>
@@ -974,13 +1033,13 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L216">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_SnapshotClusterIdentifier_" data-uid="Pulumi.Aws.RedShift.Cluster.SnapshotClusterIdentifier*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_SnapshotClusterIdentifier" data-uid="Pulumi.Aws.RedShift.Cluster.SnapshotClusterIdentifier">SnapshotClusterIdentifier</h4>
@@ -989,7 +1048,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SnapshotClusterIdentifier { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SnapshotClusterIdentifier { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1001,13 +1060,13 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L222">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_SnapshotCopy_" data-uid="Pulumi.Aws.RedShift.Cluster.SnapshotCopy*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_SnapshotCopy" data-uid="Pulumi.Aws.RedShift.Cluster.SnapshotCopy">SnapshotCopy</h4>
@@ -1028,13 +1087,13 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.RedShift.Outputs.ClusterSnapshotCopy.html">ClusterSnapshotCopy</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.RedShift.Outputs.ClusterSnapshotCopy.html">ClusterSnapshotCopy</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_SnapshotIdentifier_" data-uid="Pulumi.Aws.RedShift.Cluster.SnapshotIdentifier*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_SnapshotIdentifier" data-uid="Pulumi.Aws.RedShift.Cluster.SnapshotIdentifier">SnapshotIdentifier</h4>
@@ -1043,7 +1102,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SnapshotIdentifier { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SnapshotIdentifier { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1055,22 +1114,22 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L260">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_Tags_" data-uid="Pulumi.Aws.RedShift.Cluster.Tags*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_Tags" data-uid="Pulumi.Aws.RedShift.Cluster.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1082,13 +1141,13 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L240">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L266">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_VpcSecurityGroupIds_" data-uid="Pulumi.Aws.RedShift.Cluster.VpcSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_RedShift_Cluster_VpcSecurityGroupIds" data-uid="Pulumi.Aws.RedShift.Cluster.VpcSecurityGroupIds">VpcSecurityGroupIds</h4>
@@ -1109,7 +1168,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1117,17 +1176,17 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L281">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L307">View Source</a>
   </span>
   <a id="Pulumi_Aws_RedShift_Cluster_Get_" data-uid="Pulumi.Aws.RedShift.Cluster.Get*"></a>
-  <h4 id="Pulumi_Aws_RedShift_Cluster_Get_System_String_Input_System_String__Pulumi_Aws_RedShift_ClusterState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.RedShift.Cluster.Get(System.String,Input{System.String},Pulumi.Aws.RedShift.ClusterState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClusterState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_RedShift_Cluster_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_RedShift_ClusterState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.RedShift.Cluster.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.RedShift.ClusterState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClusterState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Cluster resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1146,7 +1205,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1158,7 +1217,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1187,7 +1246,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/RedShift/Cluster.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/RedShift/Cluster.cs/#L44" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

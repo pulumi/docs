@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Quicksight
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,22 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Quicksight.Group.html">Group</a></h4>
       <section><p>Resource for managing QuickSight Group</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Quicksight.Group(&amp;quot;example&amp;quot;, new Aws.Quicksight.GroupArgs
+    {
+        GroupName = &amp;quot;tf-example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Quicksight.GroupArgs.html">GroupArgs</a></h4>
       <section></section>
@@ -85,6 +101,25 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Quicksight.User.html">User</a></h4>
       <section><p>Resource for managing QuickSight User</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Quicksight.User(&amp;quot;example&amp;quot;, new Aws.Quicksight.UserArgs
+    {
+        Email = &amp;quot;author@example.com&amp;quot;,
+        IdentityType = &amp;quot;IAM&amp;quot;,
+        UserName = &amp;quot;an-author&amp;quot;,
+        UserRole = &amp;quot;AUTHOR&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Quicksight.UserArgs.html">UserArgs</a></h4>
       <section></section>

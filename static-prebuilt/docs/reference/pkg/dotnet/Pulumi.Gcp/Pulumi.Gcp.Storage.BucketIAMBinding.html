@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BucketIAMBinding
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,12 +83,208 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.storage.BucketIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.storage.BucketIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_storage_bucket_iam_policy">google_storage_bucket_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/storage.admin&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Storage.BucketIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Storage.BucketIAMPolicyArgs
+    {
+        Bucket = google_storage_bucket.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/storage.admin&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Storage.BucketIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Storage.BucketIAMPolicyArgs
+    {
+        Bucket = google_storage_bucket.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_storage_bucket_iam_binding">google_storage_bucket_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Storage.BucketIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Storage.BucketIAMBindingArgs
+    {
+        Bucket = google_storage_bucket.Default.Name,
+        Role = &amp;quot;roles/storage.admin&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Storage.BucketIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Storage.BucketIAMBindingArgs
+    {
+        Bucket = google_storage_bucket.Default.Name,
+        Role = &amp;quot;roles/storage.admin&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Storage.Inputs.BucketIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_storage_bucket_iam_member">google_storage_bucket_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Storage.BucketIAMMember(&amp;quot;member&amp;quot;, new Gcp.Storage.BucketIAMMemberArgs
+    {
+        Bucket = google_storage_bucket.Default.Name,
+        Role = &amp;quot;roles/storage.admin&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Storage.BucketIAMMember(&amp;quot;member&amp;quot;, new Gcp.Storage.BucketIAMMemberArgs
+    {
+        Bucket = google_storage_bucket.Default.Name,
+        Role = &amp;quot;roles/storage.admin&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Storage.Inputs.BucketIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">BucketIAMBinding</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">BucketIAMBinding</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Storage.html">Pulumi.Gcp.Storage</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -99,16 +295,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketIAMBinding.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketIAMBinding.cs/#L239">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketIAMBinding__ctor_" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Storage_BucketIAMBinding__ctor_System_String_Pulumi_Gcp_Storage_BucketIAMBindingArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.#ctor(System.String,Pulumi.Gcp.Storage.BucketIAMBindingArgs,System.Nullable{CustomResourceOptions})">BucketIAMBinding(String, BucketIAMBindingArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Storage_BucketIAMBinding__ctor_System_String_Pulumi_Gcp_Storage_BucketIAMBindingArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.#ctor(System.String,Pulumi.Gcp.Storage.BucketIAMBindingArgs,Pulumi.CustomResourceOptions)">BucketIAMBinding(String, BucketIAMBindingArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a BucketIAMBinding resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BucketIAMBinding(string name, BucketIAMBindingArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public BucketIAMBinding(string name, BucketIAMBindingArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,7 +329,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -143,7 +339,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketIAMBinding.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketIAMBinding.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketIAMBinding_Bucket_" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Bucket*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketIAMBinding_Bucket" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Bucket">Bucket</h4>
@@ -164,13 +360,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketIAMBinding.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketIAMBinding.cs/#L211">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketIAMBinding_Condition_" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Condition*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketIAMBinding_Condition" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Condition">Condition</h4>
@@ -192,13 +388,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketIAMBindingCondition.html">BucketIAMBindingCondition</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketIAMBindingCondition.html">BucketIAMBindingCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketIAMBinding.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketIAMBinding.cs/#L217">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketIAMBinding_Etag_" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Etag*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketIAMBinding_Etag" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Etag">Etag</h4>
@@ -219,13 +415,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketIAMBinding.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketIAMBinding.cs/#L220">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketIAMBinding_Members_" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Members*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketIAMBinding_Members" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Members">Members</h4>
@@ -245,13 +441,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketIAMBinding.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketIAMBinding.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketIAMBinding_Role_" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Role*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketIAMBinding_Role" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Role">Role</h4>
@@ -274,7 +470,7 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -282,17 +478,17 @@ Structure is documented below.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketIAMBinding.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketIAMBinding.cs/#L269">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketIAMBinding_Get_" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Get*"></a>
-  <h4 id="Pulumi_Gcp_Storage_BucketIAMBinding_Get_System_String_Input_System_String__Pulumi_Gcp_Storage_BucketIAMBindingState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Get(System.String,Input{System.String},Pulumi.Gcp.Storage.BucketIAMBindingState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BucketIAMBindingState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Storage_BucketIAMBinding_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Storage_BucketIAMBindingState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.BucketIAMBinding.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Storage.BucketIAMBindingState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BucketIAMBindingState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing BucketIAMBinding resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BucketIAMBinding Get(string name, Input&lt;string&gt; id, BucketIAMBindingState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static BucketIAMBinding Get(string name, Input&lt;string&gt; id, BucketIAMBindingState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,7 +507,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -323,7 +519,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -352,7 +548,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketIAMBinding.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Storage/BucketIAMBinding.cs/#L199" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

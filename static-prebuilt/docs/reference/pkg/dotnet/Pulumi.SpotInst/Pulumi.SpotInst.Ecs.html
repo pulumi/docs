@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.SpotInst.Ecs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,12 +77,59 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.SpotInst.Ecs.Ocean.html">Ocean</a></h4>
-      <section><p>Provides a Spotinst Ocean ECS resource.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Ecs.OceanArgs.html">OceanArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SpotInst.Ecs.OceanLaunchSpec.html">OceanLaunchSpec</a></h4>
       <section><p>Provides a custom Spotinst Ocean ECS Launch Spec resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new SpotInst.Ecs.OceanLaunchSpec(&amp;quot;example&amp;quot;, new SpotInst.Ecs.OceanLaunchSpecArgs
+    {
+        Attributes = 
+        {
+            new SpotInst.Ecs.Inputs.OceanLaunchSpecAttributeArgs
+            {
+                Key = &amp;quot;fakeKey&amp;quot;,
+                Value = &amp;quot;fakeValue&amp;quot;,
+            },
+        },
+        AutoscaleHeadrooms = 
+        {
+            new SpotInst.Ecs.Inputs.OceanLaunchSpecAutoscaleHeadroomArgs
+            {
+                CpuPerUnit = 1000,
+                MemoryPerUnit = 2048,
+                NumOfUnits = 5,
+            },
+        },
+        IamInstanceProfile = &amp;quot;iam-profile&amp;quot;,
+        ImageId = &amp;quot;ami-123456&amp;quot;,
+        OceanId = &amp;quot;o-123456&amp;quot;,
+        SecurityGroupIds = 
+        {
+            &amp;quot;awseb-12345&amp;quot;,
+        },
+        Tags = 
+        {
+            new SpotInst.Ecs.Inputs.OceanLaunchSpecTagArgs
+            {
+                Key = &amp;quot;Env&amp;quot;,
+                Value = &amp;quot;production&amp;quot;,
+            },
+        },
+        UserData = &amp;quot;echo hello world&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SpotInst.Ecs.OceanLaunchSpecArgs.html">OceanLaunchSpecArgs</a></h4>
       <section></section>

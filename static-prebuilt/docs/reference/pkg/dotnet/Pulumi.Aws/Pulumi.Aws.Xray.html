@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Xray
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,36 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Xray.SamplingRule.html">SamplingRule</a></h4>
       <section><p>Creates and manages an AWS XRay Sampling Rule.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Xray.SamplingRule(&amp;quot;example&amp;quot;, new Aws.Xray.SamplingRuleArgs
+    {
+        Attributes = 
+        {
+            { &amp;quot;Hello&amp;quot;, &amp;quot;Tris&amp;quot; },
+        },
+        FixedRate = 0.05,
+        Host = &amp;quot;*&amp;quot;,
+        HttpMethod = &amp;quot;*&amp;quot;,
+        Priority = 10000,
+        ReservoirSize = 1,
+        ResourceArn = &amp;quot;*&amp;quot;,
+        RuleName = &amp;quot;example&amp;quot;,
+        ServiceName = &amp;quot;*&amp;quot;,
+        ServiceType = &amp;quot;*&amp;quot;,
+        UrlPath = &amp;quot;*&amp;quot;,
+        Version = 1,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Xray.SamplingRuleArgs.html">SamplingRuleArgs</a></h4>
       <section></section>

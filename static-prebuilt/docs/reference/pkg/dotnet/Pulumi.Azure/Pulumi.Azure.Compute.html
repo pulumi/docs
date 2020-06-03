@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Compute
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,31 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.Compute.AvailabilitySet.html">AvailabilitySet</a></h4>
       <section><p>Manages an Availability Set for Virtual Machines.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleAvailabilitySet = new Azure.Compute.AvailabilitySet(&amp;quot;exampleAvailabilitySet&amp;quot;, new Azure.Compute.AvailabilitySetArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.AvailabilitySetArgs.html">AvailabilitySetArgs</a></h4>
       <section></section>
@@ -108,11 +133,62 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.DedicatedHost.html">DedicatedHost</a></h4>
       <section><p>Manage a Dedicated Host within a Dedicated Host Group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleDedicatedHostGroup = new Azure.Compute.DedicatedHostGroup(&amp;quot;exampleDedicatedHostGroup&amp;quot;, new Azure.Compute.DedicatedHostGroupArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        PlatformFaultDomainCount = 2,
+    });
+    var exampleDedicatedHost = new Azure.Compute.DedicatedHost(&amp;quot;exampleDedicatedHost&amp;quot;, new Azure.Compute.DedicatedHostArgs
+    {
+        Location = exampleResourceGroup.Location,
+        DedicatedHostGroupId = exampleDedicatedHostGroup.Id,
+        SkuName = &amp;quot;DSv3-Type1&amp;quot;,
+        PlatformFaultDomain = 1,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.DedicatedHostArgs.html">DedicatedHostArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.DedicatedHostGroup.html">DedicatedHostGroup</a></h4>
       <section><p>Manage a Dedicated Host Group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleDedicatedHostGroup = new Azure.Compute.DedicatedHostGroup(&amp;quot;exampleDedicatedHostGroup&amp;quot;, new Azure.Compute.DedicatedHostGroupArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        PlatformFaultDomainCount = 1,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.DedicatedHostGroupArgs.html">DedicatedHostGroupArgs</a></h4>
       <section></section>
@@ -122,9 +198,6 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.DiskEncryptionSet.html">DiskEncryptionSet</a></h4>
       <section><p>Manages a Disk Encryption Set.</p>
-<blockquote>
-<p><strong>NOTE</strong>: Disk Encryption Sets are in Public Preview and at this time is only available in <code>Canada Central</code>, <code>North Europe</code> and <code>West Central US</code> regions - <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/disk-encryption">more information can be found in the preview documentation</a>.</p>
-</blockquote>
 <blockquote>
 <p><strong>NOTE:</strong> At this time the Key Vault used to store the Active Key for this Disk Encryption Set must have both Soft Delete &amp; Purge Protection enabled - which are not yet supported by this provider.</p>
 </blockquote>
@@ -207,6 +280,12 @@ and run automated tasks.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.GetSharedImageVersionResult.html">GetSharedImageVersionResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetSharedImageVersions.html">GetSharedImageVersions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetSharedImageVersionsArgs.html">GetSharedImageVersionsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetSharedImageVersionsResult.html">GetSharedImageVersionsResult</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.GetSnapshot.html">GetSnapshot</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.GetSnapshotArgs.html">GetSnapshotArgs</a></h4>
@@ -221,6 +300,28 @@ and run automated tasks.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.Image.html">Image</a></h4>
       <section><p>Manages a custom virtual machine image that can be used to create virtual machines.</p>
+<h2 id="example-usage-creating-from-virtual-machine-vm-must-be-generalized-beforehand">Example Usage Creating from Virtual Machine (VM must be generalized beforehand)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleImage = new Azure.Compute.Image(&amp;quot;exampleImage&amp;quot;, new Azure.Compute.ImageArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        SourceVirtualMachineId = &amp;quot;{vm_id}&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.ImageArgs.html">ImageArgs</a></h4>
       <section></section>
@@ -262,10 +363,116 @@ and run automated tasks.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.ManagedDisk.html">ManagedDisk</a></h4>
       <section><p>Manages a managed disk.</p>
+<h2 id="example-usage-with-create-empty">Example Usage with Create Empty</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+    });
+    var exampleManagedDisk = new Azure.Compute.ManagedDisk(&amp;quot;exampleManagedDisk&amp;quot;, new Azure.Compute.ManagedDiskArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+        StorageAccountType = &amp;quot;Standard_LRS&amp;quot;,
+        CreateOption = &amp;quot;Empty&amp;quot;,
+        DiskSizeGb = &amp;quot;1&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;staging&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-with-create-copy">Example Usage with Create Copy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Core.ResourceGroup(&amp;quot;example&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+    });
+    var source = new Azure.Compute.ManagedDisk(&amp;quot;source&amp;quot;, new Azure.Compute.ManagedDiskArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+        ResourceGroupName = example.Name,
+        StorageAccountType = &amp;quot;Standard_LRS&amp;quot;,
+        CreateOption = &amp;quot;Empty&amp;quot;,
+        DiskSizeGb = &amp;quot;1&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;staging&amp;quot; },
+        },
+    });
+    var copy = new Azure.Compute.ManagedDisk(&amp;quot;copy&amp;quot;, new Azure.Compute.ManagedDiskArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+        ResourceGroupName = example.Name,
+        StorageAccountType = &amp;quot;Standard_LRS&amp;quot;,
+        CreateOption = &amp;quot;Copy&amp;quot;,
+        SourceResourceId = source.Id,
+        DiskSizeGb = &amp;quot;1&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;staging&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.ManagedDiskArgs.html">ManagedDiskArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.ManagedDiskState.html">ManagedDiskState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.OrchestratedVirtualMachineScaleSet.html">OrchestratedVirtualMachineScaleSet</a></h4>
+      <section><p>Manages an Orchestrated Virtual Machine Scale Set.</p>
+<blockquote>
+<p><strong>Note:</strong> Orchestrated Virtual Machine Scale Sets are in Public Preview - <a href="https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/orchestration-modes">more details can be found in the Azure Documentation</a>.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleOrchestratedVirtualMachineScaleSet = new Azure.Compute.OrchestratedVirtualMachineScaleSet(&amp;quot;exampleOrchestratedVirtualMachineScaleSet&amp;quot;, new Azure.Compute.OrchestratedVirtualMachineScaleSetArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PlatformFaultDomainCount = 5,
+        SinglePlacementGroup = true,
+        Zones = 
+        {
+            &amp;quot;1&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.OrchestratedVirtualMachineScaleSetArgs.html">OrchestratedVirtualMachineScaleSetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.OrchestratedVirtualMachineScaleSetState.html">OrchestratedVirtualMachineScaleSetState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.ScaleSet.html">ScaleSet</a></h4>
       <section><p>Manages a virtual machine scale set.</p>
@@ -280,11 +487,78 @@ and run automated tasks.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImage.html">SharedImage</a></h4>
       <section><p>Manages a Shared Image within a Shared Image Gallery.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleSharedImageGallery = new Azure.Compute.SharedImageGallery(&amp;quot;exampleSharedImageGallery&amp;quot;, new Azure.Compute.SharedImageGalleryArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Description = &amp;quot;Shared images and things.&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Hello&amp;quot;, &amp;quot;There&amp;quot; },
+            { &amp;quot;World&amp;quot;, &amp;quot;Example&amp;quot; },
+        },
+    });
+    var exampleSharedImage = new Azure.Compute.SharedImage(&amp;quot;exampleSharedImage&amp;quot;, new Azure.Compute.SharedImageArgs
+    {
+        GalleryName = exampleSharedImageGallery.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        OsType = &amp;quot;Linux&amp;quot;,
+        Identifier = new Azure.Compute.Inputs.SharedImageIdentifierArgs
+        {
+            Publisher = &amp;quot;PublisherName&amp;quot;,
+            Offer = &amp;quot;OfferName&amp;quot;,
+            Sku = &amp;quot;ExampleSku&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImageArgs.html">SharedImageArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImageGallery.html">SharedImageGallery</a></h4>
       <section><p>Manages a Shared Image Gallery.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleSharedImageGallery = new Azure.Compute.SharedImageGallery(&amp;quot;exampleSharedImageGallery&amp;quot;, new Azure.Compute.SharedImageGalleryArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Description = &amp;quot;Shared images and things.&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Hello&amp;quot;, &amp;quot;There&amp;quot; },
+            { &amp;quot;World&amp;quot;, &amp;quot;Example&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImageGalleryArgs.html">SharedImageGalleryArgs</a></h4>
       <section></section>
@@ -301,6 +575,37 @@ and run automated tasks.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.Snapshot.html">Snapshot</a></h4>
       <section><p>Manages a Disk Snapshot.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleManagedDisk = new Azure.Compute.ManagedDisk(&amp;quot;exampleManagedDisk&amp;quot;, new Azure.Compute.ManagedDiskArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        StorageAccountType = &amp;quot;Standard_LRS&amp;quot;,
+        CreateOption = &amp;quot;Empty&amp;quot;,
+        DiskSizeGb = &amp;quot;10&amp;quot;,
+    });
+    var exampleSnapshot = new Azure.Compute.Snapshot(&amp;quot;exampleSnapshot&amp;quot;, new Azure.Compute.SnapshotArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        CreateOption = &amp;quot;Copy&amp;quot;,
+        SourceUri = exampleManagedDisk.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.SnapshotArgs.html">SnapshotArgs</a></h4>
       <section></section>
@@ -323,6 +628,35 @@ and run automated tasks.</p>
 <blockquote>
 <p><strong>NOTE:</strong> This resource is not intended to be used with the <code>azure.compute.ScaleSet</code> resource - instead it's intended for this to be used with the <code>azure.compute.LinuxVirtualMachineScaleSet</code> and <code>azure.compute.WindowsVirtualMachineScaleSet</code> resources.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleLinuxVirtualMachineScaleSet = new Azure.Compute.LinuxVirtualMachineScaleSet(&amp;quot;exampleLinuxVirtualMachineScaleSet&amp;quot;, new Azure.Compute.LinuxVirtualMachineScaleSetArgs
+    {
+    });
+    //...
+    var exampleVirtualMachineScaleSetExtension = new Azure.Compute.VirtualMachineScaleSetExtension(&amp;quot;exampleVirtualMachineScaleSetExtension&amp;quot;, new Azure.Compute.VirtualMachineScaleSetExtensionArgs
+    {
+        VirtualMachineScaleSetId = exampleLinuxVirtualMachineScaleSet.Id,
+        Publisher = &amp;quot;Microsoft.Azure.Extensions&amp;quot;,
+        Type = &amp;quot;CustomScript&amp;quot;,
+        TypeHandlerVersion = &amp;quot;2.0&amp;quot;,
+        Settings = JsonSerializer.Serialize(new Dictionary&amp;lt;string, object?&gt;
+        {
+            { &amp;quot;commandToExecute&amp;quot;, &amp;quot;echo $HOSTNAME&amp;quot; },
+        }),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Compute.VirtualMachineScaleSetExtensionArgs.html">VirtualMachineScaleSetExtensionArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Authorization
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,7 +77,151 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.Authorization.Assignment.html">Assignment</a></h4>
-      <section><p>Assigns a given Principal (User or Application) to a given Role.</p>
+      <section><p>Assigns a given Principal (User or Group) to a given Role.</p>
+<h2 id="example-usage-using-a-built-in-role">Example Usage (using a built-in Role)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primary = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+    var exampleClientConfig = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var exampleAssignment = new Azure.Authorization.Assignment(&amp;quot;exampleAssignment&amp;quot;, new Azure.Authorization.AssignmentArgs
+    {
+        Scope = primary.Apply(primary =&gt; primary.Id),
+        RoleDefinitionName = &amp;quot;Reader&amp;quot;,
+        PrincipalId = exampleClientConfig.Apply(exampleClientConfig =&gt; exampleClientConfig.ObjectId),
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-custom-role--service-principal">Example Usage (Custom Role &amp; Service Principal)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primary = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+    var exampleClientConfig = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var exampleRoleDefinition = new Azure.Authorization.RoleDefinition(&amp;quot;exampleRoleDefinition&amp;quot;, new Azure.Authorization.RoleDefinitionArgs
+    {
+        RoleDefinitionId = &amp;quot;00000000-0000-0000-0000-000000000000&amp;quot;,
+        Scope = primary.Apply(primary =&gt; primary.Id),
+        Permissions = 
+        {
+            new Azure.Authorization.Inputs.RoleDefinitionPermissionArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;Microsoft.Resources/subscriptions/resourceGroups/read&amp;quot;,
+                },
+                NotActions = {},
+            },
+        },
+        AssignableScopes = 
+        {
+            primary.Apply(primary =&gt; primary.Id),
+        },
+    });
+    var exampleAssignment = new Azure.Authorization.Assignment(&amp;quot;exampleAssignment&amp;quot;, new Azure.Authorization.AssignmentArgs
+    {
+        Name = &amp;quot;00000000-0000-0000-0000-000000000000&amp;quot;,
+        Scope = primary.Apply(primary =&gt; primary.Id),
+        RoleDefinitionId = exampleRoleDefinition.Id,
+        PrincipalId = exampleClientConfig.Apply(exampleClientConfig =&gt; exampleClientConfig.ObjectId),
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-custom-role--user">Example Usage (Custom Role &amp; User)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primary = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+    var exampleClientConfig = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var exampleRoleDefinition = new Azure.Authorization.RoleDefinition(&amp;quot;exampleRoleDefinition&amp;quot;, new Azure.Authorization.RoleDefinitionArgs
+    {
+        RoleDefinitionId = &amp;quot;00000000-0000-0000-0000-000000000000&amp;quot;,
+        Scope = primary.Apply(primary =&gt; primary.Id),
+        Permissions = 
+        {
+            new Azure.Authorization.Inputs.RoleDefinitionPermissionArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;Microsoft.Resources/subscriptions/resourceGroups/read&amp;quot;,
+                },
+                NotActions = {},
+            },
+        },
+        AssignableScopes = 
+        {
+            primary.Apply(primary =&gt; primary.Id),
+        },
+    });
+    var exampleAssignment = new Azure.Authorization.Assignment(&amp;quot;exampleAssignment&amp;quot;, new Azure.Authorization.AssignmentArgs
+    {
+        Name = &amp;quot;00000000-0000-0000-0000-000000000000&amp;quot;,
+        Scope = primary.Apply(primary =&gt; primary.Id),
+        RoleDefinitionId = exampleRoleDefinition.Id,
+        PrincipalId = exampleClientConfig.Apply(exampleClientConfig =&gt; exampleClientConfig.ClientId),
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-custom-role--management-group">Example Usage (Custom Role &amp; Management Group)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primary = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+    var exampleClientConfig = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+    var exampleGroup = Output.Create(Azure.Management.GetGroup.InvokeAsync());
+    var exampleRoleDefinition = new Azure.Authorization.RoleDefinition(&amp;quot;exampleRoleDefinition&amp;quot;, new Azure.Authorization.RoleDefinitionArgs
+    {
+        RoleDefinitionId = &amp;quot;00000000-0000-0000-0000-000000000000&amp;quot;,
+        Scope = primary.Apply(primary =&gt; primary.Id),
+        Permissions = 
+        {
+            new Azure.Authorization.Inputs.RoleDefinitionPermissionArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;Microsoft.Resources/subscriptions/resourceGroups/read&amp;quot;,
+                },
+                NotActions = {},
+            },
+        },
+        AssignableScopes = 
+        {
+            primary.Apply(primary =&gt; primary.Id),
+        },
+    });
+    var exampleAssignment = new Azure.Authorization.Assignment(&amp;quot;exampleAssignment&amp;quot;, new Azure.Authorization.AssignmentArgs
+    {
+        Name = &amp;quot;00000000-0000-0000-0000-000000000000&amp;quot;,
+        Scope = data.Azurerm_management_group.Primary.Id,
+        RoleDefinitionId = exampleRoleDefinition.Id,
+        PrincipalId = exampleClientConfig.Apply(exampleClientConfig =&gt; exampleClientConfig.ClientId),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Authorization.AssignmentArgs.html">AssignmentArgs</a></h4>
       <section></section>
@@ -97,6 +241,39 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Authorization.RoleDefinition.html">RoleDefinition</a></h4>
       <section><p>Manages a custom Role Definition, used to assign Roles to Users/Principals. See <a href="https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions">'Understand role definitions'</a> in the Azure documentation for more details.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primary = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+    var example = new Azure.Authorization.RoleDefinition(&amp;quot;example&amp;quot;, new Azure.Authorization.RoleDefinitionArgs
+    {
+        Scope = primary.Apply(primary =&gt; primary.Id),
+        Description = &amp;quot;This is a custom role created&amp;quot;,
+        Permissions = 
+        {
+            new Azure.Authorization.Inputs.RoleDefinitionPermissionArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;*&amp;quot;,
+                },
+                NotActions = {},
+            },
+        },
+        AssignableScopes = 
+        {
+            primary.Apply(primary =&gt; primary.Id),
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Authorization.RoleDefinitionArgs.html">RoleDefinitionArgs</a></h4>
       <section></section>
@@ -104,6 +281,27 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Authorization.UserAssignedIdentity.html">UserAssignedIdentity</a></h4>
       <section><p>Manages a user assigned identity.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;eastus&amp;quot;,
+    });
+    var exampleUserAssignedIdentity = new Azure.Authorization.UserAssignedIdentity(&amp;quot;exampleUserAssignedIdentity&amp;quot;, new Azure.Authorization.UserAssignedIdentityArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Authorization.UserAssignedIdentityArgs.html">UserAssignedIdentityArgs</a></h4>
       <section></section>

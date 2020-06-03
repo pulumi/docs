@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ThreatIntelSet
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,91 @@
 <blockquote>
 <p><strong>Note:</strong> Currently in GuardDuty, users from member accounts cannot upload and further manage ThreatIntelSets. ThreatIntelSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/create-threat-intel-set.html">GuardDuty API Documentation</a></p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var master = new Aws.GuardDuty.Detector(&amp;quot;master&amp;quot;, new Aws.GuardDuty.DetectorArgs
+    {
+        Enable = true,
+    });
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+    });
+    var myThreatIntelSetBucketObject = new Aws.S3.BucketObject(&amp;quot;myThreatIntelSetBucketObject&amp;quot;, new Aws.S3.BucketObjectArgs
+    {
+        Acl = &amp;quot;public-read&amp;quot;,
+        Bucket = bucket.Id,
+        Content = @&amp;quot;10.0.0.0/8
+
+&amp;quot;,
+        Key = &amp;quot;MyThreatIntelSet&amp;quot;,
+    });
+    var myThreatIntelSetThreatIntelSet = new Aws.GuardDuty.ThreatIntelSet(&amp;quot;myThreatIntelSetThreatIntelSet&amp;quot;, new Aws.GuardDuty.ThreatIntelSetArgs
+    {
+        Activate = true,
+        DetectorId = master.Id,
+        Format = &amp;quot;TXT&amp;quot;,
+        Location = Output.Tuple(myThreatIntelSetBucketObject.Bucket, myThreatIntelSetBucketObject.Key).Apply(values =&gt;
+        {
+            var bucket = values.Item1;
+            var key = values.Item2;
+            return $&amp;quot;https://s3.amazonaws.com/{bucket}/{key}&amp;quot;;
+        }),
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ThreatIntelSet</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ThreatIntelSet</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.GuardDuty.html">Pulumi.Aws.GuardDuty</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -91,16 +170,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Aws_GuardDuty_ThreatIntelSet__ctor_" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.#ctor*"></a>
-  <h4 id="Pulumi_Aws_GuardDuty_ThreatIntelSet__ctor_System_String_Pulumi_Aws_GuardDuty_ThreatIntelSetArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.#ctor(System.String,Pulumi.Aws.GuardDuty.ThreatIntelSetArgs,System.Nullable{CustomResourceOptions})">ThreatIntelSet(String, ThreatIntelSetArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_GuardDuty_ThreatIntelSet__ctor_System_String_Pulumi_Aws_GuardDuty_ThreatIntelSetArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.#ctor(System.String,Pulumi.Aws.GuardDuty.ThreatIntelSetArgs,Pulumi.CustomResourceOptions)">ThreatIntelSet(String, ThreatIntelSetArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ThreatIntelSet resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ThreatIntelSet(string name, ThreatIntelSetArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ThreatIntelSet(string name, ThreatIntelSetArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +204,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +214,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Aws_GuardDuty_ThreatIntelSet_Activate_" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.Activate*"></a>
   <h4 id="Pulumi_Aws_GuardDuty_ThreatIntelSet_Activate" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.Activate">Activate</h4>
@@ -156,13 +235,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_GuardDuty_ThreatIntelSet_DetectorId_" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.DetectorId*"></a>
   <h4 id="Pulumi_Aws_GuardDuty_ThreatIntelSet_DetectorId" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.DetectorId">DetectorId</h4>
@@ -183,13 +262,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Aws_GuardDuty_ThreatIntelSet_Format_" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.Format*"></a>
   <h4 id="Pulumi_Aws_GuardDuty_ThreatIntelSet_Format" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.Format">Format</h4>
@@ -210,13 +289,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Aws_GuardDuty_ThreatIntelSet_Location_" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.Location*"></a>
   <h4 id="Pulumi_Aws_GuardDuty_ThreatIntelSet_Location" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.Location">Location</h4>
@@ -237,13 +316,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Aws_GuardDuty_ThreatIntelSet_Name_" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.Name*"></a>
   <h4 id="Pulumi_Aws_GuardDuty_ThreatIntelSet_Name" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.Name">Name</h4>
@@ -264,7 +343,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -272,17 +351,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Aws_GuardDuty_ThreatIntelSet_Get_" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.Get*"></a>
-  <h4 id="Pulumi_Aws_GuardDuty_ThreatIntelSet_Get_System_String_Input_System_String__Pulumi_Aws_GuardDuty_ThreatIntelSetState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.Get(System.String,Input{System.String},Pulumi.Aws.GuardDuty.ThreatIntelSetState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ThreatIntelSetState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_GuardDuty_ThreatIntelSet_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_GuardDuty_ThreatIntelSetState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.GuardDuty.ThreatIntelSet.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.GuardDuty.ThreatIntelSetState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ThreatIntelSetState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ThreatIntelSet resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ThreatIntelSet Get(string name, Input&lt;string&gt; id, ThreatIntelSetState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ThreatIntelSet Get(string name, Input&lt;string&gt; id, ThreatIntelSetState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,7 +380,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -313,7 +392,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -342,7 +421,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GuardDuty/ThreatIntelSet.cs/#L63" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

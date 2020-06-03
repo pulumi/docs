@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Macie
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,20 +77,63 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Macie.MemberAccountAssociation.html">MemberAccountAssociation</a></h4>
-      <section><p>Associates an AWS account with Amazon Macie as a member account.</p>
+      <section><blockquote>
+<p><strong>NOTE:</strong> This resource interacts with <a href="https://docs.aws.amazon.com/macie/latest/userguide/what-is-macie.html">Amazon Macie Classic</a>. Macie Classic cannot be activated in new accounts. See the <a href="https://aws.amazon.com/macie/classic-faqs/">FAQ</a> for more details.</p>
+</blockquote>
+<p>Associates an AWS account with Amazon Macie as a member account.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Macie.MemberAccountAssociation(&amp;quot;example&amp;quot;, new Aws.Macie.MemberAccountAssociationArgs
+    {
+        MemberAccountId = &amp;quot;123456789012&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Macie.MemberAccountAssociationArgs.html">MemberAccountAssociationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Macie.MemberAccountAssociationState.html">MemberAccountAssociationState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Macie.S3BucketAssociation.html">S3BucketAssociation</a></h4>
-      <section><p>Associates an S3 resource with Amazon Macie for monitoring and data classification.</p>
+      <section><blockquote>
+<p><strong>NOTE:</strong> This resource interacts with <a href="https://docs.aws.amazon.com/macie/latest/userguide/what-is-macie.html">Amazon Macie Classic</a>. Macie Classic cannot be activated in new accounts. See the <a href="https://aws.amazon.com/macie/classic-faqs/">FAQ</a> for more details.</p>
+</blockquote>
+<p>Associates an S3 resource with Amazon Macie for monitoring and data classification.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Macie.S3BucketAssociation(&amp;quot;example&amp;quot;, new Aws.Macie.S3BucketAssociationArgs
+    {
+        BucketName = &amp;quot;tf-macie-example&amp;quot;,
+        ClassificationType = new Aws.Macie.Inputs.S3BucketAssociationClassificationTypeArgs
+        {
+            OneTime = &amp;quot;FULL&amp;quot;,
+        },
+        Prefix = &amp;quot;data&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Macie.S3BucketAssociationArgs.html">S3BucketAssociationArgs</a></h4>
       <section></section>

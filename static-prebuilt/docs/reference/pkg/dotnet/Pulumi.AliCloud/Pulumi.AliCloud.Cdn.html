@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Cdn
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,18 +86,53 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in v1.34.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Domain config.
+    var domain = new AliCloud.Cdn.DomainNew(&amp;quot;domain&amp;quot;, new AliCloud.Cdn.DomainNewArgs
+    {
+        CdnType = &amp;quot;web&amp;quot;,
+        DomainName = &amp;quot;tf-testacc%d.xiaozhu.com&amp;quot;,
+        Scope = &amp;quot;overseas&amp;quot;,
+        Sources = new AliCloud.Cdn.Inputs.DomainNewSourcesArgs
+        {
+            Content = &amp;quot;1.1.1.1&amp;quot;,
+            Port = 80,
+            Priority = &amp;quot;20&amp;quot;,
+            Type = &amp;quot;ipaddr&amp;quot;,
+            Weight = &amp;quot;15&amp;quot;,
+        },
+    });
+    var config = new AliCloud.Cdn.DomainConfig(&amp;quot;config&amp;quot;, new AliCloud.Cdn.DomainConfigArgs
+    {
+        DomainName = domain.DomainName,
+        FunctionArgs = 
+        {
+            new AliCloud.Cdn.Inputs.DomainConfigFunctionArgArgs
+            {
+                ArgName = &amp;quot;ip_list&amp;quot;,
+                ArgValue = &amp;quot;110.110.110.110&amp;quot;,
+            },
+        },
+        FunctionName = &amp;quot;ip_allow_list_set&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cdn.DomainConfigArgs.html">DomainConfigArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cdn.DomainConfigState.html">DomainConfigState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cdn.DomainNew.html">DomainNew</a></h4>
-      <section><p>Provides a CDN Accelerated Domain resource. This resource is based on CDN's new version OpenAPI.</p>
-<p>For information about Cdn Domain New and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/91176.html">Add a domain</a>.</p>
-<blockquote>
-<p><strong>NOTE:</strong> Available in v1.34.0+.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cdn.DomainNewArgs.html">DomainNewArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cdn.DomainNewState.html">DomainNewState</a></h4>

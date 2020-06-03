@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ClusterInstance
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,24 +72,99 @@
   <h1 id="Pulumi_Aws_Rds_ClusterInstance" data-uid="Pulumi.Aws.Rds.ClusterInstance" class="text-break">Class ClusterInstance
   </h1>
   <div class="markdown level0 summary"><p>Provides an RDS Cluster Instance Resource. A Cluster Instance Resource defines
-attributes that are specific to a single instance in a [RDS Cluster][3],
+attributes that are specific to a single instance in a <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">RDS Cluster</a>,
 specifically running Amazon Aurora.</p>
 <p>Unlike other RDS resources that support replication, with Amazon Aurora you do
 not designate a primary and subsequent replicas. Instead, you simply add RDS
-Instances and Aurora manages the replication. You can use the [count][5]
+Instances and Aurora manages the replication. You can use the <a href="https://www.terraform.io/docs/configuration/resources.html#count">count</a>
 meta-parameter to make multiple instances and join them all to the same RDS
 Cluster, or you may specify different Cluster Instance resources with various
 <code>instance_class</code> sizes.</p>
-<p>For more information on Amazon Aurora, see [Aurora on Amazon RDS][2] in the Amazon RDS User Guide.</p>
+<p>For more information on Amazon Aurora, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the Amazon RDS User Guide.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#protect"><code>protect</code> CustomResourceOption</a> to this resource configuration if you desire protection from accidental deletion.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Rds.Cluster(&amp;quot;default&amp;quot;, new Aws.Rds.ClusterArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-west-2a&amp;quot;,
+            &amp;quot;us-west-2b&amp;quot;,
+            &amp;quot;us-west-2c&amp;quot;,
+        },
+        ClusterIdentifier = &amp;quot;aurora-cluster-demo&amp;quot;,
+        DatabaseName = &amp;quot;mydb&amp;quot;,
+        MasterPassword = &amp;quot;barbut8chars&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+    });
+    var clusterInstances = new List&amp;lt;Aws.Rds.ClusterInstance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 2; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        clusterInstances.Add(new Aws.Rds.ClusterInstance($&amp;quot;clusterInstances-{range.Value}&amp;quot;, new Aws.Rds.ClusterInstanceArgs
+        {
+            ClusterIdentifier = @default.Id,
+            Identifier = $&amp;quot;aurora-cluster-demo-{range.Value}&amp;quot;,
+            InstanceClass = &amp;quot;db.r4.large&amp;quot;,
+        }));
+    }
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ClusterInstance</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ClusterInstance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Rds.html">Pulumi.Aws.Rds</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -100,16 +175,16 @@ Cluster, or you may specify different Cluster Instance resources with various
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L265">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance__ctor_" data-uid="Pulumi.Aws.Rds.ClusterInstance.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Rds_ClusterInstance__ctor_System_String_Pulumi_Aws_Rds_ClusterInstanceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Rds.ClusterInstance.#ctor(System.String,Pulumi.Aws.Rds.ClusterInstanceArgs,System.Nullable{CustomResourceOptions})">ClusterInstance(String, ClusterInstanceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Rds_ClusterInstance__ctor_System_String_Pulumi_Aws_Rds_ClusterInstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Rds.ClusterInstance.#ctor(System.String,Pulumi.Aws.Rds.ClusterInstanceArgs,Pulumi.CustomResourceOptions)">ClusterInstance(String, ClusterInstanceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ClusterInstance resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClusterInstance(string name, ClusterInstanceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ClusterInstance(string name, ClusterInstanceArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,7 +209,7 @@ Cluster, or you may specify different Cluster Instance resources with various
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -144,7 +219,7 @@ Cluster, or you may specify different Cluster Instance resources with various
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_ApplyImmediately_" data-uid="Pulumi.Aws.Rds.ClusterInstance.ApplyImmediately*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_ApplyImmediately" data-uid="Pulumi.Aws.Rds.ClusterInstance.ApplyImmediately">ApplyImmediately</h4>
@@ -166,13 +241,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_Arn_" data-uid="Pulumi.Aws.Rds.ClusterInstance.Arn*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_Arn" data-uid="Pulumi.Aws.Rds.ClusterInstance.Arn">Arn</h4>
@@ -193,13 +268,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_AutoMinorVersionUpgrade_" data-uid="Pulumi.Aws.Rds.ClusterInstance.AutoMinorVersionUpgrade*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_AutoMinorVersionUpgrade" data-uid="Pulumi.Aws.Rds.ClusterInstance.AutoMinorVersionUpgrade">AutoMinorVersionUpgrade</h4>
@@ -220,13 +295,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_AvailabilityZone_" data-uid="Pulumi.Aws.Rds.ClusterInstance.AvailabilityZone*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_AvailabilityZone" data-uid="Pulumi.Aws.Rds.ClusterInstance.AvailabilityZone">AvailabilityZone</h4>
@@ -247,13 +322,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_CaCertIdentifier_" data-uid="Pulumi.Aws.Rds.ClusterInstance.CaCertIdentifier*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_CaCertIdentifier" data-uid="Pulumi.Aws.Rds.ClusterInstance.CaCertIdentifier">CaCertIdentifier</h4>
@@ -274,13 +349,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_ClusterIdentifier_" data-uid="Pulumi.Aws.Rds.ClusterInstance.ClusterIdentifier*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_ClusterIdentifier" data-uid="Pulumi.Aws.Rds.ClusterInstance.ClusterIdentifier">ClusterIdentifier</h4>
@@ -301,13 +376,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_CopyTagsToSnapshot_" data-uid="Pulumi.Aws.Rds.ClusterInstance.CopyTagsToSnapshot*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_CopyTagsToSnapshot" data-uid="Pulumi.Aws.Rds.ClusterInstance.CopyTagsToSnapshot">CopyTagsToSnapshot</h4>
@@ -328,13 +403,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_DbiResourceId_" data-uid="Pulumi.Aws.Rds.ClusterInstance.DbiResourceId*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_DbiResourceId" data-uid="Pulumi.Aws.Rds.ClusterInstance.DbiResourceId">DbiResourceId</h4>
@@ -355,13 +430,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_DbParameterGroupName_" data-uid="Pulumi.Aws.Rds.ClusterInstance.DbParameterGroupName*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_DbParameterGroupName" data-uid="Pulumi.Aws.Rds.ClusterInstance.DbParameterGroupName">DbParameterGroupName</h4>
@@ -382,13 +457,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_DbSubnetGroupName_" data-uid="Pulumi.Aws.Rds.ClusterInstance.DbSubnetGroupName*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_DbSubnetGroupName" data-uid="Pulumi.Aws.Rds.ClusterInstance.DbSubnetGroupName">DbSubnetGroupName</h4>
@@ -409,13 +484,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_Endpoint_" data-uid="Pulumi.Aws.Rds.ClusterInstance.Endpoint*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_Endpoint" data-uid="Pulumi.Aws.Rds.ClusterInstance.Endpoint">Endpoint</h4>
@@ -436,13 +511,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_Engine_" data-uid="Pulumi.Aws.Rds.ClusterInstance.Engine*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_Engine" data-uid="Pulumi.Aws.Rds.ClusterInstance.Engine">Engine</h4>
@@ -454,7 +529,7 @@ in the Amazon RDS User Guide.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Engine { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Engine { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -466,13 +541,13 @@ in the Amazon RDS User Guide.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_EngineVersion_" data-uid="Pulumi.Aws.Rds.ClusterInstance.EngineVersion*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_EngineVersion" data-uid="Pulumi.Aws.Rds.ClusterInstance.EngineVersion">EngineVersion</h4>
@@ -493,13 +568,13 @@ in the Amazon RDS User Guide.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_Identifier_" data-uid="Pulumi.Aws.Rds.ClusterInstance.Identifier*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_Identifier" data-uid="Pulumi.Aws.Rds.ClusterInstance.Identifier">Identifier</h4>
@@ -520,13 +595,13 @@ in the Amazon RDS User Guide.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_IdentifierPrefix_" data-uid="Pulumi.Aws.Rds.ClusterInstance.IdentifierPrefix*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_IdentifierPrefix" data-uid="Pulumi.Aws.Rds.ClusterInstance.IdentifierPrefix">IdentifierPrefix</h4>
@@ -547,18 +622,18 @@ in the Amazon RDS User Guide.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_InstanceClass_" data-uid="Pulumi.Aws.Rds.ClusterInstance.InstanceClass*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_InstanceClass" data-uid="Pulumi.Aws.Rds.ClusterInstance.InstanceClass">InstanceClass</h4>
   <div class="markdown level1 summary"><p>The instance class to use. For details on CPU
-and memory, see [Scaling Aurora DB Instances][4]. Aurora uses <code>db.*</code> instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.</p>
+and memory, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html">Scaling Aurora DB Instances</a>. Aurora uses <code>db.*</code> instance classes/types. Please see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">AWS Documentation</a> for currently available instance classes and complete details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -575,13 +650,13 @@ and memory, see [Scaling Aurora DB Instances][4]. Aurora uses <code>db.*</code> 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_KmsKeyId_" data-uid="Pulumi.Aws.Rds.ClusterInstance.KmsKeyId*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_KmsKeyId" data-uid="Pulumi.Aws.Rds.ClusterInstance.KmsKeyId">KmsKeyId</h4>
@@ -602,13 +677,13 @@ and memory, see [Scaling Aurora DB Instances][4]. Aurora uses <code>db.*</code> 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_MonitoringInterval_" data-uid="Pulumi.Aws.Rds.ClusterInstance.MonitoringInterval*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_MonitoringInterval" data-uid="Pulumi.Aws.Rds.ClusterInstance.MonitoringInterval">MonitoringInterval</h4>
@@ -629,13 +704,13 @@ and memory, see [Scaling Aurora DB Instances][4]. Aurora uses <code>db.*</code> 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_MonitoringRoleArn_" data-uid="Pulumi.Aws.Rds.ClusterInstance.MonitoringRoleArn*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_MonitoringRoleArn" data-uid="Pulumi.Aws.Rds.ClusterInstance.MonitoringRoleArn">MonitoringRoleArn</h4>
@@ -658,13 +733,13 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_PerformanceInsightsEnabled_" data-uid="Pulumi.Aws.Rds.ClusterInstance.PerformanceInsightsEnabled*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_PerformanceInsightsEnabled" data-uid="Pulumi.Aws.Rds.ClusterInstance.PerformanceInsightsEnabled">PerformanceInsightsEnabled</h4>
@@ -685,13 +760,13 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_PerformanceInsightsKmsKeyId_" data-uid="Pulumi.Aws.Rds.ClusterInstance.PerformanceInsightsKmsKeyId*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_PerformanceInsightsKmsKeyId" data-uid="Pulumi.Aws.Rds.ClusterInstance.PerformanceInsightsKmsKeyId">PerformanceInsightsKmsKeyId</h4>
@@ -712,13 +787,13 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_Port_" data-uid="Pulumi.Aws.Rds.ClusterInstance.Port*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_Port" data-uid="Pulumi.Aws.Rds.ClusterInstance.Port">Port</h4>
@@ -739,13 +814,13 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L173">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_PreferredBackupWindow_" data-uid="Pulumi.Aws.Rds.ClusterInstance.PreferredBackupWindow*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_PreferredBackupWindow" data-uid="Pulumi.Aws.Rds.ClusterInstance.PreferredBackupWindow">PreferredBackupWindow</h4>
@@ -767,13 +842,13 @@ Eg: &quot;04:00-09:00&quot;</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_PreferredMaintenanceWindow_" data-uid="Pulumi.Aws.Rds.ClusterInstance.PreferredMaintenanceWindow*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_PreferredMaintenanceWindow" data-uid="Pulumi.Aws.Rds.ClusterInstance.PreferredMaintenanceWindow">PreferredMaintenanceWindow</h4>
@@ -795,13 +870,13 @@ Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L186">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_PromotionTier_" data-uid="Pulumi.Aws.Rds.ClusterInstance.PromotionTier*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_PromotionTier" data-uid="Pulumi.Aws.Rds.ClusterInstance.PromotionTier">PromotionTier</h4>
@@ -822,18 +897,18 @@ Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L194">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_PubliclyAccessible_" data-uid="Pulumi.Aws.Rds.ClusterInstance.PubliclyAccessible*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_PubliclyAccessible" data-uid="Pulumi.Aws.Rds.ClusterInstance.PubliclyAccessible">PubliclyAccessible</h4>
   <div class="markdown level1 summary"><p>Bool to control if instance is publicly accessible.
-Default <code>false</code>. See the documentation on [Creating DB Instances][6] for more
+Default <code>false</code>. See the documentation on <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">Creating DB Instances</a> for more
 details on controlling this property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -851,13 +926,13 @@ details on controlling this property.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_StorageEncrypted_" data-uid="Pulumi.Aws.Rds.ClusterInstance.StorageEncrypted*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_StorageEncrypted" data-uid="Pulumi.Aws.Rds.ClusterInstance.StorageEncrypted">StorageEncrypted</h4>
@@ -878,22 +953,22 @@ details on controlling this property.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L206">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_Tags_" data-uid="Pulumi.Aws.Rds.ClusterInstance.Tags*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_Tags" data-uid="Pulumi.Aws.Rds.ClusterInstance.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the instance.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -905,13 +980,13 @@ details on controlling this property.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L212">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_Writer_" data-uid="Pulumi.Aws.Rds.ClusterInstance.Writer*"></a>
   <h4 id="Pulumi_Aws_Rds_ClusterInstance_Writer" data-uid="Pulumi.Aws.Rds.ClusterInstance.Writer">Writer</h4>
@@ -932,7 +1007,7 @@ details on controlling this property.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -940,17 +1015,17 @@ details on controlling this property.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L253">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L295">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_ClusterInstance_Get_" data-uid="Pulumi.Aws.Rds.ClusterInstance.Get*"></a>
-  <h4 id="Pulumi_Aws_Rds_ClusterInstance_Get_System_String_Input_System_String__Pulumi_Aws_Rds_ClusterInstanceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Rds.ClusterInstance.Get(System.String,Input{System.String},Pulumi.Aws.Rds.ClusterInstanceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClusterInstanceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Rds_ClusterInstance_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Rds_ClusterInstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Rds.ClusterInstance.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Rds.ClusterInstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClusterInstanceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ClusterInstance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ClusterInstance Get(string name, Input&lt;string&gt; id, ClusterInstanceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ClusterInstance Get(string name, Input&lt;string&gt; id, ClusterInstanceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -969,7 +1044,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -981,7 +1056,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1010,7 +1085,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/ClusterInstance.cs/#L28" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/ClusterInstance.cs/#L70" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PodSecurityContextArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,7 +79,36 @@ container.securityContext take precedence over field values of PodSecurityContex
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">PodSecurityContextArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">PodSecurityContextArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.html">Pulumi.Kubernetes.Types.Inputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
@@ -90,7 +119,7 @@ container.securityContext take precedence over field values of PodSecurityContex
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16939">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Input.cs/#L16939">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_FsGroup_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.FsGroup*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_FsGroup" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.FsGroup">FsGroup</h4>
@@ -105,7 +134,7 @@ volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw----<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? FsGroup { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; FsGroup { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,13 +146,13 @@ volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw----<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16949">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Input.cs/#L16949">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_FsGroupChangePolicy_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.FsGroupChangePolicy*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_FsGroupChangePolicy" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.FsGroupChangePolicy">FsGroupChangePolicy</h4>
@@ -136,7 +165,7 @@ and &quot;Always&quot;. If not specified defaults to &quot;Always&quot;.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FsGroupChangePolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FsGroupChangePolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +177,13 @@ and &quot;Always&quot;. If not specified defaults to &quot;Always&quot;.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16958">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Input.cs/#L16958">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_RunAsGroup_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.RunAsGroup*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_RunAsGroup" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.RunAsGroup">RunAsGroup</h4>
@@ -166,7 +195,7 @@ container.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? RunAsGroup { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; RunAsGroup { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,13 +207,13 @@ container.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16968">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Input.cs/#L16968">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_RunAsNonRoot_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.RunAsNonRoot*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_RunAsNonRoot" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.RunAsNonRoot">RunAsNonRoot</h4>
@@ -197,7 +226,7 @@ PodSecurityContext, the value specified in SecurityContext takes precedence.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? RunAsNonRoot { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; RunAsNonRoot { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +238,13 @@ PodSecurityContext, the value specified in SecurityContext takes precedence.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16977">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Input.cs/#L16977">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_RunAsUser_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.RunAsUser*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_RunAsUser" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.RunAsUser">RunAsUser</h4>
@@ -227,7 +256,7 @@ precedence for that container.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? RunAsUser { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; RunAsUser { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,13 +268,13 @@ precedence for that container.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16986">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Input.cs/#L16986">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_SeLinuxOptions_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.SeLinuxOptions*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_SeLinuxOptions" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.SeLinuxOptions">SeLinuxOptions</h4>
@@ -257,7 +286,7 @@ specified in SecurityContext takes precedence for that container.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;SELinuxOptionsArgs&gt;? SeLinuxOptions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;SELinuxOptionsArgs&gt; SeLinuxOptions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -269,13 +298,13 @@ specified in SecurityContext takes precedence for that container.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.SELinuxOptionsArgs.html">SELinuxOptionsArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.SELinuxOptionsArgs.html">SELinuxOptionsArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16996">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Input.cs/#L16996">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_SupplementalGroups_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.SupplementalGroups*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_SupplementalGroups" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.SupplementalGroups">SupplementalGroups</h4>
@@ -297,13 +326,13 @@ container's primary GID.  If unspecified, no groups will be added to any contain
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L17009">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Input.cs/#L17009">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_Sysctls_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.Sysctls*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_Sysctls" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.Sysctls">Sysctls</h4>
@@ -325,13 +354,13 @@ sysctls (by the container runtime) might fail to launch.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.SysctlArgs.html">SysctlArgs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.SysctlArgs.html">SysctlArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L17020">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Input.cs/#L17020">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_WindowsOptions_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.WindowsOptions*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PodSecurityContextArgs_WindowsOptions" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodSecurityContextArgs.WindowsOptions">WindowsOptions</h4>
@@ -342,7 +371,7 @@ PodSecurityContext, the value specified in SecurityContext takes precedence.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;WindowsSecurityContextOptionsArgs&gt;? WindowsOptions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;WindowsSecurityContextOptionsArgs&gt; WindowsOptions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -354,7 +383,7 @@ PodSecurityContext, the value specified in SecurityContext takes precedence.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.WindowsSecurityContextOptionsArgs.html">WindowsSecurityContextOptionsArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.WindowsSecurityContextOptionsArgs.html">WindowsSecurityContextOptionsArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -366,7 +395,7 @@ PodSecurityContext, the value specified in SecurityContext takes precedence.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16928" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/go1.14/sdk/dotnet/Types/Input.cs/#L16928" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

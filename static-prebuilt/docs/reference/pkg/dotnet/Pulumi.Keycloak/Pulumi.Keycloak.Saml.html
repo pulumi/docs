@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Keycloak.Saml
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,6 +82,34 @@
 <p>Clients are entities that can use Keycloak for user authentication. Typically,
 clients are applications that redirect users to Keycloak for authentication
 in order to take advantage of Keycloak's user sessions for SSO.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var samlClient = new Keycloak.Saml.Client(&amp;quot;samlClient&amp;quot;, new Keycloak.Saml.ClientArgs
+    {
+        ClientId = &amp;quot;test-saml-client&amp;quot;,
+        IncludeAuthnStatement = true,
+        RealmId = realm.Id,
+        SignAssertions = true,
+        SignDocuments = false,
+        SigningCertificate = File.ReadAllText(&amp;quot;saml-cert.pem&amp;quot;),
+        SigningPrivateKey = File.ReadAllText(&amp;quot;saml-key.pem&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -126,6 +154,32 @@ in order to take advantage of Keycloak's user sessions for SSO.</p>
       <section><h2 id="-keycloaksamlidentityprovider"># keycloak.saml.IdentityProvider</h2>
 <p>Allows to create and manage SAML Identity Providers within Keycloak.</p>
 <p>SAML (Security Assertion Markup Language) identity providers allows to authenticate through a third-party system, using SAML standard.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realmIdentityProvider = new Keycloak.Saml.IdentityProvider(&amp;quot;realmIdentityProvider&amp;quot;, new Keycloak.Saml.IdentityProviderArgs
+    {
+        Alias = &amp;quot;my-idp&amp;quot;,
+        BackchannelSupported = true,
+        ForceAuthn = true,
+        PostBindingAuthnRequest = true,
+        PostBindingLogout = true,
+        PostBindingResponse = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+        SingleLogoutServiceUrl = &amp;quot;https://domain.com/adfs/ls/?wa=wsignout1.0&amp;quot;,
+        SingleSignOnServiceUrl = &amp;quot;https://domain.com/adfs/ls/&amp;quot;,
+        StoreToken = false,
+        TrustEmail = true,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -172,6 +226,36 @@ SAML clients within Keycloak.</p>
 for a user within Keycloak to an attribute in a SAML assertion. Protocol mappers
 can be defined for a single client, or they can be defined for a client scope which
 can be shared between multiple different clients.</p>
+<h3 id="example-usage-client">Example Usage (Client)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var samlClient = new Keycloak.Saml.Client(&amp;quot;samlClient&amp;quot;, new Keycloak.Saml.ClientArgs
+    {
+        ClientId = &amp;quot;test-saml-client&amp;quot;,
+        RealmId = keycloak_realm.Test.Id,
+    });
+    var samlUserAttributeMapper = new Keycloak.Saml.UserAttributeProtocolMapper(&amp;quot;samlUserAttributeMapper&amp;quot;, new Keycloak.Saml.UserAttributeProtocolMapperArgs
+    {
+        ClientId = samlClient.Id,
+        RealmId = keycloak_realm.Test.Id,
+        SamlAttributeName = &amp;quot;displayName&amp;quot;,
+        SamlAttributeNameFormat = &amp;quot;Unspecified&amp;quot;,
+        UserAttribute = &amp;quot;displayName&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -197,6 +281,36 @@ SAML clients within Keycloak.</p>
 user model to an attribute in a SAML assertion. Protocol mappers
 can be defined for a single client, or they can be defined for a client scope which
 can be shared between multiple different clients.</p>
+<h3 id="example-usage-client">Example Usage (Client)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var samlClient = new Keycloak.Saml.Client(&amp;quot;samlClient&amp;quot;, new Keycloak.Saml.ClientArgs
+    {
+        ClientId = &amp;quot;test-saml-client&amp;quot;,
+        RealmId = keycloak_realm.Test.Id,
+    });
+    var samlUserPropertyMapper = new Keycloak.Saml.UserPropertyProtocolMapper(&amp;quot;samlUserPropertyMapper&amp;quot;, new Keycloak.Saml.UserPropertyProtocolMapperArgs
+    {
+        ClientId = samlClient.Id,
+        RealmId = keycloak_realm.Test.Id,
+        SamlAttributeName = &amp;quot;email&amp;quot;,
+        SamlAttributeNameFormat = &amp;quot;Unspecified&amp;quot;,
+        UserProperty = &amp;quot;email&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>

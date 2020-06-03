@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.CloudHsmV2
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,7 +79,7 @@
       <h4><a class="xref" href="Pulumi.Aws.CloudHsmV2.Cluster.html">Cluster</a></h4>
       <section><p>Creates an Amazon CloudHSM v2 cluster.</p>
 <p>For information about CloudHSM v2, see the
-[AWS CloudHSM User Guide][1] and the [Amazon
+<a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html">AWS CloudHSM User Guide</a> and the [Amazon
 CloudHSM API Reference][2].</p>
 <blockquote>
 <p><strong>NOTE:</strong> CloudHSM can take up to several minutes to be set up.
@@ -100,6 +100,27 @@ To initialize cluster, you have to add an hsm instance to the cluster then sign 
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.CloudHsmV2.Hsm.html">Hsm</a></h4>
       <section><p>Creates an HSM module in Amazon CloudHSM v2 cluster.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cluster = Output.Create(Aws.CloudHsmV2.GetCluster.InvokeAsync(new Aws.CloudHsmV2.GetClusterArgs
+    {
+        ClusterId = @var.Cloudhsm_cluster_id,
+    }));
+    var cloudhsmV2Hsm = new Aws.CloudHsmV2.Hsm(&amp;quot;cloudhsmV2Hsm&amp;quot;, new Aws.CloudHsmV2.HsmArgs
+    {
+        ClusterId = cluster.Apply(cluster =&gt; cluster.ClusterId),
+        SubnetId = cluster.Apply(cluster =&gt; cluster.SubnetIds[0]),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.CloudHsmV2.HsmArgs.html">HsmArgs</a></h4>
       <section></section>

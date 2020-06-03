@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class JobArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">JobArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">JobArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.CloudScheduler.html">Pulumi.Gcp.CloudScheduler</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L313">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs__ctor_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs__ctor" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.#ctor">JobArgs()</h4>
@@ -100,17 +129,18 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L235">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs_AppEngineHttpTarget_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.AppEngineHttpTarget*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs_AppEngineHttpTarget" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.AppEngineHttpTarget">AppEngineHttpTarget</h4>
-  <div class="markdown level1 summary"><p>App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
-instance</p>
+  <div class="markdown level1 summary"><p>App Engine HTTP target.
+If the job providers a App Engine HTTP target the cron will
+send a request to the service instance  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;JobAppEngineHttpTargetArgs&gt;? AppEngineHttpTarget { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;JobAppEngineHttpTargetArgs&gt; AppEngineHttpTarget { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,26 +152,30 @@ instance</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetArgs.html">JobAppEngineHttpTargetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetArgs.html">JobAppEngineHttpTargetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L247">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs_AttemptDeadline_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.AttemptDeadline*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs_AttemptDeadline" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.AttemptDeadline">AttemptDeadline</h4>
-  <div class="markdown level1 summary"><p>The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
-and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
-Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
-targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
-in seconds with up to nine fractional digits, terminated by 's'. Example: &quot;3.5s&quot;</p>
+  <div class="markdown level1 summary"><p>The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+The allowed duration for this deadline is:</p>
+<ul>
+<li>For HTTP targets, between 15 seconds and 30 minutes.</li>
+<li>For App Engine HTTP targets, between 15 seconds and 24 hours.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: &quot;3.5s&quot;</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AttemptDeadline { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AttemptDeadline { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,22 +187,23 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: &quot;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs_Description_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs_Description" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.Description">Description</h4>
-  <div class="markdown level1 summary"><p>A human-readable description for the job. This string must not contain more than 500 characters.</p>
+  <div class="markdown level1 summary"><p>A human-readable description for the job.
+This string must not contain more than 500 characters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,22 +215,24 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: &quot;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L262">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs_HttpTarget_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.HttpTarget*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs_HttpTarget" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.HttpTarget">HttpTarget</h4>
-  <div class="markdown level1 summary"><p>HTTP target. If the job providers a http_target the cron will send a request to the targeted url</p>
+  <div class="markdown level1 summary"><p>HTTP target.
+If the job providers a http_target the cron will
+send a request to the targeted url  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;JobHttpTargetArgs&gt;? HttpTarget { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;JobHttpTargetArgs&gt; HttpTarget { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +244,13 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: &quot;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudScheduler.Inputs.JobHttpTargetArgs.html">JobHttpTargetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudScheduler.Inputs.JobHttpTargetArgs.html">JobHttpTargetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L268">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs_Name_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs_Name" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.Name">Name</h4>
@@ -222,7 +259,7 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: &quot;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +271,13 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: &quot;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L188">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L275">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs_Project_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs_Project" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.Project">Project</h4>
@@ -250,7 +287,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,22 +299,24 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L194">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L283">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs_PubsubTarget_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.PubsubTarget*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs_PubsubTarget" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.PubsubTarget">PubsubTarget</h4>
-  <div class="markdown level1 summary"><p>Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic</p>
+  <div class="markdown level1 summary"><p>Pub/Sub target
+If the job providers a Pub/Sub target the cron will publish
+a message to the provided topic  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;JobPubsubTargetArgs&gt;? PubsubTarget { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;JobPubsubTargetArgs&gt; PubsubTarget { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,13 +328,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudScheduler.Inputs.JobPubsubTargetArgs.html">JobPubsubTargetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudScheduler.Inputs.JobPubsubTargetArgs.html">JobPubsubTargetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L289">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs_Region_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.Region*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs_Region" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.Region">Region</h4>
@@ -304,7 +343,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,23 +355,24 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L297">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs_RetryConfig_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.RetryConfig*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs_RetryConfig" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.RetryConfig">RetryConfig</h4>
-  <div class="markdown level1 summary"><p>By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
-then it will be retried with exponential backoff according to the settings</p>
+  <div class="markdown level1 summary"><p>By default, if a job does not complete successfully,
+meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;JobRetryConfigArgs&gt;? RetryConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;JobRetryConfigArgs&gt; RetryConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,13 +384,13 @@ then it will be retried with exponential backoff according to the settings</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudScheduler.Inputs.JobRetryConfigArgs.html">JobRetryConfigArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudScheduler.Inputs.JobRetryConfigArgs.html">JobRetryConfigArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L213">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L303">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs_Schedule_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.Schedule*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs_Schedule" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.Schedule">Schedule</h4>
@@ -359,7 +399,7 @@ then it will be retried with exponential backoff according to the settings</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Schedule { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Schedule { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -371,23 +411,23 @@ then it will be retried with exponential backoff according to the settings</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L220">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L310">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudScheduler_JobArgs_TimeZone_" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.TimeZone*"></a>
   <h4 id="Pulumi_Gcp_CloudScheduler_JobArgs_TimeZone" data-uid="Pulumi.Gcp.CloudScheduler.JobArgs.TimeZone">TimeZone</h4>
-  <div class="markdown level1 summary"><p>Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
-tz database.</p>
+  <div class="markdown level1 summary"><p>Specifies the time zone to be used in interpreting schedule.
+The value of this field must be a time zone name from the tz database.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TimeZone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TimeZone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -399,7 +439,7 @@ tz database.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -411,7 +451,7 @@ tz database.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudScheduler/Job.cs/#L147" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/CloudScheduler/Job.cs/#L228" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

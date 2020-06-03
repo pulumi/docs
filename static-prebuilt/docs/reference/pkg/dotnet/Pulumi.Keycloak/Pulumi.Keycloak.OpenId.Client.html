@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Client
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,6 +76,34 @@
 <p>Clients are entities that can use Keycloak for user authentication. Typically,
 clients are applications that redirect users to Keycloak for authentication
 in order to take advantage of Keycloak's user sessions for SSO.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClient = new Keycloak.OpenId.Client(&amp;quot;openidClient&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;CONFIDENTIAL&amp;quot;,
+        ClientId = &amp;quot;test-client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+        ValidRedirectUris = 
+        {
+            &amp;quot;http://localhost:8080/openid-callback&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -115,7 +143,45 @@ is set to <code>true</code>.</li>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Client</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Client</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.OpenId.html">Pulumi.Keycloak.OpenId</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
@@ -126,16 +192,16 @@ is set to <code>true</code>.</li>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client__ctor_" data-uid="Pulumi.Keycloak.OpenId.Client.#ctor*"></a>
-  <h4 id="Pulumi_Keycloak_OpenId_Client__ctor_System_String_Pulumi_Keycloak_OpenId_ClientArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.OpenId.Client.#ctor(System.String,Pulumi.Keycloak.OpenId.ClientArgs,System.Nullable{CustomResourceOptions})">Client(String, ClientArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_OpenId_Client__ctor_System_String_Pulumi_Keycloak_OpenId_ClientArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.OpenId.Client.#ctor(System.String,Pulumi.Keycloak.OpenId.ClientArgs,Pulumi.CustomResourceOptions)">Client(String, ClientArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Client resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Client(string name, ClientArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Client(string name, ClientArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,7 +226,7 @@ is set to <code>true</code>.</li>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -170,7 +236,7 @@ is set to <code>true</code>.</li>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_AccessTokenLifespan_" data-uid="Pulumi.Keycloak.OpenId.Client.AccessTokenLifespan*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_AccessTokenLifespan" data-uid="Pulumi.Keycloak.OpenId.Client.AccessTokenLifespan">AccessTokenLifespan</h4>
@@ -178,7 +244,7 @@ is set to <code>true</code>.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccessTokenLifespan { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessTokenLifespan { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,13 +256,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_AccessType_" data-uid="Pulumi.Keycloak.OpenId.Client.AccessType*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_AccessType" data-uid="Pulumi.Keycloak.OpenId.Client.AccessType">AccessType</h4>
@@ -216,13 +282,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_AdminUrl_" data-uid="Pulumi.Keycloak.OpenId.Client.AdminUrl*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_AdminUrl" data-uid="Pulumi.Keycloak.OpenId.Client.AdminUrl">AdminUrl</h4>
@@ -230,7 +296,7 @@ is set to <code>true</code>.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AdminUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AdminUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,13 +308,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_AuthenticationFlowBindingOverrides_" data-uid="Pulumi.Keycloak.OpenId.Client.AuthenticationFlowBindingOverrides*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_AuthenticationFlowBindingOverrides" data-uid="Pulumi.Keycloak.OpenId.Client.AuthenticationFlowBindingOverrides">AuthenticationFlowBindingOverrides</h4>
@@ -268,13 +334,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Keycloak.OpenId.Outputs.ClientAuthenticationFlowBindingOverrides.html">ClientAuthenticationFlowBindingOverrides</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Keycloak.OpenId.Outputs.ClientAuthenticationFlowBindingOverrides.html">ClientAuthenticationFlowBindingOverrides</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_Authorization_" data-uid="Pulumi.Keycloak.OpenId.Client.Authorization*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_Authorization" data-uid="Pulumi.Keycloak.OpenId.Client.Authorization">Authorization</h4>
@@ -294,13 +360,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Keycloak.OpenId.Outputs.ClientAuthorization.html">ClientAuthorization</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Keycloak.OpenId.Outputs.ClientAuthorization.html">ClientAuthorization</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_BaseUrl_" data-uid="Pulumi.Keycloak.OpenId.Client.BaseUrl*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_BaseUrl" data-uid="Pulumi.Keycloak.OpenId.Client.BaseUrl">BaseUrl</h4>
@@ -308,7 +374,7 @@ is set to <code>true</code>.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BaseUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; BaseUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,13 +386,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ClientId_" data-uid="Pulumi.Keycloak.OpenId.Client.ClientId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ClientId" data-uid="Pulumi.Keycloak.OpenId.Client.ClientId">ClientId</h4>
@@ -346,13 +412,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ClientSecret_" data-uid="Pulumi.Keycloak.OpenId.Client.ClientSecret*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ClientSecret" data-uid="Pulumi.Keycloak.OpenId.Client.ClientSecret">ClientSecret</h4>
@@ -372,13 +438,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ConsentRequired_" data-uid="Pulumi.Keycloak.OpenId.Client.ConsentRequired*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ConsentRequired" data-uid="Pulumi.Keycloak.OpenId.Client.ConsentRequired">ConsentRequired</h4>
@@ -398,13 +464,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_Description_" data-uid="Pulumi.Keycloak.OpenId.Client.Description*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_Description" data-uid="Pulumi.Keycloak.OpenId.Client.Description">Description</h4>
@@ -412,7 +478,7 @@ is set to <code>true</code>.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,13 +490,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_DirectAccessGrantsEnabled_" data-uid="Pulumi.Keycloak.OpenId.Client.DirectAccessGrantsEnabled*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_DirectAccessGrantsEnabled" data-uid="Pulumi.Keycloak.OpenId.Client.DirectAccessGrantsEnabled">DirectAccessGrantsEnabled</h4>
@@ -450,13 +516,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_Enabled_" data-uid="Pulumi.Keycloak.OpenId.Client.Enabled*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_Enabled" data-uid="Pulumi.Keycloak.OpenId.Client.Enabled">Enabled</h4>
@@ -476,13 +542,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ExcludeSessionStateFromAuthResponse_" data-uid="Pulumi.Keycloak.OpenId.Client.ExcludeSessionStateFromAuthResponse*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ExcludeSessionStateFromAuthResponse" data-uid="Pulumi.Keycloak.OpenId.Client.ExcludeSessionStateFromAuthResponse">ExcludeSessionStateFromAuthResponse</h4>
@@ -502,13 +568,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_FullScopeAllowed_" data-uid="Pulumi.Keycloak.OpenId.Client.FullScopeAllowed*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_FullScopeAllowed" data-uid="Pulumi.Keycloak.OpenId.Client.FullScopeAllowed">FullScopeAllowed</h4>
@@ -528,13 +594,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ImplicitFlowEnabled_" data-uid="Pulumi.Keycloak.OpenId.Client.ImplicitFlowEnabled*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ImplicitFlowEnabled" data-uid="Pulumi.Keycloak.OpenId.Client.ImplicitFlowEnabled">ImplicitFlowEnabled</h4>
@@ -554,13 +620,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_Name_" data-uid="Pulumi.Keycloak.OpenId.Client.Name*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_Name" data-uid="Pulumi.Keycloak.OpenId.Client.Name">Name</h4>
@@ -580,13 +646,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_PkceCodeChallengeMethod_" data-uid="Pulumi.Keycloak.OpenId.Client.PkceCodeChallengeMethod*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_PkceCodeChallengeMethod" data-uid="Pulumi.Keycloak.OpenId.Client.PkceCodeChallengeMethod">PkceCodeChallengeMethod</h4>
@@ -594,7 +660,7 @@ is set to <code>true</code>.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PkceCodeChallengeMethod { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PkceCodeChallengeMethod { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -606,13 +672,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_RealmId_" data-uid="Pulumi.Keycloak.OpenId.Client.RealmId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_RealmId" data-uid="Pulumi.Keycloak.OpenId.Client.RealmId">RealmId</h4>
@@ -632,13 +698,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ResourceServerId_" data-uid="Pulumi.Keycloak.OpenId.Client.ResourceServerId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ResourceServerId" data-uid="Pulumi.Keycloak.OpenId.Client.ResourceServerId">ResourceServerId</h4>
@@ -658,13 +724,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_RootUrl_" data-uid="Pulumi.Keycloak.OpenId.Client.RootUrl*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_RootUrl" data-uid="Pulumi.Keycloak.OpenId.Client.RootUrl">RootUrl</h4>
@@ -672,7 +738,7 @@ is set to <code>true</code>.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RootUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RootUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -684,13 +750,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ServiceAccountsEnabled_" data-uid="Pulumi.Keycloak.OpenId.Client.ServiceAccountsEnabled*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ServiceAccountsEnabled" data-uid="Pulumi.Keycloak.OpenId.Client.ServiceAccountsEnabled">ServiceAccountsEnabled</h4>
@@ -710,13 +776,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ServiceAccountUserId_" data-uid="Pulumi.Keycloak.OpenId.Client.ServiceAccountUserId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ServiceAccountUserId" data-uid="Pulumi.Keycloak.OpenId.Client.ServiceAccountUserId">ServiceAccountUserId</h4>
@@ -736,13 +802,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_StandardFlowEnabled_" data-uid="Pulumi.Keycloak.OpenId.Client.StandardFlowEnabled*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_StandardFlowEnabled" data-uid="Pulumi.Keycloak.OpenId.Client.StandardFlowEnabled">StandardFlowEnabled</h4>
@@ -762,13 +828,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ValidRedirectUris_" data-uid="Pulumi.Keycloak.OpenId.Client.ValidRedirectUris*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ValidRedirectUris" data-uid="Pulumi.Keycloak.OpenId.Client.ValidRedirectUris">ValidRedirectUris</h4>
@@ -788,13 +854,13 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_WebOrigins_" data-uid="Pulumi.Keycloak.OpenId.Client.WebOrigins*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_WebOrigins" data-uid="Pulumi.Keycloak.OpenId.Client.WebOrigins">WebOrigins</h4>
@@ -814,7 +880,7 @@ is set to <code>true</code>.</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -822,17 +888,17 @@ is set to <code>true</code>.</li>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_Get_" data-uid="Pulumi.Keycloak.OpenId.Client.Get*"></a>
-  <h4 id="Pulumi_Keycloak_OpenId_Client_Get_System_String_Input_System_String__Pulumi_Keycloak_OpenId_ClientState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.OpenId.Client.Get(System.String,Input{System.String},Pulumi.Keycloak.OpenId.ClientState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClientState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_OpenId_Client_Get_System_String_Pulumi_Input_System_String__Pulumi_Keycloak_OpenId_ClientState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.OpenId.Client.Get(System.String,Pulumi.Input{System.String},Pulumi.Keycloak.OpenId.ClientState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClientState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Client resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Client Get(string name, Input&lt;string&gt; id, ClientState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Client Get(string name, Input&lt;string&gt; id, ClientState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -851,7 +917,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -863,7 +929,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -892,7 +958,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L57" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/Client.cs/#L88" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

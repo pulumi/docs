@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ProjectSshKey
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,85 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides a Packet project SSH key resource to manage project-specific SSH keys.
 Project SSH keys will only be populated onto servers that belong to that project, in contrast to User SSH Keys.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Packet = Pulumi.Packet;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var projectId = &amp;quot;&amp;lt;UUID_of_your_project&gt;&amp;quot;;
+    var testProjectSshKey = new Packet.ProjectSshKey(&amp;quot;testProjectSshKey&amp;quot;, new Packet.ProjectSshKeyArgs
+    {
+        Name = &amp;quot;test&amp;quot;,
+        PublicKey = &amp;quot;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDM/unxJeFqxsTJcu6mhqsMHSaVlpu+Jj/P+44zrm6X/MAoHSX3X9oLgujEjjZ74yLfdfe0bJrbL2YgJzNaEkIQQ1VPMHB5EhTKUBGnzlPP0hHTnxsjAm9qDHgUPgvgFDQSAMzdJRJ0Cexo16Ph9VxCoLh3dxiE7s2gaM2FdVg7P8aSxKypsxAhYV3D0AwqzoOyT6WWhBoQ0xZ85XevOTnJCpImSemEGs6nVGEsWcEc1d1YvdxFjAK4SdsKUMkj4Dsy/leKsdi/DEAf356vbMT1UHsXXvy5TlHu/Pa6qF53v32Enz+nhKy7/8W2Yt2yWx8HnQcT2rug9lvCXagJO6oauqRTO77C4QZn13ZLMZgLT66S/tNh2EX0gi6vmIs5dth8uF+K6nxIyKJXbcA4ASg7F1OJrHKFZdTc5v1cPeq6PcbqGgc+8SrPYQmzvQqLoMBuxyos2hUkYOmw3aeWJj9nFa8Wu5WaN89mUeOqSkU4S5cgUzWUOmKey56B/j/s1sVys9rMhZapVs0wL4L9GBBM48N5jAQZnnpo85A8KsZq5ME22bTLqnxsDXqDYZvS7PSI6Dxi7eleOFE/NYYDkrgDLHTQri8ucDMVeVWHgoMY2bPXdn7KKy5jW5jKsf8EPARXg77A4gRYmgKrcwIKqJEUPqyxJBe0CPoGTqgXPRsUiQ== tomk@hp2&amp;quot;,
+        ProjectId = projectId,
+    });
+    var testDevice = new Packet.Device(&amp;quot;testDevice&amp;quot;, new Packet.DeviceArgs
+    {
+        Hostname = &amp;quot;test&amp;quot;,
+        Plan = &amp;quot;baremetal_0&amp;quot;,
+        Facilities = 
+        {
+            &amp;quot;ewr1&amp;quot;,
+        },
+        OperatingSystem = &amp;quot;ubuntu_16_04&amp;quot;,
+        BillingCycle = &amp;quot;hourly&amp;quot;,
+        ProjectSshKeyIds = 
+        {
+            testProjectSshKey.Id,
+        },
+        ProjectId = projectId,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ProjectSshKey</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ProjectSshKey</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Packet.html">Pulumi.Packet</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Packet.dll</h6>
@@ -89,16 +162,16 @@ Project SSH keys will only be populated onto servers that belong to that project
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ProjectSshKey.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ProjectSshKey.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Packet_ProjectSshKey__ctor_" data-uid="Pulumi.Packet.ProjectSshKey.#ctor*"></a>
-  <h4 id="Pulumi_Packet_ProjectSshKey__ctor_System_String_Pulumi_Packet_ProjectSshKeyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Packet.ProjectSshKey.#ctor(System.String,Pulumi.Packet.ProjectSshKeyArgs,System.Nullable{CustomResourceOptions})">ProjectSshKey(String, ProjectSshKeyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Packet_ProjectSshKey__ctor_System_String_Pulumi_Packet_ProjectSshKeyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Packet.ProjectSshKey.#ctor(System.String,Pulumi.Packet.ProjectSshKeyArgs,Pulumi.CustomResourceOptions)">ProjectSshKey(String, ProjectSshKeyArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ProjectSshKey resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectSshKey(string name, ProjectSshKeyArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProjectSshKey(string name, ProjectSshKeyArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +196,7 @@ Project SSH keys will only be populated onto servers that belong to that project
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +206,7 @@ Project SSH keys will only be populated onto servers that belong to that project
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ProjectSshKey.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ProjectSshKey.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Packet_ProjectSshKey_Created_" data-uid="Pulumi.Packet.ProjectSshKey.Created*"></a>
   <h4 id="Pulumi_Packet_ProjectSshKey_Created" data-uid="Pulumi.Packet.ProjectSshKey.Created">Created</h4>
@@ -154,13 +227,13 @@ Project SSH keys will only be populated onto servers that belong to that project
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ProjectSshKey.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ProjectSshKey.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Packet_ProjectSshKey_Fingerprint_" data-uid="Pulumi.Packet.ProjectSshKey.Fingerprint*"></a>
   <h4 id="Pulumi_Packet_ProjectSshKey_Fingerprint" data-uid="Pulumi.Packet.ProjectSshKey.Fingerprint">Fingerprint</h4>
@@ -181,13 +254,13 @@ Project SSH keys will only be populated onto servers that belong to that project
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ProjectSshKey.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ProjectSshKey.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Packet_ProjectSshKey_Name_" data-uid="Pulumi.Packet.ProjectSshKey.Name*"></a>
   <h4 id="Pulumi_Packet_ProjectSshKey_Name" data-uid="Pulumi.Packet.ProjectSshKey.Name">Name</h4>
@@ -208,13 +281,13 @@ Project SSH keys will only be populated onto servers that belong to that project
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ProjectSshKey.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ProjectSshKey.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Packet_ProjectSshKey_OwnerId_" data-uid="Pulumi.Packet.ProjectSshKey.OwnerId*"></a>
   <h4 id="Pulumi_Packet_ProjectSshKey_OwnerId" data-uid="Pulumi.Packet.ProjectSshKey.OwnerId">OwnerId</h4>
@@ -235,13 +308,13 @@ Project SSH keys will only be populated onto servers that belong to that project
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ProjectSshKey.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ProjectSshKey.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Packet_ProjectSshKey_ProjectId_" data-uid="Pulumi.Packet.ProjectSshKey.ProjectId*"></a>
   <h4 id="Pulumi_Packet_ProjectSshKey_ProjectId" data-uid="Pulumi.Packet.ProjectSshKey.ProjectId">ProjectId</h4>
@@ -262,13 +335,13 @@ Project SSH keys will only be populated onto servers that belong to that project
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ProjectSshKey.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ProjectSshKey.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Packet_ProjectSshKey_PublicKey_" data-uid="Pulumi.Packet.ProjectSshKey.PublicKey*"></a>
   <h4 id="Pulumi_Packet_ProjectSshKey_PublicKey" data-uid="Pulumi.Packet.ProjectSshKey.PublicKey">PublicKey</h4>
@@ -289,13 +362,13 @@ Project SSH keys will only be populated onto servers that belong to that project
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ProjectSshKey.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ProjectSshKey.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Packet_ProjectSshKey_Updated_" data-uid="Pulumi.Packet.ProjectSshKey.Updated*"></a>
   <h4 id="Pulumi_Packet_ProjectSshKey_Updated" data-uid="Pulumi.Packet.ProjectSshKey.Updated">Updated</h4>
@@ -316,7 +389,7 @@ Project SSH keys will only be populated onto servers that belong to that project
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -324,17 +397,17 @@ Project SSH keys will only be populated onto servers that belong to that project
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ProjectSshKey.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ProjectSshKey.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Packet_ProjectSshKey_Get_" data-uid="Pulumi.Packet.ProjectSshKey.Get*"></a>
-  <h4 id="Pulumi_Packet_ProjectSshKey_Get_System_String_Input_System_String__Pulumi_Packet_ProjectSshKeyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Packet.ProjectSshKey.Get(System.String,Input{System.String},Pulumi.Packet.ProjectSshKeyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ProjectSshKeyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Packet_ProjectSshKey_Get_System_String_Pulumi_Input_System_String__Pulumi_Packet_ProjectSshKeyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Packet.ProjectSshKey.Get(System.String,Pulumi.Input{System.String},Pulumi.Packet.ProjectSshKeyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ProjectSshKeyState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ProjectSshKey resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ProjectSshKey Get(string name, Input&lt;string&gt; id, ProjectSshKeyState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ProjectSshKey Get(string name, Input&lt;string&gt; id, ProjectSshKeyState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -353,7 +426,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -365,7 +438,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -394,7 +467,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ProjectSshKey.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ProjectSshKey.cs/#L56" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Okta.App
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,26 @@
       <h4><a class="xref" href="Pulumi.Okta.App.AutoLogin.html">AutoLogin</a></h4>
       <section><p>Creates an Auto Login Okta Application.</p>
 <p>This resource allows you to create and configure an Auto Login Okta Application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.AutoLogin(&amp;quot;example&amp;quot;, new Okta.App.AutoLoginArgs
+    {
+        CredentialsScheme = &amp;quot;EDIT_USERNAME_AND_PASSWORD&amp;quot;,
+        Label = &amp;quot;Example App&amp;quot;,
+        RevealPassword = true,
+        SignOnRedirectUrl = &amp;quot;https://example.com&amp;quot;,
+        SignOnUrl = &amp;quot;https://example.com/login.html&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.App.AutoLoginArgs.html">AutoLoginArgs</a></h4>
       <section></section>
@@ -87,6 +107,24 @@
       <h4><a class="xref" href="Pulumi.Okta.App.BasicAuth.html">BasicAuth</a></h4>
       <section><p>Creates a Bsaic Auth Application.</p>
 <p>This resource allows you to create and configure a Basic Auth Application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.BasicAuth(&amp;quot;example&amp;quot;, new Okta.App.BasicAuthArgs
+    {
+        AuthUrl = &amp;quot;https://example.com/auth.html&amp;quot;,
+        Label = &amp;quot;Example&amp;quot;,
+        Url = &amp;quot;https://example.com/login.html&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.App.BasicAuthArgs.html">BasicAuthArgs</a></h4>
       <section></section>
@@ -95,6 +133,23 @@
       <h4><a class="xref" href="Pulumi.Okta.App.Bookmark.html">Bookmark</a></h4>
       <section><p>Creates a Bookmark Application.</p>
 <p>This resource allows you to create and configure a Bookmark Application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.Bookmark(&amp;quot;example&amp;quot;, new Okta.App.BookmarkArgs
+    {
+        Label = &amp;quot;Example&amp;quot;,
+        Url = &amp;quot;https://example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.App.BookmarkArgs.html">BookmarkArgs</a></h4>
       <section></section>
@@ -122,6 +177,38 @@
       <section><p>Assigns a group to an application.</p>
 <p>This resource allows you to create an App Group assignment.</p>
 <p><strong>When using this resource, make sure to add the following <code>lifefycle</code> argument to the application resource you are assigning to:</strong></p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.GroupAssignment(&amp;quot;example&amp;quot;, new Okta.App.GroupAssignmentArgs
+    {
+        AppId = &amp;quot;&amp;lt;app id&gt;&amp;quot;,
+        GroupId = &amp;quot;&amp;lt;group id&gt;&amp;quot;,
+        Profile = @&amp;quot;{
+&amp;quot;&amp;quot;&amp;lt;app_profile_field&gt;&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;lt;value&gt;&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.App.GroupAssignmentArgs.html">GroupAssignmentArgs</a></h4>
       <section></section>
@@ -130,6 +217,35 @@
       <h4><a class="xref" href="Pulumi.Okta.App.OAuth.html">OAuth</a></h4>
       <section><p>Creates an OIDC Application.</p>
 <p>This resource allows you to create and configure an OIDC Application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.OAuth(&amp;quot;example&amp;quot;, new Okta.App.OAuthArgs
+    {
+        GrantTypes = 
+        {
+            &amp;quot;authorization_code&amp;quot;,
+        },
+        Label = &amp;quot;example&amp;quot;,
+        RedirectUris = 
+        {
+            &amp;quot;https://example.com/&amp;quot;,
+        },
+        ResponseTypes = 
+        {
+            &amp;quot;code&amp;quot;,
+        },
+        Type = &amp;quot;web&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.App.OAuthArgs.html">OAuthArgs</a></h4>
       <section></section>
@@ -144,6 +260,43 @@
       <h4><a class="xref" href="Pulumi.Okta.App.Saml.html">Saml</a></h4>
       <section><p>Creates an SAML Application.</p>
 <p>This resource allows you to create and configure an SAML Application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.Saml(&amp;quot;example&amp;quot;, new Okta.App.SamlArgs
+    {
+        AttributeStatements = 
+        {
+            new Okta.App.Inputs.SamlAttributeStatementArgs
+            {
+                FilterType = &amp;quot;REGEX&amp;quot;,
+                FilterValue = &amp;quot;.*&amp;quot;,
+                Name = &amp;quot;groups&amp;quot;,
+                Type = &amp;quot;GROUP&amp;quot;,
+            },
+        },
+        Audience = &amp;quot;http://example.com/audience&amp;quot;,
+        AuthnContextClassRef = &amp;quot;urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport&amp;quot;,
+        Destination = &amp;quot;http://example.com&amp;quot;,
+        DigestAlgorithm = &amp;quot;SHA256&amp;quot;,
+        HonorForceAuthn = false,
+        Label = &amp;quot;example&amp;quot;,
+        Recipient = &amp;quot;http://example.com&amp;quot;,
+        ResponseSigned = true,
+        SignatureAlgorithm = &amp;quot;RSA_SHA256&amp;quot;,
+        SsoUrl = &amp;quot;http://example.com&amp;quot;,
+        SubjectNameIdFormat = &amp;quot;urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress&amp;quot;,
+        SubjectNameIdTemplate = user.UserName,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.App.SamlArgs.html">SamlArgs</a></h4>
       <section></section>
@@ -152,6 +305,26 @@
       <h4><a class="xref" href="Pulumi.Okta.App.SecurePasswordStore.html">SecurePasswordStore</a></h4>
       <section><p>Creates a Secure Password Store Application.</p>
 <p>This resource allows you to create and configure a Secure Password Store Application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.SecurePasswordStore(&amp;quot;example&amp;quot;, new Okta.App.SecurePasswordStoreArgs
+    {
+        CredentialsScheme = &amp;quot;ADMIN_SETS_CREDENTIALS&amp;quot;,
+        Label = &amp;quot;example&amp;quot;,
+        PasswordField = &amp;quot;pass&amp;quot;,
+        Url = &amp;quot;http://test.com&amp;quot;,
+        UsernameField = &amp;quot;user&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.App.SecurePasswordStoreArgs.html">SecurePasswordStoreArgs</a></h4>
       <section></section>
@@ -160,6 +333,26 @@
       <h4><a class="xref" href="Pulumi.Okta.App.Swa.html">Swa</a></h4>
       <section><p>Creates an SWA Application.</p>
 <p>This resource allows you to create and configure an SWA Application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.Swa(&amp;quot;example&amp;quot;, new Okta.App.SwaArgs
+    {
+        ButtonField = &amp;quot;btn-login&amp;quot;,
+        Label = &amp;quot;example&amp;quot;,
+        PasswordField = &amp;quot;txtbox-password&amp;quot;,
+        Url = &amp;quot;https://example.com/login.html&amp;quot;,
+        UsernameField = &amp;quot;txtbox-username&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.App.SwaArgs.html">SwaArgs</a></h4>
       <section></section>
@@ -177,12 +370,60 @@
       <section><p>Creates an Application User.</p>
 <p>This resource allows you to create and configure an Application User.</p>
 <p><strong>When using this resource, make sure to add the following <code>lifefycle</code> argument to the application resource you are assigning to:</strong></p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.User(&amp;quot;example&amp;quot;, new Okta.App.UserArgs
+    {
+        AppId = &amp;quot;&amp;lt;app_id&gt;&amp;quot;,
+        UserId = &amp;quot;&amp;lt;user id&gt;&amp;quot;,
+        Username = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.App.UserArgs.html">UserArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Okta.App.UserBaseSchema.html">UserBaseSchema</a></h4>
       <section><p>Manages an Application User Base Schema property.</p>
 <p>This resource allows you to configure a base app user schema property.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.UserBaseSchema(&amp;quot;example&amp;quot;, new Okta.App.UserBaseSchemaArgs
+    {
+        AppId = &amp;quot;&amp;lt;app id&gt;&amp;quot;,
+        Index = &amp;quot;customPropertyName&amp;quot;,
+        Master = &amp;quot;OKTA&amp;quot;,
+        Title = &amp;quot;customPropertyName&amp;quot;,
+        Type = &amp;quot;string&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.App.UserBaseSchemaArgs.html">UserBaseSchemaArgs</a></h4>
       <section></section>
@@ -191,6 +432,28 @@
       <h4><a class="xref" href="Pulumi.Okta.App.UserSchema.html">UserSchema</a></h4>
       <section><p>Creates an Application User Schema property.</p>
 <p>This resource allows you to create and configure a custom user schema property and associate it with an application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.UserSchema(&amp;quot;example&amp;quot;, new Okta.App.UserSchemaArgs
+    {
+        AppId = &amp;quot;&amp;lt;app id&gt;&amp;quot;,
+        Description = &amp;quot;My custom property name&amp;quot;,
+        Index = &amp;quot;customPropertyName&amp;quot;,
+        Master = &amp;quot;OKTA&amp;quot;,
+        Scope = &amp;quot;SELF&amp;quot;,
+        Title = &amp;quot;customPropertyName&amp;quot;,
+        Type = &amp;quot;string&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.App.UserSchemaArgs.html">UserSchemaArgs</a></h4>
       <section></section>

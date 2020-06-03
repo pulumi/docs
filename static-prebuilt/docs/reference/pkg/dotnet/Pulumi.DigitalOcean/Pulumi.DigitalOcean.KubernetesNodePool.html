@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class KubernetesNodePool
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,71 @@
   <h1 id="Pulumi_DigitalOcean_KubernetesNodePool" data-uid="Pulumi.DigitalOcean.KubernetesNodePool" class="text-break">Class KubernetesNodePool
   </h1>
   <div class="markdown level0 summary"><p>Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the <code>digitalocean..KubernetesCluster</code> resource, this resource can be used to add additional ones to a cluster.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="autoscaling-example">Autoscaling Example</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var autoscale_pool_01 = new DigitalOcean.KubernetesNodePool(&amp;quot;autoscale-pool-01&amp;quot;, new DigitalOcean.KubernetesNodePoolArgs
+    {
+        ClusterId = digitalocean_kubernetes_cluster.Foo.Id,
+        Size = &amp;quot;s-1vcpu-2gb&amp;quot;,
+        AutoScale = true,
+        MinNodes = 0,
+        MaxNodes = 5,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">KubernetesNodePool</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">KubernetesNodePool</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
@@ -88,16 +147,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool__ctor_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.#ctor*"></a>
-  <h4 id="Pulumi_DigitalOcean_KubernetesNodePool__ctor_System_String_Pulumi_DigitalOcean_KubernetesNodePoolArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.#ctor(System.String,Pulumi.DigitalOcean.KubernetesNodePoolArgs,System.Nullable{CustomResourceOptions})">KubernetesNodePool(String, KubernetesNodePoolArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_DigitalOcean_KubernetesNodePool__ctor_System_String_Pulumi_DigitalOcean_KubernetesNodePoolArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.#ctor(System.String,Pulumi.DigitalOcean.KubernetesNodePoolArgs,Pulumi.CustomResourceOptions)">KubernetesNodePool(String, KubernetesNodePoolArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a KubernetesNodePool resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KubernetesNodePool(string name, KubernetesNodePoolArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public KubernetesNodePool(string name, KubernetesNodePoolArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +181,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +191,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_ActualNodeCount_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.ActualNodeCount*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_ActualNodeCount" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.ActualNodeCount">ActualNodeCount</h4>
@@ -153,13 +212,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_AutoScale_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.AutoScale*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_AutoScale" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.AutoScale">AutoScale</h4>
@@ -180,13 +239,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_ClusterId_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.ClusterId*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_ClusterId" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.ClusterId">ClusterId</h4>
@@ -207,13 +266,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_Labels_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Labels*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_Labels" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Labels">Labels</h4>
@@ -222,7 +281,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +293,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_MaxNodes_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.MaxNodes*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_MaxNodes" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.MaxNodes">MaxNodes</h4>
@@ -261,13 +320,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_MinNodes_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.MinNodes*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_MinNodes" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.MinNodes">MinNodes</h4>
@@ -288,13 +347,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_Name_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Name*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_Name" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Name">Name</h4>
@@ -315,13 +374,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_NodeCount_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.NodeCount*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_NodeCount" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.NodeCount">NodeCount</h4>
@@ -342,13 +401,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_Nodes_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Nodes*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_Nodes" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Nodes">Nodes</h4>
@@ -377,13 +436,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.DigitalOcean.Outputs.KubernetesNodePoolNode.html">KubernetesNodePoolNode</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.DigitalOcean.Outputs.KubernetesNodePoolNode.html">KubernetesNodePoolNode</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_Size_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Size*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_Size" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Size">Size</h4>
@@ -404,13 +463,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_Tags_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Tags*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_Tags" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Tags">Tags</h4>
@@ -431,7 +490,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -439,17 +498,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesNodePool_Get_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Get*"></a>
-  <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_Get_System_String_Input_System_String__Pulumi_DigitalOcean_KubernetesNodePoolState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Get(System.String,Input{System.String},Pulumi.DigitalOcean.KubernetesNodePoolState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, KubernetesNodePoolState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_DigitalOcean_KubernetesNodePool_Get_System_String_Pulumi_Input_System_String__Pulumi_DigitalOcean_KubernetesNodePoolState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.DigitalOcean.KubernetesNodePool.Get(System.String,Pulumi.Input{System.String},Pulumi.DigitalOcean.KubernetesNodePoolState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, KubernetesNodePoolState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing KubernetesNodePool resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static KubernetesNodePool Get(string name, Input&lt;string&gt; id, KubernetesNodePoolState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static KubernetesNodePool Get(string name, Input&lt;string&gt; id, KubernetesNodePoolState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -468,7 +527,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -480,7 +539,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -509,7 +568,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesNodePool.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/master/sdk/dotnet/KubernetesNodePool.cs/#L40" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

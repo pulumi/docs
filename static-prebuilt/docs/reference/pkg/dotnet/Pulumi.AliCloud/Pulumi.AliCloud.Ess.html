@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Ess
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,6 +90,118 @@
 <blockquote>
 <p><strong>NOTE:</strong> There are two types ECS instances in a scaling group: &quot;AutoCreated&quot; and &quot;Attached&quot;. The total number of them can not larger than the scaling group &quot;MaxSize&quot;.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;essattachmentconfig&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultInstanceTypes = defaultZones.Apply(defaultZones =&gt; Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+    {
+        AvailabilityZone = defaultZones.Zones[0].Id,
+        CpuCoreCount = 2,
+        MemorySize = 4,
+    })));
+    var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+    {
+        MostRecent = true,
+        NameRegex = &amp;quot;^ubuntu_18.*64&amp;quot;,
+        Owners = &amp;quot;system&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup(&amp;quot;defaultSecurityGroup&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultSecurityGroupRule = new AliCloud.Ecs.SecurityGroupRule(&amp;quot;defaultSecurityGroupRule&amp;quot;, new AliCloud.Ecs.SecurityGroupRuleArgs
+    {
+        CidrIp = &amp;quot;172.16.0.0/24&amp;quot;,
+        IpProtocol = &amp;quot;tcp&amp;quot;,
+        NicType = &amp;quot;intranet&amp;quot;,
+        Policy = &amp;quot;accept&amp;quot;,
+        PortRange = &amp;quot;22/22&amp;quot;,
+        Priority = 1,
+        SecurityGroupId = defaultSecurityGroup.Id,
+        Type = &amp;quot;ingress&amp;quot;,
+    });
+    var defaultScalingGroup = new AliCloud.Ess.ScalingGroup(&amp;quot;defaultScalingGroup&amp;quot;, new AliCloud.Ess.ScalingGroupArgs
+    {
+        MaxSize = 2,
+        MinSize = 0,
+        RemovalPolicies = 
+        {
+            &amp;quot;OldestInstance&amp;quot;,
+            &amp;quot;NewestInstance&amp;quot;,
+        },
+        ScalingGroupName = name,
+        VswitchIds = 
+        {
+            defaultSwitch.Id,
+        },
+    });
+    var defaultScalingConfiguration = new AliCloud.Ess.ScalingConfiguration(&amp;quot;defaultScalingConfiguration&amp;quot;, new AliCloud.Ess.ScalingConfigurationArgs
+    {
+        Active = true,
+        Enable = true,
+        ForceDelete = true,
+        ImageId = defaultImages.Apply(defaultImages =&gt; defaultImages.Images[0].Id),
+        InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes =&gt; defaultInstanceTypes.InstanceTypes[0].Id),
+        ScalingGroupId = defaultScalingGroup.Id,
+        SecurityGroupId = defaultSecurityGroup.Id,
+    });
+    var defaultInstance = new List&amp;lt;AliCloud.Ecs.Instance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 2; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        defaultInstance.Add(new AliCloud.Ecs.Instance($&amp;quot;defaultInstance-{range.Value}&amp;quot;, new AliCloud.Ecs.InstanceArgs
+        {
+            ImageId = defaultImages.Apply(defaultImages =&gt; defaultImages.Images[0].Id),
+            InstanceChargeType = &amp;quot;PostPaid&amp;quot;,
+            InstanceName = name,
+            InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes =&gt; defaultInstanceTypes.InstanceTypes[0].Id),
+            InternetChargeType = &amp;quot;PayByTraffic&amp;quot;,
+            InternetMaxBandwidthOut = &amp;quot;10&amp;quot;,
+            SecurityGroups = 
+            {
+                defaultSecurityGroup.Id,
+            },
+            SystemDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+            VswitchId = defaultSwitch.Id,
+        }));
+    }
+    var defaultAttachment = new AliCloud.Ess.Attachment(&amp;quot;defaultAttachment&amp;quot;, new AliCloud.Ess.AttachmentArgs
+    {
+        Force = true,
+        InstanceIds = 
+        {
+            defaultInstance[0].Id,
+            defaultInstance[1].Id,
+        },
+        ScalingGroupId = defaultScalingGroup.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ess.AttachmentArgs.html">AttachmentArgs</a></h4>
       <section></section>
@@ -148,6 +260,74 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.55.0+</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;tf-testAccEssNotification-%d&amp;quot;;
+    var defaultRegions = Output.Create(AliCloud.GetRegions.InvokeAsync(new AliCloud.GetRegionsArgs
+    {
+        Current = true,
+    }));
+    var defaultAccount = Output.Create(AliCloud.GetAccount.InvokeAsync());
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultScalingGroup = new AliCloud.Ess.ScalingGroup(&amp;quot;defaultScalingGroup&amp;quot;, new AliCloud.Ess.ScalingGroupArgs
+    {
+        MaxSize = 1,
+        MinSize = 1,
+        RemovalPolicies = 
+        {
+            &amp;quot;OldestInstance&amp;quot;,
+            &amp;quot;NewestInstance&amp;quot;,
+        },
+        ScalingGroupName = name,
+        VswitchIds = 
+        {
+            defaultSwitch.Id,
+        },
+    });
+    var defaultQueue = new AliCloud.Mns.Queue(&amp;quot;defaultQueue&amp;quot;, new AliCloud.Mns.QueueArgs
+    {
+    });
+    var defaultNotification = new AliCloud.Ess.Notification(&amp;quot;defaultNotification&amp;quot;, new AliCloud.Ess.NotificationArgs
+    {
+        NotificationArn = Output.Tuple(defaultRegions, defaultAccount, defaultQueue.Name).Apply(values =&gt;
+        {
+            var defaultRegions = values.Item1;
+            var defaultAccount = values.Item2;
+            var name = values.Item3;
+            return $&amp;quot;acs:ess:{defaultRegions.Regions[0].Id}:{defaultAccount.Id}:queue/{name}&amp;quot;;
+        }),
+        NotificationTypes = 
+        {
+            &amp;quot;AUTOSCALING:SCALE_OUT_SUCCESS&amp;quot;,
+            &amp;quot;AUTOSCALING:SCALE_OUT_ERROR&amp;quot;,
+        },
+        ScalingGroupId = defaultScalingGroup.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Ess.NotificationArgs.html">NotificationArgs</a></h4>
       <section></section>
@@ -194,6 +374,92 @@
 <blockquote>
 <p><strong>NOTE:</strong> Resource <code>alicloud.ess.ScalingGroupVServerGroups</code> is available in 1.53.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;testAccEssVserverGroupsAttachment&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/24&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer(&amp;quot;defaultLoadBalancer&amp;quot;, new AliCloud.Slb.LoadBalancerArgs
+    {
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultServerGroup = new AliCloud.Slb.ServerGroup(&amp;quot;defaultServerGroup&amp;quot;, new AliCloud.Slb.ServerGroupArgs
+    {
+        LoadBalancerId = defaultLoadBalancer.Id,
+    });
+    var defaultListener = new List&amp;lt;AliCloud.Slb.Listener&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 2; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        defaultListener.Add(new AliCloud.Slb.Listener($&amp;quot;defaultListener-{range.Value}&amp;quot;, new AliCloud.Slb.ListenerArgs
+        {
+            BackendPort = &amp;quot;22&amp;quot;,
+            Bandwidth = &amp;quot;10&amp;quot;,
+            FrontendPort = &amp;quot;22&amp;quot;,
+            HealthCheckType = &amp;quot;tcp&amp;quot;,
+            LoadBalancerId = 
+            {
+                defaultLoadBalancer,
+            }.Select(__item =&gt; __item.Id).ToList()[range.Value],
+            Protocol = &amp;quot;tcp&amp;quot;,
+        }));
+    }
+    var defaultScalingGroup = new AliCloud.Ess.ScalingGroup(&amp;quot;defaultScalingGroup&amp;quot;, new AliCloud.Ess.ScalingGroupArgs
+    {
+        MaxSize = &amp;quot;2&amp;quot;,
+        MinSize = &amp;quot;2&amp;quot;,
+        ScalingGroupName = name,
+        VswitchIds = 
+        {
+            defaultSwitch.Id,
+        },
+    });
+    var defaultScalingGroupVServerGroups = new AliCloud.Ess.ScalingGroupVServerGroups(&amp;quot;defaultScalingGroupVServerGroups&amp;quot;, new AliCloud.Ess.ScalingGroupVServerGroupsArgs
+    {
+        ScalingGroupId = defaultScalingGroup.Id,
+        VserverGroups = 
+        {
+            new AliCloud.Ess.Inputs.ScalingGroupVServerGroupsVserverGroupArgs
+            {
+                LoadbalancerId = defaultLoadBalancer.Id,
+                VserverAttributes = 
+                {
+                    new AliCloud.Ess.Inputs.ScalingGroupVServerGroupsVserverGroupVserverAttributeArgs
+                    {
+                        Port = &amp;quot;100&amp;quot;,
+                        VserverGroupId = defaultServerGroup.Id,
+                        Weight = &amp;quot;60&amp;quot;,
+                    },
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="block-vserver_group">Block vserver_group</h2>
 <p>the vserver_group supports the following:</p>
 <ul>

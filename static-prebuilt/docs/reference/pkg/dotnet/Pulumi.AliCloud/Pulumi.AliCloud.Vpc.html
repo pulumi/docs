@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Vpc
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,6 +90,56 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Vpc.ForwardEntry.html">ForwardEntry</a></h4>
       <section><p>Provides a forward resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;forward-entry-example-name&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/21&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultNatGateway = new AliCloud.Vpc.NatGateway(&amp;quot;defaultNatGateway&amp;quot;, new AliCloud.Vpc.NatGatewayArgs
+    {
+        Specification = &amp;quot;Small&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultEip = new AliCloud.Ecs.Eip(&amp;quot;defaultEip&amp;quot;, new AliCloud.Ecs.EipArgs
+    {
+    });
+    var defaultEipAssociation = new AliCloud.Ecs.EipAssociation(&amp;quot;defaultEipAssociation&amp;quot;, new AliCloud.Ecs.EipAssociationArgs
+    {
+        AllocationId = defaultEip.Id,
+        InstanceId = defaultNatGateway.Id,
+    });
+    var defaultForwardEntry = new AliCloud.Vpc.ForwardEntry(&amp;quot;defaultForwardEntry&amp;quot;, new AliCloud.Vpc.ForwardEntryArgs
+    {
+        ExternalIp = defaultEip.IpAddress,
+        ExternalPort = &amp;quot;80&amp;quot;,
+        ForwardTableId = defaultNatGateway.ForwardTableIds,
+        InternalIp = &amp;quot;172.16.0.3&amp;quot;,
+        InternalPort = &amp;quot;8080&amp;quot;,
+        IpProtocol = &amp;quot;tcp&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Vpc.ForwardEntryArgs.html">ForwardEntryArgs</a></h4>
       <section></section>
@@ -186,6 +236,27 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.43.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var defaultNetworkAcl = new AliCloud.Vpc.NetworkAcl(&amp;quot;defaultNetworkAcl&amp;quot;, new AliCloud.Vpc.NetworkAclArgs
+    {
+        Description = &amp;quot;network_acl&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Vpc.NetworkAclArgs.html">NetworkAclArgs</a></h4>
       <section></section>
@@ -194,6 +265,50 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.44.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;NatGatewayConfigSpec&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var defaultNetworkAcl = new AliCloud.Vpc.NetworkAcl(&amp;quot;defaultNetworkAcl&amp;quot;, new AliCloud.Vpc.NetworkAclArgs
+    {
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/21&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultNetworkAclAttachment = new AliCloud.Vpc.NetworkAclAttachment(&amp;quot;defaultNetworkAclAttachment&amp;quot;, new AliCloud.Vpc.NetworkAclAttachmentArgs
+    {
+        NetworkAclId = defaultNetworkAcl.Id,
+        Resources = 
+        {
+            new AliCloud.Vpc.Inputs.NetworkAclAttachmentResourceArgs
+            {
+                ResourceId = defaultSwitch.Id,
+                ResourceType = &amp;quot;VSwitch&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Vpc.NetworkAclAttachmentArgs.html">NetworkAclAttachmentArgs</a></h4>
       <section></section>
@@ -210,6 +325,80 @@
 <blockquote>
 <p><strong>NOTE:</strong> Using this resource need to open a whitelist.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;NetworkAclEntries&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var defaultNetworkAcl = new AliCloud.Vpc.NetworkAcl(&amp;quot;defaultNetworkAcl&amp;quot;, new AliCloud.Vpc.NetworkAclArgs
+    {
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/21&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultNetworkAclAttachment = new AliCloud.Vpc.NetworkAclAttachment(&amp;quot;defaultNetworkAclAttachment&amp;quot;, new AliCloud.Vpc.NetworkAclAttachmentArgs
+    {
+        NetworkAclId = defaultNetworkAcl.Id,
+        Resources = 
+        {
+            new AliCloud.Vpc.Inputs.NetworkAclAttachmentResourceArgs
+            {
+                ResourceId = defaultSwitch.Id,
+                ResourceType = &amp;quot;VSwitch&amp;quot;,
+            },
+        },
+    });
+    var defaultNetworkAclEntries = new AliCloud.Vpc.NetworkAclEntries(&amp;quot;defaultNetworkAclEntries&amp;quot;, new AliCloud.Vpc.NetworkAclEntriesArgs
+    {
+        Egresses = 
+        {
+            new AliCloud.Vpc.Inputs.NetworkAclEntriesEgressArgs
+            {
+                Description = name,
+                DestinationCidrIp = &amp;quot;0.0.0.0/32&amp;quot;,
+                EntryType = &amp;quot;custom&amp;quot;,
+                Name = name,
+                Policy = &amp;quot;accept&amp;quot;,
+                Port = &amp;quot;-1/-1&amp;quot;,
+                Protocol = &amp;quot;all&amp;quot;,
+            },
+        },
+        Ingresses = 
+        {
+            new AliCloud.Vpc.Inputs.NetworkAclEntriesIngressArgs
+            {
+                Description = name,
+                EntryType = &amp;quot;custom&amp;quot;,
+                Name = name,
+                Policy = &amp;quot;accept&amp;quot;,
+                Port = &amp;quot;-1/-1&amp;quot;,
+                Protocol = &amp;quot;all&amp;quot;,
+                SourceCidrIp = &amp;quot;0.0.0.0/32&amp;quot;,
+            },
+        },
+        NetworkAclId = defaultNetworkAcl.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Vpc.NetworkAclEntriesArgs.html">NetworkAclEntriesArgs</a></h4>
       <section></section>
@@ -225,12 +414,142 @@
 <blockquote>
 <p><strong>NOTE</strong> Only one of private_ips or private_ips_count can be specified when assign private IPs.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;networkInterfaceName&amp;quot;;
+    var vpc = new AliCloud.Vpc.Network(&amp;quot;vpc&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;192.168.0.0/24&amp;quot;,
+    });
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var vswitch = new AliCloud.Vpc.Switch(&amp;quot;vswitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;192.168.0.0/24&amp;quot;,
+        VpcId = vpc.Id,
+    });
+    var @group = new AliCloud.Ecs.SecurityGroup(&amp;quot;group&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        VpcId = vpc.Id,
+    });
+    var defaultNetworkInterface = new AliCloud.Vpc.NetworkInterface(&amp;quot;defaultNetworkInterface&amp;quot;, new AliCloud.Vpc.NetworkInterfaceArgs
+    {
+        PrivateIp = &amp;quot;192.168.0.2&amp;quot;,
+        PrivateIpsCount = 3,
+        SecurityGroups = 
+        {
+            @group.Id,
+        },
+        VswitchId = vswitch.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Vpc.NetworkInterfaceArgs.html">NetworkInterfaceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Vpc.NetworkInterfaceAttachment.html">NetworkInterfaceAttachment</a></h4>
       <section><p>Provides an Alicloud ECS Elastic Network Interface Attachment as a resource to attach ENI to or detach ENI from ECS Instances.</p>
 <p>For information about Elastic Network Interface and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/58496.html">Elastic Network Interface</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;networkInterfaceAttachment&amp;quot;;
+    var number = config.Get(&amp;quot;number&amp;quot;) ?? &amp;quot;2&amp;quot;;
+    var vpc = new AliCloud.Vpc.Network(&amp;quot;vpc&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;192.168.0.0/24&amp;quot;,
+    });
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var vswitch = new AliCloud.Vpc.Switch(&amp;quot;vswitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;192.168.0.0/24&amp;quot;,
+        VpcId = vpc.Id,
+    });
+    var @group = new AliCloud.Ecs.SecurityGroup(&amp;quot;group&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        VpcId = vpc.Id,
+    });
+    var instanceType = defaultZones.Apply(defaultZones =&gt; Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+    {
+        AvailabilityZone = defaultZones.Zones[0].Id,
+        EniAmount = 2,
+    })));
+    var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+    {
+        MostRecent = true,
+        NameRegex = &amp;quot;^ubuntu_18.*64&amp;quot;,
+        Owners = &amp;quot;system&amp;quot;,
+    }));
+    var instance = new List&amp;lt;AliCloud.Ecs.Instance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; number; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        instance.Add(new AliCloud.Ecs.Instance($&amp;quot;instance-{range.Value}&amp;quot;, new AliCloud.Ecs.InstanceArgs
+        {
+            AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+            ImageId = defaultImages.Apply(defaultImages =&gt; defaultImages.Images[0].Id),
+            InstanceName = name,
+            InstanceType = instanceType.Apply(instanceType =&gt; instanceType.InstanceTypes[0].Id),
+            InternetMaxBandwidthOut = 10,
+            SecurityGroups = 
+            {
+                @group.Id,
+            },
+            SystemDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+            VswitchId = vswitch.Id,
+        }));
+    }
+    var @interface = new List&amp;lt;AliCloud.Vpc.NetworkInterface&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; number; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        @interface.Add(new AliCloud.Vpc.NetworkInterface($&amp;quot;interface-{range.Value}&amp;quot;, new AliCloud.Vpc.NetworkInterfaceArgs
+        {
+            SecurityGroups = 
+            {
+                @group.Id,
+            },
+            VswitchId = vswitch.Id,
+        }));
+    }
+    var attachment = new List&amp;lt;AliCloud.Vpc.NetworkInterfaceAttachment&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; number; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        attachment.Add(new AliCloud.Vpc.NetworkInterfaceAttachment($&amp;quot;attachment-{range.Value}&amp;quot;, new AliCloud.Vpc.NetworkInterfaceAttachmentArgs
+        {
+            InstanceId = instance.Select(__item =&gt; __item.Id).ToList()[range.Index],
+            NetworkInterfaceId = @interface.Select(__item =&gt; __item.Id).ToList()[range.Index],
+        }));
+    }
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Vpc.NetworkInterfaceAttachmentArgs.html">NetworkInterfaceAttachmentArgs</a></h4>
       <section></section>
@@ -265,6 +584,59 @@ After that, all of the two router interfaces will be active.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Please remember to add a <code>depends_on</code> clause in the router interface connection from the InitiatingSide to the AcceptingSide, because the connection from the AcceptingSide to the InitiatingSide must be done first.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var region = config.Get(&amp;quot;region&amp;quot;) ?? &amp;quot;cn-hangzhou&amp;quot;;
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;alicloudRouterInterfaceConnectionBasic&amp;quot;;
+    var fooNetwork = new AliCloud.Vpc.Network(&amp;quot;fooNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/12&amp;quot;,
+    });
+    var barNetwork = new AliCloud.Vpc.Network(&amp;quot;barNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;192.168.0.0/16&amp;quot;,
+    });
+    var initiate = new AliCloud.Vpc.RouterInterface(&amp;quot;initiate&amp;quot;, new AliCloud.Vpc.RouterInterfaceArgs
+    {
+        Description = name,
+        InstanceChargeType = &amp;quot;PostPaid&amp;quot;,
+        OppositeRegion = region,
+        Role = &amp;quot;InitiatingSide&amp;quot;,
+        RouterId = fooNetwork.RouterId,
+        RouterType = &amp;quot;VRouter&amp;quot;,
+        Specification = &amp;quot;Large.2&amp;quot;,
+    });
+    var opposite = new AliCloud.Vpc.RouterInterface(&amp;quot;opposite&amp;quot;, new AliCloud.Vpc.RouterInterfaceArgs
+    {
+        Description = $&amp;quot;{name}-opposite&amp;quot;,
+        OppositeRegion = region,
+        Role = &amp;quot;AcceptingSide&amp;quot;,
+        RouterId = barNetwork.RouterId,
+        RouterType = &amp;quot;VRouter&amp;quot;,
+        Specification = &amp;quot;Large.1&amp;quot;,
+    });
+    // A integrated router interface connection tunnel requires both InitiatingSide and AcceptingSide configuring opposite router interface.
+    var fooRouterInterfaceConnection = new AliCloud.Vpc.RouterInterfaceConnection(&amp;quot;fooRouterInterfaceConnection&amp;quot;, new AliCloud.Vpc.RouterInterfaceConnectionArgs
+    {
+        InterfaceId = initiate.Id,
+        OppositeInterfaceId = opposite.Id,
+    });
+    var barRouterInterfaceConnection = new AliCloud.Vpc.RouterInterfaceConnection(&amp;quot;barRouterInterfaceConnection&amp;quot;, new AliCloud.Vpc.RouterInterfaceConnectionArgs
+    {
+        InterfaceId = opposite.Id,
+        OppositeInterfaceId = initiate.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Vpc.RouterInterfaceConnectionArgs.html">RouterInterfaceConnectionArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Iot
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,42 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.Iot.ConsumerGroup.html">ConsumerGroup</a></h4>
       <section><p>Manages a Consumer Group within an IotHub</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleIoTHub = new Azure.Iot.IoTHub(&amp;quot;exampleIoTHub&amp;quot;, new Azure.Iot.IoTHubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+        {
+            Name = &amp;quot;S1&amp;quot;,
+            Capacity = &amp;quot;1&amp;quot;,
+        },
+        Tags = 
+        {
+            { &amp;quot;purpose&amp;quot;, &amp;quot;testing&amp;quot; },
+        },
+    });
+    var exampleConsumerGroup = new Azure.Iot.ConsumerGroup(&amp;quot;exampleConsumerGroup&amp;quot;, new Azure.Iot.ConsumerGroupArgs
+    {
+        IothubName = exampleIoTHub.Name,
+        EventhubEndpointName = &amp;quot;events&amp;quot;,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Iot.ConsumerGroupArgs.html">ConsumerGroupArgs</a></h4>
       <section></section>
@@ -85,6 +121,39 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Iot.DpsSharedAccessPolicy.html">DpsSharedAccessPolicy</a></h4>
       <section><p>Manages an IotHub Device Provisioning Service Shared Access Policy</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleIotHubDps = new Azure.Iot.IotHubDps(&amp;quot;exampleIotHubDps&amp;quot;, new Azure.Iot.IotHubDpsArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Sku = new Azure.Iot.Inputs.IotHubDpsSkuArgs
+        {
+            Name = &amp;quot;S1&amp;quot;,
+            Capacity = &amp;quot;1&amp;quot;,
+        },
+    });
+    var exampleDpsSharedAccessPolicy = new Azure.Iot.DpsSharedAccessPolicy(&amp;quot;exampleDpsSharedAccessPolicy&amp;quot;, new Azure.Iot.DpsSharedAccessPolicyArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        IothubDpsName = exampleIotHubDps.Name,
+        EnrollmentWrite = true,
+        EnrollmentRead = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Iot.DpsSharedAccessPolicyArgs.html">DpsSharedAccessPolicyArgs</a></h4>
       <section></section>
@@ -95,6 +164,65 @@
 <blockquote>
 <p><strong>NOTE:</strong> Endpoints can be defined either directly on the <code>azure.iot.IoTHub</code> resource, or using the <code>azurerm_iothub_endpoint_*</code> resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a <code>azurerm_iothub_endpoint_*</code> resource and another endpoint of a different type directly on the <code>azure.iot.IoTHub</code> resource is not supported.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var exampleEventHubNamespace = new Azure.EventHub.EventHubNamespace(&amp;quot;exampleEventHubNamespace&amp;quot;, new Azure.EventHub.EventHubNamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Basic&amp;quot;,
+    });
+    var exampleEventHub = new Azure.EventHub.EventHub(&amp;quot;exampleEventHub&amp;quot;, new Azure.EventHub.EventHubArgs
+    {
+        NamespaceName = exampleEventHubNamespace.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        PartitionCount = 2,
+        MessageRetention = 1,
+    });
+    var exampleAuthorizationRule = new Azure.EventHub.AuthorizationRule(&amp;quot;exampleAuthorizationRule&amp;quot;, new Azure.EventHub.AuthorizationRuleArgs
+    {
+        NamespaceName = exampleEventHubNamespace.Name,
+        EventhubName = exampleEventHub.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Listen = false,
+        Send = true,
+        Manage = false,
+    });
+    var exampleIoTHub = new Azure.Iot.IoTHub(&amp;quot;exampleIoTHub&amp;quot;, new Azure.Iot.IoTHubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+        {
+            Name = &amp;quot;B1&amp;quot;,
+            Tier = &amp;quot;Basic&amp;quot;,
+            Capacity = &amp;quot;1&amp;quot;,
+        },
+        Tags = 
+        {
+            { &amp;quot;purpose&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleEndpointEventhub = new Azure.Iot.EndpointEventhub(&amp;quot;exampleEndpointEventhub&amp;quot;, new Azure.Iot.EndpointEventhubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        IothubName = exampleIoTHub.Name,
+        ConnectionString = exampleAuthorizationRule.PrimaryConnectionString,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Iot.EndpointEventhubArgs.html">EndpointEventhubArgs</a></h4>
       <section></section>
@@ -105,6 +233,64 @@
 <blockquote>
 <p><strong>NOTE:</strong> Endpoints can be defined either directly on the <code>azure.iot.IoTHub</code> resource, or using the <code>azurerm_iothub_endpoint_*</code> resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a <code>azurerm_iothub_endpoint_*</code> resource and another endpoint of a different type directly on the <code>azure.iot.IoTHub</code> resource is not supported.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var exampleNamespace = new Azure.ServiceBus.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.ServiceBus.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+    });
+    var exampleQueue = new Azure.ServiceBus.Queue(&amp;quot;exampleQueue&amp;quot;, new Azure.ServiceBus.QueueArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+        EnablePartitioning = true,
+    });
+    var exampleQueueAuthorizationRule = new Azure.ServiceBus.QueueAuthorizationRule(&amp;quot;exampleQueueAuthorizationRule&amp;quot;, new Azure.ServiceBus.QueueAuthorizationRuleArgs
+    {
+        NamespaceName = exampleNamespace.Name,
+        QueueName = exampleQueue.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Listen = false,
+        Send = true,
+        Manage = false,
+    });
+    var exampleIoTHub = new Azure.Iot.IoTHub(&amp;quot;exampleIoTHub&amp;quot;, new Azure.Iot.IoTHubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+        {
+            Name = &amp;quot;B1&amp;quot;,
+            Tier = &amp;quot;Basic&amp;quot;,
+            Capacity = &amp;quot;1&amp;quot;,
+        },
+        Tags = 
+        {
+            { &amp;quot;purpose&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleEndpointServicebusQueue = new Azure.Iot.EndpointServicebusQueue(&amp;quot;exampleEndpointServicebusQueue&amp;quot;, new Azure.Iot.EndpointServicebusQueueArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        IothubName = exampleIoTHub.Name,
+        ConnectionString = exampleQueueAuthorizationRule.PrimaryConnectionString,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Iot.EndpointServicebusQueueArgs.html">EndpointServicebusQueueArgs</a></h4>
       <section></section>
@@ -115,6 +301,63 @@
 <blockquote>
 <p><strong>NOTE:</strong> Endpoints can be defined either directly on the <code>azure.iot.IoTHub</code> resource, or using the <code>azurerm_iothub_endpoint_*</code> resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a <code>azurerm_iothub_endpoint_*</code> resource and another endpoint of a different type directly on the <code>azure.iot.IoTHub</code> resource is not supported.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var exampleNamespace = new Azure.ServiceBus.Namespace(&amp;quot;exampleNamespace&amp;quot;, new Azure.ServiceBus.NamespaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;Standard&amp;quot;,
+    });
+    var exampleTopic = new Azure.ServiceBus.Topic(&amp;quot;exampleTopic&amp;quot;, new Azure.ServiceBus.TopicArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        NamespaceName = exampleNamespace.Name,
+    });
+    var exampleTopicAuthorizationRule = new Azure.ServiceBus.TopicAuthorizationRule(&amp;quot;exampleTopicAuthorizationRule&amp;quot;, new Azure.ServiceBus.TopicAuthorizationRuleArgs
+    {
+        NamespaceName = exampleNamespace.Name,
+        TopicName = exampleTopic.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Listen = false,
+        Send = true,
+        Manage = false,
+    });
+    var exampleIoTHub = new Azure.Iot.IoTHub(&amp;quot;exampleIoTHub&amp;quot;, new Azure.Iot.IoTHubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+        {
+            Name = &amp;quot;B1&amp;quot;,
+            Tier = &amp;quot;Basic&amp;quot;,
+            Capacity = &amp;quot;1&amp;quot;,
+        },
+        Tags = 
+        {
+            { &amp;quot;purpose&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+    var exampleEndpointServicebusTopic = new Azure.Iot.EndpointServicebusTopic(&amp;quot;exampleEndpointServicebusTopic&amp;quot;, new Azure.Iot.EndpointServicebusTopicArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        IothubName = exampleIoTHub.Name,
+        ConnectionString = exampleTopicAuthorizationRule.PrimaryConnectionString,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Iot.EndpointServicebusTopicArgs.html">EndpointServicebusTopicArgs</a></h4>
       <section></section>
@@ -185,6 +428,32 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Iot.IotHubDps.html">IotHubDps</a></h4>
       <section><p>Manages an IotHub Device Provisioning Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleIotHubDps = new Azure.Iot.IotHubDps(&amp;quot;exampleIotHubDps&amp;quot;, new Azure.Iot.IotHubDpsArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Sku = new Azure.Iot.Inputs.IotHubDpsSkuArgs
+        {
+            Name = &amp;quot;S1&amp;quot;,
+            Capacity = &amp;quot;1&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Iot.IotHubDpsArgs.html">IotHubDpsArgs</a></h4>
       <section></section>
@@ -204,10 +473,73 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Iot.SharedAccessPolicy.html">SharedAccessPolicy</a></h4>
       <section><p>Manages an IotHub Shared Access Policy</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleIoTHub = new Azure.Iot.IoTHub(&amp;quot;exampleIoTHub&amp;quot;, new Azure.Iot.IoTHubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+        {
+            Name = &amp;quot;S1&amp;quot;,
+            Capacity = &amp;quot;1&amp;quot;,
+        },
+    });
+    var exampleSharedAccessPolicy = new Azure.Iot.SharedAccessPolicy(&amp;quot;exampleSharedAccessPolicy&amp;quot;, new Azure.Iot.SharedAccessPolicyArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        IothubName = exampleIoTHub.Name,
+        RegistryRead = true,
+        RegistryWrite = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Iot.SharedAccessPolicyArgs.html">SharedAccessPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Iot.SharedAccessPolicyState.html">SharedAccessPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Iot.TimeSeriesInsightsStandardEnvironment.html">TimeSeriesInsightsStandardEnvironment</a></h4>
+      <section><p>Manages an Azure IoT Time Series Insights Standard Environment.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleTimeSeriesInsightsStandardEnvironment = new Azure.Iot.TimeSeriesInsightsStandardEnvironment(&amp;quot;exampleTimeSeriesInsightsStandardEnvironment&amp;quot;, new Azure.Iot.TimeSeriesInsightsStandardEnvironmentArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        SkuName = &amp;quot;S1_1&amp;quot;,
+        DataRetentionTime = &amp;quot;P30D&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Iot.TimeSeriesInsightsStandardEnvironmentArgs.html">TimeSeriesInsightsStandardEnvironmentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Iot.TimeSeriesInsightsStandardEnvironmentState.html">TimeSeriesInsightsStandardEnvironmentState</a></h4>
       <section></section>
 </article>
           </div>

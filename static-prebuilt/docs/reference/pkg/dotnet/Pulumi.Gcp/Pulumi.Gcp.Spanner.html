@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Spanner
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,32 @@
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/spanner/">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---spanner-database-basic">Example Usage - Spanner Database Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var main = new Gcp.Spanner.Instance(&amp;quot;main&amp;quot;, new Gcp.Spanner.InstanceArgs
+    {
+        Config = &amp;quot;regional-europe-west1&amp;quot;,
+        DisplayName = &amp;quot;main-instance&amp;quot;,
+    });
+    var database = new Gcp.Spanner.Database(&amp;quot;database&amp;quot;, new Gcp.Spanner.DatabaseArgs
+    {
+        Instance = main.Name,
+        Ddls = 
+        {
+            &amp;quot;CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)&amp;quot;,
+            &amp;quot;CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Spanner.DatabaseArgs.html">DatabaseArgs</a></h4>
       <section></section>
@@ -105,6 +131,79 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.spanner.DatabaseIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.spanner.DatabaseIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_spanner_database_iam_policy">google_spanner_database_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var database = new Gcp.Spanner.DatabaseIAMPolicy(&amp;quot;database&amp;quot;, new Gcp.Spanner.DatabaseIAMPolicyArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Database = &amp;quot;your-database-name&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_database_iam_binding">google_spanner_database_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var database = new Gcp.Spanner.DatabaseIAMBinding(&amp;quot;database&amp;quot;, new Gcp.Spanner.DatabaseIAMBindingArgs
+    {
+        Database = &amp;quot;your-database-name&amp;quot;,
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_database_iam_member">google_spanner_database_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var database = new Gcp.Spanner.DatabaseIAMMember(&amp;quot;database&amp;quot;, new Gcp.Spanner.DatabaseIAMMemberArgs
+    {
+        Database = &amp;quot;your-database-name&amp;quot;,
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Spanner.DatabaseIAMBindingArgs.html">DatabaseIAMBindingArgs</a></h4>
       <section></section>
@@ -128,6 +227,79 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.spanner.DatabaseIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.spanner.DatabaseIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_spanner_database_iam_policy">google_spanner_database_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var database = new Gcp.Spanner.DatabaseIAMPolicy(&amp;quot;database&amp;quot;, new Gcp.Spanner.DatabaseIAMPolicyArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Database = &amp;quot;your-database-name&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_database_iam_binding">google_spanner_database_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var database = new Gcp.Spanner.DatabaseIAMBinding(&amp;quot;database&amp;quot;, new Gcp.Spanner.DatabaseIAMBindingArgs
+    {
+        Database = &amp;quot;your-database-name&amp;quot;,
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_database_iam_member">google_spanner_database_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var database = new Gcp.Spanner.DatabaseIAMMember(&amp;quot;database&amp;quot;, new Gcp.Spanner.DatabaseIAMMemberArgs
+    {
+        Database = &amp;quot;your-database-name&amp;quot;,
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Spanner.DatabaseIAMMemberArgs.html">DatabaseIAMMemberArgs</a></h4>
       <section></section>
@@ -151,6 +323,79 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.spanner.DatabaseIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.spanner.DatabaseIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_spanner_database_iam_policy">google_spanner_database_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var database = new Gcp.Spanner.DatabaseIAMPolicy(&amp;quot;database&amp;quot;, new Gcp.Spanner.DatabaseIAMPolicyArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Database = &amp;quot;your-database-name&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_database_iam_binding">google_spanner_database_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var database = new Gcp.Spanner.DatabaseIAMBinding(&amp;quot;database&amp;quot;, new Gcp.Spanner.DatabaseIAMBindingArgs
+    {
+        Database = &amp;quot;your-database-name&amp;quot;,
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_database_iam_member">google_spanner_database_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var database = new Gcp.Spanner.DatabaseIAMMember(&amp;quot;database&amp;quot;, new Gcp.Spanner.DatabaseIAMMemberArgs
+    {
+        Database = &amp;quot;your-database-name&amp;quot;,
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Spanner.DatabaseIAMPolicyArgs.html">DatabaseIAMPolicyArgs</a></h4>
       <section></section>
@@ -167,6 +412,28 @@ hosted.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/spanner/">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---spanner-instance-basic">Example Usage - Spanner Instance Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Gcp.Spanner.Instance(&amp;quot;example&amp;quot;, new Gcp.Spanner.InstanceArgs
+    {
+        Config = &amp;quot;regional-us-central1&amp;quot;,
+        DisplayName = &amp;quot;Test Spanner Instance&amp;quot;,
+        Labels = 
+        {
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+        NumNodes = 2,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Spanner.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
@@ -188,6 +455,76 @@ hosted.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.spanner.InstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.spanner.InstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_spanner_instance_iam_policy">google_spanner_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var instance = new Gcp.Spanner.InstanceIAMPolicy(&amp;quot;instance&amp;quot;, new Gcp.Spanner.InstanceIAMPolicyArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_instance_iam_binding">google_spanner_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new Gcp.Spanner.InstanceIAMBinding(&amp;quot;instance&amp;quot;, new Gcp.Spanner.InstanceIAMBindingArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_instance_iam_member">google_spanner_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new Gcp.Spanner.InstanceIAMMember(&amp;quot;instance&amp;quot;, new Gcp.Spanner.InstanceIAMMemberArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Spanner.InstanceIAMBindingArgs.html">InstanceIAMBindingArgs</a></h4>
       <section></section>
@@ -211,6 +548,76 @@ hosted.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.spanner.InstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.spanner.InstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_spanner_instance_iam_policy">google_spanner_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var instance = new Gcp.Spanner.InstanceIAMPolicy(&amp;quot;instance&amp;quot;, new Gcp.Spanner.InstanceIAMPolicyArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_instance_iam_binding">google_spanner_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new Gcp.Spanner.InstanceIAMBinding(&amp;quot;instance&amp;quot;, new Gcp.Spanner.InstanceIAMBindingArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_instance_iam_member">google_spanner_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new Gcp.Spanner.InstanceIAMMember(&amp;quot;instance&amp;quot;, new Gcp.Spanner.InstanceIAMMemberArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Spanner.InstanceIAMMemberArgs.html">InstanceIAMMemberArgs</a></h4>
       <section></section>
@@ -234,6 +641,76 @@ hosted.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.spanner.InstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.spanner.InstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_spanner_instance_iam_policy">google_spanner_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/editor&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var instance = new Gcp.Spanner.InstanceIAMPolicy(&amp;quot;instance&amp;quot;, new Gcp.Spanner.InstanceIAMPolicyArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_instance_iam_binding">google_spanner_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new Gcp.Spanner.InstanceIAMBinding(&amp;quot;instance&amp;quot;, new Gcp.Spanner.InstanceIAMBindingArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_spanner_instance_iam_member">google_spanner_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var instance = new Gcp.Spanner.InstanceIAMMember(&amp;quot;instance&amp;quot;, new Gcp.Spanner.InstanceIAMMemberArgs
+    {
+        Instance = &amp;quot;your-instance-name&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Spanner.InstanceIAMPolicyArgs.html">InstanceIAMPolicyArgs</a></h4>
       <section></section>

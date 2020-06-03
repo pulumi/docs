@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.OperationalInsights
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,50 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.OperationalInsights.AnalyticsSolution.html">AnalyticsSolution</a></h4>
       <section><p>Manages a Log Analytics (formally Operational Insights) Solution.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;westeurope&amp;quot;,
+    });
+    var workspace = new Random.RandomId(&amp;quot;workspace&amp;quot;, new Random.RandomIdArgs
+    {
+        Keepers = 
+        {
+            { &amp;quot;group_name&amp;quot;, exampleResourceGroup.Name },
+        },
+        ByteLength = 8,
+    });
+    var exampleAnalyticsWorkspace = new Azure.OperationalInsights.AnalyticsWorkspace(&amp;quot;exampleAnalyticsWorkspace&amp;quot;, new Azure.OperationalInsights.AnalyticsWorkspaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;PerGB2018&amp;quot;,
+    });
+    var exampleAnalyticsSolution = new Azure.OperationalInsights.AnalyticsSolution(&amp;quot;exampleAnalyticsSolution&amp;quot;, new Azure.OperationalInsights.AnalyticsSolutionArgs
+    {
+        SolutionName = &amp;quot;ContainerInsights&amp;quot;,
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        WorkspaceResourceId = exampleAnalyticsWorkspace.Id,
+        WorkspaceName = exampleAnalyticsWorkspace.Name,
+        Plan = new Azure.OperationalInsights.Inputs.AnalyticsSolutionPlanArgs
+        {
+            Publisher = &amp;quot;Microsoft&amp;quot;,
+            Product = &amp;quot;OMSGallery/ContainerInsights&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.OperationalInsights.AnalyticsSolutionArgs.html">AnalyticsSolutionArgs</a></h4>
       <section></section>
@@ -85,6 +129,29 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.OperationalInsights.AnalyticsWorkspace.html">AnalyticsWorkspace</a></h4>
       <section><p>Manages a Log Analytics (formally Operational Insights) Workspace.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;East US&amp;quot;,
+    });
+    var exampleAnalyticsWorkspace = new Azure.OperationalInsights.AnalyticsWorkspace(&amp;quot;exampleAnalyticsWorkspace&amp;quot;, new Azure.OperationalInsights.AnalyticsWorkspaceArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Sku = &amp;quot;PerGB2018&amp;quot;,
+        RetentionInDays = 30,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.OperationalInsights.AnalyticsWorkspaceArgs.html">AnalyticsWorkspaceArgs</a></h4>
       <section></section>

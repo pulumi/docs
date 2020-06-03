@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.Dns
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,37 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Dns.RecordSet.html">RecordSet</a></h4>
       <section><p>Manages a DNS record set in the OpenStack DNS Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="automatically-detect-the-correct-network">Automatically detect the correct network</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleZone = new OpenStack.Dns.Zone(&amp;quot;exampleZone&amp;quot;, new OpenStack.Dns.ZoneArgs
+    {
+        Description = &amp;quot;a zone&amp;quot;,
+        Email = &amp;quot;email2@example.com&amp;quot;,
+        Ttl = 6000,
+        Type = &amp;quot;PRIMARY&amp;quot;,
+    });
+    var rsExampleCom = new OpenStack.Dns.RecordSet(&amp;quot;rsExampleCom&amp;quot;, new OpenStack.Dns.RecordSetArgs
+    {
+        Description = &amp;quot;An example record set&amp;quot;,
+        Records = 
+        {
+            &amp;quot;10.0.0.1&amp;quot;,
+        },
+        Ttl = 3000,
+        Type = &amp;quot;A&amp;quot;,
+        ZoneId = exampleZone.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Dns.RecordSetArgs.html">RecordSetArgs</a></h4>
       <section></section>
@@ -91,6 +122,26 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Dns.Zone.html">Zone</a></h4>
       <section><p>Manages a DNS zone in the OpenStack DNS Service.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="automatically-detect-the-correct-network">Automatically detect the correct network</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example_com = new OpenStack.Dns.Zone(&amp;quot;example.com&amp;quot;, new OpenStack.Dns.ZoneArgs
+    {
+        Description = &amp;quot;An example zone&amp;quot;,
+        Email = &amp;quot;jdoe@example.com&amp;quot;,
+        Ttl = 3000,
+        Type = &amp;quot;PRIMARY&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Dns.ZoneArgs.html">ZoneArgs</a></h4>
       <section></section>

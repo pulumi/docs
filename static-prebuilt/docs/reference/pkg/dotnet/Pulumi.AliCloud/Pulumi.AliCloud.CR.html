@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.CR
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -96,6 +96,23 @@
 <blockquote>
 <p><strong>NOTE:</strong> You need to set your registry password in Container Registry console before use this resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_namespace = new AliCloud.CR.Namespace(&amp;quot;my-namespace&amp;quot;, new AliCloud.CR.NamespaceArgs
+    {
+        AutoCreate = false,
+        DefaultVisibility = &amp;quot;PUBLIC&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.CR.NamespaceArgs.html">NamespaceArgs</a></h4>
       <section></section>
@@ -109,6 +126,30 @@
 <blockquote>
 <p><strong>NOTE:</strong> You need to set your registry password in Container Registry console before use this resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var my_namespace = new AliCloud.CR.Namespace(&amp;quot;my-namespace&amp;quot;, new AliCloud.CR.NamespaceArgs
+    {
+        AutoCreate = false,
+        DefaultVisibility = &amp;quot;PUBLIC&amp;quot;,
+    });
+    var my_repo = new AliCloud.CR.Repo(&amp;quot;my-repo&amp;quot;, new AliCloud.CR.RepoArgs
+    {
+        Detail = &amp;quot;this is a public repo&amp;quot;,
+        Namespace = my_namespace.Name,
+        RepoType = &amp;quot;PUBLIC&amp;quot;,
+        Summary = &amp;quot;this is summary of my new repo&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.CR.RepoArgs.html">RepoArgs</a></h4>
       <section></section>

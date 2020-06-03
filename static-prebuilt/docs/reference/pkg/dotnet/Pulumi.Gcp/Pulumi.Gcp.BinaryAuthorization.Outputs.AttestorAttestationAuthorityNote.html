@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AttestorAttestationAuthorityNote
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,23 +78,59 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">AttestorAttestationAuthorityNote</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BinaryAuthorization.Outputs.html">Pulumi.Gcp.BinaryAuthorization.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_BinaryAuthorization_Outputs_AttestorAttestationAuthorityNote_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class AttestorAttestationAuthorityNote : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class AttestorAttestationAuthorityNote</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Outputs/AttestorAttestationAuthorityNote.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Outputs/AttestorAttestationAuthorityNote.cs/#L28">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_BinaryAuthorization_Outputs_AttestorAttestationAuthorityNote_DelegationServiceAccountEmail" data-uid="Pulumi.Gcp.BinaryAuthorization.Outputs.AttestorAttestationAuthorityNote.DelegationServiceAccountEmail">DelegationServiceAccountEmail</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><ul>
+<li></li>
+</ul>
+<p>This field will contain the service account email address that
+this Attestor will use as the principal when querying Container
+Analysis. Attestor administrators must grant this service account
+the IAM role needed to read attestations from the noteReference in
+Container Analysis (containeranalysis.notes.occurrences.viewer).
+This email address is fixed for the lifetime of the Attestor, but
+callers should not make any other assumptions about the service
+account email; future versions may use an email based on a
+different naming pattern.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DelegationServiceAccountEmail</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DelegationServiceAccountEmail</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -106,16 +142,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Outputs/AttestorAttestationAuthorityNote.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Outputs/AttestorAttestationAuthorityNote.cs/#L38">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_BinaryAuthorization_Outputs_AttestorAttestationAuthorityNote_NoteReference" data-uid="Pulumi.Gcp.BinaryAuthorization.Outputs.AttestorAttestationAuthorityNote.NoteReference">NoteReference</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The resource name of a ATTESTATION_AUTHORITY Note, created by the
+user. If the Note is in a different project from the Attestor, it
+should be specified in the format <code>projects/*/notes/*</code> (or the legacy
+<code>providers/*/notes/*</code>). This field may not be updated.
+An attestation by this attestor is stored as a Container Analysis
+ATTESTATION_AUTHORITY Occurrence that names a container image
+and that links to this Note.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -137,10 +180,17 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Outputs/AttestorAttestationAuthorityNote.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Outputs/AttestorAttestationAuthorityNote.cs/#L48">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_BinaryAuthorization_Outputs_AttestorAttestationAuthorityNote_PublicKeys" data-uid="Pulumi.Gcp.BinaryAuthorization.Outputs.AttestorAttestationAuthorityNote.PublicKeys">PublicKeys</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Public keys that verify attestations signed by this attestor. This
+field may be updated.
+If this field is non-empty, one of the specified public keys must
+verify that an attestation was signed by this attestor for the
+image specified in the admission request.
+If this field is empty, this attestor always returns that no valid
+attestations exist.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -156,7 +206,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.BinaryAuthorization.Outputs.AttestorAttestationAuthorityNotePublicKey.html">AttestorAttestationAuthorityNotePublicKey</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.BinaryAuthorization.Outputs.AttestorAttestationAuthorityNotePublicKey.html">AttestorAttestationAuthorityNotePublicKey</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -168,7 +218,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BinaryAuthorization/Outputs/AttestorAttestationAuthorityNote.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/BinaryAuthorization/Outputs/AttestorAttestationAuthorityNote.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

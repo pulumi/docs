@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Cfg
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,23 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.AggregateAuthorization.html">AggregateAuthorization</a></h4>
       <section><p>Manages an AWS Config Aggregate Authorization</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Cfg.AggregateAuthorization(&amp;quot;example&amp;quot;, new Aws.Cfg.AggregateAuthorizationArgs
+    {
+        AccountId = &amp;quot;123456789012&amp;quot;,
+        Region = &amp;quot;eu-west-2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.AggregateAuthorizationArgs.html">AggregateAuthorizationArgs</a></h4>
       <section></section>
@@ -85,6 +102,76 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.ConfigurationAggregator.html">ConfigurationAggregator</a></h4>
       <section><p>Manages an AWS Config Configuration Aggregator</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="account-based-aggregation">Account Based Aggregation</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var account = new Aws.Cfg.ConfigurationAggregator(&amp;quot;account&amp;quot;, new Aws.Cfg.ConfigurationAggregatorArgs
+    {
+        AccountAggregationSource = new Aws.Cfg.Inputs.ConfigurationAggregatorAccountAggregationSourceArgs
+        {
+            AccountIds = 
+            {
+                &amp;quot;123456789012&amp;quot;,
+            },
+            Regions = 
+            {
+                &amp;quot;us-west-2&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="organization-based-aggregation">Organization Based Aggregation</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var organizationRole = new Aws.Iam.Role(&amp;quot;organizationRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;config.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var organizationConfigurationAggregator = new Aws.Cfg.ConfigurationAggregator(&amp;quot;organizationConfigurationAggregator&amp;quot;, new Aws.Cfg.ConfigurationAggregatorArgs
+    {
+        OrganizationAggregationSource = new Aws.Cfg.Inputs.ConfigurationAggregatorOrganizationAggregationSourceArgs
+        {
+            AllRegions = true,
+            RoleArn = organizationRole.Arn,
+        },
+    });
+    var organizationRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment(&amp;quot;organizationRolePolicyAttachment&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations&amp;quot;,
+        Role = organizationRole.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.ConfigurationAggregatorArgs.html">ConfigurationAggregatorArgs</a></h4>
       <section></section>
@@ -95,6 +182,74 @@
 <blockquote>
 <p><strong>Note:</strong> Delivery Channel requires a <a href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">Configuration Recorder</a> to be present. Use of <code>depends_on</code> (as shown below) is recommended to avoid race conditions.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        ForceDestroy = true,
+    });
+    var fooDeliveryChannel = new Aws.Cfg.DeliveryChannel(&amp;quot;fooDeliveryChannel&amp;quot;, new Aws.Cfg.DeliveryChannelArgs
+    {
+        S3BucketName = bucket.BucketName,
+    });
+    var role = new Aws.Iam.Role(&amp;quot;role&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;config.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var fooRecorder = new Aws.Cfg.Recorder(&amp;quot;fooRecorder&amp;quot;, new Aws.Cfg.RecorderArgs
+    {
+        RoleArn = role.Arn,
+    });
+    var rolePolicy = new Aws.Iam.RolePolicy(&amp;quot;rolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = Output.Tuple(bucket.Arn, bucket.Arn).Apply(values =&gt;
+        {
+            var bucketArn = values.Item1;
+            var bucketArn1 = values.Item2;
+            return @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;s3:*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;{bucketArn}&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;{bucketArn1}/*&amp;quot;&amp;quot;
+  ]
+}}
+]
+}}
+
+&amp;quot;;
+        }),
+        Role = role.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.DeliveryChannelArgs.html">DeliveryChannelArgs</a></h4>
       <section></section>
@@ -108,6 +263,40 @@
 <blockquote>
 <p><strong>NOTE:</strong> The proper Lambda permission to allow the AWS Config service invoke the Lambda Function must be in place before the rule will successfully create or update. See also the <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html"><code>aws.lambda.Permission</code> resource</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var examplePermission = new Aws.Lambda.Permission(&amp;quot;examplePermission&amp;quot;, new Aws.Lambda.PermissionArgs
+    {
+        Action = &amp;quot;lambda:InvokeFunction&amp;quot;,
+        Function = aws_lambda_function.Example.Arn,
+        Principal = &amp;quot;config.amazonaws.com&amp;quot;,
+    });
+    var exampleOrganization = new Aws.Organizations.Organization(&amp;quot;exampleOrganization&amp;quot;, new Aws.Organizations.OrganizationArgs
+    {
+        AwsServiceAccessPrincipals = 
+        {
+            &amp;quot;config-multiaccountsetup.amazonaws.com&amp;quot;,
+        },
+        FeatureSet = &amp;quot;ALL&amp;quot;,
+    });
+    var exampleOrganizationCustomRule = new Aws.Cfg.OrganizationCustomRule(&amp;quot;exampleOrganizationCustomRule&amp;quot;, new Aws.Cfg.OrganizationCustomRuleArgs
+    {
+        LambdaFunctionArn = aws_lambda_function.Example.Arn,
+        TriggerTypes = 
+        {
+            &amp;quot;ConfigurationItemChangeNotification&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.OrganizationCustomRuleArgs.html">OrganizationCustomRuleArgs</a></h4>
       <section></section>
@@ -121,6 +310,30 @@
 <blockquote>
 <p><strong>NOTE:</strong> Every Organization account except those configured in the <code>excluded_accounts</code> argument must have a Configuration Recorder with proper IAM permissions before the rule will successfully create or update. See also the <a href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html"><code>aws.cfg.Recorder</code> resource</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleOrganization = new Aws.Organizations.Organization(&amp;quot;exampleOrganization&amp;quot;, new Aws.Organizations.OrganizationArgs
+    {
+        AwsServiceAccessPrincipals = 
+        {
+            &amp;quot;config-multiaccountsetup.amazonaws.com&amp;quot;,
+        },
+        FeatureSet = &amp;quot;ALL&amp;quot;,
+    });
+    var exampleOrganizationManagedRule = new Aws.Cfg.OrganizationManagedRule(&amp;quot;exampleOrganizationManagedRule&amp;quot;, new Aws.Cfg.OrganizationManagedRuleArgs
+    {
+        RuleIdentifier = &amp;quot;IAM_PASSWORD_POLICY&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.OrganizationManagedRuleArgs.html">OrganizationManagedRuleArgs</a></h4>
       <section></section>
@@ -131,6 +344,40 @@
 <blockquote>
 <p><strong>Note:</strong> <em>Starting</em> the Configuration Recorder requires a <a href="https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html">delivery channel</a> (while delivery channel creation requires Configuration Recorder). This is why <a href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder_status.html"><code>aws.cfg.RecorderStatus</code></a> is a separate resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var role = new Aws.Iam.Role(&amp;quot;role&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;config.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var foo = new Aws.Cfg.Recorder(&amp;quot;foo&amp;quot;, new Aws.Cfg.RecorderArgs
+    {
+        RoleArn = role.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.RecorderArgs.html">RecorderArgs</a></h4>
       <section></section>
@@ -141,6 +388,82 @@
 <blockquote>
 <p><strong>Note:</strong> Starting Configuration Recorder requires a <a href="https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html">Delivery Channel</a> to be present. Use of <code>depends_on</code> (as shown below) is recommended to avoid race conditions.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fooRecorderStatus = new Aws.Cfg.RecorderStatus(&amp;quot;fooRecorderStatus&amp;quot;, new Aws.Cfg.RecorderStatusArgs
+    {
+        IsEnabled = true,
+    });
+    var role = new Aws.Iam.Role(&amp;quot;role&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;config.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var rolePolicyAttachment = new Aws.Iam.RolePolicyAttachment(&amp;quot;rolePolicyAttachment&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/service-role/AWSConfigRole&amp;quot;,
+        Role = role.Name,
+    });
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+    });
+    var fooDeliveryChannel = new Aws.Cfg.DeliveryChannel(&amp;quot;fooDeliveryChannel&amp;quot;, new Aws.Cfg.DeliveryChannelArgs
+    {
+        S3BucketName = bucket.BucketName,
+    });
+    var fooRecorder = new Aws.Cfg.Recorder(&amp;quot;fooRecorder&amp;quot;, new Aws.Cfg.RecorderArgs
+    {
+        RoleArn = role.Arn,
+    });
+    var rolePolicy = new Aws.Iam.RolePolicy(&amp;quot;rolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = Output.Tuple(bucket.Arn, bucket.Arn).Apply(values =&gt;
+        {
+            var bucketArn = values.Item1;
+            var bucketArn1 = values.Item2;
+            return @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;s3:*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;{bucketArn}&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;{bucketArn1}/*&amp;quot;&amp;quot;
+  ]
+}}
+]
+}}
+
+&amp;quot;;
+        }),
+        Role = role.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.RecorderStatusArgs.html">RecorderStatusArgs</a></h4>
       <section></section>
@@ -151,6 +474,98 @@
 <blockquote>
 <p><strong>Note:</strong> Config Rule requires an existing <a href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">Configuration Recorder</a> to be present. Use of <code>depends_on</code> is recommended (as shown below) to avoid race conditions.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="aws-managed-rules">AWS Managed Rules</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var rule = new Aws.Cfg.Rule(&amp;quot;rule&amp;quot;, new Aws.Cfg.RuleArgs
+    {
+        Source = new Aws.Cfg.Inputs.RuleSourceArgs
+        {
+            Owner = &amp;quot;AWS&amp;quot;,
+            SourceIdentifier = &amp;quot;S3_BUCKET_VERSIONING_ENABLED&amp;quot;,
+        },
+    });
+    var role = new Aws.Iam.Role(&amp;quot;role&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;config.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var foo = new Aws.Cfg.Recorder(&amp;quot;foo&amp;quot;, new Aws.Cfg.RecorderArgs
+    {
+        RoleArn = role.Arn,
+    });
+    var rolePolicy = new Aws.Iam.RolePolicy(&amp;quot;rolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+&amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;config:Put*&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+
+}
+]
+}
+
+&amp;quot;,
+        Role = role.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="custom-rules">Custom Rules</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleRecorder = new Aws.Cfg.Recorder(&amp;quot;exampleRecorder&amp;quot;, new Aws.Cfg.RecorderArgs
+    {
+    });
+    var exampleFunction = new Aws.Lambda.Function(&amp;quot;exampleFunction&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+    });
+    var examplePermission = new Aws.Lambda.Permission(&amp;quot;examplePermission&amp;quot;, new Aws.Lambda.PermissionArgs
+    {
+        Action = &amp;quot;lambda:InvokeFunction&amp;quot;,
+        Function = exampleFunction.Arn,
+        Principal = &amp;quot;config.amazonaws.com&amp;quot;,
+    });
+    var exampleRule = new Aws.Cfg.Rule(&amp;quot;exampleRule&amp;quot;, new Aws.Cfg.RuleArgs
+    {
+        Source = new Aws.Cfg.Inputs.RuleSourceArgs
+        {
+            Owner = &amp;quot;CUSTOM_LAMBDA&amp;quot;,
+            SourceIdentifier = exampleFunction.Arn,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.RuleArgs.html">RuleArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.TokenAuth
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,6 +80,36 @@
       <section><p>Manages Token auth backend role in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/token.html">Vault
 documentation</a> for more
 information.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Vault.TokenAuth.AuthBackendRole(&amp;quot;example&amp;quot;, new Vault.TokenAuth.AuthBackendRoleArgs
+    {
+        AllowedPolicies = 
+        {
+            &amp;quot;dev&amp;quot;,
+            &amp;quot;test&amp;quot;,
+        },
+        DisallowedPolicies = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+        ExplicitMaxTtl = &amp;quot;115200&amp;quot;,
+        Orphan = true,
+        PathSuffix = &amp;quot;path-suffix&amp;quot;,
+        Period = &amp;quot;86400&amp;quot;,
+        Renewable = true,
+        RoleName = &amp;quot;my-role&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.TokenAuth.AuthBackendRoleArgs.html">AuthBackendRoleArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault.Database
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -92,6 +92,46 @@
       <section><p>Creates a Database Secret Backend static role in Vault. Database secret backend
 static roles can be used to manage 1-to-1 mapping of a Vault Role to a user in a
 database for the database.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var db = new Vault.Mount(&amp;quot;db&amp;quot;, new Vault.MountArgs
+    {
+        Path = &amp;quot;postgres&amp;quot;,
+        Type = &amp;quot;database&amp;quot;,
+    });
+    var postgres = new Vault.Database.SecretBackendConnection(&amp;quot;postgres&amp;quot;, new Vault.Database.SecretBackendConnectionArgs
+    {
+        AllowedRoles = 
+        {
+            &amp;quot;*&amp;quot;,
+        },
+        Backend = db.Path,
+        Postgresql = new Vault.Database.Inputs.SecretBackendConnectionPostgresqlArgs
+        {
+            ConnectionUrl = &amp;quot;postgres://username:password@host:port/database&amp;quot;,
+        },
+    });
+    var staticRole = new Vault.Database.SecretBackendStaticRole(&amp;quot;staticRole&amp;quot;, new Vault.Database.SecretBackendStaticRoleArgs
+    {
+        Backend = db.Path,
+        DbName = postgres.Name,
+        RotationPeriod = &amp;quot;3600&amp;quot;,
+        RotationStatements = 
+        {
+            &amp;quot;ALTER USER \&amp;quot;{{name}}\&amp;quot; WITH PASSWORD &amp;apos;{{password}}&amp;apos;;&amp;quot;,
+        },
+        Username = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Database.SecretBackendStaticRoleArgs.html">SecretBackendStaticRoleArgs</a></h4>
       <section></section>

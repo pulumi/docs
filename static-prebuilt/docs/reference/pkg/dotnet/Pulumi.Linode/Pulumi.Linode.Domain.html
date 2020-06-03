@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Domain
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,7 +71,41 @@
   
   <h1 id="Pulumi_Linode_Domain" data-uid="Pulumi.Linode.Domain" class="text-break">Class Domain
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides a Linode Domain resource.  This can be used to create, modify, and delete Linode Domains through Linode's managed DNS service.
+For more information, see <a href="https://www.linode.com/docs/platform/manager/dns-manager/">DNS Manager</a> and the <a href="https://developers.linode.com/api/v4#operation/createDomain">Linode APIv4 docs</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobarDomain = new Linode.Domain(&amp;quot;foobarDomain&amp;quot;, new Linode.DomainArgs
+    {
+        Domain = &amp;quot;foobar.example&amp;quot;,
+        SoaEmail = &amp;quot;example@foobar.example&amp;quot;,
+        Tags = 
+        {
+            &amp;quot;foo&amp;quot;,
+            &amp;quot;bar&amp;quot;,
+        },
+        Type = &amp;quot;master&amp;quot;,
+    });
+    var foobarDomainRecord = new Linode.DomainRecord(&amp;quot;foobarDomainRecord&amp;quot;, new Linode.DomainRecordArgs
+    {
+        DomainId = foobarDomain.Id,
+        Name = &amp;quot;www&amp;quot;,
+        RecordType = &amp;quot;CNAME&amp;quot;,
+        Target = &amp;quot;foobar.example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<p>This resource exports no additional attributes, however <code>status</code> may reflect degraded states.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -125,7 +159,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain__ctor_" data-uid="Pulumi.Linode.Domain.#ctor*"></a>
   <h4 id="Pulumi_Linode_Domain__ctor_System_String_Pulumi_Linode_DomainArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.Domain.#ctor(System.String,Pulumi.Linode.DomainArgs,Pulumi.CustomResourceOptions)">Domain(String, DomainArgs, CustomResourceOptions)</h4>
@@ -169,7 +203,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_AxfrIps_" data-uid="Pulumi.Linode.Domain.AxfrIps*"></a>
   <h4 id="Pulumi_Linode_Domain_AxfrIps" data-uid="Pulumi.Linode.Domain.AxfrIps">AxfrIps</h4>
@@ -196,7 +230,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_Description_" data-uid="Pulumi.Linode.Domain.Description*"></a>
   <h4 id="Pulumi_Linode_Domain_Description" data-uid="Pulumi.Linode.Domain.Description">Description</h4>
@@ -223,7 +257,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_DomainName_" data-uid="Pulumi.Linode.Domain.DomainName*"></a>
   <h4 id="Pulumi_Linode_Domain_DomainName" data-uid="Pulumi.Linode.Domain.DomainName">DomainName</h4>
@@ -250,7 +284,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_ExpireSec_" data-uid="Pulumi.Linode.Domain.ExpireSec*"></a>
   <h4 id="Pulumi_Linode_Domain_ExpireSec" data-uid="Pulumi.Linode.Domain.ExpireSec">ExpireSec</h4>
@@ -277,7 +311,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_Group_" data-uid="Pulumi.Linode.Domain.Group*"></a>
   <h4 id="Pulumi_Linode_Domain_Group" data-uid="Pulumi.Linode.Domain.Group">Group</h4>
@@ -304,7 +338,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_MasterIps_" data-uid="Pulumi.Linode.Domain.MasterIps*"></a>
   <h4 id="Pulumi_Linode_Domain_MasterIps" data-uid="Pulumi.Linode.Domain.MasterIps">MasterIps</h4>
@@ -331,7 +365,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_RefreshSec_" data-uid="Pulumi.Linode.Domain.RefreshSec*"></a>
   <h4 id="Pulumi_Linode_Domain_RefreshSec" data-uid="Pulumi.Linode.Domain.RefreshSec">RefreshSec</h4>
@@ -358,7 +392,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_RetrySec_" data-uid="Pulumi.Linode.Domain.RetrySec*"></a>
   <h4 id="Pulumi_Linode_Domain_RetrySec" data-uid="Pulumi.Linode.Domain.RetrySec">RetrySec</h4>
@@ -385,7 +419,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_SoaEmail_" data-uid="Pulumi.Linode.Domain.SoaEmail*"></a>
   <h4 id="Pulumi_Linode_Domain_SoaEmail" data-uid="Pulumi.Linode.Domain.SoaEmail">SoaEmail</h4>
@@ -412,7 +446,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_Status_" data-uid="Pulumi.Linode.Domain.Status*"></a>
   <h4 id="Pulumi_Linode_Domain_Status" data-uid="Pulumi.Linode.Domain.Status">Status</h4>
@@ -439,7 +473,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_Tags_" data-uid="Pulumi.Linode.Domain.Tags*"></a>
   <h4 id="Pulumi_Linode_Domain_Tags" data-uid="Pulumi.Linode.Domain.Tags">Tags</h4>
@@ -466,7 +500,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_TtlSec_" data-uid="Pulumi.Linode.Domain.TtlSec*"></a>
   <h4 id="Pulumi_Linode_Domain_TtlSec" data-uid="Pulumi.Linode.Domain.TtlSec">TtlSec</h4>
@@ -493,7 +527,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_Type_" data-uid="Pulumi.Linode.Domain.Type*"></a>
   <h4 id="Pulumi_Linode_Domain_Type" data-uid="Pulumi.Linode.Domain.Type">Type</h4>
@@ -522,7 +556,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Linode_Domain_Get_" data-uid="Pulumi.Linode.Domain.Get*"></a>
   <h4 id="Pulumi_Linode_Domain_Get_System_String_Pulumi_Input_System_String__Pulumi_Linode_DomainState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.Domain.Get(System.String,Pulumi.Input{System.String},Pulumi.Linode.DomainState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DomainState, CustomResourceOptions)</h4>
@@ -592,7 +626,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Domain.cs/#L55" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

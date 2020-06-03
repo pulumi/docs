@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NotebookInstance
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,71 @@
   <h1 id="Pulumi_Aws_Sagemaker_NotebookInstance" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance" class="text-break">Class NotebookInstance
   </h1>
   <div class="markdown level0 summary"><p>Provides a Sagemaker Notebook Instance resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ni = new Aws.Sagemaker.NotebookInstance(&amp;quot;ni&amp;quot;, new Aws.Sagemaker.NotebookInstanceArgs
+    {
+        InstanceType = &amp;quot;ml.t2.medium&amp;quot;,
+        RoleArn = aws_iam_role.Role.Arn,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;foo&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">NotebookInstance</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">NotebookInstance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Sagemaker.html">Pulumi.Aws.Sagemaker</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +147,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance__ctor_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance__ctor_System_String_Pulumi_Aws_Sagemaker_NotebookInstanceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.#ctor(System.String,Pulumi.Aws.Sagemaker.NotebookInstanceArgs,System.Nullable{CustomResourceOptions})">NotebookInstance(String, NotebookInstanceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance__ctor_System_String_Pulumi_Aws_Sagemaker_NotebookInstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.#ctor(System.String,Pulumi.Aws.Sagemaker.NotebookInstanceArgs,Pulumi.CustomResourceOptions)">NotebookInstance(String, NotebookInstanceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a NotebookInstance resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NotebookInstance(string name, NotebookInstanceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public NotebookInstance(string name, NotebookInstanceArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +181,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +191,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance_Arn_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.Arn*"></a>
   <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_Arn" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.Arn">Arn</h4>
@@ -153,13 +212,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance_DirectInternetAccess_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.DirectInternetAccess*"></a>
   <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_DirectInternetAccess" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.DirectInternetAccess">DirectInternetAccess</h4>
@@ -168,7 +227,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DirectInternetAccess { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DirectInternetAccess { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +239,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance_InstanceType_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.InstanceType*"></a>
   <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_InstanceType" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.InstanceType">InstanceType</h4>
@@ -207,13 +266,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance_KmsKeyId_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.KmsKeyId*"></a>
   <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_KmsKeyId" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.KmsKeyId">KmsKeyId</h4>
@@ -222,7 +281,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KmsKeyId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KmsKeyId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +293,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance_LifecycleConfigName_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.LifecycleConfigName*"></a>
   <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_LifecycleConfigName" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.LifecycleConfigName">LifecycleConfigName</h4>
@@ -249,7 +308,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LifecycleConfigName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LifecycleConfigName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +320,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance_Name_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.Name*"></a>
   <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_Name" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.Name">Name</h4>
@@ -288,13 +347,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance_RoleArn_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.RoleArn*"></a>
   <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_RoleArn" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.RoleArn">RoleArn</h4>
@@ -315,13 +374,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance_SecurityGroups_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.SecurityGroups*"></a>
   <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_SecurityGroups" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.SecurityGroups">SecurityGroups</h4>
@@ -342,13 +401,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance_SubnetId_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.SubnetId*"></a>
   <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_SubnetId" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.SubnetId">SubnetId</h4>
@@ -357,7 +416,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubnetId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SubnetId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,22 +428,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance_Tags_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.Tags*"></a>
   <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_Tags" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -396,7 +455,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -404,17 +463,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sagemaker_NotebookInstance_Get_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.Get*"></a>
-  <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_Get_System_String_Input_System_String__Pulumi_Aws_Sagemaker_NotebookInstanceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.Get(System.String,Input{System.String},Pulumi.Aws.Sagemaker.NotebookInstanceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NotebookInstanceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Sagemaker_NotebookInstance_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Sagemaker_NotebookInstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Sagemaker.NotebookInstance.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Sagemaker.NotebookInstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NotebookInstanceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing NotebookInstance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NotebookInstance Get(string name, Input&lt;string&gt; id, NotebookInstanceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NotebookInstance Get(string name, Input&lt;string&gt; id, NotebookInstanceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -433,7 +492,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -445,7 +504,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -474,7 +533,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Sagemaker/NotebookInstance.cs/#L41" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

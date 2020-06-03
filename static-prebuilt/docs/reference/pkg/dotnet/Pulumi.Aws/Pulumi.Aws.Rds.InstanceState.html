@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class InstanceState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">InstanceState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">InstanceState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Rds.html">Pulumi.Aws.Rds</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1380">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1432">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState__ctor_" data-uid="Pulumi.Aws.Rds.InstanceState.#ctor*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState__ctor" data-uid="Pulumi.Aws.Rds.InstanceState.#ctor">InstanceState()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L930">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L981">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Address_" data-uid="Pulumi.Aws.Rds.InstanceState.Address*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Address" data-uid="Pulumi.Aws.Rds.InstanceState.Address">Address</h4>
@@ -109,7 +138,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Address { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Address { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,13 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L936">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L987">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_AllocatedStorage_" data-uid="Pulumi.Aws.Rds.InstanceState.AllocatedStorage*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_AllocatedStorage" data-uid="Pulumi.Aws.Rds.InstanceState.AllocatedStorage">AllocatedStorage</h4>
@@ -136,7 +165,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? AllocatedStorage { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; AllocatedStorage { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +177,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L944">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L995">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_AllowMajorVersionUpgrade_" data-uid="Pulumi.Aws.Rds.InstanceState.AllowMajorVersionUpgrade*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_AllowMajorVersionUpgrade" data-uid="Pulumi.Aws.Rds.InstanceState.AllowMajorVersionUpgrade">AllowMajorVersionUpgrade</h4>
@@ -165,7 +194,7 @@ the change is asynchronously applied as soon as possible.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AllowMajorVersionUpgrade { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AllowMajorVersionUpgrade { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +206,13 @@ the change is asynchronously applied as soon as possible.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L953">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1004">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_ApplyImmediately_" data-uid="Pulumi.Aws.Rds.InstanceState.ApplyImmediately*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_ApplyImmediately" data-uid="Pulumi.Aws.Rds.InstanceState.ApplyImmediately">ApplyImmediately</h4>
@@ -195,7 +224,7 @@ information.</a></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ApplyImmediately { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; ApplyImmediately { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +236,13 @@ information.</a></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L959">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1010">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Arn_" data-uid="Pulumi.Aws.Rds.InstanceState.Arn*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Arn" data-uid="Pulumi.Aws.Rds.InstanceState.Arn">Arn</h4>
@@ -222,7 +251,7 @@ information.</a></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +263,13 @@ information.</a></p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L967">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1018">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_AutoMinorVersionUpgrade_" data-uid="Pulumi.Aws.Rds.InstanceState.AutoMinorVersionUpgrade*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_AutoMinorVersionUpgrade" data-uid="Pulumi.Aws.Rds.InstanceState.AutoMinorVersionUpgrade">AutoMinorVersionUpgrade</h4>
@@ -251,7 +280,7 @@ Defaults to true.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoMinorVersionUpgrade { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoMinorVersionUpgrade { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +292,13 @@ Defaults to true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L973">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1024">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_AvailabilityZone_" data-uid="Pulumi.Aws.Rds.InstanceState.AvailabilityZone*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_AvailabilityZone" data-uid="Pulumi.Aws.Rds.InstanceState.AvailabilityZone">AvailabilityZone</h4>
@@ -278,7 +307,7 @@ Defaults to true.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AvailabilityZone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AvailabilityZone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,13 +319,13 @@ Defaults to true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L980">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1031">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_BackupRetentionPeriod_" data-uid="Pulumi.Aws.Rds.InstanceState.BackupRetentionPeriod*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_BackupRetentionPeriod" data-uid="Pulumi.Aws.Rds.InstanceState.BackupRetentionPeriod">BackupRetentionPeriod</h4>
@@ -306,7 +335,7 @@ between <code>0</code> and <code>35</code>. Must be greater than <code>0</code> 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? BackupRetentionPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; BackupRetentionPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,13 +347,13 @@ between <code>0</code> and <code>35</code>. Must be greater than <code>0</code> 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L988">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1039">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_BackupWindow_" data-uid="Pulumi.Aws.Rds.InstanceState.BackupWindow*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_BackupWindow" data-uid="Pulumi.Aws.Rds.InstanceState.BackupWindow">BackupWindow</h4>
@@ -335,7 +364,7 @@ not overlap with <code>maintenance_window</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? BackupWindow { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; BackupWindow { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,13 +376,13 @@ not overlap with <code>maintenance_window</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L994">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1045">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_CaCertIdentifier_" data-uid="Pulumi.Aws.Rds.InstanceState.CaCertIdentifier*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_CaCertIdentifier" data-uid="Pulumi.Aws.Rds.InstanceState.CaCertIdentifier">CaCertIdentifier</h4>
@@ -362,7 +391,7 @@ not overlap with <code>maintenance_window</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CaCertIdentifier { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CaCertIdentifier { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -374,26 +403,25 @@ not overlap with <code>maintenance_window</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1004">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1054">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_CharacterSetName_" data-uid="Pulumi.Aws.Rds.InstanceState.CharacterSetName*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_CharacterSetName" data-uid="Pulumi.Aws.Rds.InstanceState.CharacterSetName">CharacterSetName</h4>
   <div class="markdown level1 summary"><p>The character set name to use for DB
-encoding in Oracle instances. This can't be changed. See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html">Oracle Character Sets
-Supported in Amazon
-RDS</a>
-for more information.</p>
+encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html">Oracle Character Sets
+Supported in Amazon RDS</a>
+or <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html">Server-Level Collation for Microsoft SQL Server</a> for more information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CharacterSetName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CharacterSetName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -405,13 +433,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1010">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1060">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_CopyTagsToSnapshot_" data-uid="Pulumi.Aws.Rds.InstanceState.CopyTagsToSnapshot*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_CopyTagsToSnapshot" data-uid="Pulumi.Aws.Rds.InstanceState.CopyTagsToSnapshot">CopyTagsToSnapshot</h4>
@@ -420,7 +448,7 @@ for more information.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? CopyTagsToSnapshot { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; CopyTagsToSnapshot { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -432,13 +460,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1022">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1072">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_DbSubnetGroupName_" data-uid="Pulumi.Aws.Rds.InstanceState.DbSubnetGroupName*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_DbSubnetGroupName" data-uid="Pulumi.Aws.Rds.InstanceState.DbSubnetGroupName">DbSubnetGroupName</h4>
@@ -453,7 +481,7 @@ for additional read replica contraints.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DbSubnetGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DbSubnetGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -465,13 +493,13 @@ for additional read replica contraints.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1028">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1078">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_DeleteAutomatedBackups_" data-uid="Pulumi.Aws.Rds.InstanceState.DeleteAutomatedBackups*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_DeleteAutomatedBackups" data-uid="Pulumi.Aws.Rds.InstanceState.DeleteAutomatedBackups">DeleteAutomatedBackups</h4>
@@ -480,7 +508,7 @@ for additional read replica contraints.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DeleteAutomatedBackups { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DeleteAutomatedBackups { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -492,13 +520,13 @@ for additional read replica contraints.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1034">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1084">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_DeletionProtection_" data-uid="Pulumi.Aws.Rds.InstanceState.DeletionProtection*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_DeletionProtection" data-uid="Pulumi.Aws.Rds.InstanceState.DeletionProtection">DeletionProtection</h4>
@@ -507,7 +535,7 @@ for additional read replica contraints.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DeletionProtection { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DeletionProtection { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -519,13 +547,13 @@ for additional read replica contraints.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1040">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1090">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Domain_" data-uid="Pulumi.Aws.Rds.InstanceState.Domain*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Domain" data-uid="Pulumi.Aws.Rds.InstanceState.Domain">Domain</h4>
@@ -534,7 +562,7 @@ for additional read replica contraints.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Domain { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Domain { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -546,13 +574,13 @@ for additional read replica contraints.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1046">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1096">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_DomainIamRoleName_" data-uid="Pulumi.Aws.Rds.InstanceState.DomainIamRoleName*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_DomainIamRoleName" data-uid="Pulumi.Aws.Rds.InstanceState.DomainIamRoleName">DomainIamRoleName</h4>
@@ -561,7 +589,7 @@ for additional read replica contraints.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DomainIamRoleName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DomainIamRoleName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -573,17 +601,17 @@ for additional read replica contraints.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1055">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1105">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_EnabledCloudwatchLogsExports_" data-uid="Pulumi.Aws.Rds.InstanceState.EnabledCloudwatchLogsExports*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_EnabledCloudwatchLogsExports" data-uid="Pulumi.Aws.Rds.InstanceState.EnabledCloudwatchLogsExports">EnabledCloudwatchLogsExports</h4>
-  <div class="markdown level1 summary"><p>List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on <code>engine</code>): <code>agent</code> (MSSQL), <code>alert</code>, <code>audit</code>, <code>error</code>, <code>general</code>, <code>listener</code>, <code>slowquery</code>, <code>trace</code>, <code>postgresql</code> (PostgreSQL), <code>upgrade</code> (PostgreSQL).</p>
+  <div class="markdown level1 summary"><p>List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on <code>engine</code>). MySQL and MariaDB: <code>audit</code>, <code>error</code>, <code>general</code>, <code>slowquery</code>. PostgreSQL: <code>postgresql</code>, <code>upgrade</code>. MSSQL: <code>agent</code> , <code>error</code>. Oracle: <code>alert</code>, <code>audit</code>, <code>listener</code>, <code>trace</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -600,13 +628,13 @@ for additional read replica contraints.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1064">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1114">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Endpoint_" data-uid="Pulumi.Aws.Rds.InstanceState.Endpoint*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Endpoint" data-uid="Pulumi.Aws.Rds.InstanceState.Endpoint">Endpoint</h4>
@@ -615,7 +643,7 @@ for additional read replica contraints.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Endpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Endpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -627,13 +655,13 @@ for additional read replica contraints.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1075">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1125">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Engine_" data-uid="Pulumi.Aws.Rds.InstanceState.Engine*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Engine" data-uid="Pulumi.Aws.Rds.InstanceState.Engine">Engine</h4>
@@ -647,7 +675,7 @@ in the Amazon RDS User Guide.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Engine { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Engine { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -659,13 +687,13 @@ in the Amazon RDS User Guide.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1085">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1135">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_EngineVersion_" data-uid="Pulumi.Aws.Rds.InstanceState.EngineVersion*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_EngineVersion" data-uid="Pulumi.Aws.Rds.InstanceState.EngineVersion">EngineVersion</h4>
@@ -678,7 +706,7 @@ Note that for Amazon Aurora instances the engine version must match the <a href=
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EngineVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EngineVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -690,13 +718,13 @@ Note that for Amazon Aurora instances the engine version must match the <a href=
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1093">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1143">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_FinalSnapshotIdentifier_" data-uid="Pulumi.Aws.Rds.InstanceState.FinalSnapshotIdentifier*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_FinalSnapshotIdentifier" data-uid="Pulumi.Aws.Rds.InstanceState.FinalSnapshotIdentifier">FinalSnapshotIdentifier</h4>
@@ -707,7 +735,7 @@ set to <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FinalSnapshotIdentifier { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FinalSnapshotIdentifier { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -719,13 +747,13 @@ set to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1150">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_HostedZoneId_" data-uid="Pulumi.Aws.Rds.InstanceState.HostedZoneId*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_HostedZoneId" data-uid="Pulumi.Aws.Rds.InstanceState.HostedZoneId">HostedZoneId</h4>
@@ -735,7 +763,7 @@ in a Route 53 Alias record).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HostedZoneId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HostedZoneId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -747,13 +775,13 @@ in a Route 53 Alias record).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1158">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_IamDatabaseAuthenticationEnabled_" data-uid="Pulumi.Aws.Rds.InstanceState.IamDatabaseAuthenticationEnabled*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_IamDatabaseAuthenticationEnabled" data-uid="Pulumi.Aws.Rds.InstanceState.IamDatabaseAuthenticationEnabled">IamDatabaseAuthenticationEnabled</h4>
@@ -764,7 +792,7 @@ accounts is enabled.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IamDatabaseAuthenticationEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IamDatabaseAuthenticationEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -776,13 +804,13 @@ accounts is enabled.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1165">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Identifier_" data-uid="Pulumi.Aws.Rds.InstanceState.Identifier*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Identifier" data-uid="Pulumi.Aws.Rds.InstanceState.Identifier">Identifier</h4>
@@ -792,7 +820,7 @@ if omitted, this provider will assign a random, unique identifier.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Identifier { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Identifier { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -804,13 +832,13 @@ if omitted, this provider will assign a random, unique identifier.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1172">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_IdentifierPrefix_" data-uid="Pulumi.Aws.Rds.InstanceState.IdentifierPrefix*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_IdentifierPrefix" data-uid="Pulumi.Aws.Rds.InstanceState.IdentifierPrefix">IdentifierPrefix</h4>
@@ -820,7 +848,7 @@ identifier beginning with the specified prefix. Conflicts with <code>identifier<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IdentifierPrefix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IdentifierPrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -832,13 +860,13 @@ identifier beginning with the specified prefix. Conflicts with <code>identifier<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1178">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_InstanceClass_" data-uid="Pulumi.Aws.Rds.InstanceState.InstanceClass*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_InstanceClass" data-uid="Pulumi.Aws.Rds.InstanceState.InstanceClass">InstanceClass</h4>
@@ -847,7 +875,7 @@ identifier beginning with the specified prefix. Conflicts with <code>identifier<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceClass { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceClass { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -859,13 +887,13 @@ identifier beginning with the specified prefix. Conflicts with <code>identifier<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1185">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Iops_" data-uid="Pulumi.Aws.Rds.InstanceState.Iops*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Iops" data-uid="Pulumi.Aws.Rds.InstanceState.Iops">Iops</h4>
@@ -875,7 +903,7 @@ storage_type of &quot;io1&quot;.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Iops { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Iops { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -887,13 +915,13 @@ storage_type of &quot;io1&quot;.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1192">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_KmsKeyId_" data-uid="Pulumi.Aws.Rds.InstanceState.KmsKeyId*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_KmsKeyId" data-uid="Pulumi.Aws.Rds.InstanceState.KmsKeyId">KmsKeyId</h4>
@@ -903,7 +931,7 @@ encrypted replica, set this to the destination KMS ARN.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsKeyId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsKeyId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -915,13 +943,13 @@ encrypted replica, set this to the destination KMS ARN.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1199">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_LicenseModel_" data-uid="Pulumi.Aws.Rds.InstanceState.LicenseModel*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_LicenseModel" data-uid="Pulumi.Aws.Rds.InstanceState.LicenseModel">LicenseModel</h4>
@@ -931,7 +959,7 @@ SE1) License model information for this DB instance.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LicenseModel { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LicenseModel { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -943,13 +971,13 @@ SE1) License model information for this DB instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1209">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_MaintenanceWindow_" data-uid="Pulumi.Aws.Rds.InstanceState.MaintenanceWindow*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_MaintenanceWindow" data-uid="Pulumi.Aws.Rds.InstanceState.MaintenanceWindow">MaintenanceWindow</h4>
@@ -962,7 +990,7 @@ for more information.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MaintenanceWindow { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MaintenanceWindow { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -974,13 +1002,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1215">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_MaxAllocatedStorage_" data-uid="Pulumi.Aws.Rds.InstanceState.MaxAllocatedStorage*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_MaxAllocatedStorage" data-uid="Pulumi.Aws.Rds.InstanceState.MaxAllocatedStorage">MaxAllocatedStorage</h4>
@@ -989,7 +1017,7 @@ for more information.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxAllocatedStorage { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxAllocatedStorage { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1001,13 +1029,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1174">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1224">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_MonitoringInterval_" data-uid="Pulumi.Aws.Rds.InstanceState.MonitoringInterval*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_MonitoringInterval" data-uid="Pulumi.Aws.Rds.InstanceState.MonitoringInterval">MonitoringInterval</h4>
@@ -1019,7 +1047,7 @@ Values: 0, 1, 5, 10, 15, 30, 60.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MonitoringInterval { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MonitoringInterval { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1031,13 +1059,13 @@ Values: 0, 1, 5, 10, 15, 30, 60.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1234">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_MonitoringRoleArn_" data-uid="Pulumi.Aws.Rds.InstanceState.MonitoringRoleArn*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_MonitoringRoleArn" data-uid="Pulumi.Aws.Rds.InstanceState.MonitoringRoleArn">MonitoringRoleArn</h4>
@@ -1050,7 +1078,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MonitoringRoleArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MonitoringRoleArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1062,13 +1090,13 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1240">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_MultiAz_" data-uid="Pulumi.Aws.Rds.InstanceState.MultiAz*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_MultiAz" data-uid="Pulumi.Aws.Rds.InstanceState.MultiAz">MultiAz</h4>
@@ -1077,7 +1105,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? MultiAz { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; MultiAz { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1089,13 +1117,13 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1246">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Name_" data-uid="Pulumi.Aws.Rds.InstanceState.Name*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Name" data-uid="Pulumi.Aws.Rds.InstanceState.Name">Name</h4>
@@ -1104,7 +1132,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1116,13 +1144,13 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1202">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1252">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_OptionGroupName_" data-uid="Pulumi.Aws.Rds.InstanceState.OptionGroupName*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_OptionGroupName" data-uid="Pulumi.Aws.Rds.InstanceState.OptionGroupName">OptionGroupName</h4>
@@ -1131,7 +1159,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? OptionGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OptionGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1143,13 +1171,13 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1259">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_ParameterGroupName_" data-uid="Pulumi.Aws.Rds.InstanceState.ParameterGroupName*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_ParameterGroupName" data-uid="Pulumi.Aws.Rds.InstanceState.ParameterGroupName">ParameterGroupName</h4>
@@ -1159,7 +1187,7 @@ associate.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ParameterGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ParameterGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1171,13 +1199,13 @@ associate.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1267">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Password_" data-uid="Pulumi.Aws.Rds.InstanceState.Password*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Password" data-uid="Pulumi.Aws.Rds.InstanceState.Password">Password</h4>
@@ -1188,7 +1216,7 @@ logs, and it will be stored in the state file.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Password { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Password { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1200,13 +1228,13 @@ logs, and it will be stored in the state file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1273">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_PerformanceInsightsEnabled_" data-uid="Pulumi.Aws.Rds.InstanceState.PerformanceInsightsEnabled*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_PerformanceInsightsEnabled" data-uid="Pulumi.Aws.Rds.InstanceState.PerformanceInsightsEnabled">PerformanceInsightsEnabled</h4>
@@ -1215,7 +1243,7 @@ logs, and it will be stored in the state file.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? PerformanceInsightsEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; PerformanceInsightsEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1227,13 +1255,13 @@ logs, and it will be stored in the state file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1229">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1279">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_PerformanceInsightsKmsKeyId_" data-uid="Pulumi.Aws.Rds.InstanceState.PerformanceInsightsKmsKeyId*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_PerformanceInsightsKmsKeyId" data-uid="Pulumi.Aws.Rds.InstanceState.PerformanceInsightsKmsKeyId">PerformanceInsightsKmsKeyId</h4>
@@ -1242,7 +1270,7 @@ logs, and it will be stored in the state file.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PerformanceInsightsKmsKeyId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PerformanceInsightsKmsKeyId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1254,13 +1282,13 @@ logs, and it will be stored in the state file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1235">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1285">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_PerformanceInsightsRetentionPeriod_" data-uid="Pulumi.Aws.Rds.InstanceState.PerformanceInsightsRetentionPeriod*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_PerformanceInsightsRetentionPeriod" data-uid="Pulumi.Aws.Rds.InstanceState.PerformanceInsightsRetentionPeriod">PerformanceInsightsRetentionPeriod</h4>
@@ -1269,7 +1297,7 @@ logs, and it will be stored in the state file.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? PerformanceInsightsRetentionPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; PerformanceInsightsRetentionPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1281,13 +1309,13 @@ logs, and it will be stored in the state file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1241">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1291">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Port_" data-uid="Pulumi.Aws.Rds.InstanceState.Port*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Port" data-uid="Pulumi.Aws.Rds.InstanceState.Port">Port</h4>
@@ -1296,7 +1324,7 @@ logs, and it will be stored in the state file.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Port { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Port { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1308,13 +1336,13 @@ logs, and it will be stored in the state file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1248">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1298">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_PubliclyAccessible_" data-uid="Pulumi.Aws.Rds.InstanceState.PubliclyAccessible*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_PubliclyAccessible" data-uid="Pulumi.Aws.Rds.InstanceState.PubliclyAccessible">PubliclyAccessible</h4>
@@ -1324,7 +1352,7 @@ accessible. Default is <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? PubliclyAccessible { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; PubliclyAccessible { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1336,13 +1364,13 @@ accessible. Default is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1253">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1303">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Replicas_" data-uid="Pulumi.Aws.Rds.InstanceState.Replicas*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Replicas" data-uid="Pulumi.Aws.Rds.InstanceState.Replicas">Replicas</h4>
@@ -1362,19 +1390,21 @@ accessible. Default is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1268">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1320">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_ReplicateSourceDb_" data-uid="Pulumi.Aws.Rds.InstanceState.ReplicateSourceDb*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_ReplicateSourceDb" data-uid="Pulumi.Aws.Rds.InstanceState.ReplicateSourceDb">ReplicateSourceDb</h4>
   <div class="markdown level1 summary"><p>Specifies that this resource is a Replicate
 database, and to use this value as the source database. This correlates to the
-<code>identifier</code> of another Amazon RDS Database to replicate. Note that if you are
+<code>identifier</code> of another Amazon RDS Database to replicate (if replicating within
+a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+cross-region). Note that if you are
 creating a cross-region replica of an encrypted database you will also need to
 specify a <code>kms_key_id</code>. See [DB Instance Replication][1] and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">Working with
 PostgreSQL and MySQL Read Replicas</a>
@@ -1383,7 +1413,7 @@ for more information on using Replication.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ReplicateSourceDb { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ReplicateSourceDb { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1395,13 +1425,13 @@ for more information on using Replication.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1274">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1326">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_ResourceId_" data-uid="Pulumi.Aws.Rds.InstanceState.ResourceId*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_ResourceId" data-uid="Pulumi.Aws.Rds.InstanceState.ResourceId">ResourceId</h4>
@@ -1410,7 +1440,7 @@ for more information on using Replication.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ResourceId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourceId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1422,13 +1452,13 @@ for more information on using Replication.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1280">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1332">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_S3Import_" data-uid="Pulumi.Aws.Rds.InstanceState.S3Import*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_S3Import" data-uid="Pulumi.Aws.Rds.InstanceState.S3Import">S3Import</h4>
@@ -1437,7 +1467,7 @@ for more information on using Replication.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InstanceS3ImportGetArgs&gt;? S3Import { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InstanceS3ImportGetArgs&gt; S3Import { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1449,13 +1479,13 @@ for more information on using Replication.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Rds.Inputs.InstanceS3ImportGetArgs.html">InstanceS3ImportGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Rds.Inputs.InstanceS3ImportGetArgs.html">InstanceS3ImportGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1291">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1343">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_SecurityGroupNames_" data-uid="Pulumi.Aws.Rds.InstanceState.SecurityGroupNames*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_SecurityGroupNames" data-uid="Pulumi.Aws.Rds.InstanceState.SecurityGroupNames">SecurityGroupNames</h4>
@@ -1478,13 +1508,13 @@ Platform</a>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1304">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1356">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_SkipFinalSnapshot_" data-uid="Pulumi.Aws.Rds.InstanceState.SkipFinalSnapshot*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_SkipFinalSnapshot" data-uid="Pulumi.Aws.Rds.InstanceState.SkipFinalSnapshot">SkipFinalSnapshot</h4>
@@ -1497,7 +1527,7 @@ is <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SkipFinalSnapshot { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SkipFinalSnapshot { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1509,13 +1539,13 @@ is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1312">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1364">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_SnapshotIdentifier_" data-uid="Pulumi.Aws.Rds.InstanceState.SnapshotIdentifier*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_SnapshotIdentifier" data-uid="Pulumi.Aws.Rds.InstanceState.SnapshotIdentifier">SnapshotIdentifier</h4>
@@ -1526,7 +1556,7 @@ RDS console, e.g: rds:production-2015-06-26-06-05.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SnapshotIdentifier { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SnapshotIdentifier { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1538,13 +1568,13 @@ RDS console, e.g: rds:production-2015-06-26-06-05.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1370">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Status_" data-uid="Pulumi.Aws.Rds.InstanceState.Status*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Status" data-uid="Pulumi.Aws.Rds.InstanceState.Status">Status</h4>
@@ -1553,7 +1583,7 @@ RDS console, e.g: rds:production-2015-06-26-06-05.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Status { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Status { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1565,13 +1595,13 @@ RDS console, e.g: rds:production-2015-06-26-06-05.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1327">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1379">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_StorageEncrypted_" data-uid="Pulumi.Aws.Rds.InstanceState.StorageEncrypted*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_StorageEncrypted" data-uid="Pulumi.Aws.Rds.InstanceState.StorageEncrypted">StorageEncrypted</h4>
@@ -1583,7 +1613,7 @@ default is <code>false</code> if not specified.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? StorageEncrypted { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; StorageEncrypted { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1595,13 +1625,13 @@ default is <code>false</code> if not specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1335">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1387">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_StorageType_" data-uid="Pulumi.Aws.Rds.InstanceState.StorageType*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_StorageType" data-uid="Pulumi.Aws.Rds.InstanceState.StorageType">StorageType</h4>
@@ -1612,7 +1642,7 @@ specified, &quot;gp2&quot; if not.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StorageType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; StorageType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1624,17 +1654,17 @@ specified, &quot;gp2&quot; if not.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1344">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1396">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Tags_" data-uid="Pulumi.Aws.Rds.InstanceState.Tags*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Tags" data-uid="Pulumi.Aws.Rds.InstanceState.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1651,13 +1681,13 @@ specified, &quot;gp2&quot; if not.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1357">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1409">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Timezone_" data-uid="Pulumi.Aws.Rds.InstanceState.Timezone*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Timezone" data-uid="Pulumi.Aws.Rds.InstanceState.Timezone">Timezone</h4>
@@ -1670,7 +1700,7 @@ for more information.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Timezone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Timezone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1682,13 +1712,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1364">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1416">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_Username_" data-uid="Pulumi.Aws.Rds.InstanceState.Username*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_Username" data-uid="Pulumi.Aws.Rds.InstanceState.Username">Username</h4>
@@ -1698,7 +1728,7 @@ is provided) Username for the master DB user.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Username { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Username { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1710,13 +1740,13 @@ is provided) Username for the master DB user.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L1374">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L1426">View Source</a>
   </span>
   <a id="Pulumi_Aws_Rds_InstanceState_VpcSecurityGroupIds_" data-uid="Pulumi.Aws.Rds.InstanceState.VpcSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_Rds_InstanceState_VpcSecurityGroupIds" data-uid="Pulumi.Aws.Rds.InstanceState.VpcSecurityGroupIds">VpcSecurityGroupIds</h4>
@@ -1738,7 +1768,7 @@ associate.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1750,7 +1780,7 @@ associate.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Instance.cs/#L925" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Rds/Instance.cs/#L976" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

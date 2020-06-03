@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RegionBackendService
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,7 +84,45 @@ machines that will serve traffic for load balancing.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">RegionBackendService</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">RegionBackendService</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -95,16 +133,16 @@ machines that will serve traffic for load balancing.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L226">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService__ctor_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_RegionBackendService__ctor_System_String_Pulumi_Gcp_Compute_RegionBackendServiceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.RegionBackendService.#ctor(System.String,Pulumi.Gcp.Compute.RegionBackendServiceArgs,System.Nullable{CustomResourceOptions})">RegionBackendService(String, RegionBackendServiceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_RegionBackendService__ctor_System_String_Pulumi_Gcp_Compute_RegionBackendServiceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.#ctor(System.String,Pulumi.Gcp.Compute.RegionBackendServiceArgs,Pulumi.CustomResourceOptions)">RegionBackendService(String, RegionBackendServiceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a RegionBackendService resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RegionBackendService(string name, RegionBackendServiceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public RegionBackendService(string name, RegionBackendServiceArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,7 +167,7 @@ machines that will serve traffic for load balancing.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -139,13 +177,15 @@ machines that will serve traffic for load balancing.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_AffinityCookieTtlSec_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.AffinityCookieTtlSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_AffinityCookieTtlSec" data-uid="Pulumi.Gcp.Compute.RegionBackendService.AffinityCookieTtlSec">AffinityCookieTtlSec</h4>
-  <div class="markdown level1 summary"><p>Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set to 0, the cookie is non-persistent and
-lasts only until the end of the browser session (or equivalent). The maximum allowed value for TTL is one day. When the
-load balancing scheme is INTERNAL, this field is not used.</p>
+  <div class="markdown level1 summary"><p>Lifetime of cookies in seconds if session_affinity is
+GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
+only until the end of the browser session (or equivalent). The
+maximum allowed value for TTL is one day.
+When the load balancing scheme is INTERNAL, this field is not used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -162,17 +202,17 @@ load balancing scheme is INTERNAL, this field is not used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_Backends_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Backends*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_Backends" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Backends">Backends</h4>
-  <div class="markdown level1 summary"><p>The set of backends that serve this RegionBackendService.</p>
+  <div class="markdown level1 summary"><p>The set of backends that serve this RegionBackendService.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -189,18 +229,19 @@ load balancing scheme is INTERNAL, this field is not used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.html">RegionBackendServiceBackend</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.html">RegionBackendServiceBackend</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_CircuitBreakers_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.CircuitBreakers*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_CircuitBreakers" data-uid="Pulumi.Gcp.Compute.RegionBackendService.CircuitBreakers">CircuitBreakers</h4>
-  <div class="markdown level1 summary"><p>Settings controlling the volume of connections to a backend service. This field is applicable only when the
-'load_balancing_scheme' is set to INTERNAL_MANAGED and the 'protocol' is set to HTTP, HTTPS, or HTTP2.</p>
+  <div class="markdown level1 summary"><p>Settings controlling the volume of connections to a backend service. This field
+is applicable only when the <code>load_balancing_scheme</code> is set to INTERNAL_MANAGED
+and the <code>protocol</code> is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -217,17 +258,18 @@ load balancing scheme is INTERNAL, this field is not used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceCircuitBreakers.html">RegionBackendServiceCircuitBreakers</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceCircuitBreakers.html">RegionBackendServiceCircuitBreakers</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_ConnectionDrainingTimeoutSec_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.ConnectionDrainingTimeoutSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_ConnectionDrainingTimeoutSec" data-uid="Pulumi.Gcp.Compute.RegionBackendService.ConnectionDrainingTimeoutSec">ConnectionDrainingTimeoutSec</h4>
-  <div class="markdown level1 summary"><p>Time for which instance will be drained (not accept new connections, but still work to finish started).</p>
+  <div class="markdown level1 summary"><p>Time for which instance will be drained (not accept new
+connections, but still work to finish started).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -244,22 +286,23 @@ load balancing scheme is INTERNAL, this field is not used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_ConsistentHash_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.ConsistentHash*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_ConsistentHash" data-uid="Pulumi.Gcp.Compute.RegionBackendService.ConsistentHash">ConsistentHash</h4>
-  <div class="markdown level1 summary"><p>Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies when all of the following are true - *
-'load_balancing_scheme' is set to INTERNAL_MANAGED * 'protocol' is set to HTTP, HTTPS, or HTTP2 * 'locality_lb_policy'
-is set to MAGLEV or RING_HASH</p>
+  <div class="markdown level1 summary"><p>Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing.
+This field only applies when all of the following are true -</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -276,13 +319,13 @@ is set to MAGLEV or RING_HASH</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceConsistentHash.html">RegionBackendServiceConsistentHash</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceConsistentHash.html">RegionBackendServiceConsistentHash</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.RegionBackendService.CreationTimestamp">CreationTimestamp</h4>
@@ -303,22 +346,23 @@ is set to MAGLEV or RING_HASH</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_Description_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_Description" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Description">Description</h4>
-  <div class="markdown level1 summary"><p>An optional description of this resource.</p>
+  <div class="markdown level1 summary"><p>An optional description of this resource.
+Provide this property when you create the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -330,17 +374,17 @@ is set to MAGLEV or RING_HASH</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_FailoverPolicy_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.FailoverPolicy*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_FailoverPolicy" data-uid="Pulumi.Gcp.Compute.RegionBackendService.FailoverPolicy">FailoverPolicy</h4>
-  <div class="markdown level1 summary"><p>Policy for failovers.</p>
+  <div class="markdown level1 summary"><p>Policy for failovers.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -357,13 +401,13 @@ is set to MAGLEV or RING_HASH</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceFailoverPolicy.html">RegionBackendServiceFailoverPolicy</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceFailoverPolicy.html">RegionBackendServiceFailoverPolicy</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_Fingerprint_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Fingerprint*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_Fingerprint" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Fingerprint">Fingerprint</h4>
@@ -384,17 +428,18 @@ is set to MAGLEV or RING_HASH</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_HealthChecks_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.HealthChecks*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_HealthChecks" data-uid="Pulumi.Gcp.Compute.RegionBackendService.HealthChecks">HealthChecks</h4>
-  <div class="markdown level1 summary"><p>The set of URLs to HealthCheck resources for health checking this RegionBackendService. Currently at most one health
+  <div class="markdown level1 summary"><p>The set of URLs to HealthCheck resources for health checking
+this RegionBackendService. Currently at most one health
 check can be specified, and a health check is required.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -412,24 +457,24 @@ check can be specified, and a health check is required.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_LoadBalancingScheme_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.LoadBalancingScheme*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_LoadBalancingScheme" data-uid="Pulumi.Gcp.Compute.RegionBackendService.LoadBalancingScheme">LoadBalancingScheme</h4>
-  <div class="markdown level1 summary"><p>Indicates what kind of load balancing this regional backend service will be used for. A backend service created for one
-type of load balancing cannot be used with the other(s). Must be 'INTERNAL' or 'INTERNAL_MANAGED'. Defaults to
-'INTERNAL'.</p>
+  <div class="markdown level1 summary"><p>Indicates what kind of load balancing this regional backend service
+will be used for. A backend service created for one type of load
+balancing cannot be used with the other(s).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LoadBalancingScheme { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LoadBalancingScheme { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -441,32 +486,43 @@ type of load balancing cannot be used with the other(s). Must be 'INTERNAL' or '
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_LocalityLbPolicy_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.LocalityLbPolicy*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_LocalityLbPolicy" data-uid="Pulumi.Gcp.Compute.RegionBackendService.LocalityLbPolicy">LocalityLbPolicy</h4>
-  <div class="markdown level1 summary"><p>The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-<a href="https://ai.google/research/pubs/pub44824">https://ai.google/research/pubs/pub44824</a> This field is applicable only when the 'load_balancing_scheme' is set to
-INTERNAL_MANAGED and the 'protocol' is set to HTTP, HTTPS, or HTTP2.</p>
+  <div class="markdown level1 summary"><p>The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to <a href="https://ai.google/research/pubs/pub44824">https://ai.google/research/pubs/pub44824</a>
+This field is applicable only when the <code>load_balancing_scheme</code> is set to
+INTERNAL_MANAGED and the <code>protocol</code> is set to HTTP, HTTPS, or HTTP2.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LocalityLbPolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LocalityLbPolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -478,18 +534,18 @@ INTERNAL_MANAGED and the 'protocol' is set to HTTP, HTTPS, or HTTP2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_LogConfig_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.LogConfig*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_LogConfig" data-uid="Pulumi.Gcp.Compute.RegionBackendService.LogConfig">LogConfig</h4>
-  <div class="markdown level1 summary"><p>This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.</p>
+  <div class="markdown level1 summary"><p>This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -506,20 +562,17 @@ enabled, logs will be exported to Stackdriver.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceLogConfig.html">RegionBackendServiceLogConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceLogConfig.html">RegionBackendServiceLogConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_Name_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_Name" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the cookie.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -536,23 +589,23 @@ must be a dash, lowercase letter, or digit, except the last character, which can
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_Network_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Network*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_Network" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Network">Network</h4>
-  <div class="markdown level1 summary"><p>The URL of the network to which this backend service belongs. This field can only be specified when the load balancing
-scheme is set to INTERNAL.</p>
+  <div class="markdown level1 summary"><p>The URL of the network to which this backend service belongs.
+This field can only be specified when the load balancing scheme is set to INTERNAL.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Network { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Network { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -564,18 +617,19 @@ scheme is set to INTERNAL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_OutlierDetection_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.OutlierDetection*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_OutlierDetection" data-uid="Pulumi.Gcp.Compute.RegionBackendService.OutlierDetection">OutlierDetection</h4>
-  <div class="markdown level1 summary"><p>Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-'load_balancing_scheme' is set to INTERNAL_MANAGED and the 'protocol' is set to HTTP, HTTPS, or HTTP2.</p>
+  <div class="markdown level1 summary"><p>Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the <code>load_balancing_scheme</code> is set
+to INTERNAL_MANAGED and the <code>protocol</code> is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -592,13 +646,46 @@ scheme is set to INTERNAL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceOutlierDetection.html">RegionBackendServiceOutlierDetection</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionBackendServiceOutlierDetection.html">RegionBackendServiceOutlierDetection</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L152">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_RegionBackendService_PortName_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.PortName*"></a>
+  <h4 id="Pulumi_Gcp_Compute_RegionBackendService_PortName" data-uid="Pulumi.Gcp.Compute.RegionBackendService.PortName">PortName</h4>
+  <div class="markdown level1 summary"><p>A named port on a backend instance group representing the port for
+communication to the backend VMs in that group. Required when the
+loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
+and the backends are instance groups. The named port must be defined on each
+backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
+default of &quot;http&quot; if not given.
+Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PortName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_Project_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_Project" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Project">Project</h4>
@@ -620,19 +707,19 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_Protocol_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Protocol*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_Protocol" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Protocol">Protocol</h4>
-  <div class="markdown level1 summary"><p>The protocol this RegionBackendService uses to communicate with backends. Possible values are HTTP, HTTPS, HTTP2, SSL,
-TCP, and UDP. The default is HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer types and may result in
-errors if used with the GA API.</p>
+  <div class="markdown level1 summary"><p>The protocol this RegionBackendService uses to communicate with backends.
+The default is HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer
+types and may result in errors if used with the GA API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -649,17 +736,18 @@ errors if used with the GA API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_Region_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_Region" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Region">Region</h4>
-  <div class="markdown level1 summary"><p>The Region in which the created backend service should reside. If it is not provided, the provider region is used.</p>
+  <div class="markdown level1 summary"><p>The Region in which the created backend service should reside.
+If it is not provided, the provider region is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -676,13 +764,13 @@ errors if used with the GA API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L201">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_SelfLink_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_SelfLink" data-uid="Pulumi.Gcp.Compute.RegionBackendService.SelfLink">SelfLink</h4>
@@ -703,17 +791,18 @@ errors if used with the GA API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_SessionAffinity_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.SessionAffinity*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_SessionAffinity" data-uid="Pulumi.Gcp.Compute.RegionBackendService.SessionAffinity">SessionAffinity</h4>
-  <div class="markdown level1 summary"><p>Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP.</p>
+  <div class="markdown level1 summary"><p>Type of session affinity to use. The default is NONE. Session affinity is
+not applicable if the protocol is UDP.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -730,18 +819,18 @@ errors if used with the GA API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L185">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_TimeoutSec_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.TimeoutSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionBackendService_TimeoutSec" data-uid="Pulumi.Gcp.Compute.RegionBackendService.TimeoutSec">TimeoutSec</h4>
-  <div class="markdown level1 summary"><p>How many seconds to wait for the backend before considering it a failed request. Default is 30 seconds. Valid range is
-[1, 86400].</p>
+  <div class="markdown level1 summary"><p>How many seconds to wait for the backend before considering it a
+failed request. Default is 30 seconds. Valid range is [1, 86400].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -758,7 +847,7 @@ errors if used with the GA API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -766,17 +855,17 @@ errors if used with the GA API.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L226">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L256">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionBackendService_Get_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_RegionBackendService_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_RegionBackendServiceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.RegionBackendServiceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RegionBackendServiceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Compute_RegionBackendService_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_RegionBackendServiceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.RegionBackendService.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.RegionBackendServiceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RegionBackendServiceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing RegionBackendService resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RegionBackendService Get(string name, Input&lt;string&gt; id, RegionBackendServiceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RegionBackendService Get(string name, Input&lt;string&gt; id, RegionBackendServiceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -795,7 +884,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -807,7 +896,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -836,7 +925,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionBackendService.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/RegionBackendService.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

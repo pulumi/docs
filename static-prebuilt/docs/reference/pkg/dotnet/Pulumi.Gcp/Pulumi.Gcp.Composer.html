@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Composer
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -101,6 +101,106 @@ against GCP Cloud Composer before filing bugs against this provider.</li>
 <li><strong>Environments create Google Cloud Storage buckets that do not get cleaned up automatically</strong> on environment
 deletion. <a href="https://cloud.google.com/composer/docs/concepts/cloud-storage">More about Composer's use of Cloud Storage</a>.</li>
 </ul>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-usage">Basic Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Gcp.Composer.Environment(&amp;quot;test&amp;quot;, new Gcp.Composer.EnvironmentArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="with-gke-and-compute-resource-dependencies">With GKE and Compute Resource Dependencies</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testNetwork = new Gcp.Compute.Network(&amp;quot;testNetwork&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        AutoCreateSubnetworks = false,
+    });
+    var testSubnetwork = new Gcp.Compute.Subnetwork(&amp;quot;testSubnetwork&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;10.2.0.0/16&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = testNetwork.Id,
+    });
+    var testAccount = new Gcp.ServiceAccount.Account(&amp;quot;testAccount&amp;quot;, new Gcp.ServiceAccount.AccountArgs
+    {
+        AccountId = &amp;quot;composer-env-account&amp;quot;,
+        DisplayName = &amp;quot;Test Service Account for Composer Environment&amp;quot;,
+    });
+    var composer_worker = new Gcp.Projects.IAMMember(&amp;quot;composer-worker&amp;quot;, new Gcp.Projects.IAMMemberArgs
+    {
+        Role = &amp;quot;roles/composer.worker&amp;quot;,
+        Member = testAccount.Email.Apply(email =&gt; $&amp;quot;serviceAccount:{email}&amp;quot;),
+    });
+    var testEnvironment = new Gcp.Composer.Environment(&amp;quot;testEnvironment&amp;quot;, new Gcp.Composer.EnvironmentArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        Config = new Gcp.Composer.Inputs.EnvironmentConfigArgs
+        {
+            NodeCount = 4,
+            Node_config = 
+            {
+                { &amp;quot;zone&amp;quot;, &amp;quot;us-central1-a&amp;quot; },
+                { &amp;quot;machineType&amp;quot;, &amp;quot;n1-standard-1&amp;quot; },
+                { &amp;quot;network&amp;quot;, testNetwork.Id },
+                { &amp;quot;subnetwork&amp;quot;, testSubnetwork.Id },
+                { &amp;quot;serviceAccount&amp;quot;, testAccount.Name },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="with-software-airflow-config">With Software (Airflow) Config</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Gcp.Composer.Environment(&amp;quot;test&amp;quot;, new Gcp.Composer.EnvironmentArgs
+    {
+        Config = new Gcp.Composer.Inputs.EnvironmentConfigArgs
+        {
+            SoftwareConfig = new Gcp.Composer.Inputs.EnvironmentConfigSoftwareConfigArgs
+            {
+                AirflowConfigOverrides = 
+                {
+                    { &amp;quot;core-loadExample&amp;quot;, &amp;quot;True&amp;quot; },
+                },
+                EnvVariables = 
+                {
+                    { &amp;quot;FOO&amp;quot;, &amp;quot;bar&amp;quot; },
+                },
+                PypiPackages = 
+                {
+                    { &amp;quot;numpy&amp;quot;, &amp;quot;&amp;quot; },
+                    { &amp;quot;scipy&amp;quot;, &amp;quot;==1.1.0&amp;quot; },
+                },
+            },
+        },
+        Region = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Composer.EnvironmentArgs.html">EnvironmentArgs</a></h4>
       <section></section>

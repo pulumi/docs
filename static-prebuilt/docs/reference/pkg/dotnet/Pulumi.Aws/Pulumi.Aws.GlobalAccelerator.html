@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.GlobalAccelerator
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,29 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.GlobalAccelerator.Accelerator.html">Accelerator</a></h4>
       <section><p>Creates a Global Accelerator accelerator.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.GlobalAccelerator.Accelerator(&amp;quot;example&amp;quot;, new Aws.GlobalAccelerator.AcceleratorArgs
+    {
+        Attributes = new Aws.GlobalAccelerator.Inputs.AcceleratorAttributesArgs
+        {
+            FlowLogsEnabled = true,
+            FlowLogsS3Bucket = &amp;quot;example-bucket&amp;quot;,
+            FlowLogsS3Prefix = &amp;quot;flow-logs/&amp;quot;,
+        },
+        Enabled = true,
+        IpAddressType = &amp;quot;IPV4&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GlobalAccelerator.AcceleratorArgs.html">AcceleratorArgs</a></h4>
       <section></section>
@@ -85,6 +108,30 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GlobalAccelerator.EndpointGroup.html">EndpointGroup</a></h4>
       <section><p>Provides a Global Accelerator endpoint group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.GlobalAccelerator.EndpointGroup(&amp;quot;example&amp;quot;, new Aws.GlobalAccelerator.EndpointGroupArgs
+    {
+        EndpointConfigurations = 
+        {
+            new Aws.GlobalAccelerator.Inputs.EndpointGroupEndpointConfigurationArgs
+            {
+                EndpointId = aws_lb.Example.Arn,
+                Weight = 100,
+            },
+        },
+        ListenerArn = aws_globalaccelerator_listener.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GlobalAccelerator.EndpointGroupArgs.html">EndpointGroupArgs</a></h4>
       <section></section>
@@ -92,6 +139,43 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GlobalAccelerator.Listener.html">Listener</a></h4>
       <section><p>Provides a Global Accelerator listener.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleAccelerator = new Aws.GlobalAccelerator.Accelerator(&amp;quot;exampleAccelerator&amp;quot;, new Aws.GlobalAccelerator.AcceleratorArgs
+    {
+        Attributes = new Aws.GlobalAccelerator.Inputs.AcceleratorAttributesArgs
+        {
+            FlowLogsEnabled = true,
+            FlowLogsS3Bucket = &amp;quot;example-bucket&amp;quot;,
+            FlowLogsS3Prefix = &amp;quot;flow-logs/&amp;quot;,
+        },
+        Enabled = true,
+        IpAddressType = &amp;quot;IPV4&amp;quot;,
+    });
+    var exampleListener = new Aws.GlobalAccelerator.Listener(&amp;quot;exampleListener&amp;quot;, new Aws.GlobalAccelerator.ListenerArgs
+    {
+        AcceleratorArn = exampleAccelerator.Id,
+        ClientAffinity = &amp;quot;SOURCE_IP&amp;quot;,
+        PortRanges = 
+        {
+            new Aws.GlobalAccelerator.Inputs.ListenerPortRangeArgs
+            {
+                FromPort = 80,
+                ToPort = 80,
+            },
+        },
+        Protocol = &amp;quot;TCP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GlobalAccelerator.ListenerArgs.html">ListenerArgs</a></h4>
       <section></section>

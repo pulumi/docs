@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class User
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -74,12 +74,95 @@
   <div class="markdown level0 summary"><p>Manages a V3 User resource within OpenStack Keystone.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var project1 = new OpenStack.Identity.Project(&amp;quot;project1&amp;quot;, new OpenStack.Identity.ProjectArgs
+    {
+    });
+    var user1 = new OpenStack.Identity.User(&amp;quot;user1&amp;quot;, new OpenStack.Identity.UserArgs
+    {
+        DefaultProjectId = project1.Id,
+        Description = &amp;quot;A user&amp;quot;,
+        Extra = 
+        {
+            { &amp;quot;email&amp;quot;, &amp;quot;user_1@foobar.com&amp;quot; },
+        },
+        IgnoreChangePasswordUponFirstUse = true,
+        MultiFactorAuthEnabled = true,
+        MultiFactorAuthRules = 
+        {
+            new OpenStack.Identity.Inputs.UserMultiFactorAuthRuleArgs
+            {
+                Rule = 
+                {
+                    &amp;quot;password&amp;quot;,
+                    &amp;quot;totp&amp;quot;,
+                },
+            },
+            new OpenStack.Identity.Inputs.UserMultiFactorAuthRuleArgs
+            {
+                Rule = 
+                {
+                    &amp;quot;password&amp;quot;,
+                },
+            },
+        },
+        Password = &amp;quot;password123&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">User</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">User</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Identity.html">Pulumi.OpenStack.Identity</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -90,16 +173,16 @@ this resource.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User__ctor_" data-uid="Pulumi.OpenStack.Identity.User.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_Identity_User__ctor_System_String_Pulumi_OpenStack_Identity_UserArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Identity.User.#ctor(System.String,Pulumi.OpenStack.Identity.UserArgs,System.Nullable{CustomResourceOptions})">User(String, UserArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Identity_User__ctor_System_String_Pulumi_OpenStack_Identity_UserArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Identity.User.#ctor(System.String,Pulumi.OpenStack.Identity.UserArgs,Pulumi.CustomResourceOptions)">User(String, UserArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a User resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public User(string name, UserArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public User(string name, UserArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +207,7 @@ this resource.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -134,7 +217,7 @@ this resource.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_DefaultProjectId_" data-uid="Pulumi.OpenStack.Identity.User.DefaultProjectId*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_DefaultProjectId" data-uid="Pulumi.OpenStack.Identity.User.DefaultProjectId">DefaultProjectId</h4>
@@ -155,13 +238,13 @@ this resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_Description_" data-uid="Pulumi.OpenStack.Identity.User.Description*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_Description" data-uid="Pulumi.OpenStack.Identity.User.Description">Description</h4>
@@ -170,7 +253,7 @@ this resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,13 +265,13 @@ this resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_DomainId_" data-uid="Pulumi.OpenStack.Identity.User.DomainId*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_DomainId" data-uid="Pulumi.OpenStack.Identity.User.DomainId">DomainId</h4>
@@ -209,13 +292,13 @@ this resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_Enabled_" data-uid="Pulumi.OpenStack.Identity.User.Enabled*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_Enabled" data-uid="Pulumi.OpenStack.Identity.User.Enabled">Enabled</h4>
@@ -237,13 +320,13 @@ values are <code>true</code> and <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_Extra_" data-uid="Pulumi.OpenStack.Identity.User.Extra*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_Extra" data-uid="Pulumi.OpenStack.Identity.User.Extra">Extra</h4>
@@ -252,7 +335,7 @@ values are <code>true</code> and <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Extra { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Extra { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,13 +347,13 @@ values are <code>true</code> and <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_IgnoreChangePasswordUponFirstUse_" data-uid="Pulumi.OpenStack.Identity.User.IgnoreChangePasswordUponFirstUse*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_IgnoreChangePasswordUponFirstUse" data-uid="Pulumi.OpenStack.Identity.User.IgnoreChangePasswordUponFirstUse">IgnoreChangePasswordUponFirstUse</h4>
@@ -292,13 +375,13 @@ change their password upon first use. Valid values are <code>true</code> and <co
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_IgnoreLockoutFailureAttempts_" data-uid="Pulumi.OpenStack.Identity.User.IgnoreLockoutFailureAttempts*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_IgnoreLockoutFailureAttempts" data-uid="Pulumi.OpenStack.Identity.User.IgnoreLockoutFailureAttempts">IgnoreLockoutFailureAttempts</h4>
@@ -320,13 +403,13 @@ lockout placed on their account. Valid values are <code>true</code> and <code>fa
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_IgnorePasswordExpiry_" data-uid="Pulumi.OpenStack.Identity.User.IgnorePasswordExpiry*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_IgnorePasswordExpiry" data-uid="Pulumi.OpenStack.Identity.User.IgnorePasswordExpiry">IgnorePasswordExpiry</h4>
@@ -348,13 +431,13 @@ Valid values are <code>true</code> and <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_MultiFactorAuthEnabled_" data-uid="Pulumi.OpenStack.Identity.User.MultiFactorAuthEnabled*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_MultiFactorAuthEnabled" data-uid="Pulumi.OpenStack.Identity.User.MultiFactorAuthEnabled">MultiFactorAuthEnabled</h4>
@@ -376,13 +459,13 @@ authentication. Valid values are <code>true</code> and <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_MultiFactorAuthRules_" data-uid="Pulumi.OpenStack.Identity.User.MultiFactorAuthRules*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_MultiFactorAuthRules" data-uid="Pulumi.OpenStack.Identity.User.MultiFactorAuthRules">MultiFactorAuthRules</h4>
@@ -406,13 +489,13 @@ for more information on how to use mulit-factor rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Identity.Outputs.UserMultiFactorAuthRule.html">UserMultiFactorAuthRule</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Identity.Outputs.UserMultiFactorAuthRule.html">UserMultiFactorAuthRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_Name_" data-uid="Pulumi.OpenStack.Identity.User.Name*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_Name" data-uid="Pulumi.OpenStack.Identity.User.Name">Name</h4>
@@ -433,13 +516,13 @@ for more information on how to use mulit-factor rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_Password_" data-uid="Pulumi.OpenStack.Identity.User.Password*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_Password" data-uid="Pulumi.OpenStack.Identity.User.Password">Password</h4>
@@ -448,7 +531,7 @@ for more information on how to use mulit-factor rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Password { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Password { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,13 +543,13 @@ for more information on how to use mulit-factor rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_Region_" data-uid="Pulumi.OpenStack.Identity.User.Region*"></a>
   <h4 id="Pulumi_OpenStack_Identity_User_Region" data-uid="Pulumi.OpenStack.Identity.User.Region">Region</h4>
@@ -489,7 +572,7 @@ creates a new User.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -497,17 +580,17 @@ creates a new User.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Identity_User_Get_" data-uid="Pulumi.OpenStack.Identity.User.Get*"></a>
-  <h4 id="Pulumi_OpenStack_Identity_User_Get_System_String_Input_System_String__Pulumi_OpenStack_Identity_UserState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Identity.User.Get(System.String,Input{System.String},Pulumi.OpenStack.Identity.UserState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, UserState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Identity_User_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_Identity_UserState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Identity.User.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.Identity.UserState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, UserState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing User resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static User Get(string name, Input&lt;string&gt; id, UserState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static User Get(string name, Input&lt;string&gt; id, UserState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -526,7 +609,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -538,7 +621,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -567,7 +650,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Identity/User.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Identity/User.cs/#L68" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

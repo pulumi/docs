@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Instance
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,6 +77,30 @@ for more information.</p>
 <blockquote>
 <p><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">&quot;Regions and Availability Zones in Amazon Lightsail&quot;</a> for more details</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new GitLab Lightsail Instance
+    var gitlabTest = new Aws.LightSail.Instance(&amp;quot;gitlabTest&amp;quot;, new Aws.LightSail.InstanceArgs
+    {
+        AvailabilityZone = &amp;quot;us-east-1b&amp;quot;,
+        BlueprintId = &amp;quot;string&amp;quot;,
+        BundleId = &amp;quot;string&amp;quot;,
+        KeyPairName = &amp;quot;some_key_name&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 <h2 id="availability-zones">Availability Zones</h2>
 <p>Lightsail currently supports the following Availability Zones (e.g. <code>us-east-1a</code>):</p>
 <ul>
@@ -158,7 +182,45 @@ for more information.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Instance</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Instance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.LightSail.html">Pulumi.Aws.LightSail</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -169,16 +231,16 @@ for more information.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance__ctor_" data-uid="Pulumi.Aws.LightSail.Instance.#ctor*"></a>
-  <h4 id="Pulumi_Aws_LightSail_Instance__ctor_System_String_Pulumi_Aws_LightSail_InstanceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.LightSail.Instance.#ctor(System.String,Pulumi.Aws.LightSail.InstanceArgs,System.Nullable{CustomResourceOptions})">Instance(String, InstanceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_LightSail_Instance__ctor_System_String_Pulumi_Aws_LightSail_InstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.LightSail.Instance.#ctor(System.String,Pulumi.Aws.LightSail.InstanceArgs,Pulumi.CustomResourceOptions)">Instance(String, InstanceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Instance resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,7 +265,7 @@ for more information.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -213,7 +275,7 @@ for more information.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_Arn_" data-uid="Pulumi.Aws.LightSail.Instance.Arn*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_Arn" data-uid="Pulumi.Aws.LightSail.Instance.Arn">Arn</h4>
@@ -234,13 +296,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_AvailabilityZone_" data-uid="Pulumi.Aws.LightSail.Instance.AvailabilityZone*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_AvailabilityZone" data-uid="Pulumi.Aws.LightSail.Instance.AvailabilityZone">AvailabilityZone</h4>
@@ -262,13 +324,13 @@ instance (see list below)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_BlueprintId_" data-uid="Pulumi.Aws.LightSail.Instance.BlueprintId*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_BlueprintId" data-uid="Pulumi.Aws.LightSail.Instance.BlueprintId">BlueprintId</h4>
@@ -290,13 +352,13 @@ instance (see list below)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_BundleId_" data-uid="Pulumi.Aws.LightSail.Instance.BundleId*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_BundleId" data-uid="Pulumi.Aws.LightSail.Instance.BundleId">BundleId</h4>
@@ -317,13 +379,13 @@ instance (see list below)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_CpuCount_" data-uid="Pulumi.Aws.LightSail.Instance.CpuCount*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_CpuCount" data-uid="Pulumi.Aws.LightSail.Instance.CpuCount">CpuCount</h4>
@@ -343,13 +405,13 @@ instance (see list below)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_CreatedAt_" data-uid="Pulumi.Aws.LightSail.Instance.CreatedAt*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_CreatedAt" data-uid="Pulumi.Aws.LightSail.Instance.CreatedAt">CreatedAt</h4>
@@ -377,13 +439,13 @@ instance (see list below)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_Ipv6Address_" data-uid="Pulumi.Aws.LightSail.Instance.Ipv6Address*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_Ipv6Address" data-uid="Pulumi.Aws.LightSail.Instance.Ipv6Address">Ipv6Address</h4>
@@ -403,13 +465,13 @@ instance (see list below)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_IsStaticIp_" data-uid="Pulumi.Aws.LightSail.Instance.IsStaticIp*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_IsStaticIp" data-uid="Pulumi.Aws.LightSail.Instance.IsStaticIp">IsStaticIp</h4>
@@ -429,13 +491,13 @@ instance (see list below)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_KeyPairName_" data-uid="Pulumi.Aws.LightSail.Instance.KeyPairName*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_KeyPairName" data-uid="Pulumi.Aws.LightSail.Instance.KeyPairName">KeyPairName</h4>
@@ -445,7 +507,7 @@ Lightsail console (cannot use <code>aws.ec2.KeyPair</code> at this time)</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KeyPairName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KeyPairName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -457,13 +519,13 @@ Lightsail console (cannot use <code>aws.ec2.KeyPair</code> at this time)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_Name_" data-uid="Pulumi.Aws.LightSail.Instance.Name*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_Name" data-uid="Pulumi.Aws.LightSail.Instance.Name">Name</h4>
@@ -484,13 +546,13 @@ Lightsail console (cannot use <code>aws.ec2.KeyPair</code> at this time)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L192">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_PrivateIpAddress_" data-uid="Pulumi.Aws.LightSail.Instance.PrivateIpAddress*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_PrivateIpAddress" data-uid="Pulumi.Aws.LightSail.Instance.PrivateIpAddress">PrivateIpAddress</h4>
@@ -510,13 +572,13 @@ Lightsail console (cannot use <code>aws.ec2.KeyPair</code> at this time)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_PublicIpAddress_" data-uid="Pulumi.Aws.LightSail.Instance.PublicIpAddress*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_PublicIpAddress" data-uid="Pulumi.Aws.LightSail.Instance.PublicIpAddress">PublicIpAddress</h4>
@@ -536,13 +598,13 @@ Lightsail console (cannot use <code>aws.ec2.KeyPair</code> at this time)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L198">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_RamSize_" data-uid="Pulumi.Aws.LightSail.Instance.RamSize*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_RamSize" data-uid="Pulumi.Aws.LightSail.Instance.RamSize">RamSize</h4>
@@ -562,22 +624,22 @@ Lightsail console (cannot use <code>aws.ec2.KeyPair</code> at this time)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_Tags_" data-uid="Pulumi.Aws.LightSail.Instance.Tags*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_Tags" data-uid="Pulumi.Aws.LightSail.Instance.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -589,13 +651,13 @@ Lightsail console (cannot use <code>aws.ec2.KeyPair</code> at this time)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L210">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_UserData_" data-uid="Pulumi.Aws.LightSail.Instance.UserData*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_UserData" data-uid="Pulumi.Aws.LightSail.Instance.UserData">UserData</h4>
@@ -604,7 +666,7 @@ Lightsail console (cannot use <code>aws.ec2.KeyPair</code> at this time)</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserData { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -616,13 +678,13 @@ Lightsail console (cannot use <code>aws.ec2.KeyPair</code> at this time)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L185">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_Username_" data-uid="Pulumi.Aws.LightSail.Instance.Username*"></a>
   <h4 id="Pulumi_Aws_LightSail_Instance_Username" data-uid="Pulumi.Aws.LightSail.Instance.Username">Username</h4>
@@ -642,7 +704,7 @@ Lightsail console (cannot use <code>aws.ec2.KeyPair</code> at this time)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -650,17 +712,17 @@ Lightsail console (cannot use <code>aws.ec2.KeyPair</code> at this time)</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L226">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Aws_LightSail_Instance_Get_" data-uid="Pulumi.Aws.LightSail.Instance.Get*"></a>
-  <h4 id="Pulumi_Aws_LightSail_Instance_Get_System_String_Input_System_String__Pulumi_Aws_LightSail_InstanceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.LightSail.Instance.Get(System.String,Input{System.String},Pulumi.Aws.LightSail.InstanceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, InstanceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_LightSail_Instance_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_LightSail_InstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.LightSail.Instance.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.LightSail.InstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, InstanceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Instance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -679,7 +741,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -691,7 +753,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -720,7 +782,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LightSail/Instance.cs/#L103" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/LightSail/Instance.cs/#L131" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Saml
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,75 @@
   </h1>
   <div class="markdown level0 summary"><p>Creates a SAML Identity Provider.</p>
 <p>This resource allows you to create and configure a SAML Identity Provider.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Idp.Saml(&amp;quot;example&amp;quot;, new Okta.Idp.SamlArgs
+    {
+        AcsBinding = &amp;quot;HTTP-POST&amp;quot;,
+        AcsType = &amp;quot;INSTANCE&amp;quot;,
+        Issuer = &amp;quot;https://idp.example.com&amp;quot;,
+        Kid = okta_idp_saml_key.Test.Id,
+        RequestSignatureScope = &amp;quot;REQUEST&amp;quot;,
+        ResponseSignatureScope = &amp;quot;ANY&amp;quot;,
+        SsoBinding = &amp;quot;HTTP-POST&amp;quot;,
+        SsoDestination = &amp;quot;https://idp.example.com&amp;quot;,
+        SsoUrl = &amp;quot;https://idp.example.com&amp;quot;,
+        UsernameTemplate = &amp;quot;idpuser.email&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Saml</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Saml</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Okta.Idp.html">Pulumi.Okta.Idp</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Okta.dll</h6>
@@ -89,16 +152,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml__ctor_" data-uid="Pulumi.Okta.Idp.Saml.#ctor*"></a>
-  <h4 id="Pulumi_Okta_Idp_Saml__ctor_System_String_Pulumi_Okta_Idp_SamlArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.Idp.Saml.#ctor(System.String,Pulumi.Okta.Idp.SamlArgs,System.Nullable{CustomResourceOptions})">Saml(String, SamlArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_Idp_Saml__ctor_System_String_Pulumi_Okta_Idp_SamlArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.Idp.Saml.#ctor(System.String,Pulumi.Okta.Idp.SamlArgs,Pulumi.CustomResourceOptions)">Saml(String, SamlArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Saml resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Saml(string name, SamlArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Saml(string name, SamlArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +186,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +196,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_AccountLinkAction_" data-uid="Pulumi.Okta.Idp.Saml.AccountLinkAction*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_AccountLinkAction" data-uid="Pulumi.Okta.Idp.Saml.AccountLinkAction">AccountLinkAction</h4>
@@ -142,7 +205,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccountLinkAction { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccountLinkAction { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,13 +217,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_AccountLinkGroupIncludes_" data-uid="Pulumi.Okta.Idp.Saml.AccountLinkGroupIncludes*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_AccountLinkGroupIncludes" data-uid="Pulumi.Okta.Idp.Saml.AccountLinkGroupIncludes">AccountLinkGroupIncludes</h4>
@@ -181,13 +244,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_AcsBinding_" data-uid="Pulumi.Okta.Idp.Saml.AcsBinding*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_AcsBinding" data-uid="Pulumi.Okta.Idp.Saml.AcsBinding">AcsBinding</h4>
@@ -208,13 +271,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_AcsType_" data-uid="Pulumi.Okta.Idp.Saml.AcsType*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_AcsType" data-uid="Pulumi.Okta.Idp.Saml.AcsType">AcsType</h4>
@@ -223,7 +286,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AcsType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AcsType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +298,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_Audience_" data-uid="Pulumi.Okta.Idp.Saml.Audience*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_Audience" data-uid="Pulumi.Okta.Idp.Saml.Audience">Audience</h4>
@@ -262,13 +325,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_DeprovisionedAction_" data-uid="Pulumi.Okta.Idp.Saml.DeprovisionedAction*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_DeprovisionedAction" data-uid="Pulumi.Okta.Idp.Saml.DeprovisionedAction">DeprovisionedAction</h4>
@@ -277,7 +340,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DeprovisionedAction { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DeprovisionedAction { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,13 +352,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_GroupsAction_" data-uid="Pulumi.Okta.Idp.Saml.GroupsAction*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_GroupsAction" data-uid="Pulumi.Okta.Idp.Saml.GroupsAction">GroupsAction</h4>
@@ -304,7 +367,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; GroupsAction { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupsAction { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,13 +379,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_GroupsAssignments_" data-uid="Pulumi.Okta.Idp.Saml.GroupsAssignments*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_GroupsAssignments" data-uid="Pulumi.Okta.Idp.Saml.GroupsAssignments">GroupsAssignments</h4>
@@ -343,13 +406,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_GroupsAttribute_" data-uid="Pulumi.Okta.Idp.Saml.GroupsAttribute*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_GroupsAttribute" data-uid="Pulumi.Okta.Idp.Saml.GroupsAttribute">GroupsAttribute</h4>
@@ -358,7 +421,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; GroupsAttribute { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupsAttribute { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -370,13 +433,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_GroupsFilters_" data-uid="Pulumi.Okta.Idp.Saml.GroupsFilters*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_GroupsFilters" data-uid="Pulumi.Okta.Idp.Saml.GroupsFilters">GroupsFilters</h4>
@@ -397,13 +460,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_Issuer_" data-uid="Pulumi.Okta.Idp.Saml.Issuer*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_Issuer" data-uid="Pulumi.Okta.Idp.Saml.Issuer">Issuer</h4>
@@ -424,13 +487,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_IssuerMode_" data-uid="Pulumi.Okta.Idp.Saml.IssuerMode*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_IssuerMode" data-uid="Pulumi.Okta.Idp.Saml.IssuerMode">IssuerMode</h4>
@@ -439,7 +502,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IssuerMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IssuerMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -451,13 +514,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_Kid_" data-uid="Pulumi.Okta.Idp.Saml.Kid*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_Kid" data-uid="Pulumi.Okta.Idp.Saml.Kid">Kid</h4>
@@ -478,13 +541,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_Name_" data-uid="Pulumi.Okta.Idp.Saml.Name*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_Name" data-uid="Pulumi.Okta.Idp.Saml.Name">Name</h4>
@@ -505,13 +568,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_NameFormat_" data-uid="Pulumi.Okta.Idp.Saml.NameFormat*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_NameFormat" data-uid="Pulumi.Okta.Idp.Saml.NameFormat">NameFormat</h4>
@@ -520,7 +583,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NameFormat { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NameFormat { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -532,13 +595,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_ProfileMaster_" data-uid="Pulumi.Okta.Idp.Saml.ProfileMaster*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_ProfileMaster" data-uid="Pulumi.Okta.Idp.Saml.ProfileMaster">ProfileMaster</h4>
@@ -559,13 +622,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L148">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_ProvisioningAction_" data-uid="Pulumi.Okta.Idp.Saml.ProvisioningAction*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_ProvisioningAction" data-uid="Pulumi.Okta.Idp.Saml.ProvisioningAction">ProvisioningAction</h4>
@@ -574,7 +637,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProvisioningAction { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProvisioningAction { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -586,13 +649,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_RequestSignatureAlgorithm_" data-uid="Pulumi.Okta.Idp.Saml.RequestSignatureAlgorithm*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_RequestSignatureAlgorithm" data-uid="Pulumi.Okta.Idp.Saml.RequestSignatureAlgorithm">RequestSignatureAlgorithm</h4>
@@ -601,7 +664,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RequestSignatureAlgorithm { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RequestSignatureAlgorithm { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -613,13 +676,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_RequestSignatureScope_" data-uid="Pulumi.Okta.Idp.Saml.RequestSignatureScope*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_RequestSignatureScope" data-uid="Pulumi.Okta.Idp.Saml.RequestSignatureScope">RequestSignatureScope</h4>
@@ -628,7 +691,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RequestSignatureScope { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RequestSignatureScope { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -640,13 +703,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_ResponseSignatureAlgorithm_" data-uid="Pulumi.Okta.Idp.Saml.ResponseSignatureAlgorithm*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_ResponseSignatureAlgorithm" data-uid="Pulumi.Okta.Idp.Saml.ResponseSignatureAlgorithm">ResponseSignatureAlgorithm</h4>
@@ -655,7 +718,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ResponseSignatureAlgorithm { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResponseSignatureAlgorithm { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -667,13 +730,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_ResponseSignatureScope_" data-uid="Pulumi.Okta.Idp.Saml.ResponseSignatureScope*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_ResponseSignatureScope" data-uid="Pulumi.Okta.Idp.Saml.ResponseSignatureScope">ResponseSignatureScope</h4>
@@ -682,7 +745,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ResponseSignatureScope { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResponseSignatureScope { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -694,13 +757,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_SsoBinding_" data-uid="Pulumi.Okta.Idp.Saml.SsoBinding*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_SsoBinding" data-uid="Pulumi.Okta.Idp.Saml.SsoBinding">SsoBinding</h4>
@@ -709,7 +772,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SsoBinding { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SsoBinding { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -721,13 +784,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L184">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_SsoDestination_" data-uid="Pulumi.Okta.Idp.Saml.SsoDestination*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_SsoDestination" data-uid="Pulumi.Okta.Idp.Saml.SsoDestination">SsoDestination</h4>
@@ -736,7 +799,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SsoDestination { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SsoDestination { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -748,13 +811,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_SsoUrl_" data-uid="Pulumi.Okta.Idp.Saml.SsoUrl*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_SsoUrl" data-uid="Pulumi.Okta.Idp.Saml.SsoUrl">SsoUrl</h4>
@@ -775,13 +838,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_Status_" data-uid="Pulumi.Okta.Idp.Saml.Status*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_Status" data-uid="Pulumi.Okta.Idp.Saml.Status">Status</h4>
@@ -790,7 +853,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Status { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -802,13 +865,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_SubjectFilter_" data-uid="Pulumi.Okta.Idp.Saml.SubjectFilter*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_SubjectFilter" data-uid="Pulumi.Okta.Idp.Saml.SubjectFilter">SubjectFilter</h4>
@@ -817,7 +880,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubjectFilter { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SubjectFilter { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -829,13 +892,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_SubjectFormats_" data-uid="Pulumi.Okta.Idp.Saml.SubjectFormats*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_SubjectFormats" data-uid="Pulumi.Okta.Idp.Saml.SubjectFormats">SubjectFormats</h4>
@@ -856,13 +919,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L214">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_SubjectMatchAttribute_" data-uid="Pulumi.Okta.Idp.Saml.SubjectMatchAttribute*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_SubjectMatchAttribute" data-uid="Pulumi.Okta.Idp.Saml.SubjectMatchAttribute">SubjectMatchAttribute</h4>
@@ -871,7 +934,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubjectMatchAttribute { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SubjectMatchAttribute { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -883,13 +946,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L220">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_SubjectMatchType_" data-uid="Pulumi.Okta.Idp.Saml.SubjectMatchType*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_SubjectMatchType" data-uid="Pulumi.Okta.Idp.Saml.SubjectMatchType">SubjectMatchType</h4>
@@ -898,7 +961,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubjectMatchType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SubjectMatchType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -910,13 +973,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L226">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_SuspendedAction_" data-uid="Pulumi.Okta.Idp.Saml.SuspendedAction*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_SuspendedAction" data-uid="Pulumi.Okta.Idp.Saml.SuspendedAction">SuspendedAction</h4>
@@ -925,7 +988,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SuspendedAction { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SuspendedAction { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -937,13 +1000,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L202">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_Type_" data-uid="Pulumi.Okta.Idp.Saml.Type*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_Type" data-uid="Pulumi.Okta.Idp.Saml.Type">Type</h4>
@@ -964,13 +1027,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L208">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L238">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_UsernameTemplate_" data-uid="Pulumi.Okta.Idp.Saml.UsernameTemplate*"></a>
   <h4 id="Pulumi_Okta_Idp_Saml_UsernameTemplate" data-uid="Pulumi.Okta.Idp.Saml.UsernameTemplate">UsernameTemplate</h4>
@@ -979,7 +1042,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UsernameTemplate { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UsernameTemplate { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -991,7 +1054,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -999,17 +1062,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L249">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_Okta_Idp_Saml_Get_" data-uid="Pulumi.Okta.Idp.Saml.Get*"></a>
-  <h4 id="Pulumi_Okta_Idp_Saml_Get_System_String_Input_System_String__Pulumi_Okta_Idp_SamlState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.Idp.Saml.Get(System.String,Input{System.String},Pulumi.Okta.Idp.SamlState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SamlState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_Idp_Saml_Get_System_String_Pulumi_Input_System_String__Pulumi_Okta_Idp_SamlState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.Idp.Saml.Get(System.String,Pulumi.Input{System.String},Pulumi.Okta.Idp.SamlState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SamlState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Saml resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Saml Get(string name, Input&lt;string&gt; id, SamlState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Saml Get(string name, Input&lt;string&gt; id, SamlState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1028,7 +1091,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1040,7 +1103,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1069,7 +1132,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Idp/Saml.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L47" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

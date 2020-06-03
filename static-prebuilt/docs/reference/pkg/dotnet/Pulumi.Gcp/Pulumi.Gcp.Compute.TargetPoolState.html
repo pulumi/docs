@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TargetPoolState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TargetPoolState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">TargetPoolState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L296">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L332">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_TargetPoolState__ctor_" data-uid="Pulumi.Gcp.Compute.TargetPoolState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_TargetPoolState__ctor" data-uid="Pulumi.Gcp.Compute.TargetPoolState.#ctor">TargetPoolState()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L222">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L258">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_TargetPoolState_BackupPool_" data-uid="Pulumi.Gcp.Compute.TargetPoolState.BackupPool*"></a>
   <h4 id="Pulumi_Gcp_Compute_TargetPoolState_BackupPool" data-uid="Pulumi.Gcp.Compute.TargetPoolState.BackupPool">BackupPool</h4>
@@ -110,7 +139,7 @@ failover_ratio.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? BackupPool { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; BackupPool { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,13 +151,13 @@ failover_ratio.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L264">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_TargetPoolState_Description_" data-uid="Pulumi.Gcp.Compute.TargetPoolState.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_TargetPoolState_Description" data-uid="Pulumi.Gcp.Compute.TargetPoolState.Description">Description</h4>
@@ -137,7 +166,7 @@ failover_ratio.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,13 +178,13 @@ failover_ratio.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L235">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_TargetPoolState_FailoverRatio_" data-uid="Pulumi.Gcp.Compute.TargetPoolState.FailoverRatio*"></a>
   <h4 id="Pulumi_Gcp_Compute_TargetPoolState_FailoverRatio" data-uid="Pulumi.Gcp.Compute.TargetPoolState.FailoverRatio">FailoverRatio</h4>
@@ -165,7 +194,7 @@ backup pool (which must also be set).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;double&gt;? FailoverRatio { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;double&gt; FailoverRatio { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +206,13 @@ backup pool (which must also be set).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L242">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L278">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_TargetPoolState_HealthChecks_" data-uid="Pulumi.Gcp.Compute.TargetPoolState.HealthChecks*"></a>
   <h4 id="Pulumi_Gcp_Compute_TargetPoolState_HealthChecks" data-uid="Pulumi.Gcp.Compute.TargetPoolState.HealthChecks">HealthChecks</h4>
@@ -193,7 +222,7 @@ legacy <code>gcp.compute.HttpHealthCheck</code> is supported.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HealthChecks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HealthChecks { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,13 +234,13 @@ legacy <code>gcp.compute.HttpHealthCheck</code> is supported.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L255">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L291">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_TargetPoolState_Instances_" data-uid="Pulumi.Gcp.Compute.TargetPoolState.Instances*"></a>
   <h4 id="Pulumi_Gcp_Compute_TargetPoolState_Instances" data-uid="Pulumi.Gcp.Compute.TargetPoolState.Instances">Instances</h4>
@@ -236,13 +265,13 @@ target pool.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L265">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L301">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_TargetPoolState_Name_" data-uid="Pulumi.Gcp.Compute.TargetPoolState.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_TargetPoolState_Name" data-uid="Pulumi.Gcp.Compute.TargetPoolState.Name">Name</h4>
@@ -252,7 +281,7 @@ this forces a new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,13 +293,13 @@ this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L272">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L308">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_TargetPoolState_Project_" data-uid="Pulumi.Gcp.Compute.TargetPoolState.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_TargetPoolState_Project" data-uid="Pulumi.Gcp.Compute.TargetPoolState.Project">Project</h4>
@@ -280,7 +309,7 @@ is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,13 +321,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L279">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L315">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_TargetPoolState_Region_" data-uid="Pulumi.Gcp.Compute.TargetPoolState.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_TargetPoolState_Region" data-uid="Pulumi.Gcp.Compute.TargetPoolState.Region">Region</h4>
@@ -308,7 +337,7 @@ region.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,13 +349,13 @@ region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L285">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L321">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_TargetPoolState_SelfLink_" data-uid="Pulumi.Gcp.Compute.TargetPoolState.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_TargetPoolState_SelfLink" data-uid="Pulumi.Gcp.Compute.TargetPoolState.SelfLink">SelfLink</h4>
@@ -335,7 +364,7 @@ region.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SelfLink { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SelfLink { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,13 +376,13 @@ region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L293">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L329">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_TargetPoolState_SessionAffinity_" data-uid="Pulumi.Gcp.Compute.TargetPoolState.SessionAffinity*"></a>
   <h4 id="Pulumi_Gcp_Compute_TargetPoolState_SessionAffinity" data-uid="Pulumi.Gcp.Compute.TargetPoolState.SessionAffinity">SessionAffinity</h4>
@@ -364,7 +393,7 @@ affinity). &quot;CLIENT_IP&quot; (hash of the source/dest addresses / ports), an
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SessionAffinity { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SessionAffinity { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -376,7 +405,7 @@ affinity). &quot;CLIENT_IP&quot; (hash of the source/dest addresses / ports), an
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -388,7 +417,7 @@ affinity). &quot;CLIENT_IP&quot; (hash of the source/dest addresses / ports), an
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/TargetPool.cs/#L216" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/TargetPool.cs/#L252" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

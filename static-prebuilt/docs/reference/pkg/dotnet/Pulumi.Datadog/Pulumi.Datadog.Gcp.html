@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Datadog.Gcp
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,32 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Datadog.Gcp.Integration.html">Integration</a></h4>
       <section><p>Provides a Datadog - Google Cloud Platform integration resource. This can be used to create and manage Datadog - Google Cloud Platform integration.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Datadog = Pulumi.Datadog;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new Datadog - Google Cloud Platform integration
+    var awesomeGcpProjectIntegration = new Datadog.Gcp.Integration(&amp;quot;awesomeGcpProjectIntegration&amp;quot;, new Datadog.Gcp.IntegrationArgs
+    {
+        ClientEmail = &amp;quot;awesome-service-account@awesome-project-id.iam.gserviceaccount.com&amp;quot;,
+        ClientId = &amp;quot;123456789012345678901&amp;quot;,
+        HostFilters = &amp;quot;foo:bar,buzz:lightyear&amp;quot;,
+        PrivateKey = @&amp;quot;-----BEGIN PRIVATE KEY-----
+...
+-----END PRIVATE KEY-----
+
+&amp;quot;,
+        PrivateKeyId = &amp;quot;1234567890123456789012345678901234567890&amp;quot;,
+        ProjectId = &amp;quot;awesome-project-id&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.Gcp.IntegrationArgs.html">IntegrationArgs</a></h4>
       <section></section>

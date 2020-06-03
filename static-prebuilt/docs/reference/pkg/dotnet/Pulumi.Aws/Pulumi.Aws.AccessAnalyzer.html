@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.AccessAnalyzer
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,22 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.AccessAnalyzer.Analyzer.html">Analyzer</a></h4>
       <section><p>Manages an Access Analyzer Analyzer. More information can be found in the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html">Access Analyzer User Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AccessAnalyzer.Analyzer(&amp;quot;example&amp;quot;, new Aws.AccessAnalyzer.AnalyzerArgs
+    {
+        AnalyzerName = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AccessAnalyzer.AnalyzerArgs.html">AnalyzerArgs</a></h4>
       <section></section>

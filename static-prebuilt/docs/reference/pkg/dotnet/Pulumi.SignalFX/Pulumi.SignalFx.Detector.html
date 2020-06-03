@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Detector
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,7 +71,7 @@
   
   <h1 id="Pulumi_SignalFx_Detector" data-uid="Pulumi.SignalFx.Detector" class="text-break">Class Detector
   </h1>
-  <div class="markdown level0 summary"><p>Provides a SignalFx detector resource. This can be used to create and manage detectors.</p>
+  <div class="markdown level0 summary"><p>Provides a SignalFx detector resource. This can be used to create and manage detectors. As SignalFx supports different notification mechanisms a comma-delimited string is used to provide inputs. If you'd like to specify multiple notifications, then each should be a member in the list.</p>
 <blockquote>
 <p><strong>NOTE</strong> If you're interested in using SignalFx detector features such as Historical Anomaly, Resource Running Out, or others then consider building them in the UI first then using the &quot;Show SignalFlow&quot; feature to extract the value for <code>program_text</code>. You may also consult the <a href="https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors">documentation for detector functions in signalflow-library</a>.</p>
 </blockquote>
@@ -80,7 +80,45 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Detector</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Detector</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.SignalFx.html">Pulumi.SignalFx</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.SignalFx.dll</h6>
@@ -91,16 +129,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector__ctor_" data-uid="Pulumi.SignalFx.Detector.#ctor*"></a>
-  <h4 id="Pulumi_SignalFx_Detector__ctor_System_String_Pulumi_SignalFx_DetectorArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.Detector.#ctor(System.String,Pulumi.SignalFx.DetectorArgs,System.Nullable{CustomResourceOptions})">Detector(String, DetectorArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_SignalFx_Detector__ctor_System_String_Pulumi_SignalFx_DetectorArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.SignalFx.Detector.#ctor(System.String,Pulumi.SignalFx.DetectorArgs,Pulumi.CustomResourceOptions)">Detector(String, DetectorArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Detector resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Detector(string name, DetectorArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Detector(string name, DetectorArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +163,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +173,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_AuthorizedWriterTeams_" data-uid="Pulumi.SignalFx.Detector.AuthorizedWriterTeams*"></a>
   <h4 id="Pulumi_SignalFx_Detector_AuthorizedWriterTeams" data-uid="Pulumi.SignalFx.Detector.AuthorizedWriterTeams">AuthorizedWriterTeams</h4>
@@ -156,13 +194,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_AuthorizedWriterUsers_" data-uid="Pulumi.SignalFx.Detector.AuthorizedWriterUsers*"></a>
   <h4 id="Pulumi_SignalFx_Detector_AuthorizedWriterUsers" data-uid="Pulumi.SignalFx.Detector.AuthorizedWriterUsers">AuthorizedWriterUsers</h4>
@@ -183,13 +221,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_Description_" data-uid="Pulumi.SignalFx.Detector.Description*"></a>
   <h4 id="Pulumi_SignalFx_Detector_Description" data-uid="Pulumi.SignalFx.Detector.Description">Description</h4>
@@ -198,7 +236,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,13 +248,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_DisableSampling_" data-uid="Pulumi.SignalFx.Detector.DisableSampling*"></a>
   <h4 id="Pulumi_SignalFx_Detector_DisableSampling" data-uid="Pulumi.SignalFx.Detector.DisableSampling">DisableSampling</h4>
@@ -237,13 +275,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_EndTime_" data-uid="Pulumi.SignalFx.Detector.EndTime*"></a>
   <h4 id="Pulumi_SignalFx_Detector_EndTime" data-uid="Pulumi.SignalFx.Detector.EndTime">EndTime</h4>
@@ -264,13 +302,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_MaxDelay_" data-uid="Pulumi.SignalFx.Detector.MaxDelay*"></a>
   <h4 id="Pulumi_SignalFx_Detector_MaxDelay" data-uid="Pulumi.SignalFx.Detector.MaxDelay">MaxDelay</h4>
@@ -291,13 +329,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_Name_" data-uid="Pulumi.SignalFx.Detector.Name*"></a>
   <h4 id="Pulumi_SignalFx_Detector_Name" data-uid="Pulumi.SignalFx.Detector.Name">Name</h4>
@@ -318,13 +356,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_ProgramText_" data-uid="Pulumi.SignalFx.Detector.ProgramText*"></a>
   <h4 id="Pulumi_SignalFx_Detector_ProgramText" data-uid="Pulumi.SignalFx.Detector.ProgramText">ProgramText</h4>
@@ -345,13 +383,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_Rules_" data-uid="Pulumi.SignalFx.Detector.Rules*"></a>
   <h4 id="Pulumi_SignalFx_Detector_Rules" data-uid="Pulumi.SignalFx.Detector.Rules">Rules</h4>
@@ -372,13 +410,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.DetectorRule.html">DetectorRule</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.DetectorRule.html">DetectorRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_ShowDataMarkers_" data-uid="Pulumi.SignalFx.Detector.ShowDataMarkers*"></a>
   <h4 id="Pulumi_SignalFx_Detector_ShowDataMarkers" data-uid="Pulumi.SignalFx.Detector.ShowDataMarkers">ShowDataMarkers</h4>
@@ -399,13 +437,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_ShowEventLines_" data-uid="Pulumi.SignalFx.Detector.ShowEventLines*"></a>
   <h4 id="Pulumi_SignalFx_Detector_ShowEventLines" data-uid="Pulumi.SignalFx.Detector.ShowEventLines">ShowEventLines</h4>
@@ -426,13 +464,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_StartTime_" data-uid="Pulumi.SignalFx.Detector.StartTime*"></a>
   <h4 id="Pulumi_SignalFx_Detector_StartTime" data-uid="Pulumi.SignalFx.Detector.StartTime">StartTime</h4>
@@ -453,13 +491,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_Teams_" data-uid="Pulumi.SignalFx.Detector.Teams*"></a>
   <h4 id="Pulumi_SignalFx_Detector_Teams" data-uid="Pulumi.SignalFx.Detector.Teams">Teams</h4>
@@ -480,13 +518,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_TimeRange_" data-uid="Pulumi.SignalFx.Detector.TimeRange*"></a>
   <h4 id="Pulumi_SignalFx_Detector_TimeRange" data-uid="Pulumi.SignalFx.Detector.TimeRange">TimeRange</h4>
@@ -507,13 +545,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_Url_" data-uid="Pulumi.SignalFx.Detector.Url*"></a>
   <h4 id="Pulumi_SignalFx_Detector_Url" data-uid="Pulumi.SignalFx.Detector.Url">Url</h4>
@@ -534,13 +572,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_VizOptions_" data-uid="Pulumi.SignalFx.Detector.VizOptions*"></a>
   <h4 id="Pulumi_SignalFx_Detector_VizOptions" data-uid="Pulumi.SignalFx.Detector.VizOptions">VizOptions</h4>
@@ -561,7 +599,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.DetectorVizOption.html">DetectorVizOption</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.DetectorVizOption.html">DetectorVizOption</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -569,17 +607,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Detector_Get_" data-uid="Pulumi.SignalFx.Detector.Get*"></a>
-  <h4 id="Pulumi_SignalFx_Detector_Get_System_String_Input_System_String__Pulumi_SignalFx_DetectorState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.Detector.Get(System.String,Input{System.String},Pulumi.SignalFx.DetectorState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DetectorState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_SignalFx_Detector_Get_System_String_Pulumi_Input_System_String__Pulumi_SignalFx_DetectorState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.SignalFx.Detector.Get(System.String,Pulumi.Input{System.String},Pulumi.SignalFx.DetectorState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DetectorState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Detector resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Detector Get(string name, Input&lt;string&gt; id, DetectorState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Detector Get(string name, Input&lt;string&gt; id, DetectorState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -598,7 +636,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -610,7 +648,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -639,7 +677,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Detector.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

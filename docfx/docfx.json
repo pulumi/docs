@@ -40,6 +40,15 @@
     {
       "src": [
         {
+          "src": "../../pulumi-azuread/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.AzureAD"
+    },
+    {
+      "src": [
+        {
           "src": "../../pulumi-gcp/sdk/dotnet",
           "files": ["Pulumi.*.csproj"]
         }
@@ -90,6 +99,15 @@
         }
       ],
       "dest": "metadata/Pulumi.AliCloud"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-auth0/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Auth0"
     },
     {
       "src": [
@@ -279,6 +297,15 @@
         }
       ],
       "dest": "metadata/Pulumi.Packet"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-pagerduty/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Pagerduty"
     },
     {
       "src": [

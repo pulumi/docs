@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.GitLab
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,25 @@
   </h3>
       <h4><a class="xref" href="Pulumi.GitLab.BranchProtection.html">BranchProtection</a></h4>
       <section><p>This resource allows you to protect a specific branch by an access level so that the user with less access level cannot Merge/Push to the branch. GitLab EE features to protect by group or user are not supported.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var branchProtect = new GitLab.BranchProtection(&amp;quot;branchProtect&amp;quot;, new GitLab.BranchProtectionArgs
+    {
+        Branch = &amp;quot;BranchProtected&amp;quot;,
+        MergeAccessLevel = &amp;quot;developer&amp;quot;,
+        Project = &amp;quot;12345&amp;quot;,
+        PushAccessLevel = &amp;quot;developer&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.BranchProtectionArgs.html">BranchProtectionArgs</a></h4>
       <section></section>
@@ -87,18 +106,119 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.DeployKey.html">DeployKey</a></h4>
       <section><p>This resource allows you to create and manage deploy keys for your GitLab projects.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new GitLab.DeployKey(&amp;quot;example&amp;quot;, new GitLab.DeployKeyArgs
+    {
+        Key = &amp;quot;ssh-rsa AAAA...&amp;quot;,
+        Project = &amp;quot;example/deploying&amp;quot;,
+        Title = &amp;quot;Example deploy key&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.DeployKeyArgs.html">DeployKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.DeployKeyEnable.html">DeployKeyEnable</a></h4>
       <section><p>This resource allows you to enable pre-existing deploy keys for your GitLab projects.</p>
 <p><strong>the GITLAB KEY_ID for the deploy key must be known</strong></p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // A repo to host the deployment key
+    var parentProject = new GitLab.Project(&amp;quot;parentProject&amp;quot;, new GitLab.ProjectArgs
+    {
+    });
+    // A second repo to use the deployment key from the parent project
+    var fooProject = new GitLab.Project(&amp;quot;fooProject&amp;quot;, new GitLab.ProjectArgs
+    {
+    });
+    // Upload a deployment key for the parent repo
+    var parentDeployKey = new GitLab.DeployKey(&amp;quot;parentDeployKey&amp;quot;, new GitLab.DeployKeyArgs
+    {
+        Key = &amp;quot;ssh-rsa AAAA...&amp;quot;,
+        Project = parentProject.Id,
+        Title = &amp;quot;Example deploy key&amp;quot;,
+    });
+    // Enable the deployment key on the second repo
+    var fooDeployKeyEnable = new GitLab.DeployKeyEnable(&amp;quot;fooDeployKeyEnable&amp;quot;, new GitLab.DeployKeyEnableArgs
+    {
+        KeyId = parentDeployKey.Id,
+        Project = fooProject.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.DeployKeyEnableArgs.html">DeployKeyEnableArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.DeployKeyEnableState.html">DeployKeyEnableState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.DeployKeyState.html">DeployKeyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.GitLab.DeployToken.html">DeployToken</a></h4>
+      <section><p>This resource allows you to create and manage deploy token for your GitLab projects and groups.</p>
+<h2 id="example-usage---project">Example Usage - Project</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new GitLab.DeployToken(&amp;quot;example&amp;quot;, new GitLab.DeployTokenArgs
+    {
+        ExpiresAt = &amp;quot;2020-03-14T00:00:00.000Z&amp;quot;,
+        Project = &amp;quot;example/deploying&amp;quot;,
+        Scopes = 
+        {
+            &amp;quot;read_repository&amp;quot;,
+            &amp;quot;read_registry&amp;quot;,
+        },
+        Username = &amp;quot;example-username&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---group">Example Usage - Group</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new GitLab.DeployToken(&amp;quot;example&amp;quot;, new GitLab.DeployTokenArgs
+    {
+        Group = &amp;quot;example/deploying&amp;quot;,
+        Scopes = 
+        {
+            &amp;quot;read_repository&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.GitLab.DeployTokenArgs.html">DeployTokenArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.GitLab.DeployTokenState.html">DeployTokenState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.GetGroup.html">GetGroup</a></h4>
       <section></section>
@@ -111,6 +231,12 @@
       <h4><a class="xref" href="Pulumi.GitLab.GetProjectArgs.html">GetProjectArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.GetProjectResult.html">GetProjectResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.GitLab.GetProjects.html">GetProjects</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.GitLab.GetProjectsArgs.html">GetProjectsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.GitLab.GetProjectsResult.html">GetProjectsResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.GetUser.html">GetUser</a></h4>
       <section></section>
@@ -141,13 +267,76 @@ documentation</a>.</p>
       <section><p>This resource allows you to create and manage labels for your GitLab groups.
 For further information on labels, consult the <a href="https://docs.gitlab.com/ee/user/project/labels.html#group-labels">gitlab
 documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fixme = new GitLab.GroupLabel(&amp;quot;fixme&amp;quot;, new GitLab.GroupLabelArgs
+    {
+        Color = &amp;quot;#ffcc00&amp;quot;,
+        Description = &amp;quot;issue with failing tests&amp;quot;,
+        Group = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.GroupLabelArgs.html">GroupLabelArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.GroupLabelState.html">GroupLabelState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.GitLab.GroupLdapLink.html">GroupLdapLink</a></h4>
+      <section><p>This resource allows you to add an LDAP link to an existing GitLab group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new GitLab.GroupLdapLink(&amp;quot;test&amp;quot;, new GitLab.GroupLdapLinkArgs
+    {
+        AccessLevel = &amp;quot;developer&amp;quot;,
+        Cn = &amp;quot;testuser&amp;quot;,
+        GroupId = &amp;quot;12345&amp;quot;,
+        LdapProvider = &amp;quot;ldapmain&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.GitLab.GroupLdapLinkArgs.html">GroupLdapLinkArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.GitLab.GroupLdapLinkState.html">GroupLdapLinkState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.GroupMembership.html">GroupMembership</a></h4>
       <section><p>This resource allows you to add a user to an existing group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new GitLab.GroupMembership(&amp;quot;test&amp;quot;, new GitLab.GroupMembershipArgs
+    {
+        AccessLevel = &amp;quot;guest&amp;quot;,
+        ExpiresAt = &amp;quot;2020-12-31&amp;quot;,
+        GroupId = &amp;quot;12345&amp;quot;,
+        UserId = 1337,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.GroupMembershipArgs.html">GroupMembershipArgs</a></h4>
       <section></section>
@@ -159,6 +348,26 @@ documentation</a>.</p>
       <section><p>This resource allows you to create and manage CI/CD variables for your GitLab groups.
 For further information on variables, consult the <a href="https://docs.gitlab.com/ce/ci/variables/README.html#variables">gitlab
 documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new GitLab.GroupVariable(&amp;quot;example&amp;quot;, new GitLab.GroupVariableArgs
+    {
+        Group = &amp;quot;12345&amp;quot;,
+        Key = &amp;quot;group_variable_key&amp;quot;,
+        Masked = false,
+        Protected = false,
+        Value = &amp;quot;group_variable_value&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.GroupVariableArgs.html">GroupVariableArgs</a></h4>
       <section></section>
@@ -168,6 +377,24 @@ documentation</a>.</p>
       <section><p>This resource allows you to create and manage labels for your GitLab projects.
 For further information on labels, consult the <a href="https://docs.gitlab.com/ee/user/project/labels.html#project-labels">gitlab
 documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fixme = new GitLab.Label(&amp;quot;fixme&amp;quot;, new GitLab.LabelArgs
+    {
+        Color = &amp;quot;#ffcc00&amp;quot;,
+        Description = &amp;quot;issue with failing tests&amp;quot;,
+        Project = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.LabelArgs.html">LabelArgs</a></h4>
       <section></section>
@@ -177,6 +404,25 @@ documentation</a>.</p>
       <section><p>This resource allows you to create and manage pipeline schedules.
 For further information on clusters, consult the <a href="https://docs.gitlab.com/ce/user/project/pipelines/schedules.html">gitlab
 documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new GitLab.PipelineSchedule(&amp;quot;example&amp;quot;, new GitLab.PipelineScheduleArgs
+    {
+        Cron = &amp;quot;0 1 * * *&amp;quot;,
+        Description = &amp;quot;Used to schedule builds&amp;quot;,
+        Project = &amp;quot;12345&amp;quot;,
+        Ref = &amp;quot;master&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.PipelineScheduleArgs.html">PipelineScheduleArgs</a></h4>
       <section></section>
@@ -184,6 +430,32 @@ documentation</a>.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.PipelineScheduleVariable.html">PipelineScheduleVariable</a></h4>
       <section><p>This resource allows you to create and manage variables for pipeline schedules.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var examplePipelineSchedule = new GitLab.PipelineSchedule(&amp;quot;examplePipelineSchedule&amp;quot;, new GitLab.PipelineScheduleArgs
+    {
+        Project = &amp;quot;12345&amp;quot;,
+        Description = &amp;quot;Used to schedule builds&amp;quot;,
+        Ref = &amp;quot;master&amp;quot;,
+        Cron = &amp;quot;0 1 * * *&amp;quot;,
+    });
+    var examplePipelineScheduleVariable = new GitLab.PipelineScheduleVariable(&amp;quot;examplePipelineScheduleVariable&amp;quot;, new GitLab.PipelineScheduleVariableArgs
+    {
+        Project = gitlab_pipeline_schedule.Project,
+        PipelineScheduleId = gitlab_pipeline_schedule.Id,
+        Key = &amp;quot;EXAMPLE_KEY&amp;quot;,
+        Value = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.PipelineScheduleVariableArgs.html">PipelineScheduleVariableArgs</a></h4>
       <section></section>
@@ -191,6 +463,23 @@ documentation</a>.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.PipelineTrigger.html">PipelineTrigger</a></h4>
       <section><p>This resource allows you to create and manage pipeline triggers</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new GitLab.PipelineTrigger(&amp;quot;example&amp;quot;, new GitLab.PipelineTriggerArgs
+    {
+        Description = &amp;quot;Used to trigger builds&amp;quot;,
+        Project = &amp;quot;12345&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.PipelineTriggerArgs.html">PipelineTriggerArgs</a></h4>
       <section></section>
@@ -213,6 +502,24 @@ documentation</a>.</p>
       <section><p>This resource allows you to create and manage hooks for your GitLab projects.
 For further information on hooks, consult the <a href="https://docs.gitlab.com/ce/user/project/integrations/webhooks.html">gitlab
 documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new GitLab.ProjectHook(&amp;quot;example&amp;quot;, new GitLab.ProjectHookArgs
+    {
+        MergeRequestsEvents = true,
+        Project = &amp;quot;example/hooked&amp;quot;,
+        Url = &amp;quot;https://example.com/hook/example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.ProjectHookArgs.html">ProjectHookArgs</a></h4>
       <section></section>
@@ -220,6 +527,24 @@ documentation</a>.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.ProjectMembership.html">ProjectMembership</a></h4>
       <section><p>This resource allows you to add a current user to an existing project with a set access level.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new GitLab.ProjectMembership(&amp;quot;test&amp;quot;, new GitLab.ProjectMembershipArgs
+    {
+        AccessLevel = &amp;quot;guest&amp;quot;,
+        ProjectId = &amp;quot;12345&amp;quot;,
+        UserId = 1337,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.ProjectMembershipArgs.html">ProjectMembershipArgs</a></h4>
       <section></section>
@@ -236,6 +561,24 @@ documentation</a>.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.ProjectShareGroup.html">ProjectShareGroup</a></h4>
       <section><p>This resource allows you to share a project with a group</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new GitLab.ProjectShareGroup(&amp;quot;test&amp;quot;, new GitLab.ProjectShareGroupArgs
+    {
+        AccessLevel = &amp;quot;guest&amp;quot;,
+        GroupId = 1337,
+        ProjectId = &amp;quot;12345&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.ProjectShareGroupArgs.html">ProjectShareGroupArgs</a></h4>
       <section></section>
@@ -247,6 +590,25 @@ documentation</a>.</p>
       <section><p>This resource allows you to create and manage CI/CD variables for your GitLab projects.
 For further information on variables, consult the <a href="https://docs.gitlab.com/ce/ci/variables/README.html#variables">gitlab
 documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new GitLab.ProjectVariable(&amp;quot;example&amp;quot;, new GitLab.ProjectVariableArgs
+    {
+        Key = &amp;quot;project_variable_key&amp;quot;,
+        Project = &amp;quot;12345&amp;quot;,
+        Protected = false,
+        Value = &amp;quot;project_variable_value&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.ProjectVariableArgs.html">ProjectVariableArgs</a></h4>
       <section></section>
@@ -262,6 +624,30 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.ServiceJira.html">ServiceJira</a></h4>
       <section><p>This resource allows you to manage Jira integration.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var awesomeProject = new GitLab.Project(&amp;quot;awesomeProject&amp;quot;, new GitLab.ProjectArgs
+    {
+        Description = &amp;quot;My awesome project.&amp;quot;,
+        VisibilityLevel = &amp;quot;public&amp;quot;,
+    });
+    var jira = new GitLab.ServiceJira(&amp;quot;jira&amp;quot;, new GitLab.ServiceJiraArgs
+    {
+        Password = &amp;quot;mypass&amp;quot;,
+        Project = awesomeProject.Id,
+        Url = &amp;quot;https://jira.example.com&amp;quot;,
+        Username = &amp;quot;user&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.ServiceJiraArgs.html">ServiceJiraArgs</a></h4>
       <section></section>
@@ -269,6 +655,31 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.ServiceSlack.html">ServiceSlack</a></h4>
       <section><p>This resource allows you to manage Slack notifications integration.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var awesomeProject = new GitLab.Project(&amp;quot;awesomeProject&amp;quot;, new GitLab.ProjectArgs
+    {
+        Description = &amp;quot;My awesome project.&amp;quot;,
+        VisibilityLevel = &amp;quot;public&amp;quot;,
+    });
+    var slack = new GitLab.ServiceSlack(&amp;quot;slack&amp;quot;, new GitLab.ServiceSlackArgs
+    {
+        Project = awesomeProject.Id,
+        PushChannel = &amp;quot;push_chan&amp;quot;,
+        PushEvents = true,
+        Username = &amp;quot;myuser&amp;quot;,
+        Webhook = &amp;quot;https://webhook.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.ServiceSlackArgs.html">ServiceSlackArgs</a></h4>
       <section></section>
@@ -276,6 +687,24 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.GitLab.TagProtection.html">TagProtection</a></h4>
       <section><p>This resource allows you to protect a specific tag or wildcard by an access level so that the user with less access level cannot Create the tags.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tagProtect = new GitLab.TagProtection(&amp;quot;tagProtect&amp;quot;, new GitLab.TagProtectionArgs
+    {
+        CreateAccessLevel = &amp;quot;developer&amp;quot;,
+        Project = &amp;quot;12345&amp;quot;,
+        Tag = &amp;quot;TagProtected&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.GitLab.TagProtectionArgs.html">TagProtectionArgs</a></h4>
       <section></section>

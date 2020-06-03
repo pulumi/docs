@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RoleTempalte
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,14 +71,50 @@
   
   <h1 id="Pulumi_Rancher2_RoleTempalte" data-uid="Pulumi.Rancher2.RoleTempalte" class="text-break">Class RoleTempalte
   </h1>
-  <div class="markdown level0 summary"><p>Provides a Rancher v2 Role Template resource. This can be used to create Role Template for Rancher v2 and retrieve their information.</p>
-<p><code>cluster</code> and <code>project</code> scopes are supported for role templates.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">RoleTempalte</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">RoleTempalte</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
@@ -89,16 +125,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte__ctor_" data-uid="Pulumi.Rancher2.RoleTempalte.#ctor*"></a>
-  <h4 id="Pulumi_Rancher2_RoleTempalte__ctor_System_String_Pulumi_Rancher2_RoleTempalteArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.RoleTempalte.#ctor(System.String,Pulumi.Rancher2.RoleTempalteArgs,System.Nullable{CustomResourceOptions})">RoleTempalte(String, RoleTempalteArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Rancher2_RoleTempalte__ctor_System_String_Pulumi_Rancher2_RoleTempalteArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Rancher2.RoleTempalte.#ctor(System.String,Pulumi.Rancher2.RoleTempalteArgs,Pulumi.CustomResourceOptions)">RoleTempalte(String, RoleTempalteArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a RoleTempalte resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RoleTempalte(string name, RoleTempalteArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public RoleTempalte(string name, RoleTempalteArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +159,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +169,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_Administrative_" data-uid="Pulumi.Rancher2.RoleTempalte.Administrative*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_Administrative" data-uid="Pulumi.Rancher2.RoleTempalte.Administrative">Administrative</h4>
@@ -154,13 +190,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_Annotations_" data-uid="Pulumi.Rancher2.RoleTempalte.Annotations*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_Annotations" data-uid="Pulumi.Rancher2.RoleTempalte.Annotations">Annotations</h4>
@@ -181,13 +217,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_Builtin_" data-uid="Pulumi.Rancher2.RoleTempalte.Builtin*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_Builtin" data-uid="Pulumi.Rancher2.RoleTempalte.Builtin">Builtin</h4>
@@ -208,13 +244,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_Context_" data-uid="Pulumi.Rancher2.RoleTempalte.Context*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_Context" data-uid="Pulumi.Rancher2.RoleTempalte.Context">Context</h4>
@@ -223,7 +259,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Context { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Context { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +271,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_DefaultRole_" data-uid="Pulumi.Rancher2.RoleTempalte.DefaultRole*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_DefaultRole" data-uid="Pulumi.Rancher2.RoleTempalte.DefaultRole">DefaultRole</h4>
@@ -262,13 +298,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_Description_" data-uid="Pulumi.Rancher2.RoleTempalte.Description*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_Description" data-uid="Pulumi.Rancher2.RoleTempalte.Description">Description</h4>
@@ -289,13 +325,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_External_" data-uid="Pulumi.Rancher2.RoleTempalte.External*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_External" data-uid="Pulumi.Rancher2.RoleTempalte.External">External</h4>
@@ -316,13 +352,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_Hidden_" data-uid="Pulumi.Rancher2.RoleTempalte.Hidden*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_Hidden" data-uid="Pulumi.Rancher2.RoleTempalte.Hidden">Hidden</h4>
@@ -343,13 +379,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_Labels_" data-uid="Pulumi.Rancher2.RoleTempalte.Labels*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_Labels" data-uid="Pulumi.Rancher2.RoleTempalte.Labels">Labels</h4>
@@ -370,13 +406,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_Locked_" data-uid="Pulumi.Rancher2.RoleTempalte.Locked*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_Locked" data-uid="Pulumi.Rancher2.RoleTempalte.Locked">Locked</h4>
@@ -397,13 +433,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_Name_" data-uid="Pulumi.Rancher2.RoleTempalte.Name*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_Name" data-uid="Pulumi.Rancher2.RoleTempalte.Name">Name</h4>
@@ -424,13 +460,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_RoleTemplateIds_" data-uid="Pulumi.Rancher2.RoleTempalte.RoleTemplateIds*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_RoleTemplateIds" data-uid="Pulumi.Rancher2.RoleTempalte.RoleTemplateIds">RoleTemplateIds</h4>
@@ -451,13 +487,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_Rules_" data-uid="Pulumi.Rancher2.RoleTempalte.Rules*"></a>
   <h4 id="Pulumi_Rancher2_RoleTempalte_Rules" data-uid="Pulumi.Rancher2.RoleTempalte.Rules">Rules</h4>
@@ -478,7 +514,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.RoleTempalteRule.html">RoleTempalteRule</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.RoleTempalteRule.html">RoleTempalteRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -486,17 +522,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_RoleTempalte_Get_" data-uid="Pulumi.Rancher2.RoleTempalte.Get*"></a>
-  <h4 id="Pulumi_Rancher2_RoleTempalte_Get_System_String_Input_System_String__Pulumi_Rancher2_RoleTempalteState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.RoleTempalte.Get(System.String,Input{System.String},Pulumi.Rancher2.RoleTempalteState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RoleTempalteState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Rancher2_RoleTempalte_Get_System_String_Pulumi_Input_System_String__Pulumi_Rancher2_RoleTempalteState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Rancher2.RoleTempalte.Get(System.String,Pulumi.Input{System.String},Pulumi.Rancher2.RoleTempalteState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RoleTempalteState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing RoleTempalte resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RoleTempalte Get(string name, Input&lt;string&gt; id, RoleTempalteState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RoleTempalte Get(string name, Input&lt;string&gt; id, RoleTempalteState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -515,7 +551,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -527,7 +563,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -556,7 +592,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/RoleTempalte.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/RoleTempalte.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

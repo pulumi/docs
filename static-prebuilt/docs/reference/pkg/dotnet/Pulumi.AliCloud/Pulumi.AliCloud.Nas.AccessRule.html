@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AccessRule
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,12 +76,75 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in v1.34.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var fooAccessGroup = new AliCloud.Nas.AccessGroup(&amp;quot;fooAccessGroup&amp;quot;, new AliCloud.Nas.AccessGroupArgs
+    {
+        Description = &amp;quot;tf-testAccNasConfig&amp;quot;,
+        Type = &amp;quot;Vpc&amp;quot;,
+    });
+    var fooAccessRule = new AliCloud.Nas.AccessRule(&amp;quot;fooAccessRule&amp;quot;, new AliCloud.Nas.AccessRuleArgs
+    {
+        AccessGroupName = fooAccessGroup.Id,
+        Priority = 2,
+        RwAccessType = &amp;quot;RDWR&amp;quot;,
+        SourceCidrIp = &amp;quot;168.1.1.0/16&amp;quot;,
+        UserAccessType = &amp;quot;no_squash&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AccessRule</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AccessRule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Nas.html">Pulumi.AliCloud.Nas</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -92,16 +155,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Nas/AccessRule.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Nas/AccessRule.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Nas_AccessRule__ctor_" data-uid="Pulumi.AliCloud.Nas.AccessRule.#ctor*"></a>
-  <h4 id="Pulumi_AliCloud_Nas_AccessRule__ctor_System_String_Pulumi_AliCloud_Nas_AccessRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Nas.AccessRule.#ctor(System.String,Pulumi.AliCloud.Nas.AccessRuleArgs,System.Nullable{CustomResourceOptions})">AccessRule(String, AccessRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Nas_AccessRule__ctor_System_String_Pulumi_AliCloud_Nas_AccessRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Nas.AccessRule.#ctor(System.String,Pulumi.AliCloud.Nas.AccessRuleArgs,Pulumi.CustomResourceOptions)">AccessRule(String, AccessRuleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a AccessRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AccessRule(string name, AccessRuleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AccessRule(string name, AccessRuleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,7 +189,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -136,7 +199,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Nas/AccessRule.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Nas/AccessRule.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Nas_AccessRule_AccessGroupName_" data-uid="Pulumi.AliCloud.Nas.AccessRule.AccessGroupName*"></a>
   <h4 id="Pulumi_AliCloud_Nas_AccessRule_AccessGroupName" data-uid="Pulumi.AliCloud.Nas.AccessRule.AccessGroupName">AccessGroupName</h4>
@@ -157,13 +220,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Nas/AccessRule.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Nas/AccessRule.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Nas_AccessRule_AccessRuleId_" data-uid="Pulumi.AliCloud.Nas.AccessRule.AccessRuleId*"></a>
   <h4 id="Pulumi_AliCloud_Nas_AccessRule_AccessRuleId" data-uid="Pulumi.AliCloud.Nas.AccessRule.AccessRuleId">AccessRuleId</h4>
@@ -184,13 +247,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Nas/AccessRule.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Nas/AccessRule.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Nas_AccessRule_Priority_" data-uid="Pulumi.AliCloud.Nas.AccessRule.Priority*"></a>
   <h4 id="Pulumi_AliCloud_Nas_AccessRule_Priority" data-uid="Pulumi.AliCloud.Nas.AccessRule.Priority">Priority</h4>
@@ -211,13 +274,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Nas/AccessRule.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Nas/AccessRule.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Nas_AccessRule_RwAccessType_" data-uid="Pulumi.AliCloud.Nas.AccessRule.RwAccessType*"></a>
   <h4 id="Pulumi_AliCloud_Nas_AccessRule_RwAccessType" data-uid="Pulumi.AliCloud.Nas.AccessRule.RwAccessType">RwAccessType</h4>
@@ -226,7 +289,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RwAccessType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RwAccessType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,13 +301,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Nas/AccessRule.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Nas/AccessRule.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Nas_AccessRule_SourceCidrIp_" data-uid="Pulumi.AliCloud.Nas.AccessRule.SourceCidrIp*"></a>
   <h4 id="Pulumi_AliCloud_Nas_AccessRule_SourceCidrIp" data-uid="Pulumi.AliCloud.Nas.AccessRule.SourceCidrIp">SourceCidrIp</h4>
@@ -265,13 +328,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Nas/AccessRule.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Nas/AccessRule.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Nas_AccessRule_UserAccessType_" data-uid="Pulumi.AliCloud.Nas.AccessRule.UserAccessType*"></a>
   <h4 id="Pulumi_AliCloud_Nas_AccessRule_UserAccessType" data-uid="Pulumi.AliCloud.Nas.AccessRule.UserAccessType">UserAccessType</h4>
@@ -280,7 +343,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserAccessType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserAccessType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +355,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -300,17 +363,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Nas/AccessRule.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Nas/AccessRule.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Nas_AccessRule_Get_" data-uid="Pulumi.AliCloud.Nas.AccessRule.Get*"></a>
-  <h4 id="Pulumi_AliCloud_Nas_AccessRule_Get_System_String_Input_System_String__Pulumi_AliCloud_Nas_AccessRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Nas.AccessRule.Get(System.String,Input{System.String},Pulumi.AliCloud.Nas.AccessRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AccessRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Nas_AccessRule_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Nas_AccessRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Nas.AccessRule.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Nas.AccessRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AccessRuleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing AccessRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AccessRule Get(string name, Input&lt;string&gt; id, AccessRuleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AccessRule Get(string name, Input&lt;string&gt; id, AccessRuleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -329,7 +392,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -341,7 +404,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -370,7 +433,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Nas/AccessRule.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Nas/AccessRule.cs/#L49" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

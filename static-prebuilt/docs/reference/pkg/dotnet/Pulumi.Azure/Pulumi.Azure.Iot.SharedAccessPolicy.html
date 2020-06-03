@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SharedAccessPolicy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,83 @@
   <h1 id="Pulumi_Azure_Iot_SharedAccessPolicy" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy" class="text-break">Class SharedAccessPolicy
   </h1>
   <div class="markdown level0 summary"><p>Manages an IotHub Shared Access Policy</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleIoTHub = new Azure.Iot.IoTHub(&amp;quot;exampleIoTHub&amp;quot;, new Azure.Iot.IoTHubArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+        {
+            Name = &amp;quot;S1&amp;quot;,
+            Capacity = &amp;quot;1&amp;quot;,
+        },
+    });
+    var exampleSharedAccessPolicy = new Azure.Iot.SharedAccessPolicy(&amp;quot;exampleSharedAccessPolicy&amp;quot;, new Azure.Iot.SharedAccessPolicyArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        IothubName = exampleIoTHub.Name,
+        RegistryRead = true,
+        RegistryWrite = true,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SharedAccessPolicy</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">SharedAccessPolicy</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Iot.html">Pulumi.Azure.Iot</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -88,16 +159,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy__ctor_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy__ctor_System_String_Pulumi_Azure_Iot_SharedAccessPolicyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.#ctor(System.String,Pulumi.Azure.Iot.SharedAccessPolicyArgs,System.Nullable{CustomResourceOptions})">SharedAccessPolicy(String, SharedAccessPolicyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy__ctor_System_String_Pulumi_Azure_Iot_SharedAccessPolicyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.#ctor(System.String,Pulumi.Azure.Iot.SharedAccessPolicyArgs,Pulumi.CustomResourceOptions)">SharedAccessPolicy(String, SharedAccessPolicyArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a SharedAccessPolicy resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SharedAccessPolicy(string name, SharedAccessPolicyArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SharedAccessPolicy(string name, SharedAccessPolicyArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +193,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +203,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_DeviceConnect_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.DeviceConnect*"></a>
   <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_DeviceConnect" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.DeviceConnect">DeviceConnect</h4>
@@ -153,13 +224,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_IothubName_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.IothubName*"></a>
   <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_IothubName" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.IothubName">IothubName</h4>
@@ -180,13 +251,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_Name_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.Name*"></a>
   <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_Name" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.Name">Name</h4>
@@ -207,13 +278,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_PrimaryConnectionString_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.PrimaryConnectionString*"></a>
   <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_PrimaryConnectionString" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.PrimaryConnectionString">PrimaryConnectionString</h4>
@@ -234,13 +305,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_PrimaryKey_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.PrimaryKey*"></a>
   <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_PrimaryKey" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.PrimaryKey">PrimaryKey</h4>
@@ -261,13 +332,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_RegistryRead_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.RegistryRead*"></a>
   <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_RegistryRead" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.RegistryRead">RegistryRead</h4>
@@ -288,13 +359,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_RegistryWrite_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.RegistryWrite*"></a>
   <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_RegistryWrite" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.RegistryWrite">RegistryWrite</h4>
@@ -315,13 +386,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_ResourceGroupName_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_ResourceGroupName" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.ResourceGroupName">ResourceGroupName</h4>
@@ -342,13 +413,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_SecondaryConnectionString_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.SecondaryConnectionString*"></a>
   <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_SecondaryConnectionString" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.SecondaryConnectionString">SecondaryConnectionString</h4>
@@ -369,13 +440,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_SecondaryKey_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.SecondaryKey*"></a>
   <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_SecondaryKey" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.SecondaryKey">SecondaryKey</h4>
@@ -396,13 +467,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_ServiceConnect_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.ServiceConnect*"></a>
   <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_ServiceConnect" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.ServiceConnect">ServiceConnect</h4>
@@ -423,7 +494,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -431,17 +502,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Azure_Iot_SharedAccessPolicy_Get_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.Get*"></a>
-  <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_Get_System_String_Input_System_String__Pulumi_Azure_Iot_SharedAccessPolicyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.Get(System.String,Input{System.String},Pulumi.Azure.Iot.SharedAccessPolicyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SharedAccessPolicyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Azure_Iot_SharedAccessPolicy_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Iot_SharedAccessPolicyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Iot.SharedAccessPolicy.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Iot.SharedAccessPolicyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SharedAccessPolicyState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing SharedAccessPolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SharedAccessPolicy Get(string name, Input&lt;string&gt; id, SharedAccessPolicyState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SharedAccessPolicy Get(string name, Input&lt;string&gt; id, SharedAccessPolicyState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,7 +531,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -472,7 +543,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -501,7 +572,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/SharedAccessPolicy.cs/#L53" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

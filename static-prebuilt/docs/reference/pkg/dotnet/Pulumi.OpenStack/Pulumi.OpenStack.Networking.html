@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.Networking
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,48 @@
   </h3>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.AddressScope.html">AddressScope</a></h4>
       <section><p>Manages a V2 Neutron addressscope resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-an-address-scope">Create an Address-scope</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var addressscope1 = new OpenStack.Networking.AddressScope(&amp;quot;addressscope1&amp;quot;, new OpenStack.Networking.AddressScopeArgs
+    {
+        IpVersion = 6,
+    });
+}
+
+}
+</code></pre>
+<h3 id="create-a-subnet-pool-from-an-address-scope">Create a Subnet Pool from an Address-scope</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var addressscope1 = new OpenStack.Networking.AddressScope(&amp;quot;addressscope1&amp;quot;, new OpenStack.Networking.AddressScopeArgs
+    {
+        IpVersion = 6,
+    });
+    var subnetpool1 = new OpenStack.Networking.SubnetPool(&amp;quot;subnetpool1&amp;quot;, new OpenStack.Networking.SubnetPoolArgs
+    {
+        AddressScopeId = addressscope1.Id,
+        Prefixes = 
+        {
+            &amp;quot;fdf7:b13d:dead:beef::/64&amp;quot;,
+            &amp;quot;fd65:86cc:a334:39b7::/64&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.AddressScopeArgs.html">AddressScopeArgs</a></h4>
       <section></section>
@@ -88,6 +130,22 @@
 that can be used for load balancers.
 These are similar to Nova (compute) floating IP resources,
 but only compute floating IPs can be used with compute instances.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var floatip1 = new OpenStack.Networking.FloatingIp(&amp;quot;floatip1&amp;quot;, new OpenStack.Networking.FloatingIpArgs
+    {
+        Pool = &amp;quot;public&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.FloatingIpArgs.html">FloatingIpArgs</a></h4>
       <section></section>
@@ -95,6 +153,27 @@ but only compute floating IPs can be used with compute instances.</p>
       <section><p>Associates a floating IP to a port. This is useful for situations
 where you have a pre-allocated floating IP or are unable to use the
 <code>openstack.networking.FloatingIp</code> resource to create a floating IP.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var port1 = new OpenStack.Networking.Port(&amp;quot;port1&amp;quot;, new OpenStack.Networking.PortArgs
+    {
+        NetworkId = &amp;quot;a5bbd213-e1d3-49b6-aed1-9df60ea94b9a&amp;quot;,
+    });
+    var fip1 = new OpenStack.Networking.FloatingIpAssociate(&amp;quot;fip1&amp;quot;, new OpenStack.Networking.FloatingIpAssociateArgs
+    {
+        FloatingIp = &amp;quot;1.2.3.4&amp;quot;,
+        PortId = port1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.FloatingIpAssociateArgs.html">FloatingIpAssociateArgs</a></h4>
       <section></section>
@@ -188,6 +267,73 @@ where you have a pre-allocated floating IP or are unable to use the
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.Network.html">Network</a></h4>
       <section><p>Manages a V2 Neutron network resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.199.0/24&amp;quot;,
+        IpVersion = 4,
+        NetworkId = network1.Id,
+    });
+    var secgroup1 = new OpenStack.Compute.SecGroup(&amp;quot;secgroup1&amp;quot;, new OpenStack.Compute.SecGroupArgs
+    {
+        Description = &amp;quot;a security group&amp;quot;,
+        Rules = 
+        {
+            new OpenStack.Compute.Inputs.SecGroupRuleArgs
+            {
+                Cidr = &amp;quot;0.0.0.0/0&amp;quot;,
+                FromPort = 22,
+                IpProtocol = &amp;quot;tcp&amp;quot;,
+                ToPort = 22,
+            },
+        },
+    });
+    var port1 = new OpenStack.Networking.Port(&amp;quot;port1&amp;quot;, new OpenStack.Networking.PortArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+        FixedIps = 
+        {
+            new OpenStack.Networking.Inputs.PortFixedIpArgs
+            {
+                IpAddress = &amp;quot;192.168.199.10&amp;quot;,
+                SubnetId = subnet1.Id,
+            },
+        },
+        NetworkId = network1.Id,
+        SecurityGroupIds = 
+        {
+            secgroup1.Id,
+        },
+    });
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        Networks = 
+        {
+            new OpenStack.Compute.Inputs.InstanceNetworkArgs
+            {
+                Port = port1.Id,
+            },
+        },
+        SecurityGroups = 
+        {
+            secgroup1.Name,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.NetworkArgs.html">NetworkArgs</a></h4>
       <section></section>
@@ -195,6 +341,73 @@ where you have a pre-allocated floating IP or are unable to use the
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.Port.html">Port</a></h4>
       <section><p>Manages a V2 port resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="simple-port">Simple port</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var port1 = new OpenStack.Networking.Port(&amp;quot;port1&amp;quot;, new OpenStack.Networking.PortArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+        NetworkId = network1.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="port-with-physical-binding-information">Port with physical binding information</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var port1 = new OpenStack.Networking.Port(&amp;quot;port1&amp;quot;, new OpenStack.Networking.PortArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+        Binding = new OpenStack.Networking.Inputs.PortBindingArgs
+        {
+            HostId = &amp;quot;b080b9cf-46e0-4ce8-ad47-0fd4accc872b&amp;quot;,
+            Profile = @&amp;quot;{
+&amp;quot;&amp;quot;local_link_information&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;switch_info&amp;quot;&amp;quot;: &amp;quot;&amp;quot;info1&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;port_id&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Ethernet3/4&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;switch_id&amp;quot;&amp;quot;: &amp;quot;&amp;quot;12:34:56:78:9A:BC&amp;quot;&amp;quot;
+},
+{
+  &amp;quot;&amp;quot;switch_info&amp;quot;&amp;quot;: &amp;quot;&amp;quot;info2&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;port_id&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Ethernet3/4&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;switch_id&amp;quot;&amp;quot;: &amp;quot;&amp;quot;12:34:56:78:9A:BD&amp;quot;&amp;quot;
+}
+],
+&amp;quot;&amp;quot;vlan_type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;allowed&amp;quot;&amp;quot;
+}
+
+&amp;quot;,
+            VnicType = &amp;quot;baremetal&amp;quot;,
+        },
+        DeviceId = &amp;quot;cdf70fcf-c161-4f24-9c70-96b3f5a54b71&amp;quot;,
+        DeviceOwner = &amp;quot;baremetal:none&amp;quot;,
+        NetworkId = network1.Id,
+    });
+}
+
+}
+</code></pre>
 <h2 id="notes">Notes</h2>
 <h3 id="ports-and-instances">Ports and Instances</h3>
 <p>There are some notes to consider when connecting Instances to networks using
@@ -213,6 +426,30 @@ documentation.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.QosBandwidthLimitRule.html">QosBandwidthLimitRule</a></h4>
       <section><p>Manages a V2 Neutron QoS bandwidth limit rule resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-qos-policy-with-some-bandwidth-limit-rule">Create a QoS Policy with some bandwidth limit rule</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var qosPolicy1 = new OpenStack.Networking.QosPolicy(&amp;quot;qosPolicy1&amp;quot;, new OpenStack.Networking.QosPolicyArgs
+    {
+        Description = &amp;quot;bw_limit&amp;quot;,
+    });
+    var bwLimitRule1 = new OpenStack.Networking.QosBandwidthLimitRule(&amp;quot;bwLimitRule1&amp;quot;, new OpenStack.Networking.QosBandwidthLimitRuleArgs
+    {
+        Direction = &amp;quot;egress&amp;quot;,
+        MaxBurstKbps = 300,
+        MaxKbps = 3000,
+        QosPolicyId = qosPolicy1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.QosBandwidthLimitRuleArgs.html">QosBandwidthLimitRuleArgs</a></h4>
       <section></section>
@@ -220,6 +457,28 @@ documentation.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.QosDscpMarkingRule.html">QosDscpMarkingRule</a></h4>
       <section><p>Manages a V2 Neutron QoS DSCP marking rule resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-qos-policy-with-some-dscp-marking-rule">Create a QoS Policy with some DSCP marking rule</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var qosPolicy1 = new OpenStack.Networking.QosPolicy(&amp;quot;qosPolicy1&amp;quot;, new OpenStack.Networking.QosPolicyArgs
+    {
+        Description = &amp;quot;dscp_mark&amp;quot;,
+    });
+    var dscpMarkingRule1 = new OpenStack.Networking.QosDscpMarkingRule(&amp;quot;dscpMarkingRule1&amp;quot;, new OpenStack.Networking.QosDscpMarkingRuleArgs
+    {
+        DscpMark = 26,
+        QosPolicyId = qosPolicy1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.QosDscpMarkingRuleArgs.html">QosDscpMarkingRuleArgs</a></h4>
       <section></section>
@@ -227,6 +486,28 @@ documentation.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.QosMinimumBandwidthRule.html">QosMinimumBandwidthRule</a></h4>
       <section><p>Manages a V2 Neutron QoS minimum bandwidth rule resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-qos-policy-with-some-minimum-bandwidth-rule">Create a QoS Policy with some minimum bandwidth rule</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var qosPolicy1 = new OpenStack.Networking.QosPolicy(&amp;quot;qosPolicy1&amp;quot;, new OpenStack.Networking.QosPolicyArgs
+    {
+        Description = &amp;quot;min_kbps&amp;quot;,
+    });
+    var minimumBandwidthRule1 = new OpenStack.Networking.QosMinimumBandwidthRule(&amp;quot;minimumBandwidthRule1&amp;quot;, new OpenStack.Networking.QosMinimumBandwidthRuleArgs
+    {
+        MinKbps = 200,
+        QosPolicyId = qosPolicy1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.QosMinimumBandwidthRuleArgs.html">QosMinimumBandwidthRuleArgs</a></h4>
       <section></section>
@@ -234,6 +515,23 @@ documentation.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.QosPolicy.html">QosPolicy</a></h4>
       <section><p>Manages a V2 Neutron QoS policy resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-qos-policy">Create a QoS Policy</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var qosPolicy1 = new OpenStack.Networking.QosPolicy(&amp;quot;qosPolicy1&amp;quot;, new OpenStack.Networking.QosPolicyArgs
+    {
+        Description = &amp;quot;bw_limit&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.QosPolicyArgs.html">QosPolicyArgs</a></h4>
       <section></section>
@@ -265,6 +563,29 @@ rather than all projects, use the <code>access_as_external</code> action.
 If a network is marked as external during creation, it now implicitly creates
 a wildcard RBAC policy granting everyone access to preserve previous behavior
 before this feature was added.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var rbacPolicy1 = new OpenStack.Networking.RbacPolicyV2(&amp;quot;rbacPolicy1&amp;quot;, new OpenStack.Networking.RbacPolicyV2Args
+    {
+        Action = &amp;quot;access_as_shared&amp;quot;,
+        ObjectId = network1.Id,
+        ObjectType = &amp;quot;network&amp;quot;,
+        TargetTenant = &amp;quot;20415a973c9e45d3917f078950644697&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.RbacPolicyV2Args.html">RbacPolicyV2Args</a></h4>
       <section></section>
@@ -272,11 +593,59 @@ before this feature was added.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.Router.html">Router</a></h4>
       <section><p>Manages a V2 router resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var router1 = new OpenStack.Networking.Router(&amp;quot;router1&amp;quot;, new OpenStack.Networking.RouterArgs
+    {
+        AdminStateUp = true,
+        ExternalNetworkId = &amp;quot;f67f0d72-0ddf-11e4-9d95-e1f29f417e2f&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.RouterArgs.html">RouterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.RouterInterface.html">RouterInterface</a></h4>
       <section><p>Manages a V2 router interface resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.199.0/24&amp;quot;,
+        IpVersion = 4,
+        NetworkId = network1.Id,
+    });
+    var router1 = new OpenStack.Networking.Router(&amp;quot;router1&amp;quot;, new OpenStack.Networking.RouterArgs
+    {
+        ExternalNetworkId = &amp;quot;f67f0d72-0ddf-11e4-9d95-e1f29f417e2f&amp;quot;,
+    });
+    var routerInterface1 = new OpenStack.Networking.RouterInterface(&amp;quot;routerInterface1&amp;quot;, new OpenStack.Networking.RouterInterfaceArgs
+    {
+        RouterId = router1.Id,
+        SubnetId = subnet1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.RouterInterfaceArgs.html">RouterInterfaceArgs</a></h4>
       <section></section>
@@ -284,6 +653,43 @@ before this feature was added.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.RouterRoute.html">RouterRoute</a></h4>
       <section><p>Creates a routing entry on a OpenStack V2 router.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var router1 = new OpenStack.Networking.Router(&amp;quot;router1&amp;quot;, new OpenStack.Networking.RouterArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.199.0/24&amp;quot;,
+        IpVersion = 4,
+        NetworkId = network1.Id,
+    });
+    var int1 = new OpenStack.Networking.RouterInterface(&amp;quot;int1&amp;quot;, new OpenStack.Networking.RouterInterfaceArgs
+    {
+        RouterId = router1.Id,
+        SubnetId = subnet1.Id,
+    });
+    var routerRoute1 = new OpenStack.Networking.RouterRoute(&amp;quot;routerRoute1&amp;quot;, new OpenStack.Networking.RouterRouteArgs
+    {
+        DestinationCidr = &amp;quot;10.0.1.0/24&amp;quot;,
+        NextHop = &amp;quot;192.168.199.254&amp;quot;,
+        RouterId = router1.Id,
+    });
+}
+
+}
+</code></pre>
 <h2 id="notes">Notes</h2>
 <p>The <code>next_hop</code> IP address must be directly reachable from the router at the <code>openstack.networking.RouterRoute</code>
 resource creation time.  You can ensure that by explicitly specifying a dependency on the <code>openstack.networking.RouterInterface</code>
@@ -296,16 +702,39 @@ resource that connects the next hop to the router, as in the example above.</p>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.RouterState.html">RouterState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.SecGroup.html">SecGroup</a></h4>
-      <section><p>Manages a V2 neutron security group resource within OpenStack.
-Unlike Nova security groups, neutron separates the group from the rules
-and also allows an admin to target a specific tenant_id.</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.SecGroupArgs.html">SecGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.SecGroupRule.html">SecGroupRule</a></h4>
       <section><p>Manages a V2 neutron security group rule resource within OpenStack.
 Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var secgroup1 = new OpenStack.Networking.SecGroup(&amp;quot;secgroup1&amp;quot;, new OpenStack.Networking.SecGroupArgs
+    {
+        Description = &amp;quot;My neutron security group&amp;quot;,
+    });
+    var secgroupRule1 = new OpenStack.Networking.SecGroupRule(&amp;quot;secgroupRule1&amp;quot;, new OpenStack.Networking.SecGroupRuleArgs
+    {
+        Direction = &amp;quot;ingress&amp;quot;,
+        Ethertype = &amp;quot;IPv4&amp;quot;,
+        PortRangeMax = 22,
+        PortRangeMin = 22,
+        Protocol = &amp;quot;tcp&amp;quot;,
+        RemoteIpPrefix = &amp;quot;0.0.0.0/0&amp;quot;,
+        SecurityGroupId = secgroup1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.SecGroupRuleArgs.html">SecGroupRuleArgs</a></h4>
       <section></section>
@@ -315,11 +744,83 @@ and also allows an admin to target a specific tenant_id.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.Subnet.html">Subnet</a></h4>
       <section><p>Manages a V2 Neutron subnet resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.199.0/24&amp;quot;,
+        NetworkId = network1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.SubnetArgs.html">SubnetArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.SubnetPool.html">SubnetPool</a></h4>
       <section><p>Manages a V2 Neutron subnetpool resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-subnet-pool">Create a Subnet Pool</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var subnetpool1 = new OpenStack.Networking.SubnetPool(&amp;quot;subnetpool1&amp;quot;, new OpenStack.Networking.SubnetPoolArgs
+    {
+        IpVersion = 6,
+        Prefixes = 
+        {
+            &amp;quot;fdf7:b13d:dead:beef::/64&amp;quot;,
+            &amp;quot;fd65:86cc:a334:39b7::/64&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="create-a-subnet-from-a-subnet-pool">Create a Subnet from a Subnet Pool</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnetpool1 = new OpenStack.Networking.SubnetPool(&amp;quot;subnetpool1&amp;quot;, new OpenStack.Networking.SubnetPoolArgs
+    {
+        Prefixes = 
+        {
+            &amp;quot;10.11.12.0/24&amp;quot;,
+        },
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;10.11.12.0/25&amp;quot;,
+        NetworkId = network1.Id,
+        SubnetpoolId = subnetpool1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.SubnetPoolArgs.html">SubnetPoolArgs</a></h4>
       <section></section>
@@ -327,6 +828,38 @@ and also allows an admin to target a specific tenant_id.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.SubnetRoute.html">SubnetRoute</a></h4>
       <section><p>Creates a routing entry on a OpenStack V2 subnet.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var router1 = new OpenStack.Networking.Router(&amp;quot;router1&amp;quot;, new OpenStack.Networking.RouterArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.199.0/24&amp;quot;,
+        IpVersion = 4,
+        NetworkId = network1.Id,
+    });
+    var subnetRoute1 = new OpenStack.Networking.SubnetRoute(&amp;quot;subnetRoute1&amp;quot;, new OpenStack.Networking.SubnetRouteArgs
+    {
+        DestinationCidr = &amp;quot;10.0.1.0/24&amp;quot;,
+        NextHop = &amp;quot;192.168.199.254&amp;quot;,
+        SubnetId = subnet1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.SubnetRouteArgs.html">SubnetRouteArgs</a></h4>
       <section></section>
@@ -336,6 +869,68 @@ and also allows an admin to target a specific tenant_id.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.Trunk.html">Trunk</a></h4>
       <section><p>Manages a networking V2 trunk resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new OpenStack.Networking.Network(&amp;quot;network1&amp;quot;, new OpenStack.Networking.NetworkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+    });
+    var subnet1 = new OpenStack.Networking.Subnet(&amp;quot;subnet1&amp;quot;, new OpenStack.Networking.SubnetArgs
+    {
+        Cidr = &amp;quot;192.168.1.0/24&amp;quot;,
+        EnableDhcp = true,
+        IpVersion = 4,
+        NetworkId = network1.Id,
+        NoGateway = true,
+    });
+    var parentPort1 = new OpenStack.Networking.Port(&amp;quot;parentPort1&amp;quot;, new OpenStack.Networking.PortArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+        NetworkId = network1.Id,
+    });
+    var subport1 = new OpenStack.Networking.Port(&amp;quot;subport1&amp;quot;, new OpenStack.Networking.PortArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+        NetworkId = network1.Id,
+    });
+    var trunk1 = new OpenStack.Networking.Trunk(&amp;quot;trunk1&amp;quot;, new OpenStack.Networking.TrunkArgs
+    {
+        AdminStateUp = &amp;quot;true&amp;quot;,
+        PortId = parentPort1.Id,
+        SubPorts = 
+        {
+            new OpenStack.Networking.Inputs.TrunkSubPortArgs
+            {
+                PortId = subport1.Id,
+                SegmentationId = 1,
+                SegmentationType = &amp;quot;vlan&amp;quot;,
+            },
+        },
+    });
+    var instance1 = new OpenStack.Compute.Instance(&amp;quot;instance1&amp;quot;, new OpenStack.Compute.InstanceArgs
+    {
+        Networks = 
+        {
+            new OpenStack.Compute.Inputs.InstanceNetworkArgs
+            {
+                Port = trunk1.PortId,
+            },
+        },
+        SecurityGroups = 
+        {
+            &amp;quot;default&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.Networking.TrunkArgs.html">TrunkArgs</a></h4>
       <section></section>

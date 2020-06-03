@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.ServiceNetworking
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,37 @@
 <a href="https://cloud.google.com/vpc/docs/configure-private-services-access#creating-connection">the official documentation</a>
 and
 <a href="https://cloud.google.com/service-infrastructure/docs/service-networking/reference/rest/v1/services.connections">API</a>.</p>
+<h2 id="example-usage">Example usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var peeringNetwork = new Gcp.Compute.Network(&amp;quot;peeringNetwork&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+    });
+    var privateIpAlloc = new Gcp.Compute.GlobalAddress(&amp;quot;privateIpAlloc&amp;quot;, new Gcp.Compute.GlobalAddressArgs
+    {
+        Purpose = &amp;quot;VPC_PEERING&amp;quot;,
+        AddressType = &amp;quot;INTERNAL&amp;quot;,
+        PrefixLength = 16,
+        Network = peeringNetwork.Id,
+    });
+    var foobar = new Gcp.ServiceNetworking.Connection(&amp;quot;foobar&amp;quot;, new Gcp.ServiceNetworking.ConnectionArgs
+    {
+        Network = peeringNetwork.Id,
+        Service = &amp;quot;servicenetworking.googleapis.com&amp;quot;,
+        ReservedPeeringRanges = 
+        {
+            privateIpAlloc.Name,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.ServiceNetworking.ConnectionArgs.html">ConnectionArgs</a></h4>
       <section></section>

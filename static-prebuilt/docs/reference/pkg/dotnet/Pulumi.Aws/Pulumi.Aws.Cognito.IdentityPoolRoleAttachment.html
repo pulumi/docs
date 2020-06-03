@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class IdentityPoolRoleAttachment
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,145 @@
   <h1 id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment" class="text-break">Class IdentityPoolRoleAttachment
   </h1>
   <div class="markdown level0 summary"><p>Provides an AWS Cognito Identity Pool Roles Attachment.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var mainIdentityPool = new Aws.Cognito.IdentityPool(&amp;quot;mainIdentityPool&amp;quot;, new Aws.Cognito.IdentityPoolArgs
+    {
+        AllowUnauthenticatedIdentities = false,
+        IdentityPoolName = &amp;quot;identity pool&amp;quot;,
+        SupportedLoginProviders = 
+        {
+            { &amp;quot;graph.facebook.com&amp;quot;, &amp;quot;7346241598935555&amp;quot; },
+        },
+    });
+    var authenticatedRole = new Aws.Iam.Role(&amp;quot;authenticatedRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = mainIdentityPool.Id.Apply(id =&gt; @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {{
+    &amp;quot;&amp;quot;Federated&amp;quot;&amp;quot;: &amp;quot;&amp;quot;cognito-identity.amazonaws.com&amp;quot;&amp;quot;
+  }},
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRoleWithWebIdentity&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Condition&amp;quot;&amp;quot;: {{
+    &amp;quot;&amp;quot;StringEquals&amp;quot;&amp;quot;: {{
+      &amp;quot;&amp;quot;cognito-identity.amazonaws.com:aud&amp;quot;&amp;quot;: &amp;quot;&amp;quot;{id}&amp;quot;&amp;quot;
+    }},
+    &amp;quot;&amp;quot;ForAnyValue:StringLike&amp;quot;&amp;quot;: {{
+      &amp;quot;&amp;quot;cognito-identity.amazonaws.com:amr&amp;quot;&amp;quot;: &amp;quot;&amp;quot;authenticated&amp;quot;&amp;quot;
+    }}
+  }}
+}}
+]
+}}
+
+&amp;quot;),
+    });
+    var authenticatedRolePolicy = new Aws.Iam.RolePolicy(&amp;quot;authenticatedRolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;mobileanalytics:PutEvents&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;cognito-sync:*&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;cognito-identity:*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+  ]
+}
+]
+}
+
+&amp;quot;,
+        Role = authenticatedRole.Id,
+    });
+    var mainIdentityPoolRoleAttachment = new Aws.Cognito.IdentityPoolRoleAttachment(&amp;quot;mainIdentityPoolRoleAttachment&amp;quot;, new Aws.Cognito.IdentityPoolRoleAttachmentArgs
+    {
+        IdentityPoolId = mainIdentityPool.Id,
+        RoleMappings = 
+        {
+            new Aws.Cognito.Inputs.IdentityPoolRoleAttachmentRoleMappingArgs
+            {
+                AmbiguousRoleResolution = &amp;quot;AuthenticatedRole&amp;quot;,
+                IdentityProvider = &amp;quot;graph.facebook.com&amp;quot;,
+                MappingRule = 
+                {
+
+                    {
+                        { &amp;quot;claim&amp;quot;, &amp;quot;isAdmin&amp;quot; },
+                        { &amp;quot;matchType&amp;quot;, &amp;quot;Equals&amp;quot; },
+                        { &amp;quot;roleArn&amp;quot;, authenticatedRole.Arn },
+                        { &amp;quot;value&amp;quot;, &amp;quot;paid&amp;quot; },
+                    },
+                },
+                Type = &amp;quot;Rules&amp;quot;,
+            },
+        },
+        Roles = 
+        {
+            { &amp;quot;authenticated&amp;quot;, authenticatedRole.Arn },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">IdentityPoolRoleAttachment</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">IdentityPoolRoleAttachment</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Cognito.html">Pulumi.Aws.Cognito</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +221,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment__ctor_" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment__ctor_System_String_Pulumi_Aws_Cognito_IdentityPoolRoleAttachmentArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.#ctor(System.String,Pulumi.Aws.Cognito.IdentityPoolRoleAttachmentArgs,System.Nullable{CustomResourceOptions})">IdentityPoolRoleAttachment(String, IdentityPoolRoleAttachmentArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment__ctor_System_String_Pulumi_Aws_Cognito_IdentityPoolRoleAttachmentArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.#ctor(System.String,Pulumi.Aws.Cognito.IdentityPoolRoleAttachmentArgs,Pulumi.CustomResourceOptions)">IdentityPoolRoleAttachment(String, IdentityPoolRoleAttachmentArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a IdentityPoolRoleAttachment resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IdentityPoolRoleAttachment(string name, IdentityPoolRoleAttachmentArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IdentityPoolRoleAttachment(string name, IdentityPoolRoleAttachmentArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +255,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +265,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment_IdentityPoolId_" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.IdentityPoolId*"></a>
   <h4 id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment_IdentityPoolId" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.IdentityPoolId">IdentityPoolId</h4>
@@ -153,13 +286,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment_RoleMappings_" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.RoleMappings*"></a>
   <h4 id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment_RoleMappings" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.RoleMappings">RoleMappings</h4>
@@ -180,13 +313,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Cognito.Outputs.IdentityPoolRoleAttachmentRoleMapping.html">IdentityPoolRoleAttachmentRoleMapping</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Cognito.Outputs.IdentityPoolRoleAttachmentRoleMapping.html">IdentityPoolRoleAttachmentRoleMapping</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment_Roles_" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.Roles*"></a>
   <h4 id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment_Roles" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.Roles">Roles</h4>
@@ -195,7 +328,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;IdentityPoolRoleAttachmentRoles&gt; Roles { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Roles { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,7 +340,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Cognito.Outputs.IdentityPoolRoleAttachmentRoles.html">IdentityPoolRoleAttachmentRoles</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -215,17 +348,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment_Get_" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.Get*"></a>
-  <h4 id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment_Get_System_String_Input_System_String__Pulumi_Aws_Cognito_IdentityPoolRoleAttachmentState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.Get(System.String,Input{System.String},Pulumi.Aws.Cognito.IdentityPoolRoleAttachmentState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IdentityPoolRoleAttachmentState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Cognito_IdentityPoolRoleAttachment_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Cognito_IdentityPoolRoleAttachmentState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Cognito.IdentityPoolRoleAttachment.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Cognito.IdentityPoolRoleAttachmentState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, IdentityPoolRoleAttachmentState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing IdentityPoolRoleAttachment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IdentityPoolRoleAttachment Get(string name, Input&lt;string&gt; id, IdentityPoolRoleAttachmentState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IdentityPoolRoleAttachment Get(string name, Input&lt;string&gt; id, IdentityPoolRoleAttachmentState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,7 +377,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -256,7 +389,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -285,7 +418,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Cognito/IdentityPoolRoleAttachment.cs/#L115" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

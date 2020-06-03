@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.SignalFx.Opsgenie
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,24 @@
 <blockquote>
 <p><strong>NOTE</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var opgenieMyteam = new SignalFx.Opsgenie.Integration(&amp;quot;opgenieMyteam&amp;quot;, new SignalFx.Opsgenie.IntegrationArgs
+    {
+        ApiKey = &amp;quot;farts&amp;quot;,
+        ApiUrl = &amp;quot;https://api.opsgenie.com&amp;quot;,
+        Enabled = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SignalFx.Opsgenie.IntegrationArgs.html">IntegrationArgs</a></h4>
       <section></section>

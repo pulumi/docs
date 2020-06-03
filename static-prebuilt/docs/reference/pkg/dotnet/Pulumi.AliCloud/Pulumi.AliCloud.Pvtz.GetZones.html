@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetZones
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,27 +78,72 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetZones</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Pvtz.html">Pulumi.AliCloud.Pvtz</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_Pvtz_GetZones_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetZones : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetZones</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Pvtz/GetZones.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Pvtz/GetZones.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Pvtz_GetZones_InvokeAsync_" data-uid="Pulumi.AliCloud.Pvtz.GetZones.InvokeAsync*"></a>
-  <h4 id="Pulumi_AliCloud_Pvtz_GetZones_InvokeAsync_Pulumi_AliCloud_Pvtz_GetZonesArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.AliCloud.Pvtz.GetZones.InvokeAsync(Pulumi.AliCloud.Pvtz.GetZonesArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetZonesArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Pvtz_GetZones_InvokeAsync_Pulumi_AliCloud_Pvtz_GetZonesArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Pvtz.GetZones.InvokeAsync(Pulumi.AliCloud.Pvtz.GetZonesArgs,Pulumi.InvokeOptions)">InvokeAsync(GetZonesArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>This data source lists a number of Private Zones resource information owned by an Alibaba Cloud account.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var pvtzZonesDs = Output.Create(AliCloud.Pvtz.GetZones.InvokeAsync(new AliCloud.Pvtz.GetZonesArgs
+    {
+        Keyword = alicloud_pvtz_zone.Basic.Zone_name,
+    }));
+    this.FirstZoneId = pvtzZonesDs.Apply(pvtzZonesDs =&gt; pvtzZonesDs.Zones[0].Id);
+}
+
+[Output(&amp;quot;firstZoneId&amp;quot;)]
+public Output&amp;lt;string&gt; FirstZoneId { get; set; }
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetZonesResult&gt; InvokeAsync(GetZonesArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetZonesResult&gt; InvokeAsync(GetZonesArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,7 +161,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -132,7 +177,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Pvtz.GetZonesResult.html">GetZonesResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Pvtz.GetZonesResult.html">GetZonesResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -144,7 +189,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Pvtz/GetZones.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Pvtz/GetZones.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

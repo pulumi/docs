@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetVpcEndpoint
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,28 +78,76 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetVpcEndpoint</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2_GetVpcEndpoint_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetVpcEndpoint : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetVpcEndpoint</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpoint.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/GetVpcEndpoint.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_GetVpcEndpoint_InvokeAsync_" data-uid="Pulumi.Aws.Ec2.GetVpcEndpoint.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_Ec2_GetVpcEndpoint_InvokeAsync_Pulumi_Aws_Ec2_GetVpcEndpointArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.Ec2.GetVpcEndpoint.InvokeAsync(Pulumi.Aws.Ec2.GetVpcEndpointArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetVpcEndpointArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2_GetVpcEndpoint_InvokeAsync_Pulumi_Aws_Ec2_GetVpcEndpointArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.Ec2.GetVpcEndpoint.InvokeAsync(Pulumi.Aws.Ec2.GetVpcEndpointArgs,Pulumi.InvokeOptions)">InvokeAsync(GetVpcEndpointArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>The VPC Endpoint data source provides details about
 a specific VPC endpoint.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var s3 = Output.Create(Aws.Ec2.GetVpcEndpoint.InvokeAsync(new Aws.Ec2.GetVpcEndpointArgs
+    {
+        ServiceName = &amp;quot;com.amazonaws.us-west-2.s3&amp;quot;,
+        VpcId = aws_vpc.Foo.Id,
+    }));
+    var privateS3 = new Aws.Ec2.VpcEndpointRouteTableAssociation(&amp;quot;privateS3&amp;quot;, new Aws.Ec2.VpcEndpointRouteTableAssociationArgs
+    {
+        RouteTableId = aws_route_table.Private.Id,
+        VpcEndpointId = s3.Apply(s3 =&gt; s3.Id),
+    });
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetVpcEndpointResult&gt; InvokeAsync(GetVpcEndpointArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetVpcEndpointResult&gt; InvokeAsync(GetVpcEndpointArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,7 +165,7 @@ a specific VPC endpoint.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -133,7 +181,7 @@ a specific VPC endpoint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.GetVpcEndpointResult.html">GetVpcEndpointResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.GetVpcEndpointResult.html">GetVpcEndpointResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -145,7 +193,7 @@ a specific VPC endpoint.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpoint.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/GetVpcEndpoint.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

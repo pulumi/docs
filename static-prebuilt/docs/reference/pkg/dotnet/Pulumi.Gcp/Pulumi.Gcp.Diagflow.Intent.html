@@ -1,0 +1,730 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Intent
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Intent
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Gcp.Diagflow.Intent">
+  
+  <h1 id="Pulumi_Gcp_Diagflow_Intent" data-uid="Pulumi.Gcp.Diagflow.Intent" class="text-break">Class Intent
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a Dialogflow intent. Intents convert a number of user expressions or patterns into an action. An action
+is an extraction of a user command or sentence semantics.</p>
+<p>To get more information about Intent, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects.agent.intents">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/dialogflow/docs/">Official Documentation</a></li>
+</ul>
+<h2 id="example-usage---dialogflow-intent-basic">Example Usage - Dialogflow Intent Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var basicAgent = new Gcp.Diagflow.Agent(&amp;quot;basicAgent&amp;quot;, new Gcp.Diagflow.AgentArgs
+    {
+        DisplayName = &amp;quot;example_agent&amp;quot;,
+        DefaultLanguageCode = &amp;quot;en&amp;quot;,
+        TimeZone = &amp;quot;America/New_York&amp;quot;,
+    });
+    var basicIntent = new Gcp.Diagflow.Intent(&amp;quot;basicIntent&amp;quot;, new Gcp.Diagflow.IntentArgs
+    {
+        DisplayName = &amp;quot;basic-intent&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Intent</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Diagflow.html">Pulumi.Gcp.Diagflow</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
+  <h5 id="Pulumi_Gcp_Diagflow_Intent_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Intent : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L166">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent__ctor_" data-uid="Pulumi.Gcp.Diagflow.Intent.#ctor*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent__ctor_System_String_Pulumi_Gcp_Diagflow_IntentArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Diagflow.Intent.#ctor(System.String,Pulumi.Gcp.Diagflow.IntentArgs,Pulumi.CustomResourceOptions)">Intent(String, IntentArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Intent resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Intent(string name, IntentArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.Diagflow.IntentArgs.html">IntentArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L55">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_Action_" data-uid="Pulumi.Gcp.Diagflow.Intent.Action*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_Action" data-uid="Pulumi.Gcp.Diagflow.Intent.Action">Action</h4>
+  <div class="markdown level1 summary"><p>The name of the action associated with the intent.
+Note: The action name must not contain whitespaces.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Action { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L62">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_DefaultResponsePlatforms_" data-uid="Pulumi.Gcp.Diagflow.Intent.DefaultResponsePlatforms*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_DefaultResponsePlatforms" data-uid="Pulumi.Gcp.Diagflow.Intent.DefaultResponsePlatforms">DefaultResponsePlatforms</h4>
+  <div class="markdown level1 summary"><p>The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
+(i.e. default platform).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; DefaultResponsePlatforms { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L68">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_DisplayName_" data-uid="Pulumi.Gcp.Diagflow.Intent.DisplayName*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_DisplayName" data-uid="Pulumi.Gcp.Diagflow.Intent.DisplayName">DisplayName</h4>
+  <div class="markdown level1 summary"><p>The name of this intent to be displayed on the console.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DisplayName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_Events_" data-uid="Pulumi.Gcp.Diagflow.Intent.Events*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_Events" data-uid="Pulumi.Gcp.Diagflow.Intent.Events">Events</h4>
+  <div class="markdown level1 summary"><p>The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
+the contexts must be present in the active user session for an event to trigger this intent. See the
+<a href="https://cloud.google.com/dialogflow/docs/events-overview">events reference</a> for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Events { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_FollowupIntentInfos_" data-uid="Pulumi.Gcp.Diagflow.Intent.FollowupIntentInfos*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_FollowupIntentInfos" data-uid="Pulumi.Gcp.Diagflow.Intent.FollowupIntentInfos">FollowupIntentInfos</h4>
+  <div class="markdown level1 summary"><p>Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
+in the output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;IntentFollowupIntentInfo&gt;&gt; FollowupIntentInfos { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Diagflow.Outputs.IntentFollowupIntentInfo.html">IntentFollowupIntentInfo</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_InputContextNames_" data-uid="Pulumi.Gcp.Diagflow.Intent.InputContextNames*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_InputContextNames" data-uid="Pulumi.Gcp.Diagflow.Intent.InputContextNames">InputContextNames</h4>
+  <div class="markdown level1 summary"><p>The list of context names required for this intent to be triggered.
+Format: projects/&lt;Project ID&gt;/agent/sessions/-/contexts/&lt;Context ID&gt;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; InputContextNames { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_IsFallback_" data-uid="Pulumi.Gcp.Diagflow.Intent.IsFallback*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_IsFallback" data-uid="Pulumi.Gcp.Diagflow.Intent.IsFallback">IsFallback</h4>
+  <div class="markdown level1 summary"><p>Indicates whether this is a fallback intent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; IsFallback { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L104">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_MlDisabled_" data-uid="Pulumi.Gcp.Diagflow.Intent.MlDisabled*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_MlDisabled" data-uid="Pulumi.Gcp.Diagflow.Intent.MlDisabled">MlDisabled</h4>
+  <div class="markdown level1 summary"><p>Indicates whether Machine Learning is disabled for the intent.
+Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
+ONLY match mode. Also, auto-markup in the UI is turned off.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; MlDisabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L110">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_Name_" data-uid="Pulumi.Gcp.Diagflow.Intent.Name*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_Name" data-uid="Pulumi.Gcp.Diagflow.Intent.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The unique identifier of this intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_ParentFollowupIntentName_" data-uid="Pulumi.Gcp.Diagflow.Intent.ParentFollowupIntentName*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_ParentFollowupIntentName" data-uid="Pulumi.Gcp.Diagflow.Intent.ParentFollowupIntentName">ParentFollowupIntentName</h4>
+  <div class="markdown level1 summary"><p>The unique identifier of the parent intent in the chain of followup intents.
+Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ParentFollowupIntentName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_Priority_" data-uid="Pulumi.Gcp.Diagflow.Intent.Priority*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_Priority" data-uid="Pulumi.Gcp.Diagflow.Intent.Priority">Priority</h4>
+  <div class="markdown level1 summary"><p>The priority of this intent. Higher numbers represent higher priorities.</p>
+<ul>
+<li>If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
+to the Normal priority in the console.</li>
+<li>If the supplied value is negative, the intent is ignored in runtime detect intent requests.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Priority { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L133">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_Project_" data-uid="Pulumi.Gcp.Diagflow.Intent.Project*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_Project" data-uid="Pulumi.Gcp.Diagflow.Intent.Project">Project</h4>
+  <div class="markdown level1 summary"><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Project { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L139">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_ResetContexts_" data-uid="Pulumi.Gcp.Diagflow.Intent.ResetContexts*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_ResetContexts" data-uid="Pulumi.Gcp.Diagflow.Intent.ResetContexts">ResetContexts</h4>
+  <div class="markdown level1 summary"><p>Indicates whether to delete all contexts in the current session when this intent is matched.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; ResetContexts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L146">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_RootFollowupIntentName_" data-uid="Pulumi.Gcp.Diagflow.Intent.RootFollowupIntentName*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_RootFollowupIntentName" data-uid="Pulumi.Gcp.Diagflow.Intent.RootFollowupIntentName">RootFollowupIntentName</h4>
+  <div class="markdown level1 summary"><p>The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
+chain for this intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RootFollowupIntentName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_WebhookState_" data-uid="Pulumi.Gcp.Diagflow.Intent.WebhookState*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_WebhookState" data-uid="Pulumi.Gcp.Diagflow.Intent.WebhookState">WebhookState</h4>
+  <div class="markdown level1 summary"><p>Indicates whether webhooks are enabled for the intent.</p>
+<ul>
+<li>WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.</li>
+<li>WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
+filling prompt is forwarded to the webhook.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; WebhookState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L196">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Diagflow_Intent_Get_" data-uid="Pulumi.Gcp.Diagflow.Intent.Get*"></a>
+  <h4 id="Pulumi_Gcp_Diagflow_Intent_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Diagflow_IntentState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Diagflow.Intent.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Diagflow.IntentState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, IntentState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Intent resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Intent Get(string name, Input&lt;string&gt; id, IntentState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.Diagflow.IntentState.html">IntentState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.Diagflow.Intent.html">Intent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Diagflow/Intent.cs/#L49" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

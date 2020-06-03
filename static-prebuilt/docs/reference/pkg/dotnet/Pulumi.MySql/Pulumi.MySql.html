@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.MySql
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -88,6 +88,21 @@ consider setting
 <a href="https://www.terraform.io/docs/configuration/resources.html#prevent_destroy"><code>prevent_destroy</code></a>
 on your database resources as an extra safety measure.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var app = new MySql.Database(&amp;quot;app&amp;quot;, new MySql.DatabaseArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.MySql.DatabaseArgs.html">DatabaseArgs</a></h4>
       <section></section>
@@ -96,6 +111,91 @@ on your database resources as an extra safety measure.</p>
       <h4><a class="xref" href="Pulumi.MySql.Grant.html">Grant</a></h4>
       <section><p>The <code>mysql..Grant</code> resource creates and manages privileges given to
 a user on a MySQL server.</p>
+<h2 id="granting-privileges-to-a-user">Granting Privileges to a User</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var jdoeUser = new MySql.User(&amp;quot;jdoeUser&amp;quot;, new MySql.UserArgs
+    {
+        Host = &amp;quot;example.com&amp;quot;,
+        PlaintextPassword = &amp;quot;password&amp;quot;,
+        User = &amp;quot;jdoe&amp;quot;,
+    });
+    var jdoeGrant = new MySql.Grant(&amp;quot;jdoeGrant&amp;quot;, new MySql.GrantArgs
+    {
+        Database = &amp;quot;app&amp;quot;,
+        Host = jdoeUser.Host,
+        Privileges = 
+        {
+            &amp;quot;SELECT&amp;quot;,
+            &amp;quot;UPDATE&amp;quot;,
+        },
+        User = jdoeUser.UserName,
+    });
+}
+
+}
+</code></pre>
+<h2 id="granting-privileges-to-a-role">Granting Privileges to a Role</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var developerRole = new MySql.Role(&amp;quot;developerRole&amp;quot;, new MySql.RoleArgs
+    {
+    });
+    var developerGrant = new MySql.Grant(&amp;quot;developerGrant&amp;quot;, new MySql.GrantArgs
+    {
+        Database = &amp;quot;app&amp;quot;,
+        Privileges = 
+        {
+            &amp;quot;SELECT&amp;quot;,
+            &amp;quot;UPDATE&amp;quot;,
+        },
+        Role = developerRole.Name,
+    });
+}
+
+}
+</code></pre>
+<h2 id="adding-a-role-to-a-user">Adding a Role to a User</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var jdoe = new MySql.User(&amp;quot;jdoe&amp;quot;, new MySql.UserArgs
+    {
+        Host = &amp;quot;example.com&amp;quot;,
+        PlaintextPassword = &amp;quot;password&amp;quot;,
+        User = &amp;quot;jdoe&amp;quot;,
+    });
+    var developerRole = new MySql.Role(&amp;quot;developerRole&amp;quot;, new MySql.RoleArgs
+    {
+    });
+    var developerGrant = new MySql.Grant(&amp;quot;developerGrant&amp;quot;, new MySql.GrantArgs
+    {
+        Database = &amp;quot;app&amp;quot;,
+        Host = jdoe.Host,
+        Roles = 
+        {
+            developerRole.Name,
+        },
+        User = jdoe.UserName,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.MySql.GrantArgs.html">GrantArgs</a></h4>
       <section></section>
@@ -115,6 +215,21 @@ server.</p>
 <blockquote>
 <p><strong>Note:</strong> MySQL introduced roles in version 8. They do not work on MySQL 5 and lower.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var developer = new MySql.Role(&amp;quot;developer&amp;quot;, new MySql.RoleArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.MySql.RoleArgs.html">RoleArgs</a></h4>
       <section></section>
@@ -129,6 +244,42 @@ obscured by an unsalted hash in the state
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.
 Care is required when using this resource, to avoid disclosing the password.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var jdoe = new MySql.User(&amp;quot;jdoe&amp;quot;, new MySql.UserArgs
+    {
+        Host = &amp;quot;example.com&amp;quot;,
+        PlaintextPassword = &amp;quot;password&amp;quot;,
+        User = &amp;quot;jdoe&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-with-an-authentication-plugin">Example Usage with an Authentication Plugin</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var nologin = new MySql.User(&amp;quot;nologin&amp;quot;, new MySql.UserArgs
+    {
+        AuthPlugin = &amp;quot;mysql_no_login&amp;quot;,
+        Host = &amp;quot;example.com&amp;quot;,
+        User = &amp;quot;nologin&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.MySql.UserArgs.html">UserArgs</a></h4>
       <section></section>

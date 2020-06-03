@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Ram
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -94,6 +94,45 @@
 <li>Organization and Organizational Unit principals cannot be used.</li>
 <li>For AWS Account ID principals, a resource share invitation is sent and must be accepted before resources become available. See the <a href="https://www.terraform.io/docs/providers/aws/r/ram_resource_share_accepter.html"><code>aws.ram.ResourceShareAccepter</code> resource</a> to accept these invitations.</li>
 </ul>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="aws-account-id">AWS Account ID</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceShare = new Aws.Ram.ResourceShare(&amp;quot;exampleResourceShare&amp;quot;, new Aws.Ram.ResourceShareArgs
+    {
+        AllowExternalPrincipals = true,
+    });
+    var examplePrincipalAssociation = new Aws.Ram.PrincipalAssociation(&amp;quot;examplePrincipalAssociation&amp;quot;, new Aws.Ram.PrincipalAssociationArgs
+    {
+        Principal = &amp;quot;111111111111&amp;quot;,
+        ResourceShareArn = exampleResourceShare.Arn,
+    });
+}
+
+}
+</code></pre>
+<h3 id="aws-organization">AWS Organization</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ram.PrincipalAssociation(&amp;quot;example&amp;quot;, new Aws.Ram.PrincipalAssociationArgs
+    {
+        Principal = aws_organizations_organization.Example.Arn,
+        ResourceShareArn = aws_ram_resource_share.Example.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.PrincipalAssociationArgs.html">PrincipalAssociationArgs</a></h4>
       <section></section>
@@ -104,6 +143,23 @@
 <blockquote>
 <p><em>NOTE:</em> Certain AWS resources (e.g. EC2 Subnets) can only be shared in an AWS account that is a member of an AWS Organizations organization with organization-wide Resource Access Manager functionality enabled. See the <a href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">Resource Access Manager User Guide</a> and AWS service specific documentation for additional information.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ram.ResourceAssociation(&amp;quot;example&amp;quot;, new Aws.Ram.ResourceAssociationArgs
+    {
+        ResourceArn = aws_subnet.Example.Arn,
+        ResourceShareArn = aws_ram_resource_share.Example.Arn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.ResourceAssociationArgs.html">ResourceAssociationArgs</a></h4>
       <section></section>
@@ -111,12 +167,66 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.ResourceShare.html">ResourceShare</a></h4>
       <section><p>Manages a Resource Access Manager (RAM) Resource Share. To associate principals with the share, see the <a href="https://www.terraform.io/docs/providers/aws/r/ram_principal_association.html"><code>aws.ram.PrincipalAssociation</code> resource</a>. To associate resources with the share, see the <a href="https://www.terraform.io/docs/providers/aws/r/ram_resource_association.html"><code>aws.ram.ResourceAssociation</code> resource</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Ram.ResourceShare(&amp;quot;example&amp;quot;, new Aws.Ram.ResourceShareArgs
+    {
+        AllowExternalPrincipals = true,
+        Tags = 
+        {
+            { &amp;quot;Environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.ResourceShareAccepter.html">ResourceShareAccepter</a></h4>
       <section><p>Manage accepting a Resource Access Manager (RAM) Resource Share invitation. From a <em>receiver</em> AWS account, accept an invitation to share resources that were shared by a <em>sender</em> AWS account. To create a resource share in the <em>sender</em>, see the <a href="https://www.terraform.io/docs/providers/aws/r/ram_resource_share.html"><code>aws.ram.ResourceShare</code> resource</a>.</p>
 <blockquote>
 <p><strong>Note:</strong> If both AWS accounts are in the same Organization and <a href="https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs">RAM Sharing with AWS Organizations is enabled</a>, this resource is not necessary as RAM Resource Share invitations are not used.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var alternate = new Aws.Provider(&amp;quot;alternate&amp;quot;, new Aws.ProviderArgs
+    {
+        Profile = &amp;quot;profile1&amp;quot;,
+    });
+    var senderShare = new Aws.Ram.ResourceShare(&amp;quot;senderShare&amp;quot;, new Aws.Ram.ResourceShareArgs
+    {
+        AllowExternalPrincipals = true,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;tf-test-resource-share&amp;quot; },
+        },
+    });
+    var receiver = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+    var senderInvite = new Aws.Ram.PrincipalAssociation(&amp;quot;senderInvite&amp;quot;, new Aws.Ram.PrincipalAssociationArgs
+    {
+        Principal = receiver.Apply(receiver =&gt; receiver.AccountId),
+        ResourceShareArn = senderShare.Arn,
+    });
+    var receiverAccept = new Aws.Ram.ResourceShareAccepter(&amp;quot;receiverAccept&amp;quot;, new Aws.Ram.ResourceShareAccepterArgs
+    {
+        ShareArn = senderInvite.ResourceShareArn,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.ResourceShareAccepterArgs.html">ResourceShareAccepterArgs</a></h4>
       <section></section>

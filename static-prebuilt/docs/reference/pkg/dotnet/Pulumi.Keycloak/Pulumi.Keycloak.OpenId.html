@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Keycloak.OpenId
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,6 +83,67 @@ Keycloak. This mapper was added in Keycloak v4.6.0.Final.</p>
 <p>Audience protocol mappers allow you add audiences to the <code>aud</code> claim
 within issued tokens. The audience can be a custom string, or it can be
 mapped to the ID of a pre-existing client.</p>
+<h3 id="example-usage-client">Example Usage (Client)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClient = new Keycloak.OpenId.Client(&amp;quot;openidClient&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;CONFIDENTIAL&amp;quot;,
+        ClientId = &amp;quot;test-client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+        ValidRedirectUris = 
+        {
+            &amp;quot;http://localhost:8080/openid-callback&amp;quot;,
+        },
+    });
+    var audienceMapper = new Keycloak.OpenId.AudienceProtocolMapper(&amp;quot;audienceMapper&amp;quot;, new Keycloak.OpenId.AudienceProtocolMapperArgs
+    {
+        ClientId = openidClient.Id,
+        IncludedCustomAudience = &amp;quot;foo&amp;quot;,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-client-scope">Example Usage (Client Scope)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var clientScope = new Keycloak.OpenId.ClientScope(&amp;quot;clientScope&amp;quot;, new Keycloak.OpenId.ClientScopeArgs
+    {
+        RealmId = realm.Id,
+    });
+    var audienceMapper = new Keycloak.OpenId.AudienceProtocolMapper(&amp;quot;audienceMapper&amp;quot;, new Keycloak.OpenId.AudienceProtocolMapperArgs
+    {
+        ClientScopeId = clientScope.Id,
+        IncludedCustomAudience = &amp;quot;foo&amp;quot;,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -106,6 +167,34 @@ mapped to the ID of a pre-existing client.</p>
 <p>Clients are entities that can use Keycloak for user authentication. Typically,
 clients are applications that redirect users to Keycloak for authentication
 in order to take advantage of Keycloak's user sessions for SSO.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClient = new Keycloak.OpenId.Client(&amp;quot;openidClient&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;CONFIDENTIAL&amp;quot;,
+        ClientId = &amp;quot;test-client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+        ValidRedirectUris = 
+        {
+            &amp;quot;http://localhost:8080/openid-callback&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -210,6 +299,28 @@ clients that use the OpenID Connect protocol.</p>
 <p>Client Scopes can be used to share common protocol and role mappings between multiple
 clients within a realm. They can also be used by clients to conditionally request
 claims or roles for a user based on the OAuth 2.0 <code>scope</code> parameter.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClientScope = new Keycloak.OpenId.ClientScope(&amp;quot;openidClientScope&amp;quot;, new Keycloak.OpenId.ClientScopeArgs
+    {
+        Description = &amp;quot;When requested, this scope will map a user&amp;apos;s group memberships to a claim&amp;quot;,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -259,6 +370,65 @@ Keycloak.</p>
 to the OpenID Connect <code>name</code> claim in a token. Protocol mappers can be defined
 for a single client, or they can be defined for a client scope which can
 be shared between multiple different clients.</p>
+<h3 id="example-usage-client">Example Usage (Client)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClient = new Keycloak.OpenId.Client(&amp;quot;openidClient&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;CONFIDENTIAL&amp;quot;,
+        ClientId = &amp;quot;test-client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+        ValidRedirectUris = 
+        {
+            &amp;quot;http://localhost:8080/openid-callback&amp;quot;,
+        },
+    });
+    var fullNameMapper = new Keycloak.OpenId.FullNameProtocolMapper(&amp;quot;fullNameMapper&amp;quot;, new Keycloak.OpenId.FullNameProtocolMapperArgs
+    {
+        ClientId = openidClient.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-client-scope">Example Usage (Client Scope)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var clientScope = new Keycloak.OpenId.ClientScope(&amp;quot;clientScope&amp;quot;, new Keycloak.OpenId.ClientScopeArgs
+    {
+        RealmId = realm.Id,
+    });
+    var fullNameMapper = new Keycloak.OpenId.FullNameProtocolMapper(&amp;quot;fullNameMapper&amp;quot;, new Keycloak.OpenId.FullNameProtocolMapperArgs
+    {
+        ClientScopeId = clientScope.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -301,6 +471,67 @@ Keycloak.</p>
 to a claim in a token. Protocol mappers can be defined for a single client,
 or they can be defined for a client scope which can be shared between multiple
 different clients.</p>
+<h3 id="example-usage-client">Example Usage (Client)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClient = new Keycloak.OpenId.Client(&amp;quot;openidClient&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;CONFIDENTIAL&amp;quot;,
+        ClientId = &amp;quot;test-client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+        ValidRedirectUris = 
+        {
+            &amp;quot;http://localhost:8080/openid-callback&amp;quot;,
+        },
+    });
+    var groupMembershipMapper = new Keycloak.OpenId.GroupMembershipProtocolMapper(&amp;quot;groupMembershipMapper&amp;quot;, new Keycloak.OpenId.GroupMembershipProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;groups&amp;quot;,
+        ClientId = openidClient.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-client-scope">Example Usage (Client Scope)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var clientScope = new Keycloak.OpenId.ClientScope(&amp;quot;clientScope&amp;quot;, new Keycloak.OpenId.ClientScopeArgs
+    {
+        RealmId = realm.Id,
+    });
+    var groupMembershipMapper = new Keycloak.OpenId.GroupMembershipProtocolMapper(&amp;quot;groupMembershipMapper&amp;quot;, new Keycloak.OpenId.GroupMembershipProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;groups&amp;quot;,
+        ClientScopeId = clientScope.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -327,6 +558,69 @@ Keycloak.</p>
 value. Protocol mappers can be defined for a single client, or they can
 be defined for a client scope which can be shared between multiple different
 clients.</p>
+<h3 id="example-usage-client">Example Usage (Client)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClient = new Keycloak.OpenId.Client(&amp;quot;openidClient&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;CONFIDENTIAL&amp;quot;,
+        ClientId = &amp;quot;test-client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+        ValidRedirectUris = 
+        {
+            &amp;quot;http://localhost:8080/openid-callback&amp;quot;,
+        },
+    });
+    var hardcodedClaimMapper = new Keycloak.OpenId.HardcodedClaimProtocolMapper(&amp;quot;hardcodedClaimMapper&amp;quot;, new Keycloak.OpenId.HardcodedClaimProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;foo&amp;quot;,
+        ClaimValue = &amp;quot;bar&amp;quot;,
+        ClientId = openidClient.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-client-scope">Example Usage (Client Scope)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var clientScope = new Keycloak.OpenId.ClientScope(&amp;quot;clientScope&amp;quot;, new Keycloak.OpenId.ClientScopeArgs
+    {
+        RealmId = realm.Id,
+    });
+    var hardcodedClaimMapper = new Keycloak.OpenId.HardcodedClaimProtocolMapper(&amp;quot;hardcodedClaimMapper&amp;quot;, new Keycloak.OpenId.HardcodedClaimProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;foo&amp;quot;,
+        ClaimValue = &amp;quot;bar&amp;quot;,
+        ClientScopeId = clientScope.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -354,6 +648,75 @@ Keycloak.</p>
 always map to an access token for a client. Protocol mappers can be
 defined for a single client, or they can be defined for a client scope
 which can be shared between multiple different clients.</p>
+<h3 id="example-usage-client">Example Usage (Client)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var role = new Keycloak.Role(&amp;quot;role&amp;quot;, new Keycloak.RoleArgs
+    {
+        RealmId = realm.Id,
+    });
+    var openidClient = new Keycloak.OpenId.Client(&amp;quot;openidClient&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;CONFIDENTIAL&amp;quot;,
+        ClientId = &amp;quot;test-client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+        ValidRedirectUris = 
+        {
+            &amp;quot;http://localhost:8080/openid-callback&amp;quot;,
+        },
+    });
+    var hardcodedRoleMapper = new Keycloak.OpenId.HardcodedRoleProtocolMapper(&amp;quot;hardcodedRoleMapper&amp;quot;, new Keycloak.OpenId.HardcodedRoleProtocolMapperArgs
+    {
+        ClientId = openidClient.Id,
+        RealmId = realm.Id,
+        RoleId = role.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-client-scope">Example Usage (Client Scope)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var role = new Keycloak.Role(&amp;quot;role&amp;quot;, new Keycloak.RoleArgs
+    {
+        RealmId = realm.Id,
+    });
+    var clientScope = new Keycloak.OpenId.ClientScope(&amp;quot;clientScope&amp;quot;, new Keycloak.OpenId.ClientScopeArgs
+    {
+        RealmId = realm.Id,
+    });
+    var hardcodedRoleMapper = new Keycloak.OpenId.HardcodedRoleProtocolMapper(&amp;quot;hardcodedRoleMapper&amp;quot;, new Keycloak.OpenId.HardcodedRoleProtocolMapperArgs
+    {
+        ClientScopeId = clientScope.Id,
+        RealmId = realm.Id,
+        RoleId = role.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -377,6 +740,69 @@ Keycloak.</p>
 for a user within Keycloak to a claim in a token. Protocol mappers can be
 defined for a single client, or they can be defined for a client scope which
 can be shared between multiple different clients.</p>
+<h3 id="example-usage-client">Example Usage (Client)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClient = new Keycloak.OpenId.Client(&amp;quot;openidClient&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;CONFIDENTIAL&amp;quot;,
+        ClientId = &amp;quot;test-client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+        ValidRedirectUris = 
+        {
+            &amp;quot;http://localhost:8080/openid-callback&amp;quot;,
+        },
+    });
+    var userAttributeMapper = new Keycloak.OpenId.UserAttributeProtocolMapper(&amp;quot;userAttributeMapper&amp;quot;, new Keycloak.OpenId.UserAttributeProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;bar&amp;quot;,
+        ClientId = openidClient.Id,
+        RealmId = realm.Id,
+        UserAttribute = &amp;quot;foo&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-client-scope">Example Usage (Client Scope)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var clientScope = new Keycloak.OpenId.ClientScope(&amp;quot;clientScope&amp;quot;, new Keycloak.OpenId.ClientScopeArgs
+    {
+        RealmId = realm.Id,
+    });
+    var userAttributeMapper = new Keycloak.OpenId.UserAttributeProtocolMapper(&amp;quot;userAttributeMapper&amp;quot;, new Keycloak.OpenId.UserAttributeProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;bar&amp;quot;,
+        ClientScopeId = clientScope.Id,
+        RealmId = realm.Id,
+        UserAttribute = &amp;quot;foo&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -405,6 +831,69 @@ Keycloak.</p>
 on the Keycloak user interface to a claim in a token. Protocol mappers can be
 defined for a single client, or they can be defined for a client scope which
 can be shared between multiple different clients.</p>
+<h3 id="example-usage-client">Example Usage (Client)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClient = new Keycloak.OpenId.Client(&amp;quot;openidClient&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;CONFIDENTIAL&amp;quot;,
+        ClientId = &amp;quot;test-client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+        ValidRedirectUris = 
+        {
+            &amp;quot;http://localhost:8080/openid-callback&amp;quot;,
+        },
+    });
+    var userPropertyMapper = new Keycloak.OpenId.UserPropertyProtocolMapper(&amp;quot;userPropertyMapper&amp;quot;, new Keycloak.OpenId.UserPropertyProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;email&amp;quot;,
+        ClientId = openidClient.Id,
+        RealmId = realm.Id,
+        UserProperty = &amp;quot;email&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-client-scope">Example Usage (Client Scope)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var clientScope = new Keycloak.OpenId.ClientScope(&amp;quot;clientScope&amp;quot;, new Keycloak.OpenId.ClientScopeArgs
+    {
+        RealmId = realm.Id,
+    });
+    var userPropertyMapper = new Keycloak.OpenId.UserPropertyProtocolMapper(&amp;quot;userPropertyMapper&amp;quot;, new Keycloak.OpenId.UserPropertyProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;email&amp;quot;,
+        ClientScopeId = clientScope.Id,
+        RealmId = realm.Id,
+        UserProperty = &amp;quot;email&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -432,6 +921,67 @@ Keycloak.</p>
 Protocol mappers can be defined for a single client, or they can
 be defined for a client scope which can be shared between multiple different
 clients.</p>
+<h3 id="example-usage-client">Example Usage (Client)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClient = new Keycloak.OpenId.Client(&amp;quot;openidClient&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;CONFIDENTIAL&amp;quot;,
+        ClientId = &amp;quot;test-client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+        ValidRedirectUris = 
+        {
+            &amp;quot;http://localhost:8080/openid-callback&amp;quot;,
+        },
+    });
+    var userRealmRoleMapper = new Keycloak.OpenId.UserRealmRoleProtocolMapper(&amp;quot;userRealmRoleMapper&amp;quot;, new Keycloak.OpenId.UserRealmRoleProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;foo&amp;quot;,
+        ClientId = openidClient.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-client-scope">Example Usage (Client Scope)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var clientScope = new Keycloak.OpenId.ClientScope(&amp;quot;clientScope&amp;quot;, new Keycloak.OpenId.ClientScopeArgs
+    {
+        RealmId = realm.Id,
+    });
+    var userRealmRoleMapper = new Keycloak.OpenId.UserRealmRoleProtocolMapper(&amp;quot;userRealmRoleMapper&amp;quot;, new Keycloak.OpenId.UserRealmRoleProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;foo&amp;quot;,
+        ClientScopeId = clientScope.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>

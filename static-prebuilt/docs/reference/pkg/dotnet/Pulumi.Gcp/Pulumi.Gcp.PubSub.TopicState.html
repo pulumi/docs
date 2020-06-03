@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TopicState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TopicState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">TopicState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.PubSub.html">Pulumi.Gcp.PubSub</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Topic.cs/#L194">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Topic.cs/#L275">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_TopicState__ctor_" data-uid="Pulumi.Gcp.PubSub.TopicState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_PubSub_TopicState__ctor" data-uid="Pulumi.Gcp.PubSub.TopicState.#ctor">TopicState()</h4>
@@ -100,19 +129,20 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Topic.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Topic.cs/#L239">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_TopicState_KmsKeyName_" data-uid="Pulumi.Gcp.PubSub.TopicState.KmsKeyName*"></a>
   <h4 id="Pulumi_Gcp_PubSub_TopicState_KmsKeyName" data-uid="Pulumi.Gcp.PubSub.TopicState.KmsKeyName">KmsKeyName</h4>
-  <div class="markdown level1 summary"><p>The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. Your
-project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com&amp;apos;) must have
-'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. The expected format is
-'projects/<em>/locations/</em>/keyRings/<em>/cryptoKeys/</em>'</p>
+  <div class="markdown level1 summary"><p>The resource name of the Cloud KMS CryptoKey to be used to protect access
+to messages published on this topic. Your project's PubSub service account
+(<code>service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com</code>) must have
+<code>roles/cloudkms.cryptoKeyEncrypterDecrypter</code> to use this feature.
+The expected format is <code>projects/*/locations/*/keyRings/*/cryptoKeys/*</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsKeyName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsKeyName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,13 +154,13 @@ project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Topic.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Topic.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_TopicState_Labels_" data-uid="Pulumi.Gcp.PubSub.TopicState.Labels*"></a>
   <h4 id="Pulumi_Gcp_PubSub_TopicState_Labels" data-uid="Pulumi.Gcp.PubSub.TopicState.Labels">Labels</h4>
@@ -151,23 +181,24 @@ project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Topic.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Topic.cs/#L259">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_TopicState_MessageStoragePolicy_" data-uid="Pulumi.Gcp.PubSub.TopicState.MessageStoragePolicy*"></a>
   <h4 id="Pulumi_Gcp_PubSub_TopicState_MessageStoragePolicy" data-uid="Pulumi.Gcp.PubSub.TopicState.MessageStoragePolicy">MessageStoragePolicy</h4>
-  <div class="markdown level1 summary"><p>Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not
-present, then no constraints are in effect.</p>
+  <div class="markdown level1 summary"><p>Policy constraining the set of Google Cloud Platform regions where
+messages published to the topic may be stored. If not present, then no
+constraints are in effect.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;TopicMessageStoragePolicyGetArgs&gt;? MessageStoragePolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;TopicMessageStoragePolicyGetArgs&gt; MessageStoragePolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +210,13 @@ present, then no constraints are in effect.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.PubSub.Inputs.TopicMessageStoragePolicyGetArgs.html">TopicMessageStoragePolicyGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.PubSub.Inputs.TopicMessageStoragePolicyGetArgs.html">TopicMessageStoragePolicyGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Topic.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Topic.cs/#L265">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_TopicState_Name_" data-uid="Pulumi.Gcp.PubSub.TopicState.Name*"></a>
   <h4 id="Pulumi_Gcp_PubSub_TopicState_Name" data-uid="Pulumi.Gcp.PubSub.TopicState.Name">Name</h4>
@@ -194,7 +225,7 @@ present, then no constraints are in effect.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +237,13 @@ present, then no constraints are in effect.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Topic.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Topic.cs/#L272">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_TopicState_Project_" data-uid="Pulumi.Gcp.PubSub.TopicState.Project*"></a>
   <h4 id="Pulumi_Gcp_PubSub_TopicState_Project" data-uid="Pulumi.Gcp.PubSub.TopicState.Project">Project</h4>
@@ -222,7 +253,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,7 +265,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -246,7 +277,7 @@ If it is not provided, the provider project is used.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Topic.cs/#L151" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Topic.cs/#L230" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Schedule
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Schedule
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Pagerduty.Schedule">
+  
+  <h1 id="Pulumi_Pagerduty_Schedule" data-uid="Pulumi.Pagerduty.Schedule" class="text-break">Class Schedule
+  </h1>
+  <div class="markdown level0 summary"><p>A <a href="https://v2.developer.pagerduty.com/v2/page/api-reference#!/Schedules/get_schedules">schedule</a> determines the time periods that users are on call. Only on-call users are eligible to receive notifications from incidents.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Pagerduty.User(&amp;quot;example&amp;quot;, new Pagerduty.UserArgs
+    {
+        Email = &amp;quot;125.greenholt.earline@graham.name&amp;quot;,
+        Teams = 
+        {
+            pagerduty_team.Example.Id,
+        },
+    });
+    var foo = new Pagerduty.Schedule(&amp;quot;foo&amp;quot;, new Pagerduty.ScheduleArgs
+    {
+        Layers = 
+        {
+            new Pagerduty.Inputs.ScheduleLayerArgs
+            {
+                Name = &amp;quot;Night Shift&amp;quot;,
+                Restriction = 
+                {
+
+                    {
+                        { &amp;quot;durationSeconds&amp;quot;, 32400 },
+                        { &amp;quot;startTimeOfDay&amp;quot;, &amp;quot;08:00:00&amp;quot; },
+                        { &amp;quot;type&amp;quot;, &amp;quot;daily_restriction&amp;quot; },
+                    },
+                },
+                RotationTurnLengthSeconds = 86400,
+                RotationVirtualStart = &amp;quot;2015-11-06T20:00:00-05:00&amp;quot;,
+                Start = &amp;quot;2015-11-06T20:00:00-05:00&amp;quot;,
+                Users = 
+                {
+                    pagerduty_user.Foo.Id,
+                },
+            },
+        },
+        TimeZone = &amp;quot;America/New_York&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Pulumi.Resource</span></div>
+    <div class="level2"><span class="xref">Pulumi.CustomResource</span></div>
+    <div class="level3"><span class="xref">Schedule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Pulumi.CustomResource.Id</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.GetResourceType()</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.GetResourceName()</span>
+    </div>
+    <div>
+      <span class="xref">Pulumi.Resource.Urn</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Pagerduty.html">Pulumi.Pagerduty</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Pagerduty.dll</h6>
+  <h5 id="Pulumi_Pagerduty_Schedule_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Schedule : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/master/sdk/dotnet/Schedule.cs/#L110">View Source</a>
+  </span>
+  <a id="Pulumi_Pagerduty_Schedule__ctor_" data-uid="Pulumi.Pagerduty.Schedule.#ctor*"></a>
+  <h4 id="Pulumi_Pagerduty_Schedule__ctor_System_String_Pulumi_Pagerduty_ScheduleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Pagerduty.Schedule.#ctor(System.String,Pulumi.Pagerduty.ScheduleArgs,Pulumi.CustomResourceOptions)">Schedule(String, ScheduleArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Schedule resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Schedule(string name, ScheduleArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Pagerduty.ScheduleArgs.html">ScheduleArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.CustomResourceOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/master/sdk/dotnet/Schedule.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_Pagerduty_Schedule_Description_" data-uid="Pulumi.Pagerduty.Schedule.Description*"></a>
+  <h4 id="Pulumi_Pagerduty_Schedule_Description" data-uid="Pulumi.Pagerduty.Schedule.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The description of the schedule</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/master/sdk/dotnet/Schedule.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_Pagerduty_Schedule_Layers_" data-uid="Pulumi.Pagerduty.Schedule.Layers*"></a>
+  <h4 id="Pulumi_Pagerduty_Schedule_Layers" data-uid="Pulumi.Pagerduty.Schedule.Layers">Layers</h4>
+  <div class="markdown level1 summary"><p>A schedule layer block. Schedule layers documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScheduleLayer&gt;&gt; Layers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Pagerduty.Outputs.ScheduleLayer.html">ScheduleLayer</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/master/sdk/dotnet/Schedule.cs/#L85">View Source</a>
+  </span>
+  <a id="Pulumi_Pagerduty_Schedule_Name_" data-uid="Pulumi.Pagerduty.Schedule.Name*"></a>
+  <h4 id="Pulumi_Pagerduty_Schedule_Name" data-uid="Pulumi.Pagerduty.Schedule.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the schedule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/master/sdk/dotnet/Schedule.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_Pagerduty_Schedule_Overflow_" data-uid="Pulumi.Pagerduty.Schedule.Overflow*"></a>
+  <h4 id="Pulumi_Pagerduty_Schedule_Overflow" data-uid="Pulumi.Pagerduty.Schedule.Overflow">Overflow</h4>
+  <div class="markdown level1 summary"><p>Any on-call schedule entries that pass the date range bounds will be truncated at the bounds, unless the parameter <code>overflow</code> is passed. For instance, if your schedule is a rotation that changes daily at midnight UTC, and your date range is from <code>2011-06-01T10:00:00Z</code> to <code>2011-06-01T14:00:00Z</code>:
+If you don't pass the overflow=true parameter, you will get one schedule entry returned with a start of <code>2011-06-01T10:00:00Z</code> and end of <code>2011-06-01T14:00:00Z</code>.
+If you do pass the <code>overflow</code> parameter, you will get one schedule entry returned with a start of <code>2011-06-01T00:00:00Z</code> and end of <code>2011-06-02T00:00:00Z</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Overflow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/master/sdk/dotnet/Schedule.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_Pagerduty_Schedule_TimeZone_" data-uid="Pulumi.Pagerduty.Schedule.TimeZone*"></a>
+  <h4 id="Pulumi_Pagerduty_Schedule_TimeZone" data-uid="Pulumi.Pagerduty.Schedule.TimeZone">TimeZone</h4>
+  <div class="markdown level1 summary"><p>The time zone of the schedule (e.g Europe/Berlin).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TimeZone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Pulumi.Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/master/sdk/dotnet/Schedule.cs/#L140">View Source</a>
+  </span>
+  <a id="Pulumi_Pagerduty_Schedule_Get_" data-uid="Pulumi.Pagerduty.Schedule.Get*"></a>
+  <h4 id="Pulumi_Pagerduty_Schedule_Get_System_String_Pulumi_Input_System_String__Pulumi_Pagerduty_ScheduleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Pagerduty.Schedule.Get(System.String,Pulumi.Input{System.String},Pulumi.Pagerduty.ScheduleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ScheduleState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Schedule resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Schedule Get(string name, Input&lt;string&gt; id, ScheduleState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Pagerduty.ScheduleState.html">ScheduleState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Pulumi.CustomResourceOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Pagerduty.Schedule.html">Schedule</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/master/sdk/dotnet/Schedule.cs/#L68" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

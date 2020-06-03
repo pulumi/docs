@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class URLMapPathMatcher
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,23 +78,48 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">URLMapPathMatcher</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcher_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class URLMapPathMatcher : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class URLMapPathMatcher</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcher_DefaultService" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcher.DefaultService">DefaultService</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The backend service or backend bucket to use when none of the given paths match.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? DefaultService</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string DefaultService</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -106,20 +131,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L25">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcher_DefaultUrlRedirect" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcher.DefaultUrlRedirect">DefaultUrlRedirect</h4>
+  <div class="markdown level1 summary"><p>When none of the specified hostRules match, the request is redirected to a URL specified
+by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+defaultRouteAction must not be set.  Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly URLMapPathMatcherDefaultUrlRedirect DefaultUrlRedirect</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultUrlRedirect.html">URLMapPathMatcherDefaultUrlRedirect</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L29">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcher_Description" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcher.Description">Description</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Description of this test case.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Description</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Description</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,16 +185,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcher_HeaderAction" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcher.HeaderAction">HeaderAction</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -162,10 +219,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L40">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcher_Name" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcher.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -187,10 +246,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcher_PathRules" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcher.PathRules">PathRules</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The list of path rules. Use this list instead of routeRules when routing based
+on simple path matching is all that's required. The order by which path rules
+are specified does not matter. Matches are always done on the longest-path-first
+basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
+irrespective of the order in which those paths appear in this list. Within a
+given pathMatcher, only one of pathRules or routeRules must be set.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -206,16 +271,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRule.html">URLMapPathMatcherPathRule</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherPathRule.html">URLMapPathMatcherPathRule</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L58">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_URLMapPathMatcher_RouteRules" data-uid="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcher.RouteRules">RouteRules</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The list of ordered HTTP route rules. Use this list instead of pathRules when
+advanced route matching and routing actions are desired. The order of specifying
+routeRules matters: the first rule that matches will cause its specified routing
+action to take effect. Within a given pathMatcher, only one of pathRules or
+routeRules must be set. routeRules are not supported in UrlMaps intended for
+External load balancers.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -231,7 +302,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherRouteRule.html">URLMapPathMatcherRouteRule</a>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherRouteRule.html">URLMapPathMatcherRouteRule</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -243,7 +314,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/URLMapPathMatcher.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

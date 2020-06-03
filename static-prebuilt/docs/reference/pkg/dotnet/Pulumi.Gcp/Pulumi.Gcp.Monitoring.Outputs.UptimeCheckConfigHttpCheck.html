@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UptimeCheckConfigHttpCheck
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,19 +78,44 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">UptimeCheckConfigHttpCheck</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Monitoring.Outputs.html">Pulumi.Gcp.Monitoring.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Monitoring_Outputs_UptimeCheckConfigHttpCheck_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class UptimeCheckConfigHttpCheck : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class UptimeCheckConfigHttpCheck</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Monitoring_Outputs_UptimeCheckConfigHttpCheck_AuthInfo" data-uid="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheck.AuthInfo">AuthInfo</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -112,14 +137,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Monitoring_Outputs_UptimeCheckConfigHttpCheck_Headers" data-uid="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheck.Headers">Headers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at <a href="https://www.w3.org/Protocols/rfc2616/rfc2616.txt">https://www.w3.org/Protocols/rfc2616/rfc2616.txt</a> (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt;? Headers</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; Headers</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,16 +157,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Monitoring_Outputs_UptimeCheckConfigHttpCheck_MaskHeaders" data-uid="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheck.MaskHeaders">MaskHeaders</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -162,14 +189,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Monitoring_Outputs_UptimeCheckConfigHttpCheck_Path" data-uid="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheck.Path">Path</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to &quot;/&quot;).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Path</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Path</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,16 +209,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Monitoring_Outputs_UptimeCheckConfigHttpCheck_Port" data-uid="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheck.Port">Port</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -212,10 +241,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Monitoring_Outputs_UptimeCheckConfigHttpCheck_UseSsl" data-uid="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheck.UseSsl">UseSsl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If true, use HTTPS instead of HTTP to run the check.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -237,10 +267,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Monitoring_Outputs_UptimeCheckConfigHttpCheck_ValidateSsl" data-uid="Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheck.ValidateSsl">ValidateSsl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -268,7 +299,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Monitoring/Outputs/UptimeCheckConfigHttpCheck.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

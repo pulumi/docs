@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.ApiGatewayV2
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,14 +81,127 @@
 <blockquote>
 <p><strong>Note:</strong> Amazon API Gateway Version 2 resources are used for creating and deploying WebSocket and HTTP APIs. To create and deploy REST APIs, use Amazon API Gateway Version 1.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-websocket-api">Basic WebSocket API</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.Api(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.ApiArgs
+    {
+        ProtocolType = &amp;quot;WEBSOCKET&amp;quot;,
+        RouteSelectionExpression = &amp;quot;$$request.body.action&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="basic-http-api">Basic HTTP API</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.Api(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.ApiArgs
+    {
+        ProtocolType = &amp;quot;HTTP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.ApiArgs.html">ApiArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.ApiMapping.html">ApiMapping</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 API mapping.
+More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">Amazon API Gateway Developer Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.ApiMapping(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.ApiMappingArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        DomainName = aws_apigatewayv2_domain_name.Example.Id,
+        Stage = aws_apigatewayv2_stage.Example.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.ApiMappingArgs.html">ApiMappingArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.ApiMappingState.html">ApiMappingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.ApiState.html">ApiState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Authorizer.html">Authorizer</a></h4>
       <section><p>Manages an Amazon API Gateway Version 2 authorizer.
 More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-websocket-api">Basic WebSocket API</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.Authorizer(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.AuthorizerArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        AuthorizerType = &amp;quot;REQUEST&amp;quot;,
+        AuthorizerUri = aws_lambda_function.Example.Invoke_arn,
+        IdentitySources = 
+        {
+            &amp;quot;route.request.header.Auth&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="basic-http-api">Basic HTTP API</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.Authorizer(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.AuthorizerArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        AuthorizerType = &amp;quot;JWT&amp;quot;,
+        IdentitySources = 
+        {
+            &amp;quot;$$request.header.Authorization&amp;quot;,
+        },
+        JwtConfiguration = new Aws.ApiGatewayV2.Inputs.AuthorizerJwtConfigurationArgs
+        {
+            Audience = 
+            {
+                &amp;quot;example&amp;quot;,
+            },
+            Issuer = $&amp;quot;https://{aws_cognito_user_pool.Example.Endpoint}&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.AuthorizerArgs.html">AuthorizerArgs</a></h4>
       <section></section>
@@ -98,8 +211,26 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
       <section><p>Manages an Amazon API Gateway Version 2 deployment.
 More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
 <blockquote>
-<p><strong>Note:</strong> Creating a deployment for an API requires at least one <code>aws.apigatewayv2.Route</code> resource associated with that API.</p>
+<p><strong>Note:</strong> Creating a deployment for an API requires at least one <code>aws.apigatewayv2.Route</code> resource associated with that API. To avoid race conditions when all resources are being created together, you need to add implicit resource references via the <code>triggers</code> argument or explicit resource references using the <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson">resource <code>dependsOn</code> meta-argument</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.Deployment(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.DeploymentArgs
+    {
+        ApiId = aws_apigatewayv2_route.Example.Api_id,
+        Description = &amp;quot;Example deployment&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.DeploymentArgs.html">DeploymentArgs</a></h4>
       <section></section>
@@ -110,8 +241,31 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
 More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">Amazon API Gateway Developer Guide</a>.</p>
 <blockquote>
 <p><strong>Note:</strong> This resource establishes ownership of and the TLS settings for
-a particular domain name. An API stage can be associated with the domain name using the <code>aws_apigatewayv2_api_mapping</code> resource.</p>
+a particular domain name. An API stage can be associated with the domain name using the <code>aws.apigatewayv2.ApiMapping</code> resource.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.DomainName(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.DomainNameArgs
+    {
+        DomainName = &amp;quot;ws-api.example.com&amp;quot;,
+        DomainNameConfiguration = new Aws.ApiGatewayV2.Inputs.DomainNameDomainNameConfigurationArgs
+        {
+            CertificateArn = aws_acm_certificate.Example.Arn,
+            EndpointType = &amp;quot;REGIONAL&amp;quot;,
+            SecurityPolicy = &amp;quot;TLS_1_2&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.DomainNameArgs.html">DomainNameArgs</a></h4>
       <section></section>
@@ -120,12 +274,79 @@ a particular domain name. An API stage can be associated with the domain name us
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Integration.html">Integration</a></h4>
       <section><p>Manages an Amazon API Gateway Version 2 integration.
 More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.Integration(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.IntegrationArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        IntegrationType = &amp;quot;MOCK&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="lambda-integration">Lambda Integration</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleFunction = new Aws.Lambda.Function(&amp;quot;exampleFunction&amp;quot;, new Aws.Lambda.FunctionArgs
+    {
+        Code = new FileArchive(&amp;quot;example.zip&amp;quot;),
+        Handler = &amp;quot;index.handler&amp;quot;,
+        Role = aws_iam_role.Example.Arn,
+        Runtime = &amp;quot;nodejs10.x&amp;quot;,
+    });
+    var exampleIntegration = new Aws.ApiGatewayV2.Integration(&amp;quot;exampleIntegration&amp;quot;, new Aws.ApiGatewayV2.IntegrationArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        ConnectionType = &amp;quot;INTERNET&amp;quot;,
+        ContentHandlingStrategy = &amp;quot;CONVERT_TO_TEXT&amp;quot;,
+        Description = &amp;quot;Lambda example&amp;quot;,
+        IntegrationMethod = &amp;quot;POST&amp;quot;,
+        IntegrationType = &amp;quot;AWS&amp;quot;,
+        IntegrationUri = exampleFunction.InvokeArn,
+        PassthroughBehavior = &amp;quot;WHEN_NO_MATCH&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.IntegrationArgs.html">IntegrationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.IntegrationResponse.html">IntegrationResponse</a></h4>
       <section><p>Manages an Amazon API Gateway Version 2 integration response.
 More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.IntegrationResponse(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.IntegrationResponseArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        IntegrationId = aws_apigatewayv2_integration.Example.Id,
+        IntegrationResponseKey = &amp;quot;/200/&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.IntegrationResponseArgs.html">IntegrationResponseArgs</a></h4>
       <section></section>
@@ -135,6 +356,34 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Model.html">Model</a></h4>
       <section><p>Manages an Amazon API Gateway Version 2 <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-models">model</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.Model(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.ModelArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        ContentType = &amp;quot;application/json&amp;quot;,
+        Schema = @&amp;quot;{
+&amp;quot;&amp;quot;$$schema&amp;quot;&amp;quot;: &amp;quot;&amp;quot;http://json-schema.org/draft-04/schema#&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;title&amp;quot;&amp;quot;: &amp;quot;&amp;quot;ExampleModel&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;object&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;properties&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;id&amp;quot;&amp;quot;: { &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;string&amp;quot;&amp;quot; }
+}
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.ModelArgs.html">ModelArgs</a></h4>
       <section></section>
@@ -143,12 +392,49 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Route.html">Route</a></h4>
       <section><p>Manages an Amazon API Gateway Version 2 route.
 More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.Route(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.RouteArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        RouteKey = &amp;quot;$$default&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.RouteArgs.html">RouteArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.RouteResponse.html">RouteResponse</a></h4>
       <section><p>Manages an Amazon API Gateway Version 2 route response.
 More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.RouteResponse(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.RouteResponseArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+        RouteId = aws_apigatewayv2_route.Example.Id,
+        RouteResponseKey = &amp;quot;$$default&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.RouteResponseArgs.html">RouteResponseArgs</a></h4>
       <section></section>
@@ -159,10 +445,62 @@ More information can be found in the <a href="https://docs.aws.amazon.com/apigat
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Stage.html">Stage</a></h4>
       <section><p>Manages an Amazon API Gateway Version 2 stage.
 More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic">Basic</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.Stage(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.StageArgs
+    {
+        ApiId = aws_apigatewayv2_api.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.StageArgs.html">StageArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.StageState.html">StageState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.VpcLink.html">VpcLink</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 VPC Link.</p>
+<blockquote>
+<p><strong>Note:</strong> Amazon API Gateway Version 2 VPC Links enable private integrations that connect HTTP APIs to private resources in a VPC.
+To enable private integration for REST APIs, use the Amazon API Gateway Version 1 VPC Link <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_vpc_link.html">resource</a>.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.ApiGatewayV2.VpcLink(&amp;quot;example&amp;quot;, new Aws.ApiGatewayV2.VpcLinkArgs
+    {
+        SecurityGroupIds = 
+        {
+            data.Aws_security_group.Example.Id,
+        },
+        SubnetIds = data.Aws_subnet_ids.Example.Ids,
+        Tags = 
+        {
+            { &amp;quot;Usage&amp;quot;, &amp;quot;example&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.VpcLinkArgs.html">VpcLinkArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.VpcLinkState.html">VpcLinkState</a></h4>
       <section></section>
 </article>
           </div>

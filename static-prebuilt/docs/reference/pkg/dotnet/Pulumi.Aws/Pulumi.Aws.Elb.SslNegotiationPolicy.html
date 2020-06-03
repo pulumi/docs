@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SslNegotiationPolicy
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,123 @@
   <h1 id="Pulumi_Aws_Elb_SslNegotiationPolicy" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy" class="text-break">Class SslNegotiationPolicy
   </h1>
   <div class="markdown level0 summary"><p>Provides a load balancer SSL negotiation policy, which allows an ELB to control the ciphers and protocols that are supported during SSL negotiations between a client and a load balancer.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var lb = new Aws.Elb.LoadBalancer(&amp;quot;lb&amp;quot;, new Aws.Elb.LoadBalancerArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-east-1a&amp;quot;,
+        },
+        Listeners = 
+        {
+            new Aws.Elb.Inputs.LoadBalancerListenerArgs
+            {
+                InstancePort = 8000,
+                InstanceProtocol = &amp;quot;https&amp;quot;,
+                LbPort = 443,
+                LbProtocol = &amp;quot;https&amp;quot;,
+                SslCertificateId = &amp;quot;arn:aws:iam::123456789012:server-certificate/certName&amp;quot;,
+            },
+        },
+    });
+    var foo = new Aws.Elb.SslNegotiationPolicy(&amp;quot;foo&amp;quot;, new Aws.Elb.SslNegotiationPolicyArgs
+    {
+        Attributes = 
+        {
+            new Aws.Elb.Inputs.SslNegotiationPolicyAttributeArgs
+            {
+                Name = &amp;quot;Protocol-TLSv1&amp;quot;,
+                Value = &amp;quot;false&amp;quot;,
+            },
+            new Aws.Elb.Inputs.SslNegotiationPolicyAttributeArgs
+            {
+                Name = &amp;quot;Protocol-TLSv1.1&amp;quot;,
+                Value = &amp;quot;false&amp;quot;,
+            },
+            new Aws.Elb.Inputs.SslNegotiationPolicyAttributeArgs
+            {
+                Name = &amp;quot;Protocol-TLSv1.2&amp;quot;,
+                Value = &amp;quot;true&amp;quot;,
+            },
+            new Aws.Elb.Inputs.SslNegotiationPolicyAttributeArgs
+            {
+                Name = &amp;quot;Server-Defined-Cipher-Order&amp;quot;,
+                Value = &amp;quot;true&amp;quot;,
+            },
+            new Aws.Elb.Inputs.SslNegotiationPolicyAttributeArgs
+            {
+                Name = &amp;quot;ECDHE-RSA-AES128-GCM-SHA256&amp;quot;,
+                Value = &amp;quot;true&amp;quot;,
+            },
+            new Aws.Elb.Inputs.SslNegotiationPolicyAttributeArgs
+            {
+                Name = &amp;quot;AES128-GCM-SHA256&amp;quot;,
+                Value = &amp;quot;true&amp;quot;,
+            },
+            new Aws.Elb.Inputs.SslNegotiationPolicyAttributeArgs
+            {
+                Name = &amp;quot;EDH-RSA-DES-CBC3-SHA&amp;quot;,
+                Value = &amp;quot;false&amp;quot;,
+            },
+        },
+        LbPort = 443,
+        LoadBalancer = lb.Id,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SslNegotiationPolicy</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">SslNegotiationPolicy</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Elb.html">Pulumi.Aws.Elb</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +199,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_SslNegotiationPolicy__ctor_" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Elb_SslNegotiationPolicy__ctor_System_String_Pulumi_Aws_Elb_SslNegotiationPolicyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.#ctor(System.String,Pulumi.Aws.Elb.SslNegotiationPolicyArgs,System.Nullable{CustomResourceOptions})">SslNegotiationPolicy(String, SslNegotiationPolicyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Elb_SslNegotiationPolicy__ctor_System_String_Pulumi_Aws_Elb_SslNegotiationPolicyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.#ctor(System.String,Pulumi.Aws.Elb.SslNegotiationPolicyArgs,Pulumi.CustomResourceOptions)">SslNegotiationPolicy(String, SslNegotiationPolicyArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a SslNegotiationPolicy resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SslNegotiationPolicy(string name, SslNegotiationPolicyArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SslNegotiationPolicy(string name, SslNegotiationPolicyArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +233,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +243,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_SslNegotiationPolicy_Attributes_" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.Attributes*"></a>
   <h4 id="Pulumi_Aws_Elb_SslNegotiationPolicy_Attributes" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.Attributes">Attributes</h4>
@@ -153,13 +264,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Elb.Outputs.SslNegotiationPolicyAttribute.html">SslNegotiationPolicyAttribute</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Elb.Outputs.SslNegotiationPolicyAttribute.html">SslNegotiationPolicyAttribute</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_SslNegotiationPolicy_LbPort_" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.LbPort*"></a>
   <h4 id="Pulumi_Aws_Elb_SslNegotiationPolicy_LbPort" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.LbPort">LbPort</h4>
@@ -182,13 +293,13 @@ balancer.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_SslNegotiationPolicy_LoadBalancer_" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.LoadBalancer*"></a>
   <h4 id="Pulumi_Aws_Elb_SslNegotiationPolicy_LoadBalancer" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.LoadBalancer">LoadBalancer</h4>
@@ -210,13 +321,13 @@ should be attached.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_SslNegotiationPolicy_Name_" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.Name*"></a>
   <h4 id="Pulumi_Aws_Elb_SslNegotiationPolicy_Name" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.Name">Name</h4>
@@ -237,7 +348,7 @@ should be attached.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -245,17 +356,17 @@ should be attached.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_SslNegotiationPolicy_Get_" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.Get*"></a>
-  <h4 id="Pulumi_Aws_Elb_SslNegotiationPolicy_Get_System_String_Input_System_String__Pulumi_Aws_Elb_SslNegotiationPolicyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.Get(System.String,Input{System.String},Pulumi.Aws.Elb.SslNegotiationPolicyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SslNegotiationPolicyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Elb_SslNegotiationPolicy_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Elb_SslNegotiationPolicyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Elb.SslNegotiationPolicy.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Elb.SslNegotiationPolicyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SslNegotiationPolicyState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing SslNegotiationPolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SslNegotiationPolicy Get(string name, Input&lt;string&gt; id, SslNegotiationPolicyState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SslNegotiationPolicy Get(string name, Input&lt;string&gt; id, SslNegotiationPolicyState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -274,7 +385,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -286,7 +397,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -315,7 +426,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Elb/SslNegotiationPolicy.cs/#L93" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

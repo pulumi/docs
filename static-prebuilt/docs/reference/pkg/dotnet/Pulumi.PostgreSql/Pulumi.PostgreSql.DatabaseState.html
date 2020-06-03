@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatabaseState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DatabaseState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">DatabaseState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.PostgreSql.html">Pulumi.PostgreSql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.PostgreSql.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L291">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L315">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_DatabaseState__ctor_" data-uid="Pulumi.PostgreSql.DatabaseState.#ctor*"></a>
   <h4 id="Pulumi_PostgreSql_DatabaseState__ctor" data-uid="Pulumi.PostgreSql.DatabaseState.#ctor">DatabaseState()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L247">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_DatabaseState_AllowConnections_" data-uid="Pulumi.PostgreSql.DatabaseState.AllowConnections*"></a>
   <h4 id="Pulumi_PostgreSql_DatabaseState_AllowConnections" data-uid="Pulumi.PostgreSql.DatabaseState.AllowConnections">AllowConnections</h4>
@@ -111,7 +140,7 @@ other mechanisms, such as <code>GRANT</code> or <code>REVOKE CONNECT</code>).</p
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AllowConnections { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AllowConnections { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,13 +152,13 @@ other mechanisms, such as <code>GRANT</code> or <code>REVOKE CONNECT</code>).</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L230">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_DatabaseState_ConnectionLimit_" data-uid="Pulumi.PostgreSql.DatabaseState.ConnectionLimit*"></a>
   <h4 id="Pulumi_PostgreSql_DatabaseState_ConnectionLimit" data-uid="Pulumi.PostgreSql.DatabaseState.ConnectionLimit">ConnectionLimit</h4>
@@ -139,7 +168,7 @@ established to this database. <code>-1</code> (the default) means no limit.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? ConnectionLimit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; ConnectionLimit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +180,13 @@ established to this database. <code>-1</code> (the default) means no limit.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L236">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L260">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_DatabaseState_Encoding_" data-uid="Pulumi.PostgreSql.DatabaseState.Encoding*"></a>
   <h4 id="Pulumi_PostgreSql_DatabaseState_Encoding" data-uid="Pulumi.PostgreSql.DatabaseState.Encoding">Encoding</h4>
@@ -166,7 +195,7 @@ established to this database. <code>-1</code> (the default) means no limit.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Encoding { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Encoding { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,13 +207,13 @@ established to this database. <code>-1</code> (the default) means no limit.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L244">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L268">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_DatabaseState_IsTemplate_" data-uid="Pulumi.PostgreSql.DatabaseState.IsTemplate*"></a>
   <h4 id="Pulumi_PostgreSql_DatabaseState_IsTemplate" data-uid="Pulumi.PostgreSql.DatabaseState.IsTemplate">IsTemplate</h4>
@@ -195,7 +224,7 @@ superusers or the owner of the database can clone it.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IsTemplate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IsTemplate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +236,13 @@ superusers or the owner of the database can clone it.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L250">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L274">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_DatabaseState_LcCollate_" data-uid="Pulumi.PostgreSql.DatabaseState.LcCollate*"></a>
   <h4 id="Pulumi_PostgreSql_DatabaseState_LcCollate" data-uid="Pulumi.PostgreSql.DatabaseState.LcCollate">LcCollate</h4>
@@ -222,7 +251,7 @@ superusers or the owner of the database can clone it.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LcCollate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LcCollate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +263,13 @@ superusers or the owner of the database can clone it.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L280">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_DatabaseState_LcCtype_" data-uid="Pulumi.PostgreSql.DatabaseState.LcCtype*"></a>
   <h4 id="Pulumi_PostgreSql_DatabaseState_LcCtype" data-uid="Pulumi.PostgreSql.DatabaseState.LcCtype">LcCtype</h4>
@@ -249,7 +278,7 @@ superusers or the owner of the database can clone it.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LcCtype { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LcCtype { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +290,13 @@ superusers or the owner of the database can clone it.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L263">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L287">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_DatabaseState_Name_" data-uid="Pulumi.PostgreSql.DatabaseState.Name*"></a>
   <h4 id="Pulumi_PostgreSql_DatabaseState_Name" data-uid="Pulumi.PostgreSql.DatabaseState.Name">Name</h4>
@@ -277,7 +306,7 @@ server instance where it is configured.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,13 +318,13 @@ server instance where it is configured.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L273">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L297">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_DatabaseState_Owner_" data-uid="Pulumi.PostgreSql.DatabaseState.Owner*"></a>
   <h4 id="Pulumi_PostgreSql_DatabaseState_Owner" data-uid="Pulumi.PostgreSql.DatabaseState.Owner">Owner</h4>
@@ -308,7 +337,7 @@ the username in the provider is a superuser.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Owner { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Owner { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,13 +349,13 @@ the username in the provider is a superuser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L282">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L306">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_DatabaseState_TablespaceName_" data-uid="Pulumi.PostgreSql.DatabaseState.TablespaceName*"></a>
   <h4 id="Pulumi_PostgreSql_DatabaseState_TablespaceName" data-uid="Pulumi.PostgreSql.DatabaseState.TablespaceName">TablespaceName</h4>
@@ -338,7 +367,7 @@ created in this database.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TablespaceName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TablespaceName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -350,13 +379,13 @@ created in this database.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L288">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L312">View Source</a>
   </span>
   <a id="Pulumi_PostgreSql_DatabaseState_Template_" data-uid="Pulumi.PostgreSql.DatabaseState.Template*"></a>
   <h4 id="Pulumi_PostgreSql_DatabaseState_Template" data-uid="Pulumi.PostgreSql.DatabaseState.Template">Template</h4>
@@ -365,7 +394,7 @@ created in this database.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Template { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Template { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -377,7 +406,7 @@ created in this database.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -389,7 +418,7 @@ created in this database.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-postgresql/blob/d19fd5be8a8596b12361503990407813d78e71a7/sdk/dotnet/Database.cs/#L216" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Database.cs/#L240" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BackendRole
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,45 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">BackendRole</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">BackendRole</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Vault.Azure.html">Pulumi.Vault.Azure</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Vault.dll</h6>
@@ -87,16 +125,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Azure/BackendRole.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Azure/BackendRole.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Vault_Azure_BackendRole__ctor_" data-uid="Pulumi.Vault.Azure.BackendRole.#ctor*"></a>
-  <h4 id="Pulumi_Vault_Azure_BackendRole__ctor_System_String_Pulumi_Vault_Azure_BackendRoleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.Azure.BackendRole.#ctor(System.String,Pulumi.Vault.Azure.BackendRoleArgs,System.Nullable{CustomResourceOptions})">BackendRole(String, BackendRoleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_Azure_BackendRole__ctor_System_String_Pulumi_Vault_Azure_BackendRoleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.Azure.BackendRole.#ctor(System.String,Pulumi.Vault.Azure.BackendRoleArgs,Pulumi.CustomResourceOptions)">BackendRole(String, BackendRoleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a BackendRole resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BackendRole(string name, BackendRoleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public BackendRole(string name, BackendRoleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +159,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -131,7 +169,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Azure/BackendRole.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Azure/BackendRole.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Vault_Azure_BackendRole_ApplicationObjectId_" data-uid="Pulumi.Vault.Azure.BackendRole.ApplicationObjectId*"></a>
   <h4 id="Pulumi_Vault_Azure_BackendRole_ApplicationObjectId" data-uid="Pulumi.Vault.Azure.BackendRole.ApplicationObjectId">ApplicationObjectId</h4>
@@ -141,7 +179,7 @@ be used instead of creating dynamic service principals. If present, <code>azure_
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ApplicationObjectId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ApplicationObjectId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +191,13 @@ be used instead of creating dynamic service principals. If present, <code>azure_
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Azure/BackendRole.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Azure/BackendRole.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Vault_Azure_BackendRole_AzureRoles_" data-uid="Pulumi.Vault.Azure.BackendRole.AzureRoles*"></a>
   <h4 id="Pulumi_Vault_Azure_BackendRole_AzureRoles" data-uid="Pulumi.Vault.Azure.BackendRole.AzureRoles">AzureRoles</h4>
@@ -180,13 +218,13 @@ be used instead of creating dynamic service principals. If present, <code>azure_
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Vault.Azure.Outputs.BackendRoleAzureRole.html">BackendRoleAzureRole</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Vault.Azure.Outputs.BackendRoleAzureRole.html">BackendRoleAzureRole</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Azure/BackendRole.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Azure/BackendRole.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Vault_Azure_BackendRole_Backend_" data-uid="Pulumi.Vault.Azure.BackendRole.Backend*"></a>
   <h4 id="Pulumi_Vault_Azure_BackendRole_Backend" data-uid="Pulumi.Vault.Azure.BackendRole.Backend">Backend</h4>
@@ -195,7 +233,7 @@ be used instead of creating dynamic service principals. If present, <code>azure_
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Backend { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Backend { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +245,13 @@ be used instead of creating dynamic service principals. If present, <code>azure_
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Azure/BackendRole.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Azure/BackendRole.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Vault_Azure_BackendRole_Description_" data-uid="Pulumi.Vault.Azure.BackendRole.Description*"></a>
   <h4 id="Pulumi_Vault_Azure_BackendRole_Description" data-uid="Pulumi.Vault.Azure.BackendRole.Description">Description</h4>
@@ -222,7 +260,7 @@ be used instead of creating dynamic service principals. If present, <code>azure_
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +272,13 @@ be used instead of creating dynamic service principals. If present, <code>azure_
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Azure/BackendRole.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Azure/BackendRole.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Vault_Azure_BackendRole_MaxTtl_" data-uid="Pulumi.Vault.Azure.BackendRole.MaxTtl*"></a>
   <h4 id="Pulumi_Vault_Azure_BackendRole_MaxTtl" data-uid="Pulumi.Vault.Azure.BackendRole.MaxTtl">MaxTtl</h4>
@@ -250,7 +288,7 @@ suffixed strings (&quot;1h&quot;) or an integer number of seconds. Defaults to t
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MaxTtl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MaxTtl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +300,13 @@ suffixed strings (&quot;1h&quot;) or an integer number of seconds. Defaults to t
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Azure/BackendRole.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Azure/BackendRole.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Vault_Azure_BackendRole_Role_" data-uid="Pulumi.Vault.Azure.BackendRole.Role*"></a>
   <h4 id="Pulumi_Vault_Azure_BackendRole_Role" data-uid="Pulumi.Vault.Azure.BackendRole.Role">Role</h4>
@@ -289,13 +327,13 @@ suffixed strings (&quot;1h&quot;) or an integer number of seconds. Defaults to t
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Azure/BackendRole.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Azure/BackendRole.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Vault_Azure_BackendRole_Ttl_" data-uid="Pulumi.Vault.Azure.BackendRole.Ttl*"></a>
   <h4 id="Pulumi_Vault_Azure_BackendRole_Ttl" data-uid="Pulumi.Vault.Azure.BackendRole.Ttl">Ttl</h4>
@@ -305,7 +343,7 @@ Accepts time suffixed strings (&quot;1h&quot;) or an integer number of seconds. 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Ttl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Ttl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -317,7 +355,7 @@ Accepts time suffixed strings (&quot;1h&quot;) or an integer number of seconds. 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -325,17 +363,17 @@ Accepts time suffixed strings (&quot;1h&quot;) or an integer number of seconds. 
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Azure/BackendRole.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Azure/BackendRole.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Vault_Azure_BackendRole_Get_" data-uid="Pulumi.Vault.Azure.BackendRole.Get*"></a>
-  <h4 id="Pulumi_Vault_Azure_BackendRole_Get_System_String_Input_System_String__Pulumi_Vault_Azure_BackendRoleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.Azure.BackendRole.Get(System.String,Input{System.String},Pulumi.Vault.Azure.BackendRoleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BackendRoleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Vault_Azure_BackendRole_Get_System_String_Pulumi_Input_System_String__Pulumi_Vault_Azure_BackendRoleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Vault.Azure.BackendRole.Get(System.String,Pulumi.Input{System.String},Pulumi.Vault.Azure.BackendRoleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BackendRoleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing BackendRole resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BackendRole Get(string name, Input&lt;string&gt; id, BackendRoleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static BackendRole Get(string name, Input&lt;string&gt; id, BackendRoleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -354,7 +392,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -366,7 +404,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -395,7 +433,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Azure/BackendRole.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Azure/BackendRole.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

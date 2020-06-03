@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.ObjectStorage
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,11 +78,163 @@
   </h3>
       <h4><a class="xref" href="Pulumi.OpenStack.ObjectStorage.Container.html">Container</a></h4>
       <section><p>Manages a V1 container resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-container">Basic Container</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var container1 = new OpenStack.ObjectStorage.Container(&amp;quot;container1&amp;quot;, new OpenStack.ObjectStorage.ContainerArgs
+    {
+        ContentType = &amp;quot;application/json&amp;quot;,
+        Metadata = 
+        {
+            { &amp;quot;test&amp;quot;, &amp;quot;true&amp;quot; },
+        },
+        Region = &amp;quot;RegionOne&amp;quot;,
+        Versioning = new OpenStack.ObjectStorage.Inputs.ContainerVersioningArgs
+        {
+            Location = &amp;quot;tf-test-container-versions&amp;quot;,
+            Type = &amp;quot;versions&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="global-read-access">Global Read Access</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var container1 = new OpenStack.ObjectStorage.Container(&amp;quot;container1&amp;quot;, new OpenStack.ObjectStorage.ContainerArgs
+    {
+        ContainerRead = &amp;quot;.r:*&amp;quot;,
+        Region = &amp;quot;RegionOne&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="global-read-and-list-access">Global Read and List Access</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var container1 = new OpenStack.ObjectStorage.Container(&amp;quot;container1&amp;quot;, new OpenStack.ObjectStorage.ContainerArgs
+    {
+        ContainerRead = &amp;quot;.r:*,.rlistings&amp;quot;,
+        Region = &amp;quot;RegionOne&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="write-only-access-for-a-user">Write-Only Access for a User</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var current = Output.Create(OpenStack.Identity.GetAuthScope.InvokeAsync(new OpenStack.Identity.GetAuthScopeArgs
+    {
+        Name = &amp;quot;current&amp;quot;,
+    }));
+    var container1 = new OpenStack.ObjectStorage.Container(&amp;quot;container1&amp;quot;, new OpenStack.ObjectStorage.ContainerArgs
+    {
+        ContainerRead = $&amp;quot;.r:-{@var.Username}&amp;quot;,
+        ContainerWrite = current.Apply(current =&gt; $&amp;quot;{current.ProjectId}:{@var.Username}&amp;quot;),
+        Region = &amp;quot;RegionOne&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.ObjectStorage.ContainerArgs.html">ContainerArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.ObjectStorage.ContainerObject.html">ContainerObject</a></h4>
       <section><p>Manages a V1 container object resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="example-with-simple-content">Example with simple content</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var container1 = new OpenStack.ObjectStorage.Container(&amp;quot;container1&amp;quot;, new OpenStack.ObjectStorage.ContainerArgs
+    {
+        ContentType = &amp;quot;application/json&amp;quot;,
+        Metadata = 
+        {
+            { &amp;quot;test&amp;quot;, &amp;quot;true&amp;quot; },
+        },
+        Region = &amp;quot;RegionOne&amp;quot;,
+    });
+    var doc1 = new OpenStack.ObjectStorage.ContainerObject(&amp;quot;doc1&amp;quot;, new OpenStack.ObjectStorage.ContainerObjectArgs
+    {
+        ContainerName = container1.Name,
+        Content = @&amp;quot;               {
+             &amp;quot;&amp;quot;foo&amp;quot;&amp;quot; : &amp;quot;&amp;quot;bar&amp;quot;&amp;quot;
+           }
+
+&amp;quot;,
+        ContentType = &amp;quot;application/json&amp;quot;,
+        Metadata = 
+        {
+            { &amp;quot;test&amp;quot;, &amp;quot;true&amp;quot; },
+        },
+        Region = &amp;quot;RegionOne&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-with-content-from-file">Example with content from file</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var container1 = new OpenStack.ObjectStorage.Container(&amp;quot;container1&amp;quot;, new OpenStack.ObjectStorage.ContainerArgs
+    {
+        ContentType = &amp;quot;application/json&amp;quot;,
+        Metadata = 
+        {
+            { &amp;quot;test&amp;quot;, &amp;quot;true&amp;quot; },
+        },
+        Region = &amp;quot;RegionOne&amp;quot;,
+    });
+    var doc1 = new OpenStack.ObjectStorage.ContainerObject(&amp;quot;doc1&amp;quot;, new OpenStack.ObjectStorage.ContainerObjectArgs
+    {
+        ContainerName = container1.Name,
+        ContentType = &amp;quot;application/json&amp;quot;,
+        Metadata = 
+        {
+            { &amp;quot;test&amp;quot;, &amp;quot;true&amp;quot; },
+        },
+        Region = &amp;quot;RegionOne&amp;quot;,
+        Source = &amp;quot;./default.json&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.ObjectStorage.ContainerObjectArgs.html">ContainerObjectArgs</a></h4>
       <section></section>
@@ -97,6 +249,37 @@ Once the URL has expired, it will no longer be valid, but the resource
 will remain in place. If you wish to automatically regenerate a URL, set
 the <code>regenerate</code> argument to <code>true</code>. This will create a new resource with
 a new ID and URL.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var container1 = new OpenStack.ObjectStorage.Container(&amp;quot;container1&amp;quot;, new OpenStack.ObjectStorage.ContainerArgs
+    {
+        Metadata = 
+        {
+            { &amp;quot;Temp-URL-Key&amp;quot;, &amp;quot;testkey&amp;quot; },
+        },
+    });
+    var object1 = new OpenStack.ObjectStorage.ContainerObject(&amp;quot;object1&amp;quot;, new OpenStack.ObjectStorage.ContainerObjectArgs
+    {
+        ContainerName = container1.Name,
+        Content = &amp;quot;Hello, world!&amp;quot;,
+    });
+    var objTempurl = new OpenStack.ObjectStorage.TempUrl(&amp;quot;objTempurl&amp;quot;, new OpenStack.ObjectStorage.TempUrlArgs
+    {
+        Container = container1.Name,
+        Method = &amp;quot;post&amp;quot;,
+        Object = object1.Name,
+        Ttl = 20,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.ObjectStorage.TempUrlArgs.html">TempUrlArgs</a></h4>
       <section></section>

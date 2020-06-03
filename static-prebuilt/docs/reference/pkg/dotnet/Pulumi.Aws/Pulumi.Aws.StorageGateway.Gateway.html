@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Gateway
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,108 @@
 <blockquote>
 <p>NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving <code>The specified gateway is not connected</code> errors during resource creation (gateway activation), ensure your gateway instance meets the <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html">Storage Gateway requirements</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="file-gateway">File Gateway</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.StorageGateway.Gateway(&amp;quot;example&amp;quot;, new Aws.StorageGateway.GatewayArgs
+    {
+        GatewayIpAddress = &amp;quot;1.2.3.4&amp;quot;,
+        GatewayName = &amp;quot;example&amp;quot;,
+        GatewayTimezone = &amp;quot;GMT&amp;quot;,
+        GatewayType = &amp;quot;FILE_S3&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="volume-gateway-cached">Volume Gateway (Cached)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.StorageGateway.Gateway(&amp;quot;example&amp;quot;, new Aws.StorageGateway.GatewayArgs
+    {
+        GatewayIpAddress = &amp;quot;1.2.3.4&amp;quot;,
+        GatewayName = &amp;quot;example&amp;quot;,
+        GatewayTimezone = &amp;quot;GMT&amp;quot;,
+        GatewayType = &amp;quot;CACHED&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="volume-gateway-stored">Volume Gateway (Stored)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.StorageGateway.Gateway(&amp;quot;example&amp;quot;, new Aws.StorageGateway.GatewayArgs
+    {
+        GatewayIpAddress = &amp;quot;1.2.3.4&amp;quot;,
+        GatewayName = &amp;quot;example&amp;quot;,
+        GatewayTimezone = &amp;quot;GMT&amp;quot;,
+        GatewayType = &amp;quot;STORED&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Gateway</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Gateway</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.StorageGateway.html">Pulumi.Aws.StorageGateway</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -91,16 +187,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway__ctor_" data-uid="Pulumi.Aws.StorageGateway.Gateway.#ctor*"></a>
-  <h4 id="Pulumi_Aws_StorageGateway_Gateway__ctor_System_String_Pulumi_Aws_StorageGateway_GatewayArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.StorageGateway.Gateway.#ctor(System.String,Pulumi.Aws.StorageGateway.GatewayArgs,System.Nullable{CustomResourceOptions})">Gateway(String, GatewayArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_StorageGateway_Gateway__ctor_System_String_Pulumi_Aws_StorageGateway_GatewayArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.StorageGateway.Gateway.#ctor(System.String,Pulumi.Aws.StorageGateway.GatewayArgs,Pulumi.CustomResourceOptions)">Gateway(String, GatewayArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Gateway resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Gateway(string name, GatewayArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Gateway(string name, GatewayArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +221,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +231,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_ActivationKey_" data-uid="Pulumi.Aws.StorageGateway.Gateway.ActivationKey*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_ActivationKey" data-uid="Pulumi.Aws.StorageGateway.Gateway.ActivationKey">ActivationKey</h4>
@@ -156,13 +252,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_Arn_" data-uid="Pulumi.Aws.StorageGateway.Gateway.Arn*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_Arn" data-uid="Pulumi.Aws.StorageGateway.Gateway.Arn">Arn</h4>
@@ -183,13 +279,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_CloudwatchLogGroupArn_" data-uid="Pulumi.Aws.StorageGateway.Gateway.CloudwatchLogGroupArn*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_CloudwatchLogGroupArn" data-uid="Pulumi.Aws.StorageGateway.Gateway.CloudwatchLogGroupArn">CloudwatchLogGroupArn</h4>
@@ -198,7 +294,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CloudwatchLogGroupArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CloudwatchLogGroupArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,13 +306,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_GatewayId_" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayId*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_GatewayId" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayId">GatewayId</h4>
@@ -237,13 +333,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_GatewayIpAddress_" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayIpAddress*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_GatewayIpAddress" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayIpAddress">GatewayIpAddress</h4>
@@ -264,13 +360,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_GatewayName_" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayName*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_GatewayName" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayName">GatewayName</h4>
@@ -291,13 +387,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_GatewayTimezone_" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayTimezone*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_GatewayTimezone" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayTimezone">GatewayTimezone</h4>
@@ -318,13 +414,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_GatewayType_" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayType*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_GatewayType" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayType">GatewayType</h4>
@@ -333,7 +429,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; GatewayType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GatewayType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -345,13 +441,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L138">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_Gateway_GatewayVpcEndpoint_" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayVpcEndpoint*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_Gateway_GatewayVpcEndpoint" data-uid="Pulumi.Aws.StorageGateway.Gateway.GatewayVpcEndpoint">GatewayVpcEndpoint</h4>
+  <div class="markdown level1 summary"><p>VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html">Activating a Gateway in a Virtual Private Cloud</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GatewayVpcEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_MediumChangerType_" data-uid="Pulumi.Aws.StorageGateway.Gateway.MediumChangerType*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_MediumChangerType" data-uid="Pulumi.Aws.StorageGateway.Gateway.MediumChangerType">MediumChangerType</h4>
@@ -359,7 +482,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MediumChangerType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MediumChangerType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -371,13 +494,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_SmbActiveDirectorySettings_" data-uid="Pulumi.Aws.StorageGateway.Gateway.SmbActiveDirectorySettings*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_SmbActiveDirectorySettings" data-uid="Pulumi.Aws.StorageGateway.Gateway.SmbActiveDirectorySettings">SmbActiveDirectorySettings</h4>
@@ -398,13 +521,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.StorageGateway.Outputs.GatewaySmbActiveDirectorySettings.html">GatewaySmbActiveDirectorySettings</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.StorageGateway.Outputs.GatewaySmbActiveDirectorySettings.html">GatewaySmbActiveDirectorySettings</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_SmbGuestPassword_" data-uid="Pulumi.Aws.StorageGateway.Gateway.SmbGuestPassword*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_SmbGuestPassword" data-uid="Pulumi.Aws.StorageGateway.Gateway.SmbGuestPassword">SmbGuestPassword</h4>
@@ -413,7 +536,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SmbGuestPassword { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SmbGuestPassword { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -425,13 +548,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_Tags_" data-uid="Pulumi.Aws.StorageGateway.Gateway.Tags*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_Tags" data-uid="Pulumi.Aws.StorageGateway.Gateway.Tags">Tags</h4>
@@ -440,7 +563,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -452,13 +575,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_TapeDriveType_" data-uid="Pulumi.Aws.StorageGateway.Gateway.TapeDriveType*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_Gateway_TapeDriveType" data-uid="Pulumi.Aws.StorageGateway.Gateway.TapeDriveType">TapeDriveType</h4>
@@ -467,7 +590,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TapeDriveType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TapeDriveType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -479,7 +602,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -487,17 +610,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_Gateway_Get_" data-uid="Pulumi.Aws.StorageGateway.Gateway.Get*"></a>
-  <h4 id="Pulumi_Aws_StorageGateway_Gateway_Get_System_String_Input_System_String__Pulumi_Aws_StorageGateway_GatewayState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.StorageGateway.Gateway.Get(System.String,Input{System.String},Pulumi.Aws.StorageGateway.GatewayState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GatewayState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_StorageGateway_Gateway_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_StorageGateway_GatewayState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.StorageGateway.Gateway.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.StorageGateway.GatewayState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, GatewayState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Gateway resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Gateway Get(string name, Input&lt;string&gt; id, GatewayState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Gateway Get(string name, Input&lt;string&gt; id, GatewayState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -516,7 +639,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -528,7 +651,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -557,7 +680,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Gateway.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/Gateway.cs/#L85" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

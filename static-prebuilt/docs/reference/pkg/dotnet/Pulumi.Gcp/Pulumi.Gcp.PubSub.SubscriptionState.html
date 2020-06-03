@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SubscriptionState
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SubscriptionState</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">SubscriptionState</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.PubSub.html">Pulumi.Gcp.PubSub</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L339">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L418">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState__ctor_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState__ctor" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.#ctor">SubscriptionState()</h4>
@@ -100,24 +129,30 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L260">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L327">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState_AckDeadlineSeconds_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.AckDeadlineSeconds*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState_AckDeadlineSeconds" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.AckDeadlineSeconds">AckDeadlineSeconds</h4>
-  <div class="markdown level1 summary"><p>This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the
-message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an
-outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions,
-this value is used as the initial value for the ack deadline. To override this value for a given message, call
-subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify
-is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a
-default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
-to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
-message.</p>
+  <div class="markdown level1 summary"><p>This value is the maximum time after a subscriber receives a message
+before the subscriber should acknowledge the message. After message
+delivery but before the ack deadline expires and before the message is
+acknowledged, it is an outstanding message and will not be delivered
+again during that time (on a best-effort basis).
+For pull subscriptions, this value is used as the initial value for
+the ack deadline. To override this value for a given message, call
+subscriptions.modifyAckDeadline with the corresponding ackId if using
+pull. The minimum custom deadline you can specify is 10 seconds. The
+maximum custom deadline you can specify is 600 seconds (10 minutes).
+If this parameter is 0, a default value of 10 seconds is used.
+For push delivery, this value is also used to set the request timeout
+for the call to the push endpoint.
+If the subscriber never acknowledges the message, the Pub/Sub system
+will eventually redeliver the message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? AckDeadlineSeconds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; AckDeadlineSeconds { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,25 +164,28 @@ message.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L269">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L339">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState_DeadLetterPolicy_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.DeadLetterPolicy*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState_DeadLetterPolicy" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.DeadLetterPolicy">DeadLetterPolicy</h4>
-  <div class="markdown level1 summary"><p>A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
-set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project
-(i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on
-this subscription.</p>
+  <div class="markdown level1 summary"><p>A policy that specifies the conditions for dead lettering messages in
+this subscription. If dead_letter_policy is not set, dead lettering
+is disabled.
+The Cloud Pub/Sub service account associated with this subscriptions's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Acknowledge() messages on this subscription.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;SubscriptionDeadLetterPolicyGetArgs&gt;? DeadLetterPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;SubscriptionDeadLetterPolicyGetArgs&gt; DeadLetterPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,25 +197,28 @@ this subscription.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.PubSub.Inputs.SubscriptionDeadLetterPolicyGetArgs.html">SubscriptionDeadLetterPolicyGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.PubSub.Inputs.SubscriptionDeadLetterPolicyGetArgs.html">SubscriptionDeadLetterPolicyGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L278">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L351">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState_ExpirationPolicy_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.ExpirationPolicy*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState_ExpirationPolicy" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.ExpirationPolicy">ExpirationPolicy</h4>
-  <div class="markdown level1 summary"><p>A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
-as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
-subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used. If it is set but ttl is
-&quot;&quot;, the resource never expires. The minimum allowed value for expirationPolicy.ttl is 1 day.</p>
+  <div class="markdown level1 summary"><p>A policy that specifies the conditions for this subscription's expiration.
+A subscription is considered active as long as any connected subscriber
+is successfully consuming messages from the subscription or is issuing
+operations on the subscription. If expirationPolicy is not set, a default
+policy with ttl of 31 days will be used.  If it is set but ttl is &quot;&quot;, the
+resource never expires.  The minimum allowed value for expirationPolicy.ttl
+is 1 day.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;SubscriptionExpirationPolicyGetArgs&gt;? ExpirationPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;SubscriptionExpirationPolicyGetArgs&gt; ExpirationPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,13 +230,13 @@ subscription. If expirationPolicy is not set, a default policy with ttl of 31 da
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.PubSub.Inputs.SubscriptionExpirationPolicyGetArgs.html">SubscriptionExpirationPolicyGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.PubSub.Inputs.SubscriptionExpirationPolicyGetArgs.html">SubscriptionExpirationPolicyGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L287">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L360">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState_Labels_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.Labels*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState_Labels" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.Labels">Labels</h4>
@@ -216,26 +257,29 @@ subscription. If expirationPolicy is not set, a default policy with ttl of 31 da
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L300">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L376">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState_MessageRetentionDuration_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.MessageRetentionDuration*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState_MessageRetentionDuration" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.MessageRetentionDuration">MessageRetentionDuration</h4>
-  <div class="markdown level1 summary"><p>How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If
-retainAckedMessages is true, then this also configures the retention of acknowledged messages, and thus configures how
-far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ('&quot;604800s&quot;') or less
-than 10 minutes ('&quot;600s&quot;'). A duration in seconds with up to nine fractional digits, terminated by 's'. Example:
-'&quot;600.5s&quot;'.</p>
+  <div class="markdown level1 summary"><p>How long to retain unacknowledged messages in the subscription's
+backlog, from the moment a message is published. If
+retainAckedMessages is true, then this also configures the retention
+of acknowledged messages, and thus configures how far back in time a
+subscriptions.seek can be done. Defaults to 7 days. Cannot be more
+than 7 days (<code>&amp;quot;604800s&amp;quot;</code>) or less than 10 minutes (<code>&amp;quot;600s&amp;quot;</code>).
+A duration in seconds with up to nine fractional digits, terminated
+by 's'. Example: <code>&amp;quot;600.5s&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MessageRetentionDuration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MessageRetentionDuration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,13 +291,13 @@ than 10 minutes ('&quot;600s&quot;'). A duration in seconds with up to nine frac
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L306">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L382">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState_Name_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.Name*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState_Name" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.Name">Name</h4>
@@ -262,7 +306,7 @@ than 10 minutes ('&quot;600s&quot;'). A duration in seconds with up to nine frac
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -274,13 +318,13 @@ than 10 minutes ('&quot;600s&quot;'). A duration in seconds with up to nine frac
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L309">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L385">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState_Path_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.Path*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState_Path" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.Path">Path</h4>
@@ -288,7 +332,7 @@ than 10 minutes ('&quot;600s&quot;'). A duration in seconds with up to nine frac
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Path { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Path { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -300,13 +344,13 @@ than 10 minutes ('&quot;600s&quot;'). A duration in seconds with up to nine frac
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L316">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L392">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState_Project_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.Project*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState_Project" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.Project">Project</h4>
@@ -316,7 +360,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,23 +372,24 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L323">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L400">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState_PushConfig_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.PushConfig*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState_PushConfig" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.PushConfig">PushConfig</h4>
-  <div class="markdown level1 summary"><p>If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
-the subscriber will pull and ack messages using API methods.</p>
+  <div class="markdown level1 summary"><p>If push delivery is used with this subscription, this field is used to
+configure it. An empty pushConfig signifies that the subscriber will
+pull and ack messages using API methods.  Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;SubscriptionPushConfigGetArgs&gt;? PushConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;SubscriptionPushConfigGetArgs&gt; PushConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -356,23 +401,25 @@ the subscriber will pull and ack messages using API methods.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.PubSub.Inputs.SubscriptionPushConfigGetArgs.html">SubscriptionPushConfigGetArgs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.PubSub.Inputs.SubscriptionPushConfigGetArgs.html">SubscriptionPushConfigGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L330">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L409">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState_RetainAckedMessages_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.RetainAckedMessages*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState_RetainAckedMessages" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.RetainAckedMessages">RetainAckedMessages</h4>
-  <div class="markdown level1 summary"><p>Indicates whether to retain acknowledged messages. If 'true', then messages are not expunged from the subscription's
-backlog, even if they are acknowledged, until they fall out of the messageRetentionDuration window.</p>
+  <div class="markdown level1 summary"><p>Indicates whether to retain acknowledged messages. If <code>true</code>, then
+messages are not expunged from the subscription's backlog, even if
+they are acknowledged, until they fall out of the
+messageRetentionDuration window.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? RetainAckedMessages { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; RetainAckedMessages { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -384,13 +431,13 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L336">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L415">View Source</a>
   </span>
   <a id="Pulumi_Gcp_PubSub_SubscriptionState_Topic_" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.Topic*"></a>
   <h4 id="Pulumi_Gcp_PubSub_SubscriptionState_Topic" data-uid="Pulumi.Gcp.PubSub.SubscriptionState.Topic">Topic</h4>
@@ -399,7 +446,7 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Topic { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Topic { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,7 +458,7 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -423,7 +470,7 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/PubSub/Subscription.cs/#L247" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/PubSub/Subscription.cs/#L308" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

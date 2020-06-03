@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SpotFleetRequest
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,142 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
 instances to be requested on the Spot market.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="using-launch-specifications">Using launch specifications</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Request a Spot fleet
+    var cheapCompute = new Aws.Ec2.SpotFleetRequest(&amp;quot;cheapCompute&amp;quot;, new Aws.Ec2.SpotFleetRequestArgs
+    {
+        AllocationStrategy = &amp;quot;diversified&amp;quot;,
+        IamFleetRole = &amp;quot;arn:aws:iam::12345678:role/spot-fleet&amp;quot;,
+        LaunchSpecifications = 
+        {
+            new Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationArgs
+            {
+                Ami = &amp;quot;ami-1234&amp;quot;,
+                IamInstanceProfileArn = aws_iam_instance_profile.Example.Arn,
+                InstanceType = &amp;quot;m4.10xlarge&amp;quot;,
+                PlacementTenancy = &amp;quot;dedicated&amp;quot;,
+                SpotPrice = &amp;quot;2.793&amp;quot;,
+            },
+            new Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationArgs
+            {
+                Ami = &amp;quot;ami-5678&amp;quot;,
+                AvailabilityZone = &amp;quot;us-west-1a&amp;quot;,
+                IamInstanceProfileArn = aws_iam_instance_profile.Example.Arn,
+                InstanceType = &amp;quot;m4.4xlarge&amp;quot;,
+                KeyName = &amp;quot;my-key&amp;quot;,
+                RootBlockDevice = 
+                {
+
+                    {
+                        { &amp;quot;volumeSize&amp;quot;, &amp;quot;300&amp;quot; },
+                        { &amp;quot;volumeType&amp;quot;, &amp;quot;gp2&amp;quot; },
+                    },
+                },
+                SpotPrice = &amp;quot;1.117&amp;quot;,
+                SubnetId = &amp;quot;subnet-1234&amp;quot;,
+                Tags = 
+                {
+                    { &amp;quot;Name&amp;quot;, &amp;quot;spot-fleet-example&amp;quot; },
+                },
+                WeightedCapacity = 35,
+            },
+        },
+        SpotPrice = &amp;quot;0.03&amp;quot;,
+        TargetCapacity = 6,
+        ValidUntil = &amp;quot;2019-11-04T20:44:20Z&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="using-multiple-launch-specifications">Using multiple launch specifications</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Aws.Ec2.SpotFleetRequest(&amp;quot;foo&amp;quot;, new Aws.Ec2.SpotFleetRequestArgs
+    {
+        IamFleetRole = &amp;quot;arn:aws:iam::12345678:role/spot-fleet&amp;quot;,
+        LaunchSpecifications = 
+        {
+            new Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationArgs
+            {
+                Ami = &amp;quot;ami-d06a90b0&amp;quot;,
+                AvailabilityZone = &amp;quot;us-west-2a&amp;quot;,
+                InstanceType = &amp;quot;m1.small&amp;quot;,
+                KeyName = &amp;quot;my-key&amp;quot;,
+            },
+            new Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationArgs
+            {
+                Ami = &amp;quot;ami-d06a90b0&amp;quot;,
+                AvailabilityZone = &amp;quot;us-west-2a&amp;quot;,
+                InstanceType = &amp;quot;m5.large&amp;quot;,
+                KeyName = &amp;quot;my-key&amp;quot;,
+            },
+        },
+        SpotPrice = &amp;quot;0.005&amp;quot;,
+        TargetCapacity = 2,
+        ValidUntil = &amp;quot;2019-11-04T20:44:20Z&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SpotFleetRequest</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">SpotFleetRequest</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -89,16 +219,16 @@ instances to be requested on the Spot market.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L263">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest__ctor_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest__ctor_System_String_Pulumi_Aws_Ec2_SpotFleetRequestArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.#ctor(System.String,Pulumi.Aws.Ec2.SpotFleetRequestArgs,System.Nullable{CustomResourceOptions})">SpotFleetRequest(String, SpotFleetRequestArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest__ctor_System_String_Pulumi_Aws_Ec2_SpotFleetRequestArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.#ctor(System.String,Pulumi.Aws.Ec2.SpotFleetRequestArgs,Pulumi.CustomResourceOptions)">SpotFleetRequest(String, SpotFleetRequestArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a SpotFleetRequest resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpotFleetRequest(string name, SpotFleetRequestArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SpotFleetRequest(string name, SpotFleetRequestArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +253,7 @@ instances to be requested on the Spot market.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +263,7 @@ instances to be requested on the Spot market.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_AllocationStrategy_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.AllocationStrategy*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_AllocationStrategy" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.AllocationStrategy">AllocationStrategy</h4>
@@ -144,7 +274,7 @@ the Spot pools specified by the Spot fleet request. The default is
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AllocationStrategy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AllocationStrategy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +286,13 @@ the Spot pools specified by the Spot fleet request. The default is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_ClientToken_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.ClientToken*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_ClientToken" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.ClientToken">ClientToken</h4>
@@ -182,13 +312,13 @@ the Spot pools specified by the Spot fleet request. The default is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_ExcessCapacityTerminationPolicy_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.ExcessCapacityTerminationPolicy*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_ExcessCapacityTerminationPolicy" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.ExcessCapacityTerminationPolicy">ExcessCapacityTerminationPolicy</h4>
@@ -199,7 +329,7 @@ request is decreased below the current size of the Spot fleet.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ExcessCapacityTerminationPolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ExcessCapacityTerminationPolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,13 +341,13 @@ request is decreased below the current size of the Spot fleet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_FleetType_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.FleetType*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_FleetType" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.FleetType">FleetType</h4>
@@ -227,7 +357,7 @@ capacity or also attempts to maintain it. Default is <code>maintain</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; FleetType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FleetType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,13 +369,13 @@ capacity or also attempts to maintain it. Default is <code>maintain</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_IamFleetRole_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.IamFleetRole*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_IamFleetRole" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.IamFleetRole">IamFleetRole</h4>
@@ -269,13 +399,13 @@ terminateInstancesWithExpiration.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_InstanceInterruptionBehaviour_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.InstanceInterruptionBehaviour*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_InstanceInterruptionBehaviour" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.InstanceInterruptionBehaviour">InstanceInterruptionBehaviour</h4>
@@ -286,7 +416,7 @@ instance stops or terminates when it is interrupted. Default is
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InstanceInterruptionBehaviour { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceInterruptionBehaviour { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -298,13 +428,13 @@ instance stops or terminates when it is interrupted. Default is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_InstancePoolsToUseCount_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.InstancePoolsToUseCount*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_InstancePoolsToUseCount" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.InstancePoolsToUseCount">InstancePoolsToUseCount</h4>
@@ -328,19 +458,19 @@ the number of Spot pools that you specify.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_LaunchSpecifications_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.LaunchSpecifications*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_LaunchSpecifications" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.LaunchSpecifications">LaunchSpecifications</h4>
   <div class="markdown level1 summary"><p>Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.</p>
+across different markets and instance types. Conflicts with <code>launch_template_config</code>. At least one of <code>launch_specification</code> or <code>launch_template_config</code> is required.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -357,13 +487,40 @@ across different markets and instance types.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchSpecification.html">SpotFleetRequestLaunchSpecification</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchSpecification.html">SpotFleetRequestLaunchSpecification</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L181">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_SpotFleetRequest_LaunchTemplateConfigs_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.LaunchTemplateConfigs*"></a>
+  <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_LaunchTemplateConfigs" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.LaunchTemplateConfigs">LaunchTemplateConfigs</h4>
+  <div class="markdown level1 summary"><p>Launch template configuration block. See Launch Template Configs below for more details. Conflicts with <code>launch_specification</code>. At least one of <code>launch_specification</code> or <code>launch_template_config</code> is required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;SpotFleetRequestLaunchTemplateConfig&gt;&gt; LaunchTemplateConfigs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchTemplateConfig.html">SpotFleetRequestLaunchTemplateConfig</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_LoadBalancers_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.LoadBalancers*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_LoadBalancers" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.LoadBalancers">LoadBalancers</h4>
@@ -384,13 +541,13 @@ across different markets and instance types.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_ReplaceUnhealthyInstances_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.ReplaceUnhealthyInstances*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_ReplaceUnhealthyInstances" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.ReplaceUnhealthyInstances">ReplaceUnhealthyInstances</h4>
@@ -411,22 +568,22 @@ across different markets and instance types.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L199">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_SpotPrice_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.SpotPrice*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_SpotPrice" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.SpotPrice">SpotPrice</h4>
-  <div class="markdown level1 summary"><p>The maximum bid price per unit hour.</p>
+  <div class="markdown level1 summary"><p>The maximum spot bid for this override request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SpotPrice { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SpotPrice { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -438,13 +595,13 @@ across different markets and instance types.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_SpotRequestState_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.SpotRequestState*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_SpotRequestState" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.SpotRequestState">SpotRequestState</h4>
@@ -465,22 +622,22 @@ across different markets and instance types.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L211">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_Tags_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_Tags" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -492,13 +649,13 @@ across different markets and instance types.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L219">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_TargetCapacity_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.TargetCapacity*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_TargetCapacity" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.TargetCapacity">TargetCapacity</h4>
@@ -521,13 +678,13 @@ important to your application workload, such as vCPUs, memory, or I/O.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L225">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_TargetGroupArns_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.TargetGroupArns*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_TargetGroupArns" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.TargetGroupArns">TargetGroupArns</h4>
@@ -548,13 +705,13 @@ important to your application workload, such as vCPUs, memory, or I/O.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_TerminateInstancesWithExpiration_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.TerminateInstancesWithExpiration*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_TerminateInstancesWithExpiration" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.TerminateInstancesWithExpiration">TerminateInstancesWithExpiration</h4>
@@ -576,13 +733,13 @@ instances should be terminated when the Spot fleet request expires.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L238">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_ValidFrom_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.ValidFrom*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_ValidFrom" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.ValidFrom">ValidFrom</h4>
@@ -591,7 +748,7 @@ instances should be terminated when the Spot fleet request expires.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ValidFrom { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ValidFrom { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -603,13 +760,13 @@ instances should be terminated when the Spot fleet request expires.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L244">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_ValidUntil_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.ValidUntil*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_ValidUntil" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.ValidUntil">ValidUntil</h4>
@@ -618,7 +775,7 @@ instances should be terminated when the Spot fleet request expires.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ValidUntil { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ValidUntil { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -630,13 +787,13 @@ instances should be terminated when the Spot fleet request expires.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L252">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_WaitForFulfillment_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.WaitForFulfillment*"></a>
   <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_WaitForFulfillment" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.WaitForFulfillment">WaitForFulfillment</h4>
@@ -659,7 +816,7 @@ timeout of 10m is reached.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -667,17 +824,17 @@ timeout of 10m is reached.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L188">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L293">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_SpotFleetRequest_Get_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_SpotFleetRequestState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.SpotFleetRequestState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SpotFleetRequestState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Ec2_SpotFleetRequest_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_SpotFleetRequestState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.SpotFleetRequest.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.SpotFleetRequestState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SpotFleetRequestState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing SpotFleetRequest resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SpotFleetRequest Get(string name, Input&lt;string&gt; id, SpotFleetRequestState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SpotFleetRequest Get(string name, Input&lt;string&gt; id, SpotFleetRequestState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -696,7 +853,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -708,7 +865,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -737,7 +894,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Ec2/SpotFleetRequest.cs/#L115" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

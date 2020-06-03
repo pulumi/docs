@@ -1,0 +1,775 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Github
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Github
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Github">
+  
+  <h1 id="Pulumi_Github" data-uid="Pulumi.Github" class="text-break">Namespace Pulumi.Github
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Github.ActionsSecret.html">ActionsSecret</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.ActionsSecretArgs.html">ActionsSecretArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.ActionsSecretState.html">ActionsSecretState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.Branch.html">Branch</a></h4>
+      <section><p>This resource allows you to create and manage branches within your repository.</p>
+<p>Additional constraints can be applied to ensure your branch is created from
+another branch or commit.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var development = new Github.Branch(&amp;quot;development&amp;quot;, new Github.BranchArgs
+    {
+        Branch = &amp;quot;development&amp;quot;,
+        Repository = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.BranchArgs.html">BranchArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.BranchProtection.html">BranchProtection</a></h4>
+      <section><p>Protects a GitHub branch.</p>
+<p>This resource allows you to configure branch protection for repositories in your organization. When applied, the branch will be protected from forced pushes and deletion. Additional constraints, such as required status checks or restrictions on users, teams, and apps, can also be configured.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleTeam = new Github.Team(&amp;quot;exampleTeam&amp;quot;, new Github.TeamArgs
+    {
+    });
+    // Protect the master branch of the foo repository. Additionally, require that
+    // the &amp;quot;ci/travis&amp;quot; context to be passing and only allow the engineers team merge
+    // to the branch.
+    var exampleBranchProtection = new Github.BranchProtection(&amp;quot;exampleBranchProtection&amp;quot;, new Github.BranchProtectionArgs
+    {
+        Branch = &amp;quot;master&amp;quot;,
+        EnforceAdmins = true,
+        Repository = github_repository.Example.Name,
+        RequiredPullRequestReviews = new Github.Inputs.BranchProtectionRequiredPullRequestReviewsArgs
+        {
+            DismissStaleReviews = true,
+            DismissalTeams = 
+            {
+                exampleTeam.Slug,
+                github_team.Second.Slug,
+            },
+            DismissalUsers = 
+            {
+                &amp;quot;foo-user&amp;quot;,
+            },
+        },
+        RequiredStatusChecks = new Github.Inputs.BranchProtectionRequiredStatusChecksArgs
+        {
+            Contexts = 
+            {
+                &amp;quot;ci/travis&amp;quot;,
+            },
+            Strict = false,
+        },
+        Restrictions = new Github.Inputs.BranchProtectionRestrictionsArgs
+        {
+            Apps = 
+            {
+                &amp;quot;foo-app&amp;quot;,
+            },
+            Teams = 
+            {
+                exampleTeam.Slug,
+            },
+            Users = 
+            {
+                &amp;quot;foo-user&amp;quot;,
+            },
+        },
+    });
+    var exampleTeamRepository = new Github.TeamRepository(&amp;quot;exampleTeamRepository&amp;quot;, new Github.TeamRepositoryArgs
+    {
+        Permission = &amp;quot;pull&amp;quot;,
+        Repository = github_repository.Example.Name,
+        TeamId = exampleTeam.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.BranchProtectionArgs.html">BranchProtectionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.BranchProtectionState.html">BranchProtectionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.BranchState.html">BranchState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.Config.html">Config</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetActionsPublicKey.html">GetActionsPublicKey</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetActionsPublicKeyArgs.html">GetActionsPublicKeyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetActionsPublicKeyResult.html">GetActionsPublicKeyResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetBranch.html">GetBranch</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetBranchArgs.html">GetBranchArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetBranchResult.html">GetBranchResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetCollaborators.html">GetCollaborators</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetCollaboratorsArgs.html">GetCollaboratorsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetCollaboratorsResult.html">GetCollaboratorsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetIpRanges.html">GetIpRanges</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetIpRangesResult.html">GetIpRangesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetMembership.html">GetMembership</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetMembershipArgs.html">GetMembershipArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetMembershipResult.html">GetMembershipResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetOrganizationTeamSyncGroups.html">GetOrganizationTeamSyncGroups</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetOrganizationTeamSyncGroupsResult.html">GetOrganizationTeamSyncGroupsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetRelease.html">GetRelease</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetReleaseArgs.html">GetReleaseArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetReleaseResult.html">GetReleaseResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetRepositories.html">GetRepositories</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetRepositoriesArgs.html">GetRepositoriesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetRepositoriesResult.html">GetRepositoriesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetRepository.html">GetRepository</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetRepositoryArgs.html">GetRepositoryArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetRepositoryResult.html">GetRepositoryResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetTeam.html">GetTeam</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetTeamArgs.html">GetTeamArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetTeamResult.html">GetTeamResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetUser.html">GetUser</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetUserArgs.html">GetUserArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.GetUserResult.html">GetUserResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.IssueLabel.html">IssueLabel</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.IssueLabelArgs.html">IssueLabelArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.IssueLabelState.html">IssueLabelState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.Membership.html">Membership</a></h4>
+      <section><p>Provides a GitHub membership resource.</p>
+<p>This resource allows you to add/remove users from your organization. When applied,
+an invitation will be sent to the user to become part of the organization. When
+destroyed, either the invitation will be cancelled or the user will be removed.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Add a user to the organization
+    var membershipForSomeUser = new Github.Membership(&amp;quot;membershipForSomeUser&amp;quot;, new Github.MembershipArgs
+    {
+        Role = &amp;quot;member&amp;quot;,
+        Username = &amp;quot;SomeUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.MembershipArgs.html">MembershipArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.MembershipState.html">MembershipState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.OrganizationBlock.html">OrganizationBlock</a></h4>
+      <section><p>This resource allows you to create and manage blocks for GitHub organizations.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Github.OrganizationBlock(&amp;quot;example&amp;quot;, new Github.OrganizationBlockArgs
+    {
+        Username = &amp;quot;paultyng&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.OrganizationBlockArgs.html">OrganizationBlockArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.OrganizationBlockState.html">OrganizationBlockState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.OrganizationProject.html">OrganizationProject</a></h4>
+      <section><p>This resource allows you to create and manage projects for GitHub organization.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var project = new Github.OrganizationProject(&amp;quot;project&amp;quot;, new Github.OrganizationProjectArgs
+    {
+        Body = &amp;quot;This is a organization project.&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.OrganizationProjectArgs.html">OrganizationProjectArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.OrganizationProjectState.html">OrganizationProjectState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.OrganizationWebhook.html">OrganizationWebhook</a></h4>
+      <section><p>This resource allows you to create and manage webhooks for GitHub organization.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Github.OrganizationWebhook(&amp;quot;foo&amp;quot;, new Github.OrganizationWebhookArgs
+    {
+        Active = false,
+        Configuration = new Github.Inputs.OrganizationWebhookConfigurationArgs
+        {
+            ContentType = &amp;quot;form&amp;quot;,
+            InsecureSsl = false,
+            Url = &amp;quot;https://google.de/&amp;quot;,
+        },
+        Events = 
+        {
+            &amp;quot;issues&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.OrganizationWebhookArgs.html">OrganizationWebhookArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.OrganizationWebhookState.html">OrganizationWebhookState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.ProjectColumn.html">ProjectColumn</a></h4>
+      <section><p>This resource allows you to create and manage columns for GitHub projects.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var project = new Github.OrganizationProject(&amp;quot;project&amp;quot;, new Github.OrganizationProjectArgs
+    {
+        Body = &amp;quot;This is an organization project.&amp;quot;,
+    });
+    var column = new Github.ProjectColumn(&amp;quot;column&amp;quot;, new Github.ProjectColumnArgs
+    {
+        ProjectId = project.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.ProjectColumnArgs.html">ProjectColumnArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.ProjectColumnState.html">ProjectColumnState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.Provider.html">Provider</a></h4>
+      <section><p>The provider type for the github package. By default, resources use package-wide configuration
+settings, however an explicit <code>Provider</code> instance may be created and passed during resource
+construction to achieve fine-grained programmatic control over provider settings. See the
+<a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.ProviderArgs.html">ProviderArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.Repository.html">Repository</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryArgs.html">RepositoryArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryCollaborator.html">RepositoryCollaborator</a></h4>
+      <section><p>Provides a GitHub repository collaborator resource.</p>
+<p>This resource allows you to add/remove collaborators from repositories in your
+organization. Collaborators can have explicit (and differing levels of) read,
+write, or administrator access to specific repositories in your organization,
+without giving the user full organization membership.</p>
+<p>When applied, an invitation will be sent to the user to become a collaborator
+on a repository. When destroyed, either the invitation will be cancelled or the
+collaborator will be removed from the repository.</p>
+<p>Further documentation on GitHub collaborators:</p>
+<ul>
+<li><a href="https://help.github.com/articles/adding-outside-collaborators-to-repositories-in-your-organization/">Adding outside collaborators to repositories in your organization</a></li>
+<li><a href="https://help.github.com/articles/converting-an-organization-member-to-an-outside-collaborator/">Converting an organization member to an outside collaborator</a></li>
+</ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Add a collaborator to a repository
+    var aRepoCollaborator = new Github.RepositoryCollaborator(&amp;quot;aRepoCollaborator&amp;quot;, new Github.RepositoryCollaboratorArgs
+    {
+        Permission = &amp;quot;admin&amp;quot;,
+        Repository = &amp;quot;our-cool-repo&amp;quot;,
+        Username = &amp;quot;SomeUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryCollaboratorArgs.html">RepositoryCollaboratorArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryCollaboratorState.html">RepositoryCollaboratorState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryDeployKey.html">RepositoryDeployKey</a></h4>
+      <section><p>Provides a GitHub repository deploy key resource.</p>
+<p>A deploy key is an SSH key that is stored on your server and grants
+access to a single GitHub repository. This key is attached directly to the repository instead of to a personal user
+account.</p>
+<p>This resource allows you to add/remove repository deploy keys.</p>
+<p>Further documentation on GitHub repository deploy keys:</p>
+<ul>
+<li><a href="https://developer.github.com/guides/managing-deploy-keys/#deploy-keys">About deploy keys</a></li>
+</ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Add a deploy key
+    var exampleRepositoryDeployKey = new Github.RepositoryDeployKey(&amp;quot;exampleRepositoryDeployKey&amp;quot;, new Github.RepositoryDeployKeyArgs
+    {
+        Key = &amp;quot;ssh-rsa AAA...&amp;quot;,
+        ReadOnly = &amp;quot;false&amp;quot;,
+        Repository = &amp;quot;test-repo&amp;quot;,
+        Title = &amp;quot;Repository test key&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryDeployKeyArgs.html">RepositoryDeployKeyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryDeployKeyState.html">RepositoryDeployKeyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryFile.html">RepositoryFile</a></h4>
+      <section><p>This resource allows you to create and manage files within a
+GitHub repository.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var gitignore = new Github.RepositoryFile(&amp;quot;gitignore&amp;quot;, new Github.RepositoryFileArgs
+    {
+        Content = &amp;quot;**/*.tfstate&amp;quot;,
+        File = &amp;quot;.gitignore&amp;quot;,
+        Repository = &amp;quot;example&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryFileArgs.html">RepositoryFileArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryFileState.html">RepositoryFileState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryProject.html">RepositoryProject</a></h4>
+      <section><p>This resource allows you to create and manage projects for GitHub repository.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Github.Repository(&amp;quot;example&amp;quot;, new Github.RepositoryArgs
+    {
+        Description = &amp;quot;My awesome codebase&amp;quot;,
+        HasProjects = true,
+    });
+    var project = new Github.RepositoryProject(&amp;quot;project&amp;quot;, new Github.RepositoryProjectArgs
+    {
+        Body = &amp;quot;This is a repository project.&amp;quot;,
+        Repository = example.Name,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryProjectArgs.html">RepositoryProjectArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryProjectState.html">RepositoryProjectState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryState.html">RepositoryState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryWebhook.html">RepositoryWebhook</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryWebhookArgs.html">RepositoryWebhookArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.RepositoryWebhookState.html">RepositoryWebhookState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.Team.html">Team</a></h4>
+      <section><p>Provides a GitHub team resource.</p>
+<p>This resource allows you to add/remove teams from your organization. When applied,
+a new team will be created. When destroyed, that team will be removed.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Add a team to the organization
+    var someTeam = new Github.Team(&amp;quot;someTeam&amp;quot;, new Github.TeamArgs
+    {
+        Description = &amp;quot;Some cool team&amp;quot;,
+        Privacy = &amp;quot;closed&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.TeamArgs.html">TeamArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.TeamMembership.html">TeamMembership</a></h4>
+      <section><p>Provides a GitHub team membership resource.</p>
+<p>This resource allows you to add/remove users from teams in your organization. When applied,
+the user will be added to the team. If the user hasn't accepted their invitation to the
+organization, they won't be part of the team until they do. When
+destroyed, the user will be removed from the team.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Add a user to the organization
+    var membershipForSomeUser = new Github.Membership(&amp;quot;membershipForSomeUser&amp;quot;, new Github.MembershipArgs
+    {
+        Role = &amp;quot;member&amp;quot;,
+        Username = &amp;quot;SomeUser&amp;quot;,
+    });
+    var someTeam = new Github.Team(&amp;quot;someTeam&amp;quot;, new Github.TeamArgs
+    {
+        Description = &amp;quot;Some cool team&amp;quot;,
+    });
+    var someTeamMembership = new Github.TeamMembership(&amp;quot;someTeamMembership&amp;quot;, new Github.TeamMembershipArgs
+    {
+        Role = &amp;quot;member&amp;quot;,
+        TeamId = someTeam.Id,
+        Username = &amp;quot;SomeUser&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.TeamMembershipArgs.html">TeamMembershipArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.TeamMembershipState.html">TeamMembershipState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.TeamRepository.html">TeamRepository</a></h4>
+      <section><p>This resource manages relationships between teams and repositories
+in your GitHub organization.</p>
+<p>Creating this resource grants a particular team permissions on a
+particular repository.</p>
+<p>The repository and the team must both belong to the same organization
+on GitHub. This resource does not actually <em>create</em> any repositories;
+to do that, see <code>github..Repository</code>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Add a repository to the team
+    var someTeam = new Github.Team(&amp;quot;someTeam&amp;quot;, new Github.TeamArgs
+    {
+        Description = &amp;quot;Some cool team&amp;quot;,
+    });
+    var someRepo = new Github.Repository(&amp;quot;someRepo&amp;quot;, new Github.RepositoryArgs
+    {
+    });
+    var someTeamRepo = new Github.TeamRepository(&amp;quot;someTeamRepo&amp;quot;, new Github.TeamRepositoryArgs
+    {
+        Permission = &amp;quot;pull&amp;quot;,
+        Repository = someRepo.Name,
+        TeamId = someTeam.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.TeamRepositoryArgs.html">TeamRepositoryArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.TeamRepositoryState.html">TeamRepositoryState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.TeamState.html">TeamState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.TeamSyncGroupMapping.html">TeamSyncGroupMapping</a></h4>
+      <section><p>This resource allows you to create and manage Identity Provider (IdP) group connections within your GitHub teams.
+You must have team synchronization enabled for organizations owned by enterprise accounts.</p>
+<p>To learn more about team synchronization between IdPs and Github, please refer to:
+<a href="https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/synchronizing-teams-between-your-identity-provider-and-github">https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/synchronizing-teams-between-your-identity-provider-and-github</a></p>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.TeamSyncGroupMappingArgs.html">TeamSyncGroupMappingArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.TeamSyncGroupMappingState.html">TeamSyncGroupMappingState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.UserGpgKey.html">UserGpgKey</a></h4>
+      <section><p>Provides a GitHub user's GPG key resource.</p>
+<p>This resource allows you to add/remove GPG keys from your user account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Github.UserGpgKey(&amp;quot;example&amp;quot;, new Github.UserGpgKeyArgs
+    {
+        ArmoredPublicKey = @&amp;quot;-----BEGIN PGP PUBLIC KEY BLOCK-----
+...
+-----END PGP PUBLIC KEY BLOCK-----
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.UserGpgKeyArgs.html">UserGpgKeyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.UserGpgKeyState.html">UserGpgKeyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.UserInvitationAccepter.html">UserInvitationAccepter</a></h4>
+      <section><p>Provides a resource to manage GitHub repository collaborator invitations.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleRepository = new Github.Repository(&amp;quot;exampleRepository&amp;quot;, new Github.RepositoryArgs
+    {
+    });
+    var exampleRepositoryCollaborator = new Github.RepositoryCollaborator(&amp;quot;exampleRepositoryCollaborator&amp;quot;, new Github.RepositoryCollaboratorArgs
+    {
+        Permission = &amp;quot;push&amp;quot;,
+        Repository = exampleRepository.Name,
+        Username = &amp;quot;example-username&amp;quot;,
+    });
+    var invitee = new Github.Provider(&amp;quot;invitee&amp;quot;, new Github.ProviderArgs
+    {
+        Token = @var.Invitee_token,
+    });
+    var exampleUserInvitationAccepter = new Github.UserInvitationAccepter(&amp;quot;exampleUserInvitationAccepter&amp;quot;, new Github.UserInvitationAccepterArgs
+    {
+        InvitationId = exampleRepositoryCollaborator.InvitationId,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.UserInvitationAccepterArgs.html">UserInvitationAccepterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.UserInvitationAccepterState.html">UserInvitationAccepterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.UserSshKey.html">UserSshKey</a></h4>
+      <section><p>Provides a GitHub user's SSH key resource.</p>
+<p>This resource allows you to add/remove SSH keys from your user account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Github.UserSshKey(&amp;quot;example&amp;quot;, new Github.UserSshKeyArgs
+    {
+        Key = File.ReadAllText(&amp;quot;~/.ssh/id_rsa.pub&amp;quot;),
+        Title = &amp;quot;example title&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Github.UserSshKeyArgs.html">UserSshKeyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Github.UserSshKeyState.html">UserSshKeyState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

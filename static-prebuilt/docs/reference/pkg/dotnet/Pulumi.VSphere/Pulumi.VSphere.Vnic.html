@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Vnic
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,117 @@
   <h1 id="Pulumi_VSphere_Vnic" data-uid="Pulumi.VSphere.Vnic" class="text-break">Class Vnic
   </h1>
   <div class="markdown level0 summary"><p>Provides a VMware vSphere vnic resource.</p>
+<h2 id="example-usages">Example Usages</h2>
+<h3 id="create-a-vnic-attached-to-a-portgroup-using-the-default-tcpip-stack">Create a vnic attached to a portgroup using the default TCP/IP stack</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+    {
+        Name = &amp;quot;mydc&amp;quot;,
+    }));
+    var h1 = dc.Apply(dc =&gt; Output.Create(VSphere.GetHost.InvokeAsync(new VSphere.GetHostArgs
+    {
+        Name = &amp;quot;esxi1.host.test&amp;quot;,
+        DatacenterId = dc.Id,
+    })));
+    var hvs1 = new VSphere.HostVirtualSwitch(&amp;quot;hvs1&amp;quot;, new VSphere.HostVirtualSwitchArgs
+    {
+        HostSystemId = h1.Apply(h1 =&gt; h1.Id),
+        NetworkAdapters = 
+        {
+            &amp;quot;vmnic3&amp;quot;,
+            &amp;quot;vmnic4&amp;quot;,
+        },
+        ActiveNics = 
+        {
+            &amp;quot;vmnic3&amp;quot;,
+        },
+        StandbyNics = 
+        {
+            &amp;quot;vmnic4&amp;quot;,
+        },
+    });
+    var p1 = new VSphere.HostPortGroup(&amp;quot;p1&amp;quot;, new VSphere.HostPortGroupArgs
+    {
+        VirtualSwitchName = hvs1.Name,
+        HostSystemId = h1.Apply(h1 =&gt; h1.Id),
+    });
+    var v1 = new VSphere.Vnic(&amp;quot;v1&amp;quot;, new VSphere.VnicArgs
+    {
+        Host = h1.Apply(h1 =&gt; h1.Id),
+        Portgroup = p1.Name,
+        Ipv4 = new VSphere.Inputs.VnicIpv4Args
+        {
+            Dhcp = true,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="importing">Importing</h2>
+<p>An existing vNic can be <a href="/docs/import/index.html">imported</a> into this resource
+via supplying the vNic's ID. An example is below:</p>
+<pre><code class="lang-csharp">using Pulumi;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+}
+
+}
+</code></pre>
+<p>The above would import the the vnic <code>vmk2</code> from host with ID <code>host-123</code>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Vnic</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Vnic</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -88,16 +193,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Vnic__ctor_" data-uid="Pulumi.VSphere.Vnic.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_Vnic__ctor_System_String_Pulumi_VSphere_VnicArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.Vnic.#ctor(System.String,Pulumi.VSphere.VnicArgs,System.Nullable{CustomResourceOptions})">Vnic(String, VnicArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_Vnic__ctor_System_String_Pulumi_VSphere_VnicArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.Vnic.#ctor(System.String,Pulumi.VSphere.VnicArgs,Pulumi.CustomResourceOptions)">Vnic(String, VnicArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Vnic resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vnic(string name, VnicArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Vnic(string name, VnicArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +227,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +237,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Vnic_DistributedPortGroup_" data-uid="Pulumi.VSphere.Vnic.DistributedPortGroup*"></a>
   <h4 id="Pulumi_VSphere_Vnic_DistributedPortGroup" data-uid="Pulumi.VSphere.Vnic.DistributedPortGroup">DistributedPortGroup</h4>
@@ -141,7 +246,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DistributedPortGroup { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DistributedPortGroup { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +258,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Vnic_DistributedSwitchPort_" data-uid="Pulumi.VSphere.Vnic.DistributedSwitchPort*"></a>
   <h4 id="Pulumi_VSphere_Vnic_DistributedSwitchPort" data-uid="Pulumi.VSphere.Vnic.DistributedSwitchPort">DistributedSwitchPort</h4>
@@ -168,7 +273,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DistributedSwitchPort { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DistributedSwitchPort { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +285,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Vnic_Host_" data-uid="Pulumi.VSphere.Vnic.Host*"></a>
   <h4 id="Pulumi_VSphere_Vnic_Host" data-uid="Pulumi.VSphere.Vnic.Host">Host</h4>
@@ -207,13 +312,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Vnic_Ipv4_" data-uid="Pulumi.VSphere.Vnic.Ipv4*"></a>
   <h4 id="Pulumi_VSphere_Vnic_Ipv4" data-uid="Pulumi.VSphere.Vnic.Ipv4">Ipv4</h4>
@@ -234,13 +339,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VnicIpv4.html">VnicIpv4</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VnicIpv4.html">VnicIpv4</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Vnic_Ipv6_" data-uid="Pulumi.VSphere.Vnic.Ipv6*"></a>
   <h4 id="Pulumi_VSphere_Vnic_Ipv6" data-uid="Pulumi.VSphere.Vnic.Ipv6">Ipv6</h4>
@@ -261,13 +366,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VnicIpv6.html">VnicIpv6</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VnicIpv6.html">VnicIpv6</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Vnic_Mac_" data-uid="Pulumi.VSphere.Vnic.Mac*"></a>
   <h4 id="Pulumi_VSphere_Vnic_Mac" data-uid="Pulumi.VSphere.Vnic.Mac">Mac</h4>
@@ -288,13 +393,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Vnic_Mtu_" data-uid="Pulumi.VSphere.Vnic.Mtu*"></a>
   <h4 id="Pulumi_VSphere_Vnic_Mtu" data-uid="Pulumi.VSphere.Vnic.Mtu">Mtu</h4>
@@ -315,13 +420,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Vnic_Netstack_" data-uid="Pulumi.VSphere.Vnic.Netstack*"></a>
   <h4 id="Pulumi_VSphere_Vnic_Netstack" data-uid="Pulumi.VSphere.Vnic.Netstack">Netstack</h4>
@@ -330,7 +435,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Netstack { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Netstack { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,13 +447,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Vnic_Portgroup_" data-uid="Pulumi.VSphere.Vnic.Portgroup*"></a>
   <h4 id="Pulumi_VSphere_Vnic_Portgroup" data-uid="Pulumi.VSphere.Vnic.Portgroup">Portgroup</h4>
@@ -357,7 +462,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Portgroup { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Portgroup { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,7 +474,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -377,17 +482,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_VSphere_Vnic_Get_" data-uid="Pulumi.VSphere.Vnic.Get*"></a>
-  <h4 id="Pulumi_VSphere_Vnic_Get_System_String_Input_System_String__Pulumi_VSphere_VnicState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.Vnic.Get(System.String,Input{System.String},Pulumi.VSphere.VnicState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VnicState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_Vnic_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_VnicState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.Vnic.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.VnicState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VnicState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Vnic resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vnic Get(string name, Input&lt;string&gt; id, VnicState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Vnic Get(string name, Input&lt;string&gt; id, VnicState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -406,7 +511,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -418,7 +523,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -447,7 +552,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Vnic.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/Vnic.cs/#L93" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Cluster
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,12 +76,180 @@
 <p>!&gt; <strong>Warning:</strong> Due to limitations of the API, all arguments except
 <code>labels</code>,<code>cluster_config.worker_config.num_instances</code> and <code>cluster_config.preemptible_worker_config.num_instances</code> are non-updatable. Changing others will cause recreation of the
 whole cluster!</p>
+<h2 id="example-usage---basic">Example Usage - Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var simplecluster = new Gcp.Dataproc.Cluster(&amp;quot;simplecluster&amp;quot;, new Gcp.Dataproc.ClusterArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---advanced">Example Usage - Advanced</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var mycluster = new Gcp.Dataproc.Cluster(&amp;quot;mycluster&amp;quot;, new Gcp.Dataproc.ClusterArgs
+    {
+        ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
+        {
+            GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
+            {
+                ServiceAccountScopes = 
+                {
+                    &amp;quot;https://www.googleapis.com/auth/monitoring&amp;quot;,
+                    &amp;quot;useraccounts-ro&amp;quot;,
+                    &amp;quot;storage-rw&amp;quot;,
+                    &amp;quot;logging-write&amp;quot;,
+                },
+                Tags = 
+                {
+                    &amp;quot;foo&amp;quot;,
+                    &amp;quot;bar&amp;quot;,
+                },
+            },
+            InitializationAction = 
+            {
+
+                {
+                    { &amp;quot;script&amp;quot;, &amp;quot;gs://dataproc-initialization-actions/stackdriver/stackdriver.sh&amp;quot; },
+                    { &amp;quot;timeoutSec&amp;quot;, 500 },
+                },
+            },
+            MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
+            {
+                DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs
+                {
+                    BootDiskSizeGb = 15,
+                    BootDiskType = &amp;quot;pd-ssd&amp;quot;,
+                },
+                MachineType = &amp;quot;n1-standard-1&amp;quot;,
+                NumInstances = 1,
+            },
+            PreemptibleWorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigArgs
+            {
+                NumInstances = 0,
+            },
+            SoftwareConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigSoftwareConfigArgs
+            {
+                ImageVersion = &amp;quot;1.3.7-deb9&amp;quot;,
+                OverrideProperties = 
+                {
+                    { &amp;quot;dataproc:dataproc.allow.zero.workers&amp;quot;, &amp;quot;true&amp;quot; },
+                },
+            },
+            StagingBucket = &amp;quot;dataproc-staging-bucket&amp;quot;,
+            WorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs
+            {
+                DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs
+                {
+                    BootDiskSizeGb = 15,
+                    NumLocalSsds = 1,
+                },
+                MachineType = &amp;quot;n1-standard-1&amp;quot;,
+                MinCpuPlatform = &amp;quot;Intel Skylake&amp;quot;,
+                NumInstances = 2,
+            },
+        },
+        Labels = 
+        {
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+        Region = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---using-a-gpu-accelerator">Example Usage - Using a GPU accelerator</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var acceleratedCluster = new Gcp.Dataproc.Cluster(&amp;quot;acceleratedCluster&amp;quot;, new Gcp.Dataproc.ClusterArgs
+    {
+        ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
+        {
+            GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
+            {
+                Zone = &amp;quot;us-central1-a&amp;quot;,
+            },
+            MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
+            {
+                Accelerators = 
+                {
+                    new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigAcceleratorArgs
+                    {
+                        AcceleratorCount = &amp;quot;1&amp;quot;,
+                        AcceleratorType = &amp;quot;nvidia-tesla-k80&amp;quot;,
+                    },
+                },
+            },
+        },
+        Region = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Cluster</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Cluster</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Dataproc.html">Pulumi.Gcp.Dataproc</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -92,16 +260,16 @@ whole cluster!</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Cluster.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Cluster.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Cluster__ctor_" data-uid="Pulumi.Gcp.Dataproc.Cluster.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Dataproc_Cluster__ctor_System_String_Pulumi_Gcp_Dataproc_ClusterArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Dataproc.Cluster.#ctor(System.String,Pulumi.Gcp.Dataproc.ClusterArgs,System.Nullable{CustomResourceOptions})">Cluster(String, ClusterArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Dataproc_Cluster__ctor_System_String_Pulumi_Gcp_Dataproc_ClusterArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Dataproc.Cluster.#ctor(System.String,Pulumi.Gcp.Dataproc.ClusterArgs,Pulumi.CustomResourceOptions)">Cluster(String, ClusterArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Cluster resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,7 +294,7 @@ whole cluster!</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -136,7 +304,7 @@ whole cluster!</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Cluster.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Cluster.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Cluster_ClusterConfig_" data-uid="Pulumi.Gcp.Dataproc.Cluster.ClusterConfig*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Cluster_ClusterConfig" data-uid="Pulumi.Gcp.Dataproc.Cluster.ClusterConfig">ClusterConfig</h4>
@@ -158,13 +326,13 @@ Structure defined below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.html">ClusterClusterConfig</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.html">ClusterClusterConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Cluster.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Cluster.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Cluster_Labels_" data-uid="Pulumi.Gcp.Dataproc.Cluster.Labels*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Cluster_Labels" data-uid="Pulumi.Gcp.Dataproc.Cluster.Labels">Labels</h4>
@@ -187,13 +355,13 @@ which is the name of the cluster.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Cluster.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Cluster.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Cluster_Name_" data-uid="Pulumi.Gcp.Dataproc.Cluster.Name*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Cluster_Name" data-uid="Pulumi.Gcp.Dataproc.Cluster.Name">Name</h4>
@@ -215,13 +383,13 @@ zone.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Cluster.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Cluster.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Cluster_Project_" data-uid="Pulumi.Gcp.Dataproc.Cluster.Project*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Cluster_Project" data-uid="Pulumi.Gcp.Dataproc.Cluster.Project">Project</h4>
@@ -243,13 +411,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Cluster.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Cluster.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Cluster_Region_" data-uid="Pulumi.Gcp.Dataproc.Cluster.Region*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Cluster_Region" data-uid="Pulumi.Gcp.Dataproc.Cluster.Region">Region</h4>
@@ -259,7 +427,7 @@ Defaults to <code>global</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Region { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -271,7 +439,7 @@ Defaults to <code>global</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -279,17 +447,17 @@ Defaults to <code>global</code>.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Cluster.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Cluster.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Cluster_Get_" data-uid="Pulumi.Gcp.Dataproc.Cluster.Get*"></a>
-  <h4 id="Pulumi_Gcp_Dataproc_Cluster_Get_System_String_Input_System_String__Pulumi_Gcp_Dataproc_ClusterState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Dataproc.Cluster.Get(System.String,Input{System.String},Pulumi.Gcp.Dataproc.ClusterState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClusterState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Gcp_Dataproc_Cluster_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Dataproc_ClusterState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Dataproc.Cluster.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Dataproc.ClusterState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClusterState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Cluster resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,7 +476,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -320,7 +488,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -349,7 +517,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Cluster.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Cluster.cs/#L160" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

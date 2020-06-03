@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.EventGrid
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,10 +78,72 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.EventGrid.Domain.html">Domain</a></h4>
       <section><p>Manages an EventGrid Domain</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+    });
+    var exampleDomain = new Azure.EventGrid.Domain(&amp;quot;exampleDomain&amp;quot;, new Azure.EventGrid.DomainArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.EventGrid.DomainArgs.html">DomainArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.EventGrid.DomainState.html">DomainState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.EventGrid.DomainTopic.html">DomainTopic</a></h4>
+      <section><p>Manages an EventGrid Domain Topic</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+    });
+    var exampleDomain = new Azure.EventGrid.Domain(&amp;quot;exampleDomain&amp;quot;, new Azure.EventGrid.DomainArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+    var exampleDomainTopic = new Azure.EventGrid.DomainTopic(&amp;quot;exampleDomainTopic&amp;quot;, new Azure.EventGrid.DomainTopicArgs
+    {
+        DomainName = exampleDomain.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.EventGrid.DomainTopicArgs.html">DomainTopicArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.EventGrid.DomainTopicState.html">DomainTopicState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.EventGrid.EventSubscription.html">EventSubscription</a></h4>
       <section><p>Manages an EventGrid Event Subscription</p>
@@ -101,6 +163,31 @@
 <blockquote>
 <p><strong>Note:</strong> at this time EventGrid Topic's are only available in a limited number of regions.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US 2&amp;quot;,
+    });
+    var exampleTopic = new Azure.EventGrid.Topic(&amp;quot;exampleTopic&amp;quot;, new Azure.EventGrid.TopicArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        Tags = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;Production&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.EventGrid.TopicArgs.html">TopicArgs</a></h4>
       <section></section>

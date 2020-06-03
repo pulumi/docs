@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Fastly
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -91,19 +91,22 @@ construction to achieve fine-grained programmatic control over provider settings
       <h4><a class="xref" href="Pulumi.Fastly.ProviderArgs.html">ProviderArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Fastly.ServiceACLEntriesv1.html">ServiceACLEntriesv1</a></h4>
-      <section></section>
+      <section><p>Defines a set of Fastly ACL entries that can be used to populate a service ACL.  This resource will populate an ACL with the entries and will track their state.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Fastly.ServiceACLEntriesv1Args.html">ServiceACLEntriesv1Args</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Fastly.ServiceACLEntriesv1State.html">ServiceACLEntriesv1State</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Fastly.ServiceDictionaryItemsv1.html">ServiceDictionaryItemsv1</a></h4>
-      <section></section>
+      <section><p>Defines a map of Fastly dictionary items that can be used to populate a service dictionary.  This resource will populate a dictionary with the items and will track their state.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Fastly.ServiceDictionaryItemsv1Args.html">ServiceDictionaryItemsv1Args</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Fastly.ServiceDictionaryItemsv1State.html">ServiceDictionaryItemsv1State</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Fastly.ServiceDynamicSnippetContentv1.html">ServiceDynamicSnippetContentv1</a></h4>
-      <section></section>
+      <section><p>Defines content that represents blocks of VCL logic that is inserted into your service.  This resource will populate the content of a dynamic snippet and allow it to be manged without the creation of a new service verison.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Fastly.ServiceDynamicSnippetContentv1Args.html">ServiceDynamicSnippetContentv1Args</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Fastly.ServiceDynamicSnippetContentv1State.html">ServiceDynamicSnippetContentv1State</a></h4>
@@ -115,6 +118,141 @@ and Backends.</p>
 <p>The Service resource requires a domain name that is correctly set up to direct
 traffic to the Fastly service. See Fastly's guide on [Adding CNAME Records][fastly-cname]
 on their documentation site for guidance.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-usage">Basic usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Fastly = Pulumi.Fastly;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var demo = new Fastly.Servicev1(&amp;quot;demo&amp;quot;, new Fastly.Servicev1Args
+    {
+        Backends = 
+        {
+            new Fastly.Inputs.Servicev1BackendArgs
+            {
+                Address = &amp;quot;127.0.0.1&amp;quot;,
+                Name = &amp;quot;localhost&amp;quot;,
+                Port = 80,
+            },
+        },
+        Domains = 
+        {
+            new Fastly.Inputs.Servicev1DomainArgs
+            {
+                Comment = &amp;quot;demo&amp;quot;,
+                Name = &amp;quot;demo.notexample.com&amp;quot;,
+            },
+        },
+        ForceDestroy = true,
+    });
+}
+
+}
+</code></pre>
+<h3 id="basic-usage-with-custom-vcl">Basic usage with custom VCL:</h3>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Fastly = Pulumi.Fastly;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var demo = new Fastly.Servicev1(&amp;quot;demo&amp;quot;, new Fastly.Servicev1Args
+    {
+        Backends = 
+        {
+            new Fastly.Inputs.Servicev1BackendArgs
+            {
+                Address = &amp;quot;127.0.0.1&amp;quot;,
+                Name = &amp;quot;localhost&amp;quot;,
+                Port = 80,
+            },
+        },
+        Domains = 
+        {
+            new Fastly.Inputs.Servicev1DomainArgs
+            {
+                Comment = &amp;quot;demo&amp;quot;,
+                Name = &amp;quot;demo.notexample.com&amp;quot;,
+            },
+        },
+        ForceDestroy = true,
+        Vcls = 
+        {
+            new Fastly.Inputs.Servicev1VclArgs
+            {
+                Content = File.ReadAllText($&amp;quot;{path.Module}/my_custom_main.vcl&amp;quot;),
+                Main = true,
+                Name = &amp;quot;my_custom_main_vcl&amp;quot;,
+            },
+            new Fastly.Inputs.Servicev1VclArgs
+            {
+                Content = File.ReadAllText($&amp;quot;{path.Module}/my_custom_library.vcl&amp;quot;),
+                Name = &amp;quot;my_custom_library_vcl&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="basic-usage-with-custom-director">Basic usage with custom Director</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Fastly = Pulumi.Fastly;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var demo = new Fastly.Servicev1(&amp;quot;demo&amp;quot;, new Fastly.Servicev1Args
+    {
+        Backends = 
+        {
+            new Fastly.Inputs.Servicev1BackendArgs
+            {
+                Address = &amp;quot;127.0.0.1&amp;quot;,
+                Name = &amp;quot;origin1&amp;quot;,
+                Port = 80,
+            },
+            new Fastly.Inputs.Servicev1BackendArgs
+            {
+                Address = &amp;quot;127.0.0.2&amp;quot;,
+                Name = &amp;quot;origin2&amp;quot;,
+                Port = 80,
+            },
+        },
+        Directors = 
+        {
+            new Fastly.Inputs.Servicev1DirectorArgs
+            {
+                Backends = 
+                {
+                    &amp;quot;origin1&amp;quot;,
+                    &amp;quot;origin2&amp;quot;,
+                },
+                Name = &amp;quot;mydirector&amp;quot;,
+                Quorum = 0,
+                Type = 3,
+            },
+        },
+        Domains = 
+        {
+            new Fastly.Inputs.Servicev1DomainArgs
+            {
+                Comment = &amp;quot;demo&amp;quot;,
+                Name = &amp;quot;demo.notexample.com&amp;quot;,
+            },
+        },
+        ForceDestroy = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Fastly.Servicev1Args.html">Servicev1Args</a></h4>
       <section></section>
@@ -123,6 +261,22 @@ on their documentation site for guidance.</p>
       <h4><a class="xref" href="Pulumi.Fastly.Userv1.html">Userv1</a></h4>
       <section><p>Provides a Fastly User, representing the configuration for a user account for interacting with Fastly.</p>
 <p>The User resource requires a login and name, and optionally a role.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Fastly = Pulumi.Fastly;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var demo = new Fastly.Userv1(&amp;quot;demo&amp;quot;, new Fastly.Userv1Args
+    {
+        Login = &amp;quot;demo@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Fastly.Userv1Args.html">Userv1Args</a></h4>
       <section></section>

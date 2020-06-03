@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.DataLake
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,33 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.DataLake.AnalyticsAccount.html">AnalyticsAccount</a></h4>
       <section><p>Manages an Azure Data Lake Analytics Account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleStore = new Azure.DataLake.Store(&amp;quot;exampleStore&amp;quot;, new Azure.DataLake.StoreArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+    var exampleAnalyticsAccount = new Azure.DataLake.AnalyticsAccount(&amp;quot;exampleAnalyticsAccount&amp;quot;, new Azure.DataLake.AnalyticsAccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        DefaultStoreAccountName = exampleStore.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataLake.AnalyticsAccountArgs.html">AnalyticsAccountArgs</a></h4>
       <section></section>
@@ -85,6 +112,40 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataLake.AnalyticsFirewallRule.html">AnalyticsFirewallRule</a></h4>
       <section><p>Manages a Azure Data Lake Analytics Firewall Rule.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleStore = new Azure.DataLake.Store(&amp;quot;exampleStore&amp;quot;, new Azure.DataLake.StoreArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+    var exampleAnalyticsAccount = new Azure.DataLake.AnalyticsAccount(&amp;quot;exampleAnalyticsAccount&amp;quot;, new Azure.DataLake.AnalyticsAccountArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        DefaultStoreAccountName = exampleStore.Name,
+    });
+    var exampleAnalyticsFirewallRule = new Azure.DataLake.AnalyticsFirewallRule(&amp;quot;exampleAnalyticsFirewallRule&amp;quot;, new Azure.DataLake.AnalyticsFirewallRuleArgs
+    {
+        AccountName = azurerm_data_lake_analytics.Example.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        StartIpAddress = &amp;quot;1.2.3.4&amp;quot;,
+        EndIpAddress = &amp;quot;2.3.4.5&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataLake.AnalyticsFirewallRuleArgs.html">AnalyticsFirewallRuleArgs</a></h4>
       <section></section>
@@ -98,6 +159,29 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataLake.Store.html">Store</a></h4>
       <section><p>Manages an Azure Data Lake Store.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleStore = new Azure.DataLake.Store(&amp;quot;exampleStore&amp;quot;, new Azure.DataLake.StoreArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        EncryptionState = &amp;quot;Enabled&amp;quot;,
+        EncryptionType = &amp;quot;ServiceManaged&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataLake.StoreArgs.html">StoreArgs</a></h4>
       <section></section>
@@ -114,6 +198,34 @@ taint the resource so the <code>azure.datalake.StoreFile</code> gets recreated w
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.DataLake.StoreFirewallRule.html">StoreFirewallRule</a></h4>
       <section><p>Manages a Azure Data Lake Store Firewall Rule.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleStore = new Azure.DataLake.Store(&amp;quot;exampleStore&amp;quot;, new Azure.DataLake.StoreArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+    var exampleStoreFirewallRule = new Azure.DataLake.StoreFirewallRule(&amp;quot;exampleStoreFirewallRule&amp;quot;, new Azure.DataLake.StoreFirewallRuleArgs
+    {
+        AccountName = exampleStore.Name,
+        ResourceGroupName = exampleResourceGroup.Name,
+        StartIpAddress = &amp;quot;1.2.3.4&amp;quot;,
+        EndIpAddress = &amp;quot;2.3.4.5&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.DataLake.StoreFirewallRuleArgs.html">StoreFirewallRuleArgs</a></h4>
       <section></section>

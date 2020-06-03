@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Config
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,16 +78,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Config</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.html">Pulumi.Azure</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Config_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Config : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Config</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L11">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L11">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_AuxiliaryTenantIds_" data-uid="Pulumi.Azure.Config.AuxiliaryTenantIds*"></a>
   <h4 id="Pulumi_Azure_Config_AuxiliaryTenantIds" data-uid="Pulumi.Azure.Config.AuxiliaryTenantIds">AuxiliaryTenantIds</h4>
@@ -107,13 +131,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_ClientCertificatePassword_" data-uid="Pulumi.Azure.Config.ClientCertificatePassword*"></a>
   <h4 id="Pulumi_Azure_Config_ClientCertificatePassword" data-uid="Pulumi.Azure.Config.ClientCertificatePassword">ClientCertificatePassword</h4>
@@ -123,7 +147,7 @@ Certificate</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? ClientCertificatePassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string ClientCertificatePassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,13 +159,13 @@ Certificate</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_ClientCertificatePath_" data-uid="Pulumi.Azure.Config.ClientCertificatePath*"></a>
   <h4 id="Pulumi_Azure_Config_ClientCertificatePath" data-uid="Pulumi.Azure.Config.ClientCertificatePath">ClientCertificatePath</h4>
@@ -151,7 +175,7 @@ Principal using a Client Certificate.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? ClientCertificatePath { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string ClientCertificatePath { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,13 +187,13 @@ Principal using a Client Certificate.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_ClientId_" data-uid="Pulumi.Azure.Config.ClientId*"></a>
   <h4 id="Pulumi_Azure_Config_ClientId" data-uid="Pulumi.Azure.Config.ClientId">ClientId</h4>
@@ -178,7 +202,7 @@ Principal using a Client Certificate.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? ClientId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string ClientId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,13 +214,13 @@ Principal using a Client Certificate.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_ClientSecret_" data-uid="Pulumi.Azure.Config.ClientSecret*"></a>
   <h4 id="Pulumi_Azure_Config_ClientSecret" data-uid="Pulumi.Azure.Config.ClientSecret">ClientSecret</h4>
@@ -205,7 +229,7 @@ Principal using a Client Certificate.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? ClientSecret { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string ClientSecret { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,13 +241,13 @@ Principal using a Client Certificate.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_DisableCorrelationRequestId_" data-uid="Pulumi.Azure.Config.DisableCorrelationRequestId*"></a>
   <h4 id="Pulumi_Azure_Config_DisableCorrelationRequestId" data-uid="Pulumi.Azure.Config.DisableCorrelationRequestId">DisableCorrelationRequestId</h4>
@@ -250,7 +274,7 @@ Principal using a Client Certificate.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_DisableTerraformPartnerId_" data-uid="Pulumi.Azure.Config.DisableTerraformPartnerId*"></a>
   <h4 id="Pulumi_Azure_Config_DisableTerraformPartnerId" data-uid="Pulumi.Azure.Config.DisableTerraformPartnerId">DisableTerraformPartnerId</h4>
@@ -277,7 +301,7 @@ Principal using a Client Certificate.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_Environment_" data-uid="Pulumi.Azure.Config.Environment*"></a>
   <h4 id="Pulumi_Azure_Config_Environment" data-uid="Pulumi.Azure.Config.Environment">Environment</h4>
@@ -287,7 +311,7 @@ public.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? Environment { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string Environment { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -299,13 +323,13 @@ public.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_Features_" data-uid="Pulumi.Azure.Config.Features*"></a>
   <h4 id="Pulumi_Azure_Config_Features" data-uid="Pulumi.Azure.Config.Features">Features</h4>
@@ -331,7 +355,7 @@ public.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_Location_" data-uid="Pulumi.Azure.Config.Location*"></a>
   <h4 id="Pulumi_Azure_Config_Location" data-uid="Pulumi.Azure.Config.Location">Location</h4>
@@ -339,7 +363,7 @@ public.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,13 +375,13 @@ public.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_MsiEndpoint_" data-uid="Pulumi.Azure.Config.MsiEndpoint*"></a>
   <h4 id="Pulumi_Azure_Config_MsiEndpoint" data-uid="Pulumi.Azure.Config.MsiEndpoint">MsiEndpoint</h4>
@@ -367,7 +391,7 @@ automatically.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? MsiEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string MsiEndpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -379,13 +403,13 @@ automatically.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_PartnerId_" data-uid="Pulumi.Azure.Config.PartnerId*"></a>
   <h4 id="Pulumi_Azure_Config_PartnerId" data-uid="Pulumi.Azure.Config.PartnerId">PartnerId</h4>
@@ -394,7 +418,7 @@ automatically.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? PartnerId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string PartnerId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -406,13 +430,13 @@ automatically.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_SkipCredentialsValidation_" data-uid="Pulumi.Azure.Config.SkipCredentialsValidation*"></a>
   <h4 id="Pulumi_Azure_Config_SkipCredentialsValidation" data-uid="Pulumi.Azure.Config.SkipCredentialsValidation">SkipCredentialsValidation</h4>
@@ -439,7 +463,7 @@ automatically.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_SkipProviderRegistration_" data-uid="Pulumi.Azure.Config.SkipProviderRegistration*"></a>
   <h4 id="Pulumi_Azure_Config_SkipProviderRegistration" data-uid="Pulumi.Azure.Config.SkipProviderRegistration">SkipProviderRegistration</h4>
@@ -467,7 +491,7 @@ registered?</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_StorageUseAzuread_" data-uid="Pulumi.Azure.Config.StorageUseAzuread*"></a>
   <h4 id="Pulumi_Azure_Config_StorageUseAzuread" data-uid="Pulumi.Azure.Config.StorageUseAzuread">StorageUseAzuread</h4>
@@ -494,7 +518,7 @@ registered?</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_SubscriptionId_" data-uid="Pulumi.Azure.Config.SubscriptionId*"></a>
   <h4 id="Pulumi_Azure_Config_SubscriptionId" data-uid="Pulumi.Azure.Config.SubscriptionId">SubscriptionId</h4>
@@ -503,7 +527,7 @@ registered?</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? SubscriptionId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string SubscriptionId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -515,13 +539,13 @@ registered?</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_TenantId_" data-uid="Pulumi.Azure.Config.TenantId*"></a>
   <h4 id="Pulumi_Azure_Config_TenantId" data-uid="Pulumi.Azure.Config.TenantId">TenantId</h4>
@@ -530,7 +554,7 @@ registered?</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? TenantId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string TenantId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -542,13 +566,13 @@ registered?</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Azure_Config_UseMsi_" data-uid="Pulumi.Azure.Config.UseMsi*"></a>
   <h4 id="Pulumi_Azure_Config_UseMsi" data-uid="Pulumi.Azure.Config.UseMsi">UseMsi</h4>
@@ -581,7 +605,7 @@ registered?</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Config/Config.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Config/Config.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

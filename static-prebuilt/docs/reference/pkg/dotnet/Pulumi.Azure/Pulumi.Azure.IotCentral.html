@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.IotCentral
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,35 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.IotCentral.Application.html">Application</a></h4>
       <section><p>Manages an IoT Central Application</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleApplication = new Azure.IotCentral.Application(&amp;quot;exampleApplication&amp;quot;, new Azure.IotCentral.ApplicationArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+        SubDomain = &amp;quot;example-iotcentral-app-subdomain&amp;quot;,
+        DisplayName = &amp;quot;example-iotcentral-app-display-name&amp;quot;,
+        Sku = &amp;quot;S1&amp;quot;,
+        Template = &amp;quot;iotc-default@1.0.0&amp;quot;,
+        Tags = 
+        {
+            { &amp;quot;Foo&amp;quot;, &amp;quot;Bar&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.IotCentral.ApplicationArgs.html">ApplicationArgs</a></h4>
       <section></section>

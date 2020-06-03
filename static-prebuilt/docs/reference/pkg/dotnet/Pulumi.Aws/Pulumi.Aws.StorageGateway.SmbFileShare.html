@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SmbFileShare
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,89 @@
   <h1 id="Pulumi_Aws_StorageGateway_SmbFileShare" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare" class="text-break">Class SmbFileShare
   </h1>
   <div class="markdown level0 summary"><p>Manages an AWS Storage Gateway SMB File Share.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="active-directory-authentication">Active Directory Authentication</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.StorageGateway.SmbFileShare(&amp;quot;example&amp;quot;, new Aws.StorageGateway.SmbFileShareArgs
+    {
+        Authentication = &amp;quot;ActiveDirectory&amp;quot;,
+        GatewayArn = aws_storagegateway_gateway.Example.Arn,
+        LocationArn = aws_s3_bucket.Example.Arn,
+        RoleArn = aws_iam_role.Example.Arn,
+    });
+}
+
+}
+</code></pre>
+<h3 id="guest-authentication">Guest Authentication</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.StorageGateway.SmbFileShare(&amp;quot;example&amp;quot;, new Aws.StorageGateway.SmbFileShareArgs
+    {
+        Authentication = &amp;quot;GuestAccess&amp;quot;,
+        GatewayArn = aws_storagegateway_gateway.Example.Arn,
+        LocationArn = aws_s3_bucket.Example.Arn,
+        RoleArn = aws_iam_role.Example.Arn,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SmbFileShare</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">SmbFileShare</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.StorageGateway.html">Pulumi.Aws.StorageGateway</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -88,16 +165,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare__ctor_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.#ctor*"></a>
-  <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare__ctor_System_String_Pulumi_Aws_StorageGateway_SmbFileShareArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.#ctor(System.String,Pulumi.Aws.StorageGateway.SmbFileShareArgs,System.Nullable{CustomResourceOptions})">SmbFileShare(String, SmbFileShareArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare__ctor_System_String_Pulumi_Aws_StorageGateway_SmbFileShareArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.#ctor(System.String,Pulumi.Aws.StorageGateway.SmbFileShareArgs,Pulumi.CustomResourceOptions)">SmbFileShare(String, SmbFileShareArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a SmbFileShare resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SmbFileShare(string name, SmbFileShareArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SmbFileShare(string name, SmbFileShareArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +199,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +209,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_Arn_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.Arn*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_Arn" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.Arn">Arn</h4>
@@ -153,13 +230,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_Authentication_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.Authentication*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_Authentication" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.Authentication">Authentication</h4>
@@ -168,7 +245,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Authentication { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Authentication { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +257,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_DefaultStorageClass_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.DefaultStorageClass*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_DefaultStorageClass" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.DefaultStorageClass">DefaultStorageClass</h4>
@@ -195,7 +272,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultStorageClass { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultStorageClass { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +284,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_FileshareId_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.FileshareId*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_FileshareId" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.FileshareId">FileshareId</h4>
@@ -234,13 +311,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_GatewayArn_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.GatewayArn*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_GatewayArn" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.GatewayArn">GatewayArn</h4>
@@ -261,13 +338,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_GuessMimeTypeEnabled_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.GuessMimeTypeEnabled*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_GuessMimeTypeEnabled" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.GuessMimeTypeEnabled">GuessMimeTypeEnabled</h4>
@@ -288,13 +365,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_InvalidUserLists_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.InvalidUserLists*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_InvalidUserLists" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.InvalidUserLists">InvalidUserLists</h4>
@@ -315,13 +392,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_KmsEncrypted_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.KmsEncrypted*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_KmsEncrypted" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.KmsEncrypted">KmsEncrypted</h4>
@@ -342,13 +419,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_KmsKeyArn_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.KmsKeyArn*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_KmsKeyArn" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.KmsKeyArn">KmsKeyArn</h4>
@@ -357,7 +434,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KmsKeyArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KmsKeyArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,13 +446,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_LocationArn_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.LocationArn*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_LocationArn" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.LocationArn">LocationArn</h4>
@@ -396,13 +473,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_ObjectAcl_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.ObjectAcl*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_ObjectAcl" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.ObjectAcl">ObjectAcl</h4>
@@ -411,7 +488,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ObjectAcl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ObjectAcl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -423,13 +500,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_SmbFileShare_Path_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.Path*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_Path" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.Path">Path</h4>
+  <div class="markdown level1 summary"><p>File share path used by the NFS client to identify the mount point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Path { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_ReadOnly_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.ReadOnly*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_ReadOnly" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.ReadOnly">ReadOnly</h4>
@@ -450,13 +554,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_RequesterPays_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.RequesterPays*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_RequesterPays" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.RequesterPays">RequesterPays</h4>
@@ -477,13 +581,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_RoleArn_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.RoleArn*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_RoleArn" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.RoleArn">RoleArn</h4>
@@ -504,22 +608,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_Tags_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.Tags*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_Tags" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>Key-value mapping of resource tags</p>
+  <div class="markdown level1 summary"><p>Key-value map of resource tags</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -531,13 +635,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_ValidUserLists_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.ValidUserLists*"></a>
   <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_ValidUserLists" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.ValidUserLists">ValidUserLists</h4>
@@ -558,7 +662,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -566,17 +670,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L151">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_Aws_StorageGateway_SmbFileShare_Get_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.Get*"></a>
-  <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_Get_System_String_Input_System_String__Pulumi_Aws_StorageGateway_SmbFileShareState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.Get(System.String,Input{System.String},Pulumi.Aws.StorageGateway.SmbFileShareState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SmbFileShareState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_StorageGateway_SmbFileShare_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_StorageGateway_SmbFileShareState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.StorageGateway.SmbFileShare.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.StorageGateway.SmbFileShareState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SmbFileShareState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing SmbFileShare resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SmbFileShare Get(string name, Input&lt;string&gt; id, SmbFileShareState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SmbFileShare Get(string name, Input&lt;string&gt; id, SmbFileShareState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -595,7 +699,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -607,7 +711,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -636,7 +740,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/StorageGateway/SmbFileShare.cs/#L61" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

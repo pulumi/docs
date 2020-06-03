@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.SignalFx.Aws
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,10 +84,159 @@
 <blockquote>
 <p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code>signalfx.aws.Integration</code>. Check with SignalFx support for your realm's AWS account id.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var awsMyteamExtern = new SignalFx.Aws.ExternalIntegration(&amp;quot;awsMyteamExtern&amp;quot;, new SignalFx.Aws.ExternalIntegrationArgs
+    {
+    });
+    var signalfxAssumePolicy = Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statement = 
+        {
+
+            {
+                { &amp;quot;actions&amp;quot;, 
+                {
+                    &amp;quot;sts:AssumeRole&amp;quot;,
+                } },
+                { &amp;quot;principals&amp;quot;, 
+                {
+
+                    {
+                        { &amp;quot;type&amp;quot;, &amp;quot;AWS&amp;quot; },
+                        { &amp;quot;identifiers&amp;quot;, 
+                        {
+                            awsMyteamExtern.SignalfxAwsAccount,
+                        } },
+                    },
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+
+                    {
+                        { &amp;quot;test&amp;quot;, &amp;quot;StringEquals&amp;quot; },
+                        { &amp;quot;variable&amp;quot;, &amp;quot;sts:ExternalId&amp;quot; },
+                        { &amp;quot;values&amp;quot;, 
+                        {
+                            awsMyteamExtern.ExternalId,
+                        } },
+                    },
+                } },
+            },
+        },
+    });
+    var awsSfxRole = new Aws.Iam.Role(&amp;quot;awsSfxRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        Description = &amp;quot;signalfx integration to read out data and send it to signalfxs aws account&amp;quot;,
+        AssumeRolePolicy = signalfxAssumePolicy.Apply(signalfxAssumePolicy =&gt; signalfxAssumePolicy.Json),
+    });
+    var awsReadPermissions = new Aws.Iam.Policy(&amp;quot;awsReadPermissions&amp;quot;, new Aws.Iam.PolicyArgs
+    {
+        Description = &amp;quot;farts&amp;quot;,
+        Policy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+&amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+&amp;quot;&amp;quot;dynamodb:ListTables&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;dynamodb:DescribeTable&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;dynamodb:ListTagsOfResource&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ec2:DescribeInstances&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ec2:DescribeInstanceStatus&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ec2:DescribeVolumes&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ec2:DescribeReservedInstances&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ec2:DescribeReservedInstancesModifications&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ec2:DescribeTags&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;organizations:DescribeOrganization&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;cloudwatch:ListMetrics&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;cloudwatch:GetMetricData&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;cloudwatch:GetMetricStatistics&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;cloudwatch:DescribeAlarms&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;sqs:ListQueues&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;sqs:GetQueueAttributes&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;sqs:ListQueueTags&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;elasticmapreduce:ListClusters&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;elasticmapreduce:DescribeCluster&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;kinesis:ListShards&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;kinesis:ListStreams&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;kinesis:DescribeStream&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;kinesis:ListTagsForStream&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;rds:DescribeDBInstances&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;rds:ListTagsForResource&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;elasticloadbalancing:DescribeLoadBalancers&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;elasticloadbalancing:DescribeTags&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;elasticache:describeCacheClusters&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;redshift:DescribeClusters&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;lambda:GetAlias&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;lambda:ListFunctions&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;lambda:ListTags&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;autoscaling:DescribeAutoScalingGroups&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;s3:ListAllMyBuckets&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;s3:ListBucket&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;s3:GetBucketLocation&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;s3:GetBucketTagging&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ecs:ListServices&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ecs:ListTasks&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ecs:DescribeTasks&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ecs:DescribeServices&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ecs:ListClusters&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ecs:DescribeClusters&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ecs:ListTaskDefinitions&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;ecs:ListTagsForResource&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;apigateway:GET&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;cloudfront:ListDistributions&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;cloudfront:ListTagsForResource&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;tag:GetResources&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;es:ListDomainNames&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;es:DescribeElasticsearchDomain&amp;quot;&amp;quot;
+],
+&amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;
+}
+]
+}
+&amp;quot;,
+    });
+    var sfx_read_attach = new Aws.Iam.RolePolicyAttachment(&amp;quot;sfx-read-attach&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        Role = awsSfxRole.Name,
+        PolicyArn = awsReadPermissions.Arn,
+    });
+    var awsMyteam = new SignalFx.Aws.Integration(&amp;quot;awsMyteam&amp;quot;, new SignalFx.Aws.IntegrationArgs
+    {
+        Enabled = true,
+        IntegrationId = awsMyteamExtern.Id,
+        ExternalId = awsMyteamExtern.ExternalId,
+        RoleArn = awsSfxRole.Arn,
+        Regions = 
+        {
+            &amp;quot;us-east-1&amp;quot;,
+        },
+        PollRate = 300,
+        ImportCloudWatch = true,
+        EnableAwsUsage = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.SignalFx.Aws.ExternalIntegrationArgs.html">ExternalIntegrationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SignalFx.Aws.ExternalIntegrationState.html">ExternalIntegrationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.GetServices.html">GetServices</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.GetServicesArgs.html">GetServicesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.GetServicesResult.html">GetServicesResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.SignalFx.Aws.Integration.html">Integration</a></h4>
       <section><p>SignalFx AWS CloudWatch integrations. For help with this integration see <a href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#monitor-amazon-web-services">Monitoring Amazon Web Services</a>.</p>
@@ -98,7 +247,9 @@
 <p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code>signalfx.aws.ExternalIntegration</code> or <code>signalfx.aws.TokenIntegration</code>.</p>
 </blockquote>
 <h2 id="service-names">Service Names</h2>
-<p>Fields that expect an AWS service/namespace will work with one of: &quot;AWS/ApiGateway&quot; &quot;AWS/AppStream&quot; &quot;AWS/AutoScaling&quot; &quot;AWS/Billing&quot; &quot;AWS/CloudFront&quot; &quot;AWS/CloudSearch&quot; &quot;AWS/Events&quot; &quot;AWS/Logs&quot; &quot;AWS/Connect&quot; &quot;AWS/DMS&quot; &quot;AWS/DX&quot; &quot;AWS/DynamoDB&quot; &quot;AWS/EC2&quot; &quot;AWS/EC2Spot&quot; &quot;AWS/ECS&quot; &quot;AWS/ElasticBeanstalk&quot; &quot;AWS/EBS&quot; &quot;AWS/EFS&quot; &quot;AWS/ELB&quot; &quot;AWS/ApplicationELB&quot; &quot;AWS/NetworkELB&quot; &quot;AWS/ElasticTranscoder&quot; &quot;AWS/ElastiCache&quot; &quot;AWS/ES&quot; &quot;AWS/ElasticMapReduce&quot; &quot;AWS/GameLift&quot; &quot;AWS/Inspector&quot; &quot;AWS/IoT&quot; &quot;AWS/KMS&quot; &quot;AWS/KinesisAnalytics&quot; &quot;AWS/Firehose&quot; &quot;AWS/Kinesis&quot; &quot;AWS/KinesisVideo&quot; &quot;AWS/Lambda&quot; &quot;AWS/Lex&quot; &quot;AWS/ML&quot; &quot;AWS/OpsWorks&quot; &quot;AWS/Polly&quot; &quot;AWS/Redshift&quot; &quot;AWS/RDS&quot; &quot;AWS/Route53&quot; &quot;AWS/SageMaker&quot; &quot;AWS/DDoSProtection&quot; &quot;AWS/SES&quot; &quot;AWS/SNS&quot; &quot;AWS/SQS&quot; &quot;AWS/S3&quot; &quot;AWS/SWF&quot; &quot;AWS/States&quot; &quot;AWS/StorageGateway&quot; &quot;AWS/Translate&quot; &quot;AWS/NATGateway&quot; &quot;AWS/VPN&quot; &quot;WAF&quot; &quot;AWS/WorkSpaces&quot;.</p>
+<blockquote>
+<p><strong>NOTE</strong> You can use the data source &quot;signalfx.aws.getServices&quot; to specify all services.</p>
+</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.SignalFx.Aws.IntegrationArgs.html">IntegrationArgs</a></h4>
       <section></section>

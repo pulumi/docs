@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.AppSync
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,27 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.AppSync.ApiKey.html">ApiKey</a></h4>
       <section><p>Provides an AppSync API Key.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleGraphQLApi = new Aws.AppSync.GraphQLApi(&amp;quot;exampleGraphQLApi&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;API_KEY&amp;quot;,
+    });
+    var exampleApiKey = new Aws.AppSync.ApiKey(&amp;quot;exampleApiKey&amp;quot;, new Aws.AppSync.ApiKeyArgs
+    {
+        ApiId = exampleGraphQLApi.Id,
+        Expires = &amp;quot;2018-05-03T04:00:00Z&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppSync.ApiKeyArgs.html">ApiKeyArgs</a></h4>
       <section></section>
@@ -85,6 +106,83 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AppSync.DataSource.html">DataSource</a></h4>
       <section><p>Provides an AppSync DataSource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleTable = new Aws.DynamoDB.Table(&amp;quot;exampleTable&amp;quot;, new Aws.DynamoDB.TableArgs
+    {
+        Attributes = 
+        {
+            new Aws.DynamoDB.Inputs.TableAttributeArgs
+            {
+                Name = &amp;quot;UserId&amp;quot;,
+                Type = &amp;quot;S&amp;quot;,
+            },
+        },
+        HashKey = &amp;quot;UserId&amp;quot;,
+        ReadCapacity = 1,
+        WriteCapacity = 1,
+    });
+    var exampleRole = new Aws.Iam.Role(&amp;quot;exampleRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;appsync.amazonaws.com&amp;quot;&amp;quot;
+  },
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;
+}
+]
+}
+
+&amp;quot;,
+    });
+    var exampleRolePolicy = new Aws.Iam.RolePolicy(&amp;quot;exampleRolePolicy&amp;quot;, new Aws.Iam.RolePolicyArgs
+    {
+        Policy = exampleTable.Arn.Apply(arn =&gt; @$&amp;quot;{{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+{{
+  &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;dynamodb:*&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;{arn}&amp;quot;&amp;quot;
+  ]
+}}
+]
+}}
+
+&amp;quot;),
+        Role = exampleRole.Id,
+    });
+    var exampleGraphQLApi = new Aws.AppSync.GraphQLApi(&amp;quot;exampleGraphQLApi&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;API_KEY&amp;quot;,
+    });
+    var exampleDataSource = new Aws.AppSync.DataSource(&amp;quot;exampleDataSource&amp;quot;, new Aws.AppSync.DataSourceArgs
+    {
+        ApiId = exampleGraphQLApi.Id,
+        DynamodbConfig = new Aws.AppSync.Inputs.DataSourceDynamodbConfigArgs
+        {
+            TableName = exampleTable.Name,
+        },
+        ServiceRoleArn = exampleRole.Arn,
+        Type = &amp;quot;AMAZON_DYNAMODB&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppSync.DataSourceArgs.html">DataSourceArgs</a></h4>
       <section></section>
@@ -92,6 +190,73 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AppSync.Function.html">Function</a></h4>
       <section><p>Provides an AppSync Function.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testGraphQLApi = new Aws.AppSync.GraphQLApi(&amp;quot;testGraphQLApi&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;API_KEY&amp;quot;,
+        Schema = @&amp;quot;type Mutation {
+putPost(id: ID!, title: String!): Post
+}
+
+type Post {
+id: ID!
+title: String!
+}
+
+type Query {
+singlePost(id: ID!): Post
+}
+
+schema {
+query: Query
+mutation: Mutation
+}
+
+&amp;quot;,
+    });
+    var testDataSource = new Aws.AppSync.DataSource(&amp;quot;testDataSource&amp;quot;, new Aws.AppSync.DataSourceArgs
+    {
+        ApiId = testGraphQLApi.Id,
+        HttpConfig = new Aws.AppSync.Inputs.DataSourceHttpConfigArgs
+        {
+            Endpoint = &amp;quot;http://example.com&amp;quot;,
+        },
+        Type = &amp;quot;HTTP&amp;quot;,
+    });
+    var testFunction = new Aws.AppSync.Function(&amp;quot;testFunction&amp;quot;, new Aws.AppSync.FunctionArgs
+    {
+        ApiId = testGraphQLApi.Id,
+        DataSource = testDataSource.Name,
+        Name = &amp;quot;tf_example&amp;quot;,
+        RequestMappingTemplate = @&amp;quot;{
+&amp;quot;&amp;quot;version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2018-05-29&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;method&amp;quot;&amp;quot;: &amp;quot;&amp;quot;GET&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;resourcePath&amp;quot;&amp;quot;: &amp;quot;&amp;quot;/&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;params&amp;quot;&amp;quot;:{
+    &amp;quot;&amp;quot;headers&amp;quot;&amp;quot;: $$utils.http.copyheaders($$ctx.request.headers)
+}
+}
+
+&amp;quot;,
+        ResponseMappingTemplate = @&amp;quot;#if($$ctx.result.statusCode == 200)
+$$ctx.result.body
+#else
+$$utils.appendError($$ctx.result.body, $$ctx.result.statusCode)
+#end
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppSync.FunctionArgs.html">FunctionArgs</a></h4>
       <section></section>
@@ -99,6 +264,170 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AppSync.GraphQLApi.html">GraphQLApi</a></h4>
       <section><p>Provides an AppSync GraphQL API.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="api-key-authentication">API Key Authentication</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;API_KEY&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="aws-cognito-user-pool-authentication">AWS Cognito User Pool Authentication</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;AMAZON_COGNITO_USER_POOLS&amp;quot;,
+        UserPoolConfig = new Aws.AppSync.Inputs.GraphQLApiUserPoolConfigArgs
+        {
+            AwsRegion = data.Aws_region.Current.Name,
+            DefaultAction = &amp;quot;DENY&amp;quot;,
+            UserPoolId = aws_cognito_user_pool.Example.Id,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="aws-iam-authentication">AWS IAM Authentication</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;AWS_IAM&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="with-schema">With Schema</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;AWS_IAM&amp;quot;,
+        Schema = @&amp;quot;schema {
+query: Query
+}
+type Query {
+test: Int
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="openid-connect-authentication">OpenID Connect Authentication</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;OPENID_CONNECT&amp;quot;,
+        OpenidConnectConfig = new Aws.AppSync.Inputs.GraphQLApiOpenidConnectConfigArgs
+        {
+            Issuer = &amp;quot;https://example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h3 id="with-multiple-authentication-providers">With Multiple Authentication Providers</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.AppSync.GraphQLApi(&amp;quot;example&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AdditionalAuthenticationProviders = 
+        {
+            new Aws.AppSync.Inputs.GraphQLApiAdditionalAuthenticationProviderArgs
+            {
+                AuthenticationType = &amp;quot;AWS_IAM&amp;quot;,
+            },
+        },
+        AuthenticationType = &amp;quot;API_KEY&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="enabling-logging">Enabling Logging</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleRole = new Aws.Iam.Role(&amp;quot;exampleRole&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;: [
+    {
+    &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: {
+        &amp;quot;&amp;quot;Service&amp;quot;&amp;quot;: &amp;quot;&amp;quot;appsync.amazonaws.com&amp;quot;&amp;quot;
+    },
+    &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: &amp;quot;&amp;quot;sts:AssumeRole&amp;quot;&amp;quot;
+    }
+]
+}
+
+&amp;quot;,
+    });
+    var exampleRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment(&amp;quot;exampleRolePolicyAttachment&amp;quot;, new Aws.Iam.RolePolicyAttachmentArgs
+    {
+        PolicyArn = &amp;quot;arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs&amp;quot;,
+        Role = exampleRole.Name,
+    });
+    var exampleGraphQLApi = new Aws.AppSync.GraphQLApi(&amp;quot;exampleGraphQLApi&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        LogConfig = new Aws.AppSync.Inputs.GraphQLApiLogConfigArgs
+        {
+            CloudwatchLogsRoleArn = exampleRole.Arn,
+            FieldLogLevel = &amp;quot;ERROR&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppSync.GraphQLApiArgs.html">GraphQLApiArgs</a></h4>
       <section></section>
@@ -106,6 +435,103 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AppSync.Resolver.html">Resolver</a></h4>
       <section><p>Provides an AppSync Resolver.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var testGraphQLApi = new Aws.AppSync.GraphQLApi(&amp;quot;testGraphQLApi&amp;quot;, new Aws.AppSync.GraphQLApiArgs
+    {
+        AuthenticationType = &amp;quot;API_KEY&amp;quot;,
+        Schema = @&amp;quot;type Mutation {
+putPost(id: ID!, title: String!): Post
+}
+
+type Post {
+id: ID!
+title: String!
+}
+
+type Query {
+singlePost(id: ID!): Post
+}
+
+schema {
+query: Query
+mutation: Mutation
+}
+
+&amp;quot;,
+    });
+    var testDataSource = new Aws.AppSync.DataSource(&amp;quot;testDataSource&amp;quot;, new Aws.AppSync.DataSourceArgs
+    {
+        ApiId = testGraphQLApi.Id,
+        HttpConfig = new Aws.AppSync.Inputs.DataSourceHttpConfigArgs
+        {
+            Endpoint = &amp;quot;http://example.com&amp;quot;,
+        },
+        Type = &amp;quot;HTTP&amp;quot;,
+    });
+    // UNIT type resolver (default)
+    var testResolver = new Aws.AppSync.Resolver(&amp;quot;testResolver&amp;quot;, new Aws.AppSync.ResolverArgs
+    {
+        ApiId = testGraphQLApi.Id,
+        CachingConfig = new Aws.AppSync.Inputs.ResolverCachingConfigArgs
+        {
+            CachingKeys = 
+            {
+                &amp;quot;$$context.identity.sub&amp;quot;,
+                &amp;quot;$$context.arguments.id&amp;quot;,
+            },
+            Ttl = 60,
+        },
+        DataSource = testDataSource.Name,
+        Field = &amp;quot;singlePost&amp;quot;,
+        RequestTemplate = @&amp;quot;{
+&amp;quot;&amp;quot;version&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2018-05-29&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;method&amp;quot;&amp;quot;: &amp;quot;&amp;quot;GET&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;resourcePath&amp;quot;&amp;quot;: &amp;quot;&amp;quot;/&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;params&amp;quot;&amp;quot;:{
+    &amp;quot;&amp;quot;headers&amp;quot;&amp;quot;: $$utils.http.copyheaders($$ctx.request.headers)
+}
+}
+
+&amp;quot;,
+        ResponseTemplate = @&amp;quot;#if($$ctx.result.statusCode == 200)
+$$ctx.result.body
+#else
+$$utils.appendError($$ctx.result.body, $$ctx.result.statusCode)
+#end
+
+&amp;quot;,
+        Type = &amp;quot;Query&amp;quot;,
+    });
+    // PIPELINE type resolver
+    var mutationPipelineTest = new Aws.AppSync.Resolver(&amp;quot;mutationPipelineTest&amp;quot;, new Aws.AppSync.ResolverArgs
+    {
+        ApiId = testGraphQLApi.Id,
+        Field = &amp;quot;pipelineTest&amp;quot;,
+        Kind = &amp;quot;PIPELINE&amp;quot;,
+        PipelineConfig = new Aws.AppSync.Inputs.ResolverPipelineConfigArgs
+        {
+            Functions = 
+            {
+                aws_appsync_function.Test1.Function_id,
+                aws_appsync_function.Test2.Function_id,
+                aws_appsync_function.Test3.Function_id,
+            },
+        },
+        RequestTemplate = &amp;quot;{}&amp;quot;,
+        ResponseTemplate = &amp;quot;$$util.toJson($$ctx.result)&amp;quot;,
+        Type = &amp;quot;Mutation&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AppSync.ResolverArgs.html">ResolverArgs</a></h4>
       <section></section>

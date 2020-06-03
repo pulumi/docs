@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Okta.Network
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,32 @@
       <h4><a class="xref" href="Pulumi.Okta.Network.Zone.html">Zone</a></h4>
       <section><p>Creates an Okta Network Zone.</p>
 <p>This resource allows you to create and configure an Okta Network Zone.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Network.Zone(&amp;quot;example&amp;quot;, new Okta.Network.ZoneArgs
+    {
+        Gateways = 
+        {
+            &amp;quot;1.2.3.4/24&amp;quot;,
+            &amp;quot;2.3.4.5-2.3.4.15&amp;quot;,
+        },
+        Proxies = 
+        {
+            &amp;quot;2.2.3.4/24&amp;quot;,
+            &amp;quot;3.3.4.5-3.3.4.15&amp;quot;,
+        },
+        Type = &amp;quot;IP&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Network.ZoneArgs.html">ZoneArgs</a></h4>
       <section></section>

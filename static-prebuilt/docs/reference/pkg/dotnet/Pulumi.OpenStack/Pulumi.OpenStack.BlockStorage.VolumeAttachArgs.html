@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VolumeAttachArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">VolumeAttachArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">VolumeAttachArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.BlockStorage.html">Pulumi.OpenStack.BlockStorage</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L261">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L292">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs__ctor_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs__ctor" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.#ctor">VolumeAttachArgs()</h4>
@@ -100,7 +129,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L211">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_AttachMode_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.AttachMode*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_AttachMode" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.AttachMode">AttachMode</h4>
@@ -111,7 +140,7 @@ If left unspecified, the Block Storage API will apply a default of <code>rw</cod
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AttachMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AttachMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,13 +152,13 @@ If left unspecified, the Block Storage API will apply a default of <code>rw</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L188">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L219">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Device_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Device*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Device" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Device">Device</h4>
@@ -140,7 +169,7 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Device { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Device { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,13 +181,13 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L194">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L225">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_HostName_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.HostName*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_HostName" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.HostName">HostName</h4>
@@ -179,13 +208,13 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L231">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Initiator_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Initiator*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Initiator" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Initiator">Initiator</h4>
@@ -194,7 +223,7 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Initiator { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Initiator { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +235,13 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L206">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L237">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_IpAddress_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.IpAddress*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_IpAddress" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.IpAddress">IpAddress</h4>
@@ -221,7 +250,7 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IpAddress { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IpAddress { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,13 +262,13 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L212">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Multipath_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Multipath*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Multipath" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Multipath">Multipath</h4>
@@ -248,7 +277,7 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Multipath { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Multipath { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -260,13 +289,13 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L218">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_OsType_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.OsType*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_OsType" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.OsType">OsType</h4>
@@ -275,7 +304,7 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? OsType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OsType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -287,13 +316,13 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L224">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Platform_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Platform*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Platform" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Platform">Platform</h4>
@@ -302,7 +331,7 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Platform { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Platform { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -314,13 +343,13 @@ You can specify <code>auto</code> or a device such as <code>/dev/vdc</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L233">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L264">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Region_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Region*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Region" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Region">Region</h4>
@@ -332,7 +361,7 @@ creates a new volume attachment.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,13 +373,13 @@ creates a new volume attachment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L239">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L270">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_VolumeId_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.VolumeId*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_VolumeId" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.VolumeId">VolumeId</h4>
@@ -371,13 +400,13 @@ creates a new volume attachment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L245">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L276">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Wwnn_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Wwnn*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Wwnn" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Wwnn">Wwnn</h4>
@@ -386,7 +415,7 @@ creates a new volume attachment.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Wwnn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Wwnn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -398,13 +427,13 @@ creates a new volume attachment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L255">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Wwpns_" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Wwpns*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_VolumeAttachArgs_Wwpns" data-uid="Pulumi.OpenStack.BlockStorage.VolumeAttachArgs.Wwpns">Wwpns</h4>
@@ -426,7 +455,7 @@ connections.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -438,7 +467,7 @@ connections.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L173" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/BlockStorage/VolumeAttach.cs/#L204" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Glacier
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,57 @@
 <blockquote>
 <p><strong>NOTE:</strong> When removing a Glacier Vault, the Vault must be empty.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var awsSnsTopic = new Aws.Sns.Topic(&amp;quot;awsSnsTopic&amp;quot;, new Aws.Sns.TopicArgs
+    {
+    });
+    var myArchive = new Aws.Glacier.Vault(&amp;quot;myArchive&amp;quot;, new Aws.Glacier.VaultArgs
+    {
+        AccessPolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;:&amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;:[
+   {
+      &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;add-read-only-perm&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+         &amp;quot;&amp;quot;glacier:InitiateJob&amp;quot;&amp;quot;,
+         &amp;quot;&amp;quot;glacier:GetJobOutput&amp;quot;&amp;quot;
+      ],
+      &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive&amp;quot;&amp;quot;
+   }
+]
+}
+
+&amp;quot;,
+        Notifications = 
+        {
+            new Aws.Glacier.Inputs.VaultNotificationArgs
+            {
+                Events = 
+                {
+                    &amp;quot;ArchiveRetrievalCompleted&amp;quot;,
+                    &amp;quot;InventoryRetrievalCompleted&amp;quot;,
+                },
+                SnsTopic = awsSnsTopic.Arn,
+            },
+        },
+        Tags = 
+        {
+            { &amp;quot;Test&amp;quot;, &amp;quot;MyArchive&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Glacier.VaultArgs.html">VaultArgs</a></h4>
       <section></section>
@@ -90,6 +141,76 @@
 <p><strong>NOTE:</strong> This resource allows you to test Glacier Vault Lock policies by setting the <code>complete_lock</code> argument to <code>false</code>. When testing policies in this manner, the Glacier Vault Lock automatically expires after 24 hours and this provider will show this resource as needing recreation after that time. To permanently apply the policy, set the <code>complete_lock</code> argument to <code>true</code>. When changing <code>complete_lock</code> to <code>true</code>, it is expected the resource will show as recreating.</p>
 </blockquote>
 <p>!&gt; <strong>WARNING:</strong> Once a Glacier Vault Lock is completed, it is immutable. The deletion of the Glacier Vault Lock is not be possible and attempting to remove it from this provider will return an error. Set the <code>ignore_deletion_error</code> argument to <code>true</code> and apply this configuration before attempting to delete this resource via this provider or remove this resource from this provider's management.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="testing-glacier-vault-lock-policy">Testing Glacier Vault Lock Policy</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleVault = new Aws.Glacier.Vault(&amp;quot;exampleVault&amp;quot;, new Aws.Glacier.VaultArgs
+    {
+    });
+    var examplePolicyDocument = exampleVault.Arn.Apply(arn =&gt; Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;glacier:DeleteArchive&amp;quot;,
+                },
+                Condition = 
+                {
+
+                    {
+                        { &amp;quot;test&amp;quot;, &amp;quot;NumericLessThanEquals&amp;quot; },
+                        { &amp;quot;values&amp;quot;, 
+                        {
+                            &amp;quot;365&amp;quot;,
+                        } },
+                        { &amp;quot;variable&amp;quot;, &amp;quot;glacier:ArchiveAgeinDays&amp;quot; },
+                    },
+                },
+                Effect = &amp;quot;Deny&amp;quot;,
+                Resources = 
+                {
+                    arn,
+                },
+            },
+        },
+    }));
+    var exampleVaultLock = new Aws.Glacier.VaultLock(&amp;quot;exampleVaultLock&amp;quot;, new Aws.Glacier.VaultLockArgs
+    {
+        CompleteLock = false,
+        Policy = examplePolicyDocument.Apply(examplePolicyDocument =&gt; examplePolicyDocument.Json),
+        VaultName = exampleVault.Name,
+    });
+}
+
+}
+</code></pre>
+<h3 id="permanently-applying-glacier-vault-lock-policy">Permanently Applying Glacier Vault Lock Policy</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Glacier.VaultLock(&amp;quot;example&amp;quot;, new Aws.Glacier.VaultLockArgs
+    {
+        CompleteLock = true,
+        Policy = data.Aws_iam_policy_document.Example.Json,
+        VaultName = aws_glacier_vault.Example.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Glacier.VaultLockArgs.html">VaultLockArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SpotMarketRequest
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,13 +72,51 @@
   <h1 id="Pulumi_Packet_SpotMarketRequest" data-uid="Pulumi.Packet.SpotMarketRequest" class="text-break">Class SpotMarketRequest
   </h1>
   <div class="markdown level0 summary"><p>Provides a Packet Spot Market Request resource to allow you to
-manage spot market requests on your account. For more detail on Spot Market, see <a href="https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/">this article in Packing documentaion</a>.</p>
+manage spot market requests on your account. For more detail on Spot Market, see <a href="https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/">this article in Packet documentaion</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SpotMarketRequest</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">SpotMarketRequest</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Packet.html">Pulumi.Packet</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Packet.dll</h6>
@@ -89,16 +127,16 @@ manage spot market requests on your account. For more detail on Spot Market, see
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/SpotMarketRequest.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/SpotMarketRequest.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Packet_SpotMarketRequest__ctor_" data-uid="Pulumi.Packet.SpotMarketRequest.#ctor*"></a>
-  <h4 id="Pulumi_Packet_SpotMarketRequest__ctor_System_String_Pulumi_Packet_SpotMarketRequestArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Packet.SpotMarketRequest.#ctor(System.String,Pulumi.Packet.SpotMarketRequestArgs,System.Nullable{CustomResourceOptions})">SpotMarketRequest(String, SpotMarketRequestArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Packet_SpotMarketRequest__ctor_System_String_Pulumi_Packet_SpotMarketRequestArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Packet.SpotMarketRequest.#ctor(System.String,Pulumi.Packet.SpotMarketRequestArgs,Pulumi.CustomResourceOptions)">SpotMarketRequest(String, SpotMarketRequestArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a SpotMarketRequest resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpotMarketRequest(string name, SpotMarketRequestArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SpotMarketRequest(string name, SpotMarketRequestArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +161,7 @@ manage spot market requests on your account. For more detail on Spot Market, see
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +171,7 @@ manage spot market requests on your account. For more detail on Spot Market, see
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/SpotMarketRequest.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/SpotMarketRequest.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Packet_SpotMarketRequest_DevicesMax_" data-uid="Pulumi.Packet.SpotMarketRequest.DevicesMax*"></a>
   <h4 id="Pulumi_Packet_SpotMarketRequest_DevicesMax" data-uid="Pulumi.Packet.SpotMarketRequest.DevicesMax">DevicesMax</h4>
@@ -154,13 +192,13 @@ manage spot market requests on your account. For more detail on Spot Market, see
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/SpotMarketRequest.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/SpotMarketRequest.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Packet_SpotMarketRequest_DevicesMin_" data-uid="Pulumi.Packet.SpotMarketRequest.DevicesMin*"></a>
   <h4 id="Pulumi_Packet_SpotMarketRequest_DevicesMin" data-uid="Pulumi.Packet.SpotMarketRequest.DevicesMin">DevicesMin</h4>
@@ -181,13 +219,13 @@ manage spot market requests on your account. For more detail on Spot Market, see
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/SpotMarketRequest.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/SpotMarketRequest.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Packet_SpotMarketRequest_Facilities_" data-uid="Pulumi.Packet.SpotMarketRequest.Facilities*"></a>
   <h4 id="Pulumi_Packet_SpotMarketRequest_Facilities" data-uid="Pulumi.Packet.SpotMarketRequest.Facilities">Facilities</h4>
@@ -208,13 +246,13 @@ manage spot market requests on your account. For more detail on Spot Market, see
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/SpotMarketRequest.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/SpotMarketRequest.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Packet_SpotMarketRequest_InstanceParameters_" data-uid="Pulumi.Packet.SpotMarketRequest.InstanceParameters*"></a>
   <h4 id="Pulumi_Packet_SpotMarketRequest_InstanceParameters" data-uid="Pulumi.Packet.SpotMarketRequest.InstanceParameters">InstanceParameters</h4>
@@ -235,13 +273,13 @@ manage spot market requests on your account. For more detail on Spot Market, see
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Packet.Outputs.SpotMarketRequestInstanceParameters.html">SpotMarketRequestInstanceParameters</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Packet.Outputs.SpotMarketRequestInstanceParameters.html">SpotMarketRequestInstanceParameters</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/SpotMarketRequest.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/SpotMarketRequest.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Packet_SpotMarketRequest_MaxBidPrice_" data-uid="Pulumi.Packet.SpotMarketRequest.MaxBidPrice*"></a>
   <h4 id="Pulumi_Packet_SpotMarketRequest_MaxBidPrice" data-uid="Pulumi.Packet.SpotMarketRequest.MaxBidPrice">MaxBidPrice</h4>
@@ -262,13 +300,13 @@ manage spot market requests on your account. For more detail on Spot Market, see
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/SpotMarketRequest.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/SpotMarketRequest.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Packet_SpotMarketRequest_ProjectId_" data-uid="Pulumi.Packet.SpotMarketRequest.ProjectId*"></a>
   <h4 id="Pulumi_Packet_SpotMarketRequest_ProjectId" data-uid="Pulumi.Packet.SpotMarketRequest.ProjectId">ProjectId</h4>
@@ -289,13 +327,13 @@ manage spot market requests on your account. For more detail on Spot Market, see
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/SpotMarketRequest.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/SpotMarketRequest.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Packet_SpotMarketRequest_WaitForDevices_" data-uid="Pulumi.Packet.SpotMarketRequest.WaitForDevices*"></a>
   <h4 id="Pulumi_Packet_SpotMarketRequest_WaitForDevices" data-uid="Pulumi.Packet.SpotMarketRequest.WaitForDevices">WaitForDevices</h4>
@@ -316,7 +354,7 @@ manage spot market requests on your account. For more detail on Spot Market, see
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -324,17 +362,17 @@ manage spot market requests on your account. For more detail on Spot Market, see
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/SpotMarketRequest.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/SpotMarketRequest.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Packet_SpotMarketRequest_Get_" data-uid="Pulumi.Packet.SpotMarketRequest.Get*"></a>
-  <h4 id="Pulumi_Packet_SpotMarketRequest_Get_System_String_Input_System_String__Pulumi_Packet_SpotMarketRequestState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Packet.SpotMarketRequest.Get(System.String,Input{System.String},Pulumi.Packet.SpotMarketRequestState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SpotMarketRequestState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Packet_SpotMarketRequest_Get_System_String_Pulumi_Input_System_String__Pulumi_Packet_SpotMarketRequestState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Packet.SpotMarketRequest.Get(System.String,Pulumi.Input{System.String},Pulumi.Packet.SpotMarketRequestState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SpotMarketRequestState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing SpotMarketRequest resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SpotMarketRequest Get(string name, Input&lt;string&gt; id, SpotMarketRequestState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SpotMarketRequest Get(string name, Input&lt;string&gt; id, SpotMarketRequestState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -353,7 +391,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -365,7 +403,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -394,7 +432,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/SpotMarketRequest.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/SpotMarketRequest.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

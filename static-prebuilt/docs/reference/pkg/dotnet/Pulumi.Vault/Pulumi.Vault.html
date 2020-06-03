@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Vault
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,19 +77,117 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Vault.Audit.html">Audit</a></h4>
-      <section></section>
+      <section><h2 id="example-usage-file-audit-device">Example Usage (file audit device)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Vault.Audit(&amp;quot;test&amp;quot;, new Vault.AuditArgs
+    {
+        Options = 
+        {
+            { &amp;quot;file_path&amp;quot;, &amp;quot;C:/temp/audit.txt&amp;quot; },
+        },
+        Type = &amp;quot;file&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-socket-audit-device">Example Usage (socket audit device)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Vault.Audit(&amp;quot;test&amp;quot;, new Vault.AuditArgs
+    {
+        Options = 
+        {
+            { &amp;quot;address&amp;quot;, &amp;quot;127.0.0.1:8000&amp;quot; },
+            { &amp;quot;description&amp;quot;, &amp;quot;application x socket&amp;quot; },
+            { &amp;quot;socket_type&amp;quot;, &amp;quot;tcp&amp;quot; },
+        },
+        Path = &amp;quot;app_socket&amp;quot;,
+        Type = &amp;quot;socket&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Vault.AuditArgs.html">AuditArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.AuditState.html">AuditState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.AuthBackend.html">AuthBackend</a></h4>
-      <section></section>
+      <section><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Vault.AuthBackend(&amp;quot;example&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Tune = new Vault.Inputs.AuthBackendTuneArgs
+        {
+            ListingVisibility = &amp;quot;unauth&amp;quot;,
+            MaxLeaseTtl = &amp;quot;90000s&amp;quot;,
+        },
+        Type = &amp;quot;github&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Vault.AuthBackendArgs.html">AuthBackendArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.AuthBackendState.html">AuthBackendState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.CertAuthBackendRole.html">CertAuthBackendRole</a></h4>
       <section><p>Provides a resource to create a role in an <a href="https://www.vaultproject.io/docs/auth/cert.html">Cert auth backend within Vault</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var certAuthBackend = new Vault.AuthBackend(&amp;quot;certAuthBackend&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Path = &amp;quot;cert&amp;quot;,
+        Type = &amp;quot;cert&amp;quot;,
+    });
+    var certCertAuthBackendRole = new Vault.CertAuthBackendRole(&amp;quot;certCertAuthBackendRole&amp;quot;, new Vault.CertAuthBackendRoleArgs
+    {
+        Certificate = File.ReadAllText(&amp;quot;/path/to/certs/ca-cert.pem&amp;quot;),
+        Backend = certAuthBackend.Path,
+        AllowedNames = 
+        {
+            &amp;quot;foo.example.org&amp;quot;,
+            &amp;quot;baz.example.org&amp;quot;,
+        },
+        TokenTtl = 300,
+        TokenMaxTtl = 600,
+        TokenPolicies = 
+        {
+            &amp;quot;foo&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.CertAuthBackendRoleArgs.html">CertAuthBackendRoleArgs</a></h4>
       <section></section>
@@ -103,9 +201,36 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Config.Types.ClientAuths.html">Config.Types.ClientAuths</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Vault.Config.Types.Headers.html">Config.Types.Headers</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Vault.EgpPolicy.html">EgpPolicy</a></h4>
       <section><p>Provides a resource to manage Endpoint Governing Policy (EGP) via <a href="https://www.vaultproject.io/docs/enterprise/sentinel/index.html">Sentinel</a>.</p>
 <p><strong>Note</strong> this feature is available only with Vault Enterprise.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var allow_all = new Vault.EgpPolicy(&amp;quot;allow-all&amp;quot;, new Vault.EgpPolicyArgs
+    {
+        EnforcementLevel = &amp;quot;soft-mandatory&amp;quot;,
+        Paths = 
+        {
+            &amp;quot;*&amp;quot;,
+        },
+        Policy = @&amp;quot;main = rule {
+true
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.EgpPolicyArgs.html">EgpPolicyArgs</a></h4>
       <section></section>
@@ -126,13 +251,55 @@
       <h4><a class="xref" href="Pulumi.Vault.MfaDuo.html">MfaDuo</a></h4>
       <section><p>Provides a resource to manage <a href="https://www.vaultproject.io/docs/enterprise/mfa/mfa-duo.html">Duo MFA</a>.</p>
 <p><strong>Note</strong> this feature is available only with Vault Enterprise.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var userpass = new Vault.AuthBackend(&amp;quot;userpass&amp;quot;, new Vault.AuthBackendArgs
+    {
+        Path = &amp;quot;userpass&amp;quot;,
+        Type = &amp;quot;userpass&amp;quot;,
+    });
+    var myDuo = new Vault.MfaDuo(&amp;quot;myDuo&amp;quot;, new Vault.MfaDuoArgs
+    {
+        ApiHostname = &amp;quot;api-2b5c39f5.duosecurity.com&amp;quot;,
+        IntegrationKey = &amp;quot;BIACEUEAXI20BNWTEYXT&amp;quot;,
+        MountAccessor = userpass.Accessor,
+        SecretKey = &amp;quot;8C7THtrIigh2rPZQMbguugt8IUftWhMRCOBzbuyz&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.MfaDuoArgs.html">MfaDuoArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.MfaDuoState.html">MfaDuoState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Mount.html">Mount</a></h4>
-      <section></section>
+      <section><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Vault.Mount(&amp;quot;example&amp;quot;, new Vault.MountArgs
+    {
+        Description = &amp;quot;This is an example mount&amp;quot;,
+        Path = &amp;quot;dummy&amp;quot;,
+        Type = &amp;quot;generic&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Vault.MountArgs.html">MountArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.MountState.html">MountState</a></h4>
@@ -140,13 +307,49 @@
       <h4><a class="xref" href="Pulumi.Vault.Namespace.html">Namespace</a></h4>
       <section><p>Provides a resource to manage <a href="https://www.vaultproject.io/docs/enterprise/namespaces/index.html">Namespaces</a>.</p>
 <p><strong>Note</strong> this feature is available only with Vault Enterprise.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ns1 = new Vault.Namespace(&amp;quot;ns1&amp;quot;, new Vault.NamespaceArgs
+    {
+        Path = &amp;quot;ns1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.NamespaceArgs.html">NamespaceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.NamespaceState.html">NamespaceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Policy.html">Policy</a></h4>
-      <section></section>
+      <section><h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Vault.Policy(&amp;quot;example&amp;quot;, new Vault.PolicyArgs
+    {
+        Policy = @&amp;quot;path &amp;quot;&amp;quot;secret/my_app&amp;quot;&amp;quot; {
+capabilities = [&amp;quot;&amp;quot;write&amp;quot;&amp;quot;]
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
       <h4><a class="xref" href="Pulumi.Vault.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.PolicyState.html">PolicyState</a></h4>
@@ -162,6 +365,27 @@ construction to achieve fine-grained programmatic control over provider settings
       <h4><a class="xref" href="Pulumi.Vault.RgpPolicy.html">RgpPolicy</a></h4>
       <section><p>Provides a resource to manage Role Governing Policy (RGP) via <a href="https://www.vaultproject.io/docs/enterprise/sentinel/index.html">Sentinel</a>.</p>
 <p><strong>Note</strong> this feature is available only with Vault Enterprise.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var allow_all = new Vault.RgpPolicy(&amp;quot;allow-all&amp;quot;, new Vault.RgpPolicyArgs
+    {
+        EnforcementLevel = &amp;quot;soft-mandatory&amp;quot;,
+        Policy = @&amp;quot;main = rule {
+true
+}
+
+&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.RgpPolicyArgs.html">RgpPolicyArgs</a></h4>
       <section></section>

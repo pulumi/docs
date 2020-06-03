@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetAuthBackendRole
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,29 +78,75 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetAuthBackendRole</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Vault.Kubernetes.html">Pulumi.Vault.Kubernetes</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Vault.dll</h6>
   <h5 id="Pulumi_Vault_Kubernetes_GetAuthBackendRole_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetAuthBackendRole : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetAuthBackendRole</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Kubernetes/GetAuthBackendRole.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Kubernetes/GetAuthBackendRole.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Vault_Kubernetes_GetAuthBackendRole_InvokeAsync_" data-uid="Pulumi.Vault.Kubernetes.GetAuthBackendRole.InvokeAsync*"></a>
-  <h4 id="Pulumi_Vault_Kubernetes_GetAuthBackendRole_InvokeAsync_Pulumi_Vault_Kubernetes_GetAuthBackendRoleArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Vault.Kubernetes.GetAuthBackendRole.InvokeAsync(Pulumi.Vault.Kubernetes.GetAuthBackendRoleArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetAuthBackendRoleArgs, Nullable&lt;InvokeOptions&gt;)</h4>
-  <div class="markdown level1 summary"><p>Reads the Role of an Kubernetes from a Vault server. See the <a href="https://www.vaultproject.io/api/auth/kubernetes/index.html#read-role">Vault
+  <h4 id="Pulumi_Vault_Kubernetes_GetAuthBackendRole_InvokeAsync_Pulumi_Vault_Kubernetes_GetAuthBackendRoleArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Vault.Kubernetes.GetAuthBackendRole.InvokeAsync(Pulumi.Vault.Kubernetes.GetAuthBackendRoleArgs,Pulumi.InvokeOptions)">InvokeAsync(GetAuthBackendRoleArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>Reads the Role of an Kubernetes from a Vault server. See the <a href="https://www.vaultproject.io/api-docs/auth/kubernetes#read-role">Vault
 documentation</a> for more
 information.</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var role = Output.Create(Vault.Kubernetes.GetAuthBackendRole.InvokeAsync(new Vault.Kubernetes.GetAuthBackendRoleArgs
+    {
+        Backend = &amp;quot;my-kubernetes-backend&amp;quot;,
+        RoleName = &amp;quot;my-role&amp;quot;,
+    }));
+    this.Policies = role.Apply(role =&gt; role.Policies);
+}
+
+[Output(&amp;quot;policies&amp;quot;)]
+public Output&amp;lt;string&gt; Policies { get; set; }
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetAuthBackendRoleResult&gt; InvokeAsync(GetAuthBackendRoleArgs args, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetAuthBackendRoleResult&gt; InvokeAsync(GetAuthBackendRoleArgs args, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -118,7 +164,7 @@ information.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -134,7 +180,7 @@ information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Vault.Kubernetes.GetAuthBackendRoleResult.html">GetAuthBackendRoleResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Vault.Kubernetes.GetAuthBackendRoleResult.html">GetAuthBackendRoleResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -146,7 +192,7 @@ information.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Kubernetes/GetAuthBackendRole.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Kubernetes/GetAuthBackendRole.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

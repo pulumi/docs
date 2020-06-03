@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Mfa
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,75 @@
   </h1>
   <div class="markdown level0 summary"><p>Creates an MFA Policy.</p>
 <p>This resource allows you to create and configure an MFA Policy.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Policy.Mfa(&amp;quot;example&amp;quot;, new Okta.Policy.MfaArgs
+    {
+        Description = &amp;quot;Example&amp;quot;,
+        GroupsIncludeds = 
+        {
+            data.Okta_group.Everyone.Id,
+        },
+        OktaOtp = new Okta.Policy.Inputs.MfaOktaOtpArgs
+        {
+            Enroll = &amp;quot;REQUIRED&amp;quot;,
+        },
+        Status = &amp;quot;ACTIVE&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Mfa</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Mfa</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Okta.Policy.html">Pulumi.Okta.Policy</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Okta.dll</h6>
@@ -89,16 +152,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa__ctor_" data-uid="Pulumi.Okta.Policy.Mfa.#ctor*"></a>
-  <h4 id="Pulumi_Okta_Policy_Mfa__ctor_System_String_Pulumi_Okta_Policy_MfaArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.Policy.Mfa.#ctor(System.String,Pulumi.Okta.Policy.MfaArgs,System.Nullable{CustomResourceOptions})">Mfa(String, MfaArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_Policy_Mfa__ctor_System_String_Pulumi_Okta_Policy_MfaArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.Policy.Mfa.#ctor(System.String,Pulumi.Okta.Policy.MfaArgs,Pulumi.CustomResourceOptions)">Mfa(String, MfaArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Mfa resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Mfa(string name, MfaArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Mfa(string name, MfaArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +186,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +196,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_Description_" data-uid="Pulumi.Okta.Policy.Mfa.Description*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_Description" data-uid="Pulumi.Okta.Policy.Mfa.Description">Description</h4>
@@ -142,7 +205,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,13 +217,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_Duo_" data-uid="Pulumi.Okta.Policy.Mfa.Duo*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_Duo" data-uid="Pulumi.Okta.Policy.Mfa.Duo">Duo</h4>
@@ -181,13 +244,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaDuo.html">MfaDuo</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaDuo.html">MfaDuo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_FidoU2f_" data-uid="Pulumi.Okta.Policy.Mfa.FidoU2f*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_FidoU2f" data-uid="Pulumi.Okta.Policy.Mfa.FidoU2f">FidoU2f</h4>
@@ -208,13 +271,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaFidoU2f.html">MfaFidoU2f</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaFidoU2f.html">MfaFidoU2f</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_FidoWebauthn_" data-uid="Pulumi.Okta.Policy.Mfa.FidoWebauthn*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_FidoWebauthn" data-uid="Pulumi.Okta.Policy.Mfa.FidoWebauthn">FidoWebauthn</h4>
@@ -235,13 +298,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaFidoWebauthn.html">MfaFidoWebauthn</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaFidoWebauthn.html">MfaFidoWebauthn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_GoogleOtp_" data-uid="Pulumi.Okta.Policy.Mfa.GoogleOtp*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_GoogleOtp" data-uid="Pulumi.Okta.Policy.Mfa.GoogleOtp">GoogleOtp</h4>
@@ -262,13 +325,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaGoogleOtp.html">MfaGoogleOtp</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaGoogleOtp.html">MfaGoogleOtp</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_GroupsIncludeds_" data-uid="Pulumi.Okta.Policy.Mfa.GroupsIncludeds*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_GroupsIncludeds" data-uid="Pulumi.Okta.Policy.Mfa.GroupsIncludeds">GroupsIncludeds</h4>
@@ -289,13 +352,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_Name_" data-uid="Pulumi.Okta.Policy.Mfa.Name*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_Name" data-uid="Pulumi.Okta.Policy.Mfa.Name">Name</h4>
@@ -316,13 +379,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_OktaCall_" data-uid="Pulumi.Okta.Policy.Mfa.OktaCall*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_OktaCall" data-uid="Pulumi.Okta.Policy.Mfa.OktaCall">OktaCall</h4>
@@ -343,13 +406,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaCall.html">MfaOktaCall</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaCall.html">MfaOktaCall</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_OktaOtp_" data-uid="Pulumi.Okta.Policy.Mfa.OktaOtp*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_OktaOtp" data-uid="Pulumi.Okta.Policy.Mfa.OktaOtp">OktaOtp</h4>
@@ -370,13 +433,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaOtp.html">MfaOktaOtp</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaOtp.html">MfaOktaOtp</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_OktaPassword_" data-uid="Pulumi.Okta.Policy.Mfa.OktaPassword*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_OktaPassword" data-uid="Pulumi.Okta.Policy.Mfa.OktaPassword">OktaPassword</h4>
@@ -397,13 +460,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaPassword.html">MfaOktaPassword</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaPassword.html">MfaOktaPassword</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_OktaPush_" data-uid="Pulumi.Okta.Policy.Mfa.OktaPush*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_OktaPush" data-uid="Pulumi.Okta.Policy.Mfa.OktaPush">OktaPush</h4>
@@ -424,13 +487,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaPush.html">MfaOktaPush</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaPush.html">MfaOktaPush</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_OktaQuestion_" data-uid="Pulumi.Okta.Policy.Mfa.OktaQuestion*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_OktaQuestion" data-uid="Pulumi.Okta.Policy.Mfa.OktaQuestion">OktaQuestion</h4>
@@ -451,13 +514,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaQuestion.html">MfaOktaQuestion</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaQuestion.html">MfaOktaQuestion</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_OktaSms_" data-uid="Pulumi.Okta.Policy.Mfa.OktaSms*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_OktaSms" data-uid="Pulumi.Okta.Policy.Mfa.OktaSms">OktaSms</h4>
@@ -478,13 +541,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaSms.html">MfaOktaSms</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaOktaSms.html">MfaOktaSms</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_Priority_" data-uid="Pulumi.Okta.Policy.Mfa.Priority*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_Priority" data-uid="Pulumi.Okta.Policy.Mfa.Priority">Priority</h4>
@@ -505,13 +568,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_RsaToken_" data-uid="Pulumi.Okta.Policy.Mfa.RsaToken*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_RsaToken" data-uid="Pulumi.Okta.Policy.Mfa.RsaToken">RsaToken</h4>
@@ -532,13 +595,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaRsaToken.html">MfaRsaToken</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaRsaToken.html">MfaRsaToken</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_Status_" data-uid="Pulumi.Okta.Policy.Mfa.Status*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_Status" data-uid="Pulumi.Okta.Policy.Mfa.Status">Status</h4>
@@ -547,7 +610,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Status { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -559,13 +622,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L148">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_SymantecVip_" data-uid="Pulumi.Okta.Policy.Mfa.SymantecVip*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_SymantecVip" data-uid="Pulumi.Okta.Policy.Mfa.SymantecVip">SymantecVip</h4>
@@ -586,13 +649,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaSymantecVip.html">MfaSymantecVip</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaSymantecVip.html">MfaSymantecVip</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_YubikeyToken_" data-uid="Pulumi.Okta.Policy.Mfa.YubikeyToken*"></a>
   <h4 id="Pulumi_Okta_Policy_Mfa_YubikeyToken" data-uid="Pulumi.Okta.Policy.Mfa.YubikeyToken">YubikeyToken</h4>
@@ -613,7 +676,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaYubikeyToken.html">MfaYubikeyToken</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Okta.Policy.Outputs.MfaYubikeyToken.html">MfaYubikeyToken</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -621,17 +684,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_Okta_Policy_Mfa_Get_" data-uid="Pulumi.Okta.Policy.Mfa.Get*"></a>
-  <h4 id="Pulumi_Okta_Policy_Mfa_Get_System_String_Input_System_String__Pulumi_Okta_Policy_MfaState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.Policy.Mfa.Get(System.String,Input{System.String},Pulumi.Okta.Policy.MfaState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, MfaState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_Policy_Mfa_Get_System_String_Pulumi_Input_System_String__Pulumi_Okta_Policy_MfaState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.Policy.Mfa.Get(System.String,Pulumi.Input{System.String},Pulumi.Okta.Policy.MfaState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, MfaState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Mfa resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Mfa Get(string name, Input&lt;string&gt; id, MfaState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Mfa Get(string name, Input&lt;string&gt; id, MfaState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -650,7 +713,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -662,7 +725,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -691,7 +754,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/Policy/Mfa.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Policy/Mfa.cs/#L47" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

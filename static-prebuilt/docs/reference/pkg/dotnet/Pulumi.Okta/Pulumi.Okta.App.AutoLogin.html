@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AutoLogin
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,12 +73,70 @@
   </h1>
   <div class="markdown level0 summary"><p>Creates an Auto Login Okta Application.</p>
 <p>This resource allows you to create and configure an Auto Login Okta Application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.App.AutoLogin(&amp;quot;example&amp;quot;, new Okta.App.AutoLoginArgs
+    {
+        CredentialsScheme = &amp;quot;EDIT_USERNAME_AND_PASSWORD&amp;quot;,
+        Label = &amp;quot;Example App&amp;quot;,
+        RevealPassword = true,
+        SignOnRedirectUrl = &amp;quot;https://example.com&amp;quot;,
+        SignOnUrl = &amp;quot;https://example.com/login.html&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AutoLogin</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AutoLogin</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Okta.App.html">Pulumi.Okta.App</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Okta.dll</h6>
@@ -89,16 +147,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin__ctor_" data-uid="Pulumi.Okta.App.AutoLogin.#ctor*"></a>
-  <h4 id="Pulumi_Okta_App_AutoLogin__ctor_System_String_Pulumi_Okta_App_AutoLoginArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.App.AutoLogin.#ctor(System.String,Pulumi.Okta.App.AutoLoginArgs,System.Nullable{CustomResourceOptions})">AutoLogin(String, AutoLoginArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_App_AutoLogin__ctor_System_String_Pulumi_Okta_App_AutoLoginArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.App.AutoLogin.#ctor(System.String,Pulumi.Okta.App.AutoLoginArgs,Pulumi.CustomResourceOptions)">AutoLogin(String, AutoLoginArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a AutoLogin resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AutoLogin(string name, AutoLoginArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AutoLogin(string name, AutoLoginArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +181,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -133,7 +191,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_AccessibilityErrorRedirectUrl_" data-uid="Pulumi.Okta.App.AutoLogin.AccessibilityErrorRedirectUrl*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_AccessibilityErrorRedirectUrl" data-uid="Pulumi.Okta.App.AutoLogin.AccessibilityErrorRedirectUrl">AccessibilityErrorRedirectUrl</h4>
@@ -142,7 +200,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccessibilityErrorRedirectUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessibilityErrorRedirectUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,13 +212,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_AccessibilitySelfService_" data-uid="Pulumi.Okta.App.AutoLogin.AccessibilitySelfService*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_AccessibilitySelfService" data-uid="Pulumi.Okta.App.AutoLogin.AccessibilitySelfService">AccessibilitySelfService</h4>
@@ -181,13 +239,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_AutoSubmitToolbar_" data-uid="Pulumi.Okta.App.AutoLogin.AutoSubmitToolbar*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_AutoSubmitToolbar" data-uid="Pulumi.Okta.App.AutoLogin.AutoSubmitToolbar">AutoSubmitToolbar</h4>
@@ -208,13 +266,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_CredentialsScheme_" data-uid="Pulumi.Okta.App.AutoLogin.CredentialsScheme*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_CredentialsScheme" data-uid="Pulumi.Okta.App.AutoLogin.CredentialsScheme">CredentialsScheme</h4>
@@ -223,7 +281,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CredentialsScheme { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CredentialsScheme { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +293,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_Groups_" data-uid="Pulumi.Okta.App.AutoLogin.Groups*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_Groups" data-uid="Pulumi.Okta.App.AutoLogin.Groups">Groups</h4>
@@ -262,13 +320,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_HideIos_" data-uid="Pulumi.Okta.App.AutoLogin.HideIos*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_HideIos" data-uid="Pulumi.Okta.App.AutoLogin.HideIos">HideIos</h4>
@@ -289,13 +347,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_HideWeb_" data-uid="Pulumi.Okta.App.AutoLogin.HideWeb*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_HideWeb" data-uid="Pulumi.Okta.App.AutoLogin.HideWeb">HideWeb</h4>
@@ -316,13 +374,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_Label_" data-uid="Pulumi.Okta.App.AutoLogin.Label*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_Label" data-uid="Pulumi.Okta.App.AutoLogin.Label">Label</h4>
@@ -343,13 +401,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_Name_" data-uid="Pulumi.Okta.App.AutoLogin.Name*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_Name" data-uid="Pulumi.Okta.App.AutoLogin.Name">Name</h4>
@@ -370,13 +428,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_PreconfiguredApp_" data-uid="Pulumi.Okta.App.AutoLogin.PreconfiguredApp*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_PreconfiguredApp" data-uid="Pulumi.Okta.App.AutoLogin.PreconfiguredApp">PreconfiguredApp</h4>
@@ -385,7 +443,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PreconfiguredApp { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PreconfiguredApp { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -397,13 +455,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_RevealPassword_" data-uid="Pulumi.Okta.App.AutoLogin.RevealPassword*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_RevealPassword" data-uid="Pulumi.Okta.App.AutoLogin.RevealPassword">RevealPassword</h4>
@@ -424,13 +482,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_SharedPassword_" data-uid="Pulumi.Okta.App.AutoLogin.SharedPassword*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_SharedPassword" data-uid="Pulumi.Okta.App.AutoLogin.SharedPassword">SharedPassword</h4>
@@ -439,7 +497,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SharedPassword { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SharedPassword { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -451,13 +509,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_SharedUsername_" data-uid="Pulumi.Okta.App.AutoLogin.SharedUsername*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_SharedUsername" data-uid="Pulumi.Okta.App.AutoLogin.SharedUsername">SharedUsername</h4>
@@ -466,7 +524,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SharedUsername { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SharedUsername { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -478,13 +536,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_SignOnMode_" data-uid="Pulumi.Okta.App.AutoLogin.SignOnMode*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_SignOnMode" data-uid="Pulumi.Okta.App.AutoLogin.SignOnMode">SignOnMode</h4>
@@ -505,13 +563,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_SignOnRedirectUrl_" data-uid="Pulumi.Okta.App.AutoLogin.SignOnRedirectUrl*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_SignOnRedirectUrl" data-uid="Pulumi.Okta.App.AutoLogin.SignOnRedirectUrl">SignOnRedirectUrl</h4>
@@ -520,7 +578,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SignOnRedirectUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SignOnRedirectUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -532,13 +590,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_SignOnUrl_" data-uid="Pulumi.Okta.App.AutoLogin.SignOnUrl*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_SignOnUrl" data-uid="Pulumi.Okta.App.AutoLogin.SignOnUrl">SignOnUrl</h4>
@@ -547,7 +605,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SignOnUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SignOnUrl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -559,13 +617,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_Status_" data-uid="Pulumi.Okta.App.AutoLogin.Status*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_Status" data-uid="Pulumi.Okta.App.AutoLogin.Status">Status</h4>
@@ -574,7 +632,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Status { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -586,13 +644,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_UserNameTemplate_" data-uid="Pulumi.Okta.App.AutoLogin.UserNameTemplate*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_UserNameTemplate" data-uid="Pulumi.Okta.App.AutoLogin.UserNameTemplate">UserNameTemplate</h4>
@@ -613,13 +671,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_UserNameTemplateType_" data-uid="Pulumi.Okta.App.AutoLogin.UserNameTemplateType*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_UserNameTemplateType" data-uid="Pulumi.Okta.App.AutoLogin.UserNameTemplateType">UserNameTemplateType</h4>
@@ -640,13 +698,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_Users_" data-uid="Pulumi.Okta.App.AutoLogin.Users*"></a>
   <h4 id="Pulumi_Okta_App_AutoLogin_Users" data-uid="Pulumi.Okta.App.AutoLogin.Users">Users</h4>
@@ -667,7 +725,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.App.Outputs.AutoLoginUser.html">AutoLoginUser</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Okta.App.Outputs.AutoLoginUser.html">AutoLoginUser</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -675,17 +733,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Okta_App_AutoLogin_Get_" data-uid="Pulumi.Okta.App.AutoLogin.Get*"></a>
-  <h4 id="Pulumi_Okta_App_AutoLogin_Get_System_String_Input_System_String__Pulumi_Okta_App_AutoLoginState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.App.AutoLogin.Get(System.String,Input{System.String},Pulumi.Okta.App.AutoLoginState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AutoLoginState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Okta_App_AutoLogin_Get_System_String_Pulumi_Input_System_String__Pulumi_Okta_App_AutoLoginState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Okta.App.AutoLogin.Get(System.String,Pulumi.Input{System.String},Pulumi.Okta.App.AutoLoginState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AutoLoginState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing AutoLogin resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AutoLogin Get(string name, Input&lt;string&gt; id, AutoLoginState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AutoLogin Get(string name, Input&lt;string&gt; id, AutoLoginState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -704,7 +762,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -716,7 +774,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -745,7 +803,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-okta/blob/64cfd1d4f63773a8b4a923f2f5dfddf9b9e9f970/sdk/dotnet/App/AutoLogin.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/App/AutoLogin.cs/#L42" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

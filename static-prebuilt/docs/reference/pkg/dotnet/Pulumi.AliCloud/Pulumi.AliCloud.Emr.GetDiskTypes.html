@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetDiskTypes
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,31 +78,80 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetDiskTypes</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Emr.html">Pulumi.AliCloud.Emr</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_Emr_GetDiskTypes_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetDiskTypes : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetDiskTypes</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Emr/GetDiskTypes.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Emr/GetDiskTypes.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Emr_GetDiskTypes_InvokeAsync_" data-uid="Pulumi.AliCloud.Emr.GetDiskTypes.InvokeAsync*"></a>
-  <h4 id="Pulumi_AliCloud_Emr_GetDiskTypes_InvokeAsync_Pulumi_AliCloud_Emr_GetDiskTypesArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.AliCloud.Emr.GetDiskTypes.InvokeAsync(Pulumi.AliCloud.Emr.GetDiskTypesArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetDiskTypesArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Emr_GetDiskTypes_InvokeAsync_Pulumi_AliCloud_Emr_GetDiskTypesArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Emr.GetDiskTypes.InvokeAsync(Pulumi.AliCloud.Emr.GetDiskTypesArgs,Pulumi.InvokeOptions)">InvokeAsync(GetDiskTypesArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>The <code>alicloud.emr.getDiskTypes</code> data source provides a collection of data disk and
 system disk types available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.60.0+</p>
 </blockquote>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = Output.Create(AliCloud.Emr.GetDiskTypes.InvokeAsync(new AliCloud.Emr.GetDiskTypesArgs
+    {
+        ClusterType = &amp;quot;HADOOP&amp;quot;,
+        DestinationResource = &amp;quot;DataDisk&amp;quot;,
+        InstanceChargeType = &amp;quot;PostPaid&amp;quot;,
+        InstanceType = &amp;quot;ecs.g5.xlarge&amp;quot;,
+        ZoneId = &amp;quot;cn-huhehaote-a&amp;quot;,
+    }));
+    this.DataDiskType = @default.Apply(@default =&gt; @default.Types[0].Value);
+}
+
+[Output(&amp;quot;dataDiskType&amp;quot;)]
+public Output&amp;lt;string&gt; DataDiskType { get; set; }
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetDiskTypesResult&gt; InvokeAsync(GetDiskTypesArgs args, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetDiskTypesResult&gt; InvokeAsync(GetDiskTypesArgs args, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,7 +169,7 @@ system disk types available in Alibaba Cloud account when create a emr cluster.<
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -136,7 +185,7 @@ system disk types available in Alibaba Cloud account when create a emr cluster.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Emr.GetDiskTypesResult.html">GetDiskTypesResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Emr.GetDiskTypesResult.html">GetDiskTypesResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -148,7 +197,7 @@ system disk types available in Alibaba Cloud account when create a emr cluster.<
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Emr/GetDiskTypes.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Emr/GetDiskTypes.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

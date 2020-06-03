@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Keycloak.Ldap
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,6 +82,45 @@
 via LDAP.</p>
 <p>The LDAP full name mapper can map a user's full name from an LDAP attribute
 to the first and last name attributes of a Keycloak user.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;test&amp;quot;,
+    });
+    var ldapUserFederation = new Keycloak.Ldap.UserFederation(&amp;quot;ldapUserFederation&amp;quot;, new Keycloak.Ldap.UserFederationArgs
+    {
+        BindCredential = &amp;quot;admin&amp;quot;,
+        BindDn = &amp;quot;cn=admin,dc=example,dc=org&amp;quot;,
+        ConnectionUrl = &amp;quot;ldap://openldap&amp;quot;,
+        RdnLdapAttribute = &amp;quot;cn&amp;quot;,
+        RealmId = realm.Id,
+        UserObjectClasses = 
+        {
+            &amp;quot;simpleSecurityObject&amp;quot;,
+            &amp;quot;organizationalRole&amp;quot;,
+        },
+        UsernameLdapAttribute = &amp;quot;cn&amp;quot;,
+        UsersDn = &amp;quot;dc=example,dc=org&amp;quot;,
+        UuidLdapAttribute = &amp;quot;entryDN&amp;quot;,
+    });
+    var ldapFullNameMapper = new Keycloak.Ldap.FullNameMapper(&amp;quot;ldapFullNameMapper&amp;quot;, new Keycloak.Ldap.FullNameMapperArgs
+    {
+        LdapFullNameAttribute = &amp;quot;cn&amp;quot;,
+        LdapUserFederationId = ldapUserFederation.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -104,6 +143,54 @@ via LDAP.</p>
 <p>The LDAP group mapper can be used to map an LDAP user's groups from some DN
 to Keycloak groups. This group mapper will also create the groups within Keycloak
 if they do not already exist.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;test&amp;quot;,
+    });
+    var ldapUserFederation = new Keycloak.Ldap.UserFederation(&amp;quot;ldapUserFederation&amp;quot;, new Keycloak.Ldap.UserFederationArgs
+    {
+        BindCredential = &amp;quot;admin&amp;quot;,
+        BindDn = &amp;quot;cn=admin,dc=example,dc=org&amp;quot;,
+        ConnectionUrl = &amp;quot;ldap://openldap&amp;quot;,
+        RdnLdapAttribute = &amp;quot;cn&amp;quot;,
+        RealmId = realm.Id,
+        UserObjectClasses = 
+        {
+            &amp;quot;simpleSecurityObject&amp;quot;,
+            &amp;quot;organizationalRole&amp;quot;,
+        },
+        UsernameLdapAttribute = &amp;quot;cn&amp;quot;,
+        UsersDn = &amp;quot;dc=example,dc=org&amp;quot;,
+        UuidLdapAttribute = &amp;quot;entryDN&amp;quot;,
+    });
+    var ldapGroupMapper = new Keycloak.Ldap.GroupMapper(&amp;quot;ldapGroupMapper&amp;quot;, new Keycloak.Ldap.GroupMapperArgs
+    {
+        GroupNameLdapAttribute = &amp;quot;cn&amp;quot;,
+        GroupObjectClasses = 
+        {
+            &amp;quot;groupOfNames&amp;quot;,
+        },
+        LdapGroupsDn = &amp;quot;dc=example,dc=org&amp;quot;,
+        LdapUserFederationId = ldapUserFederation.Id,
+        MemberofLdapAttribute = &amp;quot;memberOf&amp;quot;,
+        MembershipAttributeType = &amp;quot;DN&amp;quot;,
+        MembershipLdapAttribute = &amp;quot;member&amp;quot;,
+        MembershipUserLdapAttribute = &amp;quot;cn&amp;quot;,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -139,6 +226,45 @@ if they do not already exist.</p>
       <h4><a class="xref" href="Pulumi.Keycloak.Ldap.HardcodedRoleMapper.html">HardcodedRoleMapper</a></h4>
       <section><h2 id="-keycloakldaphardcodedrolemapper"># keycloak.ldap.HardcodedRoleMapper</h2>
 <p>This mapper will grant a specified Keycloak role to each Keycloak user linked with LDAP.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Realm = &amp;quot;test&amp;quot;,
+        Enabled = true,
+    });
+    var ldapUserFederation = new Keycloak.Ldap.UserFederation(&amp;quot;ldapUserFederation&amp;quot;, new Keycloak.Ldap.UserFederationArgs
+    {
+        RealmId = realm.Id,
+        UsernameLdapAttribute = &amp;quot;cn&amp;quot;,
+        RdnLdapAttribute = &amp;quot;cn&amp;quot;,
+        UuidLdapAttribute = &amp;quot;entryDN&amp;quot;,
+        UserObjectClasses = 
+        {
+            &amp;quot;simpleSecurityObject&amp;quot;,
+            &amp;quot;organizationalRole&amp;quot;,
+        },
+        ConnectionUrl = &amp;quot;ldap://openldap&amp;quot;,
+        UsersDn = &amp;quot;dc=example,dc=org&amp;quot;,
+        BindDn = &amp;quot;cn=admin,dc=example,dc=org&amp;quot;,
+        BindCredential = &amp;quot;admin&amp;quot;,
+    });
+    var assignAdminRoleToAllUsers = new Keycloak.Ldap.HardcodedRoleMapper(&amp;quot;assignAdminRoleToAllUsers&amp;quot;, new Keycloak.Ldap.HardcodedRoleMapperArgs
+    {
+        RealmId = realm.Id,
+        LdapUserFederationId = ldapUserFederation.Id,
+        Role = &amp;quot;admin&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -166,6 +292,45 @@ users federated via LDAP.</p>
 to LDAP user federation providers that are pulling from AD, and it can propagate
 AD user state to Keycloak in order to enforce settings like expired passwords
 or disabled accounts.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;test&amp;quot;,
+    });
+    var ldapUserFederation = new Keycloak.Ldap.UserFederation(&amp;quot;ldapUserFederation&amp;quot;, new Keycloak.Ldap.UserFederationArgs
+    {
+        BindCredential = &amp;quot;admin&amp;quot;,
+        BindDn = &amp;quot;cn=admin,dc=example,dc=org&amp;quot;,
+        ConnectionUrl = &amp;quot;ldap://my-ad-server&amp;quot;,
+        RdnLdapAttribute = &amp;quot;cn&amp;quot;,
+        RealmId = realm.Id,
+        UserObjectClasses = 
+        {
+            &amp;quot;person&amp;quot;,
+            &amp;quot;organizationalPerson&amp;quot;,
+            &amp;quot;user&amp;quot;,
+        },
+        UsernameLdapAttribute = &amp;quot;cn&amp;quot;,
+        UsersDn = &amp;quot;dc=example,dc=org&amp;quot;,
+        UuidLdapAttribute = &amp;quot;objectGUID&amp;quot;,
+    });
+    var msadUserAccountControlMapper = new Keycloak.Ldap.MsadUserAccountControlMapper(&amp;quot;msadUserAccountControlMapper&amp;quot;, new Keycloak.Ldap.MsadUserAccountControlMapperArgs
+    {
+        LdapUserFederationId = ldapUserFederation.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -191,6 +356,46 @@ or disabled accounts.</p>
 federated via LDAP.</p>
 <p>The LDAP user attribute mapper can be used to map a single LDAP attribute
 to an attribute on the Keycloak user model.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;test&amp;quot;,
+    });
+    var ldapUserFederation = new Keycloak.Ldap.UserFederation(&amp;quot;ldapUserFederation&amp;quot;, new Keycloak.Ldap.UserFederationArgs
+    {
+        BindCredential = &amp;quot;admin&amp;quot;,
+        BindDn = &amp;quot;cn=admin,dc=example,dc=org&amp;quot;,
+        ConnectionUrl = &amp;quot;ldap://openldap&amp;quot;,
+        RdnLdapAttribute = &amp;quot;cn&amp;quot;,
+        RealmId = realm.Id,
+        UserObjectClasses = 
+        {
+            &amp;quot;simpleSecurityObject&amp;quot;,
+            &amp;quot;organizationalRole&amp;quot;,
+        },
+        UsernameLdapAttribute = &amp;quot;cn&amp;quot;,
+        UsersDn = &amp;quot;dc=example,dc=org&amp;quot;,
+        UuidLdapAttribute = &amp;quot;entryDN&amp;quot;,
+    });
+    var ldapUserAttributeMapper = new Keycloak.Ldap.UserAttributeMapper(&amp;quot;ldapUserAttributeMapper&amp;quot;, new Keycloak.Ldap.UserAttributeMapperArgs
+    {
+        LdapAttribute = &amp;quot;bar&amp;quot;,
+        LdapUserFederationId = ldapUserFederation.Id,
+        RealmId = realm.Id,
+        UserModelAttribute = &amp;quot;foo&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -215,6 +420,42 @@ to an attribute on the Keycloak user model.</p>
 from a directory system such as LDAP or Active Directory. Federated users
 will exist within the realm and will be able to log in to clients. Federated
 users can have their attributes defined using mappers.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;test&amp;quot;,
+    });
+    var ldapUserFederation = new Keycloak.Ldap.UserFederation(&amp;quot;ldapUserFederation&amp;quot;, new Keycloak.Ldap.UserFederationArgs
+    {
+        BindCredential = &amp;quot;admin&amp;quot;,
+        BindDn = &amp;quot;cn=admin,dc=example,dc=org&amp;quot;,
+        ConnectionTimeout = &amp;quot;5s&amp;quot;,
+        ConnectionUrl = &amp;quot;ldap://openldap&amp;quot;,
+        Enabled = true,
+        RdnLdapAttribute = &amp;quot;cn&amp;quot;,
+        ReadTimeout = &amp;quot;10s&amp;quot;,
+        RealmId = realm.Id,
+        UserObjectClasses = 
+        {
+            &amp;quot;simpleSecurityObject&amp;quot;,
+            &amp;quot;organizationalRole&amp;quot;,
+        },
+        UsernameLdapAttribute = &amp;quot;cn&amp;quot;,
+        UsersDn = &amp;quot;dc=example,dc=org&amp;quot;,
+        UuidLdapAttribute = &amp;quot;entryDN&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>

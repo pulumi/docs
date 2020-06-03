@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.GuardDuty
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,22 @@
 <blockquote>
 <p><strong>NOTE:</strong> Deleting this resource is equivalent to &quot;disabling&quot; GuardDuty for an AWS region, which removes all existing findings. You can set the <code>enable</code> attribute to <code>false</code> to instead &quot;suspend&quot; monitoring and feedback reporting while keeping existing data. See the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_suspend-disable.html">Suspending or Disabling Amazon GuardDuty documentation</a> for more information.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myDetector = new Aws.GuardDuty.Detector(&amp;quot;myDetector&amp;quot;, new Aws.GuardDuty.DetectorArgs
+    {
+        Enable = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.DetectorArgs.html">DetectorArgs</a></h4>
       <section></section>
@@ -94,6 +110,36 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.InviteAccepter.html">InviteAccepter</a></h4>
       <section><p>Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct master account on read, and disassociate with the master account upon removal.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var master = new Aws.GuardDuty.Detector(&amp;quot;master&amp;quot;, new Aws.GuardDuty.DetectorArgs
+    {
+    });
+    var memberDetector = new Aws.GuardDuty.Detector(&amp;quot;memberDetector&amp;quot;, new Aws.GuardDuty.DetectorArgs
+    {
+    });
+    var dev = new Aws.GuardDuty.Member(&amp;quot;dev&amp;quot;, new Aws.GuardDuty.MemberArgs
+    {
+        AccountId = memberDetector.AccountId,
+        DetectorId = master.Id,
+        Email = &amp;quot;required@example.com&amp;quot;,
+        Invite = true,
+    });
+    var memberInviteAccepter = new Aws.GuardDuty.InviteAccepter(&amp;quot;memberInviteAccepter&amp;quot;, new Aws.GuardDuty.InviteAccepterArgs
+    {
+        DetectorId = memberDetector.Id,
+        MasterAccountId = master.AccountId,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.InviteAccepterArgs.html">InviteAccepterArgs</a></h4>
       <section></section>
@@ -104,6 +150,47 @@
 <blockquote>
 <p><strong>Note:</strong> Currently in GuardDuty, users from member accounts cannot upload and further manage IPSets. IPSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/create-ip-set.html">GuardDuty API Documentation</a></p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var master = new Aws.GuardDuty.Detector(&amp;quot;master&amp;quot;, new Aws.GuardDuty.DetectorArgs
+    {
+        Enable = true,
+    });
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+    });
+    var myIPSetBucketObject = new Aws.S3.BucketObject(&amp;quot;myIPSetBucketObject&amp;quot;, new Aws.S3.BucketObjectArgs
+    {
+        Acl = &amp;quot;public-read&amp;quot;,
+        Bucket = bucket.Id,
+        Content = @&amp;quot;10.0.0.0/8
+
+&amp;quot;,
+        Key = &amp;quot;MyIPSet&amp;quot;,
+    });
+    var myIPSetIPSet = new Aws.GuardDuty.IPSet(&amp;quot;myIPSetIPSet&amp;quot;, new Aws.GuardDuty.IPSetArgs
+    {
+        Activate = true,
+        DetectorId = master.Id,
+        Format = &amp;quot;TXT&amp;quot;,
+        Location = Output.Tuple(myIPSetBucketObject.Bucket, myIPSetBucketObject.Key).Apply(values =&gt;
+        {
+            var bucket = values.Item1;
+            var key = values.Item2;
+            return $&amp;quot;https://s3.amazonaws.com/{bucket}/{key}&amp;quot;;
+        }),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.IPSetArgs.html">IPSetArgs</a></h4>
       <section></section>
@@ -111,16 +198,150 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.Member.html">Member</a></h4>
       <section><p>Provides a resource to manage a GuardDuty member. To accept invitations in member accounts, see the <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_invite_accepter.html"><code>aws.guardduty.InviteAccepter</code> resource</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var master = new Aws.GuardDuty.Detector(&amp;quot;master&amp;quot;, new Aws.GuardDuty.DetectorArgs
+    {
+        Enable = true,
+    });
+    var memberDetector = new Aws.GuardDuty.Detector(&amp;quot;memberDetector&amp;quot;, new Aws.GuardDuty.DetectorArgs
+    {
+        Enable = true,
+    });
+    var memberMember = new Aws.GuardDuty.Member(&amp;quot;memberMember&amp;quot;, new Aws.GuardDuty.MemberArgs
+    {
+        AccountId = memberDetector.AccountId,
+        DetectorId = master.Id,
+        Email = &amp;quot;required@example.com&amp;quot;,
+        Invite = true,
+        InvitationMessage = &amp;quot;please accept guardduty invitation&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.MemberArgs.html">MemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.MemberState.html">MemberState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.GuardDuty.OrganizationAdminAccount.html">OrganizationAdminAccount</a></h4>
+      <section><p>Manages a GuardDuty Organization Admin Account. The AWS account utilizing this resource must be an Organizations master account. More information about Organizations support in GuardDuty can be found in the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html">GuardDuty User Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleOrganization = new Aws.Organizations.Organization(&amp;quot;exampleOrganization&amp;quot;, new Aws.Organizations.OrganizationArgs
+    {
+        AwsServiceAccessPrincipals = 
+        {
+            &amp;quot;guardduty.amazonaws.com&amp;quot;,
+        },
+        FeatureSet = &amp;quot;ALL&amp;quot;,
+    });
+    var exampleDetector = new Aws.GuardDuty.Detector(&amp;quot;exampleDetector&amp;quot;, new Aws.GuardDuty.DetectorArgs
+    {
+    });
+    var exampleOrganizationAdminAccount = new Aws.GuardDuty.OrganizationAdminAccount(&amp;quot;exampleOrganizationAdminAccount&amp;quot;, new Aws.GuardDuty.OrganizationAdminAccountArgs
+    {
+        AdminAccountId = &amp;quot;123456789012&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.GuardDuty.OrganizationAdminAccountArgs.html">OrganizationAdminAccountArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.GuardDuty.OrganizationAdminAccountState.html">OrganizationAdminAccountState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.GuardDuty.OrganizationConfiguration.html">OrganizationConfiguration</a></h4>
+      <section><p>Manages the GuardDuty Organization Configuration in the current AWS Region. The AWS account utilizing this resource must have been assigned as a delegated Organization administrator account, e.g. via the <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_organization_admin_account.html"><code>aws.guardduty.OrganizationAdminAccount</code> resource</a>. More information about Organizations support in GuardDuty can be found in the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html">GuardDuty User Guide</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This is an advanced resource. The provider will automatically assume management of the GuardDuty Organization Configuration without import and perform no actions on removal from the resource configuration.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleDetector = new Aws.GuardDuty.Detector(&amp;quot;exampleDetector&amp;quot;, new Aws.GuardDuty.DetectorArgs
+    {
+        Enable = true,
+    });
+    var exampleOrganizationConfiguration = new Aws.GuardDuty.OrganizationConfiguration(&amp;quot;exampleOrganizationConfiguration&amp;quot;, new Aws.GuardDuty.OrganizationConfigurationArgs
+    {
+        AutoEnable = true,
+        DetectorId = exampleDetector.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.GuardDuty.OrganizationConfigurationArgs.html">OrganizationConfigurationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.GuardDuty.OrganizationConfigurationState.html">OrganizationConfigurationState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.ThreatIntelSet.html">ThreatIntelSet</a></h4>
       <section><p>Provides a resource to manage a GuardDuty ThreatIntelSet.</p>
 <blockquote>
 <p><strong>Note:</strong> Currently in GuardDuty, users from member accounts cannot upload and further manage ThreatIntelSets. ThreatIntelSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/create-threat-intel-set.html">GuardDuty API Documentation</a></p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var master = new Aws.GuardDuty.Detector(&amp;quot;master&amp;quot;, new Aws.GuardDuty.DetectorArgs
+    {
+        Enable = true,
+    });
+    var bucket = new Aws.S3.Bucket(&amp;quot;bucket&amp;quot;, new Aws.S3.BucketArgs
+    {
+        Acl = &amp;quot;private&amp;quot;,
+    });
+    var myThreatIntelSetBucketObject = new Aws.S3.BucketObject(&amp;quot;myThreatIntelSetBucketObject&amp;quot;, new Aws.S3.BucketObjectArgs
+    {
+        Acl = &amp;quot;public-read&amp;quot;,
+        Bucket = bucket.Id,
+        Content = @&amp;quot;10.0.0.0/8
+
+&amp;quot;,
+        Key = &amp;quot;MyThreatIntelSet&amp;quot;,
+    });
+    var myThreatIntelSetThreatIntelSet = new Aws.GuardDuty.ThreatIntelSet(&amp;quot;myThreatIntelSetThreatIntelSet&amp;quot;, new Aws.GuardDuty.ThreatIntelSetArgs
+    {
+        Activate = true,
+        DetectorId = master.Id,
+        Format = &amp;quot;TXT&amp;quot;,
+        Location = Output.Tuple(myThreatIntelSetBucketObject.Bucket, myThreatIntelSetBucketObject.Key).Apply(values =&gt;
+        {
+            var bucket = values.Item1;
+            var key = values.Item2;
+            return $&amp;quot;https://s3.amazonaws.com/{bucket}/{key}&amp;quot;;
+        }),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.ThreatIntelSetArgs.html">ThreatIntelSetArgs</a></h4>
       <section></section>

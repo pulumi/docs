@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StackV1
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,93 @@
   <h1 id="Pulumi_OpenStack_Orchestration_StackV1" data-uid="Pulumi.OpenStack.Orchestration.StackV1" class="text-break">Class StackV1
   </h1>
   <div class="markdown level0 summary"><p>Manages a V1 stack resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var stack1 = new OpenStack.Orchestration.StackV1(&amp;quot;stack1&amp;quot;, new OpenStack.Orchestration.StackV1Args
+    {
+        DisableRollback = true,
+        EnvironmentOpts = 
+        {
+            { &amp;quot;Bin&amp;quot;, @&amp;quot;
+
+&amp;quot; },
+        },
+        Parameters = 
+        {
+            { &amp;quot;length&amp;quot;, 4 },
+        },
+        TemplateOpts = 
+        {
+            { &amp;quot;Bin&amp;quot;, @&amp;quot;heat_template_version: 2013-05-23
+parameters:
+length:
+type: number
+resources:
+test_res:
+type: OS::Heat::TestResource
+random:
+type: OS::Heat::RandomString
+properties:
+  length: {get_param: length}
+
+&amp;quot; },
+        },
+        Timeout = 30,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StackV1</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">StackV1</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Orchestration.html">Pulumi.OpenStack.Orchestration</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
@@ -88,16 +169,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1__ctor_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.#ctor*"></a>
-  <h4 id="Pulumi_OpenStack_Orchestration_StackV1__ctor_System_String_Pulumi_OpenStack_Orchestration_StackV1Args_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Orchestration.StackV1.#ctor(System.String,Pulumi.OpenStack.Orchestration.StackV1Args,System.Nullable{CustomResourceOptions})">StackV1(String, StackV1Args, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Orchestration_StackV1__ctor_System_String_Pulumi_OpenStack_Orchestration_StackV1Args_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.#ctor(System.String,Pulumi.OpenStack.Orchestration.StackV1Args,Pulumi.CustomResourceOptions)">StackV1(String, StackV1Args, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a StackV1 resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StackV1(string name, StackV1Args args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public StackV1(string name, StackV1Args args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +203,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +213,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_Capabilities_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Capabilities*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_Capabilities" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Capabilities">Capabilities</h4>
@@ -153,13 +234,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_CreationTime_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.CreationTime*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_CreationTime" data-uid="Pulumi.OpenStack.Orchestration.StackV1.CreationTime">CreationTime</h4>
@@ -183,13 +264,13 @@ is the time zone as an offset from UTC.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_Description_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Description*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_Description" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Description">Description</h4>
@@ -210,13 +291,13 @@ is the time zone as an offset from UTC.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_DisableRollback_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.DisableRollback*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_DisableRollback" data-uid="Pulumi.OpenStack.Orchestration.StackV1.DisableRollback">DisableRollback</h4>
@@ -239,13 +320,13 @@ resources are not deleted when stack creation fails.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_EnvironmentOpts_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.EnvironmentOpts*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_EnvironmentOpts" data-uid="Pulumi.OpenStack.Orchestration.StackV1.EnvironmentOpts">EnvironmentOpts</h4>
@@ -257,7 +338,7 @@ Environment Opts.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; EnvironmentOpts { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; EnvironmentOpts { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -269,13 +350,13 @@ Environment Opts.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_Name_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Name*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_Name" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Name">Name</h4>
@@ -297,13 +378,13 @@ alphabetic character. Changing this updates the stack's name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_NotificationTopics_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.NotificationTopics*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_NotificationTopics" data-uid="Pulumi.OpenStack.Orchestration.StackV1.NotificationTopics">NotificationTopics</h4>
@@ -324,13 +405,13 @@ alphabetic character. Changing this updates the stack's name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_Outputs_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Outputs*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_Outputs" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Outputs">Outputs</h4>
@@ -351,13 +432,13 @@ alphabetic character. Changing this updates the stack's name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Orchestration.Outputs.StackV1Output.html">StackV1Output</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Orchestration.Outputs.StackV1Output.html">StackV1Output</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_Parameters_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Parameters*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_Parameters" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Parameters">Parameters</h4>
@@ -367,7 +448,7 @@ to the template. Changing this updates the existing stack parameters.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Parameters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Parameters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -379,13 +460,13 @@ to the template. Changing this updates the existing stack parameters.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_Region_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Region*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_Region" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Region">Region</h4>
@@ -408,13 +489,13 @@ creates a new stack.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_Status_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Status*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_Status" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Status">Status</h4>
@@ -435,13 +516,13 @@ creates a new stack.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_StatusReason_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.StatusReason*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_StatusReason" data-uid="Pulumi.OpenStack.Orchestration.StackV1.StatusReason">StatusReason</h4>
@@ -462,13 +543,13 @@ creates a new stack.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_Tags_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Tags*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_Tags" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Tags">Tags</h4>
@@ -489,13 +570,13 @@ creates a new stack.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_TemplateDescription_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.TemplateDescription*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_TemplateDescription" data-uid="Pulumi.OpenStack.Orchestration.StackV1.TemplateDescription">TemplateDescription</h4>
@@ -516,13 +597,13 @@ creates a new stack.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_TemplateOpts_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.TemplateOpts*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_TemplateOpts" data-uid="Pulumi.OpenStack.Orchestration.StackV1.TemplateOpts">TemplateOpts</h4>
@@ -546,13 +627,13 @@ Template Opts.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_Timeout_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Timeout*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_Timeout" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Timeout">Timeout</h4>
@@ -573,13 +654,13 @@ Template Opts.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_UpdatedTime_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.UpdatedTime*"></a>
   <h4 id="Pulumi_OpenStack_Orchestration_StackV1_UpdatedTime" data-uid="Pulumi.OpenStack.Orchestration.StackV1.UpdatedTime">UpdatedTime</h4>
@@ -603,7 +684,7 @@ is the time zone as an offset from UTC.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -611,17 +692,17 @@ is the time zone as an offset from UTC.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L223">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Orchestration_StackV1_Get_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Get*"></a>
-  <h4 id="Pulumi_OpenStack_Orchestration_StackV1_Get_System_String_Input_System_String__Pulumi_OpenStack_Orchestration_StackV1State_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Get(System.String,Input{System.String},Pulumi.OpenStack.Orchestration.StackV1State,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, StackV1State, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_OpenStack_Orchestration_StackV1_Get_System_String_Pulumi_Input_System_String__Pulumi_OpenStack_Orchestration_StackV1State_Pulumi_CustomResourceOptions_" data-uid="Pulumi.OpenStack.Orchestration.StackV1.Get(System.String,Pulumi.Input{System.String},Pulumi.OpenStack.Orchestration.StackV1State,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, StackV1State, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing StackV1 resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static StackV1 Get(string name, Input&lt;string&gt; id, StackV1State state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static StackV1 Get(string name, Input&lt;string&gt; id, StackV1State state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -640,7 +721,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -652,7 +733,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -681,7 +762,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Orchestration/StackV1.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Orchestration/StackV1.cs/#L63" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.AliCloud.Kms
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,26 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in v1.77.0+.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var thisKey = new AliCloud.Kms.Key(&amp;quot;thisKey&amp;quot;, new AliCloud.Kms.KeyArgs
+    {
+    });
+    var thisAlias = new AliCloud.Kms.Alias(&amp;quot;thisAlias&amp;quot;, new AliCloud.Kms.AliasArgs
+    {
+        AliasName = &amp;quot;alias/test_kms_alias&amp;quot;,
+        KeyId = thisKey.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Kms.AliasArgs.html">AliasArgs</a></h4>
       <section></section>
@@ -110,6 +130,12 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Kms.GetKeysResult.html">GetKeysResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Kms.GetKeyVersions.html">GetKeyVersions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Kms.GetKeyVersionsArgs.html">GetKeyVersionsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Kms.GetKeyVersionsResult.html">GetKeyVersionsResult</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Kms.GetPlaintext.html">GetPlaintext</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Kms.GetPlaintextArgs.html">GetPlaintextArgs</a></h4>
@@ -117,11 +143,61 @@
       <h4><a class="xref" href="Pulumi.AliCloud.Kms.GetPlaintextResult.html">GetPlaintextResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Kms.Key.html">Key</a></h4>
-      <section><p>A kms key can help user to protect data security in the transmission process.</p>
+      <section><p>A kms key can help user to protect data security in the transmission process. For information about Alikms Key and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/28947.htm">What is Resource Alikms Key</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in v1.85.0+.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var key = new AliCloud.Kms.Key(&amp;quot;key&amp;quot;, new AliCloud.Kms.KeyArgs
+    {
+        Description = &amp;quot;Hello KMS&amp;quot;,
+        KeyState = &amp;quot;Enabled&amp;quot;,
+        PendingWindowInDays = &amp;quot;7&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Kms.KeyArgs.html">KeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Kms.KeyState.html">KeyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Kms.KeyVersion.html">KeyVersion</a></h4>
+      <section><p>Provides a Alikms Key Version resource. For information about Alikms Key Version and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/133838.htm">What is Resource Alikms Key Version</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in v1.85.0+.</p>
+</blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @this = new AliCloud.Kms.Key(&amp;quot;this&amp;quot;, new AliCloud.Kms.KeyArgs
+    {
+    });
+    var keyversion = new AliCloud.Kms.KeyVersion(&amp;quot;keyversion&amp;quot;, new AliCloud.Kms.KeyVersionArgs
+    {
+        KeyId = @this.Id,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Kms.KeyVersionArgs.html">KeyVersionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Kms.KeyVersionState.html">KeyVersionState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Kms.Secret.html">Secret</a></h4>
       <section><p>This resouce used to create a secret and store its initial version.</p>

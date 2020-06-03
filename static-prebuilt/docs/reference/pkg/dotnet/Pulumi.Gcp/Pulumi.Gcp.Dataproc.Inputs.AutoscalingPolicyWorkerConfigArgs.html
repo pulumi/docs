@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AutoscalingPolicyWorkerConfigArgs
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AutoscalingPolicyWorkerConfigArgs</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">AutoscalingPolicyWorkerConfigArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Dataproc.Inputs.html">Pulumi.Gcp.Dataproc.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -87,7 +116,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/AutoscalingPolicyWorkerConfigArgs.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Inputs/AutoscalingPolicyWorkerConfigArgs.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_AutoscalingPolicyWorkerConfigArgs__ctor_" data-uid="Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicyWorkerConfigArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_AutoscalingPolicyWorkerConfigArgs__ctor" data-uid="Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicyWorkerConfigArgs.#ctor">AutoscalingPolicyWorkerConfigArgs()</h4>
@@ -100,11 +129,14 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/AutoscalingPolicyWorkerConfigArgs.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Inputs/AutoscalingPolicyWorkerConfigArgs.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_AutoscalingPolicyWorkerConfigArgs_MaxInstances_" data-uid="Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicyWorkerConfigArgs.MaxInstances*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_AutoscalingPolicyWorkerConfigArgs_MaxInstances" data-uid="Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicyWorkerConfigArgs.MaxInstances">MaxInstances</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum number of instances for this group. Note that by default, clusters will not use
+secondary workers. Required for secondary workers if the minimum secondary instances is set.
+Bounds: [minInstances, ). Defaults to 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -120,21 +152,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/AutoscalingPolicyWorkerConfigArgs.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Inputs/AutoscalingPolicyWorkerConfigArgs.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_AutoscalingPolicyWorkerConfigArgs_MinInstances_" data-uid="Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicyWorkerConfigArgs.MinInstances*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_AutoscalingPolicyWorkerConfigArgs_MinInstances" data-uid="Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicyWorkerConfigArgs.MinInstances">MinInstances</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MinInstances { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MinInstances { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,21 +179,33 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/AutoscalingPolicyWorkerConfigArgs.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Inputs/AutoscalingPolicyWorkerConfigArgs.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_AutoscalingPolicyWorkerConfigArgs_Weight_" data-uid="Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicyWorkerConfigArgs.Weight*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_AutoscalingPolicyWorkerConfigArgs_Weight" data-uid="Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicyWorkerConfigArgs.Weight">Weight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Weight for the instance group, which is used to determine the fraction of total workers
+in the cluster from this instance group. For example, if primary workers have weight 2,
+and secondary workers have weight 1, the cluster will have approximately 2 primary workers
+for each secondary worker.
+The cluster may not reach the specified balance if constrained by min/max bounds or other
+autoscaling settings. For example, if maxInstances for secondary workers is 0, then only
+primary workers will be added. The cluster can also be out of balance when created.
+If weight is not set on any instance group, the cluster will default to equal weight for
+all groups: the cluster will attempt to maintain an equal number of workers in each group
+within the configured size bounds for each group. If weight is set for one group only,
+the cluster will default to zero weight on the unset group. For example if weight is set
+only on primary workers, the cluster will use primary workers only and no secondary workers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Weight { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Weight { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,7 +217,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -184,7 +229,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/AutoscalingPolicyWorkerConfigArgs.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Dataproc/Inputs/AutoscalingPolicyWorkerConfigArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

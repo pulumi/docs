@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Datadog.PagerDuty
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,39 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.PagerDuty.ServiceObject.html">ServiceObject</a></h4>
       <section><p>Provides access to individual Service Objects of Datadog - PagerDuty integrations. Note that the Datadog - PagerDuty integration must be activated (either manually in the Datadog UI or by using <a href="https://www.terraform.io/docs/providers/datadog/r/integration_pagerduty.html">datadog.pagerduty.Integration</a>) in order for this resource to be usable.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Datadog = Pulumi.Datadog;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var pd = new Datadog.PagerDuty.Integration(&amp;quot;pd&amp;quot;, new Datadog.PagerDuty.IntegrationArgs
+    {
+        ApiToken = &amp;quot;38457822378273432587234242874&amp;quot;,
+        IndividualServices = true,
+        Schedules = 
+        {
+            &amp;quot;https://ddog.pagerduty.com/schedules/X123VF&amp;quot;,
+            &amp;quot;https://ddog.pagerduty.com/schedules/X321XX&amp;quot;,
+        },
+        Subdomain = &amp;quot;ddog&amp;quot;,
+    });
+    var testingFoo = new Datadog.PagerDuty.ServiceObject(&amp;quot;testingFoo&amp;quot;, new Datadog.PagerDuty.ServiceObjectArgs
+    {
+        ServiceKey = &amp;quot;9876543210123456789&amp;quot;,
+        ServiceName = &amp;quot;testing_foo&amp;quot;,
+    });
+    var testingBar = new Datadog.PagerDuty.ServiceObject(&amp;quot;testingBar&amp;quot;, new Datadog.PagerDuty.ServiceObjectArgs
+    {
+        ServiceKey = &amp;quot;54321098765432109876&amp;quot;,
+        ServiceName = &amp;quot;testing_bar&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.PagerDuty.ServiceObjectArgs.html">ServiceObjectArgs</a></h4>
       <section></section>

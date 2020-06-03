@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Okta.Auth
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,12 +85,56 @@
       <h4><a class="xref" href="Pulumi.Okta.Auth.Server.html">Server</a></h4>
       <section><p>Creates an Authorization Server.</p>
 <p>This resource allows you to create and configure an Authorization Server.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Auth.Server(&amp;quot;example&amp;quot;, new Okta.Auth.ServerArgs
+    {
+        Audiences = 
+        {
+            &amp;quot;api://example&amp;quot;,
+        },
+        Description = &amp;quot;My Example Auth Server&amp;quot;,
+        IssuerMode = &amp;quot;CUSTOM_URL&amp;quot;,
+        Status = &amp;quot;ACTIVE&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Auth.ServerArgs.html">ServerArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Okta.Auth.ServerClaim.html">ServerClaim</a></h4>
       <section><p>Creates an Authorization Server Claim.</p>
 <p>This resource allows you to create and configure an Authorization Server Claim.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Auth.ServerClaim(&amp;quot;example&amp;quot;, new Okta.Auth.ServerClaimArgs
+    {
+        AuthServerId = &amp;quot;&amp;lt;auth server id&gt;&amp;quot;,
+        ClaimType = &amp;quot;IDENTITY&amp;quot;,
+        Scopes = 
+        {
+            okta_auth_server_scope.Example.Name,
+        },
+        Value = &amp;quot;String.substringAfter(user.email, \&amp;quot;@\&amp;quot;) == \&amp;quot;example.com\&amp;quot;&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Auth.ServerClaimArgs.html">ServerClaimArgs</a></h4>
       <section></section>
@@ -99,12 +143,62 @@
       <h4><a class="xref" href="Pulumi.Okta.Auth.ServerPolicy.html">ServerPolicy</a></h4>
       <section><p>Creates an Authorization Server Policy.</p>
 <p>This resource allows you to create and configure an Authorization Server Policy.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Auth.ServerPolicy(&amp;quot;example&amp;quot;, new Okta.Auth.ServerPolicyArgs
+    {
+        AuthServerId = &amp;quot;&amp;lt;auth server id&gt;&amp;quot;,
+        ClientWhitelists = 
+        {
+            &amp;quot;ALL_CLIENTS&amp;quot;,
+        },
+        Description = &amp;quot;example&amp;quot;,
+        Priority = 1,
+        Status = &amp;quot;ACTIVE&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Auth.ServerPolicyArgs.html">ServerPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Okta.Auth.ServerPolicyClaim.html">ServerPolicyClaim</a></h4>
       <section><p>Creates an Authorization Server Policy Rule.</p>
 <p>This resource allows you to create and configure an Authorization Server Policy Rule.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Auth.ServerPolicyClaim(&amp;quot;example&amp;quot;, new Okta.Auth.ServerPolicyClaimArgs
+    {
+        AuthServerId = &amp;quot;&amp;lt;auth server id&gt;&amp;quot;,
+        GrantTypeWhitelists = 
+        {
+            &amp;quot;implicit&amp;quot;,
+        },
+        GroupWhitelists = 
+        {
+            &amp;quot;&amp;lt;group ids&gt;&amp;quot;,
+        },
+        PolicyId = &amp;quot;&amp;lt;auth server policy id&gt;&amp;quot;,
+        Priority = 1,
+        Status = &amp;quot;ACTIVE&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Auth.ServerPolicyClaimArgs.html">ServerPolicyClaimArgs</a></h4>
       <section></section>
@@ -115,6 +209,24 @@
       <h4><a class="xref" href="Pulumi.Okta.Auth.ServerScope.html">ServerScope</a></h4>
       <section><p>Creates an Authorization Server Scope.</p>
 <p>This resource allows you to create and configure an Authorization Server Scope.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.Auth.ServerScope(&amp;quot;example&amp;quot;, new Okta.Auth.ServerScopeArgs
+    {
+        AuthServerId = &amp;quot;&amp;lt;auth server id&gt;&amp;quot;,
+        Consent = &amp;quot;IMPLICIT&amp;quot;,
+        MetadataPublish = &amp;quot;NO_CLIENTS&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.Auth.ServerScopeArgs.html">ServerScopeArgs</a></h4>
       <section></section>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Rds
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,11 +77,11 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Rds.Cluster.html">Cluster</a></h4>
-      <section><p>Manages a [RDS Aurora Cluster][2]. To manage cluster instances that inherit configuration from the cluster (when not running the cluster in <code>serverless</code> engine mode), see the <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html"><code>aws.rds.ClusterInstance</code> resource</a>. To manage non-Aurora databases (e.g. MySQL, PostgreSQL, SQL Server, etc.), see the <a href="https://www.terraform.io/docs/providers/aws/r/db_instance.html"><code>aws.rds.Instance</code> resource</a>.</p>
+      <section><p>Manages a <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">RDS Aurora Cluster</a>. To manage cluster instances that inherit configuration from the cluster (when not running the cluster in <code>serverless</code> engine mode), see the <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html"><code>aws.rds.ClusterInstance</code> resource</a>. To manage non-Aurora databases (e.g. MySQL, PostgreSQL, SQL Server, etc.), see the <a href="https://www.terraform.io/docs/providers/aws/r/db_instance.html"><code>aws.rds.Instance</code> resource</a>.</p>
 <p>For information on the difference between the available Aurora MySQL engines
 see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">Comparison between Aurora MySQL 1 and Aurora MySQL 2</a>
 in the Amazon RDS User Guide.</p>
-<p>Changes to a RDS Cluster can occur when you manually change a
+<p>Changes to an RDS Cluster can occur when you manually change a
 parameter, such as <code>port</code>, and are reflected in the next maintenance
 window. Because of this, this provider may report a difference in its planning
 phase because a modification has not yet taken place. You can use the
@@ -89,19 +89,195 @@ phase because a modification has not yet taken place. You can use the
 (see documentation below).</p>
 <blockquote>
 <p><strong>Note:</strong> using <code>apply_immediately</code> can result in a
-brief downtime as the server reboots. See the AWS Docs on [RDS Maintenance][4]
+brief downtime as the server reboots. See the AWS Docs on <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html">RDS Maintenance</a>
 for more information.</p>
 </blockquote>
 <blockquote>
 <p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="aurora-mysql-2x-mysql-57">Aurora MySQL 2.x (MySQL 5.7)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Rds.Cluster(&amp;quot;default&amp;quot;, new Aws.Rds.ClusterArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-west-2a&amp;quot;,
+            &amp;quot;us-west-2b&amp;quot;,
+            &amp;quot;us-west-2c&amp;quot;,
+        },
+        BackupRetentionPeriod = 5,
+        ClusterIdentifier = &amp;quot;aurora-cluster-demo&amp;quot;,
+        DatabaseName = &amp;quot;mydb&amp;quot;,
+        Engine = &amp;quot;aurora-mysql&amp;quot;,
+        EngineVersion = &amp;quot;5.7.mysql_aurora.2.03.2&amp;quot;,
+        MasterPassword = &amp;quot;bar&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+        PreferredBackupWindow = &amp;quot;07:00-09:00&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="aurora-mysql-1x-mysql-56">Aurora MySQL 1.x (MySQL 5.6)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Rds.Cluster(&amp;quot;default&amp;quot;, new Aws.Rds.ClusterArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-west-2a&amp;quot;,
+            &amp;quot;us-west-2b&amp;quot;,
+            &amp;quot;us-west-2c&amp;quot;,
+        },
+        BackupRetentionPeriod = 5,
+        ClusterIdentifier = &amp;quot;aurora-cluster-demo&amp;quot;,
+        DatabaseName = &amp;quot;mydb&amp;quot;,
+        MasterPassword = &amp;quot;bar&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+        PreferredBackupWindow = &amp;quot;07:00-09:00&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="aurora-with-postgresql-engine">Aurora with PostgreSQL engine</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var postgresql = new Aws.Rds.Cluster(&amp;quot;postgresql&amp;quot;, new Aws.Rds.ClusterArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-west-2a&amp;quot;,
+            &amp;quot;us-west-2b&amp;quot;,
+            &amp;quot;us-west-2c&amp;quot;,
+        },
+        BackupRetentionPeriod = 5,
+        ClusterIdentifier = &amp;quot;aurora-cluster-demo&amp;quot;,
+        DatabaseName = &amp;quot;mydb&amp;quot;,
+        Engine = &amp;quot;aurora-postgresql&amp;quot;,
+        MasterPassword = &amp;quot;bar&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+        PreferredBackupWindow = &amp;quot;07:00-09:00&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="aurora-multi-master-cluster">Aurora Multi-Master Cluster</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Rds.Cluster(&amp;quot;example&amp;quot;, new Aws.Rds.ClusterArgs
+    {
+        ClusterIdentifier = &amp;quot;example&amp;quot;,
+        DbSubnetGroupName = aws_db_subnet_group.Example.Name,
+        EngineMode = &amp;quot;multimaster&amp;quot;,
+        MasterPassword = &amp;quot;barbarbarbar&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+        SkipFinalSnapshot = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterEndpoint.html">ClusterEndpoint</a></h4>
-      <section><p>Manages a RDS Aurora Cluster Endpoint.
-You can refer to the [User Guide][1].</p>
+      <section><p>Manages an RDS Aurora Cluster Endpoint.
+You can refer to the <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster">User Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Rds.Cluster(&amp;quot;default&amp;quot;, new Aws.Rds.ClusterArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-west-2a&amp;quot;,
+            &amp;quot;us-west-2b&amp;quot;,
+            &amp;quot;us-west-2c&amp;quot;,
+        },
+        BackupRetentionPeriod = 5,
+        ClusterIdentifier = &amp;quot;aurora-cluster-demo&amp;quot;,
+        DatabaseName = &amp;quot;mydb&amp;quot;,
+        MasterPassword = &amp;quot;bar&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+        PreferredBackupWindow = &amp;quot;07:00-09:00&amp;quot;,
+    });
+    var test1 = new Aws.Rds.ClusterInstance(&amp;quot;test1&amp;quot;, new Aws.Rds.ClusterInstanceArgs
+    {
+        ApplyImmediately = true,
+        ClusterIdentifier = @default.Id,
+        Identifier = &amp;quot;test1&amp;quot;,
+        InstanceClass = &amp;quot;db.t2.small&amp;quot;,
+    });
+    var test2 = new Aws.Rds.ClusterInstance(&amp;quot;test2&amp;quot;, new Aws.Rds.ClusterInstanceArgs
+    {
+        ApplyImmediately = true,
+        ClusterIdentifier = @default.Id,
+        Identifier = &amp;quot;test2&amp;quot;,
+        InstanceClass = &amp;quot;db.t2.small&amp;quot;,
+    });
+    var test3 = new Aws.Rds.ClusterInstance(&amp;quot;test3&amp;quot;, new Aws.Rds.ClusterInstanceArgs
+    {
+        ApplyImmediately = true,
+        ClusterIdentifier = @default.Id,
+        Identifier = &amp;quot;test3&amp;quot;,
+        InstanceClass = &amp;quot;db.t2.small&amp;quot;,
+    });
+    var eligible = new Aws.Rds.ClusterEndpoint(&amp;quot;eligible&amp;quot;, new Aws.Rds.ClusterEndpointArgs
+    {
+        ClusterEndpointIdentifier = &amp;quot;reader&amp;quot;,
+        ClusterIdentifier = @default.Id,
+        CustomEndpointType = &amp;quot;READER&amp;quot;,
+        ExcludedMembers = 
+        {
+            test1.Id,
+            test2.Id,
+        },
+    });
+    var @static = new Aws.Rds.ClusterEndpoint(&amp;quot;static&amp;quot;, new Aws.Rds.ClusterEndpointArgs
+    {
+        ClusterEndpointIdentifier = &amp;quot;static&amp;quot;,
+        ClusterIdentifier = @default.Id,
+        CustomEndpointType = &amp;quot;READER&amp;quot;,
+        StaticMembers = 
+        {
+            test1.Id,
+            test3.Id,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterEndpointArgs.html">ClusterEndpointArgs</a></h4>
       <section></section>
@@ -109,18 +285,55 @@ You can refer to the [User Guide][1].</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterInstance.html">ClusterInstance</a></h4>
       <section><p>Provides an RDS Cluster Instance Resource. A Cluster Instance Resource defines
-attributes that are specific to a single instance in a [RDS Cluster][3],
+attributes that are specific to a single instance in a <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">RDS Cluster</a>,
 specifically running Amazon Aurora.</p>
 <p>Unlike other RDS resources that support replication, with Amazon Aurora you do
 not designate a primary and subsequent replicas. Instead, you simply add RDS
-Instances and Aurora manages the replication. You can use the [count][5]
+Instances and Aurora manages the replication. You can use the <a href="https://www.terraform.io/docs/configuration/resources.html#count">count</a>
 meta-parameter to make multiple instances and join them all to the same RDS
 Cluster, or you may specify different Cluster Instance resources with various
 <code>instance_class</code> sizes.</p>
-<p>For more information on Amazon Aurora, see [Aurora on Amazon RDS][2] in the Amazon RDS User Guide.</p>
+<p>For more information on Amazon Aurora, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the Amazon RDS User Guide.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#protect"><code>protect</code> CustomResourceOption</a> to this resource configuration if you desire protection from accidental deletion.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Rds.Cluster(&amp;quot;default&amp;quot;, new Aws.Rds.ClusterArgs
+    {
+        AvailabilityZones = 
+        {
+            &amp;quot;us-west-2a&amp;quot;,
+            &amp;quot;us-west-2b&amp;quot;,
+            &amp;quot;us-west-2c&amp;quot;,
+        },
+        ClusterIdentifier = &amp;quot;aurora-cluster-demo&amp;quot;,
+        DatabaseName = &amp;quot;mydb&amp;quot;,
+        MasterPassword = &amp;quot;barbut8chars&amp;quot;,
+        MasterUsername = &amp;quot;foo&amp;quot;,
+    });
+    var clusterInstances = new List&amp;lt;Aws.Rds.ClusterInstance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 2; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        clusterInstances.Add(new Aws.Rds.ClusterInstance($&amp;quot;clusterInstances-{range.Value}&amp;quot;, new Aws.Rds.ClusterInstanceArgs
+        {
+            ClusterIdentifier = @default.Id,
+            Identifier = $&amp;quot;aurora-cluster-demo-{range.Value}&amp;quot;,
+            InstanceClass = &amp;quot;db.r4.large&amp;quot;,
+        }));
+    }
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterInstanceArgs.html">ClusterInstanceArgs</a></h4>
       <section></section>
@@ -132,13 +345,60 @@ Cluster, or you may specify different Cluster Instance resources with various
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html">Aurora MySQL Parameters</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html">Aurora PostgreSQL Parameters</a></li>
 </ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Rds.ClusterParameterGroup(&amp;quot;default&amp;quot;, new Aws.Rds.ClusterParameterGroupArgs
+    {
+        Description = &amp;quot;RDS default cluster parameter group&amp;quot;,
+        Family = &amp;quot;aurora5.6&amp;quot;,
+        Parameters = 
+        {
+            new Aws.Rds.Inputs.ClusterParameterGroupParameterArgs
+            {
+                Name = &amp;quot;character_set_server&amp;quot;,
+                Value = &amp;quot;utf8&amp;quot;,
+            },
+            new Aws.Rds.Inputs.ClusterParameterGroupParameterArgs
+            {
+                Name = &amp;quot;character_set_client&amp;quot;,
+                Value = &amp;quot;utf8&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterParameterGroupArgs.html">ClusterParameterGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterParameterGroupState.html">ClusterParameterGroupState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterSnapshot.html">ClusterSnapshot</a></h4>
-      <section><p>Manages a RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the <a href="https://www.terraform.io/docs/providers/aws/r/db_snapshot.html"><code>aws.rds.Snapshot</code> resource</a>.</p>
+      <section><p>Manages an RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the <a href="https://www.terraform.io/docs/providers/aws/r/db_snapshot.html"><code>aws.rds.Snapshot</code> resource</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Rds.ClusterSnapshot(&amp;quot;example&amp;quot;, new Aws.Rds.ClusterSnapshotArgs
+    {
+        DbClusterIdentifier = aws_rds_cluster.Example.Id,
+        DbClusterSnapshotIdentifier = &amp;quot;resourcetestsnapshot1234&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterSnapshotArgs.html">ClusterSnapshotArgs</a></h4>
       <section></section>
@@ -148,6 +408,55 @@ Cluster, or you may specify different Cluster Instance resources with various
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.EventSubscription.html">EventSubscription</a></h4>
       <section><p>Provides a DB event subscription resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultInstance = new Aws.Rds.Instance(&amp;quot;defaultInstance&amp;quot;, new Aws.Rds.InstanceArgs
+    {
+        AllocatedStorage = 10,
+        DbSubnetGroupName = &amp;quot;my_database_subnet_group&amp;quot;,
+        Engine = &amp;quot;mysql&amp;quot;,
+        EngineVersion = &amp;quot;5.6.17&amp;quot;,
+        InstanceClass = &amp;quot;db.t2.micro&amp;quot;,
+        Name = &amp;quot;mydb&amp;quot;,
+        ParameterGroupName = &amp;quot;default.mysql5.6&amp;quot;,
+        Password = &amp;quot;bar&amp;quot;,
+        Username = &amp;quot;foo&amp;quot;,
+    });
+    var defaultTopic = new Aws.Sns.Topic(&amp;quot;defaultTopic&amp;quot;, new Aws.Sns.TopicArgs
+    {
+    });
+    var defaultEventSubscription = new Aws.Rds.EventSubscription(&amp;quot;defaultEventSubscription&amp;quot;, new Aws.Rds.EventSubscriptionArgs
+    {
+        EventCategories = 
+        {
+            &amp;quot;availability&amp;quot;,
+            &amp;quot;deletion&amp;quot;,
+            &amp;quot;failover&amp;quot;,
+            &amp;quot;failure&amp;quot;,
+            &amp;quot;low storage&amp;quot;,
+            &amp;quot;maintenance&amp;quot;,
+            &amp;quot;notification&amp;quot;,
+            &amp;quot;read replica&amp;quot;,
+            &amp;quot;recovery&amp;quot;,
+            &amp;quot;restoration&amp;quot;,
+        },
+        SnsTopic = defaultTopic.Arn,
+        SourceIds = 
+        {
+            defaultInstance.Id,
+        },
+        SourceType = &amp;quot;db-instance&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h2 id="attributes">Attributes</h2>
 <p>The following additional atttributes are provided:</p>
 <ul>
@@ -191,8 +500,50 @@ Cluster, or you may specify different Cluster Instance resources with various
       <h4><a class="xref" href="Pulumi.Aws.Rds.GetSnapshotResult.html">GetSnapshotResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GlobalCluster.html">GlobalCluster</a></h4>
-      <section><p>Manages a RDS Global Cluster, which is an Aurora global database spread across multiple regions. The global database contains a single primary cluster with read-write capability, and a read-only secondary cluster that receives data from the primary cluster through high-speed replication performed by the Aurora storage subsystem.</p>
+      <section><p>Manages an RDS Global Cluster, which is an Aurora global database spread across multiple regions. The global database contains a single primary cluster with read-write capability, and a read-only secondary cluster that receives data from the primary cluster through high-speed replication performed by the Aurora storage subsystem.</p>
 <p>More information about Aurora global databases can be found in the <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database-creating">Aurora User Guide</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var primary = new Aws.Provider(&amp;quot;primary&amp;quot;, new Aws.ProviderArgs
+    {
+        Region = &amp;quot;us-east-2&amp;quot;,
+    });
+    var secondary = new Aws.Provider(&amp;quot;secondary&amp;quot;, new Aws.ProviderArgs
+    {
+        Region = &amp;quot;us-west-2&amp;quot;,
+    });
+    var example = new Aws.Rds.GlobalCluster(&amp;quot;example&amp;quot;, new Aws.Rds.GlobalClusterArgs
+    {
+        GlobalClusterIdentifier = &amp;quot;example&amp;quot;,
+    });
+    var primaryCluster = new Aws.Rds.Cluster(&amp;quot;primaryCluster&amp;quot;, new Aws.Rds.ClusterArgs
+    {
+        EngineMode = &amp;quot;global&amp;quot;,
+        GlobalClusterIdentifier = example.Id,
+    });
+    var primaryClusterInstance = new Aws.Rds.ClusterInstance(&amp;quot;primaryClusterInstance&amp;quot;, new Aws.Rds.ClusterInstanceArgs
+    {
+        ClusterIdentifier = primaryCluster.Id,
+    });
+    var secondaryCluster = new Aws.Rds.Cluster(&amp;quot;secondaryCluster&amp;quot;, new Aws.Rds.ClusterArgs
+    {
+        EngineMode = &amp;quot;global&amp;quot;,
+        GlobalClusterIdentifier = example.Id,
+    });
+    var secondaryClusterInstance = new Aws.Rds.ClusterInstance(&amp;quot;secondaryClusterInstance&amp;quot;, new Aws.Rds.ClusterInstanceArgs
+    {
+        ClusterIdentifier = secondaryCluster.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GlobalClusterArgs.html">GlobalClusterArgs</a></h4>
       <section></section>
@@ -223,6 +574,48 @@ state</a>.</p>
 <p>Amazon RDS supports three types of instance classes: Standard, Memory Optimized,
 and Burstable Performance. For more information please read the AWS RDS documentation
 about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class Types</a></p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-usage">Basic Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Rds.Instance(&amp;quot;default&amp;quot;, new Aws.Rds.InstanceArgs
+    {
+        AllocatedStorage = 20,
+        Engine = &amp;quot;mysql&amp;quot;,
+        EngineVersion = &amp;quot;5.7&amp;quot;,
+        InstanceClass = &amp;quot;db.t2.micro&amp;quot;,
+        Name = &amp;quot;mydb&amp;quot;,
+        ParameterGroupName = &amp;quot;default.mysql5.7&amp;quot;,
+        Password = &amp;quot;foobarbaz&amp;quot;,
+        StorageType = &amp;quot;gp2&amp;quot;,
+        Username = &amp;quot;foo&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h3 id="storage-autoscaling">Storage Autoscaling</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Rds.Instance(&amp;quot;example&amp;quot;, new Aws.Rds.InstanceArgs
+    {
+        AllocatedStorage = 50,
+        MaxAllocatedStorage = 100,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
@@ -236,6 +629,55 @@ about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.D
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html">MySQL Options</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html">Oracle Options</a></li>
 </ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Rds.OptionGroup(&amp;quot;example&amp;quot;, new Aws.Rds.OptionGroupArgs
+    {
+        EngineName = &amp;quot;sqlserver-ee&amp;quot;,
+        MajorEngineVersion = &amp;quot;11.00&amp;quot;,
+        Options = 
+        {
+            new Aws.Rds.Inputs.OptionGroupOptionArgs
+            {
+                OptionName = &amp;quot;Timezone&amp;quot;,
+                OptionSettings = 
+                {
+                    new Aws.Rds.Inputs.OptionGroupOptionOptionSettingArgs
+                    {
+                        Name = &amp;quot;TIME_ZONE&amp;quot;,
+                        Value = &amp;quot;UTC&amp;quot;,
+                    },
+                },
+            },
+            new Aws.Rds.Inputs.OptionGroupOptionArgs
+            {
+                OptionName = &amp;quot;SQLSERVER_BACKUP_RESTORE&amp;quot;,
+                OptionSettings = 
+                {
+                    new Aws.Rds.Inputs.OptionGroupOptionOptionSettingArgs
+                    {
+                        Name = &amp;quot;IAM_ROLE_ARN&amp;quot;,
+                        Value = aws_iam_role.Example.Arn,
+                    },
+                },
+            },
+            new Aws.Rds.Inputs.OptionGroupOptionArgs
+            {
+                OptionName = &amp;quot;TDE&amp;quot;,
+            },
+        },
+        OptionGroupDescription = &amp;quot;Option Group&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.OptionGroupArgs.html">OptionGroupArgs</a></h4>
       <section></section>
@@ -250,13 +692,42 @@ about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.D
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ModifyInstance.Oracle.html#USER_ModifyInstance.Oracle.sqlnet">Oracle Parameters</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.html#Appendix.PostgreSQL.CommonDBATasks.Parameters">PostgreSQL Parameters</a></li>
 </ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Rds.ParameterGroup(&amp;quot;default&amp;quot;, new Aws.Rds.ParameterGroupArgs
+    {
+        Family = &amp;quot;mysql5.6&amp;quot;,
+        Parameters = 
+        {
+            new Aws.Rds.Inputs.ParameterGroupParameterArgs
+            {
+                Name = &amp;quot;character_set_server&amp;quot;,
+                Value = &amp;quot;utf8&amp;quot;,
+            },
+            new Aws.Rds.Inputs.ParameterGroupParameterArgs
+            {
+                Name = &amp;quot;character_set_client&amp;quot;,
+                Value = &amp;quot;utf8&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ParameterGroupArgs.html">ParameterGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ParameterGroupState.html">ParameterGroupState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.RoleAssociation.html">RoleAssociation</a></h4>
-      <section><p>Manages a RDS DB Instance association with an IAM Role. Example use cases:</p>
+      <section><p>Manages an RDS DB Instance association with an IAM Role. Example use cases:</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-s3-integration.html">Amazon RDS Oracle integration with Amazon S3</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PostgreSQL.S3Import.html">Importing Amazon S3 Data into an RDS PostgreSQL DB Instance</a></li>
@@ -264,6 +735,24 @@ about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.D
 <blockquote>
 <p>To manage the RDS DB Instance IAM Role for <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">Enhanced Monitoring</a>, see the <code>aws.rds.Instance</code> resource <code>monitoring_role_arn</code> argument instead.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Aws.Rds.RoleAssociation(&amp;quot;example&amp;quot;, new Aws.Rds.RoleAssociationArgs
+    {
+        DbInstanceIdentifier = aws_db_instance.Example.Id,
+        FeatureName = &amp;quot;S3_INTEGRATION&amp;quot;,
+        RoleArn = aws_iam_role.Example.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.RoleAssociationArgs.html">RoleAssociationArgs</a></h4>
       <section></section>
@@ -274,13 +763,65 @@ about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.D
 EC2-Classic Platform. For instances inside a VPC, use the
 <a href="https://www.terraform.io/docs/providers/aws/r/db_instance.html#vpc_security_group_ids"><code>aws_db_instance.vpc_security_group_ids</code></a>
 attribute instead.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Rds.SecurityGroup(&amp;quot;default&amp;quot;, new Aws.Rds.SecurityGroupArgs
+    {
+        Ingress = 
+        {
+            new Aws.Rds.Inputs.SecurityGroupIngressArgs
+            {
+                Cidr = &amp;quot;10.0.0.0/24&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.SecurityGroupArgs.html">SecurityGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.SecurityGroupState.html">SecurityGroupState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.Snapshot.html">Snapshot</a></h4>
-      <section><p>Manages a RDS database instance snapshot. For managing RDS database cluster snapshots, see the <a href="https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html"><code>aws.rds.ClusterSnapshot</code> resource</a>.</p>
+      <section><p>Manages an RDS database instance snapshot. For managing RDS database cluster snapshots, see the <a href="https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html"><code>aws.rds.ClusterSnapshot</code> resource</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bar = new Aws.Rds.Instance(&amp;quot;bar&amp;quot;, new Aws.Rds.InstanceArgs
+    {
+        AllocatedStorage = 10,
+        BackupRetentionPeriod = 0,
+        Engine = &amp;quot;MySQL&amp;quot;,
+        EngineVersion = &amp;quot;5.6.21&amp;quot;,
+        InstanceClass = &amp;quot;db.t2.micro&amp;quot;,
+        MaintenanceWindow = &amp;quot;Fri:09:00-Fri:09:30&amp;quot;,
+        Name = &amp;quot;baz&amp;quot;,
+        ParameterGroupName = &amp;quot;default.mysql5.6&amp;quot;,
+        Password = &amp;quot;barbarbarbar&amp;quot;,
+        Username = &amp;quot;foo&amp;quot;,
+    });
+    var test = new Aws.Rds.Snapshot(&amp;quot;test&amp;quot;, new Aws.Rds.SnapshotArgs
+    {
+        DbInstanceIdentifier = bar.Id,
+        DbSnapshotIdentifier = &amp;quot;testsnapshot1234&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.SnapshotArgs.html">SnapshotArgs</a></h4>
       <section></section>
@@ -288,6 +829,30 @@ attribute instead.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.SubnetGroup.html">SubnetGroup</a></h4>
       <section><p>Provides an RDS DB subnet group resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Aws.Rds.SubnetGroup(&amp;quot;default&amp;quot;, new Aws.Rds.SubnetGroupArgs
+    {
+        SubnetIds = 
+        {
+            aws_subnet.Frontend.Id,
+            aws_subnet.Backend.Id,
+        },
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;My DB subnet group&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.SubnetGroupArgs.html">SubnetGroupArgs</a></h4>
       <section></section>

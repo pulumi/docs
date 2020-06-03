@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GroupMembershipProtocolMapper
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,67 @@ Keycloak.</p>
 to a claim in a token. Protocol mappers can be defined for a single client,
 or they can be defined for a client scope which can be shared between multiple
 different clients.</p>
+<h3 id="example-usage-client">Example Usage (Client)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var openidClient = new Keycloak.OpenId.Client(&amp;quot;openidClient&amp;quot;, new Keycloak.OpenId.ClientArgs
+    {
+        AccessType = &amp;quot;CONFIDENTIAL&amp;quot;,
+        ClientId = &amp;quot;test-client&amp;quot;,
+        Enabled = true,
+        RealmId = realm.Id,
+        ValidRedirectUris = 
+        {
+            &amp;quot;http://localhost:8080/openid-callback&amp;quot;,
+        },
+    });
+    var groupMembershipMapper = new Keycloak.OpenId.GroupMembershipProtocolMapper(&amp;quot;groupMembershipMapper&amp;quot;, new Keycloak.OpenId.GroupMembershipProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;groups&amp;quot;,
+        ClientId = openidClient.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
+<h3 id="example-usage-client-scope">Example Usage (Client Scope)</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;my-realm&amp;quot;,
+    });
+    var clientScope = new Keycloak.OpenId.ClientScope(&amp;quot;clientScope&amp;quot;, new Keycloak.OpenId.ClientScopeArgs
+    {
+        RealmId = realm.Id,
+    });
+    var groupMembershipMapper = new Keycloak.OpenId.GroupMembershipProtocolMapper(&amp;quot;groupMembershipMapper&amp;quot;, new Keycloak.OpenId.GroupMembershipProtocolMapperArgs
+    {
+        ClaimName = &amp;quot;groups&amp;quot;,
+        ClientScopeId = clientScope.Id,
+        RealmId = realm.Id,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -96,7 +157,45 @@ different clients.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GroupMembershipProtocolMapper</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">GroupMembershipProtocolMapper</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.OpenId.html">Pulumi.Keycloak.OpenId</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
@@ -107,16 +206,16 @@ different clients.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper__ctor_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.#ctor*"></a>
-  <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper__ctor_System_String_Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapperArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.#ctor(System.String,Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapperArgs,System.Nullable{CustomResourceOptions})">GroupMembershipProtocolMapper(String, GroupMembershipProtocolMapperArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper__ctor_System_String_Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapperArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.#ctor(System.String,Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapperArgs,Pulumi.CustomResourceOptions)">GroupMembershipProtocolMapper(String, GroupMembershipProtocolMapperArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a GroupMembershipProtocolMapper resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GroupMembershipProtocolMapper(string name, GroupMembershipProtocolMapperArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public GroupMembershipProtocolMapper(string name, GroupMembershipProtocolMapperArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,7 +240,7 @@ different clients.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -151,7 +250,7 @@ different clients.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_AddToAccessToken_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.AddToAccessToken*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_AddToAccessToken" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.AddToAccessToken">AddToAccessToken</h4>
@@ -171,13 +270,13 @@ different clients.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_AddToIdToken_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.AddToIdToken*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_AddToIdToken" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.AddToIdToken">AddToIdToken</h4>
@@ -197,13 +296,13 @@ different clients.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_AddToUserinfo_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.AddToUserinfo*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_AddToUserinfo" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.AddToUserinfo">AddToUserinfo</h4>
@@ -223,13 +322,13 @@ different clients.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_ClaimName_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.ClaimName*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_ClaimName" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.ClaimName">ClaimName</h4>
@@ -249,13 +348,13 @@ different clients.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_ClientId_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.ClientId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_ClientId" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.ClientId">ClientId</h4>
@@ -264,7 +363,7 @@ different clients.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClientId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClientId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,13 +375,13 @@ different clients.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_ClientScopeId_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.ClientScopeId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_ClientScopeId" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.ClientScopeId">ClientScopeId</h4>
@@ -291,7 +390,7 @@ different clients.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClientScopeId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClientScopeId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,13 +402,13 @@ different clients.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_FullPath_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.FullPath*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_FullPath" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.FullPath">FullPath</h4>
@@ -329,13 +428,13 @@ different clients.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_Name_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.Name*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_Name" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.Name">Name</h4>
@@ -356,13 +455,13 @@ different clients.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_RealmId_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.RealmId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_RealmId" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.RealmId">RealmId</h4>
@@ -383,7 +482,7 @@ different clients.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -391,17 +490,17 @@ different clients.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_Get_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.Get*"></a>
-  <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_Get_System_String_Input_System_String__Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapperState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.Get(System.String,Input{System.String},Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapperState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GroupMembershipProtocolMapperState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapper_Get_System_String_Pulumi_Input_System_String__Pulumi_Keycloak_OpenId_GroupMembershipProtocolMapperState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapper.Get(System.String,Pulumi.Input{System.String},Pulumi.Keycloak.OpenId.GroupMembershipProtocolMapperState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, GroupMembershipProtocolMapperState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing GroupMembershipProtocolMapper resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static GroupMembershipProtocolMapper Get(string name, Input&lt;string&gt; id, GroupMembershipProtocolMapperState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static GroupMembershipProtocolMapper Get(string name, Input&lt;string&gt; id, GroupMembershipProtocolMapperState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -420,7 +519,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -432,7 +531,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -461,7 +560,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L37" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/OpenId/GroupMembershipProtocolMapper.cs/#L104" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

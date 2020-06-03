@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RegionAutoscalerAutoscalingPolicyMetric
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,23 +78,74 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RegionAutoscalerAutoscalingPolicyMetric</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_RegionAutoscalerAutoscalingPolicyMetric_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RegionAutoscalerAutoscalingPolicyMetric : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RegionAutoscalerAutoscalingPolicyMetric</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L45">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionAutoscalerAutoscalingPolicyMetric_Filter" data-uid="Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyMetric.Filter">Filter</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A filter string to be used as the filter string for
+a Stackdriver Monitoring TimeSeries.list API call.
+This filter is used to select a specific TimeSeries for
+the purpose of autoscaling and to determine whether the metric
+is exporting per-instance or per-group data.
+You can only use the AND operator for joining selectors.
+You can only use direct equality comparison operator (=) without
+any functions for each selector.
+You can specify the metric in both the filter string and in the
+metric field. However, if specified in both places, the metric must
+be identical.
+The monitored resource type determines what kind of values are
+expected for the metric. If it is a gce_instance, the autoscaler
+expects the metric to include a separate TimeSeries for each
+instance in a group. In such a case, you cannot filter on resource
+labels.
+If the resource type is any other value, the autoscaler expects
+this metric to contain values that apply to the entire autoscaled
+instance group and resource label filtering can be performed to
+point autoscaler at the correct TimeSeries to scale upon.
+This is called a per-group metric for the purpose of autoscaling.
+If not specified, the type defaults to gce_instance.
+You should provide a filter that is selective enough to pick just
+one TimeSeries for the autoscaled group or for each of the instances
+(if you are using gce_instance resource type). If multiple
+TimeSeries are returned upon the query execution, the autoscaler
+will sum their respective values to obtain its scaling value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Filter</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Filter</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -106,16 +157,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionAutoscalerAutoscalingPolicyMetric_Name" data-uid="Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyMetric.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -137,10 +191,24 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L68">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionAutoscalerAutoscalingPolicyMetric_SingleInstanceAssignment" data-uid="Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyMetric.SingleInstanceAssignment">SingleInstanceAssignment</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If scaling is based on a per-group metric value that represents the
+total amount of work to be done or resource usage, set this value to
+an amount assigned for a single instance of the scaled group.
+The autoscaler will keep the number of instances proportional to the
+value of this metric, the metric itself should not change value due
+to group resizing.
+For example, a good metric to use with the target is
+<code>pubsub.googleapis.com/subscription/num_undelivered_messages</code>
+or a custom metric exporting the total number of requests coming to
+your instances.
+A bad example would be a metric exporting an average or median
+latency, since this value can't include a chunk assignable to a
+single instance, it could be better used with utilization_target
+instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -162,10 +230,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L74">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionAutoscalerAutoscalingPolicyMetric_Target" data-uid="Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyMetric.Target">Target</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -187,14 +258,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L79">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RegionAutoscalerAutoscalingPolicyMetric_Type" data-uid="Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyMetric.Type">Type</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines how target utilization value is expressed for a
+Stackdriver Monitoring metric.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string? Type</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string Type</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,7 +279,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -218,7 +291,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/stack72/v3.24.0/sdk/dotnet/Compute/Outputs/RegionAutoscalerAutoscalingPolicyMetric.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

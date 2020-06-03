@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.MixedReality
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,27 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Azure.MixedReality.SpatialAnchorsAccount.html">SpatialAnchorsAccount</a></h4>
       <section><p>Manages an Azure Spatial Anchors Account.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;northeurope&amp;quot;,
+    });
+    var exampleSpatialAnchorsAccount = new Azure.MixedReality.SpatialAnchorsAccount(&amp;quot;exampleSpatialAnchorsAccount&amp;quot;, new Azure.MixedReality.SpatialAnchorsAccountArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.MixedReality.SpatialAnchorsAccountArgs.html">SpatialAnchorsAccountArgs</a></h4>
       <section></section>

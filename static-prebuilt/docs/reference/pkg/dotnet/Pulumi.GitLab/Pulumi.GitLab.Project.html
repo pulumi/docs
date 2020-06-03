@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Project
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,7 +76,45 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Project</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Project</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.GitLab.html">Pulumi.GitLab</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.GitLab.dll</h6>
@@ -87,16 +125,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L191">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project__ctor_" data-uid="Pulumi.GitLab.Project.#ctor*"></a>
-  <h4 id="Pulumi_GitLab_Project__ctor_System_String_Pulumi_GitLab_ProjectArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.GitLab.Project.#ctor(System.String,Pulumi.GitLab.ProjectArgs,System.Nullable{CustomResourceOptions})">Project(String, ProjectArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_GitLab_Project__ctor_System_String_Pulumi_GitLab_ProjectArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.GitLab.Project.#ctor(System.String,Pulumi.GitLab.ProjectArgs,Pulumi.CustomResourceOptions)">Project(String, ProjectArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Project resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Project(string name, ProjectArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Project(string name, ProjectArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +159,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -131,7 +169,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_ApprovalsBeforeMerge_" data-uid="Pulumi.GitLab.Project.ApprovalsBeforeMerge*"></a>
   <h4 id="Pulumi_GitLab_Project_ApprovalsBeforeMerge" data-uid="Pulumi.GitLab.Project.ApprovalsBeforeMerge">ApprovalsBeforeMerge</h4>
@@ -152,13 +190,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_Archived_" data-uid="Pulumi.GitLab.Project.Archived*"></a>
   <h4 id="Pulumi_GitLab_Project_Archived" data-uid="Pulumi.GitLab.Project.Archived">Archived</h4>
@@ -179,13 +217,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_ContainerRegistryEnabled_" data-uid="Pulumi.GitLab.Project.ContainerRegistryEnabled*"></a>
   <h4 id="Pulumi_GitLab_Project_ContainerRegistryEnabled" data-uid="Pulumi.GitLab.Project.ContainerRegistryEnabled">ContainerRegistryEnabled</h4>
@@ -206,13 +244,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_DefaultBranch_" data-uid="Pulumi.GitLab.Project.DefaultBranch*"></a>
   <h4 id="Pulumi_GitLab_Project_DefaultBranch" data-uid="Pulumi.GitLab.Project.DefaultBranch">DefaultBranch</h4>
@@ -221,7 +259,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultBranch { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultBranch { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,13 +271,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_Description_" data-uid="Pulumi.GitLab.Project.Description*"></a>
   <h4 id="Pulumi_GitLab_Project_Description" data-uid="Pulumi.GitLab.Project.Description">Description</h4>
@@ -248,7 +286,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -260,13 +298,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_HttpUrlToRepo_" data-uid="Pulumi.GitLab.Project.HttpUrlToRepo*"></a>
   <h4 id="Pulumi_GitLab_Project_HttpUrlToRepo" data-uid="Pulumi.GitLab.Project.HttpUrlToRepo">HttpUrlToRepo</h4>
@@ -288,13 +326,13 @@ repository via HTTP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_InitializeWithReadme_" data-uid="Pulumi.GitLab.Project.InitializeWithReadme*"></a>
   <h4 id="Pulumi_GitLab_Project_InitializeWithReadme" data-uid="Pulumi.GitLab.Project.InitializeWithReadme">InitializeWithReadme</h4>
@@ -315,13 +353,13 @@ repository via HTTP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_IssuesEnabled_" data-uid="Pulumi.GitLab.Project.IssuesEnabled*"></a>
   <h4 id="Pulumi_GitLab_Project_IssuesEnabled" data-uid="Pulumi.GitLab.Project.IssuesEnabled">IssuesEnabled</h4>
@@ -342,13 +380,13 @@ repository via HTTP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_LfsEnabled_" data-uid="Pulumi.GitLab.Project.LfsEnabled*"></a>
   <h4 id="Pulumi_GitLab_Project_LfsEnabled" data-uid="Pulumi.GitLab.Project.LfsEnabled">LfsEnabled</h4>
@@ -369,13 +407,13 @@ repository via HTTP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_MergeMethod_" data-uid="Pulumi.GitLab.Project.MergeMethod*"></a>
   <h4 id="Pulumi_GitLab_Project_MergeMethod" data-uid="Pulumi.GitLab.Project.MergeMethod">MergeMethod</h4>
@@ -386,7 +424,7 @@ Repositories are created with <code>merge</code> by default</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MergeMethod { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MergeMethod { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -398,13 +436,13 @@ Repositories are created with <code>merge</code> by default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_MergeRequestsEnabled_" data-uid="Pulumi.GitLab.Project.MergeRequestsEnabled*"></a>
   <h4 id="Pulumi_GitLab_Project_MergeRequestsEnabled" data-uid="Pulumi.GitLab.Project.MergeRequestsEnabled">MergeRequestsEnabled</h4>
@@ -425,13 +463,13 @@ Repositories are created with <code>merge</code> by default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_Name_" data-uid="Pulumi.GitLab.Project.Name*"></a>
   <h4 id="Pulumi_GitLab_Project_Name" data-uid="Pulumi.GitLab.Project.Name">Name</h4>
@@ -452,13 +490,13 @@ Repositories are created with <code>merge</code> by default</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_NamespaceId_" data-uid="Pulumi.GitLab.Project.NamespaceId*"></a>
   <h4 id="Pulumi_GitLab_Project_NamespaceId" data-uid="Pulumi.GitLab.Project.NamespaceId">NamespaceId</h4>
@@ -480,13 +518,13 @@ See <code>gitlab..Group</code> for an example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_OnlyAllowMergeIfAllDiscussionsAreResolved_" data-uid="Pulumi.GitLab.Project.OnlyAllowMergeIfAllDiscussionsAreResolved*"></a>
   <h4 id="Pulumi_GitLab_Project_OnlyAllowMergeIfAllDiscussionsAreResolved" data-uid="Pulumi.GitLab.Project.OnlyAllowMergeIfAllDiscussionsAreResolved">OnlyAllowMergeIfAllDiscussionsAreResolved</h4>
@@ -507,13 +545,13 @@ See <code>gitlab..Group</code> for an example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_OnlyAllowMergeIfPipelineSucceeds_" data-uid="Pulumi.GitLab.Project.OnlyAllowMergeIfPipelineSucceeds*"></a>
   <h4 id="Pulumi_GitLab_Project_OnlyAllowMergeIfPipelineSucceeds" data-uid="Pulumi.GitLab.Project.OnlyAllowMergeIfPipelineSucceeds">OnlyAllowMergeIfPipelineSucceeds</h4>
@@ -534,13 +572,13 @@ See <code>gitlab..Group</code> for an example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_Path_" data-uid="Pulumi.GitLab.Project.Path*"></a>
   <h4 id="Pulumi_GitLab_Project_Path" data-uid="Pulumi.GitLab.Project.Path">Path</h4>
@@ -549,7 +587,7 @@ See <code>gitlab..Group</code> for an example.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Path { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Path { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -561,13 +599,13 @@ See <code>gitlab..Group</code> for an example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_PipelinesEnabled_" data-uid="Pulumi.GitLab.Project.PipelinesEnabled*"></a>
   <h4 id="Pulumi_GitLab_Project_PipelinesEnabled" data-uid="Pulumi.GitLab.Project.PipelinesEnabled">PipelinesEnabled</h4>
@@ -588,13 +626,13 @@ See <code>gitlab..Group</code> for an example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_RequestAccessEnabled_" data-uid="Pulumi.GitLab.Project.RequestAccessEnabled*"></a>
   <h4 id="Pulumi_GitLab_Project_RequestAccessEnabled" data-uid="Pulumi.GitLab.Project.RequestAccessEnabled">RequestAccessEnabled</h4>
@@ -615,13 +653,13 @@ See <code>gitlab..Group</code> for an example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_RunnersToken_" data-uid="Pulumi.GitLab.Project.RunnersToken*"></a>
   <h4 id="Pulumi_GitLab_Project_RunnersToken" data-uid="Pulumi.GitLab.Project.RunnersToken">RunnersToken</h4>
@@ -642,13 +680,13 @@ See <code>gitlab..Group</code> for an example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_SharedRunnersEnabled_" data-uid="Pulumi.GitLab.Project.SharedRunnersEnabled*"></a>
   <h4 id="Pulumi_GitLab_Project_SharedRunnersEnabled" data-uid="Pulumi.GitLab.Project.SharedRunnersEnabled">SharedRunnersEnabled</h4>
@@ -669,13 +707,13 @@ See <code>gitlab..Group</code> for an example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_SharedWithGroups_" data-uid="Pulumi.GitLab.Project.SharedWithGroups*"></a>
   <h4 id="Pulumi_GitLab_Project_SharedWithGroups" data-uid="Pulumi.GitLab.Project.SharedWithGroups">SharedWithGroups</h4>
@@ -696,13 +734,13 @@ See <code>gitlab..Group</code> for an example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.GitLab.Outputs.ProjectSharedWithGroup.html">ProjectSharedWithGroup</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.GitLab.Outputs.ProjectSharedWithGroup.html">ProjectSharedWithGroup</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_SnippetsEnabled_" data-uid="Pulumi.GitLab.Project.SnippetsEnabled*"></a>
   <h4 id="Pulumi_GitLab_Project_SnippetsEnabled" data-uid="Pulumi.GitLab.Project.SnippetsEnabled">SnippetsEnabled</h4>
@@ -723,13 +761,13 @@ See <code>gitlab..Group</code> for an example.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_SshUrlToRepo_" data-uid="Pulumi.GitLab.Project.SshUrlToRepo*"></a>
   <h4 id="Pulumi_GitLab_Project_SshUrlToRepo" data-uid="Pulumi.GitLab.Project.SshUrlToRepo">SshUrlToRepo</h4>
@@ -751,13 +789,13 @@ repository via SSH.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_Tags_" data-uid="Pulumi.GitLab.Project.Tags*"></a>
   <h4 id="Pulumi_GitLab_Project_Tags" data-uid="Pulumi.GitLab.Project.Tags">Tags</h4>
@@ -778,13 +816,13 @@ repository via SSH.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_VisibilityLevel_" data-uid="Pulumi.GitLab.Project.VisibilityLevel*"></a>
   <h4 id="Pulumi_GitLab_Project_VisibilityLevel" data-uid="Pulumi.GitLab.Project.VisibilityLevel">VisibilityLevel</h4>
@@ -795,7 +833,7 @@ Repositories are created as private by default.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VisibilityLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VisibilityLevel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -807,13 +845,13 @@ Repositories are created as private by default.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L174">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_WebUrl_" data-uid="Pulumi.GitLab.Project.WebUrl*"></a>
   <h4 id="Pulumi_GitLab_Project_WebUrl" data-uid="Pulumi.GitLab.Project.WebUrl">WebUrl</h4>
@@ -834,13 +872,13 @@ Repositories are created as private by default.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_WikiEnabled_" data-uid="Pulumi.GitLab.Project.WikiEnabled*"></a>
   <h4 id="Pulumi_GitLab_Project_WikiEnabled" data-uid="Pulumi.GitLab.Project.WikiEnabled">WikiEnabled</h4>
@@ -861,7 +899,7 @@ Repositories are created as private by default.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -869,17 +907,17 @@ Repositories are created as private by default.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L221">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L221">View Source</a>
   </span>
   <a id="Pulumi_GitLab_Project_Get_" data-uid="Pulumi.GitLab.Project.Get*"></a>
-  <h4 id="Pulumi_GitLab_Project_Get_System_String_Input_System_String__Pulumi_GitLab_ProjectState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.GitLab.Project.Get(System.String,Input{System.String},Pulumi.GitLab.ProjectState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ProjectState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_GitLab_Project_Get_System_String_Pulumi_Input_System_String__Pulumi_GitLab_ProjectState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.GitLab.Project.Get(System.String,Pulumi.Input{System.String},Pulumi.GitLab.ProjectState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ProjectState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Project resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Project Get(string name, Input&lt;string&gt; id, ProjectState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Project Get(string name, Input&lt;string&gt; id, ProjectState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -898,7 +936,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -910,7 +948,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -939,7 +977,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/Project.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/Project.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

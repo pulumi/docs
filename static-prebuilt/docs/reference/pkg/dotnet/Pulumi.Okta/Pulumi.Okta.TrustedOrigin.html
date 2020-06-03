@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Okta.TrustedOrigin
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,26 @@
       <h4><a class="xref" href="Pulumi.Okta.TrustedOrigin.Origin.html">Origin</a></h4>
       <section><p>Creates a Trusted Origin.</p>
 <p>This resource allows you to create and configure an Trusted Origin.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Okta.TrustedOrigin.Origin(&amp;quot;example&amp;quot;, new Okta.TrustedOrigin.OriginArgs
+    {
+        Origin = &amp;quot;https://example.com&amp;quot;,
+        Scopes = 
+        {
+            &amp;quot;CORS&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Okta.TrustedOrigin.OriginArgs.html">OriginArgs</a></h4>
       <section></section>

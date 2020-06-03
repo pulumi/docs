@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Compute
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -95,6 +95,66 @@ static.</p>
 <li><a href="https://cloud.google.com/compute/docs/instances-and-network">Reserving a Static External IP Address</a></li>
 <li><a href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address">Reserving a Static Internal IP Address</a></li>
 </ul>
+<h2 id="example-usage---address-basic">Example Usage - Address Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ipAddress = new Gcp.Compute.Address(&amp;quot;ipAddress&amp;quot;, new Gcp.Compute.AddressArgs
+    {
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---address-with-subnetwork">Example Usage - Address With Subnetwork</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultNetwork = new Gcp.Compute.Network(&amp;quot;defaultNetwork&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+    });
+    var defaultSubnetwork = new Gcp.Compute.Subnetwork(&amp;quot;defaultSubnetwork&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;10.0.0.0/16&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = defaultNetwork.Id,
+    });
+    var internalWithSubnetAndAddress = new Gcp.Compute.Address(&amp;quot;internalWithSubnetAndAddress&amp;quot;, new Gcp.Compute.AddressArgs
+    {
+        Subnetwork = defaultSubnetwork.Id,
+        AddressType = &amp;quot;INTERNAL&amp;quot;,
+        Address = &amp;quot;10.0.42.42&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---address-with-gce-endpoint">Example Usage - Address With Gce Endpoint</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var internalWithGceEndpoint = new Gcp.Compute.Address(&amp;quot;internalWithGceEndpoint&amp;quot;, new Gcp.Compute.AddressArgs
+    {
+        AddressType = &amp;quot;INTERNAL&amp;quot;,
+        Purpose = &amp;quot;GCE_ENDPOINT&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.AddressArgs.html">AddressArgs</a></h4>
       <section></section>
@@ -163,6 +223,28 @@ to a virtual machine instance.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/load-balancing/http/backend-bucket">Using a Cloud Storage bucket as a load balancer backend</a></li>
 </ul>
+<h2 id="example-usage---backend-bucket-basic">Example Usage - Backend Bucket Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var imageBucket = new Gcp.Storage.Bucket(&amp;quot;imageBucket&amp;quot;, new Gcp.Storage.BucketArgs
+    {
+        Location = &amp;quot;EU&amp;quot;,
+    });
+    var imageBackend = new Gcp.Compute.BackendBucket(&amp;quot;imageBackend&amp;quot;, new Gcp.Compute.BackendBucketArgs
+    {
+        Description = &amp;quot;Contains beautiful images&amp;quot;,
+        BucketName = imageBucket.Name,
+        EnableCdn = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendBucketArgs.html">BackendBucketArgs</a></h4>
       <section></section>
@@ -174,6 +256,37 @@ to a virtual machine instance.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/cdn/docs/using-signed-urls/">Using Signed URLs</a></li>
 </ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>key_value</code> will be stored in the raw
+state as plain-text.</p>
+</blockquote>
+<h2 id="example-usage---backend-bucket-signed-url-key">Example Usage - Backend Bucket Signed Url Key</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bucket = new Gcp.Storage.Bucket(&amp;quot;bucket&amp;quot;, new Gcp.Storage.BucketArgs
+    {
+        Location = &amp;quot;EU&amp;quot;,
+    });
+    var testBackend = new Gcp.Compute.BackendBucket(&amp;quot;testBackend&amp;quot;, new Gcp.Compute.BackendBucketArgs
+    {
+        Description = &amp;quot;Contains beautiful images&amp;quot;,
+        BucketName = bucket.Name,
+        EnableCdn = true,
+    });
+    var backendKey = new Gcp.Compute.BackendBucketSignedUrlKey(&amp;quot;backendKey&amp;quot;, new Gcp.Compute.BackendBucketSignedUrlKeyArgs
+    {
+        KeyValue = &amp;quot;pPsVemX8GM46QVeezid6Rw==&amp;quot;,
+        BackendBucket = testBackend.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendBucketSignedUrlKeyArgs.html">BackendBucketSignedUrlKeyArgs</a></h4>
       <section></section>
@@ -193,6 +306,31 @@ For managed internal load balancing, use a regional backend service instead.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/load-balancing/http/backend-service">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---backend-service-basic">Example Usage - Backend Service Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultHttpHealthCheck = new Gcp.Compute.HttpHealthCheck(&amp;quot;defaultHttpHealthCheck&amp;quot;, new Gcp.Compute.HttpHealthCheckArgs
+    {
+        RequestPath = &amp;quot;/&amp;quot;,
+        CheckIntervalSec = 1,
+        TimeoutSec = 1,
+    });
+    var defaultBackendService = new Gcp.Compute.BackendService(&amp;quot;defaultBackendService&amp;quot;, new Gcp.Compute.BackendServiceArgs
+    {
+        HealthChecks = 
+        {
+            defaultHttpHealthCheck.Id,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendServiceArgs.html">BackendServiceArgs</a></h4>
       <section></section>
@@ -204,6 +342,10 @@ For managed internal load balancing, use a regional backend service instead.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/cdn/docs/using-signed-urls/">Using Signed URLs</a></li>
 </ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>key_value</code> will be stored in the raw
+state as plain-text.</p>
+</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendServiceSignedUrlKeyArgs.html">BackendServiceSignedUrlKeyArgs</a></h4>
       <section></section>
@@ -232,10 +374,32 @@ affordable storage with consistent performance characteristics.</p>
 <li><a href="https://cloud.google.com/compute/docs/disks/add-persistent-disk">Adding a persistent disk</a></li>
 </ul>
 <blockquote>
-<p><strong>Warning:</strong> All arguments including the disk encryption key will be stored in the raw
-state as plain-text.
-<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p><strong>Warning:</strong> All arguments including <code>disk_encryption_key.raw_key</code> will be stored in the raw
+state as plain-text. <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
 </blockquote>
+<h2 id="example-usage---disk-basic">Example Usage - Disk Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.Disk(&amp;quot;default&amp;quot;, new Gcp.Compute.DiskArgs
+    {
+        Image = &amp;quot;debian-8-jessie-v20170523&amp;quot;,
+        Labels = 
+        {
+            { &amp;quot;environment&amp;quot;, &amp;quot;dev&amp;quot; },
+        },
+        PhysicalBlockSizeBytes = 4096,
+        Type = &amp;quot;pd-ssd&amp;quot;,
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.DiskArgs.html">DiskArgs</a></h4>
       <section></section>
@@ -243,7 +407,7 @@ state as plain-text.
       <section><p>Adds existing resource policies to a disk. You can only add one policy
 which will be applied to this disk for scheduling snapshot creation.</p>
 <blockquote>
-<p><strong>Note:</strong> This resource does not support regional disks (<code>gcp.compute.RegionDisk</code>).</p>
+<p><strong>Note:</strong> This resource does not support regional disks (<code>gcp.compute.RegionDisk</code>). For regional disks, please refer to the <code>gcp.compute.RegionDiskResourcePolicyAttachment</code> resource.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.DiskResourcePolicyAttachmentArgs.html">DiskResourcePolicyAttachmentArgs</a></h4>
@@ -295,6 +459,26 @@ of target virtual machines to forward a packet to if it matches the given
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/load-balancing/network/forwarding-rules">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---forwarding-rule-basic">Example Usage - Forwarding Rule Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultTargetPool = new Gcp.Compute.TargetPool(&amp;quot;defaultTargetPool&amp;quot;, new Gcp.Compute.TargetPoolArgs
+    {
+    });
+    var defaultForwardingRule = new Gcp.Compute.ForwardingRule(&amp;quot;defaultForwardingRule&amp;quot;, new Gcp.Compute.ForwardingRuleArgs
+    {
+        Target = defaultTargetPool.Id,
+        PortRange = &amp;quot;80&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ForwardingRuleArgs.html">ForwardingRuleArgs</a></h4>
       <section></section>
@@ -451,6 +635,21 @@ HTTP(S) load balancing.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address">Reserving a Static External IP Address</a></li>
 </ul>
+<h2 id="example-usage---global-address-basic">Example Usage - Global Address Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.GlobalAddress(&amp;quot;default&amp;quot;, new Gcp.Compute.GlobalAddressArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalAddressArgs.html">GlobalAddressArgs</a></h4>
       <section></section>
@@ -468,6 +667,69 @@ balancing.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalForwardingRuleState.html">GlobalForwardingRuleState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalNetworkEndpoint.html">GlobalNetworkEndpoint</a></h4>
+      <section><p>A Global Network endpoint represents a IP address and port combination that exists outside of GCP.
+<strong>NOTE</strong>: Global network endpoints cannot be created outside of a
+global network endpoint group.</p>
+<p>To get more information about GlobalNetworkEndpoint, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/networkEndpointGroups">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/load-balancing/docs/negs/">Official Documentation</a></li>
+</ul>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalNetworkEndpointArgs.html">GlobalNetworkEndpointArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalNetworkEndpointGroup.html">GlobalNetworkEndpointGroup</a></h4>
+      <section><p>A global network endpoint group contains endpoints that reside outside of Google Cloud.
+Currently a global network endpoint group can only support a single endpoint.</p>
+<p>To get more information about GlobalNetworkEndpointGroup, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/networkEndpointGroups">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/load-balancing/docs/negs/internet-neg-concepts">Official Documentation</a></li>
+</ul>
+<h2 id="example-usage---global-network-endpoint-group">Example Usage - Global Network Endpoint Group</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var neg = new Gcp.Compute.GlobalNetworkEndpointGroup(&amp;quot;neg&amp;quot;, new Gcp.Compute.GlobalNetworkEndpointGroupArgs
+    {
+        DefaultPort = &amp;quot;90&amp;quot;,
+        NetworkEndpointType = &amp;quot;INTERNET_FQDN_PORT&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---global-network-endpoint-group-ip-address">Example Usage - Global Network Endpoint Group Ip Address</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var neg = new Gcp.Compute.GlobalNetworkEndpointGroup(&amp;quot;neg&amp;quot;, new Gcp.Compute.GlobalNetworkEndpointGroupArgs
+    {
+        DefaultPort = 90,
+        NetworkEndpointType = &amp;quot;INTERNET_IP_PORT&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalNetworkEndpointGroupArgs.html">GlobalNetworkEndpointGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalNetworkEndpointGroupState.html">GlobalNetworkEndpointGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalNetworkEndpointState.html">GlobalNetworkEndpointState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HaVpnGateway.html">HaVpnGateway</a></h4>
       <section><p>Represents a VPN gateway running in GCP. This virtual device is managed
 by Google, but used only by you. This type of VPN Gateway allows for the creation
@@ -479,6 +741,199 @@ of VPN solutions with higher availability than classic Target VPN Gateways.</p>
 <li><a href="https://cloud.google.com/vpn/docs/how-to/choosing-a-vpn">Choosing a VPN</a></li>
 <li><a href="https://cloud.google.com/vpn/docs/concepts/overview">Cloud VPN Overview</a></li>
 </ul>
+<h2 id="example-usage---ha-vpn-gateway-basic">Example Usage - Ha Vpn Gateway Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new Gcp.Compute.Network(&amp;quot;network1&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        AutoCreateSubnetworks = false,
+    });
+    var haGateway1 = new Gcp.Compute.HaVpnGateway(&amp;quot;haGateway1&amp;quot;, new Gcp.Compute.HaVpnGatewayArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = network1.Id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---ha-vpn-gateway-gcp-to-gcp">Example Usage - Ha Vpn Gateway Gcp To Gcp</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new Gcp.Compute.Network(&amp;quot;network1&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        RoutingMode = &amp;quot;GLOBAL&amp;quot;,
+        AutoCreateSubnetworks = false,
+    });
+    var haGateway1 = new Gcp.Compute.HaVpnGateway(&amp;quot;haGateway1&amp;quot;, new Gcp.Compute.HaVpnGatewayArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = network1.Id,
+    });
+    var network2 = new Gcp.Compute.Network(&amp;quot;network2&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        RoutingMode = &amp;quot;GLOBAL&amp;quot;,
+        AutoCreateSubnetworks = false,
+    });
+    var haGateway2 = new Gcp.Compute.HaVpnGateway(&amp;quot;haGateway2&amp;quot;, new Gcp.Compute.HaVpnGatewayArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = network2.Id,
+    });
+    var network1Subnet1 = new Gcp.Compute.Subnetwork(&amp;quot;network1Subnet1&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;10.0.1.0/24&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = network1.Id,
+    });
+    var network1Subnet2 = new Gcp.Compute.Subnetwork(&amp;quot;network1Subnet2&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;10.0.2.0/24&amp;quot;,
+        Region = &amp;quot;us-west1&amp;quot;,
+        Network = network1.Id,
+    });
+    var network2Subnet1 = new Gcp.Compute.Subnetwork(&amp;quot;network2Subnet1&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;192.168.1.0/24&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = network2.Id,
+    });
+    var network2Subnet2 = new Gcp.Compute.Subnetwork(&amp;quot;network2Subnet2&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;192.168.2.0/24&amp;quot;,
+        Region = &amp;quot;us-east1&amp;quot;,
+        Network = network2.Id,
+    });
+    var router1 = new Gcp.Compute.Router(&amp;quot;router1&amp;quot;, new Gcp.Compute.RouterArgs
+    {
+        Network = network1.Name,
+        Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+        {
+            Asn = 64514,
+        },
+    });
+    var router2 = new Gcp.Compute.Router(&amp;quot;router2&amp;quot;, new Gcp.Compute.RouterArgs
+    {
+        Network = network2.Name,
+        Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+        {
+            Asn = 64515,
+        },
+    });
+    var tunnel1 = new Gcp.Compute.VPNTunnel(&amp;quot;tunnel1&amp;quot;, new Gcp.Compute.VPNTunnelArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        VpnGateway = haGateway1.Id,
+        PeerGcpGateway = haGateway2.Id,
+        SharedSecret = &amp;quot;a secret message&amp;quot;,
+        Router = router1.Id,
+        VpnGatewayInterface = 0,
+    });
+    var tunnel2 = new Gcp.Compute.VPNTunnel(&amp;quot;tunnel2&amp;quot;, new Gcp.Compute.VPNTunnelArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        VpnGateway = haGateway1.Id,
+        PeerGcpGateway = haGateway2.Id,
+        SharedSecret = &amp;quot;a secret message&amp;quot;,
+        Router = router1.Id,
+        VpnGatewayInterface = 1,
+    });
+    var tunnel3 = new Gcp.Compute.VPNTunnel(&amp;quot;tunnel3&amp;quot;, new Gcp.Compute.VPNTunnelArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        VpnGateway = haGateway2.Id,
+        PeerGcpGateway = haGateway1.Id,
+        SharedSecret = &amp;quot;a secret message&amp;quot;,
+        Router = router2.Id,
+        VpnGatewayInterface = 0,
+    });
+    var tunnel4 = new Gcp.Compute.VPNTunnel(&amp;quot;tunnel4&amp;quot;, new Gcp.Compute.VPNTunnelArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        VpnGateway = haGateway2.Id,
+        PeerGcpGateway = haGateway1.Id,
+        SharedSecret = &amp;quot;a secret message&amp;quot;,
+        Router = router2.Id,
+        VpnGatewayInterface = 1,
+    });
+    var router1Interface1 = new Gcp.Compute.RouterInterface(&amp;quot;router1Interface1&amp;quot;, new Gcp.Compute.RouterInterfaceArgs
+    {
+        Router = router1.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        IpRange = &amp;quot;169.254.0.1/30&amp;quot;,
+        VpnTunnel = tunnel1.Name,
+    });
+    var router1Peer1 = new Gcp.Compute.RouterPeer(&amp;quot;router1Peer1&amp;quot;, new Gcp.Compute.RouterPeerArgs
+    {
+        Router = router1.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        PeerIpAddress = &amp;quot;169.254.0.2&amp;quot;,
+        PeerAsn = 64515,
+        AdvertisedRoutePriority = 100,
+        Interface = router1Interface1.Name,
+    });
+    var router1Interface2 = new Gcp.Compute.RouterInterface(&amp;quot;router1Interface2&amp;quot;, new Gcp.Compute.RouterInterfaceArgs
+    {
+        Router = router1.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        IpRange = &amp;quot;169.254.1.1/30&amp;quot;,
+        VpnTunnel = tunnel2.Name,
+    });
+    var router1Peer2 = new Gcp.Compute.RouterPeer(&amp;quot;router1Peer2&amp;quot;, new Gcp.Compute.RouterPeerArgs
+    {
+        Router = router1.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        PeerIpAddress = &amp;quot;169.254.1.2&amp;quot;,
+        PeerAsn = 64515,
+        AdvertisedRoutePriority = 100,
+        Interface = router1Interface2.Name,
+    });
+    var router2Interface1 = new Gcp.Compute.RouterInterface(&amp;quot;router2Interface1&amp;quot;, new Gcp.Compute.RouterInterfaceArgs
+    {
+        Router = router2.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        IpRange = &amp;quot;169.254.0.1/30&amp;quot;,
+        VpnTunnel = tunnel3.Name,
+    });
+    var router2Peer1 = new Gcp.Compute.RouterPeer(&amp;quot;router2Peer1&amp;quot;, new Gcp.Compute.RouterPeerArgs
+    {
+        Router = router2.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        PeerIpAddress = &amp;quot;169.254.0.2&amp;quot;,
+        PeerAsn = 64514,
+        AdvertisedRoutePriority = 100,
+        Interface = router2Interface1.Name,
+    });
+    var router2Interface2 = new Gcp.Compute.RouterInterface(&amp;quot;router2Interface2&amp;quot;, new Gcp.Compute.RouterInterfaceArgs
+    {
+        Router = router2.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        IpRange = &amp;quot;169.254.1.1/30&amp;quot;,
+        VpnTunnel = tunnel4.Name,
+    });
+    var router2Peer2 = new Gcp.Compute.RouterPeer(&amp;quot;router2Peer2&amp;quot;, new Gcp.Compute.RouterPeerArgs
+    {
+        Router = router2.Name,
+        Region = &amp;quot;us-central1&amp;quot;,
+        PeerIpAddress = &amp;quot;169.254.1.2&amp;quot;,
+        PeerAsn = 64514,
+        AdvertisedRoutePriority = 100,
+        Interface = router2Interface2.Name,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HaVpnGatewayArgs.html">HaVpnGatewayArgs</a></h4>
       <section></section>
@@ -501,6 +956,254 @@ healthy again and can receive new connections.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/load-balancing/docs/health-checks">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---health-check-tcp">Example Usage - Health Check Tcp</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tcp_health_check = new Gcp.Compute.HealthCheck(&amp;quot;tcp-health-check&amp;quot;, new Gcp.Compute.HealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+        {
+            Port = &amp;quot;80&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---health-check-tcp-full">Example Usage - Health Check Tcp Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tcp_health_check = new Gcp.Compute.HealthCheck(&amp;quot;tcp-health-check&amp;quot;, new Gcp.Compute.HealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via tcp&amp;quot;,
+        HealthyThreshold = 4,
+        TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+        {
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            Request = &amp;quot;ARE YOU HEALTHY?&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---health-check-ssl">Example Usage - Health Check Ssl</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ssl_health_check = new Gcp.Compute.HealthCheck(&amp;quot;ssl-health-check&amp;quot;, new Gcp.Compute.HealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        SslHealthCheck = new Gcp.Compute.Inputs.HealthCheckSslHealthCheckArgs
+        {
+            Port = &amp;quot;443&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---health-check-ssl-full">Example Usage - Health Check Ssl Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ssl_health_check = new Gcp.Compute.HealthCheck(&amp;quot;ssl-health-check&amp;quot;, new Gcp.Compute.HealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via ssl&amp;quot;,
+        HealthyThreshold = 4,
+        SslHealthCheck = new Gcp.Compute.Inputs.HealthCheckSslHealthCheckArgs
+        {
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            Request = &amp;quot;ARE YOU HEALTHY?&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---health-check-http">Example Usage - Health Check Http</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http_health_check = new Gcp.Compute.HealthCheck(&amp;quot;http-health-check&amp;quot;, new Gcp.Compute.HealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        HttpHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs
+        {
+            Port = 80,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---health-check-http-full">Example Usage - Health Check Http Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http_health_check = new Gcp.Compute.HealthCheck(&amp;quot;http-health-check&amp;quot;, new Gcp.Compute.HealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via http&amp;quot;,
+        HealthyThreshold = 4,
+        HttpHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs
+        {
+            Host = &amp;quot;1.2.3.4&amp;quot;,
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            RequestPath = &amp;quot;/mypath&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---health-check-https">Example Usage - Health Check Https</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var https_health_check = new Gcp.Compute.HealthCheck(&amp;quot;https-health-check&amp;quot;, new Gcp.Compute.HealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        HttpsHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpsHealthCheckArgs
+        {
+            Port = &amp;quot;443&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---health-check-https-full">Example Usage - Health Check Https Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var https_health_check = new Gcp.Compute.HealthCheck(&amp;quot;https-health-check&amp;quot;, new Gcp.Compute.HealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via https&amp;quot;,
+        HealthyThreshold = 4,
+        HttpsHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpsHealthCheckArgs
+        {
+            Host = &amp;quot;1.2.3.4&amp;quot;,
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            RequestPath = &amp;quot;/mypath&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---health-check-http2">Example Usage - Health Check Http2</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http2_health_check = new Gcp.Compute.HealthCheck(&amp;quot;http2-health-check&amp;quot;, new Gcp.Compute.HealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Http2HealthCheck = new Gcp.Compute.Inputs.HealthCheckHttp2HealthCheckArgs
+        {
+            Port = &amp;quot;443&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---health-check-http2-full">Example Usage - Health Check Http2 Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http2_health_check = new Gcp.Compute.HealthCheck(&amp;quot;http2-health-check&amp;quot;, new Gcp.Compute.HealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via http2&amp;quot;,
+        HealthyThreshold = 4,
+        Http2HealthCheck = new Gcp.Compute.Inputs.HealthCheckHttp2HealthCheckArgs
+        {
+            Host = &amp;quot;1.2.3.4&amp;quot;,
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            RequestPath = &amp;quot;/mypath&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HealthCheckArgs.html">HealthCheckArgs</a></h4>
       <section></section>
@@ -522,6 +1225,24 @@ which still require the legacy version.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks">Adding Health Checks</a></li>
 </ul>
+<h2 id="example-usage---http-health-check-basic">Example Usage - Http Health Check Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.HttpHealthCheck(&amp;quot;default&amp;quot;, new Gcp.Compute.HttpHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        RequestPath = &amp;quot;/health_check&amp;quot;,
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HttpHealthCheckArgs.html">HttpHealthCheckArgs</a></h4>
       <section></section>
@@ -543,6 +1264,24 @@ which still require the legacy version.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks">Adding Health Checks</a></li>
 </ul>
+<h2 id="example-usage---https-health-check-basic">Example Usage - Https Health Check Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.HttpsHealthCheck(&amp;quot;default&amp;quot;, new Gcp.Compute.HttpsHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        RequestPath = &amp;quot;/health_check&amp;quot;,
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HttpsHealthCheckArgs.html">HttpsHealthCheckArgs</a></h4>
       <section></section>
@@ -568,6 +1307,55 @@ to create an instance.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/images">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---image-basic">Example Usage - Image Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Gcp.Compute.Image(&amp;quot;example&amp;quot;, new Gcp.Compute.ImageArgs
+    {
+        RawDisk = new Gcp.Compute.Inputs.ImageRawDiskArgs
+        {
+            Source = &amp;quot;https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---image-guest-os">Example Usage - Image Guest Os</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Gcp.Compute.Image(&amp;quot;example&amp;quot;, new Gcp.Compute.ImageArgs
+    {
+        GuestOsFeatures = 
+        {
+            new Gcp.Compute.Inputs.ImageGuestOsFeatureArgs
+            {
+                Type = &amp;quot;SECURE_BOOT&amp;quot;,
+            },
+            new Gcp.Compute.Inputs.ImageGuestOsFeatureArgs
+            {
+                Type = &amp;quot;MULTI_IP_SUBNET&amp;quot;,
+            },
+        },
+        RawDisk = new Gcp.Compute.Inputs.ImageRawDiskArgs
+        {
+            Source = &amp;quot;https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ImageArgs.html">ImageArgs</a></h4>
       <section></section>
@@ -578,6 +1366,67 @@ to create an instance.</p>
 <a href="https://cloud.google.com/compute/docs/instances">the official documentation</a>
 and
 <a href="https://cloud.google.com/compute/docs/reference/latest/instances">API</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.Instance(&amp;quot;default&amp;quot;, new Gcp.Compute.InstanceArgs
+    {
+        BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+        {
+            InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+            {
+                Image = &amp;quot;debian-cloud/debian-9&amp;quot;,
+            },
+        },
+        MachineType = &amp;quot;n1-standard-1&amp;quot;,
+        Metadata = 
+        {
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+        MetadataStartupScript = &amp;quot;echo hi &gt; /test.txt&amp;quot;,
+        NetworkInterfaces = 
+        {
+            new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+            {
+                AccessConfig = 
+                {
+                    ,
+                },
+                Network = &amp;quot;default&amp;quot;,
+            },
+        },
+        ScratchDisks = 
+        {
+            new Gcp.Compute.Inputs.InstanceScratchDiskArgs
+            {
+                Interface = &amp;quot;SCSI&amp;quot;,
+            },
+        },
+        ServiceAccount = new Gcp.Compute.Inputs.InstanceServiceAccountArgs
+        {
+            Scopes = 
+            {
+                &amp;quot;userinfo-email&amp;quot;,
+                &amp;quot;compute-ro&amp;quot;,
+                &amp;quot;storage-ro&amp;quot;,
+            },
+        },
+        Tags = 
+        {
+            &amp;quot;foo&amp;quot;,
+            &amp;quot;bar&amp;quot;,
+        },
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
@@ -598,6 +1447,24 @@ and
       <section><p>Creates a group of dissimilar Compute Engine virtual machine instances.
 For more information, see <a href="https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups">the official documentation</a>
 and <a href="https://cloud.google.com/compute/docs/reference/latest/instanceGroups">API</a></p>
+<h2 id="example-usage---empty-instance-group">Example Usage - Empty instance group</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var test = new Gcp.Compute.InstanceGroup(&amp;quot;test&amp;quot;, new Gcp.Compute.InstanceGroupArgs
+    {
+        Description = &amp;quot;Test instance group&amp;quot;,
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+        Network = google_compute_network.Default.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceGroupArgs.html">InstanceGroupArgs</a></h4>
       <section></section>
@@ -645,6 +1512,176 @@ tools.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.compute.InstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.InstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_compute_instance_iam_policy">google_compute_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.osLogin&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.InstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.InstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.osLogin&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.InstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.InstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_instance_iam_binding">google_compute_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.InstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.InstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.InstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.InstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Compute.Inputs.InstanceIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_instance_iam_member">google_compute_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.InstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.InstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.InstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.InstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Compute.Inputs.InstanceIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMBindingArgs.html">InstanceIAMBindingArgs</a></h4>
       <section></section>
@@ -663,6 +1700,176 @@ tools.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.compute.InstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.InstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_compute_instance_iam_policy">google_compute_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.osLogin&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.InstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.InstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.osLogin&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.InstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.InstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_instance_iam_binding">google_compute_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.InstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.InstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.InstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.InstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Compute.Inputs.InstanceIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_instance_iam_member">google_compute_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.InstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.InstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.InstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.InstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Compute.Inputs.InstanceIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMMemberArgs.html">InstanceIAMMemberArgs</a></h4>
       <section></section>
@@ -681,6 +1888,176 @@ tools.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.compute.InstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.InstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_compute_instance_iam_policy">google_compute_instance_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.osLogin&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.InstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.InstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.osLogin&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.InstanceIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.InstanceIAMPolicyArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_instance_iam_binding">google_compute_instance_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.InstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.InstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.InstanceIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.InstanceIAMBindingArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Compute.Inputs.InstanceIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_instance_iam_member">google_compute_instance_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.InstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.InstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.InstanceIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.InstanceIAMMemberArgs
+    {
+        Project = google_compute_instance.Default.Project,
+        Zone = google_compute_instance.Default.Zone,
+        InstanceName = google_compute_instance.Default.Name,
+        Role = &amp;quot;roles/compute.osLogin&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Compute.Inputs.InstanceIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMPolicyArgs.html">InstanceIAMPolicyArgs</a></h4>
       <section></section>
@@ -701,10 +2078,46 @@ and
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InterconnectAttachment.html">InterconnectAttachment</a></h4>
       <section><p>Represents an InterconnectAttachment (VLAN attachment) resource. For more
 information, see Creating VLAN Attachments.</p>
+<h2 id="example-usage---interconnect-attachment-basic">Example Usage - Interconnect Attachment Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new Gcp.Compute.Router(&amp;quot;foobar&amp;quot;, new Gcp.Compute.RouterArgs
+    {
+        Network = google_compute_network.Foobar.Name,
+    });
+    var onPrem = new Gcp.Compute.InterconnectAttachment(&amp;quot;onPrem&amp;quot;, new Gcp.Compute.InterconnectAttachmentArgs
+    {
+        Interconnect = &amp;quot;my-interconnect-id&amp;quot;,
+        Router = foobar.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InterconnectAttachmentArgs.html">InterconnectAttachmentArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InterconnectAttachmentState.html">InterconnectAttachmentState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.MachineImage.html">MachineImage</a></h4>
+      <section><p>Represents a MachineImage resource. Machine images store all the configuration,
+metadata, permissions, and data from one or more disks required to create a
+Virtual machine (VM) instance.</p>
+<p>To get more information about MachineImage, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/machineImages">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/machine-images">Official Documentation</a></li>
+</ul>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.MachineImageArgs.html">MachineImageArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.MachineImageState.html">MachineImageState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ManagedSslCertificate.html">ManagedSslCertificate</a></h4>
       <section><p>An SslCertificate resource, used for HTTPS load balancing.  This resource
@@ -750,6 +2163,21 @@ certificates may entail some downtime while the certificate provisions.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/vpc/docs/vpc">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---network-basic">Example Usage - Network Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var vpcNetwork = new Gcp.Compute.Network(&amp;quot;vpcNetwork&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkArgs.html">NetworkArgs</a></h4>
       <section></section>
@@ -784,6 +2212,35 @@ fashion among applications or containers running within VM instances.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/load-balancing/docs/negs/">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---network-endpoint-group">Example Usage - Network Endpoint Group</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultNetwork = new Gcp.Compute.Network(&amp;quot;defaultNetwork&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        AutoCreateSubnetworks = false,
+    });
+    var defaultSubnetwork = new Gcp.Compute.Subnetwork(&amp;quot;defaultSubnetwork&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;10.0.0.0/16&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+        Network = defaultNetwork.Id,
+    });
+    var neg = new Gcp.Compute.NetworkEndpointGroup(&amp;quot;neg&amp;quot;, new Gcp.Compute.NetworkEndpointGroupArgs
+    {
+        Network = defaultNetwork.Id,
+        Subnetwork = defaultSubnetwork.Id,
+        DefaultPort = &amp;quot;90&amp;quot;,
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkEndpointGroupArgs.html">NetworkEndpointGroupArgs</a></h4>
       <section></section>
@@ -803,6 +2260,36 @@ to be functional.</p>
 <blockquote>
 <p>Subnets IP ranges across peered VPC networks cannot overlap.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.Network(&amp;quot;default&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        AutoCreateSubnetworks = &amp;quot;false&amp;quot;,
+    });
+    var other = new Gcp.Compute.Network(&amp;quot;other&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        AutoCreateSubnetworks = &amp;quot;false&amp;quot;,
+    });
+    var peering1 = new Gcp.Compute.NetworkPeering(&amp;quot;peering1&amp;quot;, new Gcp.Compute.NetworkPeeringArgs
+    {
+        Network = @default.Id,
+        PeerNetwork = other.Id,
+    });
+    var peering2 = new Gcp.Compute.NetworkPeering(&amp;quot;peering2&amp;quot;, new Gcp.Compute.NetworkPeeringArgs
+    {
+        Network = other.Id,
+        PeerNetwork = @default.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkPeeringArgs.html">NetworkPeeringArgs</a></h4>
       <section></section>
@@ -817,6 +2304,45 @@ resource is a no-op and the peering will not be modified.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/vpc/docs/vpc-peering">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---network-peering-routes-config-basic">Example Usage - Network Peering Routes Config Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var networkPrimary = new Gcp.Compute.Network(&amp;quot;networkPrimary&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        AutoCreateSubnetworks = &amp;quot;false&amp;quot;,
+    });
+    var networkSecondary = new Gcp.Compute.Network(&amp;quot;networkSecondary&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        AutoCreateSubnetworks = &amp;quot;false&amp;quot;,
+    });
+    var peeringPrimary = new Gcp.Compute.NetworkPeering(&amp;quot;peeringPrimary&amp;quot;, new Gcp.Compute.NetworkPeeringArgs
+    {
+        Network = networkPrimary.Id,
+        PeerNetwork = networkSecondary.Id,
+        ImportCustomRoutes = true,
+        ExportCustomRoutes = true,
+    });
+    var peeringPrimaryRoutes = new Gcp.Compute.NetworkPeeringRoutesConfig(&amp;quot;peeringPrimaryRoutes&amp;quot;, new Gcp.Compute.NetworkPeeringRoutesConfigArgs
+    {
+        Peering = peeringPrimary.Name,
+        Network = networkPrimary.Name,
+        ImportCustomRoutes = true,
+        ExportCustomRoutes = true,
+    });
+    var peeringSecondary = new Gcp.Compute.NetworkPeering(&amp;quot;peeringSecondary&amp;quot;, new Gcp.Compute.NetworkPeeringArgs
+    {
+        Network = networkSecondary.Id,
+        PeerNetwork = networkPrimary.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkPeeringRoutesConfigArgs.html">NetworkPeeringRoutesConfigArgs</a></h4>
       <section></section>
@@ -840,6 +2366,34 @@ number of nodes in a node group and changes to node group size either
 through provider config or through external changes will cause
 the provider to delete and recreate the node group.</p>
 </blockquote>
+<h2 id="example-usage---node-group-basic">Example Usage - Node Group Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var central1a = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
+    {
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+    }));
+    var soletenant_tmpl = new Gcp.Compute.NodeTemplate(&amp;quot;soletenant-tmpl&amp;quot;, new Gcp.Compute.NodeTemplateArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        NodeType = central1a.Apply(central1a =&gt; central1a.Names[0]),
+    });
+    var nodes = new Gcp.Compute.NodeGroup(&amp;quot;nodes&amp;quot;, new Gcp.Compute.NodeGroupArgs
+    {
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+        Description = &amp;quot;example gcp.compute.NodeGroup for the Google Provider&amp;quot;,
+        Size = 1,
+        NodeTemplate = soletenant_tmpl.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NodeGroupArgs.html">NodeGroupArgs</a></h4>
       <section></section>
@@ -855,6 +2409,27 @@ requirements, node affinity labels, and region.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/nodes/">Sole-Tenant Nodes</a></li>
 </ul>
+<h2 id="example-usage---node-template-basic">Example Usage - Node Template Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var central1a = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
+    {
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+    }));
+    var template = new Gcp.Compute.NodeTemplate(&amp;quot;template&amp;quot;, new Gcp.Compute.NodeTemplateArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        NodeType = central1a.Apply(central1a =&gt; central1a.Names[0]),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NodeTemplateArgs.html">NodeTemplateArgs</a></h4>
       <section></section>
@@ -875,12 +2450,42 @@ and monitor application performance.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.PacketMirroringState.html">PacketMirroringState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.PerInstanceConfig.html">PerInstanceConfig</a></h4>
+      <section><p>A config defined for a single managed instance that belongs to an instance group manager. It preserves the instance name
+across instance group manager operations and can define stateful disks or metadata that are unique to the instance.</p>
+<p>To get more information about PerInstanceConfig, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/instance-groups/stateful-migs#per-instance_configs">Official Documentation</a></li>
+</ul>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.PerInstanceConfigArgs.html">PerInstanceConfigArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.PerInstanceConfigState.html">PerInstanceConfigState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ProjectDefaultNetworkTier.html">ProjectDefaultNetworkTier</a></h4>
       <section><p>Configures the Google Compute Engine
 <a href="https://cloud.google.com/network-tiers/docs/using-network-service-tiers#setting_the_tier_for_all_resources_in_a_project">Default Network Tier</a>
 for a project.</p>
 <p>For more information, see,
 <a href="https://cloud.google.com/compute/docs/reference/rest/v1/projects/setDefaultNetworkTier">the Project API documentation</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.ProjectDefaultNetworkTier(&amp;quot;default&amp;quot;, new Gcp.Compute.ProjectDefaultNetworkTierArgs
+    {
+        NetworkTier = &amp;quot;PREMIUM&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ProjectDefaultNetworkTierArgs.html">ProjectDefaultNetworkTierArgs</a></h4>
       <section></section>
@@ -897,6 +2502,27 @@ Keys unset in config but set on the server will be removed. If you want to manag
 key/value pairs within the project metadata rather than the entire set, then use
 google_compute_project_metadata_item.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.ProjectMetadata(&amp;quot;default&amp;quot;, new Gcp.Compute.ProjectMetadataArgs
+    {
+        Metadata = 
+        {
+            { &amp;quot;13&amp;quot;, &amp;quot;42&amp;quot; },
+            { &amp;quot;fizz&amp;quot;, &amp;quot;buzz&amp;quot; },
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ProjectMetadataArgs.html">ProjectMetadataArgs</a></h4>
       <section></section>
@@ -905,6 +2531,23 @@ google_compute_project_metadata_item.</p>
 a project in GCE. Using <code>gcp.compute.ProjectMetadataItem</code> lets you
 manage a single key/value setting in the provider rather than the entire
 project metadata map.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.ProjectMetadataItem(&amp;quot;default&amp;quot;, new Gcp.Compute.ProjectMetadataItemArgs
+    {
+        Key = &amp;quot;my_metadata&amp;quot;,
+        Value = &amp;quot;my_value&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ProjectMetadataItemArgs.html">ProjectMetadataItemArgs</a></h4>
       <section></section>
@@ -958,15 +2601,50 @@ storage space requirements.</p>
 affordable storage with consistent performance characteristics.</p>
 <p>To get more information about RegionDisk, see:</p>
 <ul>
-<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/regionDisks">API documentation</a></li>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/regionDisks">API documentation</a></li>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/disks/regional-persistent-disk">Adding or Resizing Regional Persistent Disks</a></li>
 </ul>
 <blockquote>
-<p><strong>Warning:</strong> All arguments including the disk encryption key will be stored in the raw
-state as plain-text.
-<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p><strong>Warning:</strong> All arguments including <code>disk_encryption_key.raw_key</code> will be stored in the raw
+state as plain-text. <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
 </blockquote>
+<h2 id="example-usage---region-disk-basic">Example Usage - Region Disk Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var disk = new Gcp.Compute.Disk(&amp;quot;disk&amp;quot;, new Gcp.Compute.DiskArgs
+    {
+        Image = &amp;quot;debian-cloud/debian-9&amp;quot;,
+        Size = 50,
+        Type = &amp;quot;pd-ssd&amp;quot;,
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+    });
+    var snapdisk = new Gcp.Compute.Snapshot(&amp;quot;snapdisk&amp;quot;, new Gcp.Compute.SnapshotArgs
+    {
+        SourceDisk = disk.Name,
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+    });
+    var regiondisk = new Gcp.Compute.RegionDisk(&amp;quot;regiondisk&amp;quot;, new Gcp.Compute.RegionDiskArgs
+    {
+        Snapshot = snapdisk.Id,
+        Type = &amp;quot;pd-ssd&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+        PhysicalBlockSizeBytes = 4096,
+        ReplicaZones = 
+        {
+            &amp;quot;us-central1-a&amp;quot;,
+            &amp;quot;us-central1-f&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionDiskArgs.html">RegionDiskArgs</a></h4>
       <section></section>
@@ -974,7 +2652,7 @@ state as plain-text.
       <section><p>Adds existing resource policies to a disk. You can only add one policy
 which will be applied to this disk for scheduling snapshot creation.</p>
 <blockquote>
-<p><strong>Note:</strong> This resource does not support zonal disks (<code>gcp.compute.Disk</code>).</p>
+<p><strong>Note:</strong> This resource does not support zonal disks (<code>gcp.compute.Disk</code>). For zonal disks, please refer to the <code>gcp.compute.DiskResourcePolicyAttachment</code> resource.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionDiskResourcePolicyAttachmentArgs.html">RegionDiskResourcePolicyAttachmentArgs</a></h4>
@@ -996,10 +2674,258 @@ successfully to some number of consecutive probes, it is marked
 healthy again and can receive new connections.</p>
 <p>To get more information about RegionHealthCheck, see:</p>
 <ul>
-<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/regionHealthChecks">API documentation</a></li>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/regionHealthChecks">API documentation</a></li>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/load-balancing/docs/health-checks">Official Documentation</a></li>
 </ul>
+<h2 id="example-usage---region-health-check-tcp">Example Usage - Region Health Check Tcp</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tcp_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;tcp-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+        {
+            Port = &amp;quot;80&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-tcp-full">Example Usage - Region Health Check Tcp Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var tcp_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;tcp-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via tcp&amp;quot;,
+        HealthyThreshold = 4,
+        TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+        {
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            Request = &amp;quot;ARE YOU HEALTHY?&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-ssl">Example Usage - Region Health Check Ssl</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ssl_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;ssl-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        SslHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckSslHealthCheckArgs
+        {
+            Port = &amp;quot;443&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-ssl-full">Example Usage - Region Health Check Ssl Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ssl_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;ssl-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via ssl&amp;quot;,
+        HealthyThreshold = 4,
+        SslHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckSslHealthCheckArgs
+        {
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            Request = &amp;quot;ARE YOU HEALTHY?&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-http">Example Usage - Region Health Check Http</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;http-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+        {
+            Port = &amp;quot;80&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-http-full">Example Usage - Region Health Check Http Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;http-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via http&amp;quot;,
+        HealthyThreshold = 4,
+        HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+        {
+            Host = &amp;quot;1.2.3.4&amp;quot;,
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            RequestPath = &amp;quot;/mypath&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-https">Example Usage - Region Health Check Https</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var https_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;https-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        HttpsHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpsHealthCheckArgs
+        {
+            Port = &amp;quot;443&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-https-full">Example Usage - Region Health Check Https Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var https_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;https-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via https&amp;quot;,
+        HealthyThreshold = 4,
+        HttpsHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpsHealthCheckArgs
+        {
+            Host = &amp;quot;1.2.3.4&amp;quot;,
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            RequestPath = &amp;quot;/mypath&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-http2">Example Usage - Region Health Check Http2</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http2_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;http2-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Http2HealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttp2HealthCheckArgs
+        {
+            Port = &amp;quot;443&amp;quot;,
+        },
+        TimeoutSec = 1,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---region-health-check-http2-full">Example Usage - Region Health Check Http2 Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var http2_region_health_check = new Gcp.Compute.RegionHealthCheck(&amp;quot;http2-region-health-check&amp;quot;, new Gcp.Compute.RegionHealthCheckArgs
+    {
+        CheckIntervalSec = 1,
+        Description = &amp;quot;Health check via http2&amp;quot;,
+        HealthyThreshold = 4,
+        Http2HealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttp2HealthCheckArgs
+        {
+            Host = &amp;quot;1.2.3.4&amp;quot;,
+            PortName = &amp;quot;health-check-port&amp;quot;,
+            PortSpecification = &amp;quot;USE_NAMED_PORT&amp;quot;,
+            ProxyHeader = &amp;quot;NONE&amp;quot;,
+            RequestPath = &amp;quot;/mypath&amp;quot;,
+            Response = &amp;quot;I AM HEALTHY&amp;quot;,
+        },
+        TimeoutSec = 1,
+        UnhealthyThreshold = 5,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionHealthCheckArgs.html">RegionHealthCheckArgs</a></h4>
       <section></section>
@@ -1018,6 +2944,21 @@ and <a href="https://cloud.google.com/compute/docs/reference/latest/regionInstan
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionInstanceGroupManagerState.html">RegionInstanceGroupManagerState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionPerInstanceConfig.html">RegionPerInstanceConfig</a></h4>
+      <section><p>A config defined for a single managed instance that belongs to an instance group manager. It preserves the instance name
+across instance group manager operations and can define stateful disks or metadata that are unique to the instance.
+This resource works with regional instance group managers.</p>
+<p>To get more information about RegionPerInstanceConfig, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/instance-groups/stateful-migs#per-instance_configs">Official Documentation</a></li>
+</ul>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionPerInstanceConfigArgs.html">RegionPerInstanceConfigArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionPerInstanceConfigState.html">RegionPerInstanceConfigState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionSslCertificate.html">RegionSslCertificate</a></h4>
       <section><p>A RegionSslCertificate resource, used for HTTPS load balancing. This resource
 provides a mechanism to upload an SSL key and certificate to
@@ -1028,6 +2969,31 @@ the load balancer to serve secure connections from the user.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/load-balancing/docs/ssl-certificates">Official Documentation</a></li>
 </ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>certificate</code> and <code>private_key</code> will be stored in the raw
+state as plain-text. <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
+</blockquote>
+<h2 id="example-usage---region-ssl-certificate-basic">Example Usage - Region Ssl Certificate Basic</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.RegionSslCertificate(&amp;quot;default&amp;quot;, new Gcp.Compute.RegionSslCertificateArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        NamePrefix = &amp;quot;my-certificate-&amp;quot;,
+        Description = &amp;quot;a description&amp;quot;,
+        PrivateKey = File.ReadAllText(&amp;quot;path/to/private.key&amp;quot;),
+        Certificate = File.ReadAllText(&amp;quot;path/to/certificate.crt&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionSslCertificateArgs.html">RegionSslCertificateArgs</a></h4>
       <section></section>
@@ -1038,7 +3004,7 @@ the load balancer to serve secure connections from the user.</p>
 forwarding rules to route incoming HTTP requests to a URL map.</p>
 <p>To get more information about RegionTargetHttpProxy, see:</p>
 <ul>
-<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/regionTargetHttpProxies">API documentation</a></li>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/regionTargetHttpProxies">API documentation</a></li>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/load-balancing/http/target-proxies">Official Documentation</a></li>
 </ul>
@@ -1052,7 +3018,7 @@ forwarding rules to route incoming HTTP requests to a URL map.</p>
 forwarding rules to route incoming HTTPS requests to a URL map.</p>
 <p>To get more information about RegionTargetHttpsProxy, see:</p>
 <ul>
-<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/regionTargetHttpsProxies">API documentation</a></li>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/regionTargetHttpsProxies">API documentation</a></li>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/load-balancing/http/target-proxies">Official Documentation</a></li>
 </ul>
@@ -1083,6 +3049,31 @@ like Cloud SQL and Dataflow.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/instances/reserving-zonal-resources">Reserving zonal resources</a></li>
 </ul>
+<h2 id="example-usage---reservation-basic">Example Usage - Reservation Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var gceReservation = new Gcp.Compute.Reservation(&amp;quot;gceReservation&amp;quot;, new Gcp.Compute.ReservationArgs
+    {
+        SpecificReservation = new Gcp.Compute.Inputs.ReservationSpecificReservationArgs
+        {
+            Count = 1,
+            InstanceProperties = new Gcp.Compute.Inputs.ReservationSpecificReservationInstancePropertiesArgs
+            {
+                MachineType = &amp;quot;n2-standard-2&amp;quot;,
+                MinCpuPlatform = &amp;quot;Intel Cascade Lake&amp;quot;,
+            },
+        },
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ReservationArgs.html">ReservationArgs</a></h4>
       <section></section>
@@ -1090,6 +3081,95 @@ like Cloud SQL and Dataflow.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ResourcePolicy.html">ResourcePolicy</a></h4>
       <section><p>A policy that can be attached to a resource to specify or schedule actions on that resource.</p>
+<h2 id="example-usage---resource-policy-basic">Example Usage - Resource Policy Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = new Gcp.Compute.ResourcePolicy(&amp;quot;foo&amp;quot;, new Gcp.Compute.ResourcePolicyArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        SnapshotSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs
+        {
+            Schedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs
+            {
+                DailySchedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
+                {
+                    DaysInCycle = 1,
+                    StartTime = &amp;quot;04:00&amp;quot;,
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---resource-policy-full">Example Usage - Resource Policy Full</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var bar = new Gcp.Compute.ResourcePolicy(&amp;quot;bar&amp;quot;, new Gcp.Compute.ResourcePolicyArgs
+    {
+        Region = &amp;quot;us-central1&amp;quot;,
+        SnapshotSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs
+        {
+            RetentionPolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs
+            {
+                MaxRetentionDays = 10,
+                OnSourceDiskDelete = &amp;quot;KEEP_AUTO_SNAPSHOTS&amp;quot;,
+            },
+            Schedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs
+            {
+                HourlySchedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs
+                {
+                    HoursInCycle = 20,
+                    StartTime = &amp;quot;23:00&amp;quot;,
+                },
+            },
+            SnapshotProperties = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs
+            {
+                GuestFlush = true,
+                Labels = 
+                {
+                    { &amp;quot;myLabel&amp;quot;, &amp;quot;value&amp;quot; },
+                },
+                StorageLocations = &amp;quot;us&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---resource-policy-placement-policy">Example Usage - Resource Policy Placement Policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var baz = new Gcp.Compute.ResourcePolicy(&amp;quot;baz&amp;quot;, new Gcp.Compute.ResourcePolicyArgs
+    {
+        GroupPlacementPolicy = new Gcp.Compute.Inputs.ResourcePolicyGroupPlacementPolicyArgs
+        {
+            Collocation = &amp;quot;COLLOCATED&amp;quot;,
+            VmCount = 2,
+        },
+        Region = &amp;quot;us-central1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ResourcePolicyArgs.html">ResourcePolicyArgs</a></h4>
       <section></section>
@@ -1121,6 +3201,28 @@ nextHopIlb.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/vpc/docs/using-routes">Using Routes</a></li>
 </ul>
+<h2 id="example-usage---route-basic">Example Usage - Route Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultNetwork = new Gcp.Compute.Network(&amp;quot;defaultNetwork&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+    });
+    var defaultRoute = new Gcp.Compute.Route(&amp;quot;defaultRoute&amp;quot;, new Gcp.Compute.RouteArgs
+    {
+        DestRange = &amp;quot;15.0.0.0/24&amp;quot;,
+        Network = defaultNetwork.Name,
+        NextHopIp = &amp;quot;10.132.1.5&amp;quot;,
+        Priority = 100,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouteArgs.html">RouteArgs</a></h4>
       <section></section>
@@ -1132,6 +3234,46 @@ nextHopIlb.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/router/docs/">Google Cloud Router</a></li>
 </ul>
+<h2 id="example-usage---router-basic">Example Usage - Router Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobarNetwork = new Gcp.Compute.Network(&amp;quot;foobarNetwork&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        AutoCreateSubnetworks = false,
+    });
+    var foobarRouter = new Gcp.Compute.Router(&amp;quot;foobarRouter&amp;quot;, new Gcp.Compute.RouterArgs
+    {
+        Network = foobarNetwork.Name,
+        Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+        {
+            Asn = 64514,
+            AdvertiseMode = &amp;quot;CUSTOM&amp;quot;,
+            AdvertisedGroups = 
+            {
+                &amp;quot;ALL_SUBNETS&amp;quot;,
+            },
+            Advertised_ip_ranges = 
+            {
+
+                {
+                    { &amp;quot;range&amp;quot;, &amp;quot;1.2.3.4&amp;quot; },
+                },
+
+                {
+                    { &amp;quot;range&amp;quot;, &amp;quot;6.7.0.0/16&amp;quot; },
+                },
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterArgs.html">RouterArgs</a></h4>
       <section></section>
@@ -1140,6 +3282,25 @@ nextHopIlb.</p>
 <a href="https://cloud.google.com/compute/docs/cloudrouter">the official documentation</a>
 and
 <a href="https://cloud.google.com/compute/docs/reference/latest/routers">API</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foobar = new Gcp.Compute.RouterInterface(&amp;quot;foobar&amp;quot;, new Gcp.Compute.RouterInterfaceArgs
+    {
+        IpRange = &amp;quot;169.254.1.1/30&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+        Router = &amp;quot;router-1&amp;quot;,
+        VpnTunnel = &amp;quot;tunnel-1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterInterfaceArgs.html">RouterInterfaceArgs</a></h4>
       <section></section>
@@ -1169,6 +3330,27 @@ Please refer to RFC4273.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/router/docs/">Google Cloud Router</a></li>
 </ul>
+<h2 id="example-usage---router-peer-basic">Example Usage - Router Peer Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var peer = new Gcp.Compute.RouterPeer(&amp;quot;peer&amp;quot;, new Gcp.Compute.RouterPeerArgs
+    {
+        AdvertisedRoutePriority = 100,
+        Interface = &amp;quot;interface-1&amp;quot;,
+        PeerAsn = 65513,
+        PeerIpAddress = &amp;quot;169.254.1.2&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+        Router = &amp;quot;my-router&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterPeerArgs.html">RouterPeerArgs</a></h4>
       <section></section>
@@ -1182,6 +3364,58 @@ Please refer to RFC4273.</p>
       <section><p>A Security Policy defines an IP blacklist or whitelist that protects load balanced Google Cloud services by denying or permitting traffic from specified IP ranges. For more information
 see the <a href="https://cloud.google.com/armor/docs/configure-security-policies">official documentation</a>
 and the <a href="https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies">API</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var policy = new Gcp.Compute.SecurityPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.SecurityPolicyArgs
+    {
+        Rules = 
+        {
+            new Gcp.Compute.Inputs.SecurityPolicyRuleArgs
+            {
+                Action = &amp;quot;deny(403)&amp;quot;,
+                Description = &amp;quot;Deny access to IPs in 9.9.9.0/24&amp;quot;,
+                Match = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchArgs
+                {
+                    Config = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchConfigArgs
+                    {
+                        SrcIpRanges = 
+                        {
+                            &amp;quot;9.9.9.0/24&amp;quot;,
+                        },
+                    },
+                    VersionedExpr = &amp;quot;SRC_IPS_V1&amp;quot;,
+                },
+                Priority = &amp;quot;1000&amp;quot;,
+            },
+            new Gcp.Compute.Inputs.SecurityPolicyRuleArgs
+            {
+                Action = &amp;quot;allow&amp;quot;,
+                Description = &amp;quot;default rule&amp;quot;,
+                Match = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchArgs
+                {
+                    Config = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchConfigArgs
+                    {
+                        SrcIpRanges = 
+                        {
+                            &amp;quot;*&amp;quot;,
+                        },
+                    },
+                    VersionedExpr = &amp;quot;SRC_IPS_V1&amp;quot;,
+                },
+                Priority = &amp;quot;2147483647&amp;quot;,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SecurityPolicyArgs.html">SecurityPolicyArgs</a></h4>
       <section></section>
@@ -1195,6 +3429,37 @@ and the <a href="https://cloud.google.com/compute/docs/reference/rest/beta/secur
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/security-scanner/docs/scanning">Using Cloud Security Scanner</a></li>
 </ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>authentication.google_account.password</code> and <code>authentication.custom_account.password</code> will be stored in the raw
+state as plain-text.<a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a></p>
+</blockquote>
+<h2 id="example-usage---scan-config-basic">Example Usage - Scan Config Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var scannerStaticIp = new Gcp.Compute.Address(&amp;quot;scannerStaticIp&amp;quot;, new Gcp.Compute.AddressArgs
+    {
+    });
+    var scan_config = new Gcp.Compute.SecurityScanConfig(&amp;quot;scan-config&amp;quot;, new Gcp.Compute.SecurityScanConfigArgs
+    {
+        DisplayName = &amp;quot;scan-config&amp;quot;,
+        StartingUrls = 
+        {
+            scannerStaticIp.IPAddress.Apply(address =&gt; $&amp;quot;http://{address}&amp;quot;),
+        },
+        TargetPlatforms = 
+        {
+            &amp;quot;COMPUTE&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SecurityScanConfigArgs.html">SecurityScanConfigArgs</a></h4>
       <section></section>
@@ -1207,6 +3472,35 @@ feature for a project, assigning it as a Shared VPC host project.</p>
 <p>For more information, see,
 <a href="https://cloud.google.com/compute/docs/reference/latest/projects">the Project API documentation</a>,
 where the Shared VPC feature is referred to by its former name &quot;XPN&quot;.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // A host project provides network resources to associated service projects.
+    var host = new Gcp.Compute.SharedVPCHostProject(&amp;quot;host&amp;quot;, new Gcp.Compute.SharedVPCHostProjectArgs
+    {
+        Project = &amp;quot;host-project-id&amp;quot;,
+    });
+    // A service project gains access to network resources provided by its
+    // associated host project.
+    var service1 = new Gcp.Compute.SharedVPCServiceProject(&amp;quot;service1&amp;quot;, new Gcp.Compute.SharedVPCServiceProjectArgs
+    {
+        HostProject = host.Project,
+        ServiceProject = &amp;quot;service-project-id-1&amp;quot;,
+    });
+    var service2 = new Gcp.Compute.SharedVPCServiceProject(&amp;quot;service2&amp;quot;, new Gcp.Compute.SharedVPCServiceProjectArgs
+    {
+        HostProject = host.Project,
+        ServiceProject = &amp;quot;service-project-id-2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SharedVPCHostProjectArgs.html">SharedVPCHostProjectArgs</a></h4>
       <section></section>
@@ -1220,6 +3514,23 @@ with a given host project.</p>
 <p>For more information, see,
 <a href="https://cloud.google.com/compute/docs/reference/latest/projects">the Project API documentation</a>,
 where the Shared VPC feature is referred to by its former name &quot;XPN&quot;.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var service1 = new Gcp.Compute.SharedVPCServiceProject(&amp;quot;service1&amp;quot;, new Gcp.Compute.SharedVPCServiceProjectArgs
+    {
+        HostProject = &amp;quot;host-project-id&amp;quot;,
+        ServiceProject = &amp;quot;service-project-id-1&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SharedVPCServiceProjectArgs.html">SharedVPCServiceProjectArgs</a></h4>
       <section></section>
@@ -1242,6 +3553,43 @@ created a full image of the disk.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/disks/create-snapshots">Official Documentation</a></li>
 </ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>snapshot_encryption_key.raw_key</code> and <code>source_disk_encryption_key.raw_key</code> will be stored in the raw
+state as plain-text. <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
+</blockquote>
+<h2 id="example-usage---snapshot-basic">Example Usage - Snapshot Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var debian = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+    {
+        Family = &amp;quot;debian-9&amp;quot;,
+        Project = &amp;quot;debian-cloud&amp;quot;,
+    }));
+    var persistent = new Gcp.Compute.Disk(&amp;quot;persistent&amp;quot;, new Gcp.Compute.DiskArgs
+    {
+        Image = debian.Apply(debian =&gt; debian.SelfLink),
+        Size = 10,
+        Type = &amp;quot;pd-ssd&amp;quot;,
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+    });
+    var snapshot = new Gcp.Compute.Snapshot(&amp;quot;snapshot&amp;quot;, new Gcp.Compute.SnapshotArgs
+    {
+        SourceDisk = persistent.Name,
+        Zone = &amp;quot;us-central1-a&amp;quot;,
+        Labels = 
+        {
+            { &amp;quot;my_label&amp;quot;, &amp;quot;value&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SnapshotArgs.html">SnapshotArgs</a></h4>
       <section></section>
@@ -1257,6 +3605,30 @@ the load balancer to serve secure connections from the user.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/load-balancing/docs/ssl-certificates">Official Documentation</a></li>
 </ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>certificate</code> and <code>private_key</code> will be stored in the raw
+state as plain-text. <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
+</blockquote>
+<h2 id="example-usage---ssl-certificate-basic">Example Usage - Ssl Certificate Basic</h2>
+<pre><code class="lang-csharp">using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var @default = new Gcp.Compute.SSLCertificate(&amp;quot;default&amp;quot;, new Gcp.Compute.SSLCertificateArgs
+    {
+        NamePrefix = &amp;quot;my-certificate-&amp;quot;,
+        Description = &amp;quot;a description&amp;quot;,
+        PrivateKey = File.ReadAllText(&amp;quot;path/to/private.key&amp;quot;),
+        Certificate = File.ReadAllText(&amp;quot;path/to/certificate.crt&amp;quot;),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SSLCertificateArgs.html">SSLCertificateArgs</a></h4>
       <section></section>
@@ -1271,6 +3643,37 @@ features of SSL that your SSL proxy or HTTPS load balancer negotiates.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/compute/docs/load-balancing/ssl-policies">Using SSL Policies</a></li>
 </ul>
+<h2 id="example-usage---ssl-policy-basic">Example Usage - Ssl Policy Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var prod_ssl_policy = new Gcp.Compute.SSLPolicy(&amp;quot;prod-ssl-policy&amp;quot;, new Gcp.Compute.SSLPolicyArgs
+    {
+        Profile = &amp;quot;MODERN&amp;quot;,
+    });
+    var nonprod_ssl_policy = new Gcp.Compute.SSLPolicy(&amp;quot;nonprod-ssl-policy&amp;quot;, new Gcp.Compute.SSLPolicyArgs
+    {
+        MinTlsVersion = &amp;quot;TLS_1_2&amp;quot;,
+        Profile = &amp;quot;MODERN&amp;quot;,
+    });
+    var custom_ssl_policy = new Gcp.Compute.SSLPolicy(&amp;quot;custom-ssl-policy&amp;quot;, new Gcp.Compute.SSLPolicyArgs
+    {
+        CustomFeatures = 
+        {
+            &amp;quot;TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384&amp;quot;,
+            &amp;quot;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&amp;quot;,
+        },
+        MinTlsVersion = &amp;quot;TLS_1_2&amp;quot;,
+        Profile = &amp;quot;CUSTOM&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SSLPolicyArgs.html">SSLPolicyArgs</a></h4>
       <section></section>
@@ -1303,6 +3706,30 @@ of the network, even entire subnets, using firewall rules.</p>
 <li><a href="https://cloud.google.com/vpc/docs/configure-private-google-access">Private Google Access</a></li>
 <li><a href="https://cloud.google.com/vpc/docs/using-vpc">Cloud Networking</a></li>
 </ul>
+<h2 id="example-usage---subnetwork-internal-l7lb">Example Usage - Subnetwork Internal L7lb</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var custom_test = new Gcp.Compute.Network(&amp;quot;custom-test&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+        AutoCreateSubnetworks = false,
+    });
+    var network_for_l7lb = new Gcp.Compute.Subnetwork(&amp;quot;network-for-l7lb&amp;quot;, new Gcp.Compute.SubnetworkArgs
+    {
+        IpCidrRange = &amp;quot;10.0.0.0/22&amp;quot;,
+        Region = &amp;quot;us-central1&amp;quot;,
+        Purpose = &amp;quot;INTERNAL_HTTPS_LOAD_BALANCER&amp;quot;,
+        Role = &amp;quot;ACTIVE&amp;quot;,
+        Network = custom_test.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkArgs.html">SubnetworkArgs</a></h4>
       <section></section>
@@ -1319,6 +3746,176 @@ of the network, even entire subnets, using firewall rules.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.compute.SubnetworkIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.SubnetworkIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_compute_subnetwork_iam_policy">google_compute_subnetwork_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.networkUser&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.SubnetworkIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.SubnetworkIAMPolicyArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.networkUser&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.SubnetworkIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.SubnetworkIAMPolicyArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_subnetwork_iam_binding">google_compute_subnetwork_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.SubnetworkIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.SubnetworkIAMBindingArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.SubnetworkIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.SubnetworkIAMBindingArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Compute.Inputs.SubnetworkIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_subnetwork_iam_member">google_compute_subnetwork_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.SubnetworkIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.SubnetworkIAMMemberArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.SubnetworkIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.SubnetworkIAMMemberArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Compute.Inputs.SubnetworkIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMBindingArgs.html">SubnetworkIAMBindingArgs</a></h4>
       <section></section>
@@ -1337,6 +3934,176 @@ of the network, even entire subnets, using firewall rules.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.compute.SubnetworkIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.SubnetworkIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_compute_subnetwork_iam_policy">google_compute_subnetwork_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.networkUser&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.SubnetworkIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.SubnetworkIAMPolicyArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.networkUser&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.SubnetworkIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.SubnetworkIAMPolicyArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_subnetwork_iam_binding">google_compute_subnetwork_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.SubnetworkIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.SubnetworkIAMBindingArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.SubnetworkIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.SubnetworkIAMBindingArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Compute.Inputs.SubnetworkIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_subnetwork_iam_member">google_compute_subnetwork_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.SubnetworkIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.SubnetworkIAMMemberArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.SubnetworkIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.SubnetworkIAMMemberArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Compute.Inputs.SubnetworkIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMMemberArgs.html">SubnetworkIAMMemberArgs</a></h4>
       <section></section>
@@ -1355,6 +4122,176 @@ of the network, even entire subnets, using firewall rules.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.compute.SubnetworkIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.SubnetworkIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<h2 id="google_compute_subnetwork_iam_policy">google_compute_subnetwork_iam_policy</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.networkUser&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.SubnetworkIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.SubnetworkIAMPolicyArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+    {
+        Binding = 
+        {
+
+            {
+                { &amp;quot;role&amp;quot;, &amp;quot;roles/compute.networkUser&amp;quot; },
+                { &amp;quot;members&amp;quot;, 
+                {
+                    &amp;quot;user:jane@example.com&amp;quot;,
+                } },
+                { &amp;quot;condition&amp;quot;, 
+                {
+                    { &amp;quot;title&amp;quot;, &amp;quot;expires_after_2019_12_31&amp;quot; },
+                    { &amp;quot;description&amp;quot;, &amp;quot;Expiring at midnight of 2019-12-31&amp;quot; },
+                    { &amp;quot;expression&amp;quot;, &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot; },
+                } },
+            },
+        },
+    }));
+    var policy = new Gcp.Compute.SubnetworkIAMPolicy(&amp;quot;policy&amp;quot;, new Gcp.Compute.SubnetworkIAMPolicyArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        PolicyData = admin.Apply(admin =&gt; admin.PolicyData),
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_subnetwork_iam_binding">google_compute_subnetwork_iam_binding</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.SubnetworkIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.SubnetworkIAMBindingArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var binding = new Gcp.Compute.SubnetworkIAMBinding(&amp;quot;binding&amp;quot;, new Gcp.Compute.SubnetworkIAMBindingArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Members = 
+        {
+            &amp;quot;user:jane@example.com&amp;quot;,
+        },
+        Condition = new Gcp.Compute.Inputs.SubnetworkIAMBindingConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
+<h2 id="google_compute_subnetwork_iam_member">google_compute_subnetwork_iam_member</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.SubnetworkIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.SubnetworkIAMMemberArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<p>With IAM Conditions:</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var member = new Gcp.Compute.SubnetworkIAMMember(&amp;quot;member&amp;quot;, new Gcp.Compute.SubnetworkIAMMemberArgs
+    {
+        Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+        Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+        Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+        Role = &amp;quot;roles/compute.networkUser&amp;quot;,
+        Member = &amp;quot;user:jane@example.com&amp;quot;,
+        Condition = new Gcp.Compute.Inputs.SubnetworkIAMMemberConditionArgs
+        {
+            Title = &amp;quot;expires_after_2019_12_31&amp;quot;,
+            Description = &amp;quot;Expiring at midnight of 2019-12-31&amp;quot;,
+            Expression = &amp;quot;request.time &amp;lt; timestamp(\&amp;quot;2020-01-01T00:00:00Z\&amp;quot;)&amp;quot;,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMPolicyArgs.html">SubnetworkIAMPolicyArgs</a></h4>
       <section></section>
@@ -1414,6 +4351,36 @@ target of a network load balancer (Forwarding Rule). For more information see
 <a href="https://cloud.google.com/compute/docs/load-balancing/network/target-pools">the official
 documentation</a>
 and <a href="https://cloud.google.com/compute/docs/reference/latest/targetPools">API</a>.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var defaultHttpHealthCheck = new Gcp.Compute.HttpHealthCheck(&amp;quot;defaultHttpHealthCheck&amp;quot;, new Gcp.Compute.HttpHealthCheckArgs
+    {
+        RequestPath = &amp;quot;/&amp;quot;,
+        CheckIntervalSec = 1,
+        TimeoutSec = 1,
+    });
+    var defaultTargetPool = new Gcp.Compute.TargetPool(&amp;quot;defaultTargetPool&amp;quot;, new Gcp.Compute.TargetPoolArgs
+    {
+        Instances = 
+        {
+            &amp;quot;us-central1-a/myinstance1&amp;quot;,
+            &amp;quot;us-central1-b/myinstance2&amp;quot;,
+        },
+        HealthChecks = 
+        {
+            defaultHttpHealthCheck.Name,
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetPoolArgs.html">TargetPoolArgs</a></h4>
       <section></section>
@@ -1468,6 +4435,61 @@ by Google, but used only by you.</p>
 <ul>
 <li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/targetVpnGateways">API documentation</a></li>
 </ul>
+<h2 id="example-usage---target-vpn-gateway-basic">Example Usage - Target Vpn Gateway Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new Gcp.Compute.Network(&amp;quot;network1&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+    });
+    var targetGateway = new Gcp.Compute.VPNGateway(&amp;quot;targetGateway&amp;quot;, new Gcp.Compute.VPNGatewayArgs
+    {
+        Network = network1.Id,
+    });
+    var vpnStaticIp = new Gcp.Compute.Address(&amp;quot;vpnStaticIp&amp;quot;, new Gcp.Compute.AddressArgs
+    {
+    });
+    var frEsp = new Gcp.Compute.ForwardingRule(&amp;quot;frEsp&amp;quot;, new Gcp.Compute.ForwardingRuleArgs
+    {
+        IpProtocol = &amp;quot;ESP&amp;quot;,
+        IpAddress = vpnStaticIp.IPAddress,
+        Target = targetGateway.Id,
+    });
+    var frUdp500 = new Gcp.Compute.ForwardingRule(&amp;quot;frUdp500&amp;quot;, new Gcp.Compute.ForwardingRuleArgs
+    {
+        IpProtocol = &amp;quot;UDP&amp;quot;,
+        PortRange = &amp;quot;500&amp;quot;,
+        IpAddress = vpnStaticIp.IPAddress,
+        Target = targetGateway.Id,
+    });
+    var frUdp4500 = new Gcp.Compute.ForwardingRule(&amp;quot;frUdp4500&amp;quot;, new Gcp.Compute.ForwardingRuleArgs
+    {
+        IpProtocol = &amp;quot;UDP&amp;quot;,
+        PortRange = &amp;quot;4500&amp;quot;,
+        IpAddress = vpnStaticIp.IPAddress,
+        Target = targetGateway.Id,
+    });
+    var tunnel1 = new Gcp.Compute.VPNTunnel(&amp;quot;tunnel1&amp;quot;, new Gcp.Compute.VPNTunnelArgs
+    {
+        PeerIp = &amp;quot;15.0.0.120&amp;quot;,
+        SharedSecret = &amp;quot;a secret message&amp;quot;,
+        TargetVpnGateway = targetGateway.Id,
+    });
+    var route1 = new Gcp.Compute.Route(&amp;quot;route1&amp;quot;, new Gcp.Compute.RouteArgs
+    {
+        Network = network1.Name,
+        DestRange = &amp;quot;15.0.0.0/24&amp;quot;,
+        Priority = 1000,
+        NextHopVpnTunnel = tunnel1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.VPNGatewayArgs.html">VPNGatewayArgs</a></h4>
       <section></section>
@@ -1482,6 +4504,124 @@ by Google, but used only by you.</p>
 <li><a href="https://cloud.google.com/vpn/docs/concepts/overview">Cloud VPN Overview</a></li>
 <li><a href="https://cloud.google.com/vpn/docs/concepts/choosing-networks-routing">Networks and Tunnel Routing</a></li>
 </ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including <code>shared_secret</code> will be stored in the raw
+state as plain-text.</p>
+</blockquote>
+<h2 id="example-usage---vpn-tunnel-basic">Example Usage - Vpn Tunnel Basic</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new Gcp.Compute.Network(&amp;quot;network1&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+    });
+    var targetGateway = new Gcp.Compute.VPNGateway(&amp;quot;targetGateway&amp;quot;, new Gcp.Compute.VPNGatewayArgs
+    {
+        Network = network1.Id,
+    });
+    var vpnStaticIp = new Gcp.Compute.Address(&amp;quot;vpnStaticIp&amp;quot;, new Gcp.Compute.AddressArgs
+    {
+    });
+    var frEsp = new Gcp.Compute.ForwardingRule(&amp;quot;frEsp&amp;quot;, new Gcp.Compute.ForwardingRuleArgs
+    {
+        IpProtocol = &amp;quot;ESP&amp;quot;,
+        IpAddress = vpnStaticIp.IPAddress,
+        Target = targetGateway.Id,
+    });
+    var frUdp500 = new Gcp.Compute.ForwardingRule(&amp;quot;frUdp500&amp;quot;, new Gcp.Compute.ForwardingRuleArgs
+    {
+        IpProtocol = &amp;quot;UDP&amp;quot;,
+        PortRange = &amp;quot;500&amp;quot;,
+        IpAddress = vpnStaticIp.IPAddress,
+        Target = targetGateway.Id,
+    });
+    var frUdp4500 = new Gcp.Compute.ForwardingRule(&amp;quot;frUdp4500&amp;quot;, new Gcp.Compute.ForwardingRuleArgs
+    {
+        IpProtocol = &amp;quot;UDP&amp;quot;,
+        PortRange = &amp;quot;4500&amp;quot;,
+        IpAddress = vpnStaticIp.IPAddress,
+        Target = targetGateway.Id,
+    });
+    var tunnel1 = new Gcp.Compute.VPNTunnel(&amp;quot;tunnel1&amp;quot;, new Gcp.Compute.VPNTunnelArgs
+    {
+        PeerIp = &amp;quot;15.0.0.120&amp;quot;,
+        SharedSecret = &amp;quot;a secret message&amp;quot;,
+        TargetVpnGateway = targetGateway.Id,
+    });
+    var route1 = new Gcp.Compute.Route(&amp;quot;route1&amp;quot;, new Gcp.Compute.RouteArgs
+    {
+        Network = network1.Name,
+        DestRange = &amp;quot;15.0.0.0/24&amp;quot;,
+        Priority = 1000,
+        NextHopVpnTunnel = tunnel1.Id,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage---vpn-tunnel-beta">Example Usage - Vpn Tunnel Beta</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var network1 = new Gcp.Compute.Network(&amp;quot;network1&amp;quot;, new Gcp.Compute.NetworkArgs
+    {
+    });
+    var targetGateway = new Gcp.Compute.VPNGateway(&amp;quot;targetGateway&amp;quot;, new Gcp.Compute.VPNGatewayArgs
+    {
+        Network = network1.Id,
+    });
+    var vpnStaticIp = new Gcp.Compute.Address(&amp;quot;vpnStaticIp&amp;quot;, new Gcp.Compute.AddressArgs
+    {
+    });
+    var frEsp = new Gcp.Compute.ForwardingRule(&amp;quot;frEsp&amp;quot;, new Gcp.Compute.ForwardingRuleArgs
+    {
+        IpProtocol = &amp;quot;ESP&amp;quot;,
+        IpAddress = vpnStaticIp.IPAddress,
+        Target = targetGateway.Id,
+    });
+    var frUdp500 = new Gcp.Compute.ForwardingRule(&amp;quot;frUdp500&amp;quot;, new Gcp.Compute.ForwardingRuleArgs
+    {
+        IpProtocol = &amp;quot;UDP&amp;quot;,
+        PortRange = &amp;quot;500&amp;quot;,
+        IpAddress = vpnStaticIp.IPAddress,
+        Target = targetGateway.Id,
+    });
+    var frUdp4500 = new Gcp.Compute.ForwardingRule(&amp;quot;frUdp4500&amp;quot;, new Gcp.Compute.ForwardingRuleArgs
+    {
+        IpProtocol = &amp;quot;UDP&amp;quot;,
+        PortRange = &amp;quot;4500&amp;quot;,
+        IpAddress = vpnStaticIp.IPAddress,
+        Target = targetGateway.Id,
+    });
+    var tunnel1 = new Gcp.Compute.VPNTunnel(&amp;quot;tunnel1&amp;quot;, new Gcp.Compute.VPNTunnelArgs
+    {
+        PeerIp = &amp;quot;15.0.0.120&amp;quot;,
+        SharedSecret = &amp;quot;a secret message&amp;quot;,
+        TargetVpnGateway = targetGateway.Id,
+        Labels = 
+        {
+            { &amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot; },
+        },
+    });
+    var route1 = new Gcp.Compute.Route(&amp;quot;route1&amp;quot;, new Gcp.Compute.RouteArgs
+    {
+        Network = network1.Name,
+        DestRange = &amp;quot;15.0.0.0/24&amp;quot;,
+        Priority = 1000,
+        NextHopVpnTunnel = tunnel1.Id,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.VPNTunnelArgs.html">VPNTunnelArgs</a></h4>
       <section></section>

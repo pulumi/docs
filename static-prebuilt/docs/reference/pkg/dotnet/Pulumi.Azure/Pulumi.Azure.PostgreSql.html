@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.PostgreSql
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,6 +82,42 @@
 <blockquote>
 <p><strong>Note:</strong> Since this resource is provisioned by default, the Azure Provider will not check for the presence of an existing resource prior to attempting to create it.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleServer = new Azure.PostgreSql.Server(&amp;quot;exampleServer&amp;quot;, new Azure.PostgreSql.ServerArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        SkuName = &amp;quot;B_Gen5_2&amp;quot;,
+        StorageMb = 5120,
+        BackupRetentionDays = 7,
+        GeoRedundantBackupEnabled = false,
+        AutoGrowEnabled = true,
+        AdministratorLogin = &amp;quot;psqladminun&amp;quot;,
+        AdministratorLoginPassword = &amp;quot;H@Sh1CoR3!&amp;quot;,
+        Version = &amp;quot;9.5&amp;quot;,
+        SslEnforcementEnabled = true,
+    });
+    var exampleConfiguration = new Azure.PostgreSql.Configuration(&amp;quot;exampleConfiguration&amp;quot;, new Azure.PostgreSql.ConfigurationArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ServerName = exampleServer.Name,
+        Value = &amp;quot;on&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.PostgreSql.ConfigurationArgs.html">ConfigurationArgs</a></h4>
       <section></section>
@@ -89,6 +125,43 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.PostgreSql.Database.html">Database</a></h4>
       <section><p>Manages a PostgreSQL Database within a PostgreSQL Server</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleServer = new Azure.PostgreSql.Server(&amp;quot;exampleServer&amp;quot;, new Azure.PostgreSql.ServerArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        SkuName = &amp;quot;B_Gen5_2&amp;quot;,
+        StorageMb = 5120,
+        BackupRetentionDays = 7,
+        GeoRedundantBackupEnabled = false,
+        AutoGrowEnabled = true,
+        AdministratorLogin = &amp;quot;psqladminun&amp;quot;,
+        AdministratorLoginPassword = &amp;quot;H@Sh1CoR3!&amp;quot;,
+        Version = &amp;quot;9.5&amp;quot;,
+        SslEnforcementEnabled = true,
+    });
+    var exampleDatabase = new Azure.PostgreSql.Database(&amp;quot;exampleDatabase&amp;quot;, new Azure.PostgreSql.DatabaseArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ServerName = exampleServer.Name,
+        Charset = &amp;quot;UTF8&amp;quot;,
+        Collation = &amp;quot;English_United States.1252&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.PostgreSql.DatabaseArgs.html">DatabaseArgs</a></h4>
       <section></section>
@@ -96,6 +169,60 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.PostgreSql.FirewallRule.html">FirewallRule</a></h4>
       <section><p>Manages a Firewall Rule for a PostgreSQL Server</p>
+<h2 id="example-usage-single-ip-address">Example Usage (Single IP Address)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleServer = new Azure.PostgreSql.Server(&amp;quot;exampleServer&amp;quot;, new Azure.PostgreSql.ServerArgs
+    {
+    });
+    // ...
+    var exampleFirewallRule = new Azure.PostgreSql.FirewallRule(&amp;quot;exampleFirewallRule&amp;quot;, new Azure.PostgreSql.FirewallRuleArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ServerName = exampleServer.Name,
+        StartIpAddress = &amp;quot;40.112.8.12&amp;quot;,
+        EndIpAddress = &amp;quot;40.112.8.12&amp;quot;,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-usage-ip-range">Example Usage (IP Range)</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleServer = new Azure.PostgreSql.Server(&amp;quot;exampleServer&amp;quot;, new Azure.PostgreSql.ServerArgs
+    {
+    });
+    // ...
+    var exampleFirewallRule = new Azure.PostgreSql.FirewallRule(&amp;quot;exampleFirewallRule&amp;quot;, new Azure.PostgreSql.FirewallRuleArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ServerName = exampleServer.Name,
+        StartIpAddress = &amp;quot;40.112.0.0&amp;quot;,
+        EndIpAddress = &amp;quot;40.112.255.255&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.PostgreSql.FirewallRuleArgs.html">FirewallRuleArgs</a></h4>
       <section></section>
@@ -109,6 +236,38 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.PostgreSql.Server.html">Server</a></h4>
       <section><p>Manages a PostgreSQL Server.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+    var exampleServer = new Azure.PostgreSql.Server(&amp;quot;exampleServer&amp;quot;, new Azure.PostgreSql.ServerArgs
+    {
+        Location = exampleResourceGroup.Location,
+        ResourceGroupName = exampleResourceGroup.Name,
+        AdministratorLogin = &amp;quot;psqladminun&amp;quot;,
+        AdministratorLoginPassword = &amp;quot;H@Sh1CoR3!&amp;quot;,
+        SkuName = &amp;quot;GP_Gen5_4&amp;quot;,
+        Version = &amp;quot;9.6&amp;quot;,
+        StorageMb = 640000,
+        BackupRetentionDays = 7,
+        GeoRedundantBackupEnabled = true,
+        AutoGrowEnabled = true,
+        PublicNetworkAccessEnabled = false,
+        SslEnforcementEnabled = true,
+        SslMinimalTlsVersionEnforced = &amp;quot;TLS1_2&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.PostgreSql.ServerArgs.html">ServerArgs</a></h4>
       <section></section>

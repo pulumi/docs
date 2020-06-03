@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.OpenStack.ContainerInfra
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,26 @@
   </h3>
       <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.Cluster.html">Cluster</a></h4>
       <section><p>Manages a V1 Magnum cluster resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-cluster">Create a Cluster</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var cluster1 = new OpenStack.ContainerInfra.Cluster(&amp;quot;cluster1&amp;quot;, new OpenStack.ContainerInfra.ClusterArgs
+    {
+        ClusterTemplateId = &amp;quot;b9a45c5c-cd03-4958-82aa-b80bf93cb922&amp;quot;,
+        Keypair = &amp;quot;ssh_keypair&amp;quot;,
+        MasterCount = 3,
+        NodeCount = 5,
+    });
+}
+
+}
+</code></pre>
 <h2 id="argument-reference">Argument reference</h2>
 <p>The following arguments are supported:</p>
 <ul>
@@ -162,6 +182,12 @@ cluster. Changing this creates a new cluster.</p>
 <li><code>master_addresses</code> - IP addresses of the master node of the cluster.</li>
 <li><code>node_addresses</code> - IP addresses of the node of the cluster.</li>
 <li><code>stack_id</code> - UUID of the Orchestration service stack.</li>
+<li><code>kubeconfig</code> - The Kubernetes cluster's credentials</li>
+<li><code>raw_config</code> - The raw kubeconfig file</li>
+<li><code>host</code> - The cluster's API server URL</li>
+<li><code>cluster_ca_certificate</code> - The cluster's CA certificate</li>
+<li><code>client_key</code> - The client's RSA key</li>
+<li><code>client_certificate</code> - The client's certificate</li>
 </ul>
 </section>
       <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.ClusterArgs.html">ClusterArgs</a></h4>
@@ -170,6 +196,41 @@ cluster. Changing this creates a new cluster.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.html">ClusterTemplate</a></h4>
       <section><p>Manages a V1 Magnum cluster template resource within OpenStack.</p>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="create-a-cluster-template">Create a Cluster template</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var clustertemplate1 = new OpenStack.ContainerInfra.ClusterTemplate(&amp;quot;clustertemplate1&amp;quot;, new OpenStack.ContainerInfra.ClusterTemplateArgs
+    {
+        Coe = &amp;quot;kubernetes&amp;quot;,
+        DnsNameserver = &amp;quot;1.1.1.1&amp;quot;,
+        DockerStorageDriver = &amp;quot;devicemapper&amp;quot;,
+        DockerVolumeSize = 10,
+        Flavor = &amp;quot;m1.small&amp;quot;,
+        FloatingIpEnabled = false,
+        Image = &amp;quot;Fedora-Atomic-27&amp;quot;,
+        Labels = 
+        {
+            { &amp;quot;influx_grafana_dashboard_enabled&amp;quot;, &amp;quot;true&amp;quot; },
+            { &amp;quot;kube_dashboard_enabled&amp;quot;, &amp;quot;true&amp;quot; },
+            { &amp;quot;kube_tag&amp;quot;, &amp;quot;1.11.1&amp;quot; },
+            { &amp;quot;prometheus_monitoring&amp;quot;, &amp;quot;true&amp;quot; },
+        },
+        MasterFlavor = &amp;quot;m1.medium&amp;quot;,
+        MasterLbEnabled = true,
+        NetworkDriver = &amp;quot;flannel&amp;quot;,
+        ServerType = &amp;quot;vm&amp;quot;,
+        VolumeDriver = &amp;quot;cinder&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h2 id="argument-reference">Argument reference</h2>
 <p>The following arguments are supported:</p>
 <ul>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Downtime
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,105 @@
   <h1 id="Pulumi_Datadog_Downtime" data-uid="Pulumi.Datadog.Downtime" class="text-break">Class Downtime
   </h1>
   <div class="markdown level0 summary"><p>Provides a Datadog downtime resource. This can be used to create and manage Datadog downtimes.</p>
+<h2 id="example-downtime-for-a-specific-monitor">Example: downtime for a specific monitor</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Datadog = Pulumi.Datadog;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new daily 1700-0900 Datadog downtime for a specific monitor id
+    var foo = new Datadog.Downtime(&amp;quot;foo&amp;quot;, new Datadog.DowntimeArgs
+    {
+        End = 1483365600,
+        MonitorId = 12345,
+        Recurrence = new Datadog.Inputs.DowntimeRecurrenceArgs
+        {
+            Period = 1,
+            Type = &amp;quot;days&amp;quot;,
+        },
+        Scopes = 
+        {
+            &amp;quot;*&amp;quot;,
+        },
+        Start = 1483308000,
+    });
+}
+
+}
+</code></pre>
+<h2 id="example-downtime-for-all-monitors">Example: downtime for all monitors</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Datadog = Pulumi.Datadog;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    // Create a new daily 1700-0900 Datadog downtime for all monitors
+    var foo = new Datadog.Downtime(&amp;quot;foo&amp;quot;, new Datadog.DowntimeArgs
+    {
+        End = 1483365600,
+        Recurrence = new Datadog.Inputs.DowntimeRecurrenceArgs
+        {
+            Period = 1,
+            Type = &amp;quot;days&amp;quot;,
+        },
+        Scopes = 
+        {
+            &amp;quot;*&amp;quot;,
+        },
+        Start = 1483308000,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Downtime</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Downtime</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Datadog.html">Pulumi.Datadog</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Datadog.dll</h6>
@@ -88,16 +181,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime__ctor_" data-uid="Pulumi.Datadog.Downtime.#ctor*"></a>
-  <h4 id="Pulumi_Datadog_Downtime__ctor_System_String_Pulumi_Datadog_DowntimeArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.Downtime.#ctor(System.String,Pulumi.Datadog.DowntimeArgs,System.Nullable{CustomResourceOptions})">Downtime(String, DowntimeArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Datadog_Downtime__ctor_System_String_Pulumi_Datadog_DowntimeArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Datadog.Downtime.#ctor(System.String,Pulumi.Datadog.DowntimeArgs,Pulumi.CustomResourceOptions)">Downtime(String, DowntimeArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Downtime resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Downtime(string name, DowntimeArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Downtime(string name, DowntimeArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +215,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +225,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_Active_" data-uid="Pulumi.Datadog.Downtime.Active*"></a>
   <h4 id="Pulumi_Datadog_Downtime_Active" data-uid="Pulumi.Datadog.Downtime.Active">Active</h4>
@@ -153,13 +246,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_Disabled_" data-uid="Pulumi.Datadog.Downtime.Disabled*"></a>
   <h4 id="Pulumi_Datadog_Downtime_Disabled" data-uid="Pulumi.Datadog.Downtime.Disabled">Disabled</h4>
@@ -180,13 +273,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_End_" data-uid="Pulumi.Datadog.Downtime.End*"></a>
   <h4 id="Pulumi_Datadog_Downtime_End" data-uid="Pulumi.Datadog.Downtime.End">End</h4>
@@ -207,13 +300,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_EndDate_" data-uid="Pulumi.Datadog.Downtime.EndDate*"></a>
   <h4 id="Pulumi_Datadog_Downtime_EndDate" data-uid="Pulumi.Datadog.Downtime.EndDate">EndDate</h4>
@@ -222,7 +315,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EndDate { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EndDate { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +327,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_Message_" data-uid="Pulumi.Datadog.Downtime.Message*"></a>
   <h4 id="Pulumi_Datadog_Downtime_Message" data-uid="Pulumi.Datadog.Downtime.Message">Message</h4>
@@ -249,7 +342,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Message { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Message { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +354,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_MonitorId_" data-uid="Pulumi.Datadog.Downtime.MonitorId*"></a>
   <h4 id="Pulumi_Datadog_Downtime_MonitorId" data-uid="Pulumi.Datadog.Downtime.MonitorId">MonitorId</h4>
@@ -288,13 +381,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_MonitorTags_" data-uid="Pulumi.Datadog.Downtime.MonitorTags*"></a>
   <h4 id="Pulumi_Datadog_Downtime_MonitorTags" data-uid="Pulumi.Datadog.Downtime.MonitorTags">MonitorTags</h4>
@@ -315,13 +408,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_Recurrence_" data-uid="Pulumi.Datadog.Downtime.Recurrence*"></a>
   <h4 id="Pulumi_Datadog_Downtime_Recurrence" data-uid="Pulumi.Datadog.Downtime.Recurrence">Recurrence</h4>
@@ -342,13 +435,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.DowntimeRecurrence.html">DowntimeRecurrence</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.DowntimeRecurrence.html">DowntimeRecurrence</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_Scopes_" data-uid="Pulumi.Datadog.Downtime.Scopes*"></a>
   <h4 id="Pulumi_Datadog_Downtime_Scopes" data-uid="Pulumi.Datadog.Downtime.Scopes">Scopes</h4>
@@ -369,13 +462,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_Start_" data-uid="Pulumi.Datadog.Downtime.Start*"></a>
   <h4 id="Pulumi_Datadog_Downtime_Start" data-uid="Pulumi.Datadog.Downtime.Start">Start</h4>
@@ -396,13 +489,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_StartDate_" data-uid="Pulumi.Datadog.Downtime.StartDate*"></a>
   <h4 id="Pulumi_Datadog_Downtime_StartDate" data-uid="Pulumi.Datadog.Downtime.StartDate">StartDate</h4>
@@ -411,7 +504,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; StartDate { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StartDate { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -423,13 +516,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_Timezone_" data-uid="Pulumi.Datadog.Downtime.Timezone*"></a>
   <h4 id="Pulumi_Datadog_Downtime_Timezone" data-uid="Pulumi.Datadog.Downtime.Timezone">Timezone</h4>
@@ -438,7 +531,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Timezone { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Timezone { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,7 +543,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -458,17 +551,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L188">View Source</a>
   </span>
   <a id="Pulumi_Datadog_Downtime_Get_" data-uid="Pulumi.Datadog.Downtime.Get*"></a>
-  <h4 id="Pulumi_Datadog_Downtime_Get_System_String_Input_System_String__Pulumi_Datadog_DowntimeState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.Downtime.Get(System.String,Input{System.String},Pulumi.Datadog.DowntimeState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DowntimeState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Datadog_Downtime_Get_System_String_Pulumi_Input_System_String__Pulumi_Datadog_DowntimeState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Datadog.Downtime.Get(System.String,Pulumi.Input{System.String},Pulumi.Datadog.DowntimeState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DowntimeState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Downtime resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Downtime Get(string name, Input&lt;string&gt; id, DowntimeState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Downtime Get(string name, Input&lt;string&gt; id, DowntimeState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -487,7 +580,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -499,7 +592,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -528,7 +621,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/Downtime.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Downtime.cs/#L76" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Vault
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,12 +75,101 @@
 <blockquote>
 <p><strong>NOTE:</strong> When removing a Glacier Vault, the Vault must be empty.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var awsSnsTopic = new Aws.Sns.Topic(&amp;quot;awsSnsTopic&amp;quot;, new Aws.Sns.TopicArgs
+    {
+    });
+    var myArchive = new Aws.Glacier.Vault(&amp;quot;myArchive&amp;quot;, new Aws.Glacier.VaultArgs
+    {
+        AccessPolicy = @&amp;quot;{
+&amp;quot;&amp;quot;Version&amp;quot;&amp;quot;:&amp;quot;&amp;quot;2012-10-17&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;Statement&amp;quot;&amp;quot;:[
+   {
+      &amp;quot;&amp;quot;Sid&amp;quot;&amp;quot;: &amp;quot;&amp;quot;add-read-only-perm&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;Principal&amp;quot;&amp;quot;: &amp;quot;&amp;quot;*&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;Effect&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Allow&amp;quot;&amp;quot;,
+      &amp;quot;&amp;quot;Action&amp;quot;&amp;quot;: [
+         &amp;quot;&amp;quot;glacier:InitiateJob&amp;quot;&amp;quot;,
+         &amp;quot;&amp;quot;glacier:GetJobOutput&amp;quot;&amp;quot;
+      ],
+      &amp;quot;&amp;quot;Resource&amp;quot;&amp;quot;: &amp;quot;&amp;quot;arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive&amp;quot;&amp;quot;
+   }
+]
+}
+
+&amp;quot;,
+        Notifications = 
+        {
+            new Aws.Glacier.Inputs.VaultNotificationArgs
+            {
+                Events = 
+                {
+                    &amp;quot;ArchiveRetrievalCompleted&amp;quot;,
+                    &amp;quot;InventoryRetrievalCompleted&amp;quot;,
+                },
+                SnsTopic = awsSnsTopic.Arn,
+            },
+        },
+        Tags = 
+        {
+            { &amp;quot;Test&amp;quot;, &amp;quot;MyArchive&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Vault</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Vault</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Glacier.html">Pulumi.Aws.Glacier</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -91,16 +180,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glacier/Vault.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Glacier/Vault.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glacier_Vault__ctor_" data-uid="Pulumi.Aws.Glacier.Vault.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Glacier_Vault__ctor_System_String_Pulumi_Aws_Glacier_VaultArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Glacier.Vault.#ctor(System.String,Pulumi.Aws.Glacier.VaultArgs,System.Nullable{CustomResourceOptions})">Vault(String, VaultArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Glacier_Vault__ctor_System_String_Pulumi_Aws_Glacier_VaultArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Glacier.Vault.#ctor(System.String,Pulumi.Aws.Glacier.VaultArgs,Pulumi.CustomResourceOptions)">Vault(String, VaultArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Vault resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vault(string name, VaultArgs args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Vault(string name, VaultArgs args = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +214,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -135,7 +224,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glacier/Vault.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Glacier/Vault.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glacier_Vault_AccessPolicy_" data-uid="Pulumi.Aws.Glacier.Vault.AccessPolicy*"></a>
   <h4 id="Pulumi_Aws_Glacier_Vault_AccessPolicy" data-uid="Pulumi.Aws.Glacier.Vault.AccessPolicy">AccessPolicy</h4>
@@ -145,7 +234,7 @@ The heredoc syntax or <code>file</code> function is helpful here. Use the <a hre
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccessPolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessPolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +246,13 @@ The heredoc syntax or <code>file</code> function is helpful here. Use the <a hre
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glacier/Vault.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Glacier/Vault.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glacier_Vault_Arn_" data-uid="Pulumi.Aws.Glacier.Vault.Arn*"></a>
   <h4 id="Pulumi_Aws_Glacier_Vault_Arn" data-uid="Pulumi.Aws.Glacier.Vault.Arn">Arn</h4>
@@ -184,13 +273,13 @@ The heredoc syntax or <code>file</code> function is helpful here. Use the <a hre
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glacier/Vault.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Glacier/Vault.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glacier_Vault_Location_" data-uid="Pulumi.Aws.Glacier.Vault.Location*"></a>
   <h4 id="Pulumi_Aws_Glacier_Vault_Location" data-uid="Pulumi.Aws.Glacier.Vault.Location">Location</h4>
@@ -211,13 +300,13 @@ The heredoc syntax or <code>file</code> function is helpful here. Use the <a hre
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glacier/Vault.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Glacier/Vault.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glacier_Vault_Name_" data-uid="Pulumi.Aws.Glacier.Vault.Name*"></a>
   <h4 id="Pulumi_Aws_Glacier_Vault_Name" data-uid="Pulumi.Aws.Glacier.Vault.Name">Name</h4>
@@ -238,13 +327,13 @@ The heredoc syntax or <code>file</code> function is helpful here. Use the <a hre
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glacier/Vault.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Glacier/Vault.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glacier_Vault_Notifications_" data-uid="Pulumi.Aws.Glacier.Vault.Notifications*"></a>
   <h4 id="Pulumi_Aws_Glacier_Vault_Notifications" data-uid="Pulumi.Aws.Glacier.Vault.Notifications">Notifications</h4>
@@ -265,22 +354,22 @@ The heredoc syntax or <code>file</code> function is helpful here. Use the <a hre
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Glacier.Outputs.VaultNotification.html">VaultNotification</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Glacier.Outputs.VaultNotification.html">VaultNotification</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glacier/Vault.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Glacier/Vault.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glacier_Vault_Tags_" data-uid="Pulumi.Aws.Glacier.Vault.Tags*"></a>
   <h4 id="Pulumi_Aws_Glacier_Vault_Tags" data-uid="Pulumi.Aws.Glacier.Vault.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A map of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +381,7 @@ The heredoc syntax or <code>file</code> function is helpful here. Use the <a hre
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -300,17 +389,17 @@ The heredoc syntax or <code>file</code> function is helpful here. Use the <a hre
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glacier/Vault.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Glacier/Vault.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glacier_Vault_Get_" data-uid="Pulumi.Aws.Glacier.Vault.Get*"></a>
-  <h4 id="Pulumi_Aws_Glacier_Vault_Get_System_String_Input_System_String__Pulumi_Aws_Glacier_VaultState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Glacier.Vault.Get(System.String,Input{System.String},Pulumi.Aws.Glacier.VaultState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VaultState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_Glacier_Vault_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Glacier_VaultState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Glacier.Vault.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Glacier.VaultState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VaultState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Vault resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vault Get(string name, Input&lt;string&gt; id, VaultState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Vault Get(string name, Input&lt;string&gt; id, VaultState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -329,7 +418,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -341,7 +430,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -370,7 +459,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glacier/Vault.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/Glacier/Vault.cs/#L73" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

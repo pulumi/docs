@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.AppPlatform
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,6 +81,39 @@
       <h4><a class="xref" href="Pulumi.Azure.AppPlatform.GetSpringCloudServiceArgs.html">GetSpringCloudServiceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.AppPlatform.GetSpringCloudServiceResult.html">GetSpringCloudServiceResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.AppPlatform.SpringCloudApp.html">SpringCloudApp</a></h4>
+      <section><p>Manage an Azure Spring Cloud Application.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;Southeast Asia&amp;quot;,
+    });
+    var exampleSpringCloudService = new Azure.AppPlatform.SpringCloudService(&amp;quot;exampleSpringCloudService&amp;quot;, new Azure.AppPlatform.SpringCloudServiceArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        Location = exampleResourceGroup.Location,
+    });
+    var exampleSpringCloudApp = new Azure.AppPlatform.SpringCloudApp(&amp;quot;exampleSpringCloudApp&amp;quot;, new Azure.AppPlatform.SpringCloudAppArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        ServiceName = exampleSpringCloudService.Name,
+    });
+}
+
+}
+</code></pre>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.AppPlatform.SpringCloudAppArgs.html">SpringCloudAppArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.AppPlatform.SpringCloudAppState.html">SpringCloudAppState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.AppPlatform.SpringCloudService.html">SpringCloudService</a></h4>
       <section><p>Manages an Azure Spring Cloud Service.</p>

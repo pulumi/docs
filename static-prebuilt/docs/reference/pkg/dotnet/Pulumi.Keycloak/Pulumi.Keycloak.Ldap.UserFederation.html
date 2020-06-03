@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UserFederation
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,6 +77,42 @@
 from a directory system such as LDAP or Active Directory. Federated users
 will exist within the realm and will be able to log in to clients. Federated
 users can have their attributes defined using mappers.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var realm = new Keycloak.Realm(&amp;quot;realm&amp;quot;, new Keycloak.RealmArgs
+    {
+        Enabled = true,
+        Realm = &amp;quot;test&amp;quot;,
+    });
+    var ldapUserFederation = new Keycloak.Ldap.UserFederation(&amp;quot;ldapUserFederation&amp;quot;, new Keycloak.Ldap.UserFederationArgs
+    {
+        BindCredential = &amp;quot;admin&amp;quot;,
+        BindDn = &amp;quot;cn=admin,dc=example,dc=org&amp;quot;,
+        ConnectionTimeout = &amp;quot;5s&amp;quot;,
+        ConnectionUrl = &amp;quot;ldap://openldap&amp;quot;,
+        Enabled = true,
+        RdnLdapAttribute = &amp;quot;cn&amp;quot;,
+        ReadTimeout = &amp;quot;10s&amp;quot;,
+        RealmId = realm.Id,
+        UserObjectClasses = 
+        {
+            &amp;quot;simpleSecurityObject&amp;quot;,
+            &amp;quot;organizationalRole&amp;quot;,
+        },
+        UsernameLdapAttribute = &amp;quot;cn&amp;quot;,
+        UsersDn = &amp;quot;dc=example,dc=org&amp;quot;,
+        UuidLdapAttribute = &amp;quot;entryDN&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 <h3 id="argument-reference">Argument Reference</h3>
 <p>The following arguments are supported:</p>
 <ul>
@@ -118,7 +154,45 @@ users can have their attributes defined using mappers.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UserFederation</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">UserFederation</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.Ldap.html">Pulumi.Keycloak.Ldap</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
@@ -129,16 +203,16 @@ users can have their attributes defined using mappers.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L226">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L265">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation__ctor_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.#ctor*"></a>
-  <h4 id="Pulumi_Keycloak_Ldap_UserFederation__ctor_System_String_Pulumi_Keycloak_Ldap_UserFederationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Ldap.UserFederation.#ctor(System.String,Pulumi.Keycloak.Ldap.UserFederationArgs,System.Nullable{CustomResourceOptions})">UserFederation(String, UserFederationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation__ctor_System_String_Pulumi_Keycloak_Ldap_UserFederationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.#ctor(System.String,Pulumi.Keycloak.Ldap.UserFederationArgs,Pulumi.CustomResourceOptions)">UserFederation(String, UserFederationArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a UserFederation resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UserFederation(string name, UserFederationArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public UserFederation(string name, UserFederationArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +237,7 @@ users can have their attributes defined using mappers.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -173,7 +247,7 @@ users can have their attributes defined using mappers.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_BatchSizeForSync_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BatchSizeForSync*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_BatchSizeForSync" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BatchSizeForSync">BatchSizeForSync</h4>
@@ -194,13 +268,13 @@ users can have their attributes defined using mappers.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_BindCredential_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BindCredential*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_BindCredential" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BindCredential">BindCredential</h4>
@@ -209,7 +283,7 @@ users can have their attributes defined using mappers.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BindCredential { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; BindCredential { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,13 +295,13 @@ users can have their attributes defined using mappers.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_BindDn_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BindDn*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_BindDn" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BindDn">BindDn</h4>
@@ -236,7 +310,7 @@ users can have their attributes defined using mappers.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BindDn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; BindDn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -248,13 +322,13 @@ users can have their attributes defined using mappers.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_CachePolicy_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.CachePolicy*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_CachePolicy" data-uid="Pulumi.Keycloak.Ldap.UserFederation.CachePolicy">CachePolicy</h4>
@@ -262,7 +336,7 @@ users can have their attributes defined using mappers.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CachePolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CachePolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -274,13 +348,13 @@ users can have their attributes defined using mappers.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_ChangedSyncPeriod_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ChangedSyncPeriod*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ChangedSyncPeriod" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ChangedSyncPeriod">ChangedSyncPeriod</h4>
@@ -302,13 +376,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_ConnectionTimeout_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ConnectionTimeout*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ConnectionTimeout" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ConnectionTimeout">ConnectionTimeout</h4>
@@ -317,7 +391,7 @@ sync.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ConnectionTimeout { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ConnectionTimeout { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -329,13 +403,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_ConnectionUrl_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ConnectionUrl*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ConnectionUrl" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ConnectionUrl">ConnectionUrl</h4>
@@ -356,13 +430,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_CustomUserSearchFilter_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.CustomUserSearchFilter*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_CustomUserSearchFilter" data-uid="Pulumi.Keycloak.Ldap.UserFederation.CustomUserSearchFilter">CustomUserSearchFilter</h4>
@@ -371,7 +445,7 @@ sync.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CustomUserSearchFilter { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CustomUserSearchFilter { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,13 +457,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_EditMode_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.EditMode*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_EditMode" data-uid="Pulumi.Keycloak.Ldap.UserFederation.EditMode">EditMode</h4>
@@ -398,7 +472,7 @@ sync.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EditMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EditMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -410,13 +484,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_Enabled_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Enabled*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Enabled" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Enabled">Enabled</h4>
@@ -437,13 +511,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_FullSyncPeriod_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.FullSyncPeriod*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_FullSyncPeriod" data-uid="Pulumi.Keycloak.Ldap.UserFederation.FullSyncPeriod">FullSyncPeriod</h4>
@@ -464,13 +538,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_ImportEnabled_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ImportEnabled*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ImportEnabled" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ImportEnabled">ImportEnabled</h4>
@@ -491,13 +565,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_Name_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Name*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Name" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Name">Name</h4>
@@ -518,13 +592,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_Pagination_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Pagination*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Pagination" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Pagination">Pagination</h4>
@@ -545,13 +619,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_Priority_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Priority*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Priority" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Priority">Priority</h4>
@@ -572,13 +646,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L152">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L191">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_RdnLdapAttribute_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.RdnLdapAttribute*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_RdnLdapAttribute" data-uid="Pulumi.Keycloak.Ldap.UserFederation.RdnLdapAttribute">RdnLdapAttribute</h4>
@@ -599,13 +673,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L197">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_ReadTimeout_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ReadTimeout*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ReadTimeout" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ReadTimeout">ReadTimeout</h4>
@@ -614,7 +688,7 @@ sync.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ReadTimeout { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReadTimeout { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -626,13 +700,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_RealmId_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.RealmId*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_RealmId" data-uid="Pulumi.Keycloak.Ldap.UserFederation.RealmId">RealmId</h4>
@@ -653,13 +727,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_SearchScope_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.SearchScope*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_SearchScope" data-uid="Pulumi.Keycloak.Ldap.UserFederation.SearchScope">SearchScope</h4>
@@ -668,7 +742,7 @@ sync.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SearchScope { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SearchScope { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -680,13 +754,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_SyncRegistrations_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.SyncRegistrations*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_SyncRegistrations" data-uid="Pulumi.Keycloak.Ldap.UserFederation.SyncRegistrations">SyncRegistrations</h4>
@@ -707,13 +781,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_UsernameLdapAttribute_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UsernameLdapAttribute*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_UsernameLdapAttribute" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UsernameLdapAttribute">UsernameLdapAttribute</h4>
@@ -734,13 +808,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L185">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_UserObjectClasses_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UserObjectClasses*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_UserObjectClasses" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UserObjectClasses">UserObjectClasses</h4>
@@ -761,13 +835,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_UsersDn_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UsersDn*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_UsersDn" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UsersDn">UsersDn</h4>
@@ -788,13 +862,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L179">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L218">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_UseTruststoreSpi_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UseTruststoreSpi*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_UseTruststoreSpi" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UseTruststoreSpi">UseTruststoreSpi</h4>
@@ -802,7 +876,7 @@ sync.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UseTruststoreSpi { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UseTruststoreSpi { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -814,13 +888,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L203">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_UuidLdapAttribute_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UuidLdapAttribute*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_UuidLdapAttribute" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UuidLdapAttribute">UuidLdapAttribute</h4>
@@ -841,13 +915,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_ValidatePasswordPolicy_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ValidatePasswordPolicy*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ValidatePasswordPolicy" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ValidatePasswordPolicy">ValidatePasswordPolicy</h4>
@@ -868,13 +942,13 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_Vendor_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Vendor*"></a>
   <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Vendor" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Vendor">Vendor</h4>
@@ -883,7 +957,7 @@ sync.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Vendor { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Vendor { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -895,7 +969,7 @@ sync.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -903,17 +977,17 @@ sync.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L295">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Ldap_UserFederation_Get_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Get*"></a>
-  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Get_System_String_Input_System_String__Pulumi_Keycloak_Ldap_UserFederationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Get(System.String,Input{System.String},Pulumi.Keycloak.Ldap.UserFederationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, UserFederationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Get_System_String_Pulumi_Input_System_String__Pulumi_Keycloak_Ldap_UserFederationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Get(System.String,Pulumi.Input{System.String},Pulumi.Keycloak.Ldap.UserFederationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, UserFederationState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing UserFederation resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static UserFederation Get(string name, Input&lt;string&gt; id, UserFederationState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static UserFederation Get(string name, Input&lt;string&gt; id, UserFederationState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -932,7 +1006,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -944,7 +1018,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -973,7 +1047,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Ldap/UserFederation.cs/#L59" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/jaxxstorm/gh-actions/sdk/dotnet/Ldap/UserFederation.cs/#L98" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

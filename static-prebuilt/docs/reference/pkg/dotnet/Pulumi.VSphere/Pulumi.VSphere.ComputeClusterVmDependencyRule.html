@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ComputeClusterVmDependencyRule
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,23 +73,160 @@
   </h1>
   <div class="markdown level0 summary"><p>The <code>vsphere..ComputeClusterVmDependencyRule</code> resource can be used to manage
 VM dependency rules in a cluster, either created by the
-<a href="/docs/providers/vsphere/r/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> resource or looked up
-by the <a href="/docs/providers/vsphere/d/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> data source.</p>
+<code>vsphere..ComputeCluster</code> resource or looked up
+by the <code>vsphere..ComputeCluster</code> data source.</p>
 <p>A virtual machine dependency rule applies to vSphere HA, and allows
 user-defined startup orders for virtual machines in the case of host failure.
 Virtual machines are supplied via groups, which can be managed via the
-<a href="/docs/providers/vsphere/r/compute_cluster_vm_group.html"><code>vsphere..ComputeClusterVmGroup</code></a>
+<code>vsphere..ComputeClusterVmGroup</code>
 resource.</p>
 <blockquote>
 <p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+    {
+        Name = &amp;quot;dc1&amp;quot;,
+    }));
+    var datastore = dc.Apply(dc =&gt; Output.Create(VSphere.GetDatastore.InvokeAsync(new VSphere.GetDatastoreArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;datastore1&amp;quot;,
+    })));
+    var cluster = dc.Apply(dc =&gt; Output.Create(VSphere.GetComputeCluster.InvokeAsync(new VSphere.GetComputeClusterArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;cluster1&amp;quot;,
+    })));
+    var network = dc.Apply(dc =&gt; Output.Create(VSphere.GetNetwork.InvokeAsync(new VSphere.GetNetworkArgs
+    {
+        DatacenterId = dc.Id,
+        Name = &amp;quot;network1&amp;quot;,
+    })));
+    var vm1 = new VSphere.VirtualMachine(&amp;quot;vm1&amp;quot;, new VSphere.VirtualMachineArgs
+    {
+        DatastoreId = datastore.Apply(datastore =&gt; datastore.Id),
+        Disks = 
+        {
+            new VSphere.Inputs.VirtualMachineDiskArgs
+            {
+                Label = &amp;quot;disk0&amp;quot;,
+                Size = 20,
+            },
+        },
+        GuestId = &amp;quot;other3xLinux64Guest&amp;quot;,
+        Memory = 2048,
+        NetworkInterfaces = 
+        {
+            new VSphere.Inputs.VirtualMachineNetworkInterfaceArgs
+            {
+                NetworkId = network.Apply(network =&gt; network.Id),
+            },
+        },
+        NumCpus = 2,
+        ResourcePoolId = cluster.Apply(cluster =&gt; cluster.ResourcePoolId),
+    });
+    var vm2 = new VSphere.VirtualMachine(&amp;quot;vm2&amp;quot;, new VSphere.VirtualMachineArgs
+    {
+        DatastoreId = datastore.Apply(datastore =&gt; datastore.Id),
+        Disks = 
+        {
+            new VSphere.Inputs.VirtualMachineDiskArgs
+            {
+                Label = &amp;quot;disk0&amp;quot;,
+                Size = 20,
+            },
+        },
+        GuestId = &amp;quot;other3xLinux64Guest&amp;quot;,
+        Memory = 2048,
+        NetworkInterfaces = 
+        {
+            new VSphere.Inputs.VirtualMachineNetworkInterfaceArgs
+            {
+                NetworkId = network.Apply(network =&gt; network.Id),
+            },
+        },
+        NumCpus = 2,
+        ResourcePoolId = cluster.Apply(cluster =&gt; cluster.ResourcePoolId),
+    });
+    var clusterVmGroup1 = new VSphere.ComputeClusterVmGroup(&amp;quot;clusterVmGroup1&amp;quot;, new VSphere.ComputeClusterVmGroupArgs
+    {
+        ComputeClusterId = cluster.Apply(cluster =&gt; cluster.Id),
+        VirtualMachineIds = 
+        {
+            vm1.Id,
+        },
+    });
+    var clusterVmGroup2 = new VSphere.ComputeClusterVmGroup(&amp;quot;clusterVmGroup2&amp;quot;, new VSphere.ComputeClusterVmGroupArgs
+    {
+        ComputeClusterId = cluster.Apply(cluster =&gt; cluster.Id),
+        VirtualMachineIds = 
+        {
+            vm2.Id,
+        },
+    });
+    var clusterVmDependencyRule = new VSphere.ComputeClusterVmDependencyRule(&amp;quot;clusterVmDependencyRule&amp;quot;, new VSphere.ComputeClusterVmDependencyRuleArgs
+    {
+        ComputeClusterId = cluster.Apply(cluster =&gt; cluster.Id),
+        DependencyVmGroupName = clusterVmGroup1.Name,
+        VmGroupName = clusterVmGroup2.Name,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ComputeClusterVmDependencyRule</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ComputeClusterVmDependencyRule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
@@ -100,16 +237,16 @@ connections.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmDependencyRule__ctor_" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.#ctor*"></a>
-  <h4 id="Pulumi_VSphere_ComputeClusterVmDependencyRule__ctor_System_String_Pulumi_VSphere_ComputeClusterVmDependencyRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.#ctor(System.String,Pulumi.VSphere.ComputeClusterVmDependencyRuleArgs,System.Nullable{CustomResourceOptions})">ComputeClusterVmDependencyRule(String, ComputeClusterVmDependencyRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmDependencyRule__ctor_System_String_Pulumi_VSphere_ComputeClusterVmDependencyRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.#ctor(System.String,Pulumi.VSphere.ComputeClusterVmDependencyRuleArgs,Pulumi.CustomResourceOptions)">ComputeClusterVmDependencyRule(String, ComputeClusterVmDependencyRuleArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ComputeClusterVmDependencyRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ComputeClusterVmDependencyRule(string name, ComputeClusterVmDependencyRuleArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ComputeClusterVmDependencyRule(string name, ComputeClusterVmDependencyRuleArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,7 +271,7 @@ connections.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -144,12 +281,12 @@ connections.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmDependencyRule_ComputeClusterId_" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.ComputeClusterId*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmDependencyRule_ComputeClusterId" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.ComputeClusterId">ComputeClusterId</h4>
-  <div class="markdown level1 summary"><p>The [managed object reference
-ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+  <div class="markdown level1 summary"><p>The managed object reference
+ID of the cluster to put the group in.  Forces a new
 resource if changed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -167,13 +304,13 @@ resource if changed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmDependencyRule_DependencyVmGroupName_" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.DependencyVmGroupName*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmDependencyRule_DependencyVmGroupName" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.DependencyVmGroupName">DependencyVmGroupName</h4>
@@ -197,13 +334,13 @@ group are started.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmDependencyRule_Enabled_" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.Enabled*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmDependencyRule_Enabled" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.Enabled">Enabled</h4>
@@ -224,13 +361,13 @@ group are started.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmDependencyRule_Mandatory_" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.Mandatory*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmDependencyRule_Mandatory" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.Mandatory">Mandatory</h4>
@@ -252,13 +389,13 @@ machine operations that may violate this rule. Default: <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmDependencyRule_Name_" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.Name*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmDependencyRule_Name" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.Name">Name</h4>
@@ -280,13 +417,13 @@ cluster.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmDependencyRule_VmGroupName_" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.VmGroupName*"></a>
   <h4 id="Pulumi_VSphere_ComputeClusterVmDependencyRule_VmGroupName" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.VmGroupName">VmGroupName</h4>
@@ -310,7 +447,7 @@ the group specified by
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -318,17 +455,17 @@ the group specified by
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L217">View Source</a>
   </span>
   <a id="Pulumi_VSphere_ComputeClusterVmDependencyRule_Get_" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.Get*"></a>
-  <h4 id="Pulumi_VSphere_ComputeClusterVmDependencyRule_Get_System_String_Input_System_String__Pulumi_VSphere_ComputeClusterVmDependencyRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.Get(System.String,Input{System.String},Pulumi.VSphere.ComputeClusterVmDependencyRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ComputeClusterVmDependencyRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmDependencyRule_Get_System_String_Pulumi_Input_System_String__Pulumi_VSphere_ComputeClusterVmDependencyRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.VSphere.ComputeClusterVmDependencyRule.Get(System.String,Pulumi.Input{System.String},Pulumi.VSphere.ComputeClusterVmDependencyRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ComputeClusterVmDependencyRuleState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ComputeClusterVmDependencyRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ComputeClusterVmDependencyRule Get(string name, Input&lt;string&gt; id, ComputeClusterVmDependencyRuleState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ComputeClusterVmDependencyRule Get(string name, Input&lt;string&gt; id, ComputeClusterVmDependencyRuleState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,7 +484,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -359,7 +496,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -388,7 +525,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L32" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/stack72/v1.18.3/sdk/dotnet/ComputeClusterVmDependencyRule.cs/#L131" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

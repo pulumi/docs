@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Gcp.Firebase
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -76,6 +76,18 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.Gcp.Firebase.GetWebApp.html">GetWebApp</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Firebase.GetWebAppArgs.html">GetWebAppArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Firebase.GetWebAppConfig.html">GetWebAppConfig</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Firebase.GetWebAppConfigArgs.html">GetWebAppConfigArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Firebase.GetWebAppConfigResult.html">GetWebAppConfigResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Firebase.GetWebAppResult.html">GetWebAppResult</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Firebase.Project.html">Project</a></h4>
       <section><p>A Google Cloud Firebase instance. This enables Firebase resources on a given google project.
 Since a FirebaseProject is actually also a GCP Project, a FirebaseProject uses underlying GCP
@@ -91,12 +103,39 @@ identifiers (most importantly, the projectId) as its own for easy interop with G
       <h4><a class="xref" href="Pulumi.Gcp.Firebase.ProjectArgs.html">ProjectArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Firebase.ProjectLocation.html">ProjectLocation</a></h4>
-      <section></section>
+      <section><p>Sets the default Google Cloud Platform (GCP) resource location for the specified FirebaseProject.</p>
+<p>This method creates an App Engine application with a default Cloud Storage bucket, located in the specified
+locationId. This location must be one of the available GCP resource locations.</p>
+<p>After the default GCP resource location is finalized, or if it was already set, it cannot be changed.
+The default GCP resource location for the specified FirebaseProject might already be set because either the
+GCP Project already has an App Engine application or defaultLocation.finalize was previously called with a
+specified locationId. Any new calls to defaultLocation.finalize with a different specified locationId will
+return a 409 error.</p>
+<p>To get more information about ProjectLocation, see:</p>
+<ul>
+<li><a href="https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.defaultLocation/finalize">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://firebase.google.com/">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Firebase.ProjectLocationArgs.html">ProjectLocationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Firebase.ProjectLocationState.html">ProjectLocationState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Firebase.ProjectState.html">ProjectState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Firebase.WebApp.html">WebApp</a></h4>
+      <section><p>A Google Cloud Firebase web application instance</p>
+<p>To get more information about WebApp, see:</p>
+<ul>
+<li><a href="https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://firebase.google.com/">Official Documentation</a></li>
+</ul>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Firebase.WebAppArgs.html">WebAppArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Firebase.WebAppState.html">WebAppState</a></h4>
       <section></section>
 </article>
           </div>

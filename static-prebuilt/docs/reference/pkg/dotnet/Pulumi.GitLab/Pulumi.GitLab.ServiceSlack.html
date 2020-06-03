@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ServiceSlack
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,12 +72,75 @@
   <h1 id="Pulumi_GitLab_ServiceSlack" data-uid="Pulumi.GitLab.ServiceSlack" class="text-break">Class ServiceSlack
   </h1>
   <div class="markdown level0 summary"><p>This resource allows you to manage Slack notifications integration.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var awesomeProject = new GitLab.Project(&amp;quot;awesomeProject&amp;quot;, new GitLab.ProjectArgs
+    {
+        Description = &amp;quot;My awesome project.&amp;quot;,
+        VisibilityLevel = &amp;quot;public&amp;quot;,
+    });
+    var slack = new GitLab.ServiceSlack(&amp;quot;slack&amp;quot;, new GitLab.ServiceSlackArgs
+    {
+        Project = awesomeProject.Id,
+        PushChannel = &amp;quot;push_chan&amp;quot;,
+        PushEvents = true,
+        Username = &amp;quot;myuser&amp;quot;,
+        Webhook = &amp;quot;https://webhook.com&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ServiceSlack</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ServiceSlack</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.GitLab.html">Pulumi.GitLab</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.GitLab.dll</h6>
@@ -88,16 +151,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack__ctor_" data-uid="Pulumi.GitLab.ServiceSlack.#ctor*"></a>
-  <h4 id="Pulumi_GitLab_ServiceSlack__ctor_System_String_Pulumi_GitLab_ServiceSlackArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.GitLab.ServiceSlack.#ctor(System.String,Pulumi.GitLab.ServiceSlackArgs,System.Nullable{CustomResourceOptions})">ServiceSlack(String, ServiceSlackArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_GitLab_ServiceSlack__ctor_System_String_Pulumi_GitLab_ServiceSlackArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.GitLab.ServiceSlack.#ctor(System.String,Pulumi.GitLab.ServiceSlackArgs,Pulumi.CustomResourceOptions)">ServiceSlack(String, ServiceSlackArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a ServiceSlack resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ServiceSlack(string name, ServiceSlackArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ServiceSlack(string name, ServiceSlackArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +185,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -132,7 +195,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_BranchesToBeNotified_" data-uid="Pulumi.GitLab.ServiceSlack.BranchesToBeNotified*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_BranchesToBeNotified" data-uid="Pulumi.GitLab.ServiceSlack.BranchesToBeNotified">BranchesToBeNotified</h4>
@@ -153,13 +216,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_ConfidentialIssueChannel_" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialIssueChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_ConfidentialIssueChannel" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialIssueChannel">ConfidentialIssueChannel</h4>
@@ -168,7 +231,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ConfidentialIssueChannel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ConfidentialIssueChannel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +243,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_ConfidentialIssuesEvents_" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialIssuesEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_ConfidentialIssuesEvents" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialIssuesEvents">ConfidentialIssuesEvents</h4>
@@ -207,13 +270,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_ConfidentialNoteEvents_" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialNoteEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_ConfidentialNoteEvents" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialNoteEvents">ConfidentialNoteEvents</h4>
@@ -234,13 +297,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_IssueChannel_" data-uid="Pulumi.GitLab.ServiceSlack.IssueChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_IssueChannel" data-uid="Pulumi.GitLab.ServiceSlack.IssueChannel">IssueChannel</h4>
@@ -249,7 +312,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IssueChannel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IssueChannel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +324,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_IssuesEvents_" data-uid="Pulumi.GitLab.ServiceSlack.IssuesEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_IssuesEvents" data-uid="Pulumi.GitLab.ServiceSlack.IssuesEvents">IssuesEvents</h4>
@@ -288,13 +351,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_JobEvents_" data-uid="Pulumi.GitLab.ServiceSlack.JobEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_JobEvents" data-uid="Pulumi.GitLab.ServiceSlack.JobEvents">JobEvents</h4>
@@ -314,13 +377,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_MergeRequestChannel_" data-uid="Pulumi.GitLab.ServiceSlack.MergeRequestChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_MergeRequestChannel" data-uid="Pulumi.GitLab.ServiceSlack.MergeRequestChannel">MergeRequestChannel</h4>
@@ -329,7 +392,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MergeRequestChannel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MergeRequestChannel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -341,13 +404,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_MergeRequestsEvents_" data-uid="Pulumi.GitLab.ServiceSlack.MergeRequestsEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_MergeRequestsEvents" data-uid="Pulumi.GitLab.ServiceSlack.MergeRequestsEvents">MergeRequestsEvents</h4>
@@ -368,13 +431,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_NoteChannel_" data-uid="Pulumi.GitLab.ServiceSlack.NoteChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_NoteChannel" data-uid="Pulumi.GitLab.ServiceSlack.NoteChannel">NoteChannel</h4>
@@ -383,7 +446,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NoteChannel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NoteChannel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -395,13 +458,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_NoteEvents_" data-uid="Pulumi.GitLab.ServiceSlack.NoteEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_NoteEvents" data-uid="Pulumi.GitLab.ServiceSlack.NoteEvents">NoteEvents</h4>
@@ -422,13 +485,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_NotifyOnlyBrokenPipelines_" data-uid="Pulumi.GitLab.ServiceSlack.NotifyOnlyBrokenPipelines*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_NotifyOnlyBrokenPipelines" data-uid="Pulumi.GitLab.ServiceSlack.NotifyOnlyBrokenPipelines">NotifyOnlyBrokenPipelines</h4>
@@ -449,13 +512,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_NotifyOnlyDefaultBranch_" data-uid="Pulumi.GitLab.ServiceSlack.NotifyOnlyDefaultBranch*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_NotifyOnlyDefaultBranch" data-uid="Pulumi.GitLab.ServiceSlack.NotifyOnlyDefaultBranch">NotifyOnlyDefaultBranch</h4>
@@ -476,13 +539,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_PipelineChannel_" data-uid="Pulumi.GitLab.ServiceSlack.PipelineChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_PipelineChannel" data-uid="Pulumi.GitLab.ServiceSlack.PipelineChannel">PipelineChannel</h4>
@@ -491,7 +554,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PipelineChannel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PipelineChannel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -503,13 +566,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_PipelineEvents_" data-uid="Pulumi.GitLab.ServiceSlack.PipelineEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_PipelineEvents" data-uid="Pulumi.GitLab.ServiceSlack.PipelineEvents">PipelineEvents</h4>
@@ -530,13 +593,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_Project_" data-uid="Pulumi.GitLab.ServiceSlack.Project*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_Project" data-uid="Pulumi.GitLab.ServiceSlack.Project">Project</h4>
@@ -557,13 +620,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_PushChannel_" data-uid="Pulumi.GitLab.ServiceSlack.PushChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_PushChannel" data-uid="Pulumi.GitLab.ServiceSlack.PushChannel">PushChannel</h4>
@@ -572,7 +635,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PushChannel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PushChannel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -584,13 +647,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_PushEvents_" data-uid="Pulumi.GitLab.ServiceSlack.PushEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_PushEvents" data-uid="Pulumi.GitLab.ServiceSlack.PushEvents">PushEvents</h4>
@@ -611,13 +674,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_TagPushChannel_" data-uid="Pulumi.GitLab.ServiceSlack.TagPushChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_TagPushChannel" data-uid="Pulumi.GitLab.ServiceSlack.TagPushChannel">TagPushChannel</h4>
@@ -626,7 +689,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TagPushChannel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TagPushChannel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -638,13 +701,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_TagPushEvents_" data-uid="Pulumi.GitLab.ServiceSlack.TagPushEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_TagPushEvents" data-uid="Pulumi.GitLab.ServiceSlack.TagPushEvents">TagPushEvents</h4>
@@ -665,13 +728,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_Username_" data-uid="Pulumi.GitLab.ServiceSlack.Username*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_Username" data-uid="Pulumi.GitLab.ServiceSlack.Username">Username</h4>
@@ -680,7 +743,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Username { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Username { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -692,13 +755,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_Webhook_" data-uid="Pulumi.GitLab.ServiceSlack.Webhook*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_Webhook" data-uid="Pulumi.GitLab.ServiceSlack.Webhook">Webhook</h4>
@@ -719,13 +782,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_WikiPageChannel_" data-uid="Pulumi.GitLab.ServiceSlack.WikiPageChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_WikiPageChannel" data-uid="Pulumi.GitLab.ServiceSlack.WikiPageChannel">WikiPageChannel</h4>
@@ -734,7 +797,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; WikiPageChannel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; WikiPageChannel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -746,13 +809,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_WikiPageEvents_" data-uid="Pulumi.GitLab.ServiceSlack.WikiPageEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_WikiPageEvents" data-uid="Pulumi.GitLab.ServiceSlack.WikiPageEvents">WikiPageEvents</h4>
@@ -773,7 +836,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -781,17 +844,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L226">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_Get_" data-uid="Pulumi.GitLab.ServiceSlack.Get*"></a>
-  <h4 id="Pulumi_GitLab_ServiceSlack_Get_System_String_Input_System_String__Pulumi_GitLab_ServiceSlackState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.GitLab.ServiceSlack.Get(System.String,Input{System.String},Pulumi.GitLab.ServiceSlackState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ServiceSlackState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_GitLab_ServiceSlack_Get_System_String_Pulumi_Input_System_String__Pulumi_GitLab_ServiceSlackState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.GitLab.ServiceSlack.Get(System.String,Pulumi.Input{System.String},Pulumi.GitLab.ServiceSlackState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ServiceSlackState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing ServiceSlack resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ServiceSlack Get(string name, Input&lt;string&gt; id, ServiceSlackState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ServiceSlack Get(string name, Input&lt;string&gt; id, ServiceSlackState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -810,7 +873,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -822,7 +885,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -851,7 +914,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

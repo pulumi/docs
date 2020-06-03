@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Azure.Core
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -119,6 +119,22 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Core.ResourceGroup.html">ResourceGroup</a></h4>
       <section><p>Manages a Resource Group.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = new Azure.Core.ResourceGroup(&amp;quot;example&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West Europe&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Core.ResourceGroupArgs.html">ResourceGroupArgs</a></h4>
       <section></section>
@@ -131,6 +147,90 @@
 This means that when deleting the <code>azure.core.TemplateDeployment</code> resource, this provider will only remove the reference to the deployment, whilst leaving any resources created by that ARM Template Deployment.
 One workaround for this is to use a unique Resource Group for each ARM Template Deployment, which means deleting the Resource Group would contain any resources created within it - however this isn't ideal. <a href="https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete">More information</a>.</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var exampleResourceGroup = new Azure.Core.ResourceGroup(&amp;quot;exampleResourceGroup&amp;quot;, new Azure.Core.ResourceGroupArgs
+    {
+        Location = &amp;quot;West US&amp;quot;,
+    });
+    var exampleTemplateDeployment = new Azure.Core.TemplateDeployment(&amp;quot;exampleTemplateDeployment&amp;quot;, new Azure.Core.TemplateDeploymentArgs
+    {
+        ResourceGroupName = exampleResourceGroup.Name,
+        TemplateBody = @&amp;quot;{
+&amp;quot;&amp;quot;$schema&amp;quot;&amp;quot;: &amp;quot;&amp;quot;https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;contentVersion&amp;quot;&amp;quot;: &amp;quot;&amp;quot;1.0.0.0&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;parameters&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;storageAccountType&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;string&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;defaultValue&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Standard_LRS&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;allowedValues&amp;quot;&amp;quot;: [
+    &amp;quot;&amp;quot;Standard_LRS&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Standard_GRS&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;Standard_ZRS&amp;quot;&amp;quot;
+  ],
+  &amp;quot;&amp;quot;metadata&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;description&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Storage Account type&amp;quot;&amp;quot;
+  }
+}
+},
+&amp;quot;&amp;quot;variables&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;location&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[resourceGroup().location]&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;storageAccountName&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[concat(uniquestring(resourceGroup().id), &amp;apos;storage&amp;apos;)]&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;publicIPAddressName&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[concat(&amp;apos;myPublicIp&amp;apos;, uniquestring(resourceGroup().id))]&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;publicIPAddressType&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Dynamic&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;apiVersion&amp;quot;&amp;quot;: &amp;quot;&amp;quot;2015-06-15&amp;quot;&amp;quot;,
+&amp;quot;&amp;quot;dnsLabelPrefix&amp;quot;&amp;quot;: &amp;quot;&amp;quot;example-acctest&amp;quot;&amp;quot;
+},
+&amp;quot;&amp;quot;resources&amp;quot;&amp;quot;: [
+{
+  &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Microsoft.Storage/storageAccounts&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;name&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[variables(&amp;apos;storageAccountName&amp;apos;)]&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;apiVersion&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[variables(&amp;apos;apiVersion&amp;apos;)]&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;location&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[variables(&amp;apos;location&amp;apos;)]&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;properties&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;accountType&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[parameters(&amp;apos;storageAccountType&amp;apos;)]&amp;quot;&amp;quot;
+  }
+},
+{
+  &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;Microsoft.Network/publicIPAddresses&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;apiVersion&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[variables(&amp;apos;apiVersion&amp;apos;)]&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;name&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[variables(&amp;apos;publicIPAddressName&amp;apos;)]&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;location&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[variables(&amp;apos;location&amp;apos;)]&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;properties&amp;quot;&amp;quot;: {
+    &amp;quot;&amp;quot;publicIPAllocationMethod&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[variables(&amp;apos;publicIPAddressType&amp;apos;)]&amp;quot;&amp;quot;,
+    &amp;quot;&amp;quot;dnsSettings&amp;quot;&amp;quot;: {
+      &amp;quot;&amp;quot;domainNameLabel&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[variables(&amp;apos;dnsLabelPrefix&amp;apos;)]&amp;quot;&amp;quot;
+    }
+  }
+}
+],
+&amp;quot;&amp;quot;outputs&amp;quot;&amp;quot;: {
+&amp;quot;&amp;quot;storageAccountName&amp;quot;&amp;quot;: {
+  &amp;quot;&amp;quot;type&amp;quot;&amp;quot;: &amp;quot;&amp;quot;string&amp;quot;&amp;quot;,
+  &amp;quot;&amp;quot;value&amp;quot;&amp;quot;: &amp;quot;&amp;quot;[variables(&amp;apos;storageAccountName&amp;apos;)]&amp;quot;&amp;quot;
+}
+}
+}
+&amp;quot;,
+        Parameters = 
+        {
+            { &amp;quot;storageAccountType&amp;quot;, &amp;quot;Standard_GRS&amp;quot; },
+        },
+        DeploymentMode = &amp;quot;Incremental&amp;quot;,
+    });
+    this.StorageAccountName = exampleTemplateDeployment.Outputs.Apply(outputs =&gt; outputs.StorageAccountName);
+}
+
+[Output(&amp;quot;storageAccountName&amp;quot;)]
+public Output&amp;lt;string&gt; StorageAccountName { get; set; }
+}
+</code></pre>
 <h2 id="note">Note</h2>
 <p>This provider does not know about the individual resources created by Azure using a deployment template and therefore cannot delete these resources during a destroy. Destroying a template deployment removes the associated deployment operations, but will not delete the Azure resources created by the deployment. In order to delete these resources, the containing resource group must also be destroyed. <a href="https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete">More information</a>.</p>
 </section>

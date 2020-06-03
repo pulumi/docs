@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetAvailabilityZones
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,19 +78,43 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetAvailabilityZones</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.html">Pulumi.Aws</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_GetAvailabilityZones_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class GetAvailabilityZones : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class GetAvailabilityZones</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GetAvailabilityZones.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Aws_GetAvailabilityZones_InvokeAsync_" data-uid="Pulumi.Aws.GetAvailabilityZones.InvokeAsync*"></a>
-  <h4 id="Pulumi_Aws_GetAvailabilityZones_InvokeAsync_Pulumi_Aws_GetAvailabilityZonesArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Aws.GetAvailabilityZones.InvokeAsync(Pulumi.Aws.GetAvailabilityZonesArgs,System.Nullable{InvokeOptions})">InvokeAsync(GetAvailabilityZonesArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <h4 id="Pulumi_Aws_GetAvailabilityZones_InvokeAsync_Pulumi_Aws_GetAvailabilityZonesArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Aws.GetAvailabilityZones.InvokeAsync(Pulumi.Aws.GetAvailabilityZonesArgs,Pulumi.InvokeOptions)">InvokeAsync(GetAvailabilityZonesArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>The Availability Zones data source allows access to the list of AWS
 Availability Zones which can be accessed by an AWS account within the region
 configured in the provider.</p>
@@ -99,13 +123,99 @@ which provides some details about a specific availability zone.</p>
 <blockquote>
 <p>When <a href="https://aws.amazon.com/about-aws/global-infrastructure/localzones/">Local Zones</a> are enabled in a region, by default the API and this data source include both Local Zones and Availability Zones. To return only Availability Zones, see the example section below.</p>
 </blockquote>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<h3 id="by-state">By State</h3>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var available = Output.Create(Aws.GetAvailabilityZones.InvokeAsync(new Aws.GetAvailabilityZonesArgs
+    {
+        State = &amp;quot;available&amp;quot;,
+    }));
+    var primary = new Aws.Ec2.Subnet(&amp;quot;primary&amp;quot;, new Aws.Ec2.SubnetArgs
+    {
+        AvailabilityZone = available.Apply(available =&gt; available.Names[0]),
+    });
+    // ...
+    var secondary = new Aws.Ec2.Subnet(&amp;quot;secondary&amp;quot;, new Aws.Ec2.SubnetArgs
+    {
+        AvailabilityZone = available.Apply(available =&gt; available.Names[1]),
+    });
+    // ...
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
+{{% example %}}</p>
+<h3 id="by-filter">By Filter</h3>
+<p>All Local Zones (regardless of opt-in status):</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = Output.Create(Aws.GetAvailabilityZones.InvokeAsync(new Aws.GetAvailabilityZonesArgs
+    {
+        AllAvailabilityZones = true,
+        Filters = 
+        {
+            new Aws.Inputs.GetAvailabilityZonesFilterArgs
+            {
+                Name = &amp;quot;opt-in-status&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;not-opted-in&amp;quot;,
+                    &amp;quot;opted-in&amp;quot;,
+                },
+            },
+        },
+    }));
+}
+
+}
+</code></pre>
+<p>Only Availability Zones (no Local Zones):</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var example = Output.Create(Aws.GetAvailabilityZones.InvokeAsync(new Aws.GetAvailabilityZonesArgs
+    {
+        Filters = 
+        {
+            new Aws.Inputs.GetAvailabilityZonesFilterArgs
+            {
+                Name = &amp;quot;opt-in-status&amp;quot;,
+                Values = 
+                {
+                    &amp;quot;opt-in-not-required&amp;quot;,
+                },
+            },
+        },
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;GetAvailabilityZonesResult&gt; InvokeAsync(GetAvailabilityZonesArgs args = null, InvokeOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetAvailabilityZonesResult&gt; InvokeAsync(GetAvailabilityZonesArgs args = null, InvokeOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +233,7 @@ which provides some details about a specific availability zone.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
@@ -139,7 +249,7 @@ which provides some details about a specific availability zone.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Aws.GetAvailabilityZonesResult.html">GetAvailabilityZonesResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Aws.GetAvailabilityZonesResult.html">GetAvailabilityZonesResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -151,7 +261,7 @@ which provides some details about a specific availability zone.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/846b0ba171dbc5e1d33f27ed9f4e680b77f8deae/sdk/dotnet/GetAvailabilityZones.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

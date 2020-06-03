@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BackendServer
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,6 +75,95 @@
 <blockquote>
 <p><strong>NOTE:</strong> Available in 1.53.0+</p>
 </blockquote>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var config = new Config();
+    var name = config.Get(&amp;quot;name&amp;quot;) ?? &amp;quot;slbbackendservertest&amp;quot;;
+    var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+    {
+        AvailableDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+        AvailableResourceCreation = &amp;quot;VSwitch&amp;quot;,
+    }));
+    var defaultInstanceTypes = defaultZones.Apply(defaultZones =&gt; Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+    {
+        AvailabilityZone = defaultZones.Zones[0].Id,
+        CpuCoreCount = 1,
+        MemorySize = 2,
+    })));
+    var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+    {
+        MostRecent = true,
+        NameRegex = &amp;quot;^ubuntu_18.*64&amp;quot;,
+        Owners = &amp;quot;system&amp;quot;,
+    }));
+    var defaultNetwork = new AliCloud.Vpc.Network(&amp;quot;defaultNetwork&amp;quot;, new AliCloud.Vpc.NetworkArgs
+    {
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+    });
+    var defaultSwitch = new AliCloud.Vpc.Switch(&amp;quot;defaultSwitch&amp;quot;, new AliCloud.Vpc.SwitchArgs
+    {
+        AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+        CidrBlock = &amp;quot;172.16.0.0/16&amp;quot;,
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup(&amp;quot;defaultSecurityGroup&amp;quot;, new AliCloud.Ecs.SecurityGroupArgs
+    {
+        VpcId = defaultNetwork.Id,
+    });
+    var defaultInstance = new List&amp;lt;AliCloud.Ecs.Instance&gt;();
+    for (var rangeIndex = 0; rangeIndex &amp;lt; 2; rangeIndex++)
+    {
+        var range = new { Value = rangeIndex };
+        defaultInstance.Add(new AliCloud.Ecs.Instance($&amp;quot;defaultInstance-{range.Value}&amp;quot;, new AliCloud.Ecs.InstanceArgs
+        {
+            AvailabilityZone = defaultZones.Apply(defaultZones =&gt; defaultZones.Zones[0].Id),
+            ImageId = defaultImages.Apply(defaultImages =&gt; defaultImages.Images[0].Id),
+            InstanceChargeType = &amp;quot;PostPaid&amp;quot;,
+            InstanceName = name,
+            InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes =&gt; defaultInstanceTypes.InstanceTypes[0].Id),
+            InternetChargeType = &amp;quot;PayByTraffic&amp;quot;,
+            InternetMaxBandwidthOut = &amp;quot;10&amp;quot;,
+            SecurityGroups = 
+            {
+                defaultSecurityGroup,
+            }.Select(__item =&gt; __item.Id).ToList(),
+            SystemDiskCategory = &amp;quot;cloud_efficiency&amp;quot;,
+            VswitchId = defaultSwitch.Id,
+        }));
+    }
+    var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer(&amp;quot;defaultLoadBalancer&amp;quot;, new AliCloud.Slb.LoadBalancerArgs
+    {
+        VswitchId = defaultSwitch.Id,
+    });
+    var defaultBackendServer = new AliCloud.Slb.BackendServer(&amp;quot;defaultBackendServer&amp;quot;, new AliCloud.Slb.BackendServerArgs
+    {
+        BackendServers = 
+        {
+            new AliCloud.Slb.Inputs.BackendServerBackendServerArgs
+            {
+                ServerId = defaultInstance[0].Id,
+                Weight = 100,
+            },
+            new AliCloud.Slb.Inputs.BackendServerBackendServerArgs
+            {
+                ServerId = defaultInstance[1].Id,
+                Weight = 100,
+            },
+        },
+        LoadBalancerId = defaultLoadBalancer.Id,
+    });
+}
+
+}
+</code></pre>
 <h2 id="block-servers">Block servers</h2>
 <p>The servers mapping supports the following:</p>
 <ul>
@@ -87,7 +176,45 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">BackendServer</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">BackendServer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Slb.html">Pulumi.AliCloud.Slb</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -98,16 +225,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/BackendServer.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/BackendServer.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_BackendServer__ctor_" data-uid="Pulumi.AliCloud.Slb.BackendServer.#ctor*"></a>
-  <h4 id="Pulumi_AliCloud_Slb_BackendServer__ctor_System_String_Pulumi_AliCloud_Slb_BackendServerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Slb.BackendServer.#ctor(System.String,Pulumi.AliCloud.Slb.BackendServerArgs,System.Nullable{CustomResourceOptions})">BackendServer(String, BackendServerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Slb_BackendServer__ctor_System_String_Pulumi_AliCloud_Slb_BackendServerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Slb.BackendServer.#ctor(System.String,Pulumi.AliCloud.Slb.BackendServerArgs,Pulumi.CustomResourceOptions)">BackendServer(String, BackendServerArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a BackendServer resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BackendServer(string name, BackendServerArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public BackendServer(string name, BackendServerArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +259,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -142,7 +269,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/BackendServer.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/BackendServer.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_BackendServer_BackendServers_" data-uid="Pulumi.AliCloud.Slb.BackendServer.BackendServers*"></a>
   <h4 id="Pulumi_AliCloud_Slb_BackendServer_BackendServers" data-uid="Pulumi.AliCloud.Slb.BackendServer.BackendServers">BackendServers</h4>
@@ -163,13 +290,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.Outputs.BackendServerBackendServer.html">BackendServerBackendServer</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.Outputs.BackendServerBackendServer.html">BackendServerBackendServer</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/BackendServer.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/BackendServer.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_BackendServer_DeleteProtectionValidation_" data-uid="Pulumi.AliCloud.Slb.BackendServer.DeleteProtectionValidation*"></a>
   <h4 id="Pulumi_AliCloud_Slb_BackendServer_DeleteProtectionValidation" data-uid="Pulumi.AliCloud.Slb.BackendServer.DeleteProtectionValidation">DeleteProtectionValidation</h4>
@@ -190,13 +317,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/BackendServer.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/BackendServer.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_BackendServer_LoadBalancerId_" data-uid="Pulumi.AliCloud.Slb.BackendServer.LoadBalancerId*"></a>
   <h4 id="Pulumi_AliCloud_Slb_BackendServer_LoadBalancerId" data-uid="Pulumi.AliCloud.Slb.BackendServer.LoadBalancerId">LoadBalancerId</h4>
@@ -217,7 +344,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -225,17 +352,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/BackendServer.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/BackendServer.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_BackendServer_Get_" data-uid="Pulumi.AliCloud.Slb.BackendServer.Get*"></a>
-  <h4 id="Pulumi_AliCloud_Slb_BackendServer_Get_System_String_Input_System_String__Pulumi_AliCloud_Slb_BackendServerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Slb.BackendServer.Get(System.String,Input{System.String},Pulumi.AliCloud.Slb.BackendServerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BackendServerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_AliCloud_Slb_BackendServer_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Slb_BackendServerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Slb.BackendServer.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Slb.BackendServerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BackendServerState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing BackendServer resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BackendServer Get(string name, Input&lt;string&gt; id, BackendServerState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static BackendServer Get(string name, Input&lt;string&gt; id, BackendServerState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,7 +381,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -266,7 +393,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -295,7 +422,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/BackendServer.cs/#L26" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9bf724a8fef8677d7c47e5f29f09142cc7bab229/sdk/dotnet/Slb/BackendServer.cs/#L119" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

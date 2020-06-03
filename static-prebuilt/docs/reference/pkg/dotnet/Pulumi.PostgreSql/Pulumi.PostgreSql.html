@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.PostgreSql
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,10 +78,34 @@
   </h3>
       <h4><a class="xref" href="Pulumi.PostgreSql.Config.html">Config</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.PostgreSql.Config.Types.html">Config.Types</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.PostgreSql.Config.Types.Clientcert.html">Config.Types.Clientcert</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.PostgreSql.Database.html">Database</a></h4>
       <section><p>The <code>postgresql..Database</code> resource creates and manages <a href="https://www.postgresql.org/docs/current/static/managing-databases.html">database
 objects</a>
 within a PostgreSQL server instance.</p>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myDb = new PostgreSql.Database(&amp;quot;myDb&amp;quot;, new PostgreSql.DatabaseArgs
+    {
+        AllowConnections = true,
+        ConnectionLimit = -1,
+        LcCollate = &amp;quot;C&amp;quot;,
+        Owner = &amp;quot;my_role&amp;quot;,
+        Template = &amp;quot;template0&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.PostgreSql.DatabaseArgs.html">DatabaseArgs</a></h4>
       <section></section>
@@ -96,6 +120,30 @@ within a PostgreSQL server instance.</p>
 <blockquote>
 <p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
 </blockquote>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var readOnlyTables = new PostgreSql.DefaultPrivileges(&amp;quot;readOnlyTables&amp;quot;, new PostgreSql.DefaultPrivilegesArgs
+    {
+        Database = &amp;quot;test_db&amp;quot;,
+        ObjectType = &amp;quot;table&amp;quot;,
+        Owner = &amp;quot;db_owner&amp;quot;,
+        Privileges = 
+        {
+            &amp;quot;SELECT&amp;quot;,
+        },
+        Role = &amp;quot;test_role&amp;quot;,
+        Schema = &amp;quot;public&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.PostgreSql.DefaultPrivilegesArgs.html">DefaultPrivilegesArgs</a></h4>
       <section></section>
@@ -106,6 +154,21 @@ within a PostgreSQL server instance.</p>
       <h4><a class="xref" href="Pulumi.PostgreSql.Extension.html">Extension</a></h4>
       <section><p>The <code>postgresql..Extension</code> resource creates and manages an extension on a PostgreSQL
 server.</p>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myExtension = new PostgreSql.Extension(&amp;quot;myExtension&amp;quot;, new PostgreSql.ExtensionArgs
+    {
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.PostgreSql.ExtensionArgs.html">ExtensionArgs</a></h4>
       <section></section>
@@ -116,6 +179,29 @@ server.</p>
 <blockquote>
 <p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
 </blockquote>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var readonlyTables = new PostgreSql.Grant(&amp;quot;readonlyTables&amp;quot;, new PostgreSql.GrantArgs
+    {
+        Database = &amp;quot;test_db&amp;quot;,
+        ObjectType = &amp;quot;table&amp;quot;,
+        Privileges = 
+        {
+            &amp;quot;SELECT&amp;quot;,
+        },
+        Role = &amp;quot;test_role&amp;quot;,
+        Schema = &amp;quot;public&amp;quot;,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.PostgreSql.GrantArgs.html">GrantArgs</a></h4>
       <section></section>
@@ -143,6 +229,30 @@ and all but the final <code>postgresql..Role</code> must specify a <code>skip_dr
 <p><strong>Note:</strong> All arguments including role name and password will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var myRole = new PostgreSql.Role(&amp;quot;myRole&amp;quot;, new PostgreSql.RoleArgs
+    {
+        Login = true,
+        Password = &amp;quot;mypass&amp;quot;,
+    });
+    var myReplicationRole = new PostgreSql.Role(&amp;quot;myReplicationRole&amp;quot;, new PostgreSql.RoleArgs
+    {
+        ConnectionLimit = 5,
+        Login = true,
+        Password = &amp;quot;md5c98cbfeb6a347a47eb8e96cfb4c4b890&amp;quot;,
+        Replication = true,
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.PostgreSql.RoleArgs.html">RoleArgs</a></h4>
       <section></section>
@@ -152,6 +262,51 @@ and all but the final <code>postgresql..Role</code> must specify a <code>skip_dr
       <section><p>The <code>postgresql..Schema</code> resource creates and manages <a href="https://www.postgresql.org/docs/current/static/ddl-schemas.html">schema
 objects</a> within
 a PostgreSQL database.</p>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var appWww = new PostgreSql.Role(&amp;quot;appWww&amp;quot;, new PostgreSql.RoleArgs
+    {
+    });
+    var appDba = new PostgreSql.Role(&amp;quot;appDba&amp;quot;, new PostgreSql.RoleArgs
+    {
+    });
+    var appReleng = new PostgreSql.Role(&amp;quot;appReleng&amp;quot;, new PostgreSql.RoleArgs
+    {
+    });
+    var mySchema = new PostgreSql.Schema(&amp;quot;mySchema&amp;quot;, new PostgreSql.SchemaArgs
+    {
+        Owner = &amp;quot;postgres&amp;quot;,
+        Policies = 
+        {
+            new PostgreSql.Inputs.SchemaPolicyArgs
+            {
+                Role = appWww.Name,
+                Usage = true,
+            },
+            new PostgreSql.Inputs.SchemaPolicyArgs
+            {
+                Create = true,
+                Role = appReleng.Name,
+                Usage = true,
+            },
+            new PostgreSql.Inputs.SchemaPolicyArgs
+            {
+                CreateWithGrant = true,
+                Role = appDba.Name,
+                UsageWithGrant = true,
+            },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.PostgreSql.SchemaArgs.html">SchemaArgs</a></h4>
       <section></section>

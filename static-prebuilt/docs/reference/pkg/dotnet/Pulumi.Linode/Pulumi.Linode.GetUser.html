@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetUser
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -111,12 +111,31 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/GetUser.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/GetUser.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Linode_GetUser_InvokeAsync_" data-uid="Pulumi.Linode.GetUser.InvokeAsync*"></a>
   <h4 id="Pulumi_Linode_GetUser_InvokeAsync_Pulumi_Linode_GetUserArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Linode.GetUser.InvokeAsync(Pulumi.Linode.GetUserArgs,Pulumi.InvokeOptions)">InvokeAsync(GetUserArgs, InvokeOptions)</h4>
   <div class="markdown level1 summary"><p>Provides information about a Linode user</p>
-<p>{{% examples %}}
+<p>{{% examples %}}</p>
+<h2 id="example-usage">Example Usage</h2>
+<p>{{% example %}}</p>
+<p>The following example shows how one might use this data source to access information about a Linode user.</p>
+<pre><code class="lang-csharp">using Pulumi;
+using Linode = Pulumi.Linode;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var foo = Output.Create(Linode.GetUser.InvokeAsync(new Linode.GetUserArgs
+    {
+        Username = &amp;quot;foo&amp;quot;,
+    }));
+}
+
+}
+</code></pre>
+<p>{{% /example %}}
 {{% /examples %}}</p>
 <h2 id="attributes">Attributes</h2>
 <p>The Linode User resource exports the following attributes:</p>

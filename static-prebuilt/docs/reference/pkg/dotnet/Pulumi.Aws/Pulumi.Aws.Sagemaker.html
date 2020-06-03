@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi.Aws.Sagemaker
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,11 +78,60 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Sagemaker.Endpoint.html">Endpoint</a></h4>
       <section><p>Provides a SageMaker Endpoint resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var endpoint = new Aws.Sagemaker.Endpoint(&amp;quot;endpoint&amp;quot;, new Aws.Sagemaker.EndpointArgs
+    {
+        EndpointConfigName = aws_sagemaker_endpoint_configuration.Ec.Name,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;foo&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sagemaker.EndpointArgs.html">EndpointArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Sagemaker.EndpointConfiguration.html">EndpointConfiguration</a></h4>
       <section><p>Provides a SageMaker endpoint configuration resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ec = new Aws.Sagemaker.EndpointConfiguration(&amp;quot;ec&amp;quot;, new Aws.Sagemaker.EndpointConfigurationArgs
+    {
+        ProductionVariants = 
+        {
+            new Aws.Sagemaker.Inputs.EndpointConfigurationProductionVariantArgs
+            {
+                InitialInstanceCount = 1,
+                InstanceType = &amp;quot;ml.t2.medium&amp;quot;,
+                ModelName = aws_sagemaker_model.M.Name,
+                VariantName = &amp;quot;variant-1&amp;quot;,
+            },
+        },
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;foo&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sagemaker.EndpointConfigurationArgs.html">EndpointConfigurationArgs</a></h4>
       <section></section>
@@ -92,6 +141,54 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Sagemaker.Model.html">Model</a></h4>
       <section><p>Provides a SageMaker model resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var model = new Aws.Sagemaker.Model(&amp;quot;model&amp;quot;, new Aws.Sagemaker.ModelArgs
+    {
+        ExecutionRoleArn = aws_iam_role.Foo.Arn,
+        PrimaryContainer = new Aws.Sagemaker.Inputs.ModelPrimaryContainerArgs
+        {
+            Image = &amp;quot;174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1&amp;quot;,
+        },
+    });
+    var assumeRole = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+    {
+        Statements = 
+        {
+            new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+            {
+                Actions = 
+                {
+                    &amp;quot;sts:AssumeRole&amp;quot;,
+                },
+                Principals = 
+                {
+                    new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                    {
+                        Identifiers = 
+                        {
+                            &amp;quot;sagemaker.amazonaws.com&amp;quot;,
+                        },
+                        Type = &amp;quot;Service&amp;quot;,
+                    },
+                },
+            },
+        },
+    }));
+    var role = new Aws.Iam.Role(&amp;quot;role&amp;quot;, new Aws.Iam.RoleArgs
+    {
+        AssumeRolePolicy = assumeRole.Apply(assumeRole =&gt; assumeRole.Json),
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sagemaker.ModelArgs.html">ModelArgs</a></h4>
       <section></section>
@@ -99,6 +196,27 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Sagemaker.NotebookInstance.html">NotebookInstance</a></h4>
       <section><p>Provides a Sagemaker Notebook Instance resource.</p>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code class="lang-csharp">using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+public MyStack()
+{
+    var ni = new Aws.Sagemaker.NotebookInstance(&amp;quot;ni&amp;quot;, new Aws.Sagemaker.NotebookInstanceArgs
+    {
+        InstanceType = &amp;quot;ml.t2.medium&amp;quot;,
+        RoleArn = aws_iam_role.Role.Arn,
+        Tags = 
+        {
+            { &amp;quot;Name&amp;quot;, &amp;quot;foo&amp;quot; },
+        },
+    });
+}
+
+}
+</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sagemaker.NotebookInstanceArgs.html">NotebookInstanceArgs</a></h4>
       <section></section>
