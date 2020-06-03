@@ -24,7 +24,7 @@ Let’s review some of the major highlights.
 
 Users provision and manage Kubernetes workloads in various ways: YAML manifests, Helm charts, operators, and direct API access. Pulumi can help to unify this resource management using a programming language of your choice.
 
-Some of the recent highlights for the [pulumi/kubernetes](https://github.com/pulumi-kubernetes) package include:
+Some of the recent highlights for the [pulumi/kubernetes](https://github.com/pulumi/pulumi-kubernetes) package include:
 
 Added [language support]({{< relref "/docs/intro/cloud-providers/kubernetes#library-packages" >}}) for .NET and Go.
 
@@ -85,9 +85,7 @@ var cluster = new Eks.Cluster("eks-cluster", new Eks.ClusterArgs
 
 ## Managing Clusters
 
-Kubernetes clusters come in different shapes and sizes, and with various operational requirements to run. We’ve expanded our support for managed Kubernetes clusters across the respective cloud provider packages.
-
-[**pulumi/eks**](https://github.com/pulumi-eks)
+Kubernetes clusters come in different shapes and sizes, and with various operational requirements to run. We’ve expanded our support for managed Kubernetes clusters for [pulumi/eks](https://github.com/pulumi-eks).
 
 - More [examples](https://github.com/pulumi/pulumi-eks/tree/master/nodejs/eks/examples) are provided to cover various EKS-specific scenarios.
 - Support for [additional security groups]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#NodeGroup-extraNodeSecurityGroups" >}}) for node groups to attach to user-specified rules
