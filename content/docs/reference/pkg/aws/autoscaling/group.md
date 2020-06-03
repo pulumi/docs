@@ -931,7 +931,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">List&lt;Group<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks. Tags documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -942,7 +942,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks (maps). Tags documented below.
+    <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1297,7 +1297,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">[]Group<wbr>Tag</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks. Tags documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1308,7 +1308,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks (maps). Tags documented below.
+    <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1663,7 +1663,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">Group<wbr>Tag[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks. Tags documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1674,7 +1674,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks (maps). Tags documented below.
+    <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2029,7 +2029,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">List[Group<wbr>Tag]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks. Tags documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2040,7 +2040,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">List[Any>]</span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks (maps). Tags documented below.
+    <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2655,7 +2655,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">List&lt;Group<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks. Tags documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2666,7 +2666,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks (maps). Tags documented below.
+    <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3032,7 +3032,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">[]Group<wbr>Tag</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks. Tags documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3043,7 +3043,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks (maps). Tags documented below.
+    <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3409,7 +3409,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">Group<wbr>Tag[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks. Tags documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3420,7 +3420,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks (maps). Tags documented below.
+    <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3786,7 +3786,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">List[Group<wbr>Tag]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks. Tags documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3797,7 +3797,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">List[Any>]</span>
     </dt>
-    <dd>{{% md %}}A list of tag blocks (maps). Tags documented below.
+    <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

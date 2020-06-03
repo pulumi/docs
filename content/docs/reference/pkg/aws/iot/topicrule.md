@@ -199,7 +199,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#TopicRule">TopicRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#TopicRule">TopicRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>step_functions=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -568,6 +568,16 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="stepfunctions_csharp">
+<a href="#stepfunctions_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulestepfunction">List&lt;Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -776,6 +786,16 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stepfunctions_go">
+<a href="#stepfunctions_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulestepfunction">[]Topic<wbr>Rule<wbr>Step<wbr>Function</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -994,6 +1014,16 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="stepfunctions_nodejs">
+<a href="#stepfunctions_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulestepfunction">Topic<wbr>Rule<wbr>Step<wbr>Function[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -1207,6 +1237,16 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="step_functions_python">
+<a href="#step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulestepfunction">List[Topic<wbr>Rule<wbr>Step<wbr>Function]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -1358,7 +1398,7 @@ Get an existing TopicRule resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>step_functions=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1680,6 +1720,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_stepfunctions_csharp">
+<a href="#state_stepfunctions_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulestepfunction">List&lt;Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -1899,6 +1949,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_stepfunctions_go">
+<a href="#state_stepfunctions_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulestepfunction">[]Topic<wbr>Rule<wbr>Step<wbr>Function</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2128,6 +2188,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_stepfunctions_nodejs">
+<a href="#state_stepfunctions_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulestepfunction">Topic<wbr>Rule<wbr>Step<wbr>Function[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -2347,6 +2417,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicrulesqs">Dict[Topic<wbr>Rule<wbr>Sqs]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_step_functions_python">
+<a href="#state_step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulestepfunction">List[Topic<wbr>Rule<wbr>Step<wbr>Function]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5345,6 +5425,184 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to use Base64 encoding.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicrulestepfunction">Topic<wbr>Rule<wbr>Step<wbr>Function</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleStepFunction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleStepFunction">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleStepFunctionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleStepFunctionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleStepFunctionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleStepFunction.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statemachinename_csharp">
+<a href="#statemachinename_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Machine<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="executionnameprefix_csharp">
+<a href="#executionnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Name<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statemachinename_go">
+<a href="#statemachinename_go" style="color: inherit; text-decoration: inherit;">State<wbr>Machine<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="executionnameprefix_go">
+<a href="#executionnameprefix_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Name<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statemachinename_nodejs">
+<a href="#statemachinename_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Machine<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="executionnameprefix_nodejs">
+<a href="#executionnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Name<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statemachinename_python">
+<a href="#statemachinename_python" style="color: inherit; text-decoration: inherit;">state<wbr>Machine<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="executionnameprefix_python">
+<a href="#executionnameprefix_python" style="color: inherit; text-decoration: inherit;">execution<wbr>Name<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
 {{% /md %}}</dd>
 
 </dl>

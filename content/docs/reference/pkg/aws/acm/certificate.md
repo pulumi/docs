@@ -18,7 +18,7 @@ This resource does not deal with validation of a certificate but can provide inp
 for other resources implementing the validation. It does not wait for a certificate to be issued.
 Use a `aws.acm.CertificateValidation` resource for this.
 
-Most commonly, this resource is used to together with `aws.route53.Record` and
+Most commonly, this resource is used together with `aws.route53.Record` and
 `aws.acm.CertificateValidation` to request a DNS validated certificate,
 deploy the required validation records and wait for validation to complete.
 
