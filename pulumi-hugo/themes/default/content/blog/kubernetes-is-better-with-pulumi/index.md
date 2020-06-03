@@ -24,7 +24,7 @@ Recently, Pulumi engineer [Levi Blackstone](https://twitter.com/levi_blackstone)
 
 First, let’s take a look at Kubernetes from a dev’s point of view.
 
-- **Use the full Kubernetes API surface** – Each of Pulumi’s Kubernetes SDKs (TypeScript, Python, .NET and Go) are generated from the OpenAPI spec. This is critical because it means that resource definitions in any language are a 1:1 match with the upstream API. In the example below, the deployment manifest on the left corresponds to the typescript on the right.
+- **Use the full Kubernetes API surface** – Each of Pulumi’s Kubernetes SDKs (TypeScript, Python, .NET and Go) are generated from the OpenAPI spec. This is critical because it means that resource definitions in any language are a 1:1 match with the upstream API. In the example below, the deployment manifest on the left corresponds to the TypeScript on the right.
 
 ![Kubernetes API](kubernetes_api.jpg)
 
