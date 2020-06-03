@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "DevO95 - A Day of DevOps Meetups"
-meta_desc: "In this talk, learn about the next evolution of Infrastructure as Code, Pulumi and how it makes working with the cloud easier using real programming languages."
+meta_desc: "In this talk, Dan Hernandez gives an introduction to Pulumi and demonstrate how using real programming languages makes it easier to program the cloud."
 
 # A featured webinar will display first in the list.
 featured: false
