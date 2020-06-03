@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "StackConf Online"
-meta_desc: "In this talk, Paul Stack will demonstrate how to write infrastructure code in TypeScript, Python, .Net, & Go across multiple clouds."
+meta_desc: "In this talk, Paul Stack demonstrates how to write infrastructure code in TypeScript, Python, .Net, and Go across multiple clouds."
 
 # A featured webinar will display first in the list.
 featured: false

@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Spinnaker Live"
-meta_desc: "Dan Hernandez and Praneet Loke will demonstrate how Pulumi works with Spinnaker to enable cloud-native continuous delivery for infrastructure and applications."
+meta_desc: "Dan Hernandez and Praneet Loke demonstrate how Pulumi works with Spinnaker to enable cloud-native continuous delivery for infrastructure and applications."
 
 # A featured webinar will display first in the list.
 featured: false
