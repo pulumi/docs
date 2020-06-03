@@ -2,7 +2,7 @@
 title: "What' New in Pulumi 2.0 for Kubernetes"
 date: 2020-06-04
 meta_desc: "New features for Kubernetes in Pulumi 2.0 managing workloads and clusters."
-meta_image: meta.png
+meta_image: pulumi_k8s.png
 authors:
     - mike-metral
     - levi-blackstone
