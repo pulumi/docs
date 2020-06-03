@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "AWS - Howdy Partner"
-meta_desc: "Watch Pulumi VP of Engineering Lee Zen builds servless applications in realtime, using both Python and TypeScript."
+meta_desc: "Watch Pulumi VP of Engineering Lee Zen build serverless applications in realtime, using both Python and TypeScript."
 
 block_external_search_index: true
 
