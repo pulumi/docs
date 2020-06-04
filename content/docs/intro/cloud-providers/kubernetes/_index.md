@@ -46,11 +46,19 @@ The quickest way to get started with Kubernetes is to follow the [Get Started]({
 
 ### For Cluster Management
 
-The following SDKs are available to work with IaaS resources, and managed or self-managed Kubernetes clusters:
+The following SDKs are available to work with IaaS resources, and managed or self-managed Kubernetes clusters.
 
-- AWS: [`pulumi/aws`](https://github.com/pulumi/aws), [`pulumi/awsx`](https://github.com/pulumi/pulumi-awsx), [`pulumi/eks`](https://github.com/pulumi/eks)
-- GCP: [`pulumi/gcp`](https://github.com/pulumi/gcp)
+The packages are available in Node.js (Javascript and Typescript), Python, Go, and .NET.
+
+- AWS: [`pulumi/aws`](https://github.com/pulumi/aws)
 - Azure: [`pulumi/azure`](https://github.com/pulumi/pulumi-azure)
+- DigitalOcean: [`pulumi/digitalocean`](https://github.com/pulumi/pulumi-digitalocean)
+- GCP: [`pulumi/gcp`](https://github.com/pulumi/gcp)
+
+#### Extension Packages
+
+- [`pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) - AWS Extensions
+- [`pulumi/eks`](https://github.com/pulumi/eks) - Manage EKS clusters
 
 ### For Workload Management
 
@@ -62,6 +70,10 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
   - Import package: `github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes`
   - [GitHub](https://github.com/pulumi/pulumi-kubernetes/tree/master/sdk/go/kubernetes)
 - .NET: [`Pulumi.Kubernetes`](https://www.nuget.org/packages/Pulumi.Kubernetes)
+
+#### Extension Packages
+
+- [`pulumi/kx`](https://github.com/pulumi/eks) - Kubernetes Workload Extensions
 
 [k8s]: https://kubernetes.io
 
