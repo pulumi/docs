@@ -35,23 +35,42 @@ generate_docs() {
     pushd "../pulumi-${provider}"
     git fetch --tags
 
-    if [ -n "${INSTALL_RESOURCE_PLUGIN:-}" ]; then
-        plugin_version=$(git describe --tags $(git rev-list --max-count=1 --tags --not --tags='*-dev'))
-        # If a plugin version was passed, then use that.
-        # The provider repo will also be checked out at that version below.
-        if [ -n "${INSTALL_RESOURCE_PLUGIN_VERSION:-}" ]; then
-            plugin_version=${INSTALL_RESOURCE_PLUGIN_VERSION}
-        elif [[ ${plugin_version} = sdk* ]]; then
-            plugin_version=${plugin_version:4}
-        elif [[ ${plugin_version} = provider* ]]; then
-            plugin_version=${plugin_version:9}
+    plugin_version=$(git describe --tags "$(git rev-list --max-count=1 --tags --not --tags='*-dev')")
+    # If a plugin version was passed, then use that.
+    # The provider repo will also be checked out at that version below.
+    if [ -n "${INSTALL_RESOURCE_PLUGIN_VERSION:-}" ]; then
+        plugin_version=${INSTALL_RESOURCE_PLUGIN_VERSION}
+    elif [[ ${plugin_version} = sdk* ]]; then
+        plugin_version=${plugin_version:4}
+    elif [[ ${plugin_version} = provider* ]]; then
+        plugin_version=${plugin_version:9}
+    fi
+
+    echo -e "\033[0;93mCheckout pulumi/pulumi-${provider} at tag $plugin_version\033[0m"
+    git -c advice.detachedHead=false checkout "$plugin_version" >/dev/null
+
+    # Go back to the docs repo.
+    popd
+
+    EXISTING_SCHEMA_FILE="../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
+    if [ "$provider" = "kubernetes" ]; then
+        EXISTING_SCHEMA_FILE="../pulumi-kubernetes/sdk/schema/schema.json"
+    fi
+
+    # Use a previously generated schema.json file if it exists.
+    if [ -f "${EXISTING_SCHEMA_FILE}" ]; then
+        echo "Will use the previously generated schema.json for generating resource docs..."
+    else
+        echo "Could not find a previously generated schema.json file. Will generate schema..."
+
+        if [ -n "${INSTALL_RESOURCE_PLUGIN:-}" ]; then
+            echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
+            pulumi plugin install resource "${provider}" "${plugin_version}"
         fi
 
-        echo -e "\033[0;93mCheckout repo at tag $plugin_version\033[0m"
-        git -c advice.detachedHead=false checkout "$plugin_version" >/dev/null
-
-        echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
-        pulumi plugin install resource "${provider}" "${plugin_version}"
+        pushd "../pulumi-${provider}"
+        make generate_schema
+        popd
     fi
 
     if [ "$provider" = "kubernetes" ]; then
@@ -61,17 +80,6 @@ generate_docs() {
         SCHEMA_FILE="../../../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
         OVERLAY_SCHEMA_FILE=""
     fi
-
-    # Use a previously generated schema.json file if it exists.
-    if [ -f "${SCHEMA_FILE}" ]; then
-        echo "Will use previously generated schema.json for generating docs..."
-    else
-        echo "Could not find a schema.json file. Generating schema..."
-        make generate_schema
-    fi
-
-    # Now leave the provider repo and back to the docs repo.
-    popd
 
     echo "Running docs generator from schema for ${provider}..."
     pushd ${TOOL_RESDOCGEN}
