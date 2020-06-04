@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_signalfx.gcp"></span><dl class="py class">
 <dt id="pulumi_signalfx.gcp.Integration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.gcp.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">poll_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_service_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.gcp.Integration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.gcp.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">poll_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_service_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">whitelists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.gcp.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx GCP Integration</p>
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider. Otherwise you’ll receive a 4xx error.</p>
@@ -46,9 +46,11 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the integration is enabled.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the integration.</p></li>
+<li><p><strong>named_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A named token to use for ingest</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).</p></li>
 <li><p><strong>project_service_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP projects to add.</p></li>
-<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p></li>
+<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valid values.</p></li>
+<li><p><strong>whitelists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Compute Metadata Whitelist</p></li>
 </ul>
 </dd>
 </dl>
@@ -70,6 +72,12 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_signalfx.gcp.Integration.named_token">
+<code class="sig-name descname">named_token</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.gcp.Integration.named_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>A named token to use for ingest</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_signalfx.gcp.Integration.poll_rate">
 <code class="sig-name descname">poll_rate</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.gcp.Integration.poll_rate" title="Permalink to this definition">¶</a></dt>
 <dd><p>GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).</p>
@@ -88,12 +96,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_signalfx.gcp.Integration.services">
 <code class="sig-name descname">services</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.gcp.Integration.services" title="Permalink to this definition">¶</a></dt>
-<dd><p>GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p>
+<dd><p>GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valid values.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_signalfx.gcp.Integration.whitelists">
+<code class="sig-name descname">whitelists</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.gcp.Integration.whitelists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute Metadata Whitelist</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_signalfx.gcp.Integration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">poll_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_service_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.gcp.Integration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">poll_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_service_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">whitelists</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.gcp.Integration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Integration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -104,10 +118,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the integration is enabled.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the integration.</p></li>
+<li><p><strong>named_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A named token to use for ingest</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).</p></li>
 <li><p><strong>project_service_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GCP projects to add.</p></li>
-<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valida values.</p>
+<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>GCP service metrics to import. Can be an empty list, or not included, to import ‘All services’. See the documentation for <a class="reference external" href="https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration">Creating Integrations</a> for valid values.</p>
 </p></li>
+<li><p><strong>whitelists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Compute Metadata Whitelist</p></li>
 </ul>
 </dd>
 </dl>

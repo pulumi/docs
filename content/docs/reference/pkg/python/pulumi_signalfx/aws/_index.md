@@ -20,7 +20,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="py class">
 <dt id="pulumi_signalfx.aws.ExternalIntegration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">ExternalIntegration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">ExternalIntegration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx AWS CloudWatch integrations using Role ARNs. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
@@ -131,6 +131,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this integration</p></li>
+<li><p><strong>named_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A named token to use for ingest</p></li>
 </ul>
 </dd>
 </dl>
@@ -147,6 +148,12 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_signalfx.aws.ExternalIntegration.named_token">
+<code class="sig-name descname">named_token</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.named_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>A named token to use for ingest</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.ExternalIntegration.signalfx_aws_account">
 <code class="sig-name descname">signalfx_aws_account</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.signalfx_aws_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p>
@@ -154,7 +161,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="py method">
 <dt id="pulumi_signalfx.aws.ExternalIntegration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">signalfx_aws_account</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">signalfx_aws_account</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ExternalIntegration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -165,6 +172,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>external_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The external ID to use with your IAM role and with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this integration</p></li>
+<li><p><strong>named_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A named token to use for ingest</p></li>
 <li><p><strong>signalfx_aws_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p></li>
 </ul>
 </dd>
@@ -489,7 +497,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_signalfx.aws.TokenIntegration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">TokenIntegration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">TokenIntegration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx AWS CloudWatch integrations using security tokens. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
@@ -532,6 +540,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this integration</p></li>
+<li><p><strong>named_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A named token to use for ingest</p></li>
 </ul>
 </dd>
 </dl>
@@ -539,6 +548,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_signalfx.aws.TokenIntegration.name">
 <code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of this integration</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_signalfx.aws.TokenIntegration.named_token">
+<code class="sig-name descname">named_token</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.named_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>A named token to use for ingest</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -555,7 +570,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_signalfx.aws.TokenIntegration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">signalfx_aws_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">signalfx_aws_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TokenIntegration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -565,6 +580,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this integration</p></li>
+<li><p><strong>named_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A named token to use for ingest</p></li>
 <li><p><strong>signalfx_aws_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p></li>
 <li><p><strong>token_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SignalFx-generated AWS token to use with an AWS integration.</p></li>
 </ul>
