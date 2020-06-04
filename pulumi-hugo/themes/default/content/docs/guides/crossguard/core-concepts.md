@@ -10,11 +10,9 @@ menu:
     parent: crossguard
 ---
 
-{{< chooser language "typescript,python" />}}
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. More information on language support for policies is [here]({{< relref "/docs/guides/crossguard#languages" >}}).
 
-{{% notes %}}
-Python support is currently in preview.
-{{% /notes %}}
+{{< chooser language "typescript,python" />}}
 
 ## Policy
 
