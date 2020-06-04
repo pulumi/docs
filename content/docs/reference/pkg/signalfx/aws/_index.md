@@ -30,7 +30,7 @@ Explore the resources and functions of the aws module in the SignalFx package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>2.4.1</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 
