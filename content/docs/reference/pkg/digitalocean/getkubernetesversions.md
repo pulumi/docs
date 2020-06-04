@@ -109,7 +109,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If provided, this provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -126,7 +127,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If provided, this provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -143,7 +145,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If provided, this provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -160,7 +163,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If provided, this provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

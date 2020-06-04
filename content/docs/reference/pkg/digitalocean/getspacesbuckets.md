@@ -13,7 +13,7 @@ meta_desc: "Explore the GetSpacesBuckets function of the Digital Ocean package, 
 Get information on Spaces buckets for use in other resources, with the ability to filter and sort the results.
 If no filters are specified, all Spaces buckets will be returned.
 
-Note: You can use the [`digitalocean..SpacesBucket`](https://www.terraform.io/docs/providers/do/d/spaces_bucket.html) data source to
+Note: You can use the `digitalocean..SpacesBucket` data source to
 obtain metadata about a single bucket if you already know its `name` and `region`.
 
 
